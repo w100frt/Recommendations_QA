@@ -1,0 +1,15 @@
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\Mono.Cecil.dll
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\RegistrationSmokeTests.deps.json
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\RegistrationSmokeTests.runtimeconfig.json
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\RegistrationSmokeTests.runtimeconfig.dev.json
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\RegistrationSmokeTests.dll
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\obj\Debug\netcoreapp2.1\RegistrationSmokeTests.csprojAssemblyReference.cache
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\obj\Debug\netcoreapp2.1\RegistrationSmokeTests.csproj.CoreCompileInputs.cache
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\obj\Debug\netcoreapp2.1\RegistrationSmokeTests.AssemblyInfoInputs.cache
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\obj\Debug\netcoreapp2.1\RegistrationSmokeTests.AssemblyInfo.cs
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\bin\Debug\netcoreapp2.1\RegistrationSmokeTests.pdb
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\obj\Debug\netcoreapp2.1\RegistrationSmokeTests.dll
+C:\Users\fthompson\source\repos\RegistrationSmokeTests\RegistrationSmokeTests\obj\Debug\netcoreapp2.1\RegistrationSmokeTests.pdb
