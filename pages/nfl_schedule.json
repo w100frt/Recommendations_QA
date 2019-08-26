@@ -1,0 +1,10 @@
+﻿{
+"page":"nfl_schedule",
+"testDefinitions":[
+    {"name":"Verify Game Status is Displayed","objectType":"verify_displayed","by":"class","objectId":"wisbb_status"},
+    {"name":"Verify Links are Displayed","objectType":"verify_displayed","by":"class","objectId":"wisbb_links"},
+    {"name":"Verify Locations are Displayed","objectType":"verify_displayed","by":"class","objectId":"wisbb_location"},
+    {"name":"Verify Schedule Table","objectType":"verify_displayed","by":"class","objectId":"wisbb_scheduleTable"},
+    {"name":"Verify Teams are Displayed","objectType":"verify_displayed","by":"class","objectId":"wisbb_fullTeamStacked"}
+    ]
+}

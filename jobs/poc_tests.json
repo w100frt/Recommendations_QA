@@ -1,0 +1,17 @@
+﻿{
+    "project":"fs",
+    "env":"stg",
+    "browser":"chrome",
+    "testView":"desktop",
+    "testIds": [
+        {"testId":1},
+        {"testId":2},
+        {"testId":3},
+        {"testId":5},
+        {"testId":6},
+        {"testId":7},
+        {"testId":8},
+        {"testId":9}
+
+    ]
+}

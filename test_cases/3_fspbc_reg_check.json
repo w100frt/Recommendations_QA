@@ -1,0 +1,11 @@
+﻿{
+    "testCase":"FSPBCRegCheck",
+    "env":"stg",
+    "testId":"3",
+    "testView":"desktop",
+    "testSteps": [
+        {"page":"navigation", "name":"Run Template", "data":"liveuser_login"},
+        {"page":"navigation", "name":"Navigate to URL", "data":"https://delta:awesome@account-qa.foxsports.com/signin?return_to=/signup-account"},
+        {"page":"login", "name":"Click PBC Sign In"}
+    ]
+}

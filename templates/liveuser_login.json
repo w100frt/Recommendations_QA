@@ -1,0 +1,11 @@
+﻿{
+    "testCase":"template_liveuser_login",
+    "testId":"template3",
+    "testSteps":[
+        {"page":"navigation", "name":"Open Browser"},
+        {"page":"navigation", "name":"Navigate to URL", "data":"https://foxsports:N3wf0xr0cks@www.stg.wp.foxsports.com/accounts/login?fu"},
+        {"page":"login", "name":"Enter Email", "data": "dcgliveuser@fox.com"},
+        {"page":"login", "name":"Enter Password", "data": "fox123"},
+        {"page":"login", "name":"Click Sign-in"}
+    ]
+}

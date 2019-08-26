@@ -1,0 +1,13 @@
+﻿{
+    "page":"tv_schedule",
+    "testDefinitions":[
+        {"name":"Verify Play Button","objectType":"verify_value","by":"class","objectId":"tv-schedule-title"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"events-schedule-link"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"programGuide"},
+        {"name":"Verify Play Button","objectType":"verify_value","by":"class","objectId":"title"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"subtitle"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"dateDropdown"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"timelineMain"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"networkLogo"}
+        ]
+}

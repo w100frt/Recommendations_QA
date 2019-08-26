@@ -1,0 +1,19 @@
+﻿{
+"page":"login",
+"testDefinitions":[
+    {"name":"Click Optimum","objectType": "click","by": "xpath","objectId":"//li[text()='Optimum']"},
+    {"name":"Click Optimum Sign-in","objectType": "click","by":"id","objectId":"signin_button"},
+    {"name":"Click PBC Sign In","objectType":"click","by":"css","objectId":"button.formSubmit"},
+    {"name":"Click See All Providers","objectType":"click","by":"xpath","objectId":"//span[text()='See All Providers']"},
+    {"name":"Click Sign-in","objectType":"click","by":"css","objectId":"button.sign-in-button"},
+    {"name":"Click Sign Up Button","objectType":"click","by":"css","objectId":"button.sign-up-button"},
+    {"name":"Enter Email","objectType":"input_text","by":"css","objectId":"input.site-email"},
+    {"name":"Enter First Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='First Name']"},
+    {"name":"Enter Last Name","objectType":"input_text","by": "xpath","objectId":"//input[@placeholder='Last Name']"},
+    {"name":"Enter Optimum Password","objectType":"input_text","by":"name","objectId":"IDToken2"},
+    {"name":"Enter Optimum Username","objectType":"input_text","by":"name","objectId":"IDToken1"},
+    {"name":"Enter Password","objectType":"input_text","by":"css","objectId":"input.site-password"},
+    {"name":"Generate Email","objectType":"generate_email_address","by":"css","objectId":"input.site-email"},
+    {"name":"Search for Provider","objectType":"input_text","by": "xpath","objectId": "//input[@placeholder='Search']"}
+    ]
+}

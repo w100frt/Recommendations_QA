@@ -1,0 +1,6 @@
+﻿{
+"page":"nfl_scores",
+"testDefinitions":[
+    {"name":"Verify Box Score is Displayed","objectType":"verify_displayed","by":"class","objectId":"wisbb_main"}
+    ]
+}

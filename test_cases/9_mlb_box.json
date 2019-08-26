@@ -1,0 +1,14 @@
+﻿{"testCase":"mlb_box",
+"env":"stg",
+"testId":"9",
+"testView":"desktop",
+"testSteps":[
+    {"page":"navigation", "name":"Open Browser"},
+    {"page":"navigation", "name":"Navigate to URL", "data":"https://foxsports:N3wf0xr0cks@www.stg.wp.foxsports.com/mlb/boxscore?id=76803"},
+    {"page":"navigation","name":"Run Template", "data":"mlb_box"},
+    {"page":"navigation", "name":"Navigate to URL", "data":"https://foxsports:N3wf0xr0cks@www.stg.wp.foxsports.com/mlb/boxscore?id=76803&type=2"},
+    {"page":"navigation","name":"Run Template", "data":"mlb_box_pbp"},
+    {"page":"navigation", "name":"Navigate to URL", "data":"https://foxsports:N3wf0xr0cks@www.stg.wp.foxsports.com/mlb/boxscore?id=76803&type=6"},
+    {"page":"navigation","name":"Run Template", "data":"mlb_box_recap"}
+    ]
+}

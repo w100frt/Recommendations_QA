@@ -1,0 +1,10 @@
+﻿{
+"page":"favorites",
+"testDefinitions":[
+    {"name":"Click Add","objectType":"click","by":"css","objectId":".wisfav_addButton"},
+    {"name":"Click Done","objectType":"click","by":"css","objectId":".wisfav_nextActionAlt"},
+    {"name":"Click Next","objectType":"click","by":"css","objectId":".wisfav_nextAction"},
+    {"name":"Verify Favorites","objectType":"verify_displayed","by":"id","objectId":"favorites"},
+    {"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//span[@id='accountName']"}
+    ]
+}

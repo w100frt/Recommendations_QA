@@ -1,0 +1,15 @@
+﻿{
+    "testCase":"MVPD_FS_SSO_PPV",
+    "env":"stg",
+    "testId":"4",
+    "testView":"desktop",
+    "testSteps": [
+        {"page":"navigation", "name":"Run Template", "data":"provider_login"},
+        {"page":"navigation", "name":"Run Template", "data":"liveuser_login"},
+        {"page":"navigation", "name":"Navigate to URL", "data":"https://delta:awesome@account-qa.foxsports.com/signin?return_to=/signup-account"},
+        {"page":"navigation", "name":"Click PBC Sign In"},
+        {"page":"navigation", "name":"Navigate to URL", "data":"https://foxsports:foxsportsrocks@www.stg.wp.foxsports.com/provider/register"},
+        {"name":"Click User Profile","objectType":"click","by":"class","objectId":"greetingContainer"},
+        {"name":"Click Logout","objectType":"click","by":"class","objectId":"userSignOutLink"}
+    ]
+}

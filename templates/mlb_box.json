@@ -1,0 +1,17 @@
+﻿{
+    "testCase":"template_mlb_box",
+    "testId":"template5",
+    "testSteps":[
+        {"page":"mlb_box", "name":"Verify Teams"},
+        {"page":"mlb_box", "name":"Verify Score"},
+        {"page":"mlb_box", "name":"Verify Score Summary"},
+        {"page":"mlb_box", "name":"Verify Area Team"},
+        {"page":"mlb_box", "name":"Verify Bread Crumb"},        
+        {"page":"mlb_box", "name":"Verify Standard"},
+        {"page":"mlb_box", "name":"Verify Details"},
+        {"page":"mlb_box", "name":"Verify Bed Title"},
+        {"page":"mlb_box", "name":"Verify Matchups Title"},
+        {"page":"mlb_box", "name":"Verify Bread Crumb"},
+        {"page":"mlb_box", "name":"Verify Videos Title"}
+    ]
+}

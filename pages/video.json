@@ -1,0 +1,25 @@
+﻿{
+    "page":"video",
+    "testDefinitions":[
+        {"name":"Verify Play Button","objectType":"verify_value","by":"class","objectId":"playButton"},
+        {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"settingsButton"},
+        {"name":"Verify Volume Button","objectType":"verify_value","by":"class","objectId":"volumeButton"},
+        {"name":"Verify Full Screen Button","objectType":"verify_value","by":"class","objectId":"fullscreenButton"},
+        {"name":"Verify Image Container","objectType":"verify_value","by":"class","objectId":"image-container"},
+        {"name":"Verify Vid Title","objectType":"verify_value","by":"class","objectId":"vid-title"},
+        {"name":"Verify Vid Call Sign","objectType":"verify_value","by":"class","objectId":"vid-call-sign"},           
+        {"name":"Verify Live Badge","objectType":"verify_value","by":"class","objectId":"live-badge"},
+        {"name":"Verify Live Time","objectType":"verify_value","by":"class","objectId":"live-time"},
+        {"name":"Verify Icon","objectType":"verify_value","by":"class","objectId":"icon"},
+        {"name":"Verify Category","objectType":"verify_value","by":"class","objectId":"category"},
+        {"name":"Verify Image Shadow","objectType":"verify_value","by":"class","objectId":"image-shadow"},
+        {"name":"Verify Tag","objectType":"verify_value","by":"class","objectId":"tag"},
+        {"name":"Verify Tab","objectType":"verify_value","by":"class","objectId":"tab"},
+        {"name":"Verify Guide","objectType":"verify_value","by":"class","objectId":"programGuide"}, 
+        {"name":"Verify Title","objectType":"verify_value","by":"class","objectId":"title"},
+        {"name":"Verify Subtitle","objectType":"verify_value","by":"class","objectId":"subtitle"},
+        {"name":"Verify Date Dropdown","objectType":"verify_value","by":"class","objectId":"dateDropdown"},
+        {"name":"Verify Timeline","objectType":"verify_value","by":"class","objectId":"timelineMain"},
+        {"name":"Verify Network Logo","objectType":"verify_value","by":"class","objectId":"networkLogo"}
+        ]
+}
