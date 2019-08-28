@@ -1,5 +1,5 @@
 ﻿{
-"page":"navigation",
+"page":"facebook",
 "testDefinitions":[
 	{"name":"Click Login","objectType":"click","by":"xpath","objectId":"//input[@name='login']"},
     {"name":"Enter Email","objectType":"input_text","by":"id","objectId":"email"},
