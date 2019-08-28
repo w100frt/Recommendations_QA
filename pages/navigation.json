@@ -3,6 +3,7 @@
 "testDefinitions":[
     {"name":"Click Favorites","objectType":"click","by":"id","objectId":"userAccountEditLink"},
     {"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[@title='National Football League']"},
+	{"name":"Click Sign In with Facebook", "objectType":"click", "by":"xpath", "objectId":"//button[@class='fb-mock-button']"},
     {"name":"Hover User Dropdown","objectType":"hover","by":"id","objectId":"SigninFontIconContainer"},
     {"name":"Navigate to URL","objectType":"navigate_to"},
     {"name":"Open Browser","objectType":"new_browser"},

@@ -1,0 +1,14 @@
+﻿{
+	"testCase":"Existing User FB",
+	"env":"stg",
+	"testId":"10",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"navigation", "name":"Open Browser"},
+		{"page":"navigation", "name":"Navigate to URL", "data": "{env}/accounts/login?fu"},
+		{"page":"navigation", "name":"Click Sign In with Facebook"},
+		{"page":"facebook", "name":"Enter Email", "data":"forrest.thompson@yahoo.com"},
+		{"page":"facebook", "name":"Enter Password", "data":"secure_password"},
+		{"page":"facebook", "name":"Click Login"}
+		]
+}
