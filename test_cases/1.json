@@ -7,6 +7,6 @@
     {"page":"navigation","name":"Hover User Dropdown"},
     {"page":"navigation","name":"Click Favorites"},
     {"page":"favorites","name":"Verify Favorites"},
-    {"page":"favorites","name":"Verify Account Name", "data": "FORREST THOMPSON1"}
+    {"page":"favorites","name":"Verify Account Name", "data": "FORREST THOMPSON"}
     ]
 }
