@@ -21,7 +21,6 @@
         {"page":"nfl_schedule", "name":"Verify Links are Displayed"},
         {"page":"nfl", "name":"Click Standings"},
         {"page":"nfl", "name":"Verify Header Title","data":"2019 NFL Standings:"},
-        {"page":"nfl", "name":"Verify Season Dropdown is Displayed"},
-        {"page":"nfl", "name":"Verify Conference Value","data": "value=1 American Football Conference"}
+        {"page":"nfl", "name":"Verify Season Dropdown is Displayed"}
     ]
 }
