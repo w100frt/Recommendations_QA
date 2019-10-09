@@ -1,6 +1,7 @@
 ﻿{
     "page":"video",
     "testDefinitions":[
+        {"name":"Click Watch Live Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'choose-live') and .='Watch Live']"},	
         {"name":"Verify Play Button","objectType":"verify_value","by":"class","objectId":"playButton"},
         {"name":"Verify Settings Button","objectType":"verify_value","by":"class","objectId":"settingsButton"},
         {"name":"Verify Volume Button","objectType":"verify_value","by":"class","objectId":"volumeButton"},
