@@ -13,7 +13,9 @@
 		const data = await response.json();
 		let htmlString = '<h1>Selenium Templates</h1><ul style="list-style-type:none;">';
 		for (let file of data) {
-			htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
+			if (!file.name.includes("index.html")) {
+				htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
+			}
 		}
 		htmlString += '</ul>';
 		document.getElementsByTagName('body')[0].innerHTML = htmlString;
