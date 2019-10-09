@@ -2,6 +2,7 @@
     "testCase":"template_video_page",
     "testId":"template4",
     "testSteps":[
+	    {"page":"video", "name":"Click Watch Live Button"},
         {"page":"video", "name":"Verify Play Button"},
         {"page":"video", "name":"Verify Settings Button"},
         {"page":"video", "name":"Verify Volume Button"},
