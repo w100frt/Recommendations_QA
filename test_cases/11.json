@@ -14,9 +14,7 @@
         {"page":"login", "name":"Enter Optimum Username", "data":"research105"},
         {"page":"login", "name":"Enter Optimum Password", "data":"support105"},
         {"page":"login", "name":"Click Optimum Sign-in"},
-		{"page":"revamp_navigation", "name":"Click Sign In"},
-		{"page":"revamp_mvpd_login", "name":"Verify Account Info Flyout is Open"},		
-		{"page":"revamp_mvpd_login", "name":"Verify Provider Signed In"},
+		{"page":"revamp_navigation", "name":"Click Sign In"},	
         {"page":"revamp_fscom_login", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
         {"page":"revamp_fscom_login", "name":"Enter Password", "data":"Testing"},
         {"page":"revamp_fscom_login", "name":"Click Sign In Button"}
