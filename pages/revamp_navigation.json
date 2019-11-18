@@ -1,10 +1,10 @@
 ﻿{
     "page":"revamp_navigation",
     "testDefinitions":[
-        {"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in') and not(contains(@class,'mvpd'))]"},
-        {"name":"Verify Prime Grid","objectType":"verify_value","by":"class","objectId":"primeTimeGridToday"},
-        {"name":"Verify Prime Tile","objectType":"verify_value","by":"class","objectId":"primeTimeGridTile"},
-        {"name":"Verify Prime Time","objectType":"verify_value","by":"class","objectId":"primeTimeGridTime"},
-        {"name":"Verify TV Schedule","objectType":"verify_value","by":"class","objectId":"tv-schedule-link"}
+		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in') and not(contains(@class,'mvpd'))]"},
+        {"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/live-tv']"},
+		{"name":"Navigate to Live TV","objectType":"click","by":"xpath","objectId":"//a[@href='/live-tv']"},
+		{"name":"Navigate to Scores","objectType":"click","by":"xpath","objectId":"//a[@href='/scores']"},
+		{"name":"Navigate to Stories","objectType":"click","by":"xpath","objectId":"//a[@href='/stories']"}
         ]
 }

@@ -5,7 +5,11 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"navigation", "name":"Open Browser"},
-		{"page":"revamp_navigation", "name":"Click Sign In"},
+		{"page":"revamp_navigation", "name":"Navigate to Scores"},
+		{"page":"revamp_navigation", "name":"Navigate to Live TV"},
+		{"page":"revamp_navigation", "name":"Navigate to Stories"},
+		{"page":"revamp_navigation", "name":"Navigate to Home"},
+		{"page":"revamp_navigation", "name":"Navigate to Sign In"},
 		{"page":"revamp_fscom_login", "name":"Click Sign In With TV Provider"},
 		{"page":"revamp_mvpd_login", "name":"Verify Provider Logos"},
 		{"page":"revamp_mvpd_login", "name":"Enter Provider in Search", "data":"Optimum"},
@@ -14,9 +18,5 @@
         {"page":"login", "name":"Enter Optimum Username", "data":"research105"},
         {"page":"login", "name":"Enter Optimum Password", "data":"support105"},
         {"page":"login", "name":"Click Optimum Sign-in"},
-		{"page":"revamp_navigation", "name":"Click Sign In"},	
-        {"page":"revamp_fscom_login", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
-        {"page":"revamp_fscom_login", "name":"Enter Password", "data":"Testing"},
-        {"page":"revamp_fscom_login", "name":"Click Sign In Button"}
 	]
 }
