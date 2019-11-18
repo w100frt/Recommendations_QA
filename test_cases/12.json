@@ -1,0 +1,15 @@
+﻿{
+	"testCase":"Revamp Testing: FS Login",
+	"env":"dev",
+	"testId":"12",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"navigation", "name":"Open Browser"},
+		{"page":"revamp_navigation", "name":"Click Sign In"},
+        {"page":"revamp_fscom_login", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
+        {"page":"revamp_fscom_login", "name":"Enter Password", "data":"Testing"},
+        {"page":"revamp_fscom_login", "name":"Click Sign In Button"},
+		{"page":"revamp_mvpd_login", "name":"Verify Account Info Flyout is Open"},
+		{"page":"revamp_mvpd_login", "name":"Verify Provider Signed In"}
+	]
+}
