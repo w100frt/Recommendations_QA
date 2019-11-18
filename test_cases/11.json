@@ -9,7 +9,7 @@
 		{"page":"revamp_navigation", "name":"Navigate to Live TV"},
 		{"page":"revamp_navigation", "name":"Navigate to Stories"},
 		{"page":"revamp_navigation", "name":"Navigate to Home"},
-		{"page":"revamp_navigation", "name":"Navigate to Sign In"},
+		{"page":"revamp_navigation", "name":"Click Sign In"},
 		{"page":"revamp_fscom_login", "name":"Click Sign In With TV Provider"},
 		{"page":"revamp_mvpd_login", "name":"Verify Provider Logos"},
 		{"page":"revamp_mvpd_login", "name":"Enter Provider in Search", "data":"Optimum"},
