@@ -1,0 +1,24 @@
+﻿{
+    "page":"revamp_fscom_accountinfo",
+    "testDefinitions":[
+		{"name":"Click Back Arrow","objectType":"click","by":"xpath","objectId":"//img[@alt='back arrow']"},
+        {"name":"Click Change Password Link","objectType":"click","by":"xpath","objectId":"//a[@href='/change-password']"},
+		{"name":"Click Change Password Button","objectType":"click","by":"xpath","objectId":"//div[span[.='Change Password']]"},
+        {"name":"Click Close Button","objectType":"click","by":"xpath","objectId":"//img[@alt='close']"},
+		{"name":"Click Newsletter Checkbox","objectType":"click","by":"xpath","objectId":"//div[@id='account-cb']/input"},
+		{"name":"Click Show/Hide Password Button","objectType":"click","by":"xpath","objectId":"//span[contains(@class,'view-icon')]/div/svg"},
+		{"name":"Click Sign In Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign In']]"},
+		{"name":"Click Sign Up Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign Up']]"},
+		{"name":"Click Sign In With Facebook","objectType":"click","by":"xpath","objectId":"//a[.='Sign in With Facebook']"},
+		{"name":"Click Sign In With TV Provider","objectType":"click","by":"xpath","objectId":"//a[.='TV Provider sign in']"},
+		{"name":"Click Sign Out","objectType":"click","by":"xpath","objectId":"//div[@id='account-info']//span[.='Sign Out']"},
+		{"name":"Click Sign Up Link","objectType":"click","by":"xpath","objectId":"//a[.='Sign Up']"},
+		{"name":"Enter Current Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Current password*']"},
+		{"name":"Enter Email","objectType":"input_text","by":"xpath","objectId":"//input[@type='email' and @placeholder='E-mail*']"},
+		{"name":"Enter First Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='First Name']"},
+		{"name":"Enter Last Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Last Name']"},
+		{"name":"Enter New Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='New password*']"},
+        {"name":"Enter Password","objectType":"input_text","by":"xpath","objectId":"//input[contains(@placeholder,'Password')]"},
+		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[@id='header-title']"}
+	]
+}
