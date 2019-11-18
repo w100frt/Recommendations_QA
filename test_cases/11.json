@@ -1,0 +1,19 @@
+﻿{
+	"testCase":"Existing User FB",
+	"env":"stg",
+	"testId":"10",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"navigation", "name":"Open Browser"},
+		{"page":"revamp_navigation", "name":"Click Sign In"},
+		{"page":"revamp_fscom_login", "name":"Click Sign In With TV Provider"},
+		{"page":"revamp_mvpd_login", "name":"Verify Provider Logos"},
+		{"page":"revamp_mvpd_login", "name":"Enter Provider in Search", "data":"Optimum"},
+		{"page":"revamp_mvpd_login", "name":"Verify Provider Name", "data":"Optimum"},
+		{"page":"revamp_mvpd_login", "name":"Click Optimum Logo"},
+        {"page":"login", "name":"Enter Optimum Username", "data":"research105"},
+        {"page":"login", "name":"Enter Optimum Password", "data":"support105"},
+        {"page":"login", "name":"Click Optimum Sign-in"},
+		{"page":"revamp_mvpd_login", "name":"Verify Account Info Flyout is Open"}
+	]
+}

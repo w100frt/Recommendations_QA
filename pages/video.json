@@ -22,5 +22,5 @@
         {"name":"Verify Date Dropdown","objectType":"verify_value","by":"class","objectId":"dateDropdown"},
         {"name":"Verify Timeline","objectType":"verify_value","by":"class","objectId":"timelineMain"},
         {"name":"Verify Network Logo","objectType":"verify_value","by":"class","objectId":"networkLogo"}
-        ]
+	]
 }

@@ -1,0 +1,10 @@
+﻿{
+    "page":"revamp_mvpd_login",
+    "testDefinitions":[
+        {"name":"Click Optimum Logo","objectType":"click","by":"xpath","objectId":"//div[@class='mvpd-tile']/img[contains(@src,'Optimum')]"},
+		{"name":"Enter Provider in Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Search a provider']"},
+		{"name":"Verify Account Info Flyout is Open","objectType":"verify_displayed","by":"xpath","objectId":"//div[@id='account-info']"},
+		{"name":"Verify Provider Logos","objectType":"verify_value","by":"xpath","objectId":"//div[@class='mvpd-tile']/img"},
+		{"name":"Verify Provider Name","objectType":"verify_value","by":"xpath","objectId":"//div[@class='mvpd-items']/div"}
+        ]
+}
