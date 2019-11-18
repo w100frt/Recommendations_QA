@@ -6,10 +6,10 @@
 	"testSteps":[
 		{"page":"navigation", "name":"Open Browser"},
 		{"page":"revamp_navigation", "name":"Click Sign In"},
-        {"page":"revamp_fscom_login", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
-        {"page":"revamp_fscom_login", "name":"Enter Password", "data":"Testing"},
-        {"page":"revamp_fscom_login", "name":"Click Sign In Button"},
-		{"page":"revamp_mvpd_login", "name":"Verify Account Info Flyout is Open"},
-		{"page":"revamp_mvpd_login", "name":"Verify Provider Signed In"}
+        {"page":"revamp_fscom_accountinfo", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
+        {"page":"revamp_fscom_accountinfo", "name":"Enter Password", "data":"Testing"},
+        {"page":"revamp_fscom_accountinfo", "name":"Click Sign In Button"},
+		{"page":"navigation", "name":"Navigate to Account"},
+		{"page":"revamp_fscom_accountinfo", "name":"Verify Account Name", "data":"foxsportsgeneral@wright.edu"}
 	]
 }

@@ -2,9 +2,10 @@
     "page":"revamp_navigation",
     "testDefinitions":[
 		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in') and not(contains(@class,'mvpd'))]"},
+        {"name":"Navigate to Account","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'account-link')]"}
         {"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/']"},
 		{"name":"Navigate to Live TV","objectType":"click","by":"xpath","objectId":"//a[@href='/live-tv']"},
 		{"name":"Navigate to Scores","objectType":"click","by":"xpath","objectId":"//a[@href='/scores']"},
 		{"name":"Navigate to Stories","objectType":"click","by":"xpath","objectId":"//a[@href='/stories']"}
-        ]
+	]
 }
