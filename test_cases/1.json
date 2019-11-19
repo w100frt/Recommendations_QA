@@ -1,7 +1,7 @@
 ﻿{
 	"testCase":"Revamp Testing: MVPD",
 	"env":"dev",
-	"testId":"11",
+	"testId":"1",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

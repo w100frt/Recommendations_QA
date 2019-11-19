@@ -1,7 +1,7 @@
 ﻿{
 	"testCase":"Revamp Testing: FS Login",
 	"env":"dev",
-	"testId":"12",
+	"testId":"2",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
