@@ -1,5 +1,5 @@
 ﻿{
-"page":"login",
+"page":"Login",
 "testDefinitions":[
     {"name":"Click Optimum","objectType": "click","by": "xpath","objectId":"//li[text()='Optimum']"},
     {"name":"Click Optimum Sign-in","objectType": "click","by":"id","objectId":"signin_button"},

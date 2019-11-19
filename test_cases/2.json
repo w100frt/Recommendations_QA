@@ -1,24 +1,15 @@
 ﻿{
-    "testCase":"NewUserRegistration",
-    "env":"stg",
-    "testId":"2",
-    "testView":"desktop",
-    "testSteps": [
-        {"page":"navigation", "name":"Open Browser"},
-        {"page":"navigation", "name":"Navigate to URL", "data":"https://foxsports:N3wf0xr0cks@www.stg.wp.foxsports.com/accounts/login?fu"},
-        {"page":"login", "name":"Click Sign Up Button"},
-        {"page":"login", "name":"Generate Email"},
-        {"page":"login", "name":"Enter Password", "data":"Testing"},
-        {"page":"login", "name":"Enter First Name", "data":"Forrest"},
-        {"page":"login", "name":"Enter Last Name", "data":"Thompson"},
-        {"page":"login", "name":"Click Sign Up Button"},
-        {"page":"navigation", "name":"Switch Frame by Class", "data":"fancybox-iframe"},
-        {"page":"favorites", "name":"Click Add"},
-        {"page":"favorites", "name":"Click Next"},
-        {"page":"favorites", "name":"Click Add"},
-        {"page":"favorites", "name":"Click Next"},
-        {"page":"favorites", "name":"Click Add"},
-        {"page":"favorites", "name":"Click Done"},
-        {"page":"navigation", "name":"Switch Frame by ID", "data":"LOCSTORAGE"}
-    ]
+	"testCase":"Revamp Testing: FS Login",
+	"env":"dev",
+	"testId":"12",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Sign In"},
+        {"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
+        {"page":"FSCOM_AccountInfo", "name":"Enter Password", "data":"Testing"},
+        {"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"foxsportsgeneral@wright.edu"}
+	]
 }
