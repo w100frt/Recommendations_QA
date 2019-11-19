@@ -1,5 +1,5 @@
 ﻿{
-    "page":"revamp_fscom_accountinfo",
+    "page":"FSCOM_AccountInfo",
     "testDefinitions":[
 		{"name":"Click Back Arrow","objectType":"click","by":"xpath","objectId":"//img[@alt='back arrow']"},
         {"name":"Click Change Password Link","objectType":"click","by":"xpath","objectId":"//a[@href='/change-password']"},
