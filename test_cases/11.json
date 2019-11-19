@@ -4,16 +4,16 @@
 	"testId":"11",
 	"testView":"desktop",
 	"testSteps":[
-		{"page":"navigation", "name":"Open Browser"},
-		{"page":"revamp_navigation", "name":"Click Sign In"},
-		{"page":"revamp_fscom_accountinfo", "name":"Click Sign In With TV Provider"},
-		{"page":"revamp_mvpd_accountinfo", "name":"Verify Provider Logos"},
-		{"page":"revamp_mvpd_accountinfo", "name":"Enter Provider in Search", "data":"Optimum"},
-		{"page":"revamp_mvpd_accountinfo", "name":"Verify Provider Name", "data":"Optimum"},
-		{"page":"revamp_mvpd_accountinfo", "name":"Click Optimum Logo"},
-        {"page":"login", "name":"Enter Optimum Username", "data":"research105"},
-        {"page":"login", "name":"Enter Optimum Password", "data":"support105"},
-        {"page":"login", "name":"Click Optimum Sign-in"},
-		{"page":"revamp_mvpd_accountinfo", "name":"Verify Account Displayed Following MVPD Login"}
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"MVPD_AccountInfo", "name":"Click Sign In With TV Provider"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos"},
+		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Name", "data":"Optimum"},
+		{"page":"MVPD_AccountInfo", "name":"Click Optimum Logo"},
+        {"page":"Login", "name":"Enter Optimum Username", "data":"research105"},
+        {"page":"Login", "name":"Enter Optimum Password", "data":"support105"},
+        {"page":"Login", "name":"Click Optimum Sign-in"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Account Displayed Following MVPD Login"}
 	]
 }

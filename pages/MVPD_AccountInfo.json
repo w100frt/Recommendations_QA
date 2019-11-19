@@ -1,5 +1,5 @@
 ﻿{
-    "page":"revamp_mvpd_accountinfo",
+    "page":"MVPD_AccountInfo",
     "testDefinitions":[
         {"name":"Click Optimum Logo","objectType":"click","by":"xpath","objectId":"//div[@class='mvpd-tile']/img[contains(@src,'Optimum')]"},
 		{"name":"Enter Provider in Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Search a provider']"},
