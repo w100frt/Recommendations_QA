@@ -6,9 +6,10 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Sign In"},
-        {"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
+		{"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"foxsportsgeneral@wright.edu"},
         {"page":"FSCOM_AccountInfo", "name":"Enter Password", "data":"Testing"},
-        {"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Show/Hide Password Button"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Navigation", "name":"Navigate to Account"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"foxsportsgeneral@wright.edu"}
 	]
