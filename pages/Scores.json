@@ -1,0 +1,12 @@
+﻿{
+	"page":"Scores",
+	"testDefinitions":[
+		{"name":"Click MLB","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'MLB')]]"},
+		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NBA')]]"},
+		{"name":"Click NCAA BK","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NCAA BK')]]"},
+		{"name":"Click NCAA FB","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NCAA FB')]]"},
+		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NHL')]]"},
+		{"name":"Click Soccer","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'Soccer')]]"},
+		{"name":"Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'calendar-element')]"}
+	]
+}
