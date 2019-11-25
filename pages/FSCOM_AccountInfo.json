@@ -6,7 +6,7 @@
 		{"name":"Click Change Password Button","objectType":"click","by":"xpath","objectId":"//div[span[.='Change Password']]"},
         {"name":"Click Close Button","objectType":"click","by":"xpath","objectId":"//img[@alt='close']"},
 		{"name":"Click Newsletter Checkbox","objectType":"click","by":"xpath","objectId":"//div[@id='account-cb']/input"},
-		{"name":"Click Show/Hide Password Button","objectType":"click","by":"xpath","objectId":"//span[contains(@class,'view-icon')]/div/svg"},
+		{"name":"Click Show/Hide Password Button","objectType":"click","by":"xpath","objectId":"//span[contains(@class,'view-icon')]/div"},
 		{"name":"Click Sign In Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign In']]"},
 		{"name":"Click Sign Up Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign Up']]"},
 		{"name":"Click Sign In With Facebook","objectType":"click","by":"xpath","objectId":"//a[.='Sign in With Facebook']"},
