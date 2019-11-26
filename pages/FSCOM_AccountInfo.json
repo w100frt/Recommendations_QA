@@ -21,8 +21,8 @@
 		{"name":"Enter Last Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Last Name']"},
 		{"name":"Enter New Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='New password*']"},
 		{"name":"Enter Password","objectType":"input_text","by":"xpath","objectId":"//input[contains(@placeholder,'Password')]"},
-		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[@id='header-title']"},,
-		{"name":"Verify Password is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='text']"}
+		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[@id='header-title']"},
+		{"name":"Verify Password is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='text']"},
 		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"}
 	]
 }
