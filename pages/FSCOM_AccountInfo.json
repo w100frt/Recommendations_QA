@@ -23,6 +23,7 @@
 		{"name":"Enter Password","objectType":"input_text","by":"xpath","objectId":"//input[contains(@placeholder,'Password')]"},
 		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[@id='header-title']"},
 		{"name":"Verify Password is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='text']"},
-		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"}
+		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"},
+		{"name":"Verify Toast Message","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'toast-msg')]"}
 	]
 }
