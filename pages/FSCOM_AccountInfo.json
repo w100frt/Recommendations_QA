@@ -5,7 +5,9 @@
 		{"name":"Click Change Password Link","objectType":"click","by":"xpath","objectId":"//a[@href='/change-password']"},
 		{"name":"Click Change Password Button","objectType":"click","by":"xpath","objectId":"//div[span[.='Change Password']]"},
 		{"name":"Click Close Button","objectType":"click","by":"xpath","objectId":"//img[@alt='close']"},
+		{"name":"Click Forgot Password","objectType":"click","by":"xpath","objectId":"//span[.='FORGOT YOUR PASSWORD?']"},
 		{"name":"Click Newsletter Checkbox","objectType":"click","by":"xpath","objectId":"//div[@id='account-cb']/input"},
+		{"name":"Click Send Email","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Send E-mail']]"},
 		{"name":"Click Show/Hide Password Button","objectType":"click","by":"xpath","objectId":"//span[contains(@class,'view-icon')]/div"},
 		{"name":"Click Sign In Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign In']]"},
 		{"name":"Click Sign Up Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign Up']]"},
@@ -19,6 +21,8 @@
 		{"name":"Enter Last Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Last Name']"},
 		{"name":"Enter New Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='New password*']"},
 		{"name":"Enter Password","objectType":"input_text","by":"xpath","objectId":"//input[contains(@placeholder,'Password')]"},
-		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[@id='header-title']"}
+		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[@id='header-title']"},,
+		{"name":"Verify Password is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='text']"}
+		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"}
 	]
 }
