@@ -14,7 +14,7 @@
 		let htmlString = '<h1>Selenium Test Cases</h1><ul style="list-style-type:none;">';
 		for (let file of data) {
 			if (!file.name.includes("index.html")) {
-				if (!JSON.stringify(file.name) === "legacy") {
+				if (!file.name.includes("legacy")) {
 					console.log(file.name);
 					console.log(file.download_url);
 					const tc_file = await fetch(file.download_url);
