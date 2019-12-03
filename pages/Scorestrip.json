@@ -1,0 +1,6 @@
+﻿{
+	"page":"Scorestrip",
+	"testDefinitions":[
+		{"name":"Click All Scores Button","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'button') and .='ALL SCORES']"}		
+	]
+}
