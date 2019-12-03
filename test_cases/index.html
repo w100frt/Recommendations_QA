@@ -14,6 +14,7 @@
 		let htmlString = '<h1>Selenium Test Cases</h1><ul style="list-style-type:none;">';
 		for (let file of data) {
 			if (!file.name.includes("index.html")) {
+				console.log(file.download_url);
 				const tc_file = await fetch(file.download_url);
 				const tc = await tc_file.json();
 				htmlString += `<li><a href="${file.name}">${file.name}</a> - ${tc.testCase}</li>`;
