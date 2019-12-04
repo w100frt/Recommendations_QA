@@ -5,6 +5,6 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"}
 	]
 }
