@@ -5,6 +5,7 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"}
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Account Displayed Following MVPD Login"}
 	]
 }
