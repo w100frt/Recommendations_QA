@@ -1,7 +1,7 @@
 ﻿{
-	"testCase":"FSCOM: MVPD + Existing User Sign In",
+	"testCase":"FSCOM: MVPD + New User Registration",
 	"env":"dev",
-	"testId":"7",
+	"testId":"8",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
@@ -9,9 +9,8 @@
 		{"page":"FSCOM_AccountInfo","name":"Click Sign In With TV Provider"},
 		{"page":"MVPD_AccountInfo","name":"Click Optimum Logo"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"},
-		{"page":"Navigation","name":"Run Template", "data":"FSCOM_Login"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
-		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"Navigation","name":"Run Template", "data":""},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign Up Button"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"testingfoxsports@gmail.com"}
 	]
 }

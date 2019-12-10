@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Sign In: MVPD Login + FSCOM",
+	"testCase":"MVPD: FSCOM + Optimum Sign In",
 	"env":"dev",
 	"testId":"2",
 	"testView":"desktop",

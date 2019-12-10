@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Sign In: FSCOM Login",
+	"testCase":"FSCOM: Existing User Sign In",
 	"env":"dev",
 	"testId":"4",
 	"testView":"desktop",
