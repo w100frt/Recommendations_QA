@@ -2,12 +2,6 @@
     "testCase":"Template_Optimum_Provider_Login",
     "testId":"t1",
     "testSteps":[
-		{"page":"Navigation", "name":"Click Sign In"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos"},
-		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Name", "data":"Optimum"},
-		{"page":"MVPD_AccountInfo", "name":"Click Optimum Logo"},
 		{"page":"Login", "name":"Enter Optimum Username", "data":"research105"},
 		{"page":"Login", "name":"Enter Optimum Password", "data":"support105"},
 		{"page":"Login", "name":"Click Optimum Sign-in"}

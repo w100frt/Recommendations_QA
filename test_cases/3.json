@@ -1,0 +1,11 @@
+﻿{
+	"testCase":"Sign In: MVPD Full Credential Login",
+	"env":"dev",
+	"testId":"3",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"}
+	]
+}
