@@ -1,10 +1,16 @@
 ﻿{
-	"testCase":"Revamp Testing: MVPD",
+	"testCase":"Sign In: MVPD Optimum Login",
 	"env":"dev",
 	"testId":"1",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos"},
+		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Name", "data":"Optimum"},
+		{"page":"MVPD_AccountInfo", "name":"Click Optimum Logo"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Account Displayed Following MVPD Login"}
 	]

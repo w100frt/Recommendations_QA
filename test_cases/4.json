@@ -1,0 +1,22 @@
+﻿{
+	"testCase":"Sign In: FSCOM Login",
+	"env":"dev",
+	"testId":"4",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Password is Displayed"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Show/Hide Password Button"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Password is Hidden"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"testingfoxsports@gmail.com"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign Out"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Forgot Password"},
+		{"page":"FSCOM_AccountInfo", "name":"Enter Email"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Send Email"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"We've just sent an email with the link to create a new password."}
+	]
+}

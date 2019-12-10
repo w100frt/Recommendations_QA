@@ -1,0 +1,11 @@
+﻿{
+	"testCase":"Sign In: Facebook Sign In",
+	"env":"dev",
+	"testId":"6",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation","name":"Click Sign In"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With Facebook"}
+	]
+}
