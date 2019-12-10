@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Sign In: MVPD Full Credential Login",
+	"testCase":"MVPD: Full Credential Sign In",
 	"env":"dev",
 	"testId":"3",
 	"testView":"desktop",
