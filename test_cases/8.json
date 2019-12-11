@@ -8,9 +8,9 @@
 		{"page":"Navigation","name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo","name":"Click Sign In With TV Provider"},
 		{"page":"MVPD_AccountInfo","name":"Click Optimum Logo"},
-		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_Login"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
 		{"page":"Navigation","name":"Run Template", "data":""},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign Up Button"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"testingfoxsports@gmail.com"}
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"}
 	]
 }
