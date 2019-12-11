@@ -13,7 +13,7 @@
 		{"name":"Click Sign Up Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign Up']]"},
 		{"name":"Click Sign In With Facebook","objectType":"click","by":"xpath","objectId":"//a[.='Sign in With Facebook']"},
 		{"name":"Click Sign In With TV Provider","objectType":"click","by":"xpath","objectId":"//a[.='TV Provider Sign In']"},
-		{"name":"Click Sign Out","objectType":"click","by":"xpath","objectId":"//div[@id='account-info']//span[.='Sign Out']"},
+		{"name":"Click Sign Out","objectType":"click","by":"xpath","objectId":"//div[@id='account']//span[.='Sign Out']"},
 		{"name":"Click Sign Up Link","objectType":"click","by":"xpath","objectId":"//a[.='Sign Up']"},
 		{"name":"Enter Current Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Current password*']"},
 		{"name":"Enter Email","objectType":"input_text","by":"xpath","objectId":"//input[@type='email' and @placeholder='E-mail*']"},
