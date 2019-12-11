@@ -15,7 +15,7 @@
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign Out"},
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Forgot Password"},
-		{"page":"FSCOM_AccountInfo", "name":"Enter Email"},
+		{"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"testingfoxsports@gmail.com"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Send Email"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"We've just sent an email with the link to create a new password."}
 	]
