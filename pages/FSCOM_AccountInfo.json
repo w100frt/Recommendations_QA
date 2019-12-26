@@ -21,7 +21,7 @@
 		{"name":"Enter Last Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Last Name']"},
 		{"name":"Enter New Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='New password*']"},
 		{"name":"Enter Password","objectType":"input_text","by":"xpath","objectId":"//input[contains(@placeholder,'Password')]"},
-		{"name":"Generate Email","objectType":"generate_email_address","by":"css","objectId":"input.site-email"},
+		{"name":"Generate Email","objectType":"generate_email_address","by":"xpath","objectId":"//input[@type='email' and @placeholder='E-mail*']"},
 		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[contains(@class,'header-title')]"},
 		{"name":"Verify Email Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'email')]//span[contains(@class,'error')]"},
 		{"name":"Verify Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'password')]//span[contains(@class,'error')]"},		
