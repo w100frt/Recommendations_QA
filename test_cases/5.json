@@ -12,6 +12,6 @@
 		{"page":"FSCOM_AccountInfo", "name":"Enter First Name", "data" : "Test"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter Last Name", "data" : "User"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign Up Button"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":""}
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"#EmailAddress"}
 	]
 }
