@@ -1,0 +1,12 @@
+﻿{
+	"testCase":"Verify Live TV Page",
+	"env":"dev",
+	"testId":"25",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
+	]
+}
