@@ -1,6 +1,13 @@
 ﻿{
 	"page":"LiveTV",
 	"testDefinitions":[
-		{"name":"","objectType":"","by":"","objectId":""}
+		{"name":"Capture Live on Fox Title","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'live-on-fox')]//div[div[.='Live On Fox']]//div[not(@class='cl-red')]"},
+		{"name":"Click Main Video Play Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class, 'live-tv-main')]//div[contains(@class,'pointer video')]//div[@class='play-button']"},
+		{"name":"Verify Top Show Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]"},
+		{"name":"Verify BTN Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
+		{"name":"Verify Deportes Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
+		{"name":"Verify FS1 Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
+		{"name":"Verify FS2 Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
+		{"name":"Verify FSP Logo","objectType":"verify_displayed","by":"xpath","objectId":""}
 	]
 }
