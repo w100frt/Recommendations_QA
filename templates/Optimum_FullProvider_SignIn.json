@@ -3,8 +3,8 @@
     "testId":"t1",
     "testSteps":[
 		{"page":"MVPD_AccountInfo", "name":"Click Optimum Logo"},
-		{"page":"Login", "name":"Enter Optimum Username", "data":"research105"},
-		{"page":"Login", "name":"Enter Optimum Password", "data":"support105"},
+		{"page":"Login", "name":"Enter Optimum Username", "data":"research39"},
+		{"page":"Login", "name":"Enter Optimum Password", "data":"support39"},
 		{"page":"Login", "name":"Click Optimum Sign-in"}
     ]
 }

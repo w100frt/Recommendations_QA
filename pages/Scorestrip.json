@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Scorestrip",
 	"testDefinitions":[
-		{"name":"Click All Scores Button","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'button') and .='ALL SCORES']"}		
+		{"name":"Click All Scores Button","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'button') and .='ALL SCORES']"},
+		{"name":"Verify Scorestrip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='scores homepage-module carousel-content']"}
 	]
 }

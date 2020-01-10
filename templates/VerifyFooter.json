@@ -1,0 +1,15 @@
+﻿{
+    "testCase":"Template_VerifyFooter",
+    "testId":"t4",
+    "testSteps":[
+		{"page":"Footer", "name":"Verify Fox Bet Logo"},
+		{"page":"Footer", "name":"Verify Fox Super Six Logo"},
+		{"page":"Footer", "name":"Verify Instagram Logo"},
+		{"page":"Footer", "name":"Verify RSS Logo"},
+		{"page":"Footer", "name":"Verify Twitter Log"},
+		{"page":"Footer", "name":"Verify Facebook Logo"},
+		{"page":"Footer", "name":"Verify Caffeine Logo"},
+		{"page":"Footer", "name":"Verify Footer Links"},
+		{"page":"Footer", "name":"Verify Footer Links 2"}
+    ]
+}

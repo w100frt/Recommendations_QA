@@ -1,0 +1,15 @@
+﻿{
+	"testCase":"Verify Homepage Elements Displayed",
+	"env":"dev",
+	"testId":"30",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Verify FS Logo on Desktop"},
+		{"page":"Navigation", "name":"Verify Main Nav is Displayed"},
+		{"page":"Scorestrip", "name":"Verify Scorestrip is Displayed"},
+		{"page":"Scorestrip", "name":"Verify Carousel is Displayed"},
+		{"page":"Scorestrip", "name":"Verify Live on Fox is Displayed"},
+		{"page":"Navigation", "name":"Run Template", "data":"VerifyFooter"}
+	]
+}
