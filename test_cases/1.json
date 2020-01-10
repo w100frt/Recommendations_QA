@@ -10,7 +10,6 @@
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos"},
 		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Name", "data":"Optimum"},
-		{"page":"MVPD_AccountInfo", "name":"Click Optimum Logo"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"}

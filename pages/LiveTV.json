@@ -5,9 +5,7 @@
 		{"name":"Click Main Video Play Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class, 'live-tv-main')]//div[contains(@class,'pointer video')]//div[@class='play-button']"},
 		{"name":"Verify Top Show Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]"},
 		{"name":"Verify BTN Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
-		{"name":"Verify Deportes Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
-		{"name":"Verify FS1 Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
-		{"name":"Verify FS2 Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
-		{"name":"Verify FSP Logo","objectType":"verify_displayed","by":"xpath","objectId":""}
+		{"name":"Verify Video","objectType":"verify_displayed","by":"xpath","objectId":"//video[contains(@class,'video')]"},
+		{"name":"Verify Live on Fox is Displayed", "objectType":"verify_displayed", "by":"xpath","objectId":"//div[contains(@class,'home-page-live homepage-module')]"}
 	]
 }

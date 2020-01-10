@@ -7,6 +7,8 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
-		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"}
+		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"}
 	]
 }
