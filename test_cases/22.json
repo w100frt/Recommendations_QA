@@ -1,7 +1,7 @@
 ﻿{
 	"testCase":"NCAAFB Scores",
 	"env":"dev",
-	"testId":"21",
+	"testId":"22",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
