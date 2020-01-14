@@ -8,6 +8,6 @@
 		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NHL')]]"},
 		{"name":"Click Soccer","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'Soccer')]]"},
 		{"name":"Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'calendar-element')]"},
-		{"name":"Verify Displayed Day","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]"}
+		{"name":"Verify Displayed Day on Top Scores","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]"}
 	]
 }
