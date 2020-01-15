@@ -6,13 +6,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
-		{"page":"Scores","name":"Click League by Name", "data":[{"dynamic":"NCAA FB"}]},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Password is Displayed"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Show/Hide Password Button"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Password is Hidden"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
-		{"page":"Navigation", "name":"Navigate to Account"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Sign Out"}
+		{"page":"Scores","name":"Click NCAA FB"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Conferences"}
 	]
 }
