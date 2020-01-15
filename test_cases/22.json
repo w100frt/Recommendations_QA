@@ -7,6 +7,6 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores","name":"Click NCAA FB"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Conferences"}
+		{"page":"Scores", "name":"Verify Conferences"}
 	]
 }
