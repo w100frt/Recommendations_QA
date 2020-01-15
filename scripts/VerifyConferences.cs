@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using SeleniumProject;
 using OpenQA.Selenium;
-using OpenQA.Selenium.IWebElement;
 using log4net;
 
 namespace SeleniumProject.Function
