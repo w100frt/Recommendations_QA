@@ -13,18 +13,26 @@ namespace SeleniumProject.Function
 		
 		public void Execute(DriverManager driver, TestStep step)
 		{
+			VerifyError err = new VerifyError();
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
+			string[] expectedConf = {"BOWLS", "TOP 25", "AAC", "ACC", "BIG 12", "BIG SKY", "BIG SOUTH", "BIG TEN", "C-USA", "CAA", "IND-FCS", "INDEPENDENTS", "IVY", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "PIONEER", "SEC", "SOUTHERN", "SOUTHLAND", "SUN BELT", "SWAC"};
             List<TestStep> steps = new List<TestStep>();
             steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
 			steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[@class='scores-home-container']//div[contains(@class,'dropdown')]//ul", wait));
             TestRunner.RunTestSteps(driver, null, steps);
+			steps.Clear();
 			
 			var conferences = driver.FindElements("xpath", "//div[@class='scores-home-container']//div[contains(@class,'dropdown')]//ul//li"); 
-			foreach (IWebElement active in conferences) {
-				log.Info(active.GetAttribute("innerText"));
+			for (int i = 0; i < conferences.Count; i++) {
+				if (expectedConf[i].Equals(conferences.GetAttribute("innerText"))) {
+					log.Info("Success. " + expectedConf[i] + " matches " + conferences.GetAttribute("innerText"));
+				}
+				else {
+					log.Error("***Verification FAILED. Expected data [" + expectedConf[i] + "] does not match actual data [" + conferences.GetAttribute("innerText") + "] ***");
+					err.CreateVerificationError(step, expectedConf[i], conferences.GetAttribute("innerText"));
+				}
 			}
-			
 		}
 	}
 }
