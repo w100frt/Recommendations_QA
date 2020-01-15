@@ -7,6 +7,22 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Scorestrip", "name":"Verify Scorechip Count", "data" : "5"},
 		{"page":"Scorestrip", "name":"Click All Scores Button"},
-		{"page":"Scores", "name":"Verify Displayed Day on Top Scores", "data": "TODAY"}
+		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
+		{"page":"Scores", "name":"Verify Displayed Day on Top Scores", "data": "TODAY"},
+		{"page":"Scores", "name":"Click NFL"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "NFL"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Click NCAA FB"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA FB"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Click NBA"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "NBA"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Click NCAA BK"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA BK"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Click Soccer"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "SOCCER"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"}
 	]
 }
