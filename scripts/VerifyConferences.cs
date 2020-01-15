@@ -25,12 +25,12 @@ namespace SeleniumProject.Function
 			
 			var conferences = driver.FindElements("xpath", "//div[@class='scores-home-container']//div[contains(@class,'dropdown')]//ul//li"); 
 			for (int i = 0; i < conferences.Count; i++) {
-				if (expectedConf[i].Equals(conferences.GetAttribute("innerText"))) {
-					log.Info("Success. " + expectedConf[i] + " matches " + conferences.GetAttribute("innerText"));
+				if (expectedConf[i].Equals(conferences[i].GetAttribute("innerText"))) {
+					log.Info("Success. " + expectedConf[i] + " matches " + conferences[i].GetAttribute("innerText"));
 				}
 				else {
-					log.Error("***Verification FAILED. Expected data [" + expectedConf[i] + "] does not match actual data [" + conferences.GetAttribute("innerText") + "] ***");
-					err.CreateVerificationError(step, expectedConf[i], conferences.GetAttribute("innerText"));
+					log.Error("***Verification FAILED. Expected data [" + expectedConf[i] + "] does not match actual data [" + conferences[i].GetAttribute("innerText") + "] ***");
+					err.CreateVerificationError(step, expectedConf[i], conferences[i].GetAttribute("innerText"));
 				}
 			}
 		}
