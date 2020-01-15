@@ -9,6 +9,7 @@
 		{"page":"Scorestrip", "name":"Click All Scores Button"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores", "data": "TODAY"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
 		{"page":"Scores", "name":"Click NFL"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NFL"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
