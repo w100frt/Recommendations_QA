@@ -21,7 +21,10 @@ namespace SeleniumProject.Function
             TestRunner.RunTestSteps(driver, null, steps);
 			
 			var conferences = driver.FindElements("xpath", "//div[@class='scores-home-container']//div[contains(@class,'dropdown')]//ul//li"); 
-			log.Info("number of conferences: " + conferences.Count);
+			foreach (IWebElement active in conferences) {
+				log.Info(active.GetAttribute("innerText"));
+			}
+			
 		}
 	}
 }
