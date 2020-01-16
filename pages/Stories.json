@@ -1,6 +1,6 @@
 ﻿{
 	"page":"Stories",
 	"testDefinitions":[
-		{"name":"Verify Carousel is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'carousel-container card-carousel')]"}
+		{"name":"","objectType":"","by":"","objectId":""}
 	]
 }
