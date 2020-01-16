@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Scorestrip Verification and All Scores",
+	"testCase":"Scorestrip and All Scores Smoke Test",
 	"env":"dev",
 	"testId":"21",
 	"testView":"desktop",

@@ -1,0 +1,13 @@
+﻿{
+	"testCase":"Stories Smoke Test",
+	"env":"dev",
+	"testId":"35",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Homepage", "name":"Verify Carousel is Displayed"},
+		{"page":"Stories_Carousel", "name":"Click Arrow Right"},
+		{"page":"Stories_Carousel", "name":"Click Arrow Left"},
+		{"page":"Stories_Carousel", "name":"Click View All Stories"}
+	]
+}
