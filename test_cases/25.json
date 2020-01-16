@@ -6,7 +6,15 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
+		{"page":"Homepage", "name":"Click Watch Live TV Button"},
+		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
+		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"Navigation", "name":"Click Full Events Schedule Button"},
+		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
+		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV","name":"Verify Selected Link on Nav"},
+		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
 		{"page":"LiveTV","name":"Click Main Video Play Button"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"}
