@@ -9,7 +9,7 @@
 		{"page":"Homepage", "name":"Click Watch Live TV Button"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"Navigation", "name":"Navigate to Home"},
-		{"page":"Navigation", "name":"Click Full Events Schedule Button"},
+		{"page":"Homepage", "name":"Click Full Events Schedule Button"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
