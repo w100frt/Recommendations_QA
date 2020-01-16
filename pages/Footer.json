@@ -10,6 +10,6 @@
 		{"name":"Verify Instagram Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'instagram')]"},
 		{"name":"Verify RSS Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'rss')]"},
 		{"name":"Verify Twitter Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'twitter')]"},
-		{"name":"Verify YouTube Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'youtube')]"},
+		{"name":"Verify YouTube Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'youtube')]"}
 	]
 }
