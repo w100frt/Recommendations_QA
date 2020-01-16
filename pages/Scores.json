@@ -8,7 +8,7 @@
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NFL')]]"},
 		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NHL')]]"},
 		{"name":"Click Soccer","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'SOCCER')]]"},
-		{"name":"Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'calendar-element')]"},
+		{"name":"Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'calendar-element') or @class='date-picker']"},
 		{"name":"Verify Conferences","objectType":"script","by":"xpath","objectId":"VerifyConferences"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]"},
 		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'score-chip')]"},
