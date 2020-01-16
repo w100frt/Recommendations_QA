@@ -2,8 +2,8 @@
     "testCase":"Template_VerifyFooter",
     "testId":"t4",
     "testSteps":[
-		{"page":"Footer", "name":"Verify Fox Bet Logo"},
-		{"page":"Footer", "name":"Verify Fox Super Six Logo"},
+		{"page":"Footer", "name":"Verify FOX Bet Logo"},
+		{"page":"Footer", "name":"Verify FOX Super Six Logo"},
 		{"page":"Footer", "name":"Verify Instagram Logo"},
 		{"page":"Footer", "name":"Verify RSS Logo"},
 		{"page":"Footer", "name":"Verify Twitter Log"},
