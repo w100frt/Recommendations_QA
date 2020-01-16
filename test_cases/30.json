@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Verify Homepage Elements Displayed",
+	"testCase":"Homepage Elements Smoke Test",
 	"env":"dev",
 	"testId":"30",
 	"testView":"desktop",
