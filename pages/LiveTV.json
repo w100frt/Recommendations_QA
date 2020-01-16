@@ -4,7 +4,9 @@
 		{"name":"Capture Live on Fox Title","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'live-on-fox')]//div[div[.='Live On Fox']]//div[not(@class='cl-red')]"},
 		{"name":"Click Main Video Play Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class, 'live-tv-main')]//div[contains(@class,'pointer video')]//div[@class='play-button']"},
 		{"name":"Verify Top Show Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]"},
+		{"name":"Verify Live TV Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'live-tv')][span[.='LIVE TV']]"},
 		{"name":"Verify BTN Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
+		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/live' and @class='nav-item']//div[@class='nav-item-bar']"},
 		{"name":"Verify Video","objectType":"verify_displayed","by":"xpath","objectId":"//video[contains(@class,'video')]"}
 	]
 }
