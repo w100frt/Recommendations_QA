@@ -12,7 +12,6 @@
 		{"name":"Run Template","objectType":"run_template"},
 		{"name":"Switch Frame by Class","objectType":"switch_frame","by": "class"},
 		{"name":"Switch Frame by ID","objectType":"switch_frame","by": "id"},
-		{"name":"Verify FS Logo on Desktop","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@alt='Fox Sports']"},
-		{"name":"Verify Main Nav is Displayed","objectType":"verify_displayed","by": "xpath", "objectId":"//div[@class='nav-main-content']"}
+		{"name":"Verify FS Logo on Desktop","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@alt='Fox Sports']"}
 	]
 }
