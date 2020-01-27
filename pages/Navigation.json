@@ -1,7 +1,8 @@
 ﻿{
 	"page":"Navigation",
 	"testDefinitions":[
-		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in') and not(contains(@class,'mvpd'))]"},
+		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in')]"},
+		{"name":"Click Explore","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'explore-link')]"},
 		{"name":"Navigate to Account","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'account-link')]"},
 		{"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/']"},
 		{"name":"Navigate to Live TV","objectType":"click","by":"xpath","objectId":"//a[@href='/live']"},
