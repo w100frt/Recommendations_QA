@@ -42,7 +42,6 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[span[contains(.,'"+ sport +"')]]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Remove("ACTIVE_TEAM");
 				}
 			}
 		}
