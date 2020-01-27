@@ -27,14 +27,13 @@ namespace SeleniumProject.Function
 			for (int i = 0; i < teams.Count; i++) {
 				int counter = i + 1;
 				activeTeam = driver.FindElement("xpath", "(//div[contains(@class,'explore-basic-rows')]//a//span)["+ counter +"]").Text;
-				DataManager.CaptureMap.Add("ACTIVE_TEAM", activeTeam.ToUpper());
 				
 				if (activeTeam.Equals("NFL")) {
 					activeTeam = "NATIONAL FOOTBALL LEAGUE";
 				}
 
 				steps.Add(new TestStep(order, "Click Team Name", "", "click", "xpath", "(//div[contains(@class,'explore-basic-rows')]//a//span)["+ counter +"]", wait));
-				steps.Add(new TestStep(order, "Verify Team Name in Header", activeTeam, "verify_value", "xpath", "//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]//span", wait));
+				steps.Add(new TestStep(order, "Verify Team Name in Header", activeTeam.ToUpper(), "verify_value", "xpath", "//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]//span", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				
@@ -43,7 +42,6 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[span[contains(.,'"+ sport +"')]]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Remove("ACTIVE_TEAM");
 				}
 			}
 		}
