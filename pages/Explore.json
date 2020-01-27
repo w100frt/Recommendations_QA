@@ -1,0 +1,6 @@
+﻿{
+	"page":"Explore",
+	"testDefinitions":[
+		{"name":"Verify Teams by Sport","objectType":"script","by":"xpath","objectId":"Explore"}
+	]
+}

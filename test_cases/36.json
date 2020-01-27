@@ -1,0 +1,11 @@
+﻿{
+	"testCase":"Explore: Verify NFL Teams",
+	"env":"dev",
+	"testId":"36",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Verify Teams by Sport", "data":"NFL"}
+	]
+}
