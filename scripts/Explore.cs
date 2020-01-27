@@ -26,7 +26,7 @@ namespace SeleniumProject.Function
 			var teams = driver.FindElements("xpath", "//div[contains(@class,'explore-basic-rows')]//a//span"); 
 			for (int i = 0; i < teams.Count; i++) {
 				int counter = i + 1;
-				activeTeam = driver.FindElement("xpath", "(//div[contains(@class,'explore-basic-rows')]//a//span)["+ counter +"]").Text
+				activeTeam = driver.FindElement("xpath", "(//div[contains(@class,'explore-basic-rows')]//a//span)["+ counter +"]").Text;
 				DataManager.CaptureMap.Add("ACTIVE_TEAM", activeTeam);
 				
 				if (activeTeam.Equals("NFL")) {
