@@ -37,6 +37,13 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Verify Team Name in Header", activeTeam, "verify_value", "xpath", "//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]//span", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+				
+				if (i < teams.Count - 1) {
+					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", "//a[contains(@class,'explore-link')]", wait));
+					steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[span[contains(.,'"+ sport +"')]]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
 			}
 		}
 	}
