@@ -1,15 +1,15 @@
 ﻿{
     "project":"fs",
-    "env":"dev",
+    "env":"stg",
     "browser":"chrome",
     "testView":"desktop",
     "testIds": [
-        {"testId":30},
         {"testId":1},
         {"testId":4},
         {"testId":5},
         {"testId":21},
         {"testId":25},
+        {"testId":30},
         {"testId":35}
     ]
 }
