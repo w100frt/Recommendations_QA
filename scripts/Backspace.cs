@@ -10,7 +10,7 @@ namespace SeleniumProject.Function
 		public void Execute(DriverManager driver, TestStep step)
 		{
 			var element = driver.FindElement("xpath", "//input[@placeholder='Search a provider']");
-			element.SendKeys(Keys.DELETE);
+			element.SendKeys(Keys.Delete);
 		}
 	}
 }
