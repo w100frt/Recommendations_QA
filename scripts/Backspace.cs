@@ -15,6 +15,6 @@ namespace SeleniumProject.Function
 			log.Info("Selecting all text");
 			element.SendKeys(Keys.Delete);
 			log.Info("Removing all text");
-		}
+		} 
 	}
 }
