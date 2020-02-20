@@ -13,6 +13,7 @@ namespace SeleniumProject.Function
 		public void Execute(DriverManager driver, TestStep step)
 		{
 			IWebElement element = driver.FindElement("xpath", "//input[@placeholder='Search a provider']");
+			element.Click();
 			element.SendKeys(Keys.Control + "a");
 			log.Info("Selecting all text");
 			element.SendKeys(Keys.Delete);
