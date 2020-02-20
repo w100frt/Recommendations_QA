@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using OpenQA.Selenium;
+using log4net;
 
 namespace SeleniumProject.Function
 {
