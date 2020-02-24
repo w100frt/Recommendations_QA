@@ -5,9 +5,10 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Homepage", "name":"Verify Carousel is Displayed"},
-		{"page":"Stories_Carousel", "name":"Click Arrow Right"},
-		{"page":"Stories_Carousel", "name":"Click Arrow Left"},
+		{"page":"Homepage", "name":"Verify Carousel is Displayed"},		
+		{"page":"Stories_Carousel", "name":"Click Arrow Forward"},
+		{"page":"Stories_Carousel", "name":"Click Arrow Backward"},
+		{"page":"Stories_Carousel", "name":"Click Arrow Forward"},
 		{"page":"Stories_Carousel", "name":"Click View All Stories"}
 	]
 }
