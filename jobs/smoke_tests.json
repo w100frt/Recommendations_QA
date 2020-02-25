@@ -1,6 +1,6 @@
 ﻿{
     "project":"fs",
-    "env":"dev",
+    "env":"stg",
     "browser":"chrome",
     "testView":"desktop",
     "testIds": [
