@@ -15,9 +15,8 @@ namespace SeleniumProject.Function
 			IWebElement element = driver.FindElement("xpath", "//input[@placeholder='Search a provider']");
 			element.Click();
 			element.Clear();
-			//element.SendKeys(Keys.Control + "a");
-			//log.Info("Selecting all text");
-			//element.SendKeys(Keys.Delete);
+			element.SendKeys(" ");
+			element.SendKeys(Keys.Backspace);
 			log.Info("Removing all text");
 		} 
 	}
