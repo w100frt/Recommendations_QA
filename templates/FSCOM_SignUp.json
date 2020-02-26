@@ -1,0 +1,13 @@
+﻿{
+    "testCase":"Template_FSCOM_SignIn",
+    "testId":"t2",
+    "testSteps":[
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page": "FSCOM_AccountInfo", "name": "Click Sign Up Link"},
+		{"page": "FSCOM_AccountInfo", "name": "Generate Email"},
+		{"page": "FSCOM_AccountInfo", "name": "Enter Password", "data": "testuserpassword"},
+		{"page": "FSCOM_AccountInfo", "name": "Enter First Name", "data": "Test"},
+		{"page": "FSCOM_AccountInfo", "name": "Enter Last Name", "data": "User"},
+		{"page": "FSCOM_AccountInfo","name": "Click Sign Up Button"}
+    ]
+}
