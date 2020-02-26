@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_FSCOM_SignIn",
-    "testId":"t2",
+    "testId":"t3",
     "testSteps":[
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page": "FSCOM_AccountInfo", "name": "Click Sign Up Link"},

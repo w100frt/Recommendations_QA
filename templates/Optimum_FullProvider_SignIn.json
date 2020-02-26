@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_Optimum_Provider_SignIn",
-    "testId":"t1",
+    "testId":"t5",
     "testSteps":[
 		{"page":"MVPD_AccountInfo", "name":"Click Optimum Logo"},
 		{"page":"Login", "name":"Enter Optimum Username", "data":"research39"},
