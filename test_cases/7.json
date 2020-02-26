@@ -7,7 +7,6 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation","name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo","name":"Click Sign In With TV Provider"},
-		{"page":"MVPD_AccountInfo","name":"Click Optimum Logo"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
