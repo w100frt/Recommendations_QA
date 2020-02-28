@@ -2,6 +2,7 @@
 	"testCase":"Live TV Smoke Test",
 	"env":"dev",
 	"testId":"25",
+	"testRail":"6174104",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

@@ -2,6 +2,7 @@
 	"testCase":"FSCOM: Sign In + Reset Password",
 	"env":"dev",
 	"testId":"10",
+	"testRail":"6174099",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

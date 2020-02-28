@@ -2,6 +2,7 @@
 	"testCase":"Homepage Elements Smoke Test",
 	"env":"dev",
 	"testId":"30",
+	"testRail":"6174106",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

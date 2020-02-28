@@ -2,6 +2,7 @@
 	"testCase":"Explore: Verify NFL Teams",
 	"env":"dev",
 	"testId":"36",
+	"testRail":"6174108",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
