@@ -2,6 +2,7 @@
 	"testCase":"Stories Smoke Test",
 	"env":"dev",
 	"testId":"35",
+	"testRail":"6174107",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

@@ -2,6 +2,7 @@
 	"testCase":"NCAAFB Scores",
 	"env":"dev",
 	"testId":"22",
+	"testRail":"6174103",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

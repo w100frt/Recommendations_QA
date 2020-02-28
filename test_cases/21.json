@@ -2,6 +2,7 @@
 	"testCase":"Scorestrip and All Scores Smoke Test",
 	"env":"dev",
 	"testId":"21",
+	"testRail":"6174102",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

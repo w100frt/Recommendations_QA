@@ -2,6 +2,7 @@
 	"testCase":"MVPD: Full Credential Sign In",
 	"env":"dev",
 	"testId":"3",
+	"testRail":"6174105",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

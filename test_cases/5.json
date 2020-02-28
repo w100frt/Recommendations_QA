@@ -2,6 +2,7 @@
 	"testCase":"FSCOM: New User Registration",
 	"env":"dev",
 	"testId":"5",
+	"testRail":"6174110",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

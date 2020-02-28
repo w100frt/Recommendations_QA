@@ -2,6 +2,7 @@
 	"testCase":"FSCOM: MVPD + Existing User Sign In",
 	"env":"dev",
 	"testId":"7",
+	"testRail":"6174112",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
