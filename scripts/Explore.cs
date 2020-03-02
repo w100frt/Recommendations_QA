@@ -23,10 +23,10 @@ namespace SeleniumProject.Function
             TestRunner.RunTestSteps(driver, null, steps);
 			steps.Clear();
 			
-			var teams = driver.FindElements("xpath", "//div[contains(@class,'explore-basic-rows')]//a//span"); 
+			var teams = driver.FindElements("xpath", "//div[contains(@class,'explore-basic-rows')]//a"); 
 			for (int i = 0; i < teams.Count; i++) {
 				int counter = i + 1;
-				activeTeam = driver.FindElement("xpath", "(//div[contains(@class,'explore-basic-rows')]//a//span)["+ counter +"]").GetAttribute("innerText");
+				activeTeam = driver.FindElement("xpath", "(//div[contains(@class,'explore-basic-rows')]//a)["+ counter +"]").GetAttribute("innerText");
 				
 				if (activeTeam.Equals("NFL")) {
 					activeTeam = "NATIONAL FOOTBALL LEAGUE";
@@ -39,7 +39,7 @@ namespace SeleniumProject.Function
 				
 				if (i < teams.Count - 1) {
 					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", "//a[contains(@class,'explore-link')]", wait));
-					steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[span[contains(.,'"+ sport +"')]]", wait));
+					steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[contains(@class,'entity-list')][div[div[contains(.,'"+ sport +"')]]]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
