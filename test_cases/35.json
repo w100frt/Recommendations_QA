@@ -9,7 +9,7 @@
 		{"page":"Homepage", "name":"Verify Carousel is Displayed"},		
 		{"page":"Stories_Carousel", "name":"Click Arrow Forward"},
 		{"page":"Stories_Carousel", "name":"Click Arrow Backward"},
-		{"page":"Stories_Carousel", "name":"Click Arrow Forward"},
+		{"page":"Stories_Carousel", "name":"Click Arrow Forward to End of Carousel"},
 		{"page":"Stories_Carousel", "name":"Click View All Stories"}
 	]
 }
