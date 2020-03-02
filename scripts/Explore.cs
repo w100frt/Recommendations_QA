@@ -19,7 +19,7 @@ namespace SeleniumProject.Function
 			string sport = step.Data;
 			string activeTeam;
             List<TestStep> steps = new List<TestStep>();
-            steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[span[contains(.,'"+ sport +"')]]", wait));
+            steps.Add(new TestStep(order, "Click Sport Menu Open", "", "click", "xpath", "//a[contains(@class,'entity-list')][div[div[contains(.,'"+ sport +"')]]]", wait));
             TestRunner.RunTestSteps(driver, null, steps);
 			steps.Clear();
 			
@@ -32,7 +32,7 @@ namespace SeleniumProject.Function
 					activeTeam = "NATIONAL FOOTBALL LEAGUE";
 				}
 
-				steps.Add(new TestStep(order, "Click Team Name", "", "click", "xpath", "(//div[contains(@class,'explore-basic-rows')]//a//span)["+ counter +"]", wait));
+				steps.Add(new TestStep(order, "Click Team Name", "", "click", "xpath", "(//div[contains(@class,'explore-basic-rows')]//a)["+ counter +"]", wait));
 				steps.Add(new TestStep(order, "Verify Team Name in Header", activeTeam.ToUpper(), "verify_value", "xpath", "//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]//span", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
