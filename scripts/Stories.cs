@@ -16,14 +16,14 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
-			var element = driver.FindElements("xpath", "//div[contains(@class,'carousel-container card-carousel') and contains(@class,'can-scroll-right')]"); 
-			
+
 			if (step.Name.Equals("Click Arrow Forward to End of Carousel")) {
+				ReadOnlyCollection<IWebElement> element = driver.FindElements("xpath", "//div[contains(@class,'carousel-container card-carousel') and contains(@class,'can-scroll-right')]"); 
 				while (element.Count > 0) {
 					steps.Add(new TestStep(order, "Click Arrow Forward", "", "click", "xpath", "//button[@class='carousel-button-next image-button']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();	
-					var element = driver.FindElements("xpath", "//div[contains(@class,'carousel-container card-carousel') and contains(@class,'can-scroll-right')]"); 				
+					element = driver.FindElements("xpath", "//div[contains(@class,'carousel-container card-carousel') and contains(@class,'can-scroll-right')]"); 				
 				}
 			}
 			
