@@ -1,12 +1,18 @@
 ﻿{
-	"testCase":"Explore: Verify NFL Teams",
+	"testCase":"Explore: Smoke Test",
 	"env":"dev",
 	"testId":"36",
-	"testRail":"6174108",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
-		{"page":"Explore", "name":"Verify Teams by Sport", "data":"NFL"}
+		{"page":"Explore", "name":"Click Sports on Explore"},
+		{"page":"Explore", "name":"Click Verify Count of Sports", "data":"10"},
+		{"page":"Explore", "name":"Click Players on Explore"},
+		{"page":"Explore", "name":"Click Verify Count of Sports", "data":"10"},
+		{"page":"Explore", "name":"Enter Search on Explore", "data":"Cincinnati Reds"},
+		{"page":"Explore", "name":"Verify Top Search Result Text", "data":"Cincinnati Reds"},
+		{"page":"Explore", "name":"Verify Top Search Result Subtext", "data":"MAJOR LEAGUE BASEBALL"}
 	]
 }
