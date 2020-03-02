@@ -1,6 +1,10 @@
 ﻿{
 	"page":"AllStories",
 	"testDefinitions":[
-		{"name":"","objectType":"","by":"","objectId":""}
+		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[@class='date-picker']"},
+		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='qs-datepicker-container']"},
+		{"name":"Verify Secondary Nav is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@id='nav-secondary']"},
+		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/stories' and @class='nav-item']//div[@class='nav-item-bar']"},	
+		{"name":"Verify Stories Content","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='stories-content']"}
 	]
 }
