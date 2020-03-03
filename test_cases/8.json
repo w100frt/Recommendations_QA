@@ -11,6 +11,6 @@
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignUp"},
 		{"page":"Navigation","name":"Navigate to Account"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"}
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"#EmailAddress"}
 	]
 }
