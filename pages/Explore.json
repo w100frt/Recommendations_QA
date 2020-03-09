@@ -3,6 +3,8 @@
 	"testDefinitions":[
 		{"name":"Click Back Arrow","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'arrow-back')]"},
 		{"name":"Click Cancel Button","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'explore')]//button[contains(.,'Cancel')]"},
+		{"name":"Click MLB","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[div[div[contains(.,'MLB')]]]]"},
+		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[div[div[contains(.,'NFL')]]]]"},
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'players')]"},
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'sports')]"},
 		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
