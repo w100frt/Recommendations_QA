@@ -66,8 +66,10 @@ namespace SeleniumProject.Function
 							break;
 						case "NCAA BK":
 							fullName = "NCAA Basketball";
+							break;
 						case "NCAA FB": 
 							fullName = "NCAA Football";
+							break;
 					}
 					
 					steps.Add(new TestStep(order, "Favorite League", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
