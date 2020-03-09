@@ -42,7 +42,7 @@ namespace SeleniumProject.Function
 					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[not(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Clicking Randomized Pro Sport", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[not(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
-					steps.Add(new TestStep(order, "Capture League Entity", "#LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+					steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
