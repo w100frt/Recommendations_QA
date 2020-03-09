@@ -51,7 +51,7 @@ namespace SeleniumProject.Function
 				if(step.Name.Contains("League")) {
 					// set proper league names
 					string fullName;
-					switch(DataManager.CaptureMap["LEAGUE"] {
+					switch(DataManager.CaptureMap["LEAGUE"]) {
 						case "NFL":
 							fullName = "National Football League";
 							break;
