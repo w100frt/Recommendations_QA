@@ -35,6 +35,7 @@ namespace SeleniumProject.Function
 					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Click Randomized NCAA Sport", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
@@ -63,6 +64,10 @@ namespace SeleniumProject.Function
 						case "NHL":
 							fullName = "National Hockey League";
 							break;
+						case "NCAA BK":
+							fullName = "NCAA Basketball";
+						case "NCAA FB": 
+							fullName = "NCAA Football";
 					}
 					
 					steps.Add(new TestStep(order, "Favorite League", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
