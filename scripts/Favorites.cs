@@ -32,14 +32,14 @@ namespace SeleniumProject.Function
 				
 				// Allows for favoriting by NCAA entity or Professional entity
 				if(step.Name.Contains("NCAA")) {
-					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]]").Count(); 
+					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Click Sports Menu Open", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
 				else {
-					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[not(contains(.,'NCAA'))]]]]").Count(); 
+					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[not(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Click Sports Menu Open", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
