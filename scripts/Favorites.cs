@@ -67,7 +67,7 @@ namespace SeleniumProject.Function
 					}
 					
 					steps.Add(new TestStep(order, "Favorite League", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
-					steps.Add(new TestStep(order, "Verify Toast", DataManager.CaptureMap["LEAGUE"] + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
+					steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
