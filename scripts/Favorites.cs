@@ -48,7 +48,7 @@ namespace SeleniumProject.Function
 				
 				// Allows for favoriting Leagues
 				if(step.Name.Contains("League")) {
-					steps.Add(new TestStep(order, "Capture League Entity", "#LEAGUE", "capture", "//a[contains(@class,'explore-league-header')]", wait));
+					steps.Add(new TestStep(order, "Capture League Entity", "#LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					steps.Add(new TestStep(order, "Favorite League", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					steps.Add(new TestStep(order, "Verify Toast", DataManager.CaptureMap["LEAGUE"] + " is added to your favorites.", "verify_value", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
