@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Favorites",
 	"testDefinitions":[
-		{"name":"Click Add New Favorites Button","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'add-favorites-link')]"}
+		{"name":"Click Add New Favorites Button","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'add-favorites-link')]"},
 		{"name":"Randomize Favorite NCAA League","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite NCAA Conference","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite Pro League","objectType":"script","by":"xpath","objectId":"Favorites"},
