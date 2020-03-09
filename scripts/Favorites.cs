@@ -19,10 +19,10 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			string sport = step.Data;
-			string activeTeam;
             List<TestStep> steps = new List<TestStep>();
 			
 			if(step.Name.Contains("Randomize Favorite")) {
+				string fullName = "";
 				// Flip to Players pane if necessary. Otherwise, stay on Sports pane.
 				if(step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'players')]", wait));
@@ -50,7 +50,6 @@ namespace SeleniumProject.Function
 				// Allows for favoriting Leagues
 				if(step.Name.Contains("League")) {
 					// set proper league names
-					string fullName;
 					switch(DataManager.CaptureMap["LEAGUE"]) {
 						case "NFL":
 							fullName = "National Football League";
