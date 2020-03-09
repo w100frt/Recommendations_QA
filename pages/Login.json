@@ -10,8 +10,8 @@
     {"name":"Enter Email","objectType":"input_text","by":"css","objectId":"input.site-email"},
     {"name":"Enter First Name","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='First Name']"},
     {"name":"Enter Last Name","objectType":"input_text","by": "xpath","objectId":"//input[@placeholder='Last Name']"},
-    {"name":"Enter Optimum Password","objectType":"input_text","by":"id","objectId":"username"},
-    {"name":"Enter Optimum Username","objectType":"input_text","by":"id","objectId":"password"},
+    {"name":"Enter Optimum Password","objectType":"input_text","by":"xpath","objectId":"//input[@id='username']"},
+    {"name":"Enter Optimum Username","objectType":"input_text","by":"xpath","objectId":"//input[@id='password']"},
     {"name":"Enter Password","objectType":"input_text","by":"css","objectId":"input.site-password"},
     {"name":"Generate Email","objectType":"generate_email_address","by":"css","objectId":"input.site-email"},
     {"name":"Search for Provider","objectType":"input_text","by": "xpath","objectId": "//input[@placeholder='Search']"}
