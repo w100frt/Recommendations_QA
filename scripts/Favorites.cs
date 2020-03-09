@@ -76,6 +76,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
 					steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
+					DataManager.CaptureMap.Remove("LEAGUE");
 					steps.Clear();
 				}
 			}
