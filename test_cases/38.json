@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
-		{"page":"Favorites", "name":"Randomize Favorite Pro League"}
+		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
+		{"page":"Favorites", "name":"Randomize Favorite NCAA League"}
 	]
 }
