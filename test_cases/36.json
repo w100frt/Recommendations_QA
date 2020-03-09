@@ -25,7 +25,7 @@
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"30"},
 		{"page":"Explore", "name":"Click Back Arrow"},
-		{"page":"Explore", "name":"Enter Search", "data":"Cincinnati Reds"},
+		{"page":"Explore", "name":"Enter Search", "data":"Reds"},
 		{"page":"Explore", "name":"Verify Top Search Result Text", "data":"Cincinnati Reds"},
 		{"page":"Explore", "name":"Verify Top Search Result Subtext", "data":"MAJOR LEAGUE BASEBALL"},
 		{"page":"Explore", "name":"Click Cancel Button"}
