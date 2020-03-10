@@ -23,6 +23,7 @@ namespace SeleniumProject.Function
 			
 			if(step.Name.Contains("Randomize Favorite")) {
 				string fullName = "";
+				string sport = "";
 				// Flip to Players pane if necessary. Otherwise, stay on Sports pane.
 				if(step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'players')]", wait));
@@ -49,7 +50,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Allows for favoriting Leagues
-				if(step.Name.Contains("League")) {
+				if(step.Name.Contains("League") || step.Name.Contains("Conference")) {
 					// set proper league names
 					switch(DataManager.CaptureMap["LEAGUE"]) {
 						case "NFL":
@@ -66,13 +67,22 @@ namespace SeleniumProject.Function
 							break;
 						case "NCAA BK":
 							fullName = "NCAA Basketball";
+							sport = " Basketball";
 							break;
 						case "NCAA FB": 
 							fullName = "NCAA Football";
+							sport = " Football";
 							break;
 					}
-					
-					steps.Add(new TestStep(order, "Favorite League", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+					if (step.Name.Contains("Conference")) {
+						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
+						sports = random.Next(1, sports+1);
+						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						fullName = DataManager.CaptureMap["CONF"] + sport;
+					}
+
+					steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
 					steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);

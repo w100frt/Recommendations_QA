@@ -9,6 +9,7 @@
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
 		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
 		{"page":"Explore", "name":"Click Back Arrow"},
-		{"page":"Favorites", "name":"Randomize Favorite NCAA League"}
+		{"page":"Favorites", "name":"Randomize Favorite NCAA League"},
+		{"page":"Explore", "name":"Click Back Arrow"}
 	]
 }
