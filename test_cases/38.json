@@ -10,6 +10,14 @@
 		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
 		{"page":"Explore", "name":"Click Back Arrow"},
 		{"page":"Favorites", "name":"Randomize Favorite NCAA League"},
-		{"page":"Explore", "name":"Click Back Arrow"}
+		{"page":"Explore", "name":"Click Back Arrow"},
+		{"page":"Explore", "name":"Click Players"},
+		{"page":"Favorites", "name":"Randomize Favorite Pro Player"},
+		{"page":"Explore", "name":"Click Back Arrow"},
+		{"page":"Favorites", "name":"Randomize Favorite NCAA Player"},
+		{"page":"Explore", "name":"Click Back Arrow"},
+		{"page":"Explore", "name":"Enter Search", "data":"LeBron James"},
+		{"page":"Explore", "name":"Click Top Search Result"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"Lebron James is added to your favorites."},
 	]
 }
