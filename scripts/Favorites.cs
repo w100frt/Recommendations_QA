@@ -18,7 +18,6 @@ namespace SeleniumProject.Function
 			int sports;
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
-			string sport = step.Data;
             List<TestStep> steps = new List<TestStep>();
 			
 			if(step.Name.Contains("Randomize Favorite")) {
