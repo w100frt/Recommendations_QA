@@ -88,6 +88,16 @@ namespace SeleniumProject.Function
 					steps.Clear();
 				}
 				
+				// Select a Team for Team/Player Favorites
+				if(!step.Name.Contains("League") || !step.Name.Contains("Conference")) {
+					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')]").Count; 
+					sports = random.Next(1, sports+1);
+					steps.Add(new TestStep(order, "Capture Team Name", "TEAM", "capture", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				
 				// Allow for Favoriting Players
 				if(step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
