@@ -18,6 +18,6 @@
 		{"page":"Explore", "name":"Click Back Arrow"},
 		{"page":"Explore", "name":"Enter Search", "data":"LeBron James"},
 		{"page":"Explore", "name":"Click Top Search Result"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"Lebron James is added to your favorites."},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"Lebron James is added to your favorites."}
 	]
 }
