@@ -1,18 +1,19 @@
 ﻿{
-    "project":"fs",
-    "env":"dev",
-    "browser":"chrome",
-    "testView":"desktop",
-    "testIds": [
-        {"testId":1},
-        {"testId":4},
-        {"testId":5},
-        {"testId":7},
-        {"testId":8},
-        {"testId":21},
-        {"testId":25},
-        {"testId":30},
-        {"testId":35},
-        {"testId":36}
-    ]
+	"project":"fs",
+	"jobName":"Smoke Test Suite",
+	"env":"dev",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":1},
+		{"testId":4},
+		{"testId":5},
+		{"testId":7},
+		{"testId":8},
+		{"testId":21},
+		{"testId":25},
+		{"testId":30},
+		{"testId":35},
+		{"testId":36}
+	]
 }

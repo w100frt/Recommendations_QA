@@ -18,7 +18,6 @@ namespace SeleniumProject.Function
 			int sports;
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
-			string sport = step.Data;
             List<TestStep> steps = new List<TestStep>();
 			
 			if(step.Name.Contains("Randomize Favorite")) {
@@ -44,7 +43,9 @@ namespace SeleniumProject.Function
 					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Clicking Randomized Pro Sport", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]])["+ sports +"]", wait));
-					steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+					if (!step.Name.Contains("Player")) {
+						steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+					}
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
@@ -74,7 +75,7 @@ namespace SeleniumProject.Function
 							sport = " Football";
 							break;
 					}
-					if (step.Name.Contains("Conference")) {
+					if (step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
 						sports = random.Next(1, sports+1);
 						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
@@ -83,12 +84,35 @@ namespace SeleniumProject.Function
 					}
 
 					steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
-					steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
-					steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
-					DataManager.CaptureMap.Remove("LEAGUE");
 					steps.Clear();
 				}
+				
+				// Select a Team for Team/Player Favorites
+				if(step.Name.Contains("Team") || step.Name.Contains("Player")) {
+					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')]").Count; 
+					sports = random.Next(1, sports+1);
+					steps.Add(new TestStep(order, "Capture Team Name", "TEAM", "capture", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				
+				// Allow for Favoriting Players
+				if(step.Name.Contains("Player")) {
+					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Select Player", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					fullName = DataManager.CaptureMap["PLAYER"];
+				}				
+				
+				// Verify the Toast Message, Close it, and clean up variables
+				steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
+				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				DataManager.CaptureMap.Remove("LEAGUE");
+				steps.Clear();
 			}
 		}
 	}

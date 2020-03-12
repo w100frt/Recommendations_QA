@@ -7,6 +7,7 @@
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[div[div[contains(.,'NFL')]]]]"},
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'players')]"},
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'sports')]"},
+		{"name":"Click Top Search Result","objectType":"click","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]"},
 		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
 		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'explore-basic-rows')]//a"},
 		{"name":"Verify Teams by Sport","objectType":"script","by":"xpath","objectId":"Explore"},
