@@ -102,9 +102,9 @@ namespace SeleniumProject.Function
 				if(step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					steps.Add(new TestStep(order, "Select Player", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-					fullName = DataManager.CaptureMap["PLAYER"];
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					fullName = DataManager.CaptureMap["PLAYER"];
 				}				
 				
 				// Verify the Toast Message, Close it, and clean up variables
