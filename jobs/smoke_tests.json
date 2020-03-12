@@ -1,5 +1,6 @@
 ﻿{
     "project":"fs",
+	"jobName":"Smoke Test Suite",
     "env":"dev",
     "browser":"chrome",
     "testView":"desktop",
