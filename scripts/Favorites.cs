@@ -116,6 +116,9 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				DataManager.CaptureMap.Remove("LEAGUE");
+				DataManager.CaptureMap.Remove("CONF");
+				DataManager.CaptureMap.Remove("TEAM");
+				DataManager.CaptureMap.Remove("PLAYER");
 				steps.Clear();
 			}
 		}
