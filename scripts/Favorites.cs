@@ -43,12 +43,16 @@ namespace SeleniumProject.Function
 					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Clicking Randomized Pro Sport", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]])["+ sports +"]", wait));
-					if (!step.Name.Contains("Player")) {
-						steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
-					}
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
+				
+				// Capture League for Teams
+				if (!step.Name.Contains("Player")) {
+						steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 				
 				// Allows for favoriting Leagues
 				if(step.Name.Contains("League") || step.Name.Contains("Conference")) {
