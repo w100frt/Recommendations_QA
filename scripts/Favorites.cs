@@ -91,10 +91,12 @@ namespace SeleniumProject.Function
 						steps.Clear();
 						fullName = DataManager.CaptureMap["CONF"] + sport;
 					}
-
-					steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
+					
+					if (!step.Name.Contains("Player")) {
+						steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 				}
 				
 				// Select a Team for Team/Player Favorites
