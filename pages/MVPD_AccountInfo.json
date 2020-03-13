@@ -1,12 +1,13 @@
 ﻿{
     "page":"MVPD_AccountInfo",
     "testDefinitions":[
+		{"name":"Click Cancel Button","objectType":"click","by":"xpath","objectId":"//div[@id='mvpd-sign-in-component']//button[contains(.,'Cancel')]"},
 		{"name":"Click Optimum Logo","objectType":"click","by":"xpath","objectId":"//div[@class='mvpd-tile']/img[contains(@src,'Optimum')]"},
 		{"name":"Enter Provider in Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Search a provider']"},
 		{"name":"Verify Account Info Flyout is Open","objectType":"verify_displayed","by":"xpath","objectId":"//div[@id='account-info']"},
 		{"name":"Verify Account Displayed Following MVPD Login","objectType":"verify_displayed","by":"xpath","objectId":"//a[@class='nav-item account-link']"},
 		{"name":"Verify Provider Logos","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='mvpd-tile']/img"},
-		{"name":"Verify Provider Name","objectType":"verify_value","by":"xpath","objectId":"//div[@class='mvpd-items']/div"},
+		{"name":"Verify Provider Name","objectType":"verify_value","by":"xpath","objectId":"//div[@class='searched']//div//div"},
 		{"name":"Verify Provider Signed In","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'is-signed-in')]"}
 	]
 }
