@@ -54,7 +54,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Allows for favoriting Leagues
-				if(step.Name.Contains("League") || step.Name.Contains("Conference")) {
+				if(step.Name.Contains("League") || step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 					// set proper league names
 					switch(DataManager.CaptureMap["LEAGUE"]) {
 						case "NFL":
@@ -78,7 +78,7 @@ namespace SeleniumProject.Function
 							sport = " Football";
 							break;
 					}
-					if ((step.Name.Contains("Conference") || step.Name.Contains("NCAA Player"))) {
+					if (step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
 						sports = random.Next(1, sports+1);
 						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
