@@ -103,6 +103,7 @@ namespace SeleniumProject.Function
 				
 				// Allow for Favoriting Players
 				if(step.Name.Contains("Player")) {
+					sports = driver.FindElements("xpath", "//a[contains(@class,'entity-list-row-container')]").Count; 
 					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					steps.Add(new TestStep(order, "Select Player", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
