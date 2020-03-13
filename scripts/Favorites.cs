@@ -87,6 +87,8 @@ namespace SeleniumProject.Function
 						sports = random.Next(1, sports+1);
 						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
 						fullName = DataManager.CaptureMap["CONF"] + sport;
 					}
 
