@@ -57,6 +57,7 @@ namespace SeleniumProject.Function
 				if(step.Name.Contains("League") || step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 					// set proper league names
 					if (DataManager.CaptureMap.ContainsKey("LEAGUE")) {
+						log.Info("LEAGUE key found, setting full name");
 						switch(DataManager.CaptureMap["LEAGUE"]) {
 							case "NFL":
 								fullName = "National Football League";
