@@ -56,7 +56,7 @@ namespace SeleniumProject.Function
 				// Allows for favoriting Leagues
 				if(step.Name.Contains("League") || step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 					// set proper league names
-					if (!String.IsNullOrEmpty(DataManager.CaptureMap["LEAGUE"])) {
+					if (DataManager.CaptureMap.ContainsKey("LEAGUE")) {
 						switch(DataManager.CaptureMap["LEAGUE"]) {
 							case "NFL":
 								fullName = "National Football League";
