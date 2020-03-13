@@ -56,28 +56,31 @@ namespace SeleniumProject.Function
 				// Allows for favoriting Leagues
 				if(step.Name.Contains("League") || step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 					// set proper league names
-					switch(DataManager.CaptureMap["LEAGUE"]) {
-						case "NFL":
-							fullName = "National Football League";
-							break;
-						case "MLB":
-							fullName = "Major League Baseball";
-							break;
-						case "NBA":
-							fullName = "National Basketball Association";
-							break;
-						case "NHL":
-							fullName = "National Hockey League";
-							break;
-						case "NCAA BK":
-							fullName = "NCAA Basketball";
-							sport = " Basketball";
-							break;
-						case "NCAA FB": 
-							fullName = "NCAA Football";
-							sport = " Football";
-							break;
+					if (DataManager.CaptureMap["LEAGUE"]) {
+						switch(DataManager.CaptureMap["LEAGUE"]) {
+							case "NFL":
+								fullName = "National Football League";
+								break;
+							case "MLB":
+								fullName = "Major League Baseball";
+								break;
+							case "NBA":
+								fullName = "National Basketball Association";
+								break;
+							case "NHL":
+								fullName = "National Hockey League";
+								break;
+							case "NCAA BK":
+								fullName = "NCAA Basketball";
+								sport = " Basketball";
+								break;
+							case "NCAA FB": 
+								fullName = "NCAA Football";
+								sport = " Football";
+								break;
+						}						
 					}
+
 					if (step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
 						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
 						sports = random.Next(1, sports+1);
