@@ -8,6 +8,7 @@
 		{"name":"Randomize Favorite NCAA Team","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite Pro Team","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite NCAA Player","objectType":"script","by":"xpath","objectId":"Favorites"},
-		{"name":"Randomize Favorite Pro Player","objectType":"script","by":"xpath","objectId":"Favorites"}
+		{"name":"Randomize Favorite Pro Player","objectType":"script","by":"xpath","objectId":"Favorites"},
+		{"name":"Verify Number of Favorites","objectType":"verify_count","by":"xpath","objectId":"//div[@class='favorites-menu-items']//a"}
 	]
 }
