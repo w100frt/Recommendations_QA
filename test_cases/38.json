@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Favorites: Smoke Test",
+	"testCase":"Anonymous Add Favorites Smoke",
 	"env":"dev",
 	"testId":"38",
 	"testRail":"",
@@ -31,6 +31,7 @@
 		{"page":"Explore", "name":"Enter Search", "data":"LeBron James"},
 		{"page":"Explore", "name":"Click Top Search Result"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"Lebron James is added to your favorites."},
+		{"page":"Explore", "name":"Click Cancel Button"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "7"}
 	]
 }
