@@ -108,6 +108,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					fullName = DataManager.CaptureMap["TEAM"];
 				}
 				
 				// Allow for Favoriting Players
