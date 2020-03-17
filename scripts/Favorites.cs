@@ -93,7 +93,7 @@ namespace SeleniumProject.Function
 						fullName = DataManager.CaptureMap["CONF"] + sport;
 					}
 					
-					if (!step.Name.Contains("Player")) {
+					if (!step.Name.Contains("Player") || !step.Name.Contains("Team")) {
 						steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
