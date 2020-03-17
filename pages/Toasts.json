@@ -1,0 +1,6 @@
+﻿{
+	"page":"Toasts",
+	"testDefinitions":[
+		{"name":"Click Yes to Remove Favorite","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='YES, REMOVE IT']]"}
+	]
+}
