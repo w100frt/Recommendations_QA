@@ -11,6 +11,7 @@
 		{"page":"FSCOM_AccountInfo", "name":"Click Show/Hide Password Button"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Password is Hidden"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Verify Account on Nav"},
 		{"page":"Navigation", "name":"Navigate to Account"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign Out"},
