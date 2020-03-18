@@ -54,41 +54,50 @@ namespace SeleniumProject.Function
 				}
 				
 				// Allows for favoriting Leagues
-				if(step.Name.Contains("League") || step.Name.Contains("Conference")) {
+				if(step.Name.Contains("League") || step.Name.Contains("NCAA")) {
 					// set proper league names
-					switch(DataManager.CaptureMap["LEAGUE"]) {
-						case "NFL":
-							fullName = "National Football League";
-							break;
-						case "MLB":
-							fullName = "Major League Baseball";
-							break;
-						case "NBA":
-							fullName = "National Basketball Association";
-							break;
-						case "NHL":
-							fullName = "National Hockey League";
-							break;
-						case "NCAA BK":
-							fullName = "NCAA Basketball";
-							sport = " Basketball";
-							break;
-						case "NCAA FB": 
-							fullName = "NCAA Football";
-							sport = " Football";
-							break;
-					}
-					if (step.Name.Contains("Conference") || step.Name.Contains("NCAA Player")) {
-						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
-						sports = random.Next(1, sports+1);
-						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-						fullName = DataManager.CaptureMap["CONF"] + sport;
+					if (DataManager.CaptureMap.ContainsKey("LEAGUE")) {
+						log.Info("LEAGUE key found, setting full name");
+						switch(DataManager.CaptureMap["LEAGUE"]) {
+							case "NFL":
+								fullName = "National Football League";
+								break;
+							case "MLB":
+								fullName = "Major League Baseball";
+								break;
+							case "NBA":
+								fullName = "National Basketball Association";
+								break;
+							case "NHL":
+								fullName = "National Hockey League";
+								break;
+							case "NCAA BK":
+								fullName = "NCAA Basketball";
+								sport = " Basketball";
+								break;
+							case "NCAA FB": 
+								fullName = "NCAA Football";
+								sport = " Football";
+								break;
+						}						
 					}
 
-					steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
+					if (step.Name.Contains("NCAA") && !step.Name.Contains("League"))
+					{
+						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
+						sports = random.Next(1, sports+1);
+						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+						fullName = DataManager.CaptureMap["CONF"] + sport;
+					}
+					
+					if (!(step.Name.Contains("Player") || step.Name.Contains("Team"))) {
+						steps.Add(new TestStep(order, "Favorite League/Conference", "", "click", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 				}
 				
 				// Select a Team for Team/Player Favorites
@@ -99,6 +108,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					fullName = DataManager.CaptureMap["TEAM"];
 				}
 				
 				// Allow for Favoriting Players
@@ -116,6 +126,9 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				DataManager.CaptureMap.Remove("LEAGUE");
+				DataManager.CaptureMap.Remove("CONF");
+				DataManager.CaptureMap.Remove("TEAM");
+				DataManager.CaptureMap.Remove("PLAYER");
 				steps.Clear();
 			}
 		}
