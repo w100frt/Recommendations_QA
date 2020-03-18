@@ -1,7 +1,7 @@
 ﻿{
 	"testCase":"Remove Anonymous Favorites Smoke",
 	"env":"dev",
-	"testId":"38",
+	"testId":"39",
 	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
