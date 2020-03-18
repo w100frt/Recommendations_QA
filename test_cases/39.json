@@ -16,8 +16,6 @@
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
 		{"page":"Favorites", "name":"Randomize Favorite NCAA League"},
 		{"page":"Explore", "name":"Click Back Arrow"},
-		{"page":"Navigation", "name":"Navigate to Home"},
-		{"page":"Favorites", "name":"Click Add New Favorites Button"},
 		{"page":"Favorites", "name":"Randomize Favorite NCAA Conference"},
 		{"page":"Explore", "name":"Click Back Arrow"},
 		{"page":"Explore", "name":"Click Back Arrow"},
@@ -29,7 +27,7 @@
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "4"},
 		{"page":"Favorites", "name":"Click Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Remove on Favorite"},
-		{"page":"Toasts", "name":"Click Yes to Remove Favorite"}
+		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "3"}
 	]
 }
