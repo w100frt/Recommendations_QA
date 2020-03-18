@@ -2,7 +2,7 @@
 	"testCase":"Add Anonymous Favorites Smoke",
 	"env":"dev",
 	"testId":"38",
-	"testRail":"",
+	"testRail":"6206268",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

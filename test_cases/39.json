@@ -2,7 +2,7 @@
 	"testCase":"Remove Anonymous Favorites Smoke",
 	"env":"dev",
 	"testId":"39",
-	"testRail":"",
+	"testRail":"6206267",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
