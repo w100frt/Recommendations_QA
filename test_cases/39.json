@@ -29,7 +29,7 @@
 		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "5"},
 		{"page":"Favorites", "name":"Click Manage on Favorites"},
-		{"page":"Favorites", "name":"Click Gnatout is Displayed"},
+		{"page":"Favorites", "name":"Verify Gnatout is Displayed"},
 		{"page":"Favorites", "name":"Click Remove on Favorite"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "3"},
