@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"10"},
 		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
