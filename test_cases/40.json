@@ -48,6 +48,6 @@
 		{"page":"Favorites", "name":"Click Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Remove on Favorite"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
-		{"page":"Favorites", "name":"Click Done on Favorites"}
+		{"page":"Favorites", "name":"Click Done on Favorites"} 
 	]
 }
