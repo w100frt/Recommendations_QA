@@ -5,7 +5,7 @@
 		{"name":"Click Done on Favorites","objectType":"click","by":"xpath","objectId":"//button[contains(.,'DONE')]"},
 		{"name":"Click Manage on Favorites","objectType":"click","by":"xpath","objectId":"//button[contains(.,'MANAGE')]"},
 		{"name":"Click Remove on Favorite","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'favorite-remove-button')]"},
-		{"name":"Hover Manage on Favorites","objectType":"hover","by":"xpath","objectId":"//button[contains(.,'MANAGE')]"},
+		{"name":"Hover Manage on Favorites","objectType":"hover","by":"xpath","objectId":"//div[@class='favorites-menu']"},
 		{"name":"Randomize Favorite NCAA League","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite NCAA Conference","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite Pro League","objectType":"script","by":"xpath","objectId":"Favorites"},
