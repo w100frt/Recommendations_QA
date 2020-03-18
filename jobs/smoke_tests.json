@@ -1,7 +1,7 @@
 ﻿{
 	"project":"fs",
 	"jobName":"Smoke Test Suite",
-	"env":"dev",
+	"env":"stg",
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
