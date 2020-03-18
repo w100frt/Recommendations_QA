@@ -10,6 +10,7 @@
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"10"},
 		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
 		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"Favorites", "name":"Hover Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Remove on Favorite"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
