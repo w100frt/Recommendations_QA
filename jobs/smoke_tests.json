@@ -1,6 +1,6 @@
 ﻿{
 	"project":"fs",
-	"projectId": 127,
+	"testRailProjectId": 127,
 	"jobName":"Smoke Test Suite",
 	"env":"stg",
 	"browser":"chrome",
