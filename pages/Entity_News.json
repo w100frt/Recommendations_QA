@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity_News",
+	"testDefinitions":[
+		{"name":"Verify Number of Stories","objectType":"verify_count","by":"xpath","objectId":"//div[@class='article-container']"}
+	]
+}

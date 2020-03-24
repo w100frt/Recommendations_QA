@@ -1,0 +1,11 @@
+﻿{
+	"page":"Entity",
+	"testDefinitions":[
+		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'news')][span[contains(.,'NEWS')]]"}
+		{"name":"Click Scores Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'scores')][span[contains(.,'SCORES')]]""}
+		{"name":"Click Standings Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'standings')][span[contains(.,'STANDINGS')]]"}
+		{"name":"Click Social Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'social')][span[contains(.,'SOCIAL')]]"}
+		{"name":"Click Teams Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'teams')][span[contains(.,'TEAMS')]]"}
+		{"name":"Click Roster Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'roster')][span[contains(.,'ROSTER')]]"}
+	]
+}

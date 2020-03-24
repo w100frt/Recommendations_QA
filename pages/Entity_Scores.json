@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity",
+	"testDefinitions":[
+		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'news')][span[contains(.,'NEWS')]]"}
+	]
+}
