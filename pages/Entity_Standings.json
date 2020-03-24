@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity_Standings",
+	"testDefinitions":[
+		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'news')][span[contains(.,'NEWS')]]"}
+	]
+}
