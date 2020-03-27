@@ -14,11 +14,17 @@ namespace SeleniumProject.Function
 		{
             TimeSpan time = DateTime.Now.TimeOfDay;
 			var now = time.Hours;
-			if (now < 11) {
-				log.Info(now);
-			}
+			if (now < 11)
+				step.Data = "YESTERDAY";
+			else 
+				step.Data = "TODAY";
+			
+			long order = step.Order;
             string wait = step.Wait != null ? step.Wait : "";
             List<TestStep> steps = new List<TestStep>();
+			steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]", wait));
+			TestRunner.RunTestSteps(driver, null, steps);
+			steps.Clear();
 		}
 	}
 }
