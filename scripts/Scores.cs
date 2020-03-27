@@ -12,8 +12,8 @@ namespace SeleniumProject.Function
 
 		public void Execute(DriverManager driver, TestStep step)
 		{
-            DateTime time = DateTime.Now.TimeOfDay;
-			var now = time.Hour;
+            TimeSpan time = DateTime.Now.TimeOfDay;
+			var now = time.Hours;
 			if (now < 11) {
 				log.Info(now);
 			}
