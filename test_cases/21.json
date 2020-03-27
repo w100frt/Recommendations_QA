@@ -9,7 +9,6 @@
 		{"page":"Scorestrip", "name":"Verify Scorechip Count", "data" : "5"},
 		{"page":"Scorestrip", "name":"Click All Scores Button"},
 		{"page":"Scores", "name":"Verify Selected Link on Nav"},
-		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores", "data": "TODAY"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
 		{"page":"Navigation", "name":"Navigate to Home"},
