@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignUp"},
+		{"page":"Navigation","name":"Verify Account on Nav"},
 		{"page":"Navigation","name":"Navigate to Account"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"#EmailAddress"}
 	]
