@@ -2,7 +2,7 @@
 	"testCase":"Explore: Smoke Test",
 	"env":"dev",
 	"testId":"36",
-	"testRail":"",
+	"testRail":"6218779",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

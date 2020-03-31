@@ -2,7 +2,7 @@
 	"testCase":"Add/Remove Account Favorites Smoke",
 	"env":"dev",
 	"testId":"40",
-	"testRail":"6206272",
+	"testRail":"6218778",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
