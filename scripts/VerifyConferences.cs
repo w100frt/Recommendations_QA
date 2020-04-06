@@ -19,11 +19,11 @@ namespace SeleniumProject.Function
 			string[] expectedConf = {"BOWLS", "TOP 25", "AAC", "ACC", "BIG 12", "BIG SKY", "BIG SOUTH", "BIG TEN", "C-USA", "CAA", "IND-FCS", "INDEPENDENTS", "IVY", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "PIONEER", "SEC", "SOUTHERN", "SOUTHLAND", "SUN BELT", "SWAC"};
             List<TestStep> steps = new List<TestStep>();
             steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
-			steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[@class='scores-home-container']//div[contains(@class,'dropdown')]//ul", wait));
+			steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul", wait));
             TestRunner.RunTestSteps(driver, null, steps);
 			steps.Clear();
 			
-			var conferences = driver.FindElements("xpath", "//div[@class='scores-home-container']//div[contains(@class,'dropdown')]//ul//li"); 
+			var conferences = driver.FindElements("xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul//li"); 
 			for (int i = 0; i < conferences.Count; i++) {
 				if (expectedConf[i].Equals(conferences[i].GetAttribute("innerText"))) {
 					log.Info("Success. " + expectedConf[i] + " matches " + conferences[i].GetAttribute("innerText"));
