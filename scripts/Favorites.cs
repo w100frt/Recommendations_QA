@@ -84,7 +84,7 @@ namespace SeleniumProject.Function
 
 					if (step.Name.Contains("NCAA") && !step.Name.Contains("League"))
 					{
-						sports = driver.FindElements("xpath", "//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
+						sports = driver.FindElements("xpath", "//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
 						sports = random.Next(1, sports+1);
 						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
