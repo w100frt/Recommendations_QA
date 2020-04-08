@@ -7,9 +7,6 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
-		{"page":"Homepage", "name":"Click Watch Live Button"},
-		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
-		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Homepage", "name":"Click Full Events Schedule Button"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"Navigation", "name":"Navigate to Home"},
