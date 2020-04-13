@@ -28,7 +28,7 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			else if (step.Name.Equals("Scroll Top Scores Page")) {
-				WebElement ele = driver.FindElement("//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]");
+				var ele = driver.FindElement("xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]");
 				string date = ele.GetAttribute("innerText");
 				log.Info(date);
 			}
