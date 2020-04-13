@@ -10,7 +10,7 @@
 		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NHL')]]"},
 		{"name":"Click Soccer","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'SOCCER')]]"},
 		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'calendar-element') or @class='date-picker']"},
-		{"name":"Scroll Top Scores Page","objectType":"script","by":"xpath","objectId":"Scores"},
+		{"name":"Scroll Top Scores Page to Yesterday","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='qs-datepicker-container']"},
 		{"name":"Verify NCAA FB Conferences","objectType":"script","by":"xpath","objectId":"VerifyConferences"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
