@@ -33,14 +33,18 @@ namespace SeleniumProject.Function
 				string title = "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]";
 				IWebElement ele = driver.FindElement("xpath", title);
 				string date = ele.GetAttribute("innerText");
+				IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 				
 				if(date.Equals("TODAY")) {
-					IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 					js.ExecuteScript("window.scrollBy(0,-250)");
 					log.Info("Scrolling up on page...");
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+				}
+				else {
+					js.ExecuteScript("window.scrollBy(0,250)");
+					log.Info("Scrolling down on page...");
 				}
 			}
 			
