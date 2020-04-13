@@ -45,6 +45,10 @@ namespace SeleniumProject.Function
 				else {
 					js.ExecuteScript("window.scrollBy(0,250)");
 					log.Info("Scrolling down on page...");
+					Thread.Sleep(3000);
+					js.ExecuteScript("window.scrollBy(0,250)");
+					log.Info("Scrolling down on page...");
+					Thread.Sleep(3000);
 				}
 			}
 			
