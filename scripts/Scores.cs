@@ -35,6 +35,7 @@ namespace SeleniumProject.Function
 				string date = ele.GetAttribute("innerText");
 				
 				if(date.Equals("TODAY")) {
+					ele = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]");
 					ele.Click();
 					ele.SendKeys(Keys.ArrowUp);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
