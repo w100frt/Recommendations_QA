@@ -36,7 +36,7 @@ namespace SeleniumProject.Function
 				string date = ele.GetAttribute("innerText");
 				IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 				
-				if(date.Equals("TODAY")) {
+				if (date.Equals("TODAY")) {
 					js.ExecuteScript("window.scrollBy(0,-250)");
 					log.Info("Scrolling up on page...");
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
@@ -44,12 +44,15 @@ namespace SeleniumProject.Function
 					steps.Clear();
 				}
 				else {
-					js.ExecuteScript("window.scrollBy(0,250)");
-					log.Info("Scrolling down on page...");
-					Thread.Sleep(3000);
-					js.ExecuteScript("window.scrollBy(0,250)");
-					log.Info("Scrolling down on page...");
-					Thread.Sleep(3000);
+					do {
+						js.ExecuteScript("window.scrollBy(0,250)");
+						log.Info("Scrolling down on page...");
+						Thread.Sleep(1000);
+						ele = driver.FindElement("xpath", title);
+						date = ele.GetAttribute("innerText");
+					}
+					while (date.Equals("YESTERDAY"));
+
 				}
 			}
 			
