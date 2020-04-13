@@ -16,6 +16,7 @@
 		{"name":"Verify NCAA FB Conferences","objectType":"script","by":"xpath","objectId":"VerifyConferences"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify FOX Bet Logo on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//span[@alt='fox-bet']"},
+		{"name":"Verify Number of Score Sections","objectType":"verify_count","by": "xpath", "objectId":"//div[contains(@class,'score-section')]"},
 		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"},
 		{"name":"Verify Selected Category","objectType":"verify_value","by":"xpath","objectId":"//div[@id='nav-secondary']//a[contains(@class,'selected')]"},
 		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/scores' and @class='nav-item']//div[@class='nav-item-bar']"}

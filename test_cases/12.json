@@ -11,7 +11,7 @@
 		{"page":"Scores", "name":"Verify FOX Bet Logo on Nav"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
-		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Verify Number of Score Sections", "data": "3"},
 		{"page":"Scores", "name":"Scroll Top Scores Page to Yesterday"},
 		{"page":"Scores", "name":"Scroll Top Scores Page Down to Today"}
 	]
