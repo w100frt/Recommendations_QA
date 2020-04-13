@@ -12,6 +12,6 @@
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"Scores", "name":"Scroll Top Scores Page"},
+		{"page":"Scores", "name":"Scroll Top Scores Page"}
 	]
 }
