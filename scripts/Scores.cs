@@ -39,9 +39,15 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
 				
-				if (date.Equals("TODAY")) {
-					js.ExecuteScript("window.scrollBy(0,-250)");
-					log.Info("Scrolling up on YESTERDAY...");
+				if (!date.Equals("YESTERDAY")) {
+					do {
+						js.ExecuteScript("window.scrollBy(0,-250)");
+						log.Info("Scrolling down on page...");
+						Thread.Sleep(1000);
+						ele = driver.FindElement("xpath", title);
+						date = ele.GetAttribute("innerText");
+					}
+					while (!date.Equals("YESTERDAY"));
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -51,7 +57,7 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if (step.Name.Equals("Scroll Top Scores Page to Today")) {
+			else if (step.Name.Equals("Scroll Top Scores Page Down to Today")) {
 				title = "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]";
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
@@ -64,7 +70,10 @@ namespace SeleniumProject.Function
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
 					}
-					while (date.Equals("YESTERDAY"));
+					while (!date.Equals("TODAY"));
+				}
+				else {
+					log.Info("Page defaulted to TODAY");
 				}
 			}
 			
@@ -73,14 +82,7 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
 				
-				if (date.Equals("TODAY")) {
-					js.ExecuteScript("window.scrollBy(0,-250)");
-					log.Info("Scrolling up on page...");
-					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
-				}
-				else {
+				if (!date.Equals("TOMORROW")) {
 					do {
 						js.ExecuteScript("window.scrollBy(0,250)");
 						log.Info("Scrolling down on page...");
@@ -88,8 +90,13 @@ namespace SeleniumProject.Function
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
 					}
-					while (date.Equals("YESTERDAY"));
-
+					while (!date.Equals("TOMORROW"));
+					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				else {
+					log.Info("Page defaulted to TOMORROW");
 				}
 			}
 			
