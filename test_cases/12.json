@@ -1,0 +1,17 @@
+﻿{
+	"testCase":"TOP Scores Test",
+	"env":"dev",
+	"testId":"12",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Verify Selected Link on Nav"},
+		{"page":"Scores", "name":"Verify FOX Bet Logo on Nav"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
+		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Scroll Top Scores Page"},
+	]
+}
