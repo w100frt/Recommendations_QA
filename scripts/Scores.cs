@@ -35,9 +35,9 @@ namespace SeleniumProject.Function
 				string date = ele.GetAttribute("innerText");
 				
 				if(date.Equals("TODAY")) {
-					ele = driver.FindElement("xpath", "(//div[@class='scores-date'])[1]");
-					ele.Click();
-					ele.SendKeys(Keys.ArrowUp);
+					IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
+					js.ExecuteScript("window.scrollBy(0,-250)");
+					log.Info("Scrolling up on page...");
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
