@@ -15,12 +15,12 @@
 		{"page":"Scores", "name":"Click Top"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
-		{"page":"Scores", "name":"Verify Number of Score Sections", "data": "3"},
 		{"page":"Scores", "name":"Scroll Top Scores Page to Yesterday"},
 		{"page":"Scores", "name":"Verify League Title on Top Scores", "data":"Yesterday"},
 		{"page":"Scores", "name":"Scroll Top Scores Page Down to Today"},
 		{"page":"Scores", "name":"Verify League Title on Top Scores", "data":"Today"},
 		{"page":"Scores", "name":"Scroll Top Scores Page to Tomorrow"},
+		{"page":"Scores", "name":"Verify Number of Score Sections", "data": "3"},
 		{"page":"Scores", "name":"Verify League Title on Top Scores", "data":"Tomorrow"}
 	]
 }
