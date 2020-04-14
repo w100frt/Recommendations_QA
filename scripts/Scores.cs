@@ -16,10 +16,13 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
-			string title;
 			IWebElement ele;
+			int size;
+			string title;
 			string date;
+			string data;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
+			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Displayed Day on Top Scores")) {
 				TimeSpan time = DateTime.Now.TimeOfDay;
@@ -97,6 +100,39 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
+				}
+			}
+			
+			else if (step.Name.Equals("Verify League Title on Top Scores")) {
+				switch(step.Data) {
+					case "Scorestrip" : 
+						title = "//div[contains(@class,'homepage-module')]//a[@class='score-chip']";
+						break;
+					case "Yesterday" : 
+						title = "(//div[@class='scores'])[1]//a[@class='score-chip']";
+						break;
+					case "Today" : 
+						title = "(//div[@class='scores'])[2]//a[@class='score-chip']";
+						break;
+					case "Tomorrow" : 
+						title = "(//div[@class='scores'])[3]//a[@class='score-chip']";
+						break;
+					default: 
+						title = "//div[@class='scores']//a[@class='score-chip']";
+						break;
+				}
+				
+				size = driver.FindElements("xpath", title).Count;
+				for (int i = 1; i <= size; i++) {
+					ele = driver.FindElement("xpath", "(" + title + "//div[@class='highlight-text']//div[contains(@class,'league-title')])[" + i + "]");
+					data = ele.GetAttribute("innerText");
+					
+					if(!String.IsNullOrEmpty(data)) {
+						log.Info("Score Chip " + i + " League Title equals " + data);
+					}
+					else {
+						err.CreateVerificationError(step, "Expected League Title", data);
+					}
 				}
 			}
 			
