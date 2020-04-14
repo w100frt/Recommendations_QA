@@ -5,7 +5,7 @@
 	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
-		{"page":"Navigation", "name":"Open Browser"},,
+		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Scores", "name":"Verify League Title on Top Scores", "data":"Scorestrip"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Verify Selected Link on Nav"},
