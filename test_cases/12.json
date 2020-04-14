@@ -12,6 +12,7 @@
 		{"page":"Scores", "name":"Verify Selected Link on Nav"},
 		{"page":"Scores", "name":"Verify FOX Bet Logo on Nav"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
+		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
 		{"page":"Scores", "name":"Click Top"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
