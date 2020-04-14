@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Scores", "name":"Verify League Title on Top Scores", "data":"Scorestrip"},
+		{"page":"Scores", "name":"Capture Team Info from Scorestrip", "data":"1"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Verify Selected Link on Nav"},
 		{"page":"Scores", "name":"Verify FOX Bet Logo on Nav"},
