@@ -146,6 +146,13 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
+			else if(step.Name.Equals("Click Scorechip By Number")) {
+				data = step.Data;
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "(//a[@class='score-chip'])["+ data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

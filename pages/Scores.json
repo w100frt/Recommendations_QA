@@ -11,6 +11,7 @@
 		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'NHL')]]"},
 		{"name":"Click Soccer","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'SOCCER')]]"},
 		{"name":"Click Top","objectType":"click","by":"xpath","objectId":"//a[@analyticsname='top']"},
+		{"name":"Click Scorechip By Number","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'calendar-element') or @class='date-picker']"},
 		{"name":"Scroll Top Scores Page to Yesterday","objectType":"script","by":"xpath","objectId":"Scores"},		
 		{"name":"Scroll Top Scores Page Down to Today","objectType":"script","by":"xpath","objectId":"Scores"},
