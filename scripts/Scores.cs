@@ -52,7 +52,7 @@ namespace SeleniumProject.Function
 						date = ele.GetAttribute("innerText");
 						chip = driver.FindElement("xpath","(//div[@class='scores']//a)[1]");
 					}
-					while (!date.Equals("YESTERDAY") || chip.Displayed);
+					while (!date.Equals("YESTERDAY") || !chip.Displayed);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -77,7 +77,7 @@ namespace SeleniumProject.Function
 						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
 						chip = driver.FindElement("xpath","(//div[@class='scores']//a)["+ size +"]");
 					}
-					while (!date.Equals("TODAY") || chip.Displayed);
+					while (!date.Equals("TODAY") || !chip.Displayed);
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -99,7 +99,7 @@ namespace SeleniumProject.Function
 						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
 						chip = driver.FindElement("xpath","(//div[@class='scores']//a)["+ size +"]");
 					}
-					while (!date.Equals("TOMORROW") || chip.Displayed);
+					while (!date.Equals("TOMORROW") || !chip.Displayed);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
