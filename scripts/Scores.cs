@@ -18,7 +18,6 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			IWebElement chip;
-			ReadOnlyCollection<IWebElement> elements;
 			int size;
 			string title;
 			string date;
