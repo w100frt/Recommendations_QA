@@ -5,6 +5,7 @@
 		{"name":"Click Full Events Schedule Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][a[.='FULL EVENTS SCHEDULE']]"},
 		{"name":"Verify Carousel is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'carousel-container card-carousel')]"},
 		{"name":"Verify Live on Fox is Displayed", "objectType":"verify_displayed", "by":"xpath","objectId":"//div[contains(@class,'home-page-live homepage-module')]"},
-		{"name":"Verify Main Nav is Displayed","objectType":"verify_displayed","by": "xpath", "objectId":"//div[@class='nav-main-content']"}
+		{"name":"Verify Main Nav is Displayed","objectType":"verify_displayed","by": "xpath", "objectId":"//div[@class='nav-main-content']"},
+		{"name":"Verify Main Nav Link Values","objectType":"script","by": "xpath", "objectId":"Homepage"}
 	]
 }

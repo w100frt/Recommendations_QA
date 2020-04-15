@@ -8,6 +8,7 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Verify FS Logo on Desktop"},
 		{"page":"Homepage", "name":"Verify Main Nav is Displayed"},
+		{"page":"Homepage", "name":"Verify Main Nav Link Values"},
 		{"page":"Scorestrip", "name":"Verify Scorestrip is Displayed"},
 		{"page":"Homepage", "name":"Verify Carousel is Displayed"},
 		{"page":"Homepage", "name":"Verify Live on Fox is Displayed"},
