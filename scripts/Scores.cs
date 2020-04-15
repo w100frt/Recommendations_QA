@@ -47,7 +47,6 @@ namespace SeleniumProject.Function
 					do {
 						js.ExecuteScript("window.scrollBy(0,-250)");
 						log.Info("Scrolling up on page...");
-						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
 						chip = driver.FindElement("xpath","(//div[@class='scores']//a)[1]");
@@ -71,7 +70,6 @@ namespace SeleniumProject.Function
 					do {
 						js.ExecuteScript("window.scrollBy(0,250)");
 						log.Info("Scrolling down on page...");
-						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
 						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
@@ -93,7 +91,6 @@ namespace SeleniumProject.Function
 					do {
 						js.ExecuteScript("window.scrollBy(0,250)");
 						log.Info("Scrolling down on page...");
-						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
 						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
