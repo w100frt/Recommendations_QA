@@ -32,11 +32,11 @@ namespace SeleniumProject.Function
 				}
 				else {
 					for (int i=0; i < elements.Count; i++) {
-						if(dataSet[i].Equals(elements[i])) {
-							log.Info("Verification Passed. Expected [" + dataSet[i] + "] matches Actual [" + elements[i] +"]");
+						if(dataSet[i].Equals(elements[i].GetAttribute("innerText"))) {
+							log.Info("Verification Passed. Expected [" + dataSet[i] + "] matches Actual [" + elements[i].GetAttribute("innerText") +"]");
 						}
 						else {
-							err.CreateVerificationError(step, dataSet[i], elements[i]);
+							err.CreateVerificationError(step, dataSet[i], elements[i].GetAttribute("innerText"));
 						}
 					}
 				}
