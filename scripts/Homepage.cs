@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Main Nav Link Values")) {
-				string[] dataSet = {"HOME", "SCORES", "LIVE TV", "STORIES", "EXPLORE", "MORE", "SIGN IN", "ACCOUNT"};
+				string[] dataSet = {"HOME", "SCORES", "LIVE TV", "STORIES", "EXPLORE", "MORE", "SIGN IN", "Account"};
 				elements = driver.FindElements("xpath", "//ul[@class='nav']//li[contains(@class,'desktop-show')]//span[contains(@class,'nav-item-text')]");
 				
 				if(dataSet.Length != elements.Count) {
