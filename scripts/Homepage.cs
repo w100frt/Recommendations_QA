@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Main Nav Link Values")) {
-				string[] dataSet = {"Home", "Scores", "Live TV", "Stories", "Explore", "More", "Sign In", "Account"};
+				string[] dataSet = {"HOME", "SCORES", "LIVE TV", "STORIES", "EXPLORE", "MORE", "SIGN IN", "ACCOUNT"};
 				elements = driver.FindElements("xpath", "//ul[@class='nav']//li[contains(@class,'desktop-show')]//span[contains(@class,'nav-item-text')]");
 				
 				if(dataSet.Length != elements.Count) {
@@ -32,11 +32,11 @@ namespace SeleniumProject.Function
 				}
 				else {
 					for (int i=0; i < elements.Count; i++) {
-						if(dataSet[i].Equals(elements[i].GetAttribute("innerText"))) {
-							log.Info("Verification Passed. Expected [" + dataSet[i] + "] matches Actual [" + elements[i].GetAttribute("innerText") +"]");
+						if(dataSet[i].Equals(elements[i].GetAttribute("innerText").Trim())) {
+							log.Info("Verification Passed. Expected [" + dataSet[i] + "] matches Actual [" + elements[i].GetAttribute("innerText").Trim() +"]");
 						}
 						else {
-							err.CreateVerificationError(step, dataSet[i], elements[i].GetAttribute("innerText"));
+							err.CreateVerificationError(step, dataSet[i], elements[i].GetAttribute("innerText").Trim());
 						}
 					}
 				}
