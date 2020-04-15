@@ -19,12 +19,11 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			IWebElement[] elements;
 			string data;
-			string[] dataSet;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Main Nav Link Values")) {
-				dataSet = {"Home", "Scores", "Live TV", "Stories", "Explore", "More", "Sign In", "Account"};
+				string[] dataSet = {"Home", "Scores", "Live TV", "Stories", "Explore", "More", "Sign In", "Account"};
 				elements = driver.FindElements("xpath", "//ul[@class='nav']//li[contains(@class,'desktop-show')]//span[contains(@class,'nav-item-text')]");
 				
 				if(dataSet.Count != elements.Count) {
@@ -37,7 +36,6 @@ namespace SeleniumProject.Function
 						}
 						else {
 							err.CreateVerificationError(step, dataSet[i], elements[i]);
-
 						}
 					}
 				}
