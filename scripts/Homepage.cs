@@ -26,8 +26,8 @@ namespace SeleniumProject.Function
 				string[] dataSet = {"Home", "Scores", "Live TV", "Stories", "Explore", "More", "Sign In", "Account"};
 				elements = driver.FindElements("xpath", "//ul[@class='nav']//li[contains(@class,'desktop-show')]//span[contains(@class,'nav-item-text')]");
 				
-				if(dataSet.Count != elements.Count) {
-					err.CreateVerificationError(step, dataSet.Count, elements.Count);
+				if(dataSet.Length != elements.Count) {
+					err.CreateVerificationError(step, dataSet.Length, elements.Count);
 				}
 				else {
 					for (int i=0; i < elements.Count; i++) {
