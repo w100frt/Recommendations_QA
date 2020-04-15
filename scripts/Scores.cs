@@ -49,7 +49,7 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						var bottom = js.ExecuteScript("return document.body.scrollHeight");
+						var bottom = js.ExecuteScript("return document.body.scrollTop");
 						log.Info(bottom);
 					}
 					while (!date.Equals("YESTERDAY"));
@@ -74,7 +74,7 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");						
-						var bottom = js.ExecuteScript("return document.body.scrollHeight");
+						var bottom = js.ExecuteScript("return document.body.scrollTop");
 						log.Info(bottom);
 					}
 					while (!date.Equals("TODAY"));
@@ -96,13 +96,13 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
+						var bottom = js.ExecuteScript("return document.body.scrollTop");
+						log.Info(bottom);
 					}
 					while (!date.Equals("TOMORROW"));
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					var bottom = js.ExecuteScript("return document.body.scrollHeight");
-						log.Info(bottom);
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
