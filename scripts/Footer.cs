@@ -24,13 +24,13 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Footer Links") || step.Name.Equals("Verify Footer Links 2")) {
-				string[] dataSet;
 				if (step.Name.Equals("Verify Footer Links")) {
-					dataSet = {"Help", "Press", "Advertise With Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
+					string[] dataSet = {"Help", "Press", "Advertise With Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
 					elements = driver.FindElements("xpath", "//div[@class='footer-links-1']//a");					
 				}
 				else if (step.Name.Equals("Verify Footer Links 2")) {
-					dataSet = {"FS1", "Fox", "Fox News", "Fox Corporation", "Fox Supports", "Fox Deportes"};					elements = driver.FindElements("xpath", "//div[@class='footer-links-2']//a");					
+					string[] dataSet = {"FS1", "Fox", "Fox News", "Fox Corporation", "Fox Supports", "Fox Deportes"};
+					elements = driver.FindElements("xpath", "//div[@class='footer-links-2']//a");					
 				}
 
 				if(dataSet.Length != elements.Count) {
