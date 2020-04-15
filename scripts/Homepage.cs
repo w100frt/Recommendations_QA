@@ -4,6 +4,7 @@ using SeleniumProject.Utilities;
 using OpenQA.Selenium;
 using log4net;
 using System.Threading;
+using System.Collections.ObjectModel;
 
 namespace SeleniumProject.Function
 {
