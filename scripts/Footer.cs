@@ -19,20 +19,32 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
+			ReadOnlyCollection<IWebElement> elements;
 			
-			if (step.Name.Equals("Verify Footer Links") || step.Name.Equals("Verify Footer Links 2")) {
-				string[] dataSet;
-				ReadOnlyCollection<IWebElement> elements;
-				if (step.Name.Equals("Verify Footer Links")) {
-					dataSet = new string[] {"Help", "Press", "Advertise With Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
-					elements = driver.FindElements("xpath", "//div[@class='footer-links-1']//a");					
+			if (step.Name.Equals("Verify Footer Links") {
+				string[] dataSet = new string[] {"Help", "Press", "Advertise With Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
+				elements = driver.FindElements("xpath", "//div[@class='footer-links-1']//a");
+				
+				if (dataSet.Length != elements.Count) {
+					err.CreateVerificationError(step, dataSet.Length.ToString(), elements.Count.ToString());
 				}
-				else if (step.Name.Equals("Verify Footer Links 2")) {
-					dataSet = new string[] {"FS1", "Fox", "Fox News", "Fox Corporation", "Fox Supports", "Fox Deportes"};
-					elements = driver.FindElements("xpath", "//div[@class='footer-links-2']//a");					
+				else {
+					for (int i=0; i < elements.Count; i++) {
+						if(dataSet[i].Equals(elements[i].GetAttribute("innerText").Trim())) {
+							log.Info("Verification Passed. Expected [" + dataSet[i] + "] matches Actual [" + elements[i].GetAttribute("innerText").Trim() +"]");
+						}
+						else {
+							err.CreateVerificationError(step, dataSet[i], elements[i].GetAttribute("innerText").Trim());
+						}
+					}
 				}
+			}
+			
+			else if (step.Name.Equals("Verify Footer Links 2")) {
+				string[] dataSet  = {"FS1", "Fox", "Fox News", "Fox Corporation", "Fox Supports", "Fox Deportes"};
+				elements = driver.FindElements("xpath", "//div[@class='footer-links-2']//a");
 
-				if(dataSet.Length != elements.Count) {
+				if (dataSet.Length != elements.Count) {
 					err.CreateVerificationError(step, dataSet.Length.ToString(), elements.Count.ToString());
 				}
 				else {
