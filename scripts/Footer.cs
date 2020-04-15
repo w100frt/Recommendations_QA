@@ -18,7 +18,7 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			ReadOnlyCollection<IWebElement> elements = new ReadOnlyCollection<IWebElement>();
-			private string[] dataSet;
+			string[] dataSet = new string [];
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
