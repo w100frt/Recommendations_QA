@@ -17,12 +17,12 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
-			ReadOnlyCollection<IWebElement> elements = new ReadOnlyCollection<IWebElement>();
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Footer Links") || step.Name.Equals("Verify Footer Links 2")) {
 				string[] dataSet;
+				ReadOnlyCollection<IWebElement> elements;
 				if (step.Name.Equals("Verify Footer Links")) {
 					dataSet = new string[] {"Help", "Press", "Advertise With Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
 					elements = driver.FindElements("xpath", "//div[@class='footer-links-1']//a");					
