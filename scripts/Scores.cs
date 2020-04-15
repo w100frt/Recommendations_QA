@@ -49,6 +49,8 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
+						var bottom = js.ExecuteScript("return document.body.scrollHeight");
+						log.Info(bottom);
 					}
 					while (!date.Equals("YESTERDAY"));
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
