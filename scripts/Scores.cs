@@ -49,7 +49,7 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						var bottom = js.ExecuteScript("return document.body.scrollTop");
+						var bottom = js.ExecuteScript("return document.body.scrollY");
 						log.Info(bottom);
 					}
 					while (!date.Equals("YESTERDAY"));
@@ -74,7 +74,7 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");						
-						var bottom = js.ExecuteScript("return document.body.scrollTop");
+						var bottom = js.ExecuteScript("return document.body.scrollY");
 						log.Info(bottom);
 					}
 					while (!date.Equals("TODAY"));
@@ -96,7 +96,7 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						var bottom = js.ExecuteScript("return document.body.scrollTop");
+						var bottom = js.ExecuteScript("return document.body.scrollY");
 						log.Info(bottom);
 					}
 					while (!date.Equals("TOMORROW"));
