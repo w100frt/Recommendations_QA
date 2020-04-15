@@ -24,6 +24,6 @@
 		{"name":"Verify Number of Score Sections","objectType":"verify_count","by": "xpath", "objectId":"//div[contains(@class,'score-section')]"},
 		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"},
 		{"name":"Verify Selected Category","objectType":"verify_value","by":"xpath","objectId":"//div[@id='nav-secondary']//a[contains(@class,'selected')]"},
-		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/scores' and @class='nav-item']//div[@class='nav-item-bar']"}
+		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/scores' and @class='nav-item']//div[@class='nav-item-bar active-nav']"}
 	]
 }
