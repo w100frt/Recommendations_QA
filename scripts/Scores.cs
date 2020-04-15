@@ -17,6 +17,8 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
+			IWebElement chip;
+			ReadOnlyCollection<IWebElement> elements;
 			int size;
 			string title;
 			string date;
@@ -49,10 +51,9 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						var bottom = js.ExecuteScript("return document.body.clientHeight");
-						log.Info(bottom);
+						chip = driver.FindElement("xpath","(//div[@class='scores']//a)[1]");
 					}
-					while (!date.Equals("YESTERDAY"));
+					while (!date.Equals("YESTERDAY") || chip.Displayed);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -73,11 +74,11 @@ namespace SeleniumProject.Function
 						log.Info("Scrolling down on page...");
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
-						date = ele.GetAttribute("innerText");						
-						var bottom = js.ExecuteScript("return document.body.clientHeight");
-						log.Info(bottom);
+						date = ele.GetAttribute("innerText");
+						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
+						chip = driver.FindElement("xpath","(//div[@class='scores']//a)["+ size +"]");
 					}
-					while (!date.Equals("TODAY"));
+					while (!date.Equals("TODAY") || chip.Displayed);
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -96,10 +97,10 @@ namespace SeleniumProject.Function
 						Thread.Sleep(1000);
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						var bottom = js.ExecuteScript("return document.body.clientHeight");
-						log.Info(bottom);
+						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
+						chip = driver.FindElement("xpath","(//div[@class='scores']//a)["+ size +"]");
 					}
-					while (!date.Equals("TOMORROW"));
+					while (!date.Equals("TOMORROW") || chip.Displayed);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
