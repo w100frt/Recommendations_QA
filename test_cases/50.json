@@ -1,8 +1,8 @@
 ﻿{
 	"testCase":"MVPD Login/Logout Loop (w/ FSCOM Existing User)",
 	"env":"dev",
-	"testId":"7",
-	"testRail":"6174112",
+	"testId":"50",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
