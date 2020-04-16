@@ -1,0 +1,14 @@
+﻿{
+	"testCase":"NFL Scores and Events",
+	"env":"dev",
+	"testId":"16",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click NFL"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "NFL"},
+		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "SUPER BOWL - SUN, FEB 2"}
+	]
+}

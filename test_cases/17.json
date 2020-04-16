@@ -1,0 +1,15 @@
+﻿{
+	"testCase":"MLB Scores and Events",
+	"env":"dev",
+	"testId":"17",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click MLB"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "MLB"},
+		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "TODAY"},
+		{"page":"Scores", "name":"Click Open Calendar"}
+	]
+}

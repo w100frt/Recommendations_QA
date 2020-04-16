@@ -1,0 +1,13 @@
+﻿{
+	"testCase":"NHL Scores and Events",
+	"env":"dev",
+	"testId":"19",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click NHL"},
+		{"page":"Scores", "name":"Verify Selected Category", "data": "NHL"}
+	]
+}
