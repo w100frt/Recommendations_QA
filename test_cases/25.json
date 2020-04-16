@@ -9,7 +9,7 @@
 		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
 		{"page":"Homepage", "name":"Click Full Events Schedule Button"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
-		{"page":"LiveTV", "name":"Click See Full Event Schedule Link"},
+		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
 		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"},
 		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
