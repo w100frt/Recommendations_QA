@@ -1,7 +1,7 @@
 ﻿{
-	"testCase":"NBA Scores and Events",
+	"testCase":"NCAA BK Scores and Events",
 	"env":"dev",
-	"testId":"13",
+	"testId":"14",
 	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
