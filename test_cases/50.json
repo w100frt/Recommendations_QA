@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"MVPD Login/Logout + FSCOM Existing User Sign In",
+	"testCase":"MVPD Login/Logout Loop (w/ FSCOM Existing User)",
 	"env":"dev",
 	"testId":"7",
 	"testRail":"6174112",
