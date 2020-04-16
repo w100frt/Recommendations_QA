@@ -3,6 +3,7 @@
     "testDefinitions":[
 		{"name":"Click Cancel Button","objectType":"click","by":"xpath","objectId":"//div[@id='mvpd-sign-in-component']//button[contains(.,'Cancel')]"},
 		{"name":"Click Optimum Logo","objectType":"click","by":"xpath","objectId":"//div[@class='mvpd-tile']/img[contains(@src,'Optimum')]"},
+		{"name":"Click Sign Out of TV Provider","objectType":"click","by":"xpath","objectId":"//a[contains(.,'Sign Out of TV Provider')]"},
 		{"name":"Enter Provider in Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Search a provider']"},
 		{"name":"Verify Account Info Flyout is Open","objectType":"verify_displayed","by":"xpath","objectId":"//div[@id='account-info']"},
 		{"name":"Verify Account Displayed Following MVPD Login","objectType":"verify_displayed","by":"xpath","objectId":"//a[@class='nav-item account-link']"},

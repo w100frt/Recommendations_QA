@@ -1,0 +1,13 @@
+﻿{
+    "testCase":"Template_MVPD_Loop",
+    "testId":"t6",
+    "testSteps":[
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"FSCOM_AccountInfo","name":"Click Sign In With TV Provider"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page": "MVPD_AccountInfo","name": "Verify Provider Signed In"},
+		{"page":"MVPD_AccountInfo", "name":"Click Sign Out of TV Provider"},
+		{"page":"Toasts", "name":"Click Sign Out Button"}
+    ]
+}
