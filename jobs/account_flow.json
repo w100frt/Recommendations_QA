@@ -6,12 +6,10 @@
     "browser":"chrome",
     "testView":"desktop",
     "testIds": [
-        {"testId":1},
         {"testId":2},
-        {"testId":4},
-        {"testId":7},
         {"testId":9},
         {"testId":10},
-        {"testId":11}
+        {"testId":11},
+        {"testId":50}
     ]
 }
