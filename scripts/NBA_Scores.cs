@@ -37,7 +37,7 @@ namespace SeleniumProject.Function
 					loc = Array.IndexOf(regularSeason, date);
 					if (loc == 0 || loc == regularSeason.Length-1) {
 						// current month is start or end of regular season. can only click one way on arrows.
-						months = random.Next(0, regularSeason.Length);
+						months = random.Next(2, regularSeason.Length);
 						if(loc == 0) {
 							for (int i = 0; i < months; i++) {
 								steps.Add(new TestStep(order, "Click Arrow Right", "", "click", "xpath", "//div[@class='qs-arrow qs-right']", wait));
@@ -70,7 +70,7 @@ namespace SeleniumProject.Function
 				months = driver.FindElements("xpath", "//div[contains(@class,'qs-num')]").Count; 
 				months = random.Next(1, months+1);
 				steps.Add(new TestStep(order, "Capture Date", "DATE", "capture", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
-				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
+				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", 2));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
 			}
