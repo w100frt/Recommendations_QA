@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			int months;
 			string title;
 			string date;
-			string data;
+			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
@@ -71,6 +71,15 @@ namespace SeleniumProject.Function
 				months = random.Next(1, months+1);
 				steps.Add(new TestStep(order, "Capture Date", "DATE", "capture", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
 				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
+			}
+			
+			else if (step.Name.Equals("Verify Selected Date")) {
+				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
+					data = DataManager.CaptureMap["MONTH"] + " " + DataManager.CaptureMap["DATE"];
+				}
+				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
 			}
