@@ -19,6 +19,6 @@
 		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM1"},
 		{"page":"Events", "name":"Verify Home Team Value", "data":"#AWAY_TEAM_SCORE1"},
 		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM_SCORE1"},
-		{"page":"Navigation","name":"Run Template", "data":"TeamSport_PastEvent"},
+		{"page":"Navigation","name":"Run Template", "data":"TeamSport_PastEvent"}
 	]
 }
