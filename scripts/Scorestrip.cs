@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Scorechip Count")) {
 				size = driver.FindElements("xpath", "//div[contains(@class,'score-chip')]").Count;
-				if(size > 0 && size <= step.Data) {
+				if(size > 0 && size <= Int32.Parse(step.Data)) {
 					log.Info("Verification Passed. " + size + " is between 0 and " + step.Data); 
 				}
 				else {
