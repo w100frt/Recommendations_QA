@@ -29,11 +29,12 @@ namespace SeleniumProject.Function
 				TimeSpan time = DateTime.UtcNow.TimeOfDay;
 				int now = time.Hours;
 				if (now > 4 && now < 15){
-					log.Info("Current Eastern Time hour is " + now-4 + ". Default to Yesterday.");
+					int et = now - 4;
+					log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
 				}
 				else {
-					log.Info("Current Eastern Time hour is " + now-4 + ". Default to Today.");
+					log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 					step.Data = "TODAY";		
 				} 					
 
