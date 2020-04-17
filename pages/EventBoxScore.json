@@ -1,7 +1,7 @@
 ﻿{
-	"page":"Toasts",
+	"page":"EventBoxScore",
 	"testDefinitions":[
-		{"name":"Click Yes to Remove Favorite","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='YES, REMOVE IT']]"},
-		{"name":"Click Sign Out Button","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='sign out']]"}
+		{"name":"Verify Away Team Link","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'boxscore')]//a)[1]"},
+		{"name":"Verify Home Team Link","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'boxscore')]//a)[2]"}
 	]
 }
