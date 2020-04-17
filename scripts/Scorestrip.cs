@@ -17,15 +17,23 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			int size;
+			int upper;
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Scorechip Count")) {
+				try (Int32.Parse(step.Data)){
+					upper = Int32.Parse(step.Data);
+				}
+				catch (Exception e){
+					log.Error("Expected data to be a numeral. Setting data to 0.");
+					upper = 0;
+				}
 				size = driver.FindElements("xpath", "//div[contains(@class,'score-chip')]").Count;
-				if (size > 0 && size <= Int32.Parse(step.Data)) {
-					log.Info("Verification Passed. " + size + " is between 0 and " + step.Data); 
+				if (size > 0 && size <= upper) {
+					log.Info("Verification Passed. " + size + " is between 0 and " + upper); 
 				}
 				else {
-					err.CreateVerificationError(step, "Number Between 0 and " + step.Data, size.ToString());
+					err.CreateVerificationError(step, "Number Between 0 and " + upper.ToString(), size.ToString());
 				}
 			}
 			
