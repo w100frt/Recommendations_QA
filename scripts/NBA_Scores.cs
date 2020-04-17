@@ -37,12 +37,21 @@ namespace SeleniumProject.Function
 					loc = Array.IndexOf(regularSeason, date);
 					if (loc == 0 || loc == regularSeason.Length-1) {
 						// current month is start or end of regular season. can only click one way on arrows.
-						if(loc == 0) 
-							//div[@class='qs-arrow qs-right']
-							log.Info(loc);
-						else 
-							//div[@class='qs-arrow qs-left']
-							log.Info(loc);
+						months = random.Next(0, regularSeason.Length);
+						if(loc == 0) {
+							for (int i = 0; i < months; i++) {
+								steps.Add(new TestStep(order, "Click Arrow Right", "", "click", "xpath", "//div[@class='qs-arrow qs-right']", wait));
+								TestRunner.RunTestSteps(driver, null, steps);
+								steps.Clear();									
+							}
+						}
+						else {
+							for (int i = 0; i < months; i++) {
+								steps.Add(new TestStep(order, "Click Arrow Left", "", "click", "xpath", "//div[@class='qs-arrow qs-left']", wait));
+								TestRunner.RunTestSteps(driver, null, steps);
+								steps.Clear();									
+							}				
+						}
 					}
 					else {
 						// current month is inside limits of regular season. can click both arrows.
