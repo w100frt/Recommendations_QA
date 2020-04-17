@@ -18,6 +18,7 @@
 		{"name":"Scroll Top Scores Page to Yesterday","objectType":"script","by":"xpath","objectId":"Scores"},		
 		{"name":"Scroll Top Scores Page Down to Today","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Scroll Top Scores Page to Tomorrow","objectType":"script","by":"xpath","objectId":"Scores"},	
+		{"name":"Select Regular Season NBA Date","objectType":"script","by":"xpath","objectId":"NBA_Scores"},	
 		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='qs-datepicker-container']"},
 		{"name":"Verify NCAA FB Conferences","objectType":"script","by":"xpath","objectId":"VerifyConferences"},
 		{"name":"Verify Date on Date Picker","objectType":"verify_value","by":"xpath","objectId":"//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]"},

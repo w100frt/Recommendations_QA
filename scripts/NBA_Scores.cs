@@ -19,13 +19,15 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			IWebElement chip;
 			int loc;
+			int months;
 			string title;
 			string date;
 			string data;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
+			Random random = new Random();
 			
-			if (step.Name.Equals("")) {
+			if (step.Name.Equals("Select Regular Season NBA Date")) {
 				string[] regularSeason = new string[] {"September", "October", "November", "December", "January", "February", "March", "April"};
 				DateTime now = DateTime.Now;
 				date = now.ToString("MMMM");
@@ -37,11 +39,14 @@ namespace SeleniumProject.Function
 						// current month is start or end of regular season. can only click one way on arrows.
 						if(loc == 0) 
 							//div[@class='qs-arrow qs-right']
+							log.Info(loc);
 						else 
 							//div[@class='qs-arrow qs-left']
+							log.Info(loc);
 					}
 					else {
 						// current month is inside limits of regular season. can click both arrows.
+						log.Info(loc);
 					}
 				}
 				else {
