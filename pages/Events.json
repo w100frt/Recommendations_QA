@@ -8,6 +8,8 @@
 		{"name":"Click Recap Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][span[.='RECAP']]"},
 		{"name":"Click Social Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][span[.='NEWS']]"},
 		{"name":"Verify Away Team Value","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'team-name-1')]"},
-		{"name":"Verify Home Team Value","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'team-name-2')]"}
+		{"name":"Verify Home Team Value","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'team-name-2')]"},
+		{"name":"Verify Away Team Score","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'score-1')]"},
+		{"name":"Verify Home Team Score","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'score-2')]"}
 	]
 }

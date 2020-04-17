@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
 			IWebElement chip;
 			int loc;
 			int months;
+			int year;
 			string title;
 			string date;
 			string data = "";
@@ -79,7 +80,14 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify Selected Date")) {
 				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
 					months = DateTime.ParseExact(DataManager.CaptureMap["MONTH"], "MMMM", CultureInfo.CurrentCulture).Month;
-					DateTime chosen = new DateTime(DateTime.Now.Year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
+					if (months > 4) {
+						year = DateTime.Now.Year - 1;
+					}
+					else {
+						year = DateTime.Now.Year;
+					}
+					log.Info("Event Year: " + year);
+					DateTime chosen = new DateTime(year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
 					data = chosen.DayOfWeek.ToString();
 					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
 				}
