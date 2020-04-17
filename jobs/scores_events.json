@@ -1,0 +1,12 @@
+﻿{
+    "project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"Scores and Events Pages",
+    "env":"stg",
+    "browser":"chrome",
+    "testView":"desktop",
+    "testIds": [
+        {"testId":12},
+        {"testId":13}
+    ]
+}

@@ -2,7 +2,7 @@
 	"testCase":"TOP Scores and Events",
 	"env":"dev",
 	"testId":"12",
-	"testRail":"",
+	"testRail":"6250853",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
