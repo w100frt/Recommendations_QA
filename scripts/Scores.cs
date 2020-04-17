@@ -139,16 +139,6 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if(step.Name.Equals("Capture Team Info from Scorestrip")) {
-				data = step.Data;
-				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')])[2]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')])[2]", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
 			else if(step.Name.Equals("Click Scorechip By Number")) {
 				data = step.Data;
 				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "(//a[@class='score-chip'])["+ data +"]", wait));
@@ -159,7 +149,6 @@ namespace SeleniumProject.Function
 			else {
 				throw new Exception("Test Step not found in script");
 			}
-
 		}
 	}
 }
