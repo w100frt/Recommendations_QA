@@ -2,7 +2,7 @@
 	"testCase":"NBA Scores and Events",
 	"env":"dev",
 	"testId":"13",
-	"testRail":"",
+	"testRail":"6250854",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
