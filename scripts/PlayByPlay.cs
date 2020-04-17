@@ -54,6 +54,7 @@ namespace SeleniumProject.Function
 						stoppage.Add("BOTTOM 8TH");
 						stoppage.Add("TOP 9TH");
 						stoppage.Add("BOTTOM 9TH");
+						break;
 					default:
 						stoppage.Add("1ST QUARTER");
 						stoppage.Add("2ND QUARTER");
