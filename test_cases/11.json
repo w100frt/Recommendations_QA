@@ -2,7 +2,7 @@
 	"testCase":"FSCOM: Sign In from Scores",
 	"env":"dev",
 	"testId":"11",
-	"testRail":"6174100",
+	"testRail":"6250851",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
