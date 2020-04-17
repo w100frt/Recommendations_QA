@@ -70,7 +70,7 @@ namespace SeleniumProject.Function
 				months = driver.FindElements("xpath", "//div[contains(@class,'qs-num')]").Count; 
 				months = random.Next(1, months+1);
 				steps.Add(new TestStep(order, "Capture Date", "DATE", "capture", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
-				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", "2"));
+				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
 			}

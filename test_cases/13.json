@@ -12,6 +12,6 @@
 		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "WED, APR 15"},
 		{"page":"Scores", "name":"Click Open Calendar"},
 		{"page":"Scores", "name":"Select Regular Season NBA Date"},
-		{"page":"Scores", "name":"Verify Scorechip is Displayed"}
+		{"page":"Scores", "name":"Verify Scorechip is Displayed", "wait":"2"}
 	]
 }
