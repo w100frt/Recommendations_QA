@@ -86,6 +86,7 @@ namespace SeleniumProject.Function
 					else {
 						year = DateTime.Now.Year;
 					}
+					log.Info("Event Year: " + year);
 					DateTime chosen = new DateTime(DateTime.Now.Year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
 					data = chosen.DayOfWeek.ToString();
 					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
