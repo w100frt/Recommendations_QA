@@ -28,11 +28,15 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Verify Displayed Day on Top Scores")) {
 				TimeSpan time = DateTime.UtcNow.TimeOfDay;
 				var now = time.Hours;
-				if (now > 4 && now < 15)
+				if (now > 4 && now < 15){
+					log.Info("Current Eastern Time hour is " + now-4 + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
-				else 
-					step.Data = "TODAY";
-				
+				}
+				else {
+					log.Info("Current Eastern Time hour is " + now-4 + ". Default to Today.");
+					step.Data = "TODAY";		
+				} 					
+
 				steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
