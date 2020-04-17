@@ -34,7 +34,7 @@ namespace SeleniumProject.Function
 				
 				// check if current month is in the regular season
 				if (Array.Exists(regularSeason, element => element == data)) {
-					loc = Array.FindIndex(regularSeason, data);
+					loc = Array.IndexOf(regularSeason, data);
 					if (loc == 0 || loc == regularSeason.Length-1) {
 						// current month is start or end of regular season. can only click one way on arrows.
 						if(loc == 0) 
