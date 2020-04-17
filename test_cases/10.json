@@ -19,7 +19,7 @@
 		{"page":"FSCOM_AccountInfo", "name":"Click Change Password Button"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"You've successfully changed your password."},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign Out"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Sign In"},
+		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"testingfoxsports@gmail.com"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter Password", "data":"FoxTesting"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter Current Password", "data":"FoxTesting"},
