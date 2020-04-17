@@ -28,8 +28,8 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Verify Displayed Day on Top Scores")) {
 				TimeSpan time = DateTime.UtcNow.TimeOfDay;
 				int now = time.Hours;
-				if (now > 4 && now < 15){
-					int et = now - 4;
+				int et = now - 4;
+				if (et < 11){
 					log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
 				}
