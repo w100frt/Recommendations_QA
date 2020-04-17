@@ -50,13 +50,16 @@ namespace SeleniumProject.Function
 								steps.Add(new TestStep(order, "Click Arrow Left", "", "click", "xpath", "//div[@class='qs-arrow qs-left']", wait));
 								TestRunner.RunTestSteps(driver, null, steps);
 								steps.Clear();									
-							}				
+							}								
 						}
 					}
 					else {
 						// current month is inside limits of regular season. can click both arrows.
 						log.Info(loc);
-					}
+					}							
+					steps.Add(new TestStep(order, "Capture Month", "MONTH", "capture", "xpath", "//span[contains(@class,'qs-month')]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
 				}
 				else {
 					// month is not in regular season. 
@@ -64,6 +67,12 @@ namespace SeleniumProject.Function
 					//div[@class='qs-arrow qs-left']
 					// check if current month is in regular season
 				}
+				months = driver.FindElements("xpath", "//div[contains(@class,'qs-num')]").Count; 
+				months = random.Next(1, sports+1);
+				steps.Add(new TestStep(order, "Capture Date", "DATE", "capture", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
+				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
 			}
 			
 			else {
