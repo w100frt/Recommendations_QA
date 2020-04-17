@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_RecapTab",
+    "testId":"t7",
+    "testSteps":[
+		{"page":"EventRecap", "name":"Verify Key Players Section is Displayed"},
+		{"page":"EventRecap", "name":"Verify Key Players Title Value","data":"KEY PLAYERS"},
+		{"page":"EventRecap", "name":"Verify Number of Key Players", "data":"4"},
+		{"page":"EventRecap", "name":"Verify Odds Section is Displayed"},
+		{"page":"EventRecap", "name":"Verify Odds Title Value", "data":"ODDS"},
+		{"page":"EventRecap", "name":"Verify Number of Odds Rows", "data":"3"},
+		{"page":"EventRecap", "name":"Verify Key Plays Section is Displayed"},
+		{"page":"EventRecap", "name":"Verify Key Plays Title Value","data":"KEY PLAYS"}
+    ]
+}
