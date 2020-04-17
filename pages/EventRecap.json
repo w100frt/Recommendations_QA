@@ -6,7 +6,7 @@
 		{"name":"Verify Key Players Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'players-data-container')]//div[contains(@class,'title')]"},
 		{"name":"Verify Number of Key Players","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'player-container')]"},
 		{"name":"Verify Odds Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]"},
-		{"name":"Verify Odds Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]//div[contains(@class,'title')]"},
+		{"name":"Verify Odds Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]//span[contains(@class,'title')]"},
 		{"name":"Verify Number of Odds Rows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'odds-row-container')]"},
 		{"name":"Verify Key Plays Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='keyplay-container recap']"},
 		{"name":"Verify Key Plays Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'keyplay-container recap')]//div[contains(@class,'title')]"}

@@ -8,5 +8,8 @@
 		{"page":"Navigation","name":"Run Template", "data":"PBPTab"},
 		{"page":"Events", "name":"Click Box Score Tab"},
 		{"page":"Navigation","name":"Run Template", "data":"BoxScoreTab"},
+		{"page":"Events", "name":"Click Odds Tab"},
+		{"page":"Events", "name":"Click News Tab"},
+		{"page":"Events", "name":"Click Social Tab"}
     ]
 }
