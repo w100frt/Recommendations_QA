@@ -23,6 +23,8 @@
 		{"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"testingfoxsports@gmail.com"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter Password", "data":"FoxTesting"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Change Password Link"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter Current Password", "data":"FoxTesting"},
 		{"page":"FSCOM_AccountInfo", "name":"Enter New Password", "data":"Testing"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Change Password Button"},
