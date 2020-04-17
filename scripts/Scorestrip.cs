@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Scorechip Count")) {
-				try (Int32.Parse(step.Data)){
+				try {
 					upper = Int32.Parse(step.Data);
 				}
 				catch (Exception e){
