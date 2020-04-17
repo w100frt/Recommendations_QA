@@ -77,7 +77,10 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Selected Date")) {
 				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
-					data = DataManager.CaptureMap["MONTH"] + " " + DataManager.CaptureMap["DATE"];
+					months = DateTime.ParseExact(DataManager.CaptureMap.ContainsKey("MONTH"), "MMMM", CultureInfo.CurrentCulture ).Month;
+					DateTime chosen = new DateTime(DateTime.Now.Year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
+					data = chosen.DayOfWeek;
+					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
 				}
 				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
 				TestRunner.RunTestSteps(driver, null, steps);
