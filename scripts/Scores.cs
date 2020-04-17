@@ -159,7 +159,6 @@ namespace SeleniumProject.Function
 			else {
 				throw new Exception("Test Step not found in script");
 			}
-
 		}
 	}
 }
