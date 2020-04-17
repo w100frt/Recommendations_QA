@@ -27,7 +27,7 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Displayed Day on Top Scores")) {
 				TimeSpan time = DateTime.UtcNow.TimeOfDay;
-				var now = time.Hours;
+				int now = time.Hours;
 				if (now > 4 && now < 15){
 					log.Info("Current Eastern Time hour is " + now-4 + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
