@@ -21,11 +21,11 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Scorechip Count")) {
 				size = driver.FindElements("xpath", "//div[contains(@class,'score-chip')]").Count;
-				if(size > 0 && size <= Int32.Parse(step.Data)) {
+				if (size > 0 && size <= Int32.Parse(step.Data)) {
 					log.Info("Verification Passed. " + size + " is between 0 and " + step.Data); 
 				}
 				else {
-					err.CreateVerificationError(step, "Number Between 0 and " + step.Data, size);
+					err.CreateVerificationError(step, "Number Between 0 and " + step.Data, size.ToString());
 				}
 			}
 			
