@@ -26,13 +26,18 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Displayed Day on Top Scores")) {
-				TimeSpan time = DateTime.Now.TimeOfDay;
-				var now = time.Hours;
-				if (now < 11)
+				TimeSpan time = DateTime.UtcNow.TimeOfDay;
+				int now = time.Hours;
+				int et = now - 4;
+				if (et < 11){
+					log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
-				else 
-					step.Data = "TODAY";
-				
+				}
+				else {
+					log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+					step.Data = "TODAY";		
+				} 					
+
 				steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
