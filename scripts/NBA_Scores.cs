@@ -68,7 +68,7 @@ namespace SeleniumProject.Function
 					// check if current month is in regular season
 				}
 				months = driver.FindElements("xpath", "//div[contains(@class,'qs-num')]").Count; 
-				months = random.Next(1, sports+1);
+				months = random.Next(1, months+1);
 				steps.Add(new TestStep(order, "Capture Date", "DATE", "capture", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
 				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
