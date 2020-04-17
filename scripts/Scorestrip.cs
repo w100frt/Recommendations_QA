@@ -18,6 +18,7 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			int size;
 			int upper;
+			string data = "";
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Scorechip Count")) {
