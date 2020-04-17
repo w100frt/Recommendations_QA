@@ -26,9 +26,9 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Displayed Day on Top Scores")) {
-				TimeSpan time = DateTime.Now.TimeOfDay;
+				TimeSpan time = DateTime.UtcNow.TimeOfDay;
 				var now = time.Hours;
-				if (now < 11)
+				if (now > 4 && now < 15)
 					step.Data = "YESTERDAY";
 				else 
 					step.Data = "TODAY";
