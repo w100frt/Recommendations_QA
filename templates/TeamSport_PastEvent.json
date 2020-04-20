@@ -15,7 +15,7 @@
 		{"page":"Events", "name":"Verify Selected Tab", "data":"ODDS"},
 		{"page":"Events", "name":"Click News Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"NEWS"},
-		{"page":"Events", "name":"Click Social Tab"}
+		{"page":"Events", "name":"Click Social Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"SOCIAL"}
     ]
 }
