@@ -2,7 +2,7 @@
 	"testCase":"NCAA BK Scores and Events",
 	"env":"dev",
 	"testId":"14",
-	"testRail":"",
+	"testRail":"6283419",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

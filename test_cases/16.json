@@ -2,7 +2,7 @@
 	"testCase":"NFL Scores and Events",
 	"env":"dev",
 	"testId":"16",
-	"testRail":"",
+	"testRail":"6283506",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

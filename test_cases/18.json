@@ -2,7 +2,7 @@
 	"testCase":"Soccer Scores and Events",
 	"env":"dev",
 	"testId":"18",
-	"testRail":"",
+	"testRail":"6283508",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
