@@ -77,7 +77,7 @@ namespace SeleniumProject.Function
 				steps.Clear();	
 			}
 			
-			else if (step.Name.Equals("Verify Selected Date")) {
+			else if (step.Name.Equals("Verify Selected NBA Date")) {
 				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
 					months = DateTime.ParseExact(DataManager.CaptureMap["MONTH"], "MMMM", CultureInfo.CurrentCulture).Month;
 					if (months > 4) {

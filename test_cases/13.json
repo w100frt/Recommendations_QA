@@ -12,7 +12,7 @@
 		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "WED, APR 15"},
 		{"page":"Scores", "name":"Click Open Calendar"},
 		{"page":"Scores", "name":"Select Regular Season NBA Date"},
-		{"page":"Scores", "name":"Verify Selected Date"},
+		{"page":"Scores", "name":"Verify Selected NBA Date"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
 		{"page":"Scores", "name":"Capture Team Info from Chip", "data":"1"},
 		{"page":"Scores", "name":"Click Scorechip By Number", "data":"1"},	{"page":"Events", "name":"Verify Away Team Value", "data":"#AWAY_TEAM1"},

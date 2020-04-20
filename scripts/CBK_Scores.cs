@@ -84,10 +84,10 @@ namespace SeleniumProject.Function
 				steps.Clear();	
 			}
 			
-			else if (step.Name.Equals("Verify Selected Date")) {
+			else if (step.Name.Equals("Verify Selected CBK Date")) {
 				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
 					months = DateTime.ParseExact(DataManager.CaptureMap["MONTH"], "MMMM", CultureInfo.CurrentCulture).Month;
-					if (months > 4) {
+					if (months > 3) {
 						year = DateTime.Now.Year - 1;
 					}
 					else {
