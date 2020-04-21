@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
 			int year;
 			string title;
 			string date;
-			string data;
+			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
