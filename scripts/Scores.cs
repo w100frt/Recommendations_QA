@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using OpenQA.Selenium;
@@ -19,9 +20,11 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			IWebElement chip;
 			int size;
+			int months;
+			int year;
 			string title;
 			string date;
-			string data;
+			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
@@ -171,7 +174,8 @@ namespace SeleniumProject.Function
 					case "CFB" : 
 						size = 12;
 						break;
-					case "Golf" || "GOLF" :
+					case "Golf" :
+					case "GOLF" :
 						size = 11;
 						break;
 					case "MLB" : 
@@ -189,7 +193,8 @@ namespace SeleniumProject.Function
 					case "NFL" :
 						size = 12;
 						break;
-					case "Soccer" || "SOCCER" : 
+					case "Soccer" :
+					case "SOCCER" : 
 						size = 12;
 						break;
 					default: 

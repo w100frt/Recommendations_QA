@@ -9,6 +9,7 @@
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click NFL"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NFL"},
-		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "SUPER BOWL - SUN, FEB 2"}
+		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "SUPER BOWL - SUN, FEB 2"},
+		{"page":"Scores", "name":"Select Regular Season NFL Date"}
 	]
 }
