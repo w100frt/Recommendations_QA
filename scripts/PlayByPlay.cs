@@ -21,14 +21,18 @@ namespace SeleniumProject.Function
 			int size;
 			int start;
 			int end;
-			string data;
+			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify PBP Headers By Sport")) {
 				ele = driver.FindElement("xpath","//img[@class='location-image']");
-				data = ele.GetAttribute("src").Substring(data.LastIndexOf('/')+1, data.IndexOf(".vresize"));
+				data = ele.GetAttribute("src")
+				start = data.LastIndexOf('/')+1;
+				end = data.IndexOf(".vresize"));
 				log.Info(data);
+				log.Info(start);
+				log.Info(end);
 				size = 1;
 				switch(step.Data) {
 					case "NHL" :

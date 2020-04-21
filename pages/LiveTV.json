@@ -8,7 +8,7 @@
 		{"name":"Click See Full Schedule Link","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'full-schedule')]"},
 		{"name":"Verify Top Show Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]"},
 		{"name":"Verify Current Video Title","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='watch-player-details']//div[contains(@class,'fs-30')]"},
-		{"name":"Verify Live TV Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'live-tv')][span[.='LIVE TV']]"},
+		{"name":"Verify Live TV Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'live-tv')][h1[.='LIVE TV']]"},
 		{"name":"Verify BTN Logo","objectType":"verify_displayed","by":"xpath","objectId":""},
 		{"name":"Verify Full Event Schedule Dropdown","objectType":"verify_value","by":"xpath","objectId":"//div[@id='full-schedule']//div[contains(@class,'dropdown-menu-title')]"},
 		{"name":"Verify Pause Button on Video","objectType":"verify_displayed","by":"xpath","objectId":"//button[@aria-label='Pause']"},
