@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using OpenQA.Selenium;
@@ -19,6 +20,8 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			IWebElement chip;
 			int size;
+			int months;
+			int year;
 			string title;
 			string date;
 			string data;
