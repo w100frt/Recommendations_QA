@@ -19,7 +19,8 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			IWebElement chip;
-			int loc;
+			int total;
+			int week;
 			int months;
 			int year;
 			string title;
@@ -30,81 +31,22 @@ namespace SeleniumProject.Function
 			Random random = new Random();
 
 			string[] preSeason = {"August"};
-			string[] regularSeason = {"September", "October", "November", "December", "January", "February"};
+			string[] preSeasonWeeks = {"HALL OF FAME GAME", "PRE WEEK 1", "PRE WEEK 2", "PRE WEEK 3", "PRE WEEK 4"};
+			string[] regSeason = {"September", "October", "November", "December", "January", "February"};
+			string[] regSeasonWeek = {"WEEK 1", "WEEK 2", "WEEK 3", "WEEK 4", "WEEK 5", "WEEK 6", "WEEK 7", "WEEK 8", "WEEK 9", "WEEK 10", "WEEK 11", "WEEK 12", "WEEK 13", "WEEK 14", "WEEK 15", "WEEK 16", "WEEK 17"};
 			string[] postSeason = {"January", "February"};
-			string[] cbkGroups = {"TOP 25", "A-10", "A-SUN", "AAC", "ACC", "AM. EAST", "BIG 12", "BIG EAST", "BIG SKY", "BIG SOUTH", "BIG TEN", "BIG WEST", "C-USA", "CAA", "DI-IND", "HORIZON", "IVY", "MAA", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "SEC", "SOUTHERN", "SOUTHLAND", "SUMMIT", "SUN BELT", "SWAC", "WAC", "WCC"};
+			string[] postSeasonWeeks = {"WILD CARD", "DIVISIONAL CHAMPIONSHIP", "CONFERENCE CHAMPIONSHIP", "PRO BOWL", "SUPER BOWL"};
 			
-			if (step.Name.Equals("Select Regular Season CBK Date")) {
+			if (step.Name.Equals("Select Regular Season NFL Date")) {
+				title = "//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
+				total = driver.FindElements(title).Count;
+				week = random.Next(1, total+1);
 
-				DateTime now = DateTime.Now;
-				date = now.ToString("MMMM");
-				
-				// check if current month is in the regular season
-				if (Array.Exists(regularSeason, element => element == date)) {
-					loc = Array.IndexOf(regularSeason, date);
-					if (loc == 0 || loc == regularSeason.Length-1) {
-						// current month is start or end of regular season. can only click one way on arrows.
-						months = random.Next(1, regularSeason.Length);
-						if(loc == 0) {
-							for (int i = 0; i < months; i++) {
-								steps.Add(new TestStep(order, "Click Arrow Right", "", "click", "xpath", "//div[@class='qs-arrow qs-right']", wait));
-								TestRunner.RunTestSteps(driver, null, steps);
-								steps.Clear();								
-							}
-						}
-						else {
-							for (int i = 0; i < months; i++) {
-								steps.Add(new TestStep(order, "Click Arrow Left", "", "click", "xpath", "//div[@class='qs-arrow qs-left']", wait));
-								TestRunner.RunTestSteps(driver, null, steps);
-								steps.Clear();							
-							}								
-						}
-					}
-					else {
-						// current month is inside limits of regular season. can click both arrows.
-						log.Info(loc);
-					}
-				}
-				else {
-					// month is not in regular season. 
-					// screen should default to last game of season
-					months = random.Next(1, regularSeason.Length);
-					for (int i = 0; i < months; i++) {
-						steps.Add(new TestStep(order, "Click Arrow Left", "", "click", "xpath", "//div[@class='qs-arrow qs-left']", wait));
-						TestRunner.RunTestSteps(driver, null, steps);
-						steps.Clear();
-					}
-				}
-				// store month
-				steps.Add(new TestStep(order, "Capture Month", "MONTH", "capture", "xpath", "//span[contains(@class,'qs-month')]", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-
-				// store date
-				months = driver.FindElements("xpath", "//div[contains(@class,'qs-num')]").Count; 
-				months = random.Next(1, months+1);
-				steps.Add(new TestStep(order, "Capture Date", "DATE", "capture", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
-				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
+				steps.Add(new TestStep(order, "Capture Week", "NFL_WEEK", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[1]", wait));
+				steps.Add(new TestStep(order, "Capture Dates", "NFL_WEEK_DATES", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[2]", wait));
+				steps.Add(new TestStep(order, "Select Week", "", "click", "xpath", "(" + title + ")["+ week +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
-			}
-			
-			else if (step.Name.Equals("Verify CBK Groups")) {
-				data = "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul//li";
-				steps.Add(new TestStep(order, "Verify Number of Groups", "34", "verify_count", "xpath", data, wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-				
-				var groups = driver.FindElements("xpath", data); 
-				for (int i = 0; i < groups.Count; i++) {
-					if (cbkGroups[i].Equals(groups[i].GetAttribute("innerText"))) {
-						log.Info("Success. " + cbkGroups[i] + " matches " + groups[i].GetAttribute("innerText"));
-					}
-					else {
-						log.Error("***Verification FAILED. Expected data [" + cbkGroups[i] + "] does not match actual data [" + groups[i].GetAttribute("innerText") + "] ***");
-						err.CreateVerificationError(step, cbkGroups[i], groups[i].GetAttribute("innerText"));
-					}
-				}
 			}
 			
 			else {
