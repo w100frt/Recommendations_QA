@@ -19,9 +19,7 @@ namespace SeleniumProject.Function
 			List<string> stoppage = new List<string>();
 			IWebElement ele;
 			int size;
-			int start;
-			int end;
-			string data;
+			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
