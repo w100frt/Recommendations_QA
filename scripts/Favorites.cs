@@ -103,7 +103,7 @@ namespace SeleniumProject.Function
 				// Select a Team for Team/Player Favorites
 				if(step.Name.Contains("Team") || step.Name.Contains("Player")) {
 					sports = driver.FindElements("xpath", "//div[@id='explore']//a[contains(@class,'entity-list-row-container')]").Count; 
-					sports = random.Next(1, sports+1);
+					sports = random.Next(2, sports+1);
 					steps.Add(new TestStep(order, "Capture Team Name", "TEAM", "capture", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);

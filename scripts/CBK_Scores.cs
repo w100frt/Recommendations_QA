@@ -28,9 +28,12 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
+
+			string[] regularSeason = {"November", "December", "January", "February", "March"};
+			string[] cbkGroups = {"TOP 25", "A-10", "A-SUN", "AAC", "ACC", "AM. EAST", "BIG 12", "BIG EAST", "BIG SKY", "BIG SOUTH", "BIG TEN", "BIG WEST", "C-USA", "CAA", "DI-IND", "HORIZON", "IVY", "MAA", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "SEC", "SOUTHERN", "SOUTHLAND", "SUMMIT", "SUN BELT", "SWAC", "WAC", "WCC"};
 			
 			if (step.Name.Equals("Select Regular Season CBK Date")) {
-				string[] regularSeason = new string[] {"November", "December", "January", "February", "March"};
+
 				DateTime now = DateTime.Now;
 				date = now.ToString("MMMM");
 				
@@ -84,23 +87,22 @@ namespace SeleniumProject.Function
 				steps.Clear();	
 			}
 			
-			else if (step.Name.Equals("Verify Selected CBK Date")) {
-				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
-					months = DateTime.ParseExact(DataManager.CaptureMap["MONTH"], "MMMM", CultureInfo.CurrentCulture).Month;
-					if (months > 3) {
-						year = DateTime.Now.Year - 1;
+			else if (step.Name.Equals("Verify CBK Groups")) {
+				data = "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul//li";
+				steps.Add(new TestStep(order, "Verify Number of Groups", "34", "verify_count", "xpath", data, wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+				
+				var groups = driver.FindElements("xpath", data); 
+				for (int i = 0; i < groups.Count; i++) {
+					if (cbkGroups[i].Equals(groups[i].GetAttribute("innerText"))) {
+						log.Info("Success. " + cbkGroups[i] + " matches " + groups[i].GetAttribute("innerText"));
 					}
 					else {
-						year = DateTime.Now.Year;
+						log.Error("***Verification FAILED. Expected data [" + cbkGroups[i] + "] does not match actual data [" + groups[i].GetAttribute("innerText") + "] ***");
+						err.CreateVerificationError(step, cbkGroups[i], groups[i].GetAttribute("innerText"));
 					}
-					log.Info("Event Year: " + year);
-					DateTime chosen = new DateTime(year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
-					data = chosen.DayOfWeek.ToString();
-					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
 				}
-				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();	
 			}
 			
 			else {
