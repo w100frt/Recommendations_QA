@@ -27,7 +27,7 @@
 		{"name":"Verify CBK Groups","objectType":"script","by":"xpath","objectId":"CBK_Scores"},
 		{"name":"Verify Date on Date Picker","objectType":"verify_value","by":"xpath","objectId":"//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
-		{"name":"Verify Displayed Group Name","objectType":"script","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
+		{"name":"Verify Displayed Group Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
 		{"name":"Verify FOX Bet Logo on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//span[@alt='fox-bet']"},
 		{"name":"Verify League Title on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Number of Score Sections","objectType":"verify_count","by": "xpath", "objectId":"//div[contains(@class,'score-section')]"},
