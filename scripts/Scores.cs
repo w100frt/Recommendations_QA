@@ -171,7 +171,8 @@ namespace SeleniumProject.Function
 					case "CFB" : 
 						size = 12;
 						break;
-					case "Golf" || "GOLF" :
+					case "Golf" :
+					case "GOLF" :
 						size = 11;
 						break;
 					case "MLB" : 
@@ -189,7 +190,8 @@ namespace SeleniumProject.Function
 					case "NFL" :
 						size = 12;
 						break;
-					case "Soccer" || "SOCCER" : 
+					case "Soccer" :
+					case "SOCCER" : 
 						size = 12;
 						break;
 					default: 
