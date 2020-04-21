@@ -3,6 +3,6 @@
     "testId":"t15",
     "testSteps":[
 		{"page":"EventPlayByPlay", "name":"Verify PBP Section is Displayed"},
-		{"page":"EventPlayByPlay", "name":"Verify PBP Headers By Sport", "data":"NBA"}
+		{"page":"EventPlayByPlay", "name":"Verify PBP Headers By Sport"}
     ]
 }

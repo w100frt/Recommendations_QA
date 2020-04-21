@@ -19,19 +19,25 @@ namespace SeleniumProject.Function
 			List<string> stoppage = new List<string>();
 			IWebElement ele;
 			int size;
+			int start;
+			int end;
 			string data;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify PBP Headers By Sport")) {
+				ele = driver.FindElement("xpath","//img[@class='location-image']");
+				data = ele.GetAttribute("src").Substring(data.LastIndexOf('/')+1, data.IndexOf(".vresize"));
+				log.Info(data);
 				size = 1;
 				switch(step.Data) {
-					case "NHL":
+					case "NHL" :
 						stoppage.Add("1ST PERIOD");
 						stoppage.Add("2ND PERIOD");
 						stoppage.Add("3RD PERIOD");
 						break;
-					case "Soccer":
+					case "Soccer" :
+					case "CBK" :
 						stoppage.Add("1ST HALF");
 						stoppage.Add("2ND HALF");
 						break;
@@ -55,7 +61,7 @@ namespace SeleniumProject.Function
 						stoppage.Add("TOP 9TH");
 						stoppage.Add("BOTTOM 9TH");
 						break;
-					default:
+					default :
 						stoppage.Add("1ST QUARTER");
 						stoppage.Add("2ND QUARTER");
 						stoppage.Add("3RD QUARTER");
