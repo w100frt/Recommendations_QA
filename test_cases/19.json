@@ -2,7 +2,7 @@
 	"testCase":"NHL Scores and Events",
 	"env":"dev",
 	"testId":"19",
-	"testRail":"",
+	"testRail":"6283509",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

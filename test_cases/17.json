@@ -2,7 +2,7 @@
 	"testCase":"MLB Scores and Events",
 	"env":"dev",
 	"testId":"17",
-	"testRail":"",
+	"testRail":"6283507",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

@@ -2,7 +2,7 @@
 	"testCase":"NCAA FB Scores and Events",
 	"env":"dev",
 	"testId":"15",
-	"testRail":"",
+	"testRail":"6283505",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

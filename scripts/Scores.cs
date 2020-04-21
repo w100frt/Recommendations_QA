@@ -153,14 +153,66 @@ namespace SeleniumProject.Function
 			
 			else if(step.Name.Equals("Capture Team Info from Chip")) {
 				data = step.Data;
-				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
 				steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')])[2]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
 				steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify Selected Date")) {
+				switch(step.Data) {
+					case "CBK" : 
+						size = 3;
+						break;
+					case "CFB" : 
+						size = 12;
+						break;
+					case "Golf" || "GOLF" :
+						size = 11;
+						break;
+					case "MLB" : 
+						size = 9;
+						break;
+					case "NASCAR" :
+						size = 11;
+						break;
+					case "NBA" : 
+						size = 4;
+						break;
+					case "NHL" : 
+						size = 4;
+						break;
+					case "NFL" :
+						size = 12;
+						break;
+					case "Soccer" || "SOCCER" : 
+						size = 12;
+						break;
+					default: 
+						size = 12;
+						break;
+				}
+				
+				if (DataManager.CaptureMap.ContainsKey("MONTH") && DataManager.CaptureMap.ContainsKey("DATE")) {
+					months = DateTime.ParseExact(DataManager.CaptureMap["MONTH"], "MMMM", CultureInfo.CurrentCulture).Month;
+					if (months > size) {
+						year = DateTime.Now.Year - 1;
+					}
+					else {
+						year = DateTime.Now.Year;
+					}
+					log.Info("Event Year: " + year);
+					DateTime chosen = new DateTime(year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
+					data = chosen.DayOfWeek.ToString();
+					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
+				}
+				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
 			}
 			
 			else {
