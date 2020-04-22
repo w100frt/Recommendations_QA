@@ -31,16 +31,18 @@ namespace SeleniumProject.Function
 				start = data.LastIndexOf('/')+1;
 				end = data.IndexOf(".vresize") - start;
 				data = data.Substring(start, end);
-				log.Info(data);
+				if (ele.GetAttribute("src").Contains("soccer")) {
+					data = "Soccer";
+				}
 				size = 1;
-				switch(step.Data) {
+				switch(data) {
 					case "NHL" :
 						stoppage.Add("1ST PERIOD");
 						stoppage.Add("2ND PERIOD");
 						stoppage.Add("3RD PERIOD");
 						break;
 					case "Soccer" :
-					case "CBK" :
+					case "NCAABasketball" :
 						stoppage.Add("1ST HALF");
 						stoppage.Add("2ND HALF");
 						break;
