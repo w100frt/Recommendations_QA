@@ -27,21 +27,22 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify PBP Headers By Sport")) {
 				ele = driver.FindElement("xpath","//img[@class='location-image']");
-				data = ele.GetAttribute("src")
+				data = ele.GetAttribute("src");
 				start = data.LastIndexOf('/')+1;
-				end = data.IndexOf(".vresize"));
-				log.Info(data);
-				log.Info(start);
-				log.Info(end);
+				end = data.IndexOf(".vresize") - start;
+				data = data.Substring(start, end);
+				if (ele.GetAttribute("src").Contains("soccer")) {
+					data = "Soccer";
+				}
 				size = 1;
-				switch(step.Data) {
+				switch(data) {
 					case "NHL" :
 						stoppage.Add("1ST PERIOD");
 						stoppage.Add("2ND PERIOD");
 						stoppage.Add("3RD PERIOD");
 						break;
 					case "Soccer" :
-					case "CBK" :
+					case "NCAABasketball" :
 						stoppage.Add("1ST HALF");
 						stoppage.Add("2ND HALF");
 						break;
@@ -74,7 +75,7 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string stop in stoppage) {
-					steps.Add(new TestStep(order, "Verify PBP Header for " +step.Data, stop, "verify_value", "xpath", "(//div[contains(@class,'pbp-header')])["+size+"]", wait));
+					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "(//div[contains(@class,'pbp-header')])["+size+"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size++;
