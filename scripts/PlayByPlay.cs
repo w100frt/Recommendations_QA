@@ -29,10 +29,9 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath","//img[@class='location-image']");
 				data = ele.GetAttribute("src");
 				start = data.LastIndexOf('/')+1;
-				end = data.IndexOf(".vresize");
+				end = data.IndexOf(".vresize") - start;
+				data = data.Substring(start, end);
 				log.Info(data);
-				log.Info(start);
-				log.Info(end);
 				size = 1;
 				switch(step.Data) {
 					case "NHL" :
