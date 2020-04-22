@@ -27,9 +27,9 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify PBP Headers By Sport")) {
 				ele = driver.FindElement("xpath","//img[@class='location-image']");
-				data = ele.GetAttribute("src")
+				data = ele.GetAttribute("src");
 				start = data.LastIndexOf('/')+1;
-				end = data.IndexOf(".vresize"));
+				end = data.IndexOf(".vresize");
 				log.Info(data);
 				log.Info(start);
 				log.Info(end);
