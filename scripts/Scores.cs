@@ -76,11 +76,11 @@ namespace SeleniumProject.Function
 				
 				if (!date.Equals("TODAY")) {
 					do {
-						js.ExecuteScript("window.scrollBy(0,250)");
+						js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling down on page...");
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						log.Info(scrolls);
+						log.Info("Day title is " + date + ". Number of scrolls to limit: " +scrolls);
 					}
 					while (!date.Equals("TODAY") || scrolls-- > 0);
 				}
