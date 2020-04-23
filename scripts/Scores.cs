@@ -60,7 +60,7 @@ namespace SeleniumProject.Function
 						date = ele.GetAttribute("innerText");
 						log.Info(scrolls);
 					}
-					while (!date.Equals("YESTERDAY") || scrolls-- > 0);
+					while (!date.Equals("YESTERDAY") && scrolls-- > 0);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -76,22 +76,14 @@ namespace SeleniumProject.Function
 				date = ele.GetAttribute("innerText");
 				
 				if (!date.Equals("TODAY")) {
-					while (!stop) {
+					do {
 						js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling down on page...");
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						log.Info("Day title is " + date + ". Number of scrolls to limit: " +scrolls);
-						if(date.Equals("TODAY")) {
-							stop = true;
-							log.Info(stop);
-						}
-						scrolls--;
-						if(scrolls == 0) {
-							log.Info("Reached max scrolls. Breaking loop.");
-							break;
-						}
+						log.Info(scrolls);
 					}
+					while (!date.Equals("TODAY") && scrolls-- > 0);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
