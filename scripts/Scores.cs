@@ -76,7 +76,7 @@ namespace SeleniumProject.Function
 				date = ele.GetAttribute("innerText");
 				
 				if (!date.Equals("TODAY")) {
-					while (!stop || scrolls > 0) {
+					while (!stop) {
 						js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling down on page...");
 						ele = driver.FindElement("xpath", title);
