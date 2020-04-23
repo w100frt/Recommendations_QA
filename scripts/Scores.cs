@@ -18,9 +18,8 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
-			IWebElement chip;
 			int size;
-			int scrolls;
+			int scrolls = 20;
 			int months;
 			int year;
 			string title;
@@ -48,7 +47,6 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Scroll Top Scores Page to Yesterday")) {
-				scrolls = 30;
 				title = "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]";
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
