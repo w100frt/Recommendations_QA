@@ -87,7 +87,7 @@ namespace SeleniumProject.Function
 							log.Info(stop);
 						}
 					}
-					while (stop || scrolls-- > 0);
+					while (!stop || scrolls-- > 0);
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
