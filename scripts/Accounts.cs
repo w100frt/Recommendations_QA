@@ -25,6 +25,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Get/Compare Device ID")) {
+				log.Info("here");
 				data = js.ExecuteScript("wisRegistration.getDeviceID();").ToString();
 				log.Info(data);
 			}
