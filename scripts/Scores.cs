@@ -76,7 +76,7 @@ namespace SeleniumProject.Function
 				date = ele.GetAttribute("innerText");
 				
 				if (!date.Equals("TODAY")) {
-					do {
+					while (!stop || scrolls > 0) {
 						js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling down on page...");
 						ele = driver.FindElement("xpath", title);
@@ -86,8 +86,9 @@ namespace SeleniumProject.Function
 							stop = true;
 							log.Info(stop);
 						}
+						scrolls--;
+						log.Info(scrolls);
 					}
-					while (!stop || scrolls-- > 0);
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
