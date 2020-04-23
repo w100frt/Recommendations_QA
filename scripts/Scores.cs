@@ -25,6 +25,7 @@ namespace SeleniumProject.Function
 			string title;
 			string date;
 			string data = "";
+			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
@@ -81,8 +82,11 @@ namespace SeleniumProject.Function
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
 						log.Info("Day title is " + date + ". Number of scrolls to limit: " +scrolls);
+						if(date.Equals("TODAY")) {
+							stop = true;
+						}
 					}
-					while (!date.Equals("TODAY") || scrolls-- > 0);
+					while (stop || scrolls-- > 0);
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
