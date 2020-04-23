@@ -84,6 +84,7 @@ namespace SeleniumProject.Function
 						log.Info("Day title is " + date + ". Number of scrolls to limit: " +scrolls);
 						if(date.Equals("TODAY")) {
 							stop = true;
+							log.Info(stop);
 						}
 					}
 					while (stop || scrolls-- > 0);
