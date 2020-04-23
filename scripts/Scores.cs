@@ -87,8 +87,14 @@ namespace SeleniumProject.Function
 							log.Info(stop);
 						}
 						scrolls--;
-						log.Info(scrolls);
+						if(scrolls == 0) {
+							log.Info("Reached max scrolls. Breaking loop.");
+							break;
+						}
 					}
+					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -108,7 +114,7 @@ namespace SeleniumProject.Function
 						date = ele.GetAttribute("innerText");
 						log.Info(scrolls);
 					}
-					while (!date.Equals("TOMORROW") || scrolls-- > 0);
+					while (!date.Equals("TOMORROW") && scrolls-- > 0);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
