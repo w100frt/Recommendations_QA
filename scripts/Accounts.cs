@@ -20,14 +20,17 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			int size;
 			string data = "";
+			string test = "";
 			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Get or Compare Device ID")) {
 				try {
+					test = (string) js.ExecuteScript("document.reayState;");
 					data = (string) js.ExecuteScript("wisRegistration.getDeviceID();", data);
 					log.Info("device id: " + data);
+					log.Info("readyState: " + data);
 				}
 				catch (Exception e) {
 					log.Info("failed");
