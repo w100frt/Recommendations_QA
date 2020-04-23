@@ -6,7 +6,7 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Get/Compare Device ID"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos"},

@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
-			if (step.Name.Equals("Get/Compare Device ID")) {
+			if (step.Name.Equals("Get or Compare Device ID")) {
 				log.Info("here");
 				data = js.ExecuteScript("wisRegistration.getDeviceID();").ToString();
 				log.Info(data);
