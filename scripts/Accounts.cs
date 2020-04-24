@@ -27,7 +27,7 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Get or Compare Device ID")) {
 				try {
-					test = (string) js.ExecuteScript("return document.reayState;");
+					test = (string) js.ExecuteScript("return document.readyState;");
 					data = (string) js.ExecuteScript("return wisRegistration.getDeviceID();");
 					
 					log.Info("readyState: " + test);
