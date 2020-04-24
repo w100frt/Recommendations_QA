@@ -30,11 +30,10 @@ namespace SeleniumProject.Function
 					test = (string) js.ExecuteScript("document.reayState;");
 					data = (string) js.ExecuteScript("wisRegistration.getDeviceID();", data);
 					log.Info("device id: " + data);
-					log.Info("readyState: " + data);
+					log.Info("readyState: " + test);
 				}
 				catch (Exception e) {
-					log.Info("failed");
-					log.Info("ERROR ERROR ERROR: " + e);
+					log.Info("ERROR: " + e);
 				}
 			}
 			
