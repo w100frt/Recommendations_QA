@@ -1,7 +1,7 @@
 ﻿{
 	"page":"LiveTV",
 	"testDefinitions":[
-		{"name":"Capture Live on Fox Title","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'live-on-fox')]//div[div[@class='cl-red']]//div[not(@class='cl-red')]"},
+		{"name":"Capture Live on Fox Title","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'live-on-fox')]//div[div[@class='cl-red']]//h2"},
 		{"name":"Click Live Play Button","objectType":"click","by":"xpath","objectId":"//div[@class='live-arrow']"},
 		{"name":"Click Main Video Play Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class, 'live-tv-main')]//a[div[contains(@class,'play-button')]]"},
 		{"name":"Click Overlay Play Button","objectType":"click","by":"xpath","objectId":"//div[@class='overlay-play-button']"},

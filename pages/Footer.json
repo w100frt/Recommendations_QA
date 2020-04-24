@@ -1,15 +1,15 @@
 ﻿{
 	"page":"Footer",
 	"testDefinitions":[
-		{"name":"Verify Caffeine Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'caffeine')]"},
-		{"name":"Verify Facebook Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'facebook')]"},
+		{"name":"Verify Caffeine Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//a[contains(@href,'caffeine')]"},
+		{"name":"Verify Facebook Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//a[contains(@href,'facebook')]"},
 		{"name":"Verify Footer Links","objectType":"script","by":"xpath","objectId":"Footer"},
 		{"name":"Verify Footer Links 2","objectType":"script","by":"xpath","objectId":"Footer"},	
 		{"name":"Verify FOX Bet Logo","objectType":"verify_displayed","by":"xpath","objectId":"//span[contains(@class,'fox-bet-footer')]"},
 		{"name":"Verify FOX Super Six Logo","objectType":"verify_displayed","by":"xpath","objectId":"//span[contains(@class,'s6-footer')]"},
-		{"name":"Verify Instagram Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'instagram')]"},
-		{"name":"Verify RSS Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'rss')]"},
-		{"name":"Verify Twitter Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'twitter')]"},
-		{"name":"Verify YouTube Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//span[contains(@class,'youtube')]"}
+		{"name":"Verify Instagram Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//a[contains(@href,'instagram')]"},
+		{"name":"Verify RSS Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//a[contains(@href,'rss')]"},
+		{"name":"Verify Twitter Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//a[contains(@href,'twitter')]"},
+		{"name":"Verify YouTube Logo","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'footer-social-media')]//a[contains(@href,'youtube')]"}
 	]
 }
