@@ -29,6 +29,7 @@ namespace SeleniumProject.Function
 				try {
 					test = (string) js.ExecuteScript("return document.readyState;");
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
+					test = (string) js.ExecuteScript("return window.wisRegistration.isUserLoggedIn();");
 					
 					log.Info("readyState: " + test);
 					log.Info("device id: " + data);
