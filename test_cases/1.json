@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos"},
 		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},

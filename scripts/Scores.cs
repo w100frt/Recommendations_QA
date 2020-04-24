@@ -18,13 +18,14 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
-			IWebElement chip;
 			int size;
+			int scrolls = 20;
 			int months;
 			int year;
 			string title;
 			string date;
 			string data = "";
+			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
@@ -53,13 +54,13 @@ namespace SeleniumProject.Function
 				
 				if (!date.Equals("YESTERDAY")) {
 					do {
-						js.ExecuteScript("window.scrollBy(0,-250)");
+						js.ExecuteScript("window.scrollBy({top: -100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling up on page...");
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						chip = driver.FindElement("xpath","(//div[@class='scores']//a)[1]");
+						log.Info(scrolls + " scrolls until limit is reached");
 					}
-					while (!date.Equals("YESTERDAY") || !chip.Displayed);
+					while (!date.Equals("YESTERDAY") && scrolls-- > 0);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -76,14 +77,16 @@ namespace SeleniumProject.Function
 				
 				if (!date.Equals("TODAY")) {
 					do {
-						js.ExecuteScript("window.scrollBy(0,250)");
+						js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling down on page...");
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
-						chip = driver.FindElement("xpath","(//div[@class='scores']//a)["+ size +"]");
+						log.Info(scrolls + " scrolls until limit is reached");
 					}
-					while (!date.Equals("TODAY") || !chip.Displayed);
+					while (!date.Equals("TODAY") && scrolls-- > 0);
+					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -97,14 +100,13 @@ namespace SeleniumProject.Function
 				
 				if (!date.Equals("TOMORROW")) {
 					do {
-						js.ExecuteScript("window.scrollBy(0,250)");
+						js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
 						log.Info("Scrolling down on page...");
 						ele = driver.FindElement("xpath", title);
 						date = ele.GetAttribute("innerText");
-						size = driver.FindElements("xpath", "//div[@class='scores']//a").Count;
-						chip = driver.FindElement("xpath","(//div[@class='scores']//a)["+ size +"]");
+						log.Info(scrolls + " scrolls until limit is reached");
 					}
-					while (!date.Equals("TOMORROW") || !chip.Displayed);
+					while (!date.Equals("TOMORROW") && scrolls-- > 0);
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -117,19 +119,19 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify League Title on Top Scores")) {
 				switch(step.Data) {
 					case "Scorestrip" : 
-						title = "//div[contains(@class,'homepage-module')]//a[@class='score-chip']";
+						title = "//div[contains(@class,'homepage-module')]//a[contains(@class,'score-chip')]";
 						break;
 					case "Yesterday" : 
-						title = "(//div[@class='scores'])[1]//a[@class='score-chip']";
+						title = "(//div[@class='scores'])[1]//a[contains(@class,'score-chip')]";
 						break;
 					case "Today" : 
-						title = "(//div[@class='scores'])[2]//a[@class='score-chip']";
+						title = "(//div[@class='scores'])[2]//a[contains(@class,'score-chip')]";
 						break;
 					case "Tomorrow" : 
-						title = "(//div[@class='scores'])[3]//a[@class='score-chip']";
+						title = "(//div[@class='scores'])[3]//a[contains(@class,'score-chip')]";
 						break;
 					default: 
-						title = "//div[@class='scores']//a[@class='score-chip']";
+						title = "//div[@class='scores']//a[contains(@class,'score-chip')]";
 						break;
 				}
 				
