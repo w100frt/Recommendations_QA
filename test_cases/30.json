@@ -12,7 +12,6 @@
 		{"page":"Scorestrip", "name":"Verify Scorestrip is Displayed"},
 		{"page":"Homepage", "name":"Verify Carousel is Displayed"},
 		{"page":"Homepage", "name":"Verify Live on Fox is Displayed"},
-		{"page":"Navigation", "name":"Run Template", "data":"VerifyFooter"},
-		{"page":"Navigation", "name":"Get or Compare Device ID"}
+		{"page":"Navigation", "name":"Run Template", "data":"VerifyFooter"}
 	]
 }

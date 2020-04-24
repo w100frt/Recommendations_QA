@@ -18,7 +18,7 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
-			int size;
+			int size = 0;
 			string data = "";
 			string test = "";
 			bool stop = true;
@@ -28,11 +28,13 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Get or Compare Device ID")) {
 				try {
 					test = (string) js.ExecuteScript("return document.readyState;");
+					while (!test.Equals("complete") && size < 5) {
+						log.Info("Waiting for readyState=complete");
+						Thread.Sleep(0500);
+						test = (string) js.ExecuteScript("return document.readyState;");
+						size++;
+					}
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
-					size = (int) js.ExecuteScript("return window.wisRegistration.getDeviceID().length;");
-					
-					log.Info("readyState: " + test);
-					log.Info("isuserloggedin: " + size);
 					log.Info("device id: " + data);
 				}
 				catch (Exception e) {
