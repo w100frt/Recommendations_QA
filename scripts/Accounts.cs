@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			int size;
 			string data = "";
 			string test = "";
-			bool stop = false;
+			bool stop = true;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
@@ -29,9 +29,10 @@ namespace SeleniumProject.Function
 				try {
 					test = (string) js.ExecuteScript("return document.readyState;");
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
-					test = (string) js.ExecuteScript("return window.wisRegistration.isUserLoggedIn();");
+					stop = (string) js.ExecuteScript("return window.wisRegistration.isUserLoggedIn();");
 					
 					log.Info("readyState: " + test);
+					log.Info("isuserloggedin: " + stop);
 					log.Info("device id: " + data);
 				}
 				catch (Exception e) {
