@@ -46,10 +46,10 @@ namespace SeleniumProject.Function
 					
 					// verify device id has not changed
 					if(DataManager.CaptureMap["DEVICE_ID"].Equals(data)) {
-						log.Info("Comparison PASSED. Original Device ID (" + DataManager.CaptureMap["DEVICE_ID"] + " matches current Device ID ("+ data + ")");			
+						log.Info("Comparison PASSED. Original Device ID [" + DataManager.CaptureMap["DEVICE_ID"] + "] matches current Device ID ["+ data + "]");			
 					}
 					else {
-						log.Error("Comparison FAILED. Original Device ID (" + DataManager.CaptureMap["DEVICE_ID"] + " does not match current Device ID ("+ data + ").");
+						log.Error("Comparison FAILED. Original Device ID (" + DataManager.CaptureMap["DEVICE_ID"] + " does not match current Device ID ["+ data + "].");
 						err.CreateVerificationError(step, DataManager.CaptureMap["DEVICE_ID"], data);
 
 					}
