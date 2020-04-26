@@ -34,11 +34,29 @@ namespace SeleniumProject.Function
 						test = (string) js.ExecuteScript("return document.readyState;");
 						size++;
 					}
+					
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
-					log.Info("device id: " + data);
+					log.Info("Device ID equals " + data);
+					
+					// if device id is not stored yet, store it
+					if (!DataManager.CaptureMap.ContainsKey("DEVICE_ID")) {
+						DataManager.CaptureMap.Add("DEVICE_ID", data);
+						log.Info("Storing " + data + " to CaptureMap as DEVICE_ID");
+					}
+					
+					// verify device id has not changed
+					if(DataManager.CaptureMap["DEVICE_ID"].Equals(data)) {
+						log.Info("Comparison PASSED. Original Device ID (" + DataManager.CaptureMap["DEVICE_ID"] + " matches current Device ID ("+ data + ")");			
+					}
+					else {
+						log.Error("Comparison FAILED. Original Device ID (" + DataManager.CaptureMap["DEVICE_ID"] + " does not match current Device ID ("+ data + ").");
+						err.CreateVerificationError(step, DataManager.CaptureMap["DEVICE_ID"], data);
+
+					}
 				}
 				catch (Exception e) {
 					log.Info("ERROR: " + e);
+					err.CreateVerificationError(step, "Error Capturing DeviceID", data);
 				}
 			}
 			

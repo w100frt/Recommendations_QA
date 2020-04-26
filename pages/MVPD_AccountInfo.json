@@ -8,7 +8,7 @@
 		{"name":"Verify Account Info Flyout is Open","objectType":"verify_displayed","by":"xpath","objectId":"//div[@id='account-info']"},
 		{"name":"Verify Account Displayed Following MVPD Login","objectType":"verify_displayed","by":"xpath","objectId":"//a[@class='nav-item account-link']"},
 		{"name":"Verify Provider Logos","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='mvpd-tile']/img"},
-		{"name":"Verify Provider Name","objectType":"verify_value","by":"xpath","objectId":"//div[@class='searched']//div//div"},
+		{"name":"Verify Provider Name","objectType":"verify_value","by":"xpath","objectId":"//div[@class='searched']//div//h2"},
 		{"name":"Verify Provider Signed In","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'is-signed-in')]"}
 	]
 }
