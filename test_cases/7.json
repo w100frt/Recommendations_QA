@@ -6,12 +6,15 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
 		{"page":"Navigation","name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo","name":"Click Sign In With TV Provider"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"}
 	]
 }
