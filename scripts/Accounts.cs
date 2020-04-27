@@ -74,10 +74,10 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify URL Redirect")) {
 				data = driver.GetDriver().Url;
-				test = (string) js.ExecuteScript("return document.readyState;");
+				log.Info("Captured URL: " + data);
 				if (DataManager.CaptureMap.ContainsKey("CURRENT_URL")) {
+					log.Info("CURRENT_URL value: " + DataManager.CaptureMap["CURRENT_URL"]);
 					if (DataManager.CaptureMap["CURRENT_URL"].Equals(data)) {
-						log.Info("URL redirected to " + data);
 						stop = true;
 					}					
 				}
@@ -86,13 +86,23 @@ namespace SeleniumProject.Function
 					stop = true;
 				}
 
+				// verify that the url is properly redirecting
 				while (!stop && size++ < 5) {
-					log.Info("Current URL " + driver.GetDriver().Url + ". Waiting for redirect...");
+					data = driver.GetDriver().Url;
+					log.Info("Current URL [" + data + "]. Waiting for redirect...");
 					Thread.Sleep(1000);				
 					if (DataManager.CaptureMap["CURRENT_URL"].Equals(data)) {
 						log.Info("URL redirected to " + data);
 						stop = true;
 					}
+				}
+				
+				// verify that the page is currently in a readyState
+				test = (string) js.ExecuteScript("return document.readyState;");
+				while (!test.Equals("complete") && size++ < 5) {
+					log.Info("Waiting for readyState=complete");
+					Thread.Sleep(0500);
+					test = (string) js.ExecuteScript("return document.readyState;");
 				}
 			}
 			
