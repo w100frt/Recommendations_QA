@@ -89,7 +89,7 @@ namespace SeleniumProject.Function
 				// verify that the url is properly redirecting
 				while (!stop && size++ < 5) {
 					data = driver.GetDriver().Url;
-					log.Info("Current URL [" + data + "]. Waiting for redirect...");
+					log.Info("Waiting for redirect...");
 					Thread.Sleep(1000);				
 					if (DataManager.CaptureMap["CURRENT_URL"].Equals(data)) {
 						log.Info("URL redirected to " + data);
@@ -100,7 +100,7 @@ namespace SeleniumProject.Function
 				// verify that the page is currently in a readyState
 				test = (string) js.ExecuteScript("return document.readyState;");
 				while (!test.Equals("complete") && size++ < 5) {
-					log.Info("Waiting for readyState=complete");
+					log.Info("document.readyState = " + test + ". Waiting...");
 					Thread.Sleep(0500);
 					test = (string) js.ExecuteScript("return document.readyState;");
 				}
