@@ -61,6 +61,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Click Sign In")) {
 				test = (string) js.ExecuteScript("return document.readyState;");
+				log.Info("document.readyState = " + test);
 				while (!test.Equals("complete") && size++ < 5) {
 					log.Info("document.readyState = " + test);
 					Thread.Sleep(1000);
