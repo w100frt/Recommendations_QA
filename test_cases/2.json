@@ -14,7 +14,7 @@
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
-		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"Navigation", "name":"Navigate to Account"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
 		{"page":"Navigation", "name":"Get or Compare Device ID"}
 	]
