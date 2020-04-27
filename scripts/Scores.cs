@@ -33,7 +33,7 @@ namespace SeleniumProject.Function
 				TimeSpan time = DateTime.UtcNow.TimeOfDay;
 				int now = time.Hours;
 				int et = now - 4;
-				if (et < 11){
+				if (et >= 0 && et < 11){
 					log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
 				}
