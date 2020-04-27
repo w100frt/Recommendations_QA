@@ -87,7 +87,7 @@ namespace SeleniumProject.Function
 				}
 
 				// verify that the url is properly redirecting
-				while (!stop && size++ < 5) {
+				while (!stop && size++ < 10) {
 					data = driver.GetDriver().Url;
 					log.Info("Waiting for redirect...");
 					Thread.Sleep(1000);				
