@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			int size = 0;
 			string data = "";
 			string test = "";
-			bool stop = true;
+			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
@@ -59,17 +59,41 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if (step.Name.Equals("Click Sign In")) {
-				test = (string) js.ExecuteScript("return document.readyState;");
-				log.Info("document.readyState = " + test);
-				while (!test.Equals("complete") && size++ < 5) {
-					log.Info("document.readyState = " + test);
-					Thread.Sleep(1000);
-					test = (string) js.ExecuteScript("return document.readyState;");
+			else if (step.Name.Equals("Click Sign In With TV Provider")) {
+				if (!DataManager.CaptureMap.ContainsKey("CURRENT_URL")) {
+					DataManager.CaptureMap.Add("CURRENT_URL", driver.GetDriver().Url);
+					log.Info("Storing " + driver.GetDriver().Url + " to CaptureMap as CURRENT_URL");
 				}
-				steps.Add(new TestStep(order, "Click Sign In", "", "click", "xpath", "//a[contains(@class,'sign-in')]", wait));
+				else {
+					DataManager.CaptureMap["CURRENT_URL"] = driver.GetDriver().Url;
+				}
+				steps.Add(new TestStep(order, "Sign In With TV Provider", "", "click", "xpath", "//a[.='TV Provider Sign In']", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify URL Redirect")) {
+				data = driver.GetDriver().Url;
+				test = (string) js.ExecuteScript("return document.readyState;");
+				if (DataManager.CaptureMap.ContainsKey("CURRENT_URL")) {
+					if (DataManager.CaptureMap["CURRENT_URL"].Equals(data)) {
+						log.Info("URL redirected to " + data);
+						stop = true;
+					}					
+				}
+				else {
+					log.Info("No previous URL stored. Skipping verification.");
+					stop = true;
+				}
+
+				while (!stop && size++ < 5) {
+					log.Info("Current URL " + driver.GetDriver().Url + ". Waiting for redirect...");
+					Thread.Sleep(1000);				
+					if (DataManager.CaptureMap["CURRENT_URL"].Equals(data)) {
+						log.Info("URL redirected to " + data);
+						stop = true;
+					}
+				}
 			}
 			
 			else {
