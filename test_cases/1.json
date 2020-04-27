@@ -15,6 +15,7 @@
 		{"page":"MVPD_AccountInfo", "name":"Click Cancel Button"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
 		{"page":"Navigation", "name":"Click Sign In"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"}
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"}
 	]
 }
