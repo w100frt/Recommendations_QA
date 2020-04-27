@@ -14,7 +14,7 @@
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Navigation", "name":"Navigate to Account"},
-		{"page":"Navigation", "name":"Get or Compare Device ID"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"}
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"}
 	]
 }
