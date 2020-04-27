@@ -121,7 +121,7 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				
-				count = driver.FindElement("xpath","//div[@id='account' and contains(@class,'open')]").Count;
+				count = driver.FindElements("xpath","//div[@id='account' and contains(@class,'open')]").Count;
 				if (count == 0) {
 					steps.Add(new TestStep(order, "Retry Click Account", "", "click", "xpath", "//a[contains(@class,'account-link')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
