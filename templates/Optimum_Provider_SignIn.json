@@ -6,6 +6,6 @@
 		{"page":"Login", "name":"Enter Optimum Username", "data":"research105"},
 		{"page":"Login", "name":"Enter Optimum Password", "data":"support105"},
 		{"page":"Login", "name":"Click Optimum Sign-in"},
-		{"page":"Login", "name":"Verify URL Redirect"}
+		{"page":"Navigation", "name":"Verify URL Redirect"}
     ]
 }
