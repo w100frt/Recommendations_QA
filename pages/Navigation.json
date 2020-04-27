@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Navigation",
 	"testDefinitions":[
-		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in')]"},
+		{"name":"Click Sign In","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Click Explore","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'explore-link')]"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},
 		{"name":"Get or Compare Device ID","objectType":"script","by":"xpath","objectId":"Accounts"},

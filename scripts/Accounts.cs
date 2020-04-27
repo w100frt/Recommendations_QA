@@ -28,11 +28,10 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Get or Compare Device ID")) {
 				try {
 					test = (string) js.ExecuteScript("return document.readyState;");
-					while (!test.Equals("complete") && size < 5) {
+					while (!test.Equals("complete") && size++ < 5) {
 						log.Info("Waiting for readyState=complete");
 						Thread.Sleep(0500);
 						test = (string) js.ExecuteScript("return document.readyState;");
-						size++;
 					}
 					
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
@@ -58,6 +57,18 @@ namespace SeleniumProject.Function
 					log.Info("ERROR: " + e);
 					err.CreateVerificationError(step, "Error Capturing DeviceID", data);
 				}
+			}
+			
+			else if (step.Name.Equals("Click Sign In")) {
+				test = (string) js.ExecuteScript("return document.readyState;");
+				while (!test.Equals("complete") && size++ < 5) {
+					log.Info("document.readyState = " + test);
+					Thread.Sleep(1000);
+					test = (string) js.ExecuteScript("return document.readyState;");
+				}
+				steps.Add(new TestStep(order, "Click Sign In", "", "click", "xpath", "//a[contains(@class,'sign-in')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else {
