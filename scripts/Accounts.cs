@@ -109,10 +109,12 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Navigate to Account")) {
 				// verify that the page is currently in a readyState
 				test = (string) js.ExecuteScript("return document.readyState;");
+				log.Info("document.readyState = " + test);
 				while (!test.Equals("complete") && size++ < 8) {
-					log.Info("document.readyState = " + test + ". Waiting...");
+					log.Info("Waiting...");
 					Thread.Sleep(0500);
 					test = (string) js.ExecuteScript("return document.readyState;");
+					log.Info("document.readyState = " + test);
 				}
 				steps.Add(new TestStep(order, "Click Account", "", "click", "xpath", "//a[contains(@class,'account-link')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
