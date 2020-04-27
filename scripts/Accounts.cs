@@ -19,6 +19,7 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			int size = 0;
+			int count = 0;
 			string data = "";
 			string test = "";
 			bool stop = false;
@@ -119,6 +120,13 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Click Account", "", "click", "xpath", "//a[contains(@class,'account-link')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+				
+				count = driver.FindElement("xpath","//div[@id='account' and contains(@class,'open')]").Count;
+				if (count == 0) {
+					steps.Add(new TestStep(order, "Retry Click Account", "", "click", "xpath", "//a[contains(@class,'account-link')]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
 			}
 			
 			else {
