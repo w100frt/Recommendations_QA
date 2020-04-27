@@ -5,7 +5,7 @@
 		{"name":"Click Explore","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'explore-link')]"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},
 		{"name":"Get or Compare Device ID","objectType":"script","by":"xpath","objectId":"Accounts"},
-		{"name":"Navigate to Account","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'account-link')]"},
+		{"name":"Navigate to Account","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/']"},
 		{"name":"Navigate to Live TV","objectType":"click","by":"xpath","objectId":"//a[@href='/live']"},
 		{"name":"Navigate to Scores","objectType":"click","by":"xpath","objectId":"//a[@href='/scores']"},
