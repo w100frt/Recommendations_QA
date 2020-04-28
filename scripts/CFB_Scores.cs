@@ -33,6 +33,23 @@ namespace SeleniumProject.Function
 					err.CreateVerificationError(step, expectedConf[i], conferences[i].GetAttribute("innerText"));
 				}
 			}
+			
+			string[] regSeason = {"August", "September", "October", "November", "December"};
+			string[] regSeasonWeek = {"WEEK 1", "WEEK 2", "WEEK 3", "WEEK 4", "WEEK 5", "WEEK 6", "WEEK 7", "WEEK 8", "WEEK 9", "WEEK 10", "WEEK 11", "WEEK 12", "WEEK 13", "WEEK 14", "WEEK 15", "WEEK 16"};
+			string[] postSeason = {"December", "January"};
+			string[] postSeasonWeeks = {"BOWL WEEK"};
+			
+			if (step.Name.Equals("Select Regular Season CFB Date")) {
+				title = "//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
+				total = driver.FindElements(title).Count;
+				week = random.Next(1, total+1);
+
+				steps.Add(new TestStep(order, "Capture Week", "CFB_WEEK", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[1]", wait));
+				steps.Add(new TestStep(order, "Capture Dates", "CFB_WEEK_DATES", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[2]", wait));
+				steps.Add(new TestStep(order, "Select Week", "", "click", "xpath", "(" + title + ")["+ week +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
+			}
 		}
 	}
 }

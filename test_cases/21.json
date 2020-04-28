@@ -25,7 +25,7 @@
 		{"page":"Scores", "name":"Click NCAA FB"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA FB"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"Scores", "name":"Verify NCAA FB Conferences"},
+		{"page":"Scores", "name":"Verify CFB Groups"},
 		{"page":"Scores", "name":"Click NBA"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NBA"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},

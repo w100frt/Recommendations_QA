@@ -9,6 +9,6 @@
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click NCAA FB"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA FB"},
-		{"page":"Scores", "name":"Verify NCAA FB Conferences"},
+		{"page":"Scores", "name":"Verify CFB Groups"}
 	]
 }
