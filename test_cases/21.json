@@ -30,6 +30,7 @@
 		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},
 		{"page":"Scores", "name":"Click NCAA BK"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA BK"},
+		{"page":"Scores", "name":"Verify CBK Groups"},
 		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},
 		{"page":"Scores", "name":"Click Soccer"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "SOCCER"},
@@ -48,6 +49,7 @@
 		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},
 		{"page":"Scores", "name":"Click Golf"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "GOLF"},
+		{"page":"Scores", "name":"Verify Golf Groups"},
 		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"}
 	]
 }

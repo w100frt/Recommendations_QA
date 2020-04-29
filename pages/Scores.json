@@ -28,6 +28,7 @@
 		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='qs-datepicker-container' or contains(@class, 'week-selector-container')]"},
 		{"name":"Verify CBK Groups","objectType":"script","by":"xpath","objectId":"CBK_Scores"},	
 		{"name":"Verify CFB Groups","objectType":"script","by":"xpath","objectId":"CFB_Scores"},
+		{"name":"Verify Golf Groups","objectType":"script","by":"xpath","objectId":"Golf_Scores"},
 		{"name":"Verify Date on Date Picker","objectType":"verify_value","by":"xpath","objectId":"//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Displayed Group Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
