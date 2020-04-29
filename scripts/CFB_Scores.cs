@@ -23,7 +23,12 @@ namespace SeleniumProject.Function
 
 			string[] expectedConf = {"BOWLS", "TOP 25", "AAC", "ACC", "BIG 12", "BIG SKY", "BIG SOUTH", "BIG TEN", "C-USA", "CAA", "IND-FCS", "INDEPENDENTS", "IVY", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "PIONEER", "SEC", "SOUTHERN", "SOUTHLAND", "SUN BELT", "SWAC"};
 			
-            if(step.Name.Equals("Verify CFB Groups")) {
+			string[] regSeason = {"August", "September", "October", "November", "December"};
+			string[] regSeasonWeek = {"WEEK 1", "WEEK 2", "WEEK 3", "WEEK 4", "WEEK 5", "WEEK 6", "WEEK 7", "WEEK 8", "WEEK 9", "WEEK 10", "WEEK 11", "WEEK 12", "WEEK 13", "WEEK 14", "WEEK 15", "WEEK 16"};
+			string[] postSeason = {"December", "January"};
+			string[] postSeasonWeeks = {"BOWL WEEK"};
+			
+            if (step.Name.Equals("Verify CFB Groups")) {
 				steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
 				steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
@@ -40,11 +45,6 @@ namespace SeleniumProject.Function
 					}
 				}
 			}
-
-			string[] regSeason = {"August", "September", "October", "November", "December"};
-			string[] regSeasonWeek = {"WEEK 1", "WEEK 2", "WEEK 3", "WEEK 4", "WEEK 5", "WEEK 6", "WEEK 7", "WEEK 8", "WEEK 9", "WEEK 10", "WEEK 11", "WEEK 12", "WEEK 13", "WEEK 14", "WEEK 15", "WEEK 16"};
-			string[] postSeason = {"December", "January"};
-			string[] postSeasonWeeks = {"BOWL WEEK"};
 			
 			else if (step.Name.Equals("Select Regular Season CFB Date")) {
 				title = "//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
@@ -56,6 +56,10 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Select Week", "", "click", "xpath", "(" + title + ")["+ week +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
+			}
+			
+			else {
+				throw new Exception("Test Step not found in script");
 			}
 		}
 	}
