@@ -11,7 +11,7 @@
 		{"name":"Click NFL","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click NHL","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Soccer","objectType":"script","by":"xpath","objectId":"Scores"},
-		{"name":"Click Top","objectType":"click","by":"xpath","objectId":"//a[@analyticsname='top']"},
+		{"name":"Click Top","objectType":"click","by":"xpath","objectId":"//a[@analyticsname='topevents']"},
 		{"name":"Capture Team Info from Chip","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Calendar Arrow Left","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-left']"},
 		{"name":"Click Calendar Arrow Right","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-right']"},
