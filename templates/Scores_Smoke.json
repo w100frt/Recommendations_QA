@@ -1,0 +1,9 @@
+﻿{
+    "testCase":"Template_Scores_Smoke",
+    "testId":"t15",
+    "testSteps":[
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Click Open Calendar"},
+		{"page":"Scores", "name":"Verify Calendar is Displayed"},
+    ]
+}

@@ -31,10 +31,10 @@ namespace SeleniumProject.Function
 				}
 				size = driver.FindElements("xpath", "//div[contains(@class,'score-chip')]").Count;
 				if (size > 0 && size <= upper) {
-					log.Info("Verification Passed. " + size + " is between 0 and " + upper); 
+					log.Info("Verification Passed. " + size + " is between 1 and " + upper); 
 				}
 				else {
-					err.CreateVerificationError(step, "Number Between 0 and " + upper.ToString(), size.ToString());
+					err.CreateVerificationError(step, "Number Between 1 and " + upper.ToString(), size.ToString());
 				}
 			}
 			
