@@ -211,7 +211,7 @@ namespace SeleniumProject.Function
 						xpath = "//a[span[contains(.,'GOLF')]]";
 						break;
 					default: 
-						xpath = "//a[@analyticsname='top']";
+						xpath = "//a[@analyticsname='topevents']";
 						break;
 				}
 				
