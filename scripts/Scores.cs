@@ -25,6 +25,7 @@ namespace SeleniumProject.Function
 			string title;
 			string date;
 			string data = "";
+			string xpath = "";
 			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
@@ -166,6 +167,74 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Click NBA") || step.Name.Equals("Click NCAA BK") || step.Name.Equals("Click MLB") || step.Name.Equals("Click NASCAR") || step.Name.Equals("Click Soccer") || step.Name.Equals("Click NHL") || step.Name.Equals("Click Boxing") || step.Name.Equals("Click NCAA FB") || step.Name.Equals("Click NFL") || step.Name.Equals("Click Golf") || step.Name.Equals("Verify Selected Category")) {
+				if (step.Name.Equals("Verify Selected Category")) {
+					data = step.Data;
+				}
+				else {
+					data = step.Name.Substring(6);
+				}
+				switch (data) {
+					case "NBA" : 
+						xpath = "//a[span[contains(.,'NBA')]]";
+						break;
+					case "NCAA BK" : 
+						xpath = "//a[span[contains(.,'NCAA BK')]]";
+						break;
+					case "MLB" :
+						xpath = "//a[span[contains(.,'MLB')]]";
+						break;
+					case "NASCAR" : 
+						xpath = "//a[span[contains(.,'NASCAR')]]";
+						break;
+					case "Soccer" :
+					case "SOCCER" :
+						xpath = "//a[span[contains(.,'SOCCER')]]";
+						break;
+					case "NHL" : 
+						xpath = "//a[span[contains(.,'NHL')]]";
+						break;
+					case "Boxing" : 
+					case "BOXING" :
+						xpath = "//a[span[contains(.,'BOXING')]]";
+						break;
+					case "NCAA FB" :
+						xpath = "//a[span[contains(.,'NCAA FB')]]";
+						break;
+					case "NFL" :
+						xpath = "//a[span[contains(.,'NFL')]]";
+						break;
+					case "Golf" :
+					case "GOLF" :
+						xpath = "//a[span[contains(.,'GOLF')]]";
+						break;
+					default: 
+						xpath = "//a[@analyticsname='top']";
+						break;
+				}
+				
+				stop = driver.FindElement("xpath", xpath).Displayed;
+				// verify selected category. otherwise, click appropriate scores sport.
+				if (step.Name.Equals("Verify Selected Category")) {
+					if(!stop) {
+						step.Data = "MORE";
+					}
+
+					steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[@id='nav-secondary']//a[contains(@class,'selected')]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				else {
+					if (!stop) {
+						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//a[span[contains(.,'MORE')]]", wait));
+					}
+
+					steps.Add(new TestStep(order, "Click " + data, "", "click", "xpath", xpath, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();					
+				}
 			}
 			
 			else if (step.Name.Equals("Verify Selected Date")) {
