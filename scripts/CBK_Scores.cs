@@ -88,7 +88,13 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify CBK Groups")) {
-				data = "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul//li";
+				data = "//div[contains(@class,'scores-home-container')]//div[contains(@class,'active')]//ul";
+				steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
+				steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", data, wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+				
+				data = data + "//li";
 				steps.Add(new TestStep(order, "Verify Number of Groups", "34", "verify_count", "xpath", data, wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
