@@ -76,9 +76,11 @@ namespace SeleniumProject.Function
 				log.Info("Current date: " + now);
 				if (now >= start && now < end) {
 					DataManager.CaptureMap.Add("IN_SEASON", "True");
+					log.Info("Today is in-season. Storing IN_SEASON to Capture Map as True.");
 				}
 				else {
 					DataManager.CaptureMap.Add("IN_SEASON", "False");
+					log.Info("Today is not in-season. Storing IN_SEASON to Capture Map as False.");
 				}
 			}
 			
