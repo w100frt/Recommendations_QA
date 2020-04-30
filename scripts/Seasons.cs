@@ -75,10 +75,10 @@ namespace SeleniumProject.Function
 				}
 				log.Info("Current date: " + now);
 				if (now >= start && now < end) {
-					log.Info("IN SEASON");
+					DataManager.CaptureMap.Add("IN_SEASON", "True");
 				}
 				else {
-					log.Info("OUT OF SEASON");
+					DataManager.CaptureMap.Add("IN_SEASON", "False");
 				}
 			}
 			
