@@ -28,6 +28,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Is Sport In-Season?")) {
+				now = DateTime.Today;
 				switch(step.Data) {
 					case "CBK" : 
 						start = new DateTime(2019, 11, 05);
@@ -72,9 +73,15 @@ namespace SeleniumProject.Function
 						end = new DateTime(2020, 11, 05);
 						break;
 				}
-				
-				return dateToCheck >= startDate && dateToCheck < endDate;
-
+				log.Info("Current date: " + now);
+				if (now >= start && now < end) {
+					DataManager.CaptureMap.Add("IN_SEASON", "True");
+					log.Info("Today is in-season. Storing IN_SEASON to Capture Map as True.");
+				}
+				else {
+					DataManager.CaptureMap.Add("IN_SEASON", "False");
+					log.Info("Today is not in-season. Storing IN_SEASON to Capture Map as False.");
+				}
 			}
 			
 			else {
