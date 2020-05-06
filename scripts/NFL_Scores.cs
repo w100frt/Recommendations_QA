@@ -38,12 +38,12 @@ namespace SeleniumProject.Function
 			string[] postSeasonWeeks = {"WILD CARD", "DIVISIONAL CHAMPIONSHIP", "CONFERENCE CHAMPIONSHIP", "PRO BOWL", "SUPER BOWL"};
 			
 			if (step.Name.Equals("Select Regular Season NFL Date")) {
-				title = "//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
+				title = "//div[contains(@class,'scores') and not(@style='display: none;')][div[contains(@class,'dropdown')]]//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
 				total = driver.FindElements("xpath", title).Count;
 				week = random.Next(1, total+1);
 
-				steps.Add(new TestStep(order, "Capture Week", "NFL_WEEK", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[1]", wait));
-				steps.Add(new TestStep(order, "Capture Dates", "NFL_WEEK_DATES", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[2]", wait));
+				steps.Add(new TestStep(order, "Capture Week", "WEEK", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[1]", wait));
+				steps.Add(new TestStep(order, "Capture Dates", "WEEK_DATES", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[2]", wait));
 				steps.Add(new TestStep(order, "Select Week", "", "click", "xpath", "(" + title + ")["+ week +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	

@@ -20,8 +20,8 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			int size;
 			int scrolls = 20;
-			int months;
-			int year;
+			int months = 0;
+			int year = 0;
 			string title;
 			string date;
 			string data = "";
@@ -285,6 +285,23 @@ namespace SeleniumProject.Function
 					DateTime chosen = new DateTime(year, months, Int32.Parse(DataManager.CaptureMap["DATE"]));
 					data = chosen.DayOfWeek.ToString();
 					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
+				}
+				else if (DataManager.CaptureMap.ContainsKey("WEEK") && DataManager.CaptureMap.ContainsKey("WEEK_DATES")) {
+					if(DataManager.CaptureMap["WEEK_DATES"].Length >= 5) {
+						data = DataManager.CaptureMap["WEEK_DATES"].Substring(0,6);
+					}
+					else {
+						data = DataManager.CaptureMap["WEEK_DATES"];
+					}
+					if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+						if (Convert.ToBoolean(DataManager.CaptureMap["IN_SEASON"])) {
+							year = DateTime.Now.Year;
+						}
+						else {
+							year = DateTime.Now.Year - 1;
+						}
+					}
+					data = DataManager.CaptureMap["WEEK"].Trim() + " - THU, " + data.Trim();
 				}
 				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
 				TestRunner.RunTestSteps(driver, null, steps);
