@@ -291,7 +291,7 @@ namespace SeleniumProject.Function
 						data = DataManager.CaptureMap["WEEK_DATES"].Substring(1,5);
 					}
 					else {
-						data = DataManager.CaptureMap["MONTH"];
+						data = DataManager.CaptureMap["WEEK_DATES"];
 					}
 					data = DataManager.CaptureMap["WEEK"] " - " + data.Trim();
 				}
