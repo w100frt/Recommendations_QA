@@ -39,7 +39,7 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Select Regular Season NFL Date")) {
 				title = "//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
-				total = driver.FindElements(title).Count;
+				total = driver.FindElements("xpath", title).Count;
 				week = random.Next(1, total+1);
 
 				steps.Add(new TestStep(order, "Capture Week", "NFL_WEEK", "capture", "xpath", "(" + title + ")["+ week +"]//div//div[1]", wait));
