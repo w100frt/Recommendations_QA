@@ -293,7 +293,7 @@ namespace SeleniumProject.Function
 					else {
 						data = DataManager.CaptureMap["WEEK_DATES"];
 					}
-					data = DataManager.CaptureMap["WEEK"] " - " + data.Trim();
+					data = DataManager.CaptureMap["WEEK"] + " - " + data.Trim();
 				}
 				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
 				TestRunner.RunTestSteps(driver, null, steps);
