@@ -16,7 +16,7 @@
 		{"name":"Click Calendar Arrow Left","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-left']"},
 		{"name":"Click Calendar Arrow Right","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-right']"},
 		{"name":"Click Scorechip By Number","objectType":"script","by":"xpath","objectId":"Scores"},
-		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'scores-date') or contains(@class,'scores-header ') and not(@style='display: none;')]//div[contains(@class,'week-selector')]//button[contains(@class,'title')]"},
+		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button[contains(@class,'title')]"},
 		{"name":"Click Open Groups Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
 		{"name":"Is Sport In-Season?","objectType":"script","by":"xpath","objectId":"Seasons"},
 		{"name":"Scroll Top Scores Page to Yesterday","objectType":"script","by":"xpath","objectId":"Scores"},		

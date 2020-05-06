@@ -6,13 +6,13 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
 		{"page":"Homepage", "name":"Click Full Events Schedule Button"},
-		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
-		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
 		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"},
 		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"LiveTV", "name":"Capture Live on Fox Title", "data" : "LIVE_SHOW"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
+		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
 		{"page":"LiveTV","name":"Verify Selected Link on Nav"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
@@ -28,6 +28,9 @@
 		{"page":"LiveTV","name":"Click Live Play Button"},
 		{"page":"LiveTV","name":"Click Overlay Play Button"},
 		{"page":"LiveTV","name":"Verify Video"},
-		{"page":"LiveTV","name":"Verify Pause Button on Video"}
+		{"page":"LiveTV","name":"Verify Pause Button on Video"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
+		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"}
 	]
 }
