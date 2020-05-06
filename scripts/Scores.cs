@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			int size;
 			int scrolls = 20;
 			int months;
-			int year;
+			int year = 0;
 			string title;
 			string date;
 			string data = "";
