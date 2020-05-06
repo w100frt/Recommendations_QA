@@ -286,6 +286,15 @@ namespace SeleniumProject.Function
 					data = chosen.DayOfWeek.ToString();
 					data = data.Substring(0,3).ToUpper() + ", " + DataManager.CaptureMap["MONTH"].Substring(0,3) + " " + DataManager.CaptureMap["DATE"];
 				}
+				else if (DataManager.CaptureMap.ContainsKey("WEEK") && DataManager.CaptureMap.ContainsKey("WEEK_DATES")) {
+					if(DataManager.CaptureMap["WEEK_DATES"].Length >= 5) {
+						data = DataManager.CaptureMap["WEEK_DATES"].Substring(1,5);
+					}
+					else {
+						data = DataManager.CaptureMap["MONTH"];
+					}
+					data = DataManager.CaptureMap["WEEK"] " - " + data.Trim();
+				}
 				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
