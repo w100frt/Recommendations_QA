@@ -8,6 +8,7 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click NFL"},
+		{"page":"Scores", "name":"Is Sport In-Season?", "data": "NFL"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NFL"},
 		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "SUPER BOWL - SUN, FEB 2"},
 		{"page":"Scores", "name":"Click Open Calendar"},

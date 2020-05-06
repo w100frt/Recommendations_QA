@@ -288,12 +288,21 @@ namespace SeleniumProject.Function
 				}
 				else if (DataManager.CaptureMap.ContainsKey("WEEK") && DataManager.CaptureMap.ContainsKey("WEEK_DATES")) {
 					if(DataManager.CaptureMap["WEEK_DATES"].Length >= 5) {
-						data = DataManager.CaptureMap["WEEK_DATES"].Substring(1,5);
+						data = DataManager.CaptureMap["WEEK_DATES"].Substring(0,5);
 					}
 					else {
 						data = DataManager.CaptureMap["WEEK_DATES"];
 					}
-					data = DataManager.CaptureMap["WEEK"] + " - " + data.Trim();
+					if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+						if (Convert.ToBoolean(DataManager.CaptureMap["IN_SEASON"])) {
+							year = DateTime.Now.Year;
+						};
+						else {
+							year = DateTime.Now.Year - 1;
+						}
+					}
+					DateTime chosen = new DateTime(year, DateTime.ParseExact(DataManager.CaptureMap["WEEK_DATES"].Substring(0,3), "MMM", CultureInfo.CurrentCulture).Month, Int32.Parse(DataManager.CaptureMap["WEEK_DATES"].Substring(3)));
+					data = DataManager.CaptureMap["WEEK"].Trim() + " - " + chosen.DayOfWeek.ToString().Substring(0,3).ToUpper() + "," + data.Trim();
 				}
 				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
 				TestRunner.RunTestSteps(driver, null, steps);
