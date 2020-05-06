@@ -288,7 +288,7 @@ namespace SeleniumProject.Function
 				}
 				else if (DataManager.CaptureMap.ContainsKey("WEEK") && DataManager.CaptureMap.ContainsKey("WEEK_DATES")) {
 					if(DataManager.CaptureMap["WEEK_DATES"].Length >= 5) {
-						data = DataManager.CaptureMap["WEEK_DATES"].Substring(0,5);
+						data = DataManager.CaptureMap["WEEK_DATES"].Substring(0,6);
 					}
 					else {
 						data = DataManager.CaptureMap["WEEK_DATES"];
