@@ -296,7 +296,7 @@ namespace SeleniumProject.Function
 					if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 						if (Convert.ToBoolean(DataManager.CaptureMap["IN_SEASON"])) {
 							year = DateTime.Now.Year;
-						};
+						}
 						else {
 							year = DateTime.Now.Year - 1;
 						}
