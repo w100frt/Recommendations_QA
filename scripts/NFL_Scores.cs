@@ -38,7 +38,7 @@ namespace SeleniumProject.Function
 			string[] postSeasonWeeks = {"WILD CARD", "DIVISIONAL CHAMPIONSHIP", "CONFERENCE CHAMPIONSHIP", "PRO BOWL", "SUPER BOWL"};
 			
 			if (step.Name.Equals("Select Regular Season NFL Date")) {
-				title = "//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
+				title = "//div[contains(@class,'scores') and not(@style='display: none;')][div[contains(@class,'dropdown')]]//ul[li[contains(.,'REGULAR SEASON')]]//li[not(contains(@class,'label'))]";
 				total = driver.FindElements("xpath", title).Count;
 				week = random.Next(1, total+1);
 
