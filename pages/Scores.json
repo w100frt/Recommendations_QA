@@ -26,7 +26,7 @@
 		{"name":"Select Regular Season CBK Date","objectType":"script","by":"xpath","objectId":"CBK_Scores"},	
 		{"name":"Select Regular Season NBA Date","objectType":"script","by":"xpath","objectId":"NBA_Scores"},
 		{"name":"Select Regular Season NFL Date","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
-		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='qs-datepicker-container' or contains(@class, 'week-selector-container')]"},
+		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[@class='qs-datepicker-container' or contains(@class, 'week-selector-container')]"},
 		{"name":"Verify CBK Groups","objectType":"script","by":"xpath","objectId":"CBK_Scores"},	
 		{"name":"Verify CFB Groups","objectType":"script","by":"xpath","objectId":"CFB_Scores"},
 		{"name":"Verify Golf Groups","objectType":"script","by":"xpath","objectId":"Golf_Scores"},
