@@ -25,6 +25,7 @@
 		{"page":"Scores", "name":"Click NCAA FB"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA FB"},
 		{"page":"Scores", "name":"Verify CFB Groups"},
+		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},
 		{"page":"Scores", "name":"Click NBA"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NBA"},
 		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},

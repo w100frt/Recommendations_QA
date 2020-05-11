@@ -31,11 +31,11 @@ namespace SeleniumProject.Function
 			
             if (step.Name.Equals("Verify CFB Groups")) {
 				steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
-				steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul", wait));
+				steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown-root active')]//ul", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				
-				var conferences = driver.FindElements("xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown')]//ul//li"); 
+				var conferences = driver.FindElements("xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown-root active')]//ul//li"); 
 				for (int i = 0; i < conferences.Count; i++) {
 					if (expectedConf[i].Equals(conferences[i].GetAttribute("innerText"))) {
 						log.Info("Success. " + expectedConf[i] + " matches " + conferences[i].GetAttribute("innerText"));
