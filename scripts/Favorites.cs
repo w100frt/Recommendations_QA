@@ -25,7 +25,7 @@ namespace SeleniumProject.Function
 				string sport = "";
 				// Flip to Players pane if necessary. Otherwise, stay on Sports pane.
 				if(step.Name.Contains("Player")) {
-					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'players')]", wait));
+					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
