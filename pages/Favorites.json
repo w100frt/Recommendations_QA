@@ -3,7 +3,7 @@
 	"testDefinitions":[
 		{"name":"Click Add New Favorites Button","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'add-favorites-link')]"},
 		{"name":"Click Close Gnatout Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'gnatout')]//button[@class='image-button close']"},
-		{"name":"Click Done on Favorites","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'favorites-menu-footer')][button[contains(.,'DONE')]]"},
+		{"name":"Click Done on Favorites","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'manage-btn')][button[contains(.,'DONE')]]"},
 		{"name":"Click Manage on Favorites","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'manage-btn')][button[contains(.,'MANAGE')]]"},
 		{"name":"Click Remove on Favorite","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'favorite-remove-button')]"},
 		{"name":"Hover Manage on Favorites","objectType":"hover","by":"xpath","objectId":"//div[@class='favorites-menu']"},
