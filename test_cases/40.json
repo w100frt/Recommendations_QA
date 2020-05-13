@@ -9,6 +9,7 @@
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page": "Navigation","name": "Verify Account on Nav"},
+		{"page":"Favorites", "name":"Verify Anonymous Favorites Text", "data":"Add your favorite teams, players and more."},
 		{"page": "Navigation","name": "Navigate to Account"},
 		{"page": "FSCOM_AccountInfo","name": "Verify Account Name","data": "TESTINGFOXSPORTS@GMAIL.COM"},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
@@ -21,6 +22,7 @@
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "1"},
+		{"page":"Favorites", "name":"Verify Anonymous Favorites Text", "data":"FAVORITES"},
 		{"page":"Favorites", "name":"Hover Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Remove on Favorite"},
@@ -58,6 +60,7 @@
 		{"page":"Favorites", "name":"Click Manage on Favorites"},
 		{"page":"Favorites", "name":"Click Remove on Favorite"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
+		{"page":"Favorites", "name":"Verify Anonymous Favorites Text", "data":"Add your favorite teams, players and more."},
 		{"page":"Navigation", "name":"Navigate to Account"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign Out"}
 	]

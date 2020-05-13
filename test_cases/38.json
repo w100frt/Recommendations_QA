@@ -11,6 +11,7 @@
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"10"},
 		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
 		{"page":"Explore", "name":"Click Back Arrow"},
+		{"page":"Favorites", "name":"Verify Anonymous Favorites Text", "data":"FAVORITES"},
 		{"page":"Favorites", "name":"Randomize Favorite NCAA League"},
 		{"page":"Explore", "name":"Click Back Arrow"},
 		{"page":"Navigation", "name":"Navigate to Home"},
