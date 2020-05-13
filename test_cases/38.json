@@ -6,6 +6,7 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Favorites", "name":"Verify Anonymous Favorites Text", "data":"Add your favorite teams, players and more."},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"10"},
 		{"page":"Favorites", "name":"Randomize Favorite Pro League"},
