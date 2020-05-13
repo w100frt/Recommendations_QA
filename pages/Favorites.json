@@ -14,7 +14,7 @@
 		{"name":"Randomize Favorite Pro Team","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite NCAA Player","objectType":"script","by":"xpath","objectId":"Favorites"},
 		{"name":"Randomize Favorite Pro Player","objectType":"script","by":"xpath","objectId":"Favorites"},
-		{"name":"Verify Anonymous Favorites Text","objectType":"verify","by":"xpath","objectId":"//*[contains(@class,'add-your-favorites') or contains(@class,'base-state')]"},
+		{"name":"Verify Favorites Nav Text","objectType":"verify","by":"xpath","objectId":"//*[contains(@class,'add-your-favorites') or contains(@class,'base-state')]"},
 		{"name":"Verify Gnatout is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'gnatout')]"},
 		{"name":"Verify Number of Favorites","objectType":"verify_count","by":"xpath","objectId":"//div[@class='favorites-menu-items']//a"}
 
