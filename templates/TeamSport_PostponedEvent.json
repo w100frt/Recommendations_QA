@@ -1,5 +1,5 @@
 ﻿{
-    "testCase":"Template_TeamSport_PastEvent",
+    "testCase":"Template_TeamSport_PostponedEvent",
     "testId":"t7",
     "testSteps":[
 		{"page":"Scores", "name":"Capture Team Info from Chip", "data":"#GAME"},

@@ -62,6 +62,7 @@ namespace SeleniumProject.Function
 					}
 					else {
 						status = driver.FindElement("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
+						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED")) {
 							step.Data = "TeamSport_PostponedEvent";
 						}
