@@ -52,7 +52,7 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if ("Verify MLB Event") {
+			else if (step.Name.Equals("Verify MLB Event")) {
 				if(DataManager.CaptureMap.ContainsKey("IN_SEASON") && DataManager.CaptureMap.ContainsKey("MLB_DATE")) {
 					if(DataManager.CaptureMap["MLB_DATE"].Equals("YESTERDAY")) {
 						step.Data = "TeamSport_PastEvent";
