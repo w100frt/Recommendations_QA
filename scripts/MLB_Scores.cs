@@ -17,15 +17,6 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
-			IWebElement ele;
-			IWebElement chip;
-			int total;
-			int week;
-			int months;
-			int year;
-			string title;
-			string date;
-			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
@@ -46,7 +37,7 @@ namespace SeleniumProject.Function
 						} 					
 					}
 					else {
-						steps.Data = "WORLD SERIES";
+						step.Data = "WORLD SERIES";
 					}
 				}
 				
