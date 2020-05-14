@@ -33,23 +33,29 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Verify MLB Date")) {
 				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					if(bool.Parse(DataManager.CaptureMap["IN_SEASON"])) {
-						steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "", "script", "xpath", "Scores", wait));
-						TestRunner.RunTestSteps(driver, null, steps);
-						steps.Clear();
+						TimeSpan time = DateTime.UtcNow.TimeOfDay;
+						int now = time.Hours;
+						int et = now - 4;
+						if (et >= 0 && et < 11){
+							log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+							step.Data = "YESTERDAY";
+						}
+						else {
+							log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+							step.Data = "TODAY";
+						} 					
 					}
 					else {
-						steps.Add(new TestStep(order, "Verify Date on Date Picker", "WORLD SERIES", "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", wait));
-						TestRunner.RunTestSteps(driver, null, steps);
-						steps.Clear();
+						steps.Data = "WORLD SERIES";
 					}
 				}
 				
 				else {
 					log.Warn("No IN_SEASON variable available. Using data.");
-					steps.Add(new TestStep(order, "Run Template", "", "run_template", "xpath", "", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
 				}
+				steps.Add(new TestStep(order, "Verify Displayed Day on MLB", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else {
