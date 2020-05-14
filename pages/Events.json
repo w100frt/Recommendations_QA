@@ -12,7 +12,7 @@
 		{"name":"Verify Home Team Value","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'team-name-2')]"},
 		{"name":"Verify Away Team Score","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'score-1')]"},
 		{"name":"Verify Home Team Score","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'score-2')]"},
-		{"name":"Verify Empty Content","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-body-content')]"}
+		{"name":"Verify Empty Content","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-body-content')]"},
 		{"name":"Verify Selected Tab","objectType":"verify_value","by":"xpath","objectId":"//div[@class='nav-horizontal']//a[contains(@class,'selected')]"}
 	]
 }
