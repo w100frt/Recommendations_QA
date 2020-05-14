@@ -21,6 +21,8 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			Random random = new Random();
 			bool in_season = false;
+			int games = 0;
+			string status = "";
 			
 			if (step.Name.Equals("Verify MLB Date")) {
 				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
@@ -36,8 +38,7 @@ namespace SeleniumProject.Function
 						else {
 							log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 							step.Data = "TODAY";
-						}
-							DataManager.CaptureMap.Add("MLB_DATE", step.Data);				
+						}				
 					}
 					else {
 						step.Data = "WORLD SERIES";
@@ -53,12 +54,23 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify MLB Event")) {
-				if(DataManager.CaptureMap.ContainsKey("IN_SEASON") && DataManager.CaptureMap.ContainsKey("MLB_DATE")) {
-					if(DataManager.CaptureMap["MLB_DATE"].Equals("YESTERDAY")) {
-						step.Data = "TeamSport_PastEvent";
+				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+					DataManager.CaptureMap.Add("GAME", step.Data);
+					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
+					if (games > 0) {
+						step.Data = "TeamSport_FutureEvent";
 					}
 					else {
-						step.Data = "TeamSport_LiveEvent";
+						status = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
+						if (status.Equals("POSTPONED")) {
+							step.Data = "TeamSport_PostponedEvent";
+						}
+						else if (status.Contains("FINAL")) {
+							step.Data = "TeamSport_PastEvent";
+						}
+						else {
+							step.Data = "TeamSport_LiveEvent";
+						}
 					}
 				}
 				else {

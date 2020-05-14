@@ -12,6 +12,6 @@
 		{"page":"Scores", "name":"Is Sport In-Season?", "data": "MLB"},
 		{"page":"Scores", "name":"Verify MLB Date"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"Scores", "name":"Verify MLB Event"}
+		{"page":"Scores", "name":"Verify MLB Event", "data": "1"}
 	]
 }
