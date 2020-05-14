@@ -9,7 +9,8 @@
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click MLB"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "MLB"},
-		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "TODAY"},
+		{"page":"Scores", "name":"Is Sport In-Season?", "data": "MLB"},
+		{"page":"Scores", "name":"Verify MLB Date"},
 		{"page":"Scores", "name":"Click Open Calendar"}
 	]
 }
