@@ -20,10 +20,12 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
+			bool in_season = false;
 			
 			if (step.Name.Equals("Verify MLB Date")) {
 				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
-					if(bool.Parse(DataManager.CaptureMap["IN_SEASON"])) {
+					in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
+					if(in_season) {
 						TimeSpan time = DateTime.UtcNow.TimeOfDay;
 						int now = time.Hours;
 						int et = now - 4;
@@ -35,7 +37,7 @@ namespace SeleniumProject.Function
 							log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 							step.Data = "TODAY";
 						}
-							CaptureMap.DataManager.Add("MLB_DATE", step.Data);				
+							DataManager.CaptureMap.Add("MLB_DATE", step.Data);				
 					}
 					else {
 						step.Data = "WORLD SERIES";
