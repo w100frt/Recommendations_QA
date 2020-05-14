@@ -34,7 +34,8 @@ namespace SeleniumProject.Function
 						else {
 							log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 							step.Data = "TODAY";
-						} 					
+						}
+							CaptureMap.DataManager.Add("MLB_DATE", step.Data);				
 					}
 					else {
 						step.Data = "WORLD SERIES";
@@ -45,6 +46,23 @@ namespace SeleniumProject.Function
 					log.Warn("No IN_SEASON variable available. Using data.");
 				}
 				steps.Add(new TestStep(order, "Verify Displayed Day on MLB", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if ("Verify MLB Event") {
+				if(DataManager.CaptureMap.ContainsKey("IN_SEASON") && DataManager.CaptureMap.ContainsKey("MLB_DATE")) {
+					if(DataManager.CaptureMap["MLB_DATE"].Equals("YESTERDAY")) {
+						step.Data = "TeamSport_PastEvent";
+					}
+					else {
+						step.Data = "TeamSport_LiveEvent";
+					}
+				}
+				else {
+					log.Warn("No IN_SEASON variable available. Using data.");
+				}
+				steps.Add(new TestStep(order, "Run Event Template", step.Data, "run_template", "xpath", "", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
