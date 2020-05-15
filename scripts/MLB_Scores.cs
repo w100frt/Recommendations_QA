@@ -88,7 +88,7 @@ namespace SeleniumProject.Function
 				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
 				date = driver.FindElement("xpath", status).Text;
 				DataManager.CaptureMap.Add("CURRENT", date);
-				
+				log.Info("Current Day: " + date);
 				if (date.Equals("TODAY")) {
 					DataManager.CaptureMap.Add("PREVIOUS", "YESTERDAY");
 				}
@@ -108,6 +108,7 @@ namespace SeleniumProject.Function
 					js.ExecuteScript("window.scrollBy({top: -100,left: 0,behavior: 'smooth'});");
 					log.Info("Scrolling up on page...");
 					date = driver.FindElement("xpath", status).Text;
+					log.Info("Current Day: " + date);
 					log.Info(scrolls + " scrolls until limit is reached");
 				} while (!date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
 			}
