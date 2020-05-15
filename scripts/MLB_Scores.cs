@@ -26,7 +26,7 @@ namespace SeleniumProject.Function
 			string status = "";
 			string date = "";
 			
-			if (step.Name.Equals("Verify MLB Date")) {
+			if (step.Name.Equals("Verify MLB Date") || !String.IsNullOrEmpty(step.Data)) {
 				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
 					if(in_season) {
@@ -48,7 +48,7 @@ namespace SeleniumProject.Function
 				}
 				
 				else {
-					log.Warn("No IN_SEASON variable available. Using data.");
+					log.Warn("No IN_SEASON variable available or data is populated. Using data.");
 				}
 				steps.Add(new TestStep(order, "Verify Displayed Day on MLB", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
