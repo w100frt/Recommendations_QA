@@ -22,7 +22,9 @@ namespace SeleniumProject.Function
 			Random random = new Random();
 			bool in_season = false;
 			int games = 0;
+			int scrolls = 20;
 			string status = "";
+			string date = "";
 			
 			if (step.Name.Equals("Verify MLB Date")) {
 				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
@@ -81,6 +83,35 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
+			
+			else if(step.Name.Equals("Scroll Back One Day")) {
+				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
+				date = driver.FindElement("xpath", status).Text;
+				DataManager.CaptureMap.Add("CURRENT", date);
+				
+				if (DataManager.CaptureMap["CURRENT"].Equals("TODAY")) {
+					DataManager.CaptureMap.Add("PREVIOUS", "YESTERDAY");
+				}
+				else if (DataManager.CaptureMap["CURRENT"].Equals("YESTERDAY") {
+					var today = DateTime.Now;
+					var yesterday = today.AddDays(-1);
+					DataManager.CaptureMap.Add("PREVIOUS", yesterday.ToString("ddd, MMM dd").ToUpper());
+				}
+				else {
+					var num = date.Substring(10);
+					num = num--;
+					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
+					DataManager.CaptureMap.Add("PREVIOUS", old.ToString("ddd, MMM dd").ToUpper());
+				}
+			
+				do {
+					js.ExecuteScript("window.scrollBy({top: -100,left: 0,behavior: 'smooth'});");
+					log.Info("Scrolling up on page...");
+					date = driver.FindElement("xpath", status).Text;
+					log.Info(scrolls + " scrolls until limit is reached");
+				} while (!date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
+			}
+			
 			
 			else {
 				throw new Exception("Test Step not found in script");

@@ -21,6 +21,7 @@
 		{"name":"Is Sport In-Season?","objectType":"script","by":"xpath","objectId":"Seasons"},
 		{"name":"Verify MLB Date","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
 		{"name":"Verify MLB Event","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
+		{"name":"Scroll Back One Day","objectType":"script","by":"xpath","objectId":"MLB_Scores"},		
 		{"name":"Scroll Top Scores Page to Yesterday","objectType":"script","by":"xpath","objectId":"Scores"},		
 		{"name":"Scroll Top Scores Page Down to Today","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Scroll Top Scores Page to Tomorrow","objectType":"script","by":"xpath","objectId":"Scores"},
