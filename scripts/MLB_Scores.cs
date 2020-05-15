@@ -26,8 +26,8 @@ namespace SeleniumProject.Function
 			string status = "";
 			string date = "";
 			
-			if (step.Name.Equals("Verify MLB Date") || !String.IsNullOrEmpty(step.Data)) {
-				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+			if (step.Name.Equals("Verify MLB Date")) {
+				if(DataManager.CaptureMap.ContainsKey("IN_SEASON") || !String.IsNullOrEmpty(step.Data)) {
 					in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
 					if(in_season) {
 						TimeSpan time = DateTime.UtcNow.TimeOfDay;
