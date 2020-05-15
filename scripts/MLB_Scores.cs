@@ -110,7 +110,7 @@ namespace SeleniumProject.Function
 					date = driver.FindElement("xpath", status).Text;
 					log.Info("Current Day: " + date);
 					log.Info(scrolls + " scrolls until limit is reached");
-				} while (!date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
+				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
 			}
 			
 			
