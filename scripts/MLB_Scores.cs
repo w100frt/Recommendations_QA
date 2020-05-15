@@ -56,7 +56,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify MLB Event")) {
-				if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+				if (DataManager.CaptureMap.ContainsKey("IN_SEASON") || !String.IsNullOrEmpty(step.Data)) {
 					DataManager.CaptureMap.Add("GAME", step.Data);
 					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
 					if (games > 0) {
@@ -77,7 +77,7 @@ namespace SeleniumProject.Function
 					}
 				}
 				else {
-					log.Warn("No IN_SEASON variable available. Using data.");
+					log.Warn("No IN_SEASON variable available or data is populated. Using data.");
 				}
 				steps.Add(new TestStep(order, "Run Event Template", step.Data, "run_template", "xpath", "", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
@@ -94,7 +94,7 @@ namespace SeleniumProject.Function
 				}
 				else if (date.Equals("YESTERDAY")) {
 					var today = DateTime.Now;
-					var yesterday = today.AddDays(-1);
+					var yesterday = today.AddDays(-2);
 					DataManager.CaptureMap.Add("PREVIOUS", yesterday.ToString("ddd, MMM dd").ToUpper());
 				}
 				else {
