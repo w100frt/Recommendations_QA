@@ -89,16 +89,16 @@ namespace SeleniumProject.Function
 				date = driver.FindElement("xpath", status).Text;
 				DataManager.CaptureMap.Add("CURRENT", date);
 				
-				if (DataManager.CaptureMap["CURRENT"].Equals("TODAY")) {
+				if (date.Equals("TODAY")) {
 					DataManager.CaptureMap.Add("PREVIOUS", "YESTERDAY");
 				}
-				else if (DataManager.CaptureMap["CURRENT"].Equals("YESTERDAY")) {
+				else if (date.Equals("YESTERDAY")) {
 					var today = DateTime.Now;
 					var yesterday = today.AddDays(-1);
 					DataManager.CaptureMap.Add("PREVIOUS", yesterday.ToString("ddd, MMM dd").ToUpper());
 				}
 				else {
-					var num = date.Substring(10);
+					var num = int.Parse(date.Substring(10));
 					num = num--;
 					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
 					DataManager.CaptureMap.Add("PREVIOUS", old.ToString("ddd, MMM dd").ToUpper());
