@@ -92,7 +92,7 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap["CURRENT"].Equals("TODAY")) {
 					DataManager.CaptureMap.Add("PREVIOUS", "YESTERDAY");
 				}
-				else if (DataManager.CaptureMap["CURRENT"].Equals("YESTERDAY") {
+				else if (DataManager.CaptureMap["CURRENT"].Equals("YESTERDAY")) {
 					var today = DateTime.Now;
 					var yesterday = today.AddDays(-1);
 					DataManager.CaptureMap.Add("PREVIOUS", yesterday.ToString("ddd, MMM dd").ToUpper());
