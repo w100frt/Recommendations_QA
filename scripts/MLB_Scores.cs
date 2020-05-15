@@ -27,36 +27,38 @@ namespace SeleniumProject.Function
 			string date = "";
 			
 			if (step.Name.Equals("Verify MLB Date")) {
-				if(DataManager.CaptureMap.ContainsKey("IN_SEASON") || !String.IsNullOrEmpty(step.Data)) {
-					in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
-					if(in_season) {
-						TimeSpan time = DateTime.UtcNow.TimeOfDay;
-						int now = time.Hours;
-						int et = now - 4;
-						if (et >= 0 && et < 11){
-							log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
-							step.Data = "YESTERDAY";
+				if (String.IsNullOrEmpty(step.Data)) {
+					if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+						in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
+						if(in_season) {
+							TimeSpan time = DateTime.UtcNow.TimeOfDay;
+							int now = time.Hours;
+							int et = now - 4;
+							if (et >= 0 && et < 11){
+								log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+								step.Data = "YESTERDAY";
+							}
+							else {
+								log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+								step.Data = "TODAY";
+							}				
 						}
 						else {
-							log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
-							step.Data = "TODAY";
-						}				
+							step.Data = "WORLD SERIES";
+						}
 					}
 					else {
-						step.Data = "WORLD SERIES";
+						log.Warn("No IN_SEASON variable available.");
 					}
 				}
-				
-				else {
-					log.Warn("No IN_SEASON variable available or data is populated. Using data.");
-				}
+
 				steps.Add(new TestStep(order, "Verify Displayed Day on MLB", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
 			
 			else if (step.Name.Equals("Verify MLB Event")) {
-				if (DataManager.CaptureMap.ContainsKey("IN_SEASON") || !String.IsNullOrEmpty(step.Data)) {
+				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					DataManager.CaptureMap.Add("GAME", step.Data);
 					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
 					if (games > 0) {
@@ -79,6 +81,7 @@ namespace SeleniumProject.Function
 				else {
 					log.Warn("No IN_SEASON variable available or data is populated. Using data.");
 				}
+				
 				steps.Add(new TestStep(order, "Run Event Template", step.Data, "run_template", "xpath", "", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
