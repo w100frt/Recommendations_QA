@@ -40,7 +40,7 @@
 		{"name":"Verify Displayed Group Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
 		{"name":"Verify FOX Bet Logo on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//span[@alt='fox-bet']"},
 		{"name":"Verify League Title on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
-		{"name":"Verify Number of Score Sections","objectType":"verify_count","by": "xpath", "objectId":"//div[contains(@class,'score-section')]"},
+		{"name":"Verify Number of Score Sections","objectType":"script","by": "xpath", "objectId":"Scores"},
 		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"},
 		{"name":"Verify Selected Category","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Selected Date","objectType":"script","by":"xpath","objectId":"Scores"},
