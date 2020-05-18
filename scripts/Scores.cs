@@ -313,7 +313,7 @@ namespace SeleniumProject.Function
 				title = "//div[contains(@class,'score-section')]";
 				size = driver.FindElements("xpath", title).Count;
 				log.Info("Storing number of Scores sections displayed: " + size);
-				DataManager.CaptureMap.Add("SCORE_SECTIONS", size);
+				DataManager.CaptureMap.Add("SCORE_SECTIONS", size.ToString());
 			}
 			
 			else if (step.Name.Equals("Verify Number of Score Sections")) {
@@ -321,7 +321,7 @@ namespace SeleniumProject.Function
 					stop = int.TryParse(DataManager.CaptureMap["SCORE_SECTIONS"], out size);
 					stop = int.TryParse(step.Data.Substring(step.Data.IndexOf("+") + 1), out variable);
 					size = size + variable;
-					step.Data = size;
+					step.Data = size.ToString();
 				}
 				steps.Add(new TestStep(order, "Verify Sections", step.Data, "verify_count", "xpath", "//div[contains(@class,'score-section')]", ""));
 				TestRunner.RunTestSteps(driver, null, steps);
