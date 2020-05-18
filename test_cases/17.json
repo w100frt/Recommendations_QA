@@ -9,7 +9,16 @@
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click MLB"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "MLB"},
-		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "TODAY"},
-		{"page":"Scores", "name":"Click Open Calendar"}
+		{"page":"Scores", "name":"Is Sport In-Season?", "data": "MLB"},
+		{"page":"Scores", "name":"Verify MLB Date"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Verify MLB Event", "data": "1"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click MLB"},
+		{"page":"Scores", "name":"Store Current Number of Score Sections"},
+		{"page":"Scores", "name":"Scroll Back One Day"},
+		{"page":"Scores", "name":"Verify MLB Date", "data":"#PREVIOUS"},
+		{"page":"Scores", "name":"Verify Number of Score Sections", "data":"+1"},
+		{"page":"Scores", "name":"Verify MLB Event", "data": "1"}
 	]
 }
