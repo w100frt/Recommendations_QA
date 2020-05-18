@@ -59,7 +59,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify MLB Event")) {
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
-					if(!String.IsNullOrEmpty(DataManager.CaptureMap["GAME"])) {
+					if(DataManager.CaptureMap.ContainsKey("GAME")) {
 						DataManager.CaptureMap["GAME"] = step.Data;
 					}
 					else {
