@@ -59,11 +59,11 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify MLB Event")) {
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
-					if(String.IsNullOrEmpty(DataManager.CaptureMap["GAME"])) {
-						DataManager.CaptureMap.Add("GAME", step.Data);
+					if(!String.IsNullOrEmpty(DataManager.CaptureMap["GAME"])) {
+						DataManager.CaptureMap["GAME"] = step.Data;
 					}
 					else {
-						DataManager.CaptureMap["GAME"] = step.Data;
+						DataManager.CaptureMap.Add("GAME", step.Data);
 					}
 					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
 					if (games > 0) {
