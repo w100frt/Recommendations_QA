@@ -19,6 +19,7 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			int size;
+			int variable;
 			int scrolls = 20;
 			int months = 0;
 			int year = 0;
@@ -304,6 +305,25 @@ namespace SeleniumProject.Function
 					data = DataManager.CaptureMap["WEEK"].Trim() + " - THU, " + data.Trim();
 				}
 				steps.Add(new TestStep(order, "Selected Date Check", data, "verify_value", "xpath", "//button[contains(@class,'date-picker-title') or contains(@class,'dropdown-title')]", "5"));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
+			}
+			
+			else if (step.Name.Equals("Store Current Number of Score Sections")) {
+				title = "//div[contains(@class,'score-section')]";
+				size = driver.FindElements("xpath", title).Count;
+				log.Info("Storing number of Scores sections displayed: " + size);
+				DataManager.CaptureMap.Add("SCORE_SECTIONS", size);
+			}
+			
+			else if (step.Name.Equals("Verify Number of Score Sections")) {
+				if (DataManager.CaptureMap.ContainsKey("SCORE_SECTIONS") && step.Data.Contains("+")) {
+					stop = int.TryParse(DataManager.CaptureMap["SCORE_SECTIONS"], out size);
+					stop = int.TryParse(step.Data.Substring(step.Data.IndexOf("+") + 1), out variable);
+					size = size + variable;
+					step.Data = size;
+				}
+				steps.Add(new TestStep(order, "Verify Sections", step.Data, "verify_count", "xpath", "//div[contains(@class,'score-section')]", ""));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
 			}

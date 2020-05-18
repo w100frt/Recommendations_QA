@@ -15,7 +15,9 @@
 		{"page":"Scores", "name":"Verify MLB Event", "data": "1"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click MLB"},
+		{"page":"Scores", "name":"Store Current Number of Score Sections"},
 		{"page":"Scores", "name":"Scroll Back One Day"},
-		{"page":"Scores", "name":"Verify MLB Date", "data":"#PREVIOUS"}
+		{"page":"Scores", "name":"Verify MLB Date", "data":"#PREVIOUS"},
+		{"page":"Scores", "name":"Verify MLB Event", "data": "1"}
 	]
 }
