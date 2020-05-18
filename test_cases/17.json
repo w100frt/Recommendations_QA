@@ -18,6 +18,7 @@
 		{"page":"Scores", "name":"Store Current Number of Score Sections"},
 		{"page":"Scores", "name":"Scroll Back One Day"},
 		{"page":"Scores", "name":"Verify MLB Date", "data":"#PREVIOUS"},
+		{"page":"Scores", "name":"Verify Number of Score Sections", "data":"+1"},
 		{"page":"Scores", "name":"Verify MLB Event", "data": "1"}
 	]
 }
