@@ -59,12 +59,8 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify MLB Event")) {
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
-					if(DataManager.CaptureMap.ContainsKey("GAME")) {
-						DataManager.CaptureMap["GAME"] = step.Data;
-					}
-					else {
-						DataManager.CaptureMap.Add("GAME", step.Data);
-					}
+					DataManager.CaptureMap["GAME"] = step.Data;
+
 					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
 					if (games > 0) {
 						step.Data = "TeamSport_FutureEvent";
@@ -95,26 +91,21 @@ namespace SeleniumProject.Function
 			else if(step.Name.Equals("Scroll Back One Day")) {
 				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
 				date = driver.FindElement("xpath", status).Text;
-				if(DataManager.CaptureMap.ContainsKey("CURRENT")) {
-					DataManager.CaptureMap["CURRENT"] = date;
-				}
-				else {
-					DataManager.CaptureMap.Add("CURRENT", date);
-				}
+				DataManager.CaptureMap["CURRENT"] = date;
 				log.Info("Current Day: " + date);
 				if (date.Equals("TODAY")) {
-					DataManager.CaptureMap.Add("PREVIOUS", "YESTERDAY");
+					DataManager.CaptureMap["PREVIOUS"] = "YESTERDAY";
 				}
 				else if (date.Equals("YESTERDAY")) {
 					var today = DateTime.Now;
 					var yesterday = today.AddDays(-2);
-					DataManager.CaptureMap.Add("PREVIOUS", yesterday.ToString("ddd, MMM dd").ToUpper());
+					DataManager.CaptureMap["PREVIOUS"] = yesterday.ToString("ddd, MMM dd").ToUpper();
 				}
 				else {
 					var num = int.Parse(date.Substring(10));
 					num = num--;
 					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
-					DataManager.CaptureMap.Add("PREVIOUS", old.ToString("ddd, MMM dd").ToUpper());
+					DataManager.CaptureMap["PREVIOUS"] = old.ToString("ddd, MMM dd").ToUpper();
 				}
 			
 				do {
@@ -125,37 +116,32 @@ namespace SeleniumProject.Function
 					log.Info(scrolls + " scrolls until limit is reached");
 				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
 				
-				if(!DataManager.CaptureMap.ContainsKey("SCROLLED")) {
-					DataManager.CaptureMap.Add("SCROLLED","YES");
-				}
+				DataManager.CaptureMap["SCROLLED"] = "YES";
+				
 			}
 			
 			else if(step.Name.Equals("Scroll Forward One Day")) {
 				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
 				date = driver.FindElement("xpath", status).Text;
-				if(DataManager.CaptureMap.ContainsKey("CURRENT")) {
-					DataManager.CaptureMap["CURRENT"] = date;
-				}
-				else {
-					DataManager.CaptureMap.Add("CURRENT", date);
-				}
+				DataManager.CaptureMap["CURRENT"] = date;
+
 				log.Info("Current Day: " + date);
 				if (date.Equals("TODAY")) {
-					DataManager.CaptureMap.Add("NEXT", "TOMORROW");
+					DataManager.CaptureMap["NEXT"] = "TOMORROW";
 				}
 				else if (date.Equals("YESTERDAY")) {
-					DataManager.CaptureMap.Add("NEXT", "TODAY");
+					DataManager.CaptureMap["NEXT"] = "TODAY";
 				}
 				else if (date.Equals("TOMORROW")) {
 					var today = DateTime.Now;
 					var yesterday = today.AddDays(2);
-					DataManager.CaptureMap.Add("NEXT", yesterday.ToString("ddd, MMM dd").ToUpper());
+					DataManager.CaptureMap["NEXT"] = yesterday.ToString("ddd, MMM dd").ToUpper();
 				}
 				else {
 					var num = int.Parse(date.Substring(10));
 					num = num++;
 					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
-					DataManager.CaptureMap.Add("PREVIOUS", old.ToString("ddd, MMM dd").ToUpper());
+					DataManager.CaptureMap["NEXT"] = old.ToString("ddd, MMM dd").ToUpper();
 				}
 			
 				do {
@@ -165,10 +151,8 @@ namespace SeleniumProject.Function
 					log.Info("Current Day: " + date);
 					log.Info(scrolls + " scrolls until limit is reached");
 				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
-				
-				if(!DataManager.CaptureMap.ContainsKey("SCROLLED")) {
-					DataManager.CaptureMap.Add("SCROLLED","YES");
-				}
+					
+				DataManager.CaptureMap["SCROLLED"] = "YES";
 			}
 			
 			
