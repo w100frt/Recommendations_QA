@@ -66,6 +66,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					DataManager.CaptureMap.Add("SCROLLED","YES");
 				}
 				else {
 					log.Info("Page defaulted to YESTERDAY");
@@ -89,6 +90,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					DataManager.CaptureMap.Add("SCROLLED","YES");
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -112,6 +114,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					DataManager.CaptureMap.Add("SCROLLED","YES");
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
@@ -153,19 +156,25 @@ namespace SeleniumProject.Function
 			
 			else if(step.Name.Equals("Click Scorechip By Number")) {
 				data = step.Data;
-				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "(//a[@class='score-chip'])["+ data +"]", wait));
+				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
+					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
+				}
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[@class='score-chip']["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
 			
 			else if(step.Name.Equals("Capture Team Info from Chip")) {
 				data = step.Data;
-				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
-				//steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
-				//steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "((//a[@class='score-chip'])["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
+				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
+					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
+				}
+				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
+				//steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
+				//steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
@@ -234,7 +243,10 @@ namespace SeleniumProject.Function
 
 					steps.Add(new TestStep(order, "Click " + data, "", "click", "xpath", xpath, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();					
+					steps.Clear();
+				}
+				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
+					DataManager.CaptureMap.Remove("SCROLLED");	
 				}
 			}
 			
@@ -313,7 +325,12 @@ namespace SeleniumProject.Function
 				title = "//div[contains(@class,'score-section')]";
 				size = driver.FindElements("xpath", title).Count;
 				log.Info("Storing number of Scores sections displayed: " + size);
-				DataManager.CaptureMap.Add("SCORE_SECTIONS", size.ToString());
+				if (DataManager.CaptureMap.ContainsKey("SCORE_SECTIONS")) {
+					DataManager.CaptureMap["SCORE_SECTIONS"] = size.ToString();
+				}
+				else {
+					DataManager.CaptureMap.Add("SCORE_SECTIONS", size.ToString());
+				}
 			}
 			
 			else if (step.Name.Equals("Verify Number of Score Sections")) {
