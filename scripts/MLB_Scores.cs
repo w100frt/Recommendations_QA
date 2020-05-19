@@ -95,7 +95,12 @@ namespace SeleniumProject.Function
 			else if(step.Name.Equals("Scroll Back One Day")) {
 				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
 				date = driver.FindElement("xpath", status).Text;
-				DataManager.CaptureMap.Add("CURRENT", date);
+				if(DataManager.CaptureMap.ContainsKey("CURRENT")) {
+					DataManager.CaptureMap["CURRENT"] = date;
+				}
+				else {
+					DataManager.CaptureMap.Add("CURRENT", date);
+				}
 				log.Info("Current Day: " + date);
 				if (date.Equals("TODAY")) {
 					DataManager.CaptureMap.Add("PREVIOUS", "YESTERDAY");
@@ -126,7 +131,12 @@ namespace SeleniumProject.Function
 			else if(step.Name.Equals("Scroll Forward One Day")) {
 				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
 				date = driver.FindElement("xpath", status).Text;
-				DataManager.CaptureMap.Add("CURRENT", date);
+				if(DataManager.CaptureMap.ContainsKey("CURRENT")) {
+					DataManager.CaptureMap["CURRENT"] = date;
+				}
+				else {
+					DataManager.CaptureMap.Add("CURRENT", date);
+				}
 				log.Info("Current Day: " + date);
 				if (date.Equals("TODAY")) {
 					DataManager.CaptureMap.Add("NEXT", "TOMORROW");

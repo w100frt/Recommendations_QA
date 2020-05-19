@@ -158,6 +158,7 @@ namespace SeleniumProject.Function
 				data = step.Data;
 				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
 					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
+					DataManager.CaptureMap.Remove("SCROLLED");
 				}
 				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[@class='score-chip']["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
