@@ -66,6 +66,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					DataManager.CaptureMap.Add("SCROLLED","YES");
 				}
 				else {
 					log.Info("Page defaulted to YESTERDAY");
@@ -89,6 +90,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					DataManager.CaptureMap.Add("SCROLLED","YES");
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -112,6 +114,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+					DataManager.CaptureMap.Add("SCROLLED","YES");
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
@@ -153,7 +156,10 @@ namespace SeleniumProject.Function
 			
 			else if(step.Name.Equals("Click Scorechip By Number")) {
 				data = step.Data;
-				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "(//a[@class='score-chip'])["+ data +"]", wait));
+				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
+					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
+				}
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[@class='score-chip']["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
