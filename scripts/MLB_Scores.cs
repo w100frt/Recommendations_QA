@@ -125,7 +125,9 @@ namespace SeleniumProject.Function
 					log.Info(scrolls + " scrolls until limit is reached");
 				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
 				
-				DataManager.CaptureMap.Add("SCROLLED","YES");
+				if(!DataManager.CaptureMap.ContainsKey("SCROLLED")) {
+					DataManager.CaptureMap.Add("SCROLLED","YES");
+				}
 			}
 			
 			else if(step.Name.Equals("Scroll Forward One Day")) {
@@ -164,7 +166,9 @@ namespace SeleniumProject.Function
 					log.Info(scrolls + " scrolls until limit is reached");
 				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
 				
-				DataManager.CaptureMap.Add("SCROLLED","YES");
+				if(!DataManager.CaptureMap.ContainsKey("SCROLLED")) {
+					DataManager.CaptureMap.Add("SCROLLED","YES");
+				}
 			}
 			
 			
