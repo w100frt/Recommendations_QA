@@ -319,7 +319,12 @@ namespace SeleniumProject.Function
 				title = "//div[contains(@class,'score-section')]";
 				size = driver.FindElements("xpath", title).Count;
 				log.Info("Storing number of Scores sections displayed: " + size);
-				DataManager.CaptureMap.Add("SCORE_SECTIONS", size.ToString());
+				if (DataManager.CaptureMap.ContainsKey("SCORE_SECTIONS") {
+					DataManager.CaptureMap["SCORE_SECTIONS"] = size.ToString();
+				}
+				else {
+					DataManager.CaptureMap.Add("SCORE_SECTIONS", size.ToString());
+				}
 			}
 			
 			else if (step.Name.Equals("Verify Number of Score Sections")) {

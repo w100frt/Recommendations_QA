@@ -123,6 +123,40 @@ namespace SeleniumProject.Function
 				DataManager.CaptureMap.Add("SCROLLED","YES");
 			}
 			
+			else if(step.Name.Equals("Scroll Forward One Day")) {
+				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
+				date = driver.FindElement("xpath", status).Text;
+				DataManager.CaptureMap.Add("CURRENT", date);
+				log.Info("Current Day: " + date);
+				if (date.Equals("TODAY")) {
+					DataManager.CaptureMap.Add("NEXT", "TOMORROW");
+				}
+				else if (date.Equals("YESTERDAY")) {
+					DataManager.CaptureMap.Add("NEXT", "TODAY");
+				}
+				else if (date.Equals("TOMORROW")) {
+					var today = DateTime.Now;
+					var yesterday = today.AddDays(2);
+					DataManager.CaptureMap.Add("NEXT", yesterday.ToString("ddd, MMM dd").ToUpper());
+				}
+				else {
+					var num = int.Parse(date.Substring(10));
+					num = num++;
+					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
+					DataManager.CaptureMap.Add("PREVIOUS", old.ToString("ddd, MMM dd").ToUpper());
+				}
+			
+				do {
+					js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
+					log.Info("Scrolling down on page...");
+					date = driver.FindElement("xpath", status).Text;
+					log.Info("Current Day: " + date);
+					log.Info(scrolls + " scrolls until limit is reached");
+				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
+				
+				DataManager.CaptureMap.Add("SCROLLED","YES");
+			}
+			
 			
 			else {
 				throw new Exception("Test Step not found in script");
