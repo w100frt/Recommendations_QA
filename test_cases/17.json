@@ -37,5 +37,7 @@
 		{"page":"Scores", "name":"Verify Calendar is Displayed"},
 		{"page":"Scores", "name":"Click MLB"},
 		{"page":"Scores", "name":"Scroll Forward One Day"},
+		{"page":"Scores", "name":"Click Open Calendar"},
+		{"page":"Scores", "name":"Verify Calendar is Displayed"}
 	]
 }
