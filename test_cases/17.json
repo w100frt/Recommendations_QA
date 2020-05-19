@@ -19,6 +19,15 @@
 		{"page":"Scores", "name":"Scroll Back One Day"},
 		{"page":"Scores", "name":"Verify MLB Date", "data":"#PREVIOUS"},
 		{"page":"Scores", "name":"Verify Number of Score Sections", "data":"+1"},
-		{"page":"Scores", "name":"Verify MLB Event", "data": "1"}
+		{"page":"Scores", "name":"Verify MLB Event", "data": "1"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click MLB"},
+		{"page":"Scores", "name":"Click Open Calendar"},
+		{"page":"Scores", "name":"Verify Calendar is Displayed"},
+		{"page":"Scores", "name":"Click MLB"},
+		{"page":"Scores", "name":"Scroll Back One Day"},
+		{"page":"Scores", "name":"Click Open Calendar"},
+		{"page":"Scores", "name":"Verify Calendar is Displayed"},
+		{"page":"Scores", "name":"Click MLB"}
 	]
 }
