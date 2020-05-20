@@ -38,6 +38,9 @@
 		{"page":"Scores", "name":"Click MLB"},
 		{"page":"Scores", "name":"Scroll Forward One Day"},
 		{"page":"Scores", "name":"Click Open Calendar"},
-		{"page":"Scores", "name":"Verify Calendar is Displayed"}
+		{"page":"Scores", "name":"Verify Calendar is Displayed"},
+		{"page":"Scores", "name":"Select Regular Season MLB Date"},
+		{"page":"Scores", "name":"Verify Selected Date", "data":"MLB"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"}
 	]
 }
