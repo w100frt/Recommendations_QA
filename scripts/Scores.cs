@@ -188,40 +188,40 @@ namespace SeleniumProject.Function
 				}
 				switch (data) {
 					case "NBA" : 
-						xpath = "//a[span[contains(.,'NBA')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NBA')]";
 						break;
 					case "NCAA BK" : 
-						xpath = "//a[span[contains(.,'NCAA BK')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NCAA BK')]";
 						break;
 					case "MLB" :
-						xpath = "//a[span[contains(.,'MLB')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'MLB')]";
 						break;
 					case "NASCAR" : 
-						xpath = "//a[span[contains(.,'NASCAR')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NASCAR')]";
 						break;
 					case "Soccer" :
 					case "SOCCER" :
-						xpath = "//a[span[contains(.,'SOCCER')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'SOCCER')]";
 						break;
 					case "NHL" : 
-						xpath = "//a[span[contains(.,'NHL')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NHL')]";
 						break;
 					case "Boxing" : 
 					case "BOXING" :
-						xpath = "//a[span[contains(.,'BOXING')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'BOXING')]";
 						break;
 					case "NCAA FB" :
-						xpath = "//a[span[contains(.,'NCAA FB')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NCAA FB')]";
 						break;
 					case "NFL" :
-						xpath = "//a[span[contains(.,'NFL')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NFL')]";
 						break;
 					case "Golf" :
 					case "GOLF" :
-						xpath = "//a[span[contains(.,'GOLF')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'GOLF')]";
 						break;
 					default: 
-						xpath = "//a[span[contains(.,'TOP')]]";
+						xpath = "//div[contains(@class,'desktop')]//a[contains(.,'TOP')]";
 						break;
 				}
 				
@@ -232,13 +232,13 @@ namespace SeleniumProject.Function
 						step.Data = "MORE";
 					}
 
-					steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[@id='nav-secondary']//a[contains(@class,'selected')]", wait));
+					steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'selected')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
 				else {
 					if (!stop) {
-						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//a[span[contains(.,'MORE')]]", wait));
+						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'more-button')]", wait));
 					}
 
 					steps.Add(new TestStep(order, "Click " + data, "", "click", "xpath", xpath, wait));
