@@ -1,11 +1,13 @@
 ﻿{
 	"page":"Entity",
 	"testDefinitions":[
+		{"name":"Click Add or Remove Favorite Button","objectType":"click","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'news')][span[contains(.,'NEWS')]]"},
 		{"name":"Click Scores Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'scores')][span[contains(.,'SCORES')]]""},
 		{"name":"Click Standings Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'standings')][span[contains(.,'STANDINGS')]]"},
 		{"name":"Click Social Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'social')][span[contains(.,'SOCIAL')]]"},
 		{"name":"Click Teams Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'teams')][span[contains(.,'TEAMS')]]"},
-		{"name":"Click Roster Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'roster')][span[contains(.,'ROSTER')]]"}
+		{"name":"Click Roster Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'roster')][span[contains(.,'ROSTER')]]"},
+		{"name":"Verify Add or Remove Favorite Button Text","objectType":"verify_value","by":"xpath","objectId":"//button[@data-favorite-text]"},{"name":"Verify Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
 	]
 }
