@@ -158,7 +158,7 @@ namespace SeleniumProject.Function
 				DataManager.CaptureMap["SCROLLED"] = "YES";
 			}
 			
-			if (step.Name.Equals("Select Regular Season MLB Date")) {
+			else if (step.Name.Equals("Select Regular Season MLB Date")) {
 				string[] regularSeason = new string[] {"February", "March", "April", "May", "June", "July", "August", "September"};
 				string[] choice = new string[] {"Left", "Right"};
 				DateTime now = DateTime.Now;
