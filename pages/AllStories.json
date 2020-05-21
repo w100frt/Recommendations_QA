@@ -3,7 +3,7 @@
 	"testDefinitions":[
 		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[@class='date-picker']"},
 		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='qs-datepicker-container']"},
-		{"name":"Verify Secondary Nav is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@id='nav-secondary']"},
+		{"name":"Verify Secondary Nav is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'subnav-container-')]"},
 		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/stories' and @class='nav-item']//div[@class='nav-item-bar active-nav']"},	
 		{"name":"Verify Stories Content","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'stories-content')]"}
 	]
