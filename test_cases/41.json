@@ -1,0 +1,16 @@
+﻿{
+	"testCase":"Entity Smoke Test",
+	"env":"dev",
+	"testId":"41",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click Sports"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "NATIONAL FOOTBALL LEAGUE"},
+		{"page":"Navigation","name":"Run Template", "data":"Entity_ProLeague"}
+	]
+}
