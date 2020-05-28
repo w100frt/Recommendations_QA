@@ -25,7 +25,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click Arrow Forward", "", "click", "xpath", "//button[@class='carousel-button-next image-button']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();	
-					eleCount = driver.FindElements("xpath", "//div[contains(@class,'carousel-container card-carousel') and contains(@class,'can-scroll-right')]").Count;			
+					eleCount = driver.FindElements("xpath", "//div[contains(@class,'carousel') and contains(@class,'can-scroll-right')]").Count;			
 				}
 			}
 			
