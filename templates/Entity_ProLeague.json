@@ -8,6 +8,6 @@
 		{"page":"Entity", "name":"Click Social Tab"},
 		{"page":"Entity", "name":"Click Teams Tab"},
 		{"page":"Entity", "name":"Click Stats Tab"},
-		{"page":"Entity", "name":"Click Highlights Tab"},
+		{"page":"Entity", "name":"Click Highlights Tab"}
     ]
 }
