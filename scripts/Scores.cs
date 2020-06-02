@@ -238,7 +238,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					if (!stop) {
-						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'more-button')]", wait));
+						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//div[contains(@class,'desktop')]//button[contains(@class,'more-button')]", wait));
 					}
 
 					steps.Add(new TestStep(order, "Click " + data, "", "click", "xpath", xpath, wait));
