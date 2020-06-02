@@ -230,11 +230,15 @@ namespace SeleniumProject.Function
 				if (step.Name.Equals("Verify Selected Category")) {
 					if(!stop) {
 						step.Data = "MORE";
+						steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[contains(@class,'desktop')]//button[contains(@class,'selected')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
 					}
-
-					steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'selected')]", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
+					else {
+						steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'selected')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 				}
 				else {
 					if (!stop) {
