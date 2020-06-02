@@ -10,7 +10,7 @@
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SPORTS') or contains(.,'Sports') or contains(.,'sports')]"},
 		{"name":"Click Top Search Result","objectType":"click","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]"},
 		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
-		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[@id='explore']//div[contains(@class,'explore-basic-rows')]//a"},
+		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[@id='explore']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
 		{"name":"Verify Teams by Sport","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify Top Search Result Text","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'title fs')]"},
 		{"name":"Verify Top Search Result Subtext","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'subtitle')]"}
