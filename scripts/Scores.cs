@@ -232,13 +232,13 @@ namespace SeleniumProject.Function
 						step.Data = "MORE";
 					}
 
-					steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'selected')]", wait));
+					steps.Add(new TestStep(order, "Verify Selected Tab", step.Data, "verify_value", "xpath", "//div[contains(@class,'desktop')]//*[contains(@class,'selected')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
 				else {
 					if (!stop) {
-						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//div[contains(@class,'desktop')]//a[contains(@class,'more-button')]", wait));
+						steps.Add(new TestStep(order, "Open MORE", "", "click", "xpath", "//div[contains(@class,'desktop')]//button[contains(@class,'more-button')]", wait));
 					}
 
 					steps.Add(new TestStep(order, "Click " + data, "", "click", "xpath", xpath, wait));
