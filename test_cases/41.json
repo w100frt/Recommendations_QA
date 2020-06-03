@@ -2,7 +2,7 @@
 	"testCase":"Entity Smoke Test",
 	"env":"dev",
 	"testId":"41",
-	"testRail":"",
+	"testRail":"7118364",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
