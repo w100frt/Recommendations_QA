@@ -32,7 +32,7 @@
 		{"page":"Entity", "name":"Click Stats Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"STATS"},
 		{"page":"Entity_Stats", "name":"Verify Number of Stats Headers", "data":"2"},
-		{"page":"Entity", "name":"Click Highlights Tab"}
+		{"page":"Entity", "name":"Click Highlights Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"HIGHLIGHTS"},
 		{"page":"Entity_Highlights", "name":"Verify Video is Displayed"}
 	]
