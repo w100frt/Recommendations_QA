@@ -2,7 +2,7 @@
 	"page":"Entity_Standings",
 	"testDefinitions":[
 		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'dropdown') and contains(.,'conference')]"},
-		{"name":"Verify Standings Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"}
+		{"name":"Verify Standings Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"},
 		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"}
 	]
 }
