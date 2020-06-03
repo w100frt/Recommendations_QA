@@ -11,6 +11,7 @@
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "NATIONAL FOOTBALL LEAGUE"},
+		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click News Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},
 		{"page":"Entity_News", "name":"Verify Number of Stories", "data":"100"},
