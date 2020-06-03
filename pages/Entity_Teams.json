@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity_Teams",
+	"testDefinitions":[
+		{"name":"Verify Count of Teams","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'teams-list')]//a"}
+	]
+}

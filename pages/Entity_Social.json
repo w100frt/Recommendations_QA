@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity_Social",
+	"testDefinitions":[
+		{"name":"Verify Tweet is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//*[contains(@id,'twitter-widget')]"}
+	]
+}

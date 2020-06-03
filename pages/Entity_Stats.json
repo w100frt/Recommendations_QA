@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity_Stats",
+	"testDefinitions":[
+		{"name":"Verify Number of Stats Headers","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'stats-overview-header')]"}
+	]
+}
