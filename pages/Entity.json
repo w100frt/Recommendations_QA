@@ -4,7 +4,7 @@
 		{"name":"Click Add or Remove Favorite Button","objectType":"click","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Click Highlights Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'highlights')]"},
 		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'news')]"},
-		{"name":"Click Scores Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'scores')]""},
+		{"name":"Click Scores Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'scores')]"},
 		{"name":"Click Standings Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'standings')]"},
 		{"name":"Click Stats Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'stats')]"},
 		{"name":"Click Social Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'social')]"},
@@ -12,5 +12,6 @@
 		{"name":"Click Roster Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'roster')]"},
 		{"name":"Verify Add or Remove Favorite Button Text","objectType":"verify_value","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Verify Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
+		{"name":"Verify Selected Tab Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@class,'nav-selected')]"}
 	]
 }

@@ -1,0 +1,6 @@
+﻿{
+	"page":"Entity_Highlights",
+	"testDefinitions":[
+		{"name":"Verify Video is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'pointer video')]"}
+	]
+}

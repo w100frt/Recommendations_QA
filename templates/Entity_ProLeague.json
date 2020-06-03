@@ -3,6 +3,7 @@
     "testId":"t16",
     "testSteps":[
 		{"page":"Entity", "name":"Click News Tab"},
+		{"page":"Entity_News", "name":"Verify Number of Stories", "data":"100"},
 		{"page":"Entity", "name":"Click Scores Tab"},
 		{"page":"Entity", "name":"Click Standings Tab"},
 		{"page":"Entity", "name":"Click Social Tab"},

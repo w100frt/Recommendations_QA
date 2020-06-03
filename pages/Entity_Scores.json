@@ -1,6 +1,6 @@
 ﻿{
-	"page":"Entity",
+	"page":"Entity_Scores",
 	"testDefinitions":[
-		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'news')][span[contains(.,'NEWS')]]"}
+		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"}
 	]
 }
