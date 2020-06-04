@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Scores",
 	"testDefinitions":[
+		{"name":"Capture Team Info from Chip","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Boxing","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Golf","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click MLB","objectType":"script","by":"xpath","objectId":"Scores"},
@@ -12,15 +13,12 @@
 		{"name":"Click NHL","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Soccer","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Top","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'TOP')]]"},
-		{"name":"Capture Team Info from Chip","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Calendar Arrow Left","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-left']"},
 		{"name":"Click Calendar Arrow Right","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-right']"},
 		{"name":"Click Scorechip By Number","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]"},
 		{"name":"Click Open Groups Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
 		{"name":"Is Sport In-Season?","objectType":"script","by":"xpath","objectId":"Seasons"},
-		{"name":"Verify MLB Date","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
-		{"name":"Verify MLB Event","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
 		{"name":"Scroll Back One Day","objectType":"script","by":"xpath","objectId":"MLB_Scores"},		
 		{"name":"Scroll Forward One Day","objectType":"script","by":"xpath","objectId":"MLB_Scores"},		
 		{"name":"Scroll Top Scores Page to Yesterday","objectType":"script","by":"xpath","objectId":"Scores"},		
@@ -35,17 +33,20 @@
 		{"name":"Verify Calendar is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[@class='qs-datepicker-container' or contains(@class, 'week-selector-container')]"},
 		{"name":"Verify CBK Groups","objectType":"script","by":"xpath","objectId":"CBK_Scores"},	
 		{"name":"Verify CFB Groups","objectType":"script","by":"xpath","objectId":"CFB_Scores"},
-		{"name":"Verify Golf Groups","objectType":"script","by":"xpath","objectId":"Golf_Scores"},
-		{"name":"Verify NASCAR Groups","objectType":"script","by":"xpath","objectId":"NASCAR_Scores"},
 		{"name":"Verify Date on Date Picker","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Displayed Group Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
 		{"name":"Verify FOX Bet Logo on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//span[@alt='fox-bet']"},
+		{"name":"Verify Golf Groups","objectType":"script","by":"xpath","objectId":"Golf_Scores"},
 		{"name":"Verify League Title on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
+		{"name":"Verify MLB Date","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
+		{"name":"Verify MLB Event","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
+		{"name":"Verify NASCAR Groups","objectType":"script","by":"xpath","objectId":"NASCAR_Scores"},
 		{"name":"Verify Number of Score Sections","objectType":"script","by": "xpath", "objectId":"Scores"},
 		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"},
 		{"name":"Verify Selected Category","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Selected Date","objectType":"script","by":"xpath","objectId":"Scores"},
-		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/scores' and @class='nav-item']//div[@class='nav-item-bar active-nav']"}
+		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/scores' and @class='nav-item']//div[@class='nav-item-bar active-nav']"},
+		{"name":"Verify Soccer Date","objectType":"script","by":"xpath","objectId":"Soccer_Scores"}
 	]
 }

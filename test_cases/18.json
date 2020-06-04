@@ -8,6 +8,10 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click Soccer"},
-		{"page":"Scores", "name":"Verify Selected Category", "data": "SOCCER"}
+		{"page":"Scores", "name":"Verify Selected Category", "data": "SOCCER"},
+		{"page":"Scores", "name":"Is Sport In-Season?", "data": "SOCCER"},
+		{"page":"Scores", "name":"Verify Soccer Date"},
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Scores", "name":"Verify Soccer Event", "data": "1"},
 	]
 }
