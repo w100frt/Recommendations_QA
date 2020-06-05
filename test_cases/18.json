@@ -12,6 +12,6 @@
 		{"page":"Scores", "name":"Is Sport In-Season?", "data": "SOCCER"},
 		{"page":"Scores", "name":"Verify Soccer Date"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"Scores", "name":"Verify Soccer Event", "data": "1"},
+		{"page":"Scores", "name":"Verify Soccer Event", "data": "1"}
 	]
 }
