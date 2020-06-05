@@ -64,7 +64,7 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					DataManager.CaptureMap["GAME"] = step.Data;
 
-					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
+					games = driver.FindElements("xpath", "(//a[@class='score-chip pregame'])[" + step.Data +"]").Count; 
 					if (games > 0) {
 						step.Data = "TeamSport_FutureEvent";
 						DataManager.CaptureMap["EVENT_STATUS"] = "FUTURE";
