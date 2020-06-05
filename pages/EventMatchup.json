@@ -1,0 +1,7 @@
+﻿{
+	"page":"EventMatchup",
+	"testDefinitions":[
+		{"name":"Verify Countdown Clock Within 7 Days","objectType":"script","by":"xpath","objectId":"Matchup"},
+		{"name":"Verify PBP Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'playbyplay')]"}
+	]
+}

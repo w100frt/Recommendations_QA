@@ -91,73 +91,6 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if(step.Name.Equals("Scroll Back One Day")) {
-				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
-				date = driver.FindElement("xpath", status).Text;
-				DataManager.CaptureMap["CURRENT"] = date;
-				log.Info("Current Day: " + date);
-				if (date.Equals("TODAY")) {
-					DataManager.CaptureMap["PREVIOUS"] = "YESTERDAY";
-				}
-				else if (date.Equals("YESTERDAY")) {
-					var today = DateTime.Now;
-					var yesterday = today.AddDays(-2);
-					DataManager.CaptureMap["PREVIOUS"] = yesterday.ToString("ddd, MMM dd").ToUpper();
-				}
-				else {
-					var num = int.Parse(date.Substring(10));
-					num = num--;
-					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
-					DataManager.CaptureMap["PREVIOUS"] = old.ToString("ddd, MMM dd").ToUpper();
-				}
-			
-				do {
-					js.ExecuteScript("window.scrollBy({top: -100,left: 0,behavior: 'smooth'});");
-					log.Info("Scrolling up on page...");
-					date = driver.FindElement("xpath", status).Text;
-					log.Info("Current Day: " + date);
-					log.Info(scrolls + " scrolls until limit is reached");
-				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
-				
-				DataManager.CaptureMap["SCROLLED"] = "YES";
-				
-			}
-			
-			else if(step.Name.Equals("Scroll Forward One Day")) {
-				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
-				date = driver.FindElement("xpath", status).Text;
-				DataManager.CaptureMap["CURRENT"] = date;
-
-				log.Info("Current Day: " + date);
-				if (date.Equals("TODAY")) {
-					DataManager.CaptureMap["NEXT"] = "TOMORROW";
-				}
-				else if (date.Equals("YESTERDAY")) {
-					DataManager.CaptureMap["NEXT"] = "TODAY";
-				}
-				else if (date.Equals("TOMORROW")) {
-					var today = DateTime.Now;
-					var yesterday = today.AddDays(2);
-					DataManager.CaptureMap["NEXT"] = yesterday.ToString("ddd, MMM dd").ToUpper();
-				}
-				else {
-					var num = int.Parse(date.Substring(10));
-					num = num++;
-					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
-					DataManager.CaptureMap["NEXT"] = old.ToString("ddd, MMM dd").ToUpper();
-				}
-			
-				do {
-					js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
-					log.Info("Scrolling down on page...");
-					date = driver.FindElement("xpath", status).Text;
-					log.Info("Current Day: " + date);
-					log.Info(scrolls + " scrolls until limit is reached");
-				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
-					
-				DataManager.CaptureMap["SCROLLED"] = "YES";
-			}
-			
 			else if (step.Name.Equals("Select Regular Season MLB Date")) {
 				string[] regularSeason = new string[] {"February", "March", "April", "May", "June", "July", "August", "September"};
 				string[] choice = new string[] {"Left", "Right"};
@@ -221,9 +154,6 @@ namespace SeleniumProject.Function
 					steps.Clear();	
 				}
 			}
-			
-			
-			
 			
 			else {
 				throw new Exception("Test Step not found in script");
