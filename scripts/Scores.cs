@@ -361,13 +361,13 @@ namespace SeleniumProject.Function
 				else if (date.Equals("YESTERDAY")) {
 					var today = DateTime.Now;
 					var yesterday = today.AddDays(-2);
-					DataManager.CaptureMap["PREVIOUS"] = yesterday.ToString("ddd, MMM dd").ToUpper();
+					DataManager.CaptureMap["PREVIOUS"] = yesterday.ToString("ddd, MMM d").ToUpper();
 				}
 				else {
 					var num = int.Parse(date.Substring(10));
 					num = num--;
 					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
-					DataManager.CaptureMap["PREVIOUS"] = old.ToString("ddd, MMM dd").ToUpper();
+					DataManager.CaptureMap["PREVIOUS"] = old.ToString("ddd, MMM d").ToUpper();
 				}
 			
 				do {
@@ -397,13 +397,13 @@ namespace SeleniumProject.Function
 				else if (date.Equals("TOMORROW")) {
 					var today = DateTime.Now;
 					var yesterday = today.AddDays(2);
-					DataManager.CaptureMap["NEXT"] = yesterday.ToString("ddd, MMM dd").ToUpper();
+					DataManager.CaptureMap["NEXT"] = yesterday.ToString("ddd, MMM d").ToUpper();
 				}
 				else {
 					var num = int.Parse(date.Substring(10));
 					num = num++;
 					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
-					DataManager.CaptureMap["NEXT"] = old.ToString("ddd, MMM dd").ToUpper();
+					DataManager.CaptureMap["NEXT"] = old.ToString("ddd, MMM d").ToUpper();
 				}
 			
 				do {
