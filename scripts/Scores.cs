@@ -24,7 +24,8 @@ namespace SeleniumProject.Function
 			int months = 0;
 			int year = 0;
 			string title;
-			string date;
+			string status = "";
+			string date = "";
 			string data = "";
 			string xpath = "";
 			bool stop = false;
