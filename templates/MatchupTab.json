@@ -2,7 +2,7 @@
     "testCase":"Template_MatchupTab",
     "testId":"t15",
     "testSteps":[
-		{"page":"EventPlayByPlay", "name":"Verify PBP Section is Displayed"},
+		{"page":"EventPlayByPlay", "name":"Verify Countdown Clock Within 7 Days"},
 		{"page":"EventPlayByPlay", "name":"Verify PBP Headers By Sport"}
     ]
 }
