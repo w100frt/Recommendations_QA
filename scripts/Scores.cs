@@ -175,7 +175,7 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
 				
 				// capture scores for event
-				if(DataManager.CaptureMap["EVENT_STATUS"].Equals("LIVE")) {
+				if(DataManager.CaptureMap["EVENT_STATUS"].Equals("LIVE") || DataManager.CaptureMap["EVENT_STATUS"].Equals("FINAL")) {
 					steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
 					steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
 				}

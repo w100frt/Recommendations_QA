@@ -72,13 +72,13 @@ namespace SeleniumProject.Function
 					else {
 						status = driver.FindElement("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
-						if (status.Equals("POSTPONED")) {
+						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
 							step.Data = "TeamSport_PostponedEvent";
 							DataManager.CaptureMap["EVENT_STATUS"] = "POSTPONED";
 						}
 						else if (status.Contains("FINAL")) {
 							step.Data = "TeamSport_PastEvent";
-							DataManager.CaptureMap["EVENT_STATUS"] = "PAST";
+							DataManager.CaptureMap["EVENT_STATUS"] = "FINAL";
 						}
 						else {
 							step.Data = "TeamSport_LiveEvent";
