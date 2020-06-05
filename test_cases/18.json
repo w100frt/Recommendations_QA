@@ -19,6 +19,7 @@
 		{"page":"Scores", "name":"Scroll Back One Day"},
 		{"page":"Soccer_Scores", "name":"Verify Soccer Date", "data":"#PREVIOUS"},
 		{"page":"Scores", "name":"Verify Number of Score Sections", "data":"+1"},
+		{"page":"Soccer_Scores", "name":"Verify Soccer Event", "data": "1"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click Soccer"},
 		{"page":"Scores", "name":"Store Current Number of Score Sections"},
