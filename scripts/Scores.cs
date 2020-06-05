@@ -160,7 +160,7 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
 					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
 				}
-				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[@class='score-chip']["+ data +"]", wait));
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[contains(@class,'score-chip')]["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
@@ -170,15 +170,15 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
 					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
 				}
-				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
 				
 				// capture scores for event
 				if(DataManager.CaptureMap["EVENT_STATUS"].Equals("LIVE") || DataManager.CaptureMap["EVENT_STATUS"].Equals("FINAL")) {
-					steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
-					steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
+					steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
