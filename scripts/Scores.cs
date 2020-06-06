@@ -24,7 +24,8 @@ namespace SeleniumProject.Function
 			int months = 0;
 			int year = 0;
 			string title;
-			string date;
+			string status = "";
+			string date = "";
 			string data = "";
 			string xpath = "";
 			bool stop = false;
@@ -159,7 +160,7 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
 					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
 				}
-				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[@class='score-chip']["+ data +"]", wait));
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//a[contains(@class,'score-chip')]["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
@@ -169,15 +170,15 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("SCROLLED")) {
 					xpath = "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]";
 				}
-				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
+				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
 				
 				// capture scores for event
-				if(DataManager.CaptureMap["EVENT_STATUS"].Equals("LIVE")) {
-					steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
-					steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[@class='score-chip']["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
+				if(DataManager.CaptureMap["EVENT_STATUS"].Equals("LIVE") || DataManager.CaptureMap["EVENT_STATUS"].Equals("FINAL")) {
+					steps.Add(new TestStep(order, "Capture Away Team Score", "AWAY_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Home Team Score", "HOME_TEAM_SCORE"+ data, "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'team-score')])[2]", wait));
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
@@ -347,6 +348,73 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Verify Sections", step.Data, "verify_count", "xpath", "//div[contains(@class,'score-section')]", ""));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
+			}
+			
+			else if(step.Name.Equals("Scroll Back One Day")) {
+				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
+				date = driver.FindElement("xpath", status).Text;
+				DataManager.CaptureMap["CURRENT"] = date;
+				log.Info("Current Day: " + date);
+				if (date.Equals("TODAY")) {
+					DataManager.CaptureMap["PREVIOUS"] = "YESTERDAY";
+				}
+				else if (date.Equals("YESTERDAY")) {
+					var today = DateTime.Now;
+					var yesterday = today.AddDays(-2);
+					DataManager.CaptureMap["PREVIOUS"] = yesterday.ToString("ddd, MMM d").ToUpper();
+				}
+				else {
+					var num = int.Parse(date.Substring(10));
+					num = num--;
+					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
+					DataManager.CaptureMap["PREVIOUS"] = old.ToString("ddd, MMM d").ToUpper();
+				}
+			
+				do {
+					js.ExecuteScript("window.scrollBy({top: -100,left: 0,behavior: 'smooth'});");
+					log.Info("Scrolling up on page...");
+					date = driver.FindElement("xpath", status).Text;
+					log.Info("Current Day: " + date);
+					log.Info(scrolls + " scrolls until limit is reached");
+				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
+				
+				DataManager.CaptureMap["SCROLLED"] = "YES";
+				
+			}
+			
+			else if(step.Name.Equals("Scroll Forward One Day")) {
+				status = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]";
+				date = driver.FindElement("xpath", status).Text;
+				DataManager.CaptureMap["CURRENT"] = date;
+
+				log.Info("Current Day: " + date);
+				if (date.Equals("TODAY")) {
+					DataManager.CaptureMap["NEXT"] = "TOMORROW";
+				}
+				else if (date.Equals("YESTERDAY")) {
+					DataManager.CaptureMap["NEXT"] = "TODAY";
+				}
+				else if (date.Equals("TOMORROW")) {
+					var today = DateTime.Now;
+					var yesterday = today.AddDays(2);
+					DataManager.CaptureMap["NEXT"] = yesterday.ToString("ddd, MMM d").ToUpper();
+				}
+				else {
+					var num = int.Parse(date.Substring(10));
+					num = num++;
+					var old = new DateTime(DateTime.Now.Year, DateTime.Now.Month, num);
+					DataManager.CaptureMap["NEXT"] = old.ToString("ddd, MMM d").ToUpper();
+				}
+			
+				do {
+					js.ExecuteScript("window.scrollBy({top: 100,left: 0,behavior: 'smooth'});");
+					log.Info("Scrolling down on page...");
+					date = driver.FindElement("xpath", status).Text;
+					log.Info("Current Day: " + date);
+					log.Info(scrolls + " scrolls until limit is reached");
+				} while (date.Equals(DataManager.CaptureMap["CURRENT"]) && scrolls-- > 0);
+					
+				DataManager.CaptureMap["SCROLLED"] = "YES";
 			}
 			
 			else {

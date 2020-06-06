@@ -1,0 +1,7 @@
+﻿{
+    "testCase":"Template_MatchupTab",
+    "testId":"t15",
+    "testSteps":[
+		{"page":"EventMatchup", "name":"Verify Countdown Clock Within 7 Days"}
+    ]
+}
