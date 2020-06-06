@@ -24,20 +24,22 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Countdown Clock Within 7 Days")) {
 				var week = DateTime.Now.AddDays(+7);
-				if (DataManager.CaptureMap["CURRENT"].Equals("TODAY") || DataManager.CaptureMap["CURRENT"].Equals("TOMORROW")) {
-					withinSeven = true;
-				}
-				else {
-					if (week <= DataManager.CaptureMap["CURRENT"]) {
-						log.Info("within week");
+				if (DataManager.CaptureMap.ContainsKey("CURRENT")) {
+					if (DataManager.CaptureMap["CURRENT"].Equals("TODAY") || DataManager.CaptureMap["CURRENT"].Equals("TOMORROW")) {
 						withinSeven = true;
 					}
 					else {
-						log.Info("not within week");
-						withinSeven = false;
+						if (week <= DataManager.CaptureMap["CURRENT"]) {
+							log.Info("within week");
+							withinSeven = true;
+						}
+						else {
+							log.Info("not within week");
+							withinSeven = false;
+						}
 					}
 				}
-				
+
 				if (withinSeven) {
 					steps.Add(new TestStep(order, "Verify Countdown is Displayed", "", "verify_displayed", "xpath", "//div[contains(@class,'countdown-timer')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
