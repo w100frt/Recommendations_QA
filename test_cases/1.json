@@ -10,7 +10,7 @@
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos Count", "data":"8"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Count", "data":"588"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Count", "data":"589"},
 		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Name", "data":"Optimum"},
 		{"page":"MVPD_AccountInfo", "name":"Click Cancel Button"},
