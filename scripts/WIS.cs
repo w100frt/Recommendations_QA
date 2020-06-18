@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 
 			size = driver.FindElement("xpath", "//pre").Text;
-			size = size.Substring(size.IndexOf("Total Entities="));
+			size = size.Substring(size.IndexOf("Total Entities=") + 15);
 			log.Info(size);
 			
 			try {
