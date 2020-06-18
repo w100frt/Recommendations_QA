@@ -1,0 +1,6 @@
+﻿{
+	"page":"WIS",
+	"testDefinitions":[
+		{"name":"Verify Total Entities is Greater than 40,000","objectType":"script","by":"xpath","objectId":"WIS"}
+	]
+}
