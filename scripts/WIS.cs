@@ -23,6 +23,7 @@ namespace SeleniumProject.Function
 
 			size = driver.FindElement("xpath", "//pre").Text;
 			size = size.Substring(size.IndexOf("Total Entities="));
+			log.Info(size);
 			
 			try {
 				total = Int32.Parse(size);
