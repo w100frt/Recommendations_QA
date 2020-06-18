@@ -2,7 +2,7 @@
 	"testCase":"Verify Total Entities Number",
 	"env":"dev",
 	"testId":"100",
-	"testRail":"",
+	"testRail":"7362587",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
