@@ -1,0 +1,12 @@
+﻿{
+	"testCase":"Verify Total Entities Number",
+	"env":"dev",
+	"testId":"100",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL", "data":"http://stg2.releng.foxsports.com/api/misc/dict?type=wis"},
+		{"page":"WIS", "name":"Verify Total Entities is Greater than 40,000"}
+	]
+}
