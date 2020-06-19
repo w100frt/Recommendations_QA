@@ -70,7 +70,7 @@ namespace SeleniumProject.Function
 						DataManager.CaptureMap["EVENT_STATUS"] = "FUTURE";
 					}
 					else {
-						status = driver.FindElement("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
+						status = driver.FindElement("xpath", "(//a[contains(@class,'score-chip')])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
 							step.Data = "TeamSport_PostponedEvent";

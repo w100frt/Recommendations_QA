@@ -18,6 +18,15 @@
 		{"page":"AllStories", "name":"Verify Secondary Nav is Displayed"},
 		{"page":"AllStories", "name":"Click Open Calendar"},
 		{"page":"AllStories", "name":"Verify Calendar is Displayed"},
-		{"page":"AllStories", "name":"Verify Stories Content"}		
+		{"page":"AllStories", "name":"Verify Stories Content"},	
+		{"page":"AllStories", "name":"Verify First Card is a Date"},
+		{"page":"AllStories", "name":"Verify Number of Story Cards", "data":"100"},
+		{"page":"AllStories", "name":"Capture Story Title", "data":"STORY_TITLE"},
+		{"page":"AllStories", "name":"Capture Story Date", "data":"STORY_DATE"},
+		{"page":"AllStories", "name":"Click Story Card"},
+		{"page":"Stories", "name":"Verify Story Title","data":"STORY_TITLE"},
+		{"page":"Stories", "name":"Verify Story Date","data":"#STORY_DATE"},
+		{"page":"Stories", "name":"Click Share"},
+		{"page":"Stories", "name":"Verify Number of Share Items", "data":"4"}
 	]
 }
