@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Entity_Social",
 	"testDefinitions":[
-		{"name":"Verify Number of Social Items","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'social-feed-item')]"}
+		{"name":"Verify Number of Social Items","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'social-feed-item')]"},
 		{"name":"Verify Tweet is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//*[contains(@id,'twitter-widget')]"}
 	]
 }
