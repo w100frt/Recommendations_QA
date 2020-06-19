@@ -33,7 +33,7 @@
 		{"page":"Entity_Standings", "name":"Verify Table Standings Displayed"},
 		{"page":"Entity", "name":"Click Social Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"SOCIAL"},
-		{"page":"Entity_News", "name":"Verify Number of Social Items", "data":"100"},
+		{"page":"Entity_Social", "name":"Verify Number of Social Items", "data":"100"},
 		{"page":"Entity_Social", "name":"Verify Tweet is Displayed"},
 		{"page":"Entity", "name":"Click Teams Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"TEAMS"},
