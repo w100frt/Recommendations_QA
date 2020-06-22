@@ -1,6 +1,7 @@
 ﻿{
 	"page":"AllStories",
 	"testDefinitions":[
+		{"name":"Capture Story Category","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'card-grid-header')]//div"},
 		{"name":"Capture Story Date","objectType":"capture","by":"xpath","objectId":"//a[contains(@class,'card-story')]//div[@datetime]"},
 		{"name":"Capture Story Title","objectType":"capture","by":"xpath","objectId":"//a[contains(@class,'card-story')]//h2"},
 		{"name":"Click Open Calendar","objectType":"click","by":"xpath","objectId":"//div[@class='date-picker']"},
