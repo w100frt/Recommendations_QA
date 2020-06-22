@@ -18,6 +18,7 @@
 		{"page":"AllStories", "name":"Verify Secondary Nav is Displayed"},
 		{"page":"AllStories", "name":"Click Open Calendar"},
 		{"page":"AllStories", "name":"Verify Calendar is Displayed"},
+		{"page":"Navigation", "name":"Navigate to Stories"},
 		{"page":"AllStories", "name":"Verify Stories Content"},	
 		{"page":"AllStories", "name":"Verify First Card is a Date"},
 		{"page":"AllStories", "name":"Verify Number of Story Cards", "data":"100"},
