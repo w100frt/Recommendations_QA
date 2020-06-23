@@ -23,12 +23,12 @@ namespace SeleniumProject.Function
 			bool withinSeven = false;
 			
 			if (step.Name.Equals("Verify Countdown Clock Within 7 Days")) {
-				var week = DateTime.Now.AddDays(+7);
 				if (DataManager.CaptureMap.ContainsKey("CURRENT")) {
 					if (DataManager.CaptureMap["CURRENT"].Equals("TODAY") || DataManager.CaptureMap["CURRENT"].Equals("TOMORROW")) {
 						withinSeven = true;
 					}
 					else {
+						var week = DateTime.Now.AddDays(+7);
 						if (week <= DataManager.CaptureMap["CURRENT"]) {
 							log.Info("within week");
 							withinSeven = true;
@@ -38,6 +38,9 @@ namespace SeleniumProject.Function
 							withinSeven = false;
 						}
 					}
+				}
+				else {
+					log.Info("No Key for CURRENT");
 				}
 
 				if (withinSeven) {
