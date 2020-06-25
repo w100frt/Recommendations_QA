@@ -17,6 +17,7 @@
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
 		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"LiveTV","name":"Click Live Play Button"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_FullProvider_SignIn"},
 		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Navigation", "name":"Click Sign In"},
