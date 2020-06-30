@@ -8,7 +8,7 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click Sports"},
-		{"page":"Explore", "name":"Verify Count of Sports", "data":"10"},
+		{"page":"Explore", "name":"Verify Count of Sports", "data":"11"},
 		{"page":"Explore", "name":"Click Players"},
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"10"},
 		{"page":"Explore", "name":"Click Sports"},
