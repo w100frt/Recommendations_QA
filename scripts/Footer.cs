@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			ReadOnlyCollection<IWebElement> elements;
 			
 			if (step.Name.Equals("Verify Footer Links")) {
-				string[] dataSet = new string[] {"Help", "Press", "Advertise With Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
+				string[] dataSet = new string[] {"Help", "Press", "Advertise with Us", "Jobs", "FOX Cincy", "RSS", "Sitemap"};
 				elements = driver.FindElements("xpath", "//div[@class='footer-links-1']//a");
 				
 				if (dataSet.Length != elements.Count) {
