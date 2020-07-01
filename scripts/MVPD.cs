@@ -17,13 +17,13 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			int size = 0;
-			int total = step.Data;
+			int total;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Provider Count")) {
 				try {
-					total = Int32.Parse(total);
+					total = Int32.Parse(step.Data);
 				}
 				catch (Exception e) {
 					total = 500;
