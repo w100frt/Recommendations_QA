@@ -17,7 +17,7 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			int size = 0;
-			int total = step.Data;
+			var total = step.Data;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
