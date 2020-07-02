@@ -17,6 +17,8 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			int eleCount = 0;
+			int total;
+			int size = 0;
 			List<TestStep> steps = new List<TestStep>();
 
 			if (step.Name.Equals("Click Arrow Forward to End of Carousel")) {
@@ -26,6 +28,26 @@ namespace SeleniumProject.Function
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();	
 					eleCount = driver.FindElements("xpath", "//div[contains(@class,'carousel') and contains(@class,'can-scroll-right')]").Count;			
+				}
+			}
+			
+			else if (step.Name.Equals("Verify Number of Story Cards")) {
+				try {
+					total = Int32.Parse(step.Data);
+				}
+				catch (Exception e) {
+					total = 50;
+					log.Error("Expected data to be a numeral. Setting data to 50.");
+				}
+			
+				size = driver.FindElements("xpath", "//div[contains(@class,'mvpd-item-groups')]//h2").Count;
+				
+				if (size >= total && size <= 100) {
+					log.Info("Verification PASSED. Total Stories [" + size + "] is between " + total + " and 100.");
+				}
+				else {
+					log.Error("***Verification FAILED. " + size + " is not between " + total +" and 100***");
+					err.CreateVerificationError(step, "> " + total, size.ToString());
 				}
 			}
 			
