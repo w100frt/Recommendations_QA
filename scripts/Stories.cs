@@ -40,7 +40,7 @@ namespace SeleniumProject.Function
 					log.Error("Expected data to be a numeral. Setting data to 50.");
 				}
 			
-				size = driver.FindElements("xpath", "//div[contains(@class,'mvpd-item-groups')]//h2").Count;
+				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide')]//a[contains(@class,'card-story')]").Count;
 				
 				if (size >= total && size <= 100) {
 					log.Info("Verification PASSED. Total Stories [" + size + "] is between " + total + " and 100.");
