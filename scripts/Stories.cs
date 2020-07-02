@@ -20,6 +20,7 @@ namespace SeleniumProject.Function
 			int total;
 			int size = 0;
 			List<TestStep> steps = new List<TestStep>();
+			VerifyError err = new VerifyError();
 
 			if (step.Name.Equals("Click Arrow Forward to End of Carousel")) {
 				eleCount = driver.FindElements("xpath", "//div[not(contains(@class,'scorestrip')) and contains(@class,'carousel-wrapper') and contains(@class,'can-scroll-right')]").Count; 
