@@ -21,7 +21,7 @@
 		{"page":"Navigation", "name":"Navigate to Stories"},
 		{"page":"AllStories", "name":"Verify Stories Content"},	
 		{"page":"AllStories", "name":"Verify First Card is a Date"},
-		{"page":"AllStories", "name":"Verify Number of Story Cards", "data":"100"},
+		{"page":"AllStories", "name":"Verify Number of Story Cards", "data":"50"},
 		{"page":"AllStories", "name":"Capture Story Title", "data":"STORY_TITLE"},
 		{"page":"AllStories", "name":"Capture Story Date", "data":"STORY_DATE"},
 		{"page":"AllStories", "name":"Capture Story Category", "data":"STORY_CAT"},
