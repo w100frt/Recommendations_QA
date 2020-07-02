@@ -46,6 +46,6 @@
 		{"page":"Entity", "name":"Click Highlights Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"HIGHLIGHTS"},
 		{"page":"Entity_Highlights", "name":"Verify Video is Displayed"},
-		{"page":"Entity_Highlights", "name":"Verify Number of Videos", "data":"25"}
+		{"page":"Entity_Highlights", "name":"Verify Number of Videos", "data":"30"}
 	]
 }
