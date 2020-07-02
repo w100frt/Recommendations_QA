@@ -47,7 +47,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("***Verification FAILED. " + size + " is not between " + total +" and 100***");
-					err.CreateVerificationError(step, "> " + total, size.ToString());
+					err.CreateVerificationError(step, ">= " + total + " & <= 100", size.ToString());
 				}
 			}
 			
