@@ -44,7 +44,7 @@
 		{"page":"Entity_Stats", "name":"Verify Number of Player Stats Categories", "data":"16"},
 		{"page":"Entity_Stats", "name":"Verify Number of Team Stats Categories", "data":"11"},
 		{"page":"Entity", "name":"Click Highlights Tab"},
-		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"HIGHLIGHTS"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"VIDEOS"},
 		{"page":"Entity_Highlights", "name":"Verify Video is Displayed"},
 		{"page":"Entity_Highlights", "name":"Verify Number of Videos", "data":"30"}
 	]
