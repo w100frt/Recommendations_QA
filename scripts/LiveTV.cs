@@ -18,16 +18,19 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			IWebElement ele;
 			int size = 0;
+			int attempts = 20;
 			string classList = "";
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Video is Playing")) {
 				ele = driver.FindElement("xpath", "//div[@aria-label='Video Player']");
-				classList = ele.GetAttribute("classList");
-				log.Info(classList);
 				classList = ele.GetAttribute("className");
-				log.Info(classList);
+				classList = classList.Substring(classList.IndexOf("jw-state-") + 27);
+				do {
+					log.Info(classList);					
+				}
+				while (!classList.Equals("playing") && attempts-- > 0);
 			}
 		}
 	}
