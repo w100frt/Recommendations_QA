@@ -1,0 +1,30 @@
+﻿{
+	"testCase":"Confirm Video Playback on Live Pages",
+	"env":"dev",
+	"testId":"26",
+	"testRail":"7608928",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_FullProvider_SignIn"},
+		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"LiveTV","name":"Click Live Play Button"},
+		{"page":"LiveTV","name":"Click Overlay Play Button"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"},
+		{"page":"LiveTV","name":"Verify Video"},
+		{"page":"LiveTV","name":"Verify Pause Button on Video"},
+		{"page":"LiveTV","name":"Click Video Pause Button"},
+		{"page":"LiveTV","name":"Verify Video is Paused"},
+		{"page":"LiveTV","name":"Click Video Play Button"},
+		{"page":"LiveTV","name":"Verify Video is Playing"},
+		{"page":"LiveTV","name":"Capture Number of Additional Channels"},
+		{"page":"LiveTV","name":"Select Additional Channels"}
+	]
+}
