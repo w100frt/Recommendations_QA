@@ -6,6 +6,7 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_FullProvider_SignIn"},
