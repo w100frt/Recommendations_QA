@@ -26,6 +26,8 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", "//div[@aria-label='Video Player']");
 				classList = ele.GetAttribute("classList");
 				log.Info(classList);
+				classList = ele.GetAttribute("className");
+				log.Info(classList);
 			}
 		}
 	}
