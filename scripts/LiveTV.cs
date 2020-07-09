@@ -30,6 +30,20 @@ namespace SeleniumProject.Function
 				classList = ele.GetAttribute("className");
 				classList = classList.Substring(classList.IndexOf("jw-state-") + 9);
 				classList = classList.Substring(0, classList.IndexOf(" "));
+				
+				// state returns idle if overlay button is present
+				if(classList.Equals("idle")) {
+					steps.Add(new TestStep(order, "Click Overlay Play Button", "", "click", "xpath", "//div[@class='overlay-play-button']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					ele = driver.FindElement("xpath", "//div[@aria-label='Video Player']");
+					classList = ele.GetAttribute("className");
+					classList = classList.Substring(classList.IndexOf("jw-state-") + 9);
+					classList = classList.Substring(0, classList.IndexOf(" "));
+				}
+				
+				
+				// check video state. if not playing, wait and check again for 10 seconds
 				do {
 					log.Info("Video State: " + classList);
 					if(!classList.Equals("playing")) {
