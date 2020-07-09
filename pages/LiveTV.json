@@ -5,6 +5,8 @@
 		{"name":"Click Live Play Button","objectType":"click","by":"xpath","objectId":"//div[@class='live-arrow']"},
 		{"name":"Click Main Video Play Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class, 'live-tv-main')]//a[div[contains(@class,'play-button')]]"},
 		{"name":"Click Overlay Play Button","objectType":"click","by":"xpath","objectId":"//div[@class='overlay-play-button']"},
+		{"name":"Click Video Pause Button","objectType":"click","by":"xpath","objectId":"//button[@aria-label='Pause']"},
+		{"name":"Click Video Play Button","objectType":"click","by":"xpath","objectId":"//button[@aria-label='Play']"},
 		{"name":"Click See Full Schedule Link","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'full-schedule')]"},
 		{"name":"Verify Top Show Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]"},
 		{"name":"Verify Current Video Title","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='watch-player-details']//div[contains(@class,'fs-30')]"},
@@ -14,6 +16,7 @@
 		{"name":"Verify Pause Button on Video","objectType":"verify_displayed","by":"xpath","objectId":"//button[@aria-label='Pause']"},
 		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/live' and @class='nav-item']//div[@class='nav-item-bar active-nav']"},
 		{"name":"Verify Video","objectType":"verify_displayed","by":"xpath","objectId":"//video[contains(@class,'video')]"},
+		{"name":"Verify Video is Paused","objectType":"script","by":"xpath","objectId":"LiveTV"}
 		{"name":"Verify Video is Playing","objectType":"script","by":"xpath","objectId":"LiveTV"}
 	]
 }
