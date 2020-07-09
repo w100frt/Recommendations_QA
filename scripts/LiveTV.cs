@@ -18,7 +18,7 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			IWebElement ele;
 			int size = 0;
-			var classList;
+			var classList = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
