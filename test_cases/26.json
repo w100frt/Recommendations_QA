@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"Video Playback",
+	"testCase":"Confirm Video Playback on Live Pages",
 	"env":"dev",
 	"testId":"26",
-	"testRail":"",
+	"testRail":"7608928",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
