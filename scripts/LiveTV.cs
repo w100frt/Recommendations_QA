@@ -26,7 +26,8 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Verify Video is Playing")) {
 				ele = driver.FindElement("xpath", "//div[@aria-label='Video Player']");
 				classList = ele.GetAttribute("className");
-				classList = classList.Substring(classList.IndexOf("jw-state-") + 27);
+				classList = classList.Substring(classList.IndexOf("jw-state-"));
+				classList = classList.Substring(0, classList.IndexOf(" "));
 				do {
 					log.Info(classList);					
 				}
