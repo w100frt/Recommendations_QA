@@ -19,7 +19,7 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			int size = 0;
 			int channel = 0;
-			int attempts = 50;
+			int attempts = 10;
 			string classList = "";
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
@@ -30,7 +30,10 @@ namespace SeleniumProject.Function
 				classList = classList.Substring(classList.IndexOf("jw-state-") + 9);
 				classList = classList.Substring(0, classList.IndexOf(" "));
 				do {
-					log.Info("Video State: " + classList);					
+					log.Info("Video State: " + classList);
+					if(!classList.Equals("playing")) {
+						Thread.Sleep(1000);
+					}
 				}
 				while (!classList.Equals("playing") && attempts-- > 0);
 				if (classList.Equals("playing")) {
