@@ -68,6 +68,10 @@ namespace SeleniumProject.Function
 					steps.Clear();
 				}
 			}
+			
+			else {
+				throw new Exception("Test Step not found in script");
+			}
 		}
 	}
 }

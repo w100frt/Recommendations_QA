@@ -24,6 +24,7 @@
 		{"page":"LiveTV","name":"Verify Video is Paused"},
 		{"page":"LiveTV","name":"Click Video Play Button"},
 		{"page":"LiveTV","name":"Verify Video is Playing"},
+		{"page":"LiveTV","name":"Capture Number of Additional Channels"},
 		{"page":"LiveTV","name":"Select Additional Channels"}
 	]
 }
