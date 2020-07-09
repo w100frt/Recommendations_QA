@@ -23,6 +23,7 @@
 		{"page":"LiveTV","name":"Click Video Pause Button"},
 		{"page":"LiveTV","name":"Verify Video is Paused"},
 		{"page":"LiveTV","name":"Click Video Play Button"},
-		{"page":"LiveTV","name":"Verify Video is Playing"}
+		{"page":"LiveTV","name":"Verify Video is Playing"},
+		{"page":"LiveTV","name":"Select Additional Channels"}
 	]
 }

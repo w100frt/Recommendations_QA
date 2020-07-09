@@ -1,0 +1,11 @@
+﻿{
+    "testCase":"Template_VerifyChannel",
+    "testId":"t4",
+    "testSteps":[
+		{"page":"LiveTV","name":"Select Additional Channel"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"LiveTV","name":"Click Live Play Button"},
+		{"page":"LiveTV","name":"Click Overlay Play Button"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"}
+    ]
+}
