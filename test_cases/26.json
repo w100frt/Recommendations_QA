@@ -1,0 +1,23 @@
+﻿{
+	"testCase":"Video Playback",
+	"env":"dev",
+	"testId":"26",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_FullProvider_SignIn"},
+		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"LiveTV","name":"Click Live Play Button"},
+		{"page":"LiveTV","name":"Click Overlay Play Button"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"},
+		{"page":"LiveTV","name":"Verify Video"},
+		{"page":"LiveTV","name":"Verify Pause Button on Video"}
+	]
+}

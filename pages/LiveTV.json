@@ -14,5 +14,6 @@
 		{"name":"Verify Pause Button on Video","objectType":"verify_displayed","by":"xpath","objectId":"//button[@aria-label='Pause']"},
 		{"name":"Verify Selected Link on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@href='/live' and @class='nav-item']//div[@class='nav-item-bar active-nav']"},
 		{"name":"Verify Video","objectType":"verify_displayed","by":"xpath","objectId":"//video[contains(@class,'video')]"}
+		{"name":"Verify Video is Playing","objectType":"script","by":"xpath","objectId":"LiveTV"}
 	]
 }
