@@ -34,6 +34,10 @@ namespace SeleniumProject.Function
 					log.Info("Video State: " + classList);
 					if(!classList.Equals("playing")) {
 						Thread.Sleep(1000);
+						ele = driver.FindElement("xpath", "//div[@aria-label='Video Player']");
+						classList = ele.GetAttribute("className");
+						classList = classList.Substring(classList.IndexOf("jw-state-") + 9);
+						classList = classList.Substring(0, classList.IndexOf(" "));
 					}
 				}
 				while (!classList.Equals("playing") && attempts-- > 0);
