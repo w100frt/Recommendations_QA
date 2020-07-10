@@ -117,8 +117,8 @@ namespace SeleniumProject.Function
 						stoppage.Add("1ST HALF");
 					}
 					else {
-						stoppage.Add("1ST HALF");
 						stoppage.Add("2ND HALF");
+						stoppage.Add("1ST HALF");
 					}
 						break;
 					case "MLB":

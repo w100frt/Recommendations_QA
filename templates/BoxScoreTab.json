@@ -2,6 +2,7 @@
     "testCase":"Template_BoxScoreTab",
     "testId":"t17",
     "testSteps":[
+		{"page":"EventBoxScore", "name":"Verify Matchup Link", "data":"MATCHUP"},
 		{"page":"EventBoxScore", "name":"Verify Away Team Link", "data":"#AWAY_TEAM1"},
 		{"page":"EventBoxScore", "name":"Verify Home Team Link", "data":"#HOME_TEAM1"}
     ]
