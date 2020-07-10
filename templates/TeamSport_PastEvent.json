@@ -13,7 +13,7 @@
 		{"page":"Navigation","name":"Run Template", "data":"RecapTab"},
 		{"page":"Events", "name":"Click Play-By-Play Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"PLAY-BY-PLAY"},
-		{"page":"Navigation","name":"Run Template", "data":"PBPTab"},
+		{"page":"Navigation","name":"Run Template", "data":"PBPTabFinal"},
 		{"page":"Events", "name":"Click Box Score Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"BOX SCORE"},
 		{"page":"Navigation","name":"Run Template", "data":"BoxScoreTab"},
