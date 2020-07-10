@@ -34,10 +34,10 @@ namespace SeleniumProject.Function
 							log.Info("within week");
 							withinSeven = true;
 						//}
-						else {
+						//else {
 							log.Info("not within week");
 							withinSeven = false;
-						}
+						//}
 					}
 				}
 				else {
