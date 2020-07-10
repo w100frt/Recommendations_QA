@@ -30,10 +30,10 @@ namespace SeleniumProject.Function
 					}
 					else {
 						var week = DateTime.Now.AddDays(+7);
-						if (week <= DataManager.CaptureMap["CURRENT"]) {
+						//if (week <= DataManager.CaptureMap["CURRENT"]) {
 							log.Info("within week");
 							withinSeven = true;
-						}
+						//}
 						else {
 							log.Info("not within week");
 							withinSeven = false;
