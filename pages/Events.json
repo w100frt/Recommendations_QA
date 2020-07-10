@@ -2,6 +2,7 @@
 	"page":"Events",
 	"testDefinitions":[
 		{"name":"Click Box Score Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][*[.='BOX SCORE']]"},
+		{"name":"Click Feed Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][*[.='FEED']]"},
 		{"name":"Click Matchup Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][*[.='MATCHUP']]"},
 		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][*[.='NEWS']]"},
 		{"name":"Click Odds Tab","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'horizontal-nav-item')][*[.='ODDS']]"},
