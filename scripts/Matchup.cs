@@ -24,6 +24,7 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Countdown Clock Within 7 Days")) {
 				if (DataManager.CaptureMap.ContainsKey("CURRENT")) {
+					log.Info(DataManager.CaptureMap["CURRENT"]);
 					if (DataManager.CaptureMap["CURRENT"].Equals("TODAY") || DataManager.CaptureMap["CURRENT"].Equals("TOMORROW")) {
 						withinSeven = true;
 					}

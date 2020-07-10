@@ -40,10 +40,12 @@ namespace SeleniumProject.Function
 							if (et >= 0 && et < 11){
 								log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
 								step.Data = "YESTERDAY";
+								//DataManager.CaptureMap["IN_SEASON"] = "YESTERDAY";
 							}
 							else {
 								log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 								step.Data = "TODAY";
+								//DataManager.CaptureMap["CURRENT"] = "TODAY";
 							}				
 						}
 						else {
