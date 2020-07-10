@@ -21,7 +21,8 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			Random random = new Random();
 			bool in_season = false;
-			int games = 0;
+			IWebElement ele;
+			string games = "";
 			int scrolls = 20;
 			string status = "";
 			string date = "";
@@ -66,10 +67,16 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					DataManager.CaptureMap["GAME"] = step.Data;
 
-					games = driver.FindElements("xpath", "(//a[@class='score-chip pregame'])[" + step.Data +"]").Count; 
-					if (games > 0) {
+					ele = driver.FindElement("xpath", "(//a[contains(@class,'score-chip')])[" + step.Data +"]");
+					games = ele.GetAttribute("className");
+					games = games.Substring(classList.IndexOf(" ")); 
+					if (games.Equals("pregame")) {
 						step.Data = "TeamSport_FutureEvent";
 						DataManager.CaptureMap["EVENT_STATUS"] = "FUTURE";
+					}
+					else if (games.Equals("live")){
+						step.Data = "TeamSport_LiveEvent";
+						DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 					}
 					else {
 						status = driver.FindElement("xpath", "(//a[contains(@class,'score-chip')])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
@@ -78,13 +85,9 @@ namespace SeleniumProject.Function
 							step.Data = "TeamSport_PostponedEvent";
 							DataManager.CaptureMap["EVENT_STATUS"] = "POSTPONED";
 						}
-						else if (status.Contains("FINAL")) {
+						else {
 							step.Data = "TeamSport_PastEvent";
 							DataManager.CaptureMap["EVENT_STATUS"] = "FINAL";
-						}
-						else {
-							step.Data = "TeamSport_LiveEvent";
-							DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 						}
 					}
 				}
