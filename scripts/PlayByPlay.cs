@@ -105,7 +105,7 @@ namespace SeleniumProject.Function
 					case "Soccer" :
 					case "NCAABasketball" :
 
-					status = driver.FindElement("//div[contains(@class,'status-line')]").Text.Substring(0,2);
+					status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text.Substring(0,2);
 					try {
 						game = Int32.Parse(status);
 					}
