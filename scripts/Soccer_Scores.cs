@@ -69,7 +69,7 @@ namespace SeleniumProject.Function
 
 					ele = driver.FindElement("xpath", "(//a[contains(@class,'score-chip')])[" + step.Data +"]");
 					games = ele.GetAttribute("className");
-					games = games.Substring(classList.IndexOf(" ")); 
+					games = games.Substring(games.IndexOf(" ")); 
 					if (games.Equals("pregame")) {
 						step.Data = "TeamSport_FutureEvent";
 						DataManager.CaptureMap["EVENT_STATUS"] = "FUTURE";
