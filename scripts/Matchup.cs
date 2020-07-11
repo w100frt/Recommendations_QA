@@ -24,19 +24,20 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Countdown Clock Within 7 Days")) {
 				if (DataManager.CaptureMap.ContainsKey("CURRENT")) {
+					log.Info(DataManager.CaptureMap["CURRENT"]);
 					if (DataManager.CaptureMap["CURRENT"].Equals("TODAY") || DataManager.CaptureMap["CURRENT"].Equals("TOMORROW")) {
 						withinSeven = true;
 					}
 					else {
 						var week = DateTime.Now.AddDays(+7);
-						if (week <= DataManager.CaptureMap["CURRENT"]) {
+						//if (week <= DataManager.CaptureMap["CURRENT"]) {
 							log.Info("within week");
 							withinSeven = true;
-						}
-						else {
+						//}
+						//else {
 							log.Info("not within week");
 							withinSeven = false;
-						}
+						//}
 					}
 				}
 				else {

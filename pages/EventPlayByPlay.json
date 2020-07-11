@@ -1,7 +1,8 @@
 ﻿{
 	"page":"EventPlayByPlay",
 	"testDefinitions":[
-		{"name":"Verify PBP Headers By Sport","objectType":"script","by":"xpath","objectId":"PlayByPlay"},
+		{"name":"Verify Final PBP Headers By Sport","objectType":"script","by":"xpath","objectId":"PlayByPlay"},
+		{"name":"Verify Live PBP Header By Sport","objectType":"script","by":"xpath","objectId":"PlayByPlay"},
 		{"name":"Verify PBP Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'playbyplay')]"}
 	]
 }

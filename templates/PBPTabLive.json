@@ -1,8 +1,8 @@
 ﻿{
-    "testCase":"Template_PlayByPlayTab",
+    "testCase":"Template_PlayByPlayTabLive",
     "testId":"t15",
     "testSteps":[
 		{"page":"EventPlayByPlay", "name":"Verify PBP Section is Displayed"},
-		{"page":"EventPlayByPlay", "name":"Verify PBP Headers By Sport"}
+		{"page":"EventPlayByPlay", "name":"Verify Live PBP Header By Sport"}
     ]
 }
