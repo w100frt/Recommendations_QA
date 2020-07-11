@@ -10,7 +10,6 @@
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
 		{"page":"Navigation","name":"Run Template", "data":"Optimum_FullProvider_SignIn"},
-		{"page":"Navigation", "name":"Navigate to Home"},
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},

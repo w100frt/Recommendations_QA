@@ -68,6 +68,13 @@ namespace SeleniumProject.Function
 				else {
 					DataManager.CaptureMap["CURRENT_URL"] = driver.GetDriver().Url;
 				}
+				
+				ele = driver.FindElement("xpath","//a[.='TV Provider Sign In']");
+				if (!ele.Displayed) {
+					steps.Add(new TestStep(order, "Click Sign In Again", "", "click", "xpath", "//a[contains(@class,'sign-in')]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();					
+				}
 				steps.Add(new TestStep(order, "Sign In With TV Provider", "", "click", "xpath", "//a[.='TV Provider Sign In']", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
