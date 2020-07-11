@@ -18,6 +18,7 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			IWebElement ele;
+			int overlay;
 			int size = 0;
 			int channel = 0;
 			int attempts = 10;
@@ -32,7 +33,8 @@ namespace SeleniumProject.Function
 				classList = classList.Substring(0, classList.IndexOf(" "));
 				
 				// state returns idle if overlay button is present
-				if(classList.Equals("idle")) {
+				overlay = driver.FindElements("xpath", "//div[@class='overlays']/div").Count;
+				if(overlay > 1) {
 					steps.Add(new TestStep(order, "Click Overlay Play Button", "", "click", "xpath", "//div[@class='overlay-play-button']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
