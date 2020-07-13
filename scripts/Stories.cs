@@ -61,7 +61,7 @@ namespace SeleniumProject.Function
 				}
 				
 				if (date.Equals(step.Data)) {
-					log.Info("Verification PASSED. Expected value [" + step.Data + "] equals  actual value [" + total + "]");
+					log.Info("Verification PASSED. Expected value [" + step.Data + "] equals  actual value [" + date + "]");
 				}
 				else {
 					log.Error("***Verification FAILED. Expected [" + step.Data + "] does not equal actual value [" + date +"]***");
