@@ -54,10 +54,10 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Story Date")) {			
-				date = driver.FindElements("xpath", "//div[contains(@class,'cards-slide')]//a[contains(@class,'card-story')]").Text;
+				date = driver.FindElement("xpath", "//div[contains(@class,'info-text')]").Text;
 				
 				if (date.Contains("•")) {
-					date = date.Substring("•" + 2);
+					date = date.Substring(date.IndexOf("•") + 2);
 				}
 				
 				if (date.Equals(step.Data)) {
