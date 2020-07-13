@@ -19,6 +19,7 @@ namespace SeleniumProject.Function
 			int eleCount = 0;
 			int total;
 			int size = 0;
+			string date = "";
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 
@@ -48,6 +49,22 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("***Verification FAILED. " + size + " is not between " + total +" and 100***");
+					err.CreateVerificationError(step, ">= " + total + " & <= 100", size.ToString());
+				}
+			}
+			
+			else if (step.Name.Equals("Verify Story Date")) {			
+				date = driver.FindElements("xpath", "//div[contains(@class,'cards-slide')]//a[contains(@class,'card-story')]").Text;
+				
+				if (date.Contains("•")) {
+					date = date.Substring("•" + 2);
+				}
+				
+				if (date.Equals(step.Data)) {
+					log.Info("Verification PASSED. Expected value [" + step.Data + "] equals  actual value [" + total + "]");
+				}
+				else {
+					log.Error("***Verification FAILED. Expected [" + step.Data + "] does not equal actual value [" + date +"]***");
 					err.CreateVerificationError(step, ">= " + total + " & <= 100", size.ToString());
 				}
 			}
