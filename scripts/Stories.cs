@@ -65,7 +65,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("***Verification FAILED. Expected [" + step.Data + "] does not equal actual value [" + date +"]***");
-					err.CreateVerificationError(step, ">= " + total + " & <= 100", size.ToString());
+					err.CreateVerificationError(step, step.Data, date);
 				}
 			}
 			
