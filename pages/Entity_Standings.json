@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Entity_Standings",
 	"testDefinitions":[
-		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'dropdown') and contains(.,'conference')]"},
+		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'league standings')]//a[contains(@class,'dropdown-title')]"},
 		{"name":"Verify Standings Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"},
 		{"name":"Verify Table Header","objectType":"verify_value","by":"xpath","objectId":"//thead[contains(@class,'data-header')]//th[@data-priority='1']"},
 		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"}
