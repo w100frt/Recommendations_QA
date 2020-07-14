@@ -124,7 +124,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Check for Event")) {
-				if (!driver.GetDriver().Url.Contains("live") || DataManager.CaptureMap.ContainsKey("CHANNELS")) {
+				if (!driver.GetDriver().Url.Contains("live") || DataManager.CaptureMap.ContainsKey("EVENT")) {
 					log.Info("At least one stream is on an event. Returning to Live TV for channels.");
 					steps.Add(new TestStep(order, "Return to Live TV", "", "click", "xpath", "//a[@href='/live']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
