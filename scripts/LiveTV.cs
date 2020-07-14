@@ -87,7 +87,18 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture Number of Additional Channels")) {
-				size = driver.FindElements("xpath", "//div[@class='live-tv-channels']//div[contains(@class,'item')]").Count;
+				size = driver.FindElements("xpath", "//div[@class='live-tv-channels']//div[contains(@class,'item') or @class='live-tv-channel']").Count;
+				
+				// if size is zero, stream is attached to event. return and count
+				if (size == 0) {
+					log.Info("No Channels found. Stream is on event. Returning to Live TV.");
+					steps.Add(new TestStep(order, "Return to Live TV", "", "click", "xpath", "//a[@href='/live']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					size = driver.FindElements("xpath", "//div[@class='live-tv-channels']//div[contains(@class,'item') or @class='live-tv-channel']").Count;
+					DataManager.CaptureMap["EVENT"] = "Y";
+				}
+
 				DataManager.CaptureMap["CHANNELS"] = size.ToString();
 			}
 			
@@ -106,7 +117,16 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Select Additional Channel")) {
 				if (DataManager.CaptureMap.ContainsKey("CHANNELS")) {
 					channel = Int32.Parse(DataManager.CaptureMap["CURRENT_CHANNEL_NUM"]);
-					steps.Add(new TestStep(order, "Select Channel " + channel, "", "click", "xpath", "(//a[@class='pointer video'])[" + channel + "]", wait));
+					steps.Add(new TestStep(order, "Select Channel " + channel, "", "click", "xpath", "(//div[contains(@class,'live-on-fox-secondary') or @class='live-tv-channel']//a[@class='pointer video'])[" + channel + "]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+			}
+			
+			else if (step.Name.Equals("Check for Event")) {
+				if (!driver.GetDriver().Url.Contains("live") || DataManager.CaptureMap.ContainsKey("CHANNELS")) {
+					log.Info("At least one stream is on an event. Returning to Live TV for channels.");
+					steps.Add(new TestStep(order, "Return to Live TV", "", "click", "xpath", "//a[@href='/live']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
