@@ -96,6 +96,7 @@ namespace SeleniumProject.Function
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size = driver.FindElements("xpath", "//div[@class='live-tv-channels']//div[contains(@class,'item') or @class='live-tv-channel']").Count;
+					DataManager.CaptureMap["EVENT"] = "Y";
 				}
 
 				DataManager.CaptureMap["CHANNELS"] = size.ToString();
@@ -123,8 +124,8 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Check for Event")) {
-				if (!driver.GetDriver().Url.Contains("live")) {
-					log.Info("Stream is on event. Returning to Live TV.");
+				if (!driver.GetDriver().Url.Contains("live") || DataManager.CaptureMap.ContainsKey("CHANNELS")) {
+					log.Info("At least one stream is on an event. Returning to Live TV for channels.");
 					steps.Add(new TestStep(order, "Return to Live TV", "", "click", "xpath", "//a[@href='/live']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
