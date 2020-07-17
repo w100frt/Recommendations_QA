@@ -119,7 +119,7 @@ namespace SeleniumProject.Function
 					channel = Int32.Parse(DataManager.CaptureMap["CURRENT_CHANNEL_NUM"]);
 					
 					if (!driver.GetDriver().Url.Contains("live/")) {
-						steps.Add(new TestStep(order, "Hover Channel " + channel, "", "hover", "xpath", "//div[@class='live-tv-channel'][" + channel + "]", wait));
+						steps.Add(new TestStep(order, "Hover Channel " + channel, "", "click", "xpath", "//div[@class='live-tv-channel'][" + channel + "]//span", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 					}
