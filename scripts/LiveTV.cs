@@ -117,6 +117,13 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Select Additional Channel")) {
 				if (DataManager.CaptureMap.ContainsKey("CHANNELS")) {
 					channel = Int32.Parse(DataManager.CaptureMap["CURRENT_CHANNEL_NUM"]);
+					
+					if (!driver.GetDriver().Url.Contains("live/")) {
+						steps.Add(new TestStep(order, "Hover Channel " + channel, "", "click", "xpath", "//div[@class='live-tv-channel'][" + channel + "]//span", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
+					
 					steps.Add(new TestStep(order, "Select Channel " + channel, "", "click", "xpath", "(//div[contains(@class,'live-on-fox-secondary') or @class='live-tv-channel']//a[@class='pointer video'])[" + channel + "]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
