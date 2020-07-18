@@ -1,0 +1,14 @@
+﻿{
+	"testCase":"Explore: NFL",
+	"env":"dev",
+	"testId":"36",
+	"testRail":"6218779",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click Sports"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Explore", "name":"Verify Count of Sports", "data":"32"}
+	]
+}
