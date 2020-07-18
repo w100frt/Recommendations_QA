@@ -5,6 +5,6 @@
 		{"name":"Verify Number of Share Items","objectType":"verify_count","by":"xpath","objectId":"//a[contains(@class,'share-item')]"},
 		{"name":"Verify Story Top Category","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'story-fav-title')]"},
 		{"name":"Verify Story Date","objectType":"script","by":"xpath","objectId":"Stories"},
-		{"name":"Verify Story Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'story-title')]"}
+		{"name":"Verify Story Title","objectType":"verify_value","by":"xpath","objectId":"//h1[contains(@class,'story-title')]"}
 	]
 }
