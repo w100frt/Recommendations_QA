@@ -2,7 +2,7 @@
 	"project":"fs",
 	"testRailProjectId": 127,
 	"jobName":"Smoke Test Suite",
-	"env":"stg",
+	"env":"prod",
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
