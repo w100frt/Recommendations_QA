@@ -12,7 +12,7 @@
 		{"page":"Scores", "name":"Is Sport In-Season?", "data": "MLB"},
 		{"page":"MLB_Scores", "name":"Verify MLB Date"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"MLB_Scores", "name":"Verify Soccer Event", "data": "1"},
+		{"page":"Soccer_Scores", "name":"Verify Soccer Event", "data": "1"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click MLB"},
 		{"page":"Scores", "name":"Store Current Number of Score Sections"},
