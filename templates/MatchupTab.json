@@ -4,10 +4,10 @@
     "testSteps":[
 		{"page":"EventMatchup", "name":"Verify Countdown Clock Within 7 Days"},
 		{"page":"EventMatchup", "name":"Verify Featured Pairing is Displayed"},
-		{"name":"Verify Odds Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]"},
 		{"page":"EventMatchup", "name":"Verify Team Stats Header Text", "data":"TEAM STATS"},
 		{"page":"EventMatchup", "name":"Verify Team Stats Module is Displayed"},
 		{"page":"EventMatchup", "name":"Verify Team Leaders Header Text", "data":"TEAM LEADERS"},
-		{"page":"EventMatchup", "name":"Verify Team Leaders Module is Displayed"}
+		{"page":"EventMatchup", "name":"Verify Team Leaders Module is Displayed"},
+		{"page":"EventMatchup", "name":"Verify Odds Section is Displayed"}
     ]
 }
