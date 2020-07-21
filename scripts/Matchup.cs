@@ -24,12 +24,13 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Countdown Clock Within 7 Days")) {
 				if (DataManager.CaptureMap.ContainsKey("CURRENT")) {
-					log.Info(DataManager.CaptureMap["CURRENT"]);
+					log.Info("Game date: " + DataManager.CaptureMap["CURRENT"]);
 					if (DataManager.CaptureMap["CURRENT"].Equals("TODAY") || DataManager.CaptureMap["CURRENT"].Equals("TOMORROW")) {
 						withinSeven = true;
 					}
 					else {
 						var week = DateTime.Now.AddDays(+7);
+						log.Info("Seven days from now : " + week.ToString("ddd, MMM d").ToUpper());
 						if (week >= DateTime.Parse(DataManager.CaptureMap["CURRENT"])) {
 							log.Info("within week");
 							withinSeven = true;
