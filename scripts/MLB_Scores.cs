@@ -25,6 +25,7 @@ namespace SeleniumProject.Function
 			int scrolls = 20;
 			string status = "";
 			string date = "";
+			string path = "";
 			int loc;
 			int rand;
 			int months;
@@ -54,8 +55,10 @@ namespace SeleniumProject.Function
 						log.Warn("No IN_SEASON variable available.");
 					}
 				}
-
-				steps.Add(new TestStep(order, "Verify Displayed Day on MLB", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]", wait));
+				
+				path = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]";
+				steps.Add(new TestStep(order, "Verify Displayed Day on MLB", step.Data, "verify_value", "xpath", path, wait));
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", path).Text;
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}

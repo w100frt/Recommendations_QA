@@ -2,6 +2,12 @@
     "testCase":"Template_MatchupTab",
     "testId":"t15",
     "testSteps":[
-		{"page":"EventMatchup", "name":"Verify Countdown Clock Within 7 Days"}
+		{"page":"EventMatchup", "name":"Verify Countdown Clock Within 7 Days"},
+		{"page":"EventMatchup", "name":"Verify Featured Pairing is Displayed"},
+		{"page":"EventMatchup", "name":"Verify Team Stats Header Text", "data":"TEAM STATS"},
+		{"page":"EventMatchup", "name":"Verify Team Stats Module is Displayed"},
+		{"page":"EventMatchup", "name":"Verify Team Leaders Header Text", "data":"TEAM LEADERS"},
+		{"page":"EventMatchup", "name":"Verify Team Leaders Module is Displayed"},
+		{"page":"EventMatchup", "name":"Verify Odds Section is Displayed"}
     ]
 }

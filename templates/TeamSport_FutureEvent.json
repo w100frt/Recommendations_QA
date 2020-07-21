@@ -8,12 +8,6 @@
 		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM1"},
 		{"page":"Events", "name":"Click Matchup Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"MATCHUP"},
-		{"page":"Navigation","name":"Run Template", "data":"MatchupTab"},
-		{"page":"Events", "name":"Click Odds Tab"},
-		{"page":"Events", "name":"Verify Selected Tab", "data":"ODDS"},
-		{"page":"Events", "name":"Click News Tab"},
-		{"page":"Events", "name":"Verify Selected Tab", "data":"NEWS"},
-		{"page":"Events", "name":"Click Social Tab"},
-		{"page":"Events", "name":"Verify Selected Tab", "data":"SOCIAL"}
+		{"page":"Navigation","name":"Run Template", "data":"MatchupTab"}
     ]
 }
