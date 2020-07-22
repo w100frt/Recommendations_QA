@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
 			if(step.Name.Contains("Randomize Favorite")) {
 				string fullName = "";
 				string sport = "";
-				favorites = "//div[contains(@id,'App') and not(contains(@style,'display: none'))]//a[@class='entity-list-row-container']";
+				favorites = "//div[contains(@id,'App') and not(contains(@style,'display: none'))]//a[contains(@class,'entity-list-row-container')]";
 				// Flip to Players pane if necessary. Otherwise, stay on Sports pane.
 				if(step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS')]", wait));
