@@ -16,6 +16,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			Random random = new Random();
 			int sports;
+			string favorites = "";
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
             List<TestStep> steps = new List<TestStep>();
@@ -23,6 +24,7 @@ namespace SeleniumProject.Function
 			if(step.Name.Contains("Randomize Favorite")) {
 				string fullName = "";
 				string sport = "";
+				favorites = "//div[contains(@id,'App') and not(contains(@style,'display: none'))]//a[contains(@class,'entity-list-row-container')]";
 				// Flip to Players pane if necessary. Otherwise, stay on Sports pane.
 				if(step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS')]", wait));
@@ -32,14 +34,14 @@ namespace SeleniumProject.Function
 				
 				// Allows for favoriting by NCAA entity or Professional entity
 				if(step.Name.Contains("NCAA")) {
-					sports = driver.FindElements("xpath", "//div[@id='explore']//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]]").Count; 
+					sports = driver.FindElements("xpath", favorites + "[div[div[div[(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
-					steps.Add(new TestStep(order, "Click Randomized NCAA Sport", "", "click", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Click Randomized NCAA Sport", "", "click", "xpath", "(" + favorites + "[div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
 				else {
-					sports = driver.FindElements("xpath", "//div[@id='explore']//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]]").Count; 
+					sports = driver.FindElements("xpath", favorites + "[div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Clicking Randomized Pro Sport", "", "click", "xpath", "(//a[contains(@class,'entity-list-row-container')][div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
@@ -84,10 +86,10 @@ namespace SeleniumProject.Function
 
 					if (step.Name.Contains("NCAA") && !step.Name.Contains("League"))
 					{
-						sports = driver.FindElements("xpath", "//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')]").Count; 
-						sports = random.Next(1, sports+1);
-						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						sports = driver.FindElements("xpath", favorites).Count; 
+						sports = random.Next(2, sports);
+						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 						fullName = DataManager.CaptureMap["CONF"] + sport;
@@ -102,10 +104,10 @@ namespace SeleniumProject.Function
 				
 				// Select a Team for Team/Player Favorites
 				if(step.Name.Contains("Team") || step.Name.Contains("Player")) {
-					sports = driver.FindElements("xpath", "//div[@id='explore']//a[contains(@class,'entity-list-row-container')]").Count; 
+					sports = driver.FindElements("xpath", favorites).Count; 
 					sports = random.Next(2, sports+1);
-					steps.Add(new TestStep(order, "Capture Team Name", "TEAM", "capture", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Capture Team Name", "TEAM", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Click into Team", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					fullName = DataManager.CaptureMap["TEAM"];
@@ -113,16 +115,17 @@ namespace SeleniumProject.Function
 				
 				// Allow for Favoriting Players
 				if(step.Name.Contains("Player")) {
-					sports = driver.FindElements("xpath", "//div[@id='explore']//a[contains(@class,'entity-list-row-container')]").Count; 
-					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-					steps.Add(new TestStep(order, "Select Player", "", "click", "xpath", "(//div[@id='explore']//a[contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+					sports = driver.FindElements("xpath", favorites).Count;  
+					sports = random.Next(1, sports+1);
+					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Select Player", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					fullName = DataManager.CaptureMap["PLAYER"];
 				}				
 				
 				// Verify the Toast Message, Close it, and clean up variables
-				steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
+				steps.Add(new TestStep(order, "Verify Toast", fullName + " - Added to your favorites.", "verify_value", "xpath", "//div[contains(@class,'toast-msg')]/div[contains(@class,'toast-msg')]", wait));
 				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				DataManager.CaptureMap.Remove("LEAGUE");

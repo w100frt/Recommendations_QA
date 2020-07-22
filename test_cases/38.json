@@ -38,7 +38,7 @@
 		{"page":"Explore", "name":"Click Back Arrow"},
 		{"page":"Explore", "name":"Enter Search", "data":"LeBron James"},
 		{"page":"Explore", "name":"Click Top Search Result"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Toast Message", "data":"LeBron James is added to your favorites."},
+		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"LeBron James - Added to your favorites."},
 		{"page":"Explore", "name":"Click Cancel Button"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "8"}
 	]
