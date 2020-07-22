@@ -122,7 +122,7 @@ namespace SeleniumProject.Function
 				}				
 				
 				// Verify the Toast Message, Close it, and clean up variables
-				steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//span[contains(@class,'toast-msg')]", wait));
+				steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//div[contains(@class,'toast-msg')]/div", wait));
 				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				DataManager.CaptureMap.Remove("LEAGUE");

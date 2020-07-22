@@ -1,8 +1,8 @@
 ﻿{
 	"page":"Toasts",
 	"testDefinitions":[
-		{"name":"Click Yes to Remove Favorite","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='YES, REMOVE IT']]"},
+		{"name":"Click Yes to Remove Favorite","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='YES, REMOVE']]"},
 		{"name":"Click Sign Out Button","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='sign out']]"},
-		{"name":"Verify Toast Message Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'toast-container')]//span"}
+		{"name":"Verify Toast Message Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'toast-msg')]/div"}
 	]
 }
