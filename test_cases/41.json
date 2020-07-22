@@ -7,7 +7,6 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
-		{"page":"Explore", "name":"Click Sports"},
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "NFL"},
