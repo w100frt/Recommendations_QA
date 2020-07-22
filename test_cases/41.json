@@ -14,7 +14,7 @@
 		{"page":"Entity", "name":"Verify Header Subtext", "data": "HOF: AUG 6"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
-		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"National Football League is added to your favorites."},
+		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"National Football League - Added to your favorites."},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
