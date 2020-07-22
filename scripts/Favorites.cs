@@ -87,9 +87,9 @@ namespace SeleniumProject.Function
 					if (step.Name.Contains("NCAA") && !step.Name.Contains("League"))
 					{
 						sports = driver.FindElements("xpath", favorites).Count; 
-						sports = random.Next(1, sports+1);
-						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
-						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(//div[@id='explore']//a[not(contains(@class,'explore-league-header')) and contains(@class,'entity-list-row-container')])["+ sports +"]", wait));
+						sports = random.Next(2, sports);
+						steps.Add(new TestStep(order, "Capture Conference", "CONF", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+						steps.Add(new TestStep(order, "Click into Conference", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 						fullName = DataManager.CaptureMap["CONF"] + sport;
