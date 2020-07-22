@@ -36,7 +36,7 @@ namespace SeleniumProject.Function
 				if(step.Name.Contains("NCAA")) {
 					sports = driver.FindElements("xpath", favorites + "[div[div[div[(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
-					steps.Add(new TestStep(order, "Click Randomized NCAA Sport", "", "click", "xpath", favorites + ")[div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Click Randomized NCAA Sport", "", "click", "xpath", "(" + favorites + ")[div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
@@ -124,7 +124,7 @@ namespace SeleniumProject.Function
 				}				
 				
 				// Verify the Toast Message, Close it, and clean up variables
-				steps.Add(new TestStep(order, "Verify Toast", fullName + " is added to your favorites.", "verify_value", "xpath", "//div[contains(@class,'toast-msg')]/div", wait));
+				steps.Add(new TestStep(order, "Verify Toast", fullName + " - Added to your favorites.", "verify_value", "xpath", "//div[contains(@class,'toast-msg')]/div[contains(@class,'toast-msg')]", wait));
 				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				DataManager.CaptureMap.Remove("LEAGUE");
