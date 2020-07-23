@@ -31,7 +31,7 @@ namespace SeleniumProject.Function
 					log.Info(date);
 					date = DateTime.ParseExact(date, "MMMM", CultureInfo.CurrentCulture).Month.ToString();
 					log.Info(date);
-					date = String.Concat(date, driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-active')]")..GetAttribute("innerText"));
+					date = String.Concat(date, driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-active')]").GetAttribute("innerText"));
 					log.Info(date);
 					
 					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]");
