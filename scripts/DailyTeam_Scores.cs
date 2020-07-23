@@ -27,7 +27,7 @@ namespace SeleniumProject.Function
 					DataManager.CaptureMap["GAME"] = step.Data;
 					
 					//get date for scores id
-					date = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-month')]").GetAttribute("innerText") + " 1, 1970";
+					date = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-month')]").GetAttribute("innerText");
 					log.Info(date);
 					date = DateTime.ParseExact(date, "MMMM", CultureInfo.CurrentCulture).Month.ToString();
 					log.Info(date);
