@@ -23,7 +23,7 @@
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click MLB"},
 		{"page":"Scores", "name":"Store Current Number of Score Sections"},
-		{"page":"MLB_Scores", "name":"Scroll Forward One Day"},
+		{"page":"Scores", "name":"Scroll Forward One Day"},
 		{"page":"MLB_Scores", "name":"Verify MLB Date", "data":"#NEXT"},
 		{"page":"Scores", "name":"Verify Number of Score Sections", "data":"+1"},
 		{"page":"MLB_Scores", "name":"Verify Event", "data": "1"},
