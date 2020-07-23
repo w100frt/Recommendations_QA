@@ -27,10 +27,21 @@ namespace SeleniumProject.Function
 					DataManager.CaptureMap["GAME"] = step.Data;
 					
 					//get date for scores id
+					date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");
+					if (date.Equals("YESTERDAY")) {
+						date = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
+					}
+					else if (date.Equals("TODAY")) {
+						date = DateTime.Today.ToString("yyyy-MM-dd");
+					}
+					else if (date.Equals("TOMORROW")) {
+						date = DateTime.Today.AddDays(+1).ToString("yyyy-MM-dd");
+					}
+					else {
+						date = DateTime.Parse(date).ToString("yyyy-MM-dd");
+					}
 					date = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-month')]").GetAttribute("innerText");
-					log.Info(date);
 					date = DateTime.ParseExact(date, "MMMM", CultureInfo.CurrentCulture).Month.ToString();
-					log.Info(date);
 					date = String.Concat(date, driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//div[contains(@class,'qs-active')]").GetAttribute("innerText"));
 					log.Info(date);
 					
