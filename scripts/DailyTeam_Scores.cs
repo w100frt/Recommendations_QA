@@ -25,7 +25,7 @@ namespace SeleniumProject.Function
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					DataManager.CaptureMap["GAME"] = step.Data;
 
-					ele = driver.FindElement("xpath", "(//a[contains(@class,'score-chip')])[" + step.Data +"]");
+					ele = driver.FindElement("xpath", "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]//a[contains(@class,'score-chip')][" + step.Data +"]");
 					games = ele.GetAttribute("className");
 					games = games.Substring(games.IndexOf(" ") + 1); 
 					log.Info("Game State: " + games);
@@ -38,7 +38,7 @@ namespace SeleniumProject.Function
 						DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 					}
 					else {
-						status = driver.FindElement("xpath", "(//a[contains(@class,'score-chip')])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
+						status = driver.FindElement("xpath", "(//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]//a[contains(@class,'score-chip')])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
 							step.Data = "TeamSport_PostponedEvent";
