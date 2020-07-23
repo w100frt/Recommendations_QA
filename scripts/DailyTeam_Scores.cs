@@ -28,8 +28,11 @@ namespace SeleniumProject.Function
 					
 					//get date for scores id
 					date = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-month')]").Text + " 1, 1970";
+					log.Info(date);
 					date = DateTime.ParseExact(date, "MMMM", CultureInfo.CurrentCulture).Month.ToString();
+					log.Info(date);
 					date = String.Concat(date, driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-active')]").Text);
+					log.Info(date);
 					
 					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]");
 					games = ele.GetAttribute("className");
