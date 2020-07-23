@@ -14,8 +14,6 @@
 		{"page":"Events", "name":"Click Box Score Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"BOX SCORE"},
 		{"page":"Events", "name":"Verify Empty Content", "data":"- No Data Available -"},
-		{"page":"Events", "name":"Click Odds Tab"},
-		{"page":"Events", "name":"Verify Selected Tab", "data":"ODDS"},
 		{"page":"Events", "name":"Click News Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"NEWS"},
 		{"page":"Events", "name":"Click Social Tab"},
