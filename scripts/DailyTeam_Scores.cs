@@ -20,12 +20,18 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			string games = "";
 			string status = "";
+			string date = "";
 
 			if (step.Name.Equals("Verify Event")) {
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
 					DataManager.CaptureMap["GAME"] = step.Data;
-
-					ele = driver.FindElement("xpath", "//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]//a[contains(@class,'score-chip')][" + step.Data +"]");
+					
+					//get date for scores id
+					date = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-month')]").Text;
+					date = DateTime.ParseExact(date, "MMMM", CultureInfo.CurrentCulture).Month.ToString();
+					date = String.Concat(date, driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-active')]").Text);
+					
+					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]");
 					games = ele.GetAttribute("className");
 					games = games.Substring(games.IndexOf(" ") + 1); 
 					log.Info("Game State: " + games);
