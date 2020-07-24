@@ -34,15 +34,15 @@ namespace SeleniumProject.Function
 						log.Info(date);
 					}
 					else if (date.Equals("TODAY")) {
-						date = DateTime.Today.ToString("yyyy-MM-dd");
+						date = DateTime.Today.ToString("yyyyMMdd");
 						log.Info(date);
 					}
 					else if (date.Equals("TOMORROW")) {
-						date = DateTime.Today.AddDays(+1).ToString("yyyy-MM-dd");
+						date = DateTime.Today.AddDays(+1).ToString("yyyyMMdd");
 						log.Info(date);
 					}
 					else {
-						date = DateTime.Parse(date).ToString("yyyy-MM-dd");
+						date = DateTime.Parse(date).ToString("MMdd");
 						log.Info(date);
 					}
 
