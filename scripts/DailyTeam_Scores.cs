@@ -31,21 +31,21 @@ namespace SeleniumProject.Function
 					log.Info("Current segment: " + date);
 					if (date.Equals("YESTERDAY")) {
 						date = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
+						log.Info(date);
 					}
 					else if (date.Equals("TODAY")) {
 						date = DateTime.Today.ToString("yyyy-MM-dd");
+						log.Info(date);
 					}
 					else if (date.Equals("TOMORROW")) {
 						date = DateTime.Today.AddDays(+1).ToString("yyyy-MM-dd");
+						log.Info(date);
 					}
 					else {
 						date = DateTime.Parse(date).ToString("yyyy-MM-dd");
+						log.Info(date);
 					}
-					date = driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//span[contains(@class,'qs-month')]").GetAttribute("innerText");
-					date = DateTime.ParseExact(date, "MMMM", CultureInfo.CurrentCulture).Month.ToString();
-					date = String.Concat(date, driver.FindElement("xpath", "//div[contains(@class,'scores-header-wrapper')]//div[contains(@class,'qs-active')]").GetAttribute("innerText"));
-					log.Info(date);
-					
+
 					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]");
 					games = ele.GetAttribute("className");
 					games = games.Substring(games.IndexOf(" ") + 1); 
