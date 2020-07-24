@@ -30,7 +30,7 @@ namespace SeleniumProject.Function
 					date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");
 					log.Info("Current segment: " + date);
 					if (date.Equals("YESTERDAY")) {
-						date = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
+						date = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
 						log.Info(date);
 					}
 					else if (date.Equals("TODAY")) {
