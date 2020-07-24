@@ -44,7 +44,7 @@ namespace SeleniumProject.Function
 						end = new DateTime(2020, 11, 15);
 						break;
 					case "MLB" : 
-						start = new DateTime(2020, 02, 21);
+						start = new DateTime(2020, 07, 23);
 						end = new DateTime(2020, 09, 27);
 						break;
 					case "NASCAR" :

@@ -5,6 +5,6 @@
 		{"name":"Scroll Forward One Day","objectType":"script","by":"xpath","objectId":"Soccer_Scores"},		
 		{"name":"Select Regular Season Soccer Date","objectType":"script","by":"xpath","objectId":"Soccer_Scores"},
 		{"name":"Verify Soccer Date","objectType":"script","by":"xpath","objectId":"Soccer_Scores"},
-		{"name":"Verify Soccer Event","objectType":"script","by":"xpath","objectId":"Soccer_Scores"}
+		{"name":"Verify Event","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"}
 	]
 }

@@ -63,39 +63,8 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Verify MLB Event")) {
-				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
-					DataManager.CaptureMap["GAME"] = step.Data;
-
-					games = driver.FindElements("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'pregame-info')]").Count; 
-					if (games > 0) {
-						step.Data = "TeamSport_FutureEvent";
-					}
-					else {
-						status = driver.FindElement("xpath", "(//a[@class='score-chip'])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
-						log.Info("Event status: " + status);
-						if (status.Equals("POSTPONED")) {
-							step.Data = "TeamSport_PostponedEvent";
-						}
-						else if (status.Contains("FINAL")) {
-							step.Data = "TeamSport_PastEvent";
-						}
-						else {
-							step.Data = "TeamSport_LiveEvent";
-						}
-					}
-				}
-				else {
-					log.Warn("No IN_SEASON variable available or data is populated. Using data.");
-				}
-				
-				steps.Add(new TestStep(order, "Run Event Template", step.Data, "run_template", "xpath", "", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
 			else if (step.Name.Equals("Select Regular Season MLB Date")) {
-				string[] regularSeason = new string[] {"February", "March", "April", "May", "June", "July", "August", "September"};
+				string[] regularSeason = new string[] {"July", "August", "September"};
 				string[] choice = new string[] {"Left", "Right"};
 				DateTime now = DateTime.Now;
 				date = now.ToString("MMMM");

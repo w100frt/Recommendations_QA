@@ -5,6 +5,6 @@
 		{"name":"Scroll Forward One Day","objectType":"script","by":"xpath","objectId":"MLB_Scores"},		
 		{"name":"Select Regular Season MLB Date","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
 		{"name":"Verify MLB Date","objectType":"script","by":"xpath","objectId":"MLB_Scores"},
-		{"name":"Verify MLB Event","objectType":"script","by":"xpath","objectId":"MLB_Scores"}
+		{"name":"Verify Event","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"}
 	]
 }

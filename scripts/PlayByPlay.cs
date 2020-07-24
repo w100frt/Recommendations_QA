@@ -49,6 +49,7 @@ namespace SeleniumProject.Function
 						stoppage.Add("2ND HALF");
 						break;
 					case "MLB":
+						status = driver.FindElement("xpath","//div[contains(@class,'scoring-summary')]//tr[2]/td[@data-index='9']/span").Text;
 						stoppage.Add("TOP 1ST");
 						stoppage.Add("BOTTOM 1ST");
 						stoppage.Add("TOP 2ND");
@@ -66,7 +67,8 @@ namespace SeleniumProject.Function
 						stoppage.Add("TOP 8TH");
 						stoppage.Add("BOTTOM 8TH");
 						stoppage.Add("TOP 9TH");
-						stoppage.Add("BOTTOM 9TH");
+						if (!status.Equals("X"))
+							stoppage.Add("BOTTOM 9TH");
 						break;
 					default :
 						stoppage.Add("1ST QUARTER");
@@ -77,7 +79,7 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string stop in stoppage) {
-					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "(//div[contains(@class,'pbp-header')])["+size+"]", wait));
+					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "(//span[contains(@class,'pbp-header')])["+size+"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size++;
@@ -150,7 +152,7 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string stop in stoppage) {
-					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "(//div[contains(@class,'pbp-header')])["+size+"]", wait));
+					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "(//span[contains(@class,'pbp-header')])["+size+"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size++;
