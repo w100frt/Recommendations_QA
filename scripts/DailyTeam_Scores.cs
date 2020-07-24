@@ -59,7 +59,7 @@ namespace SeleniumProject.Function
 						DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 					}
 					else {
-						status = driver.FindElement("xpath", "(//div[contains(@class,'score-section')][div[@class='scores-date'][not(div)]]//a[contains(@class,'score-chip')])[" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
+						status = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
 							step.Data = "TeamSport_PostponedEvent";
