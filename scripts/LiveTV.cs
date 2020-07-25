@@ -139,6 +139,19 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Click Live Play Button")) {
+				// state returns idle if overlay button is present
+				overlay = driver.FindElements("xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']").Count;
+				if (overlay > 0) {
+					steps.Add(new TestStep(order, "Click Live Play Button", "", "click", "xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				else {
+					log.Warn("No Live Play Button found. Event url: " + driver.GetDriver().Url);
+				}
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
