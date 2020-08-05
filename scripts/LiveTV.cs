@@ -25,6 +25,7 @@ namespace SeleniumProject.Function
 			string classList = "";
 			string title = "";
 			string edit = "";
+			bool live = false;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
@@ -142,15 +143,25 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Click Live Play Button")) {
-				// state returns idle if overlay button is present
-				overlay = driver.FindElements("xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']").Count;
+				// check if event 
+				overlay = driver.FindElements("xpath", "//div[contains(@class,'event has-stream')]").Count;
 				if (overlay > 0) {
-					steps.Add(new TestStep(order, "Click Live Play Button", "", "click", "xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
+					// wait for one second, check for live play button				
+					Thread.Sleep(1000);
+					overlay = driver.FindElements("xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']").Count;
+					if (overlay > 0) {
+						live = true;
+					}
 				}
 				else {
-					log.Warn("No Live Play Button found. Event url: " + driver.GetDriver().Url);
+					log.Info("Not an event. Live Play Button is present.");
+					live = true;
+				}
+
+				if (live == true) {
+					steps.Add(new TestStep(order, "Click Live Play Button", "", "click", "xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();				
 				}
 			}
 			
