@@ -23,6 +23,9 @@ namespace SeleniumProject.Function
 			int channel = 0;
 			int attempts = 10;
 			string classList = "";
+			string title = "";
+			string edit = "";
+			bool live = false;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
@@ -140,15 +143,47 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Click Live Play Button")) {
-				// state returns idle if overlay button is present
-				overlay = driver.FindElements("xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']").Count;
+				// check if event 
+				overlay = driver.FindElements("xpath", "//div[contains(@class,'event has-stream')]").Count;
 				if (overlay > 0) {
-					steps.Add(new TestStep(order, "Click Live Play Button", "", "click", "xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
+					// wait for one second, check for live play button				
+					Thread.Sleep(1000);
+					overlay = driver.FindElements("xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']").Count;
+					if (overlay > 0) {
+						live = true;
+					}
 				}
 				else {
-					log.Warn("No Live Play Button found. Event url: " + driver.GetDriver().Url);
+					log.Info("Not an event. Live Play Button is present.");
+					live = true;
+				}
+
+				if (live == true) {
+					steps.Add(new TestStep(order, "Click Live Play Button", "", "click", "xpath", "//div[contains(@class,'scroll-resize') or contains(@class,'live-tv-watch')]//div[@class='live-arrow']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();				
+				}
+			}
+			
+			else if (step.Name.Equals("Verify Top Show Title")) {
+				title = step.Data;
+				if (title.Contains("...") && title.Length == 53) {
+					edit = driver.FindElement("xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]").Text;
+					edit = edit.Substring(50) + "...";
+					log.Info("Title was shortened at 50 characters: " + edit);
+					if(title.Equals(edit)) {
+						log.Info("VERIFICATION PASSED. Shortened expected title [" +title + "] matches shortened actual title [" + edit + "]");
+					}
+					else {
+						log.Error("***VERIFICATION FAILED. Shortened expected title [" +title + "] DOES NOT match shortened actual title [" + edit + "]***");
+						err.CreateVerificationError(step, title, edit);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+				else {
+					steps.Add(new TestStep(order, "Verify Top Show Title", "", "verify_value", "xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();					
 				}
 			}
 			
