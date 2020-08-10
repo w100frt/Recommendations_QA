@@ -1,6 +1,8 @@
 ﻿{
 	"page":"Entity_News",
 	"testDefinitions":[
+		{"name":"Click Next","objectType":"click","by":"xpath","objectId":"//nav[@class='pagination']//a[@class='next']"},
+		{"name":"Verify Active Pagination Number","objectType":"verify_value","by":"xpath","objectId":"//nav[@class='pagination']//a[@class='active']"},
 		{"name":"Verify Number of Stories","objectType":"verify_count","by":"xpath","objectId":"//a[@class='news']"}
 	]
 }

@@ -181,7 +181,7 @@ namespace SeleniumProject.Function
 					}
 				}
 				else {
-					steps.Add(new TestStep(order, "Verify Top Show Title", "", "verify_value", "xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]", wait));
+					steps.Add(new TestStep(order, "Verify Top Show Title", title, "verify_value", "xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();					
 				}
