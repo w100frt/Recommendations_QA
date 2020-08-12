@@ -11,7 +11,7 @@
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "NFL"},
 		{"page":"Entity", "name":"Verify Header Divider"},
-		{"page":"Entity", "name":"Verify Header Subtext", "data": "HOF: AUG 6"},
+		{"page":"Entity", "name":"Verify Header Subtext", "data": "PRESEASON WEEK 1: AUG 13 - AUG 16"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"National Football League - Added to your favorites."},
