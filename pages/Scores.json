@@ -12,7 +12,7 @@
 		{"name":"Click NFL","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click NHL","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Click Soccer","objectType":"script","by":"xpath","objectId":"Scores"},
-		{"name":"Click Top","objectType":"click","by":"xpath","objectId":"//a[span[contains(.,'TOP')]]"},
+		{"name":"Click Top","objectType":"click","by":"xpath","objectId":"//a[h1[contains(.,'TOP')]]"},
 		{"name":"Click Calendar Arrow Left","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-left']"},
 		{"name":"Click Calendar Arrow Right","objectType":"click","by":"xpath","objectId":"//div[@class='qs-arrow qs-right']"},
 		{"name":"Click Scorechip By Number","objectType":"script","by":"xpath","objectId":"Scores"},
