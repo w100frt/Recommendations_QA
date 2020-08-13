@@ -8,9 +8,7 @@
 		{"page":"EventRecap", "name":"Verify Odds Section is Displayed"},
 		{"page":"EventRecap", "name":"Verify Odds Title Value", "data":"ODDS"},
 		{"page":"EventRecap", "name":"Verify Number of Odds Rows", "data":"3"},
-		{"page":"EventRecap", "name":"Verify Odds Row 1 Subtitle", "data":"TOTAL"},
-		{"page":"EventRecap", "name":"Verify Odds Row 2 Subtitle", "data":"TEAM TO WIN"},
-		{"page":"EventRecap", "name":"Verify Odds Row 3 Subtitle", "data":"BOTH TEAMS TO SCORE"},
+		{"page":"EventRecap", "name":"Verify Odds Row Subtitles by Sport"},
 		{"page":"EventRecap", "name":"Verify Key Plays Section is Displayed"},
 		{"page":"EventRecap", "name":"Verify Key Plays Title Value","data":"KEY PLAYS"}
     ]

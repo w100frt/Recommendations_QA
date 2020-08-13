@@ -11,6 +11,7 @@
 		{"name":"Verify Odds Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]"},
 		{"name":"Verify Odds Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]//span[contains(@class,'title')]"},
 		{"name":"Verify Number of Odds Rows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'odds-row-container')]"},
+		{"name":"Verify Odds Row Subtitles by Sport","objectType":"script","by":"xpath","objectId":"Recap"},
 		{"name":"Verify Odds Row 1 Subtitle","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-rows')]//div[contains(@class,'odds-row')][1]//div[contains(@class,'subtitle')]"},
 		{"name":"Verify Odds Row 2 Subtitle","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-rows')]//div[contains(@class,'odds-row')][2]//div[contains(@class,'subtitle')]"},
 		{"name":"Verify Odds Row 3 Subtitle","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-rows')]//div[contains(@class,'odds-row')][3]//div[contains(@class,'subtitle')]"},
