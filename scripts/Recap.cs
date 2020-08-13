@@ -54,7 +54,7 @@ namespace SeleniumProject.Function
 						stoppage.Add("TOTAL");
 						stoppage.Add("TEAM TO WIN");
 						break;
-					case "NHL":
+					case "MLB":
 						stoppage.Add("RUN LINE");
 						stoppage.Add("TOTAL");
 						stoppage.Add("TEAM TO WIN");
