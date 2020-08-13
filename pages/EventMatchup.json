@@ -7,6 +7,6 @@
 		{"name":"Verify Team Stats Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[div[contains(@class,'matchup-team-comparison')]][1]/div[1]"},
 		{"name":"Verify Team Stats Module is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='feed-component'][div[contains(.,'TEAM STATS')]]//div[contains(@class,'matchup-team-comparison')]"},
 		{"name":"Verify Team Leaders Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[div[contains(@class,'matchup-team-comparison')]][2]/div[1]"},
-		{"name":"Verify Team Leaders Module is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='feed-component'][div[contains(.,'TEAM LEADERS')]]//div[contains(@class,'matchup-team-comparison')]"},
+		{"name":"Verify Team Leaders Module is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='feed-component'][div[contains(.,'TEAM LEADERS')]]//div[contains(@class,'matchup-team-comparison')]"}
 	]
 }
