@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_EntityLeagueNews",
+    "testId":"t25",
+    "testSteps":[
+		{"page":"Entity_News", "name":"Verify Number of Stories & Videos", "data":"25"},
+		{"page":"Entity_News", "name":"Verify Active Pagination Number", "data":"1"},
+		{"page":"Entity_News", "name":"Click Next"},
+		{"page":"Entity_News", "name":"Verify Active Pagination Number", "data":"2"},
+		{"page":"Entity_News", "name":"Verify Number of Stories & Videos", "data":"25"},
+		{"page":"Entity_News", "name":"Click Pagination Link by Number", "data":"4"},
+		{"page":"Entity_News", "name":"Verify Active Pagination Number", "data":"4"},
+		{"page":"Entity_News", "name":"Verify Number of Stories & Videos", "data":"25"}
+		]
+}

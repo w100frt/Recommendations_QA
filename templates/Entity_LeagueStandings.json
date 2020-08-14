@@ -1,0 +1,10 @@
+﻿{
+    "testCase":"Template_EntityLeagueStandings",
+    "testId":"t27",
+    "testSteps":[
+		{"page":"Entity_Standings", "name":"Click Open Standings Dropdown"},
+		{"page":"Entity_Standings", "name":"Verify Standings Dropdown List Displayed"},
+		{"page":"Entity_Standings", "name":"Verify Standings Dropdown List By Sport"},
+		{"page":"Entity_Standings", "name":"Verify Table Standings Displayed"},
+		]
+}
