@@ -7,7 +7,6 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
-		{"page":"Explore", "name":"Click Sports"},
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Explore", "name":"Verify Count of Sports", "data":"30"},
 		{"page":"Explore", "name":"Click MLB"},
