@@ -132,10 +132,10 @@ namespace SeleniumProject.Function
 				}
 				
 				if (step.Name.Contains("Player Stats")) {
-					steps.Add(new TestStep(order, "Verify Count", player, "verify_count", "xpath", "//div[contains(@class,'teams-list')]//a", wait));
+					steps.Add(new TestStep(order, "Verify Count", player, "verify_count", "xpath", "//div[contains(@class,'stats-overview-component')][div[.='PLAYER STATS']]//a[contains(@class,'stats-overview')]", wait));
 				}
 				else if (step.Name.Contains("Team Stats")) {
-					steps.Add(new TestStep(order, "Verify Count", sport, "verify_count", "xpath", "//div[contains(@class,'teams-list')]//a", wait));
+					steps.Add(new TestStep(order, "Verify Count", sport, "verify_count", "xpath", "//div[contains(@class,'stats-overview-component')][div[.='TEAM STATS']]//a[contains(@class,'stats-overview')]", wait));
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
