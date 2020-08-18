@@ -109,8 +109,8 @@ namespace SeleniumProject.Function
 				if (!success) {
 					switch (sport) {
 						case "NFL":
-							sport = "16";
-							player = "11";
+							player = "16";
+							sport = "11";
 							break;
 						case "NBA":
 							sport = "";
@@ -121,8 +121,8 @@ namespace SeleniumProject.Function
 							player = "";
 							break;
 						case "MLB":
-							sport = "15";
-							player = "14";
+							player = "15";
+							sport = "14";
 							break;
 						default :
 							sport = "";
