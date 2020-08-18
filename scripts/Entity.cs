@@ -158,7 +158,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Header Subtext")) {
 				sport = step.Data;
-				player = driver.FindElement("xpath","//div[@class='scores']//a").Count;
+				player = driver.FindElements("xpath","//div[@class='scores']//a").Count;
 				
 				switch (sport) {
 					case "NFL":
@@ -176,7 +176,6 @@ namespace SeleniumProject.Function
 						sport = sport + "" + player;
 						break;
 					default :
-						sport = sport;
 						break;	
 				}
 				
