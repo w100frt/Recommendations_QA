@@ -54,7 +54,7 @@ namespace SeleniumProject.Function
 				"xpath","//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]").Count;
 				for(int t = 1; t <= total; t++) {
 					DataManager.CaptureMap["MLB_TEAM"] = driver.FindElement("xpath","//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]["+ t +"]").Text;
-					steps.Add(new TestStep(order, "Template for Team " + t, "", "run_template", "xpath", "", wait));
+					steps.Add(new TestStep(order, "Template for Team " + t, "", "run_template", "xpath", "MLB_Team", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();					
 				}
