@@ -167,7 +167,7 @@ namespace SeleniumProject.Function
 						sport = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[1]").Text;
 						player = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
 						if (sport.StartsWith("PRE")) {
-							sport.Replace("PRE", "PRESEASON");
+							sport = sport.Replace("PRE", "PRESEASON");
 						}	
 						sport = sport + ": " + player;
 						break;
