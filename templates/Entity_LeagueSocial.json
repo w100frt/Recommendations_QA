@@ -1,0 +1,8 @@
+﻿{
+    "testCase":"Template_EntityLeagueSocial",
+    "testId":"t27",
+    "testSteps":[
+		{"page":"Entity_Social", "name":"Verify Tweet is Displayed"},
+		{"page":"Entity_Social", "name":"Verify Number of Social Items", "data":"10"}
+		]
+}

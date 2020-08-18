@@ -4,6 +4,7 @@ using SeleniumProject.Utilities;
 using SeleniumProject;
 using OpenQA.Selenium;
 using log4net;
+using System.Threading;
 
 namespace SeleniumProject.Function
 {
@@ -19,6 +20,8 @@ namespace SeleniumProject.Function
 			List<string> standings = new List<string>();
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
+			int count = 0;
+			int total = 0;
 			
 			if (step.Name.Equals("Click Pagination Link by Number")) {
 				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//nav[@class='pagination']//a[text()='"+ step.Data +"']", wait));
@@ -65,8 +68,20 @@ namespace SeleniumProject.Function
 					steps.Clear();
 					size++;					
 				}
+			}
+			
+			else if (step.Name.Equals("Verify Tweet is Displayed")) {
+				count = driver.FindElements("xpath", "//div[@class='loader']").Count;
+				do {
+					log.Info("Spinners found: " + count + ". Waiting for social posts to load.");
+					Thread.Sleep(1000);
+					count = driver.FindElements("xpath", "//div[@class='loader']").Count;
+				}
+				while (count == 0 && total++ > 5);
 				
-
+				steps.Add(new TestStep(order, "Verify Tweet", "", "verify_displayed", "xpath", "//*[contains(@id,'twitter-widget')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else {

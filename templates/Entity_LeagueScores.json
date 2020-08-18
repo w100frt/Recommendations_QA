@@ -3,6 +3,6 @@
     "testId":"t26",
     "testSteps":[
 		{"page":"Entity", "name":"Verify Header Subtext", "data": ""},
-		{"page":"Entity_Scores", "name":"Verify Scorechip is Displayed"},
+		{"page":"Entity_Scores", "name":"Verify Scorechip is Displayed"}
 		]
 }
