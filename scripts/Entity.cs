@@ -164,11 +164,11 @@ namespace SeleniumProject.Function
 					case "NFL":
 						driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Click;
 						sport = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[1]").Text;
-						count = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
+						player = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
 						if (sport.StartsWith("PRE")) {
 							sport.Replace("PRE", "PRESEASON");
 						}	
-						sport = sport + ": " + count;
+						sport = sport + ": " + player;
 						break;
 					case "NBA":
 						sport = count + " GAMES " + sport;
