@@ -55,7 +55,7 @@ namespace SeleniumProject.Function
 					case "MLB":
 						standings.Add("DIVISION");
 						standings.Add("WILD CARD");
-						standings.Add("PRESEASON");
+						standings.Add("SPRING TRAINING");
 						break;
 					default :
 						standings.Add("");
