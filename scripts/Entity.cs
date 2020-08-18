@@ -156,6 +156,36 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
+			else if (step.Name.Equals("Verify Header Subtext")) {
+				sport = step.Data;
+				player = driver.FindElement("xpath","//div[@class='scores']//a").Count;
+				
+				switch (sport) {
+					case "NFL":
+						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						sport = sport + " " + player;
+						break;
+					case "NBA":
+						sport = sport + " " + player;
+						break;
+					case "NHL":
+						sport = sport + "" + player;
+						break;
+					case "MLB":
+						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						sport = sport + "" + player;
+						break;
+					default :
+						sport = sport;
+						break;	
+				}
+				
+				steps.Add(new TestStep(order, "Verify Text", sport, "verify_value", "xpath", "//div[contains(@class,'entity-header')]/div/span", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			//div[@class='scores']//a
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
