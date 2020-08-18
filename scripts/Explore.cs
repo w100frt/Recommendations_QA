@@ -50,9 +50,10 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify MLB Teams")) {
-			    total = driver.FindElements("//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]").Count;
-				foreach(int t in total) {
-					DataManager.CaptureMap["MLB_TEAM"] = driver.FindElement("//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]["+ t +"]").Text;
+			    total = driver.FindElements(
+				"xpath","//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]").Count;
+				for(int t = 1; t <= total.Length; t++) {
+					DataManager.CaptureMap["MLB_TEAM"] = driver.FindElement("xpath","//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]["+ t +"]").Text;
 					steps.Add(new TestStep(order, "Template for Team " + t, "", "run_template", "xpath", "", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();					
