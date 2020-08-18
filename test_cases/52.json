@@ -8,9 +8,10 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click MLB"},
-		{"page":"Explore", "name":"Verify Count of Sports", "data":"30"},
+		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"30"},
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "MLB"},
+		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
 		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
@@ -20,6 +21,6 @@
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
-		{"page":"Navigation","name":"Run Template", "data":"ProLeague_Entity"},
+		{"page":"Navigation","name":"Run Template", "data":"ProLeague_Entity"}
 	]
 }

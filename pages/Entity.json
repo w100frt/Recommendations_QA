@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Entity",
 	"testDefinitions":[
+		{"name":"Capture Header Text","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
 		{"name":"Click Add or Remove Favorite Button","objectType":"click","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Click Highlights Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'highlights')]"},
 		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'news')]"},

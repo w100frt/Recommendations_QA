@@ -20,6 +20,7 @@ namespace SeleniumProject.Function
 			List<string> standings = new List<string>();
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
+			string player = "";
 			int count = 0;
 			int total = 0;
 			int size;
@@ -71,14 +72,84 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Verify Count of Teams")) {
+				sport = step.Data;
+				bool success = Int32.TryParse(sport, out total);
+				
+				if (!success) {
+					switch (sport) {
+						case "NFL":
+							sport = "32";
+							break;
+						case "NBA":
+							sport = "";
+							break;
+						case "NHL":
+							sport = "";
+							break;
+						case "MLB":
+							sport = "30";
+							break;
+						default :
+							sport = "32";
+							break;
+					}		
+				}
+
+				steps.Add(new TestStep(order, "Verify Count", sport, "verify_count", "xpath", "//div[contains(@class,'teams-list')]//a", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify Number of Player Stats Categories") || step.Name.Equals("Verify Number of Team Stats Categories")) {
+				sport = step.Data;
+				player = step.Data;
+				bool success = Int32.TryParse(sport, out total);
+				
+				if (!success) {
+					switch (sport) {
+						case "NFL":
+							sport = "16";
+							player = "11";
+							break;
+						case "NBA":
+							sport = "";
+							player = "";
+							break;
+						case "NHL":
+							sport = "";
+							player = "";
+							break;
+						case "MLB":
+							sport = "15";
+							player = "14";
+							break;
+						default :
+							sport = "";
+							player = "";
+							break;
+					}	
+				}
+				
+				if (step.Name.Contains("Player Stats")) {
+					steps.Add(new TestStep(order, "Verify Count", player, "verify_count", "xpath", "//div[contains(@class,'teams-list')]//a", wait));
+				}
+				else if (step.Name.Contains("Team Stats")) {
+					steps.Add(new TestStep(order, "Verify Count", sport, "verify_count", "xpath", "//div[contains(@class,'teams-list')]//a", wait));
+				}
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else if (step.Name.Equals("Verify Tweet is Displayed")) {
 				count = driver.FindElements("xpath", "//div[@class='loader']").Count;
-				do {
+				
+				while (count == 0 && total > 5) {
 					log.Info("Spinners found: " + count + ". Waiting for social posts to load.");
 					Thread.Sleep(1000);
 					count = driver.FindElements("xpath", "//div[@class='loader']").Count;
+					total++;
 				}
-				while (count == 0 && total++ > 5);
 				
 				steps.Add(new TestStep(order, "Verify Tweet", "", "verify_displayed", "xpath", "//*[contains(@id,'twitter-widget')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
