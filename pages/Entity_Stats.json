@@ -2,7 +2,7 @@
 	"page":"Entity_Stats",
 	"testDefinitions":[
 		{"name":"Verify Number of Stats Headers","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'stats-overview-header')]"},
-		{"name":"Verify Number of Player Stats Categories","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'stats-overview-component')][div[.='PLAYER STATS']]//a[contains(@class,'stats-overview')]"},
-		{"name":"Verify Number of Team Stats Categories","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'stats-overview-component')][div[.='TEAM STATS']]//a[contains(@class,'stats-overview')]"}
+		{"name":"Verify Number of Player Stats Categories","objectType":"script","by":"xpath","objectId":"Entity"},
+		{"name":"Verify Number of Team Stats Categories","objectType":"script","by":"xpath","objectId":"Entity"}
 	]
 }

@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Entity",
 	"testDefinitions":[
+		{"name":"Capture Header Text","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
 		{"name":"Click Add or Remove Favorite Button","objectType":"click","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Click Highlights Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'highlights')]"},
 		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'news')]"},
@@ -13,7 +14,7 @@
 		{"name":"Verify Add or Remove Favorite Button Text","objectType":"verify_value","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Verify Header Divider","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'entity-header-divider')]"},
 		{"name":"Verify Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
-		{"name":"Verify Header Subtext","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-header')]/div/span"},
+		{"name":"Verify Header Subtext","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Selected Tab Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@class,'nav-selected')]"}
 	]
 }

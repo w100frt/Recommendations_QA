@@ -3,6 +3,7 @@
 	"testDefinitions":[
 		{"name":"Verify Away Team Link","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'boxscore')]//a)[2]"},
 		{"name":"Verify Home Team Link","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'boxscore')]//a)[3]"},
-		{"name":"Verify Matchup Link","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'boxscore')]//a)[1]"}
+		{"name":"Verify Matchup Link","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'boxscore')]//a)[1]"},
+		{"name":"Verify Box Score Tabs By Sport","objectType":"script","by":"xpath","objectId":"BoxScore"}
 	]
 }
