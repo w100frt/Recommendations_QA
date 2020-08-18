@@ -183,7 +183,6 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
-			//div[@class='scores']//a
 			
 			else {
 				throw new Exception("Test Step not found in script");
