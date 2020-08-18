@@ -24,6 +24,7 @@ namespace SeleniumProject.Function
 			int count = 0;
 			int total = 0;
 			int size;
+			IWebElement element;
 			
 			if (step.Name.Equals("Click Pagination Link by Number")) {
 				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//nav[@class='pagination']//a[text()='"+ step.Data +"']", wait));
@@ -162,7 +163,8 @@ namespace SeleniumProject.Function
 				
 				switch (sport) {
 					case "NFL":
-						driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Click;
+						element = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']");
+						element.Click;
 						sport = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[1]").Text;
 						player = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
 						if (sport.StartsWith("PRE")) {
