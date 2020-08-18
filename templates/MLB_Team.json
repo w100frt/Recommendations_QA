@@ -24,7 +24,7 @@
 		{"page":"Entity", "name":"Click Roster Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ROSTER"},
 		{"page":"Entity_Roster", "name":"Capture Number of Players"},
-		{"page":"Entity_Roster", "name":"Verify Player Count", "data":"PLAYER_COUNT"},
+		{"page":"Entity_Roster", "name":"Verify Player Count", "data":"#PLAYER_COUNT"},
 		{"page":"Entity", "name":"Click Stats Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"STATS"},
 		{"page":"Entity_Stats", "name":"Verify Number of Stats Headers", "data":"2"},

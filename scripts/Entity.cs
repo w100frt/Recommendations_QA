@@ -191,7 +191,9 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture Number of Players")) {
-				DataManager.CaptureMap["PLAYER_COUNT"] = driver.FindElements("xpath","(//div[@class='table-roster'])[1]//tbody//tr").Count.ToString();
+				total = driver.FindElements("xpath","(//div[@class='table-roster'])[1]//tbody//tr").Count;
+				log.Info("Storing total as " + total.ToString());
+				DataManager.CaptureMap["PLAYER_COUNT"] = total.ToString();
 			}	
 			
 			else {
