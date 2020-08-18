@@ -1,0 +1,13 @@
+﻿{
+	"testCase":"MLB: Teams Pages",
+	"env":"dev",
+	"testId":"34",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click MLB"},
+		{"page":"Explore", "name":"Verify MLB Teams"}
+	]
+}

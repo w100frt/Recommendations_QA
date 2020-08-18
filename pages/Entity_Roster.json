@@ -1,0 +1,7 @@
+﻿{
+	"page":"Entity_Roster",
+	"testDefinitions":[
+		{"name":"Capture Number of Players","objectType":"script","by":"xpath","objectId":"Entity"},
+		{"name":"Verify Player Count","objectType":"verify_count","by":"xpath","objectId":"(//div[@class='table-roster'])[2]//td[@data-index='0']"}
+	]
+}

@@ -190,6 +190,10 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
+			else if (step.Name.Equals("Capture Number of Players")) {
+				DataManager.CaptureMap["PLAYER_COUNT"] = driver.FindElements("xpath","(//div[@class='table-roster'])[1]//tbody//tr").Count;
+			}	
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

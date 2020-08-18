@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Entity_Scores",
 	"testDefinitions":[
-		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"}
+		{"name":"Verify Scorechip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//a[contains(@class,'score-chip')]"},
+		{"name":"Verify Score Date","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//span[@class='title-text']"}
 	]
 }

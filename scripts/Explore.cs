@@ -18,6 +18,7 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			string sport = step.Data;
 			string activeTeam;
+			int total = 0;
             List<TestStep> steps = new List<TestStep>();
 			
 			if (step.Name.Equals("Verify Teams by Sport")) {
@@ -45,6 +46,16 @@ namespace SeleniumProject.Function
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 					}
+				}
+			}
+			
+			else if (step.Name.Equals("Verify MLB Teams")) {
+			    total = driver.FindElements("//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]").Count;
+				foreach(int t in total) {
+					DataManager.CaptureMap["MLB_TEAM"] = driver.FindElement("//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]["+ t +"]").Text;
+					steps.Add(new TestStep(order, "Template for Team " + t, "", "run_template", "xpath", "", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();					
 				}
 			}
 			
