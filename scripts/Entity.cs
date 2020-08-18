@@ -22,6 +22,7 @@ namespace SeleniumProject.Function
 			string sport = "";
 			int count = 0;
 			int total = 0;
+			int size;
 			
 			if (step.Name.Equals("Click Pagination Link by Number")) {
 				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//nav[@class='pagination']//a[text()='"+ step.Data +"']", wait));
@@ -63,7 +64,7 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string s in standings) {
-					steps.Add(new TestStep(order, "Verify Dropdown Value " + size, standings[s], "verify_value", "xpath", "//div[contains(@class,'standings')]//ul//li[contains(@class,'dropdown')]["+size+"]", wait));
+					steps.Add(new TestStep(order, "Verify Dropdown Value " + size, standings[size-1], "verify_value", "xpath", "//div[contains(@class,'standings')]//ul//li[contains(@class,'dropdown')]["+size+"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size++;					
