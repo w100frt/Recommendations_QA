@@ -163,17 +163,17 @@ namespace SeleniumProject.Function
 				switch (sport) {
 					case "NFL":
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = sport + " " + count;
+						sport = count + " GAMES " + sport;
 						break;
 					case "NBA":
-						sport = sport + " " + count;
+						sport = count + " GAMES " + sport;
 						break;
 					case "NHL":
-						sport = sport + "" + count;
+						sport = count + " GAMES " + sport;
 						break;
 					case "MLB":
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = sport + "" + count;
+						sport = count + " GAMES " + sport;
 						break;
 					default :
 						break;	
