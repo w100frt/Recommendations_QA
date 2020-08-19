@@ -40,7 +40,7 @@ namespace SeleniumProject.Function
 				name = DataManager.CaptureMap["STAT_LEADER"];
 				name = name.Substring(0,1) + ". " + name.Substring(name.IndexOf(" "));
 				sb.AppendLine(name);
-				sb.AppendLine(DataManager.CaptureMap["STAT_LEADER_TEAM"]);
+				sb.Append(DataManager.CaptureMap["STAT_LEADER_TEAM"]);
 				DataManager.CaptureMap["STAT_LEADER"] = sb.ToString();
 			}
 			
