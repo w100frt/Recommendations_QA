@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
             List<TestStep> steps = new List<TestStep>();
 			int total = 0;
 			int size;
+			string name = "";
 			IWebElement element;
 			
 			if (step.Name.Equals("Capture Stat Name by Number")) {
@@ -31,8 +32,12 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Capture Stat Leader by Number")) {
 				steps.Add(new TestStep(order, "Capture Leader " + step.Data, "STAT_LEADER", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[1])["+ step.Data +"]", wait));
+				steps.Add(new TestStep(order, "Capture Leader Team " + step.Data, "STAT_LEADER_TEAM", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[@class='uc'])["+ step.Data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+				name = DataManager.CaptureMap["STAT_LEADER"];
+				name = name.Substring(0,1) + ". " + name.Substring(name.IndexOf(" "));
+				DataManager.CaptureMap["STAT_LEADER"] = name + "\n" + DataManager.CaptureMap["STAT_LEADER_TEAM"];
 			}
 			
 			else if (step.Name.Equals("Capture Stat Value by Number")) {
