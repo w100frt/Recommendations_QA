@@ -38,7 +38,7 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				name = DataManager.CaptureMap["STAT_LEADER"];
-				name = name.Substring(0,1) + ". " + name.Substring(name.IndexOf(" "));
+				name = name.Substring(0,1) + "." + name.Substring(name.IndexOf(" "));
 				sb.AppendLine(name);
 				sb.Append(DataManager.CaptureMap["STAT_LEADER_TEAM"]);
 				DataManager.CaptureMap["STAT_LEADER"] = sb.ToString();
