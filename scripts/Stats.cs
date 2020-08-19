@@ -70,6 +70,13 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
+			else if (step.Name.Equals("Run MLB Stats Template")) {
+				DataManager.CaptureMap["STATS_NUM"] = step.Data;
+				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_Stats", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
