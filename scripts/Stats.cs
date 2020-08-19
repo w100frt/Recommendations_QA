@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using SeleniumProject.Utilities;
+using SeleniumProject;
+using OpenQA.Selenium;
+using log4net;
+using System.Threading;
+
+namespace SeleniumProject.Function
+{
+	public class Script : ScriptingInterface.IScript
+	{
+		private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+		
+		public void Execute(DriverManager driver, TestStep step)
+		{
+			VerifyError err = new VerifyError();
+			long order = step.Order;
+			string wait = step.Wait != null ? step.Wait : "";
+			List<string> standings = new List<string>();
+            List<TestStep> steps = new List<TestStep>();
+			int total = 0;
+			int size;
+			IWebElement element;
+			
+			if (step.Name.Equals("Capture Stat Name by Number")) {
+				steps.Add(new TestStep(order, "Capture Name " + step.Data, "STAT_NAME", "capture", "xpath", "(//div[contains(@class,'stat-name')])["+ step.Data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Capture Stat Leader by Number")) {
+				steps.Add(new TestStep(order, "Capture Leader " + step.Data, "STAT_LEADER", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[1])["+ step.Data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Capture Stat Value by Number")) {
+				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_VALUE", "capture", "xpath", "(//div[contains(@class,'stat-data')]/div[1])["+ step.Data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Capture Stat Abbreviation by Number")) {
+				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_ABBR", "capture", "xpath", "(//div[@class='stat-abbr'])["+ step.Data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Click Stat Category by Number")) {
+				steps.Add(new TestStep(order, "Click Category " + step.Data, "", "click", "xpath", "(//a[contains(@class,'stats-overview')])["+ step.Data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Select Stats Category from Dropdown")) {
+				steps.Add(new TestStep(order, "Open Stats Dropdown", "", "click", "xpath", "//div[contains(@class,'stats-header')]//a[contains(@class,'dropdown-title')]", wait));
+				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//div[contains(@class,'stats-header')]//a[.='"+ step.Data +"']", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else {
+				throw new Exception("Test Step not found in script");
+			}
+		}
+	}
+}

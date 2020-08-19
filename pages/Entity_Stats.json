@@ -1,6 +1,15 @@
 ﻿{
 	"page":"Entity_Stats",
 	"testDefinitions":[
+		{"name":"Capture Stat Abbreviation by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Stat Name by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Stat Leader by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Stat Value by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Select Stats Category from Dropdown","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Verify Bold Category","objectType":"verify_value","by":"xpath","objectId":"//th[contains(@class,'cell-number') and contains(@class,'bold')]"},
+		{"name":"Verify Stat Leader Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[@data-index='1']"},
+		{"name":"Verify Stat Leader Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[contains(@class,'bold')]"},
+		{"name":"Verify Stats Dropdown Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'stats-header')]//a[contains(@class,'dropdown-title')]"},
 		{"name":"Verify Number of Stats Headers","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'stats-overview-header')]"},
 		{"name":"Verify Number of Player Stats Categories","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Number of Team Stats Categories","objectType":"script","by":"xpath","objectId":"Entity"}
