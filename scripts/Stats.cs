@@ -5,6 +5,7 @@ using SeleniumProject;
 using OpenQA.Selenium;
 using log4net;
 using System.Threading;
+using System.Text;
 
 namespace SeleniumProject.Function
 {
@@ -23,6 +24,7 @@ namespace SeleniumProject.Function
 			int size;
 			string name = "";
 			IWebElement element;
+			StringBuilder sb = new StringBuilder();
 			
 			if (step.Name.Equals("Capture Stat Name by Number")) {
 				steps.Add(new TestStep(order, "Capture Name " + step.Data, "STAT_NAME", "capture", "xpath", "(//div[contains(@class,'stat-name')])["+ step.Data +"]", wait));
@@ -37,7 +39,9 @@ namespace SeleniumProject.Function
 				steps.Clear();
 				name = DataManager.CaptureMap["STAT_LEADER"];
 				name = name.Substring(0,1) + ". " + name.Substring(name.IndexOf(" "));
-				DataManager.CaptureMap["STAT_LEADER"] = name + "\n" + DataManager.CaptureMap["STAT_LEADER_TEAM"];
+				sb.AppendLine(name);
+				sb.AppendLine(DataManager.CaptureMap["STAT_LEADER_TEAM"]);
+				DataManager.CaptureMap["STAT_LEADER"] = sb.ToString();
 			}
 			
 			else if (step.Name.Equals("Capture Stat Value by Number")) {
