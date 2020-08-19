@@ -20,6 +20,8 @@ namespace SeleniumProject.Function
 			int total;
 			int size = 0;
 			string date = "";
+			string cat = "";
+			List<string> categories = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 
@@ -69,10 +71,43 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Verify Stories Category by Sport")) {
+				
+				switch(step.Data) {
+					case "NFL":
+						
+						break;
+					case "NBA":
+						
+						break;
+					case "NHL":
+						
+						break;
+					case "MLB":
+						string[] mlb = {"MAJOR LEAGUE BASEBALL", "ARIZONA DIAMONDBACKS", "ATLANTA BRAVES", "BALTIMORE ORIOLES", "BOSTON RED SOX", "CHICAGO CUBS", "CHICAGO WHITE SOX", "CINCINNATI REDS", "CLEVELAND INDIANS", "COLORADO ROCKIES", "DETROIT TIGERS", "HOUSTON ASTROS", "KANSAS CITY ROYALS", "LOS ANGELES ANGELS", "LOS ANGELES DODGERS", "MIAMI MARLINS", "MILWAUKEE BREWERS", "MINNESOTA TWINS", "NEW YORK METS", "NEW YORK YANKEES", "OAKLAND ATHLETICS", "PHILADELPHIA PHILLIES", "PITTSBURGH PIRATES", "SAN DIEGO PADRES", "SAN FRANCISCO GIANTS", "SEATTLE MARINERS", "ST. LOUIS CARDINALS", "TAMPA BAY RAYS", "TEXAS RANGERS", "TORONTO BLUE JAYS", "WASHINGTON NATIONALS"};
+						categories.AddRange(mlb);
+						break;
+					default :
+						
+						break;
+				}
+				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-up')]").Count;
+				for (int i = 1; i <= size; i++) {
+					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
+					if (categories.Contains(cat)) {
+						log.Info("Story " + i + " Passed. Category [" + cat + "] falls under " + step.Data);
+					}
+					else {
+						log.Error("***VERIFICATION FAILED. Story " + i + ". Category [" + cat + "] DOES NOT fall under " + step.Data);
+						err.CreateVerificationError(step, cat, step.Data);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+			}
+			
 			else {
 				log.Warn("Test Step not found in script...");
 			}
-			
 		}
 	}
 }

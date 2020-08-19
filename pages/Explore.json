@@ -12,6 +12,7 @@
 		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
 		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[@id='explore']//div[nav[@selected-tab]]//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
 		{"name":"Verify Count of Teams or Players","objectType":"verify_count","by":"xpath","objectId":"//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
+		{"name":"Verify MLB Teams","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify Selected Explore Pane","objectType":"verify_value","by":"xpath","objectId":"//div[@id='explore']//a[contains(@class,'selected')]"},
 		{"name":"Verify Teams by Sport","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify Top Search Result Text","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'title fs')]"},

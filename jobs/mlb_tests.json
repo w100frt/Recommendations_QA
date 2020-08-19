@@ -1,0 +1,14 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"MLB Regression Test Suite",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":17},
+		{"testId":52},
+		{"testId":34},
+		{"testId":33}
+	]
+} 
