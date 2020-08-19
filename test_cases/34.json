@@ -2,7 +2,7 @@
 	"testCase":"MLB: Teams Pages",
 	"env":"dev",
 	"testId":"34",
-	"testRail":"",
+	"testRail":"7720273",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
