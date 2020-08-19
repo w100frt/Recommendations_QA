@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			int size = 0;
 			string date = "";
 			string cat = "";
-			List<string> categories;
+			List<string> categories = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 
@@ -84,13 +84,13 @@ namespace SeleniumProject.Function
 						
 						break;
 					case "MLB":
-						categories = new List<string>(){"MAJOR LEAGUE BASEBALL", "ARIZONA DIAMONDBACKS", "ATLANTA BRAVES", "BALTIMORE ORIOLES", "BOSTON RED SOX", "CHICAGO CUBS", "CHICAGO WHITE SOX", "CINCINNATI REDS", "CLEVELAND INDIANS", "COLORADO ROCKIES", "DETROIT TIGERS", "HOUSTON ASTROS", "KANSAS CITY ROYALS", "LOS ANGELES ANGELS", "LOS ANGELES DODGERS", "MIAMI MARLINS", "MILWAUKEE BREWERS", "MINNESOTA TWINS", "NEW YORK METS", "NEW YORK YANKEES", "OAKLAND ATHLETICS", "PHILADELPHIA PHILLIES", "PITTSBURGH PIRATES", "SAN DIEGO PADRES", "SAN FRANCISCO GIANTS", "SEATTLE MARINERS", "ST. LOUIS CARDINALS", "TAMPA BAY RAYS", "TEXAS RANGERS", "TORONTO BLUE JAYS", "WASHINGTON NATIONALS"};
+						string[] teams = {"MAJOR LEAGUE BASEBALL", "ARIZONA DIAMONDBACKS", "ATLANTA BRAVES", "BALTIMORE ORIOLES", "BOSTON RED SOX", "CHICAGO CUBS", "CHICAGO WHITE SOX", "CINCINNATI REDS", "CLEVELAND INDIANS", "COLORADO ROCKIES", "DETROIT TIGERS", "HOUSTON ASTROS", "KANSAS CITY ROYALS", "LOS ANGELES ANGELS", "LOS ANGELES DODGERS", "MIAMI MARLINS", "MILWAUKEE BREWERS", "MINNESOTA TWINS", "NEW YORK METS", "NEW YORK YANKEES", "OAKLAND ATHLETICS", "PHILADELPHIA PHILLIES", "PITTSBURGH PIRATES", "SAN DIEGO PADRES", "SAN FRANCISCO GIANTS", "SEATTLE MARINERS", "ST. LOUIS CARDINALS", "TAMPA BAY RAYS", "TEXAS RANGERS", "TORONTO BLUE JAYS", "WASHINGTON NATIONALS"};
 						break;
 					default :
 						
 						break;
 				}
-				
+				categories.AddRange(teams);
 				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-up')]").Count;
 				for (int i = 1; i <= size; i++) {
 					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
@@ -108,7 +108,6 @@ namespace SeleniumProject.Function
 			else {
 				log.Warn("Test Step not found in script...");
 			}
-			
 		}
 	}
 }
