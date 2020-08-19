@@ -126,6 +126,7 @@ namespace SeleniumProject.Function
 						break;
 					case "MLB":
 						status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text;
+						log.Info(status);
 						status = status.Substring(0, status.IndexOf(" ·"));
 						if (status.Equals("BOT 9")) {
 							stoppage.Add("BOTTOM 9TH");
