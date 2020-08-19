@@ -145,7 +145,7 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify Tweet is Displayed")) {
 				count = driver.FindElements("xpath", "//div[@class='loader']").Count;
 				
-				while (count == 0 && total > 5) {
+				while (count != 0 && total < 5) {
 					log.Info("Spinners found: " + count + ". Waiting for social posts to load.");
 					Thread.Sleep(1000);
 					count = driver.FindElements("xpath", "//div[@class='loader']").Count;
