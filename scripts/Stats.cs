@@ -45,6 +45,7 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_ABBR", "capture", "xpath", "(//div[@class='stat-abbr'])["+ step.Data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+				DataManager.CaptureMap["STAT_ABBR"] = DataManager.CaptureMap["STAT_ABBR"].PadRight(DataManager.CaptureMap["STAT_ABBR"].Length + 1);
 			}
 			
 			else if (step.Name.Equals("Click Stat Category by Number")) {
