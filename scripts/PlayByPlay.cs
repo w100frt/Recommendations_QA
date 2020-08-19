@@ -126,76 +126,76 @@ namespace SeleniumProject.Function
 						break;
 					case "MLB":
 						status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text;
-						status = status.Substring(0, status.FirstIndexOf("·"));
-						if (status.Equals("BOT 9 ")) {
+						status = status.Substring(0, status.IndexOf(" ·"));
+						if (status.Equals("BOT 9")) {
 							stoppage.Add("BOTTOM 9TH");
 							include = true;
 						}
-						if (status.Equals("TOP 9 ") || include) {
+						if (status.Equals("TOP 9") || include) {
 							stoppage.Add("TOP 9TH");
 							include = true;
 						}
-						if (status.Equals("BOT 8 ") || include) {
+						if (status.Equals("BOT 8") || include) {
 							stoppage.Add("BOTTOM 8TH");
 							include = true;
 						}
-						if (status.Equals("TOP 8 ") || include) {
+						if (status.Equals("TOP 8") || include) {
 							stoppage.Add("TOP 8TH");
 							include = true;
 						}
-						if (status.Equals("BOT 7 ") || include) {
+						if (status.Equals("BOT 7") || include) {
 							stoppage.Add("BOTTOM 7TH");
 							include = true;
 						}
-						if (status.Equals("TOP 7 ") || include) {
+						if (status.Equals("TOP 7") || include) {
 							stoppage.Add("TOP 7TH");
 							include = true;
 						}
-						if (status.Equals("BOT 6 ") || include) {
+						if (status.Equals("BOT 6") || include) {
 							stoppage.Add("BOTTOM 6TH");
 							include = true;
 						}
-						if (status.Equals("TOP 6 ") || include) {
+						if (status.Equals("TOP 6") || include) {
 							stoppage.Add("TOP 6TH");
 							include = true;
 						}
-						if (status.Equals("BOT 5 ") || include) {
+						if (status.Equals("BOT 5") || include) {
 							stoppage.Add("BOTTOM 5TH");
 							include = true;
 						}
-						if (status.Equals("TOP 5 ") || include) {
+						if (status.Equals("TOP 5") || include) {
 							stoppage.Add("TOP 5TH");
 							include = true;
 						}
-						if (status.Equals("BOT 4 ") || include) {
+						if (status.Equals("BOT 4") || include) {
 							stoppage.Add("BOTTOM 4TH");
 							include = true;
 						}
-						if (status.Equals("TOP 4 ") || include) {
+						if (status.Equals("TOP 4") || include) {
 							stoppage.Add("TOP 4TH");
 							include = true;
 						}
-						if (status.Equals("BOT 3 ") || include) {
+						if (status.Equals("BOT 3") || include) {
 							stoppage.Add("BOTTOM 3RD");
 							include = true;
 						}
-						if (status.Equals("TOP 3 ") || include) {
+						if (status.Equals("TOP 3") || include) {
 							stoppage.Add("TOP 3RD");
 							include = true;
 						}
-						if (status.Equals("BOT 2 ") || include) {
+						if (status.Equals("BOT 2") || include) {
 							stoppage.Add("BOTTOM 2ND");
 							include = true;
 						}
-						if (status.Equals("TOP 2 ") || include) {
+						if (status.Equals("TOP 2") || include) {
 							stoppage.Add("TOP 2ND");
 							include = true;
 						}
-						if (status.Equals("BOT 1 ") || include) {
+						if (status.Equals("BOT 1") || include) {
 							stoppage.Add("BOTTOM 1ST");
 							include = true;
 						}
-						if (status.Equals("TOP 1 ") || include) {
+						if (status.Equals("TOP 1") || include) {
 							stoppage.Add("BOTTOM 1ST");
 						}						
 						break;
