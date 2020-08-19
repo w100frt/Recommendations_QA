@@ -10,6 +10,9 @@
 		{"page":"Entity_Stats", "name":"Capture Stat Leader by Number", "data":"#STATS_NUM"},
 		{"page":"Entity_Stats", "name":"Capture Stat Value by Number", "data":"#STATS_NUM"},
 		{"page":"Entity_Stats", "name":"Capture Stat Abbreviation by Number", "data":"#STATS_NUM"},
-		{"page":"Entity_Stats", "name":"Click Stat Category by Number", "data":"#STATS_NUM"}
+		{"page":"Entity_Stats", "name":"Click Stat Category by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Verify Bold Category", "data":"#STAT_ABBR"},
+		{"page":"Entity_Stats", "name":"Verify Stat Leader Name", "data":"#STAT_LEADER"},
+		{"page":"Entity_Stats", "name":"Verify Stat Leader Value", "data":"#STAT_VALUE"}
 		]
 }
