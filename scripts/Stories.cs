@@ -95,7 +95,7 @@ namespace SeleniumProject.Function
 				for (int i = 1; i <= size; i++) {
 					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
 					if (categories.Contains(cat)) {
-						log.Info("Story " + i + " Passed. Category " + cat + "falls under " + step.Data);
+						log.Info("Story " + i + " Passed. Category [" + cat + "] falls under " + step.Data);
 					}
 					else {
 						log.Error("***VERIFICATION FAILED. Story " + i + ". Category [" + cat + "] DOES NOT fall under " + step.Data);
