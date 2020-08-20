@@ -8,7 +8,7 @@
 		{"name":"Click Stat Category by Number","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run MLB Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Select Stats Category from Dropdown","objectType":"script","by":"xpath","objectId":"Stats"},
-		{"name":"Verify Bold Category","objectType":"verify_value","by":"xpath","objectId":"//th[contains(@class,'cell-number') and contains(@class,'bold')]"},
+		{"name":"Verify Bold Category","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Verify Stat Leader Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[@data-index='1']"},
 		{"name":"Verify Stat Leader Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[contains(@class,'bold')]"},
 		{"name":"Verify Stats Dropdown Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'stats-header')]//a[contains(@class,'dropdown-title')]"},
