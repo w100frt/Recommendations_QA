@@ -54,7 +54,6 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_ABBR", "capture", "xpath", "(//div[@class='stat-abbr'])["+ step.Data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
-				DataManager.CaptureMap["STAT_ABBR"] = DataManager.CaptureMap["STAT_ABBR"].PadRight(DataManager.CaptureMap["STAT_ABBR"].Length + 1);
 			}
 			
 			else if (step.Name.Equals("Click Stat Category by Number")) {
@@ -75,6 +74,19 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_Stats", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify Bold Category")) {
+				name = driver.FindElement("xpath","//th[contains(@class,'cell-number') and contains(@class,'bold')]").Trim();
+				
+				if (name.Equals(step.Data)) {
+					log.Info("Verification PASSED. Expected data [" + step.Data + "] matches actual data [" + name + "]");
+				}
+				else {
+					log.Error("***Verification FAILED. Expected data [" + step.Data + "] does not match actual data [" + name + "] ***");
+					err.CreateVerificationError(step, expected, actual);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+				}
 			}
 			
 			else {
