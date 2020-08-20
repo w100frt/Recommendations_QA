@@ -85,7 +85,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("***Verification FAILED. Expected data [" + step.Data + "] does not match actual data [" + name + "] ***");
-					err.CreateVerificationError(step, expected, actual);
+					err.CreateVerificationError(step, step.Data, name);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
 			}
