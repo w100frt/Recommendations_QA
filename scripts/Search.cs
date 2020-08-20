@@ -49,14 +49,13 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string team in teams) {
-					team = ti.ToTitleCase(team);
-					steps.Add(new TestStep(order, "Enter Search", team, "input_text", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
+					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team), "input_text", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
 					if (team.Equals("MLB")) {
 						steps.Add(new TestStep(order, "Verify Search Term", "Major League Baseball", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
-						TestRunner.RunTestSteps(driver, null, steps);
-						steps.Clear();
 					}
-					steps.Add(new TestStep(order, "Verify Search Term", team, "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					else {
+						steps.Add(new TestStep(order, "Verify Search Term", ti.ToTitleCase(team), "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					}
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
