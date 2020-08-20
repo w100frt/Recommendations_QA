@@ -78,7 +78,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Bold Category")) {
 				name = driver.FindElement("xpath","//th[contains(@class,'cell-number') and contains(@class,'bold')]").GetAttribute("innerText");
-				name.Trim();
+				name = name.Trim();
 				
 				if (name.Equals(step.Data)) {
 					log.Info("Verification PASSED. Expected data [" + step.Data + "] matches actual data [" + name + "]");
