@@ -6,6 +6,8 @@
 		{"name":"Capture Player Stat Leader by Number","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Capture Team Stat Leader by Number","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Capture Stat Value by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Click Scroll Left Button","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'scroll-left-btn')]"},
+		{"name":"Click Scroll Right Button","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'scroll-right-btn')]"},
 		{"name":"Click Stat Category by Number","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run MLB Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run MLB Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
