@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Entity_Stats", "name":"Run MLB Player Stats Template", "data":"1"},
+		{"page":"Entity_Stats", "name":"Hover Stats Table"},
 		{"page":"Entity_Stats", "name":"Click Scroll Right Button"},
 		{"page":"Entity_Stats", "name":"Click Scroll Left Button"},
 		{"page":"Entity_Stats", "name":"Select Stats Category from Dropdown", "data":"PITCHING"},
