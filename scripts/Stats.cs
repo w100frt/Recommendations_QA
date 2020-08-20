@@ -32,7 +32,7 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Capture Stat Leader by Number")) {
+			else if (step.Name.Equals("Capture Player Stat Leader by Number")) {
 				steps.Add(new TestStep(order, "Capture Leader " + step.Data, "STAT_LEADER", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[1])["+ step.Data +"]", wait));
 				steps.Add(new TestStep(order, "Capture Leader Team " + step.Data, "STAT_LEADER_TEAM", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[@class='uc'])["+ step.Data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
@@ -42,6 +42,12 @@ namespace SeleniumProject.Function
 				sb.AppendLine(name);
 				sb.Append(DataManager.CaptureMap["STAT_LEADER_TEAM"]);
 				DataManager.CaptureMap["STAT_LEADER"] = sb.ToString();
+			}
+			
+			else if (step.Name.Equals("Capture Team Stat Leader by Number")) {
+				steps.Add(new TestStep(order, "Capture Leader " + step.Data, "STAT_LEADER", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[1])["+ step.Data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else if (step.Name.Equals("Capture Stat Value by Number")) {
@@ -69,9 +75,16 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Run MLB Stats Template")) {
+			else if (step.Name.Equals("Run MLB Player Stats Template")) {
 				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_Stats", wait));
+				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_PlayerStats", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Run MLB Team Stats Template")) {
+				DataManager.CaptureMap["STATS_NUM"] = step.Data;
+				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}

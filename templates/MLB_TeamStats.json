@@ -1,13 +1,13 @@
 ﻿{
-    "testCase":"Template_MLBStats",
-    "testId":"t31",
+    "testCase":"Template_MLBTeamStats",
+    "testId":"t32",
     "testSteps":[
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Entity", "name":"Click Stats Tab"},
 		{"page":"Entity_Stats", "name":"Capture Stat Name by Number", "data":"#STATS_NUM"},
-		{"page":"Entity_Stats", "name":"Capture Stat Leader by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Capture Team Stat Leader by Number", "data":"#STATS_NUM"},
 		{"page":"Entity_Stats", "name":"Capture Stat Value by Number", "data":"#STATS_NUM"},
 		{"page":"Entity_Stats", "name":"Capture Stat Abbreviation by Number", "data":"#STATS_NUM"},
 		{"page":"Entity_Stats", "name":"Click Stat Category by Number", "data":"#STATS_NUM"},
