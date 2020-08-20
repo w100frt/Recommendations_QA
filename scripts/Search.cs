@@ -50,7 +50,7 @@ namespace SeleniumProject.Function
 				foreach (string team in teams) {
 					team = ti.ToTitleCase(team);
 					steps.Add(new TestStep(order, "Enter Search", team, "input_text", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
-					if (team.Equals("MLB") {
+					if (team.Equals("MLB")) {
 						team = "Major League Baseball";
 					}
 					steps.Add(new TestStep(order, "Verify Search Term", team, "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
