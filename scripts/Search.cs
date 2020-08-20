@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using SeleniumProject;
@@ -24,7 +25,7 @@ namespace SeleniumProject.Function
 			List<string> teams = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
-			TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
+			TextInfo ti = new CultureInfo("en-US",false).TextInfo;
 
 			if (step.Name.Equals("Verify Team Search by Sport")) {
 				
@@ -51,7 +52,9 @@ namespace SeleniumProject.Function
 					team = ti.ToTitleCase(team);
 					steps.Add(new TestStep(order, "Enter Search", team, "input_text", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
 					if (team.Equals("MLB")) {
-						team = "Major League Baseball";
+						steps.Add(new TestStep(order, "Verify Search Term", "Major League Baseball", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
 					}
 					steps.Add(new TestStep(order, "Verify Search Term", team, "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
