@@ -15,6 +15,7 @@
 		{"name":"Verify MLB Teams","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify Selected Explore Pane","objectType":"verify_value","by":"xpath","objectId":"//div[@id='explore']//a[contains(@class,'selected')]"},
 		{"name":"Verify Teams by Sport","objectType":"script","by":"xpath","objectId":"Explore"},
+		{"name":"Verify Team Search by Sport","objectType":"script","by":"xpath","objectId":"Search"},
 		{"name":"Verify Top Search Result Text","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'title fs')]"},
 		{"name":"Verify Top Search Result Subtext","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'subtitle')]"}
 	]

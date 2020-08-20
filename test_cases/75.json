@@ -1,0 +1,12 @@
+﻿{
+	"testCase":"Search: MLB",
+	"env":"dev",
+	"testId":"75",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Verify Team Search by Sport", "data": "MLB"}
+	]
+}

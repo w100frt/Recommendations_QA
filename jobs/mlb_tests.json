@@ -7,9 +7,10 @@
 	"testView":"desktop",
 	"testIds": [
 		{"testId":17},
-		{"testId":52},
-		{"testId":34},
 		{"testId":33},
-		{"testId":63}
+		{"testId":34},
+		{"testId":52},
+		{"testId":63},
+		{"testId":75}
 	]
 } 
