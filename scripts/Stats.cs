@@ -45,7 +45,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture Stat Value by Number")) {
-				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_VALUE", "capture", "xpath", "(//div[contains(@class,'stat-data')]/div[1])["+ step.Data +"]", wait));
+				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_VALUE", "capture", "xpath", "(//div[contains(@class,'stat-data')]/div[contains(@class,'fs')])["+ step.Data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
