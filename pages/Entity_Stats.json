@@ -1,6 +1,19 @@
 ﻿{
 	"page":"Entity_Stats",
 	"testDefinitions":[
+		{"name":"Capture Stat Abbreviation by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Stat Name by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Player Stat Leader by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Team Stat Leader by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Capture Stat Value by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Click Stat Category by Number","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Run MLB Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Run MLB Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Select Stats Category from Dropdown","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Verify Bold Category","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Verify Stat Leader Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[@data-index='1']"},
+		{"name":"Verify Stat Leader Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[contains(@class,'bold')]"},
+		{"name":"Verify Stats Dropdown Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'stats-header')]//a[contains(@class,'dropdown-title')]"},
 		{"name":"Verify Number of Stats Headers","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'stats-overview-header')]"},
 		{"name":"Verify Number of Player Stats Categories","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Number of Team Stats Categories","objectType":"script","by":"xpath","objectId":"Entity"}

@@ -197,7 +197,7 @@ namespace SeleniumProject.Function
 							include = true;
 						}
 						if (status.Equals("TOP 1") || include) {
-							stoppage.Add("BOTTOM 1ST");
+							stoppage.Add("TOP 1ST");
 						}						
 						break;
 					default :
