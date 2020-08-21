@@ -98,8 +98,14 @@ namespace SeleniumProject.Function
 						
 						break;
 				}
-				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-')]//a").Count;
+				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-')]//a[contains(@class,'card-story')]").Count;
+				displayed = driver.FindElement("xpath", "//div[contains(@class,'carousel-wrapper')]").Displayed;
 				for (int i = 1; i <= size; i++) {
+					if (i==3 && displayed) {
+						steps.Add(new TestStep(order, "Scroll Carousel Right", "", "click", "xpath", "//button[contains(@class,'carousel-button-next')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
 					if (categories.Contains(cat)) {
 						log.Info("Story " + i + " Passed. Category [" + cat + "] falls under " + step.Data);
