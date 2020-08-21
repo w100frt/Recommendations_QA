@@ -4,8 +4,8 @@
     "testSteps":[
 		{"page":"Scores", "name":"Capture Team Info from Chip", "data":"#GAME"},
 		{"page":"Scores", "name":"Click Scorechip By Number", "data":"#GAME"},		
-		{"page":"Events", "name":"Verify Away Team Value", "data":"#AWAY_TEAM1"},
-		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM1"},
+		{"page":"Events", "name":"Verify Away Team Value", "data":"#AWAY_TEAM"},
+		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM"},
 		{"page":"Events", "name":"Click Recap Tab"},
 		{"page":"Events", "name":"Verify Selected Tab", "data":"RECAP"},
 		{"page":"Events", "name":"Click Play-By-Play Tab"},
