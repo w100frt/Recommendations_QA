@@ -120,17 +120,8 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Scroll Through Story")) {
 				ele = driver.FindElement("xpath", "//div[@class='story-favorites-section-add']");
-                displayed = ele.Displayed;
-				
-				if (!displayed) {
-					do {
-						js.ExecuteScript("window.scrollBy({top: 300,left: 0,behavior: 'smooth'});");
-						log.Info("Scrolling down on page...");
-						ele = driver.FindElement("xpath", "//div[@class='story-favorites-section-add']");
-						displayed = ele.Displayed;
-					}
-					while (!displayed && scrolls-- > 0);
-				}
+				js.ExecuteScript("arguments[0].scrollIntoView(true);",ele);
+				log.Info("Scrolling down on page...");
 			}
 			
 			else {
