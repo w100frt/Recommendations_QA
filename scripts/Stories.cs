@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using SeleniumProject;
@@ -24,6 +25,7 @@ namespace SeleniumProject.Function
 			List<string> categories = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
+			TextInfo ti = new CultureInfo("en-US",false).TextInfo;
 
 			if (step.Name.Equals("Click Arrow Forward to End of Carousel")) {
 				eleCount = driver.FindElements("xpath", "//div[not(contains(@class,'scorestrip')) and contains(@class,'carousel-wrapper') and contains(@class,'can-scroll-right')]").Count; 
@@ -107,7 +109,7 @@ namespace SeleniumProject.Function
 			}			
 			
 			else if (step.Name.Equals("Verify Tag Exists by Name")) {			
-					steps.Add(new TestStep(order, "Verify Tag", "", "verify_displayed", "xpath", "//div[contains(@class,'story-topic-group')]//span[.='"+ step.Data +"']", wait));
+					steps.Add(new TestStep(order, "Verify Tag", "", "verify_displayed", "xpath", "//div[contains(@class,'story-topic-group')]//span[.='"+ ti.ToTitleCase(step.Data.ToLower()) +"']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 			}
