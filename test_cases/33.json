@@ -17,6 +17,7 @@
 		{"page":"Stories", "name":"Verify Story Title","data":"#STORY_TITLE"},
 		{"page":"Stories", "name":"Verify Story Date","data":"#STORY_DATE"},
 		{"page":"Stories", "name":"Verify Story Top Category","data":"#STORY_CAT"},
+		{"page":"Stories", "name":"Scroll Through Story"},
 		{"page":"Stories", "name":"Click Add to Favorites Button"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "1"},
 		{"page":"Stories", "name":"Hover In This Topic Section"},
