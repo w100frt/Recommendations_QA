@@ -2,6 +2,11 @@
 	"page":"Stories",
 	"testDefinitions":[
 		{"name":"Click MLB","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'mlb')]"},
+		{"name":"Click NASCAR","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'nascar')]"},
+		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'nba')]"},
+		{"name":"Click NCAA FB","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'college-football')]"},
+		{"name":"Click Soccer","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'soccer')]"},
+		{"name":"Click UFC","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'ufc')]"},
 		{"name":"Click Share","objectType":"click","by":"xpath","objectId":"//span[contains(@class,'share-text')]"},
 		{"name":"Verify Number of Share Items","objectType":"verify_count","by":"xpath","objectId":"//a[contains(@class,'share-item')]"},
 		{"name":"Verify Selected Nav Item","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@class,'horizontal-nav') and contains(@class,'selected')]"},

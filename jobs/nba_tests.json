@@ -1,0 +1,12 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"NBA Regression Test Suite",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":13},
+		{"testId":32}
+	]
+} 
