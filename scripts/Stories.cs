@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using SeleniumProject;
@@ -16,14 +17,19 @@ namespace SeleniumProject.Function
 		{
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
+			IWebElement ele;
+			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			int eleCount = 0;
 			int total;
 			int size = 0;
+			int scrolls = 20;
 			string date = "";
 			string cat = "";
+            bool displayed = false;
 			List<string> categories = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
+			TextInfo ti = new CultureInfo("en-US",false).TextInfo;
 
 			if (step.Name.Equals("Click Arrow Forward to End of Carousel")) {
 				eleCount = driver.FindElements("xpath", "//div[not(contains(@class,'scorestrip')) and contains(@class,'carousel-wrapper') and contains(@class,'can-scroll-right')]").Count; 
@@ -71,7 +77,7 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if (step.Name.Equals("Verify Stories Category by Sport")) {
+			else if (step.Name.Contains("Stories Category by Sport")) {
 				
 				switch(step.Data) {
 					case "NFL":
@@ -92,8 +98,15 @@ namespace SeleniumProject.Function
 						
 						break;
 				}
-				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-up')]").Count;
+				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-')]//a[contains(@class,'card-story')]").Count;
 				for (int i = 1; i <= size; i++) {
+					if (i==3 && step.Name.Contains("Carousel")) {
+						ele = driver.FindElement("xpath", "//div[contains(@class,'carousel-wrapper')]");
+						js.ExecuteScript("arguments[0].scrollIntoView(true);",ele);
+						steps.Add(new TestStep(order, "Scroll Carousel Right", "", "click", "xpath", "//button[contains(@class,'carousel-button-next')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
 					if (categories.Contains(cat)) {
 						log.Info("Story " + i + " Passed. Category [" + cat + "] falls under " + step.Data);
@@ -104,6 +117,18 @@ namespace SeleniumProject.Function
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}
 				}
+			}			
+			
+			else if (step.Name.Equals("Verify Tag Exists by Name")) {			
+					steps.Add(new TestStep(order, "Verify Tag", "", "verify_displayed", "xpath", "//div[contains(@class,'story-topic-group')]//span[.='"+ ti.ToTitleCase(step.Data.ToLower()) +"']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Scroll Through Story")) {
+				ele = driver.FindElement("xpath", "//div[@class='story-favorites-section-add']");
+				js.ExecuteScript("arguments[0].scrollIntoView(true);",ele);
+				log.Info("Scrolling down on page...");
 			}
 			
 			else {

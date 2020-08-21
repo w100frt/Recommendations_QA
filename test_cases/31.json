@@ -8,6 +8,6 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NBA"},
-		{"page":"Explore", "name":"Verify MLB Teams"}
+		{"page":"Explore", "name":"Verify NBA Teams"}
 	]
 }
