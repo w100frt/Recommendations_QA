@@ -135,9 +135,6 @@ namespace SeleniumProject.Function
 							}
 						}
 					}
-					else {
-						log.Warn("No IN_SEASON variable available or data is populated. Using data.");
-					}
 					
 					steps.Add(new TestStep(order, "Run Event Template", step.Data, "run_template", "xpath", "", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
