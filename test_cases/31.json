@@ -1,0 +1,13 @@
+﻿{
+	"testCase":"NBA: Teams Pages",
+	"env":"dev",
+	"testId":"31",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NBA"},
+		{"page":"Explore", "name":"Verify MLB Teams"}
+	]
+}
