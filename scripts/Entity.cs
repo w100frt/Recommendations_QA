@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
 			string player = "";
-			string playoff = "";
+			string playoffs = "";
 			int count = 0;
 			int total = 0;
 			int size;
@@ -176,10 +176,10 @@ namespace SeleniumProject.Function
 					case "NBA":
 						DateTime playoff = new DateTime(2020, 7, 30);
 						if (DateTime.Now > playoff) {
-							playoff = "PLAYOFFS: ";
+							playoffs = "PLAYOFFS: ";
 						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = playoff + count + " GAMES " + sport;
+						sport = playoffs + count + " GAMES " + sport;
 						break;
 					case "NHL":
 						sport = count + " GAMES " + sport;
