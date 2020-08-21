@@ -110,7 +110,7 @@ namespace SeleniumProject.Function
 				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')]").Count;
 				
 				for (int game = 1; game <= total; game++) {
-					DataManager.CaptureMap["GAME"] = game;
+					DataManager.CaptureMap["GAME"] = game.ToString();
 					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + game +"]");
 					games = ele.GetAttribute("className");
 					games = games.Substring(games.IndexOf(" ") + 1); 
