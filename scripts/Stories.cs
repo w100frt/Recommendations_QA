@@ -20,8 +20,10 @@ namespace SeleniumProject.Function
 			int eleCount = 0;
 			int total;
 			int size = 0;
+			int scrolls = 20;
 			string date = "";
 			string cat = "";
+            bool displayed = false;
 			List<string> categories = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
@@ -112,6 +114,21 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Tag", "", "verify_displayed", "xpath", "//div[contains(@class,'story-topic-group')]//span[.='"+ ti.ToTitleCase(step.Data.ToLower()) +"']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Scroll Through Story")) {
+				ele = driver.FindElement("xpath", "//div[@class='story-favorites-section-add']");
+                displayed = ele.Displayed;
+				
+				if (!displayed) {
+					do {
+						js.ExecuteScript("window.scrollBy({top: 300,left: 0,behavior: 'smooth'});");
+						log.Info("Scrolling down on page...");
+						ele = driver.FindElement("xpath", "//div[@class='story-favorites-section-add']");
+						displayed = ele.Displayed;
+					}
+					while (!displayed && scrolls-- > 0);
+				}
 			}
 			
 			else {

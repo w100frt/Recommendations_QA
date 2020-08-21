@@ -12,6 +12,7 @@
 		{"name":"Hover Add to Favorites Section","objectType":"hover","by":"xpath","objectId":"//div[@class='story-favorites-section-add']"},
 		{"name":"Hover Story Card Carousel","objectType":"hover","by":"xpath","objectId":"//div[contains(@class,'card-carousel')]"},
 		{"name":"Hover In This Topic Section","objectType":"hover","by":"xpath","objectId":"//div[span[contains(.,'in this topic')]]"},
+		{"name":"Scroll Through Story","objectType":"script","by":"xpath","objectId":"Stories"},
 		{"name":"Verify Number of Share Items","objectType":"verify_count","by":"xpath","objectId":"//a[contains(@class,'share-item')]"},
 		{"name":"Verify Selected Nav Item","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@class,'horizontal-nav') and contains(@class,'selected')]"},
 		{"name":"Verify Story Top Category","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'story-fav-title')]"},
