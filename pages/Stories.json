@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Stories",
 	"testDefinitions":[
+		{"name":"Click Add to Favorites Button","objectType":"click","by":"xpath","objectId":"//button[@data-action-location='article favorite']"},
 		{"name":"Click MLB","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'mlb')]"},
 		{"name":"Click NASCAR","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'nascar')]"},
 		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'stories-container')]//div[contains(@class,'desktop')]//a[contains(@href,'nba')]"},
@@ -13,6 +14,7 @@
 		{"name":"Verify Story Top Category","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'story-fav-title')]"},
 		{"name":"Verify Story Date","objectType":"script","by":"xpath","objectId":"Stories"},
 		{"name":"Verify Story Title","objectType":"verify_value","by":"xpath","objectId":"//h1[contains(@class,'story-title')]"},
-		{"name":"Verify Stories Category by Sport","objectType":"script","by":"xpath","objectId":"Stories"}
+		{"name":"Verify Stories Category by Sport","objectType":"script","by":"xpath","objectId":"Stories"},
+		{"name":"Verify Tag Exists by Name","objectType":"script","by":"xpath","objectId":"Stories"}
 	]
 }

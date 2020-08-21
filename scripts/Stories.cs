@@ -92,7 +92,7 @@ namespace SeleniumProject.Function
 						
 						break;
 				}
-				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-up')]").Count;
+				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-')]//a").Count;
 				for (int i = 1; i <= size; i++) {
 					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
 					if (categories.Contains(cat)) {
@@ -104,6 +104,12 @@ namespace SeleniumProject.Function
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}
 				}
+			}			
+			
+			else if (step.Name.Equals("Verify Tag Exists by Name")) {			
+					steps.Add(new TestStep(order, "Verify Tag", "", "verify_displayed", "xpath", "//div[contains(@class,'story-topic-group')]//span[.='"+ step.Data +"']", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
 			}
 			
 			else {
