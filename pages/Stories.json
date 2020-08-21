@@ -19,6 +19,7 @@
 		{"name":"Verify Story Date","objectType":"script","by":"xpath","objectId":"Stories"},
 		{"name":"Verify Story Title","objectType":"verify_value","by":"xpath","objectId":"//h1[contains(@class,'story-title')]"},
 		{"name":"Verify Stories Category by Sport","objectType":"script","by":"xpath","objectId":"Stories"},
+		{"name":"Verify Carousel Stories Category by Sport","objectType":"script","by":"xpath","objectId":"Stories"},
 		{"name":"Verify Tag Exists by Name","objectType":"script","by":"xpath","objectId":"Stories"}
 	]
 }

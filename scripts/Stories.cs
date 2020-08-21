@@ -77,7 +77,7 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if (step.Name.Equals("Verify Stories Category by Sport")) {
+			else if (step.Name.Contains("Stories Category by Sport")) {
 				
 				switch(step.Data) {
 					case "NFL":
@@ -100,6 +100,11 @@ namespace SeleniumProject.Function
 				}
 				size = driver.FindElements("xpath", "//div[contains(@class,'cards-slide-')]//a[contains(@class,'card-story')]").Count;
 				for (int i = 1; i <= size; i++) {
+					if (i==3 && step.Name.Contains("Carousel") {
+						steps.Add(new TestStep(order, "Scroll Carousel Right", "", "click", "xpath", "//button[contains(@class,'carousel-button-next')]", wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();
+					}
 					cat = driver.FindElement("xpath","(//div[contains(@class,'card-grid-header')])["+i+"]").Text;
 					if (categories.Contains(cat)) {
 						log.Info("Story " + i + " Passed. Category [" + cat + "] falls under " + step.Data);
