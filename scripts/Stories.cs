@@ -17,6 +17,8 @@ namespace SeleniumProject.Function
 		{
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
+			IWebElement ele;
+			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			int eleCount = 0;
 			int total;
 			int size = 0;
