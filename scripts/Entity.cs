@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using SeleniumProject;
@@ -21,6 +22,7 @@ namespace SeleniumProject.Function
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
 			string player = "";
+			string playoffs = "";
 			int count = 0;
 			int total = 0;
 			int size;
@@ -83,7 +85,7 @@ namespace SeleniumProject.Function
 							sport = "32";
 							break;
 						case "NBA":
-							sport = "";
+							sport = "30";
 							break;
 						case "NHL":
 							sport = "";
@@ -114,8 +116,8 @@ namespace SeleniumProject.Function
 							sport = "11";
 							break;
 						case "NBA":
-							sport = "";
-							player = "";
+							sport = "8";
+							player = "8";
 							break;
 						case "NHL":
 							sport = "";
@@ -172,7 +174,12 @@ namespace SeleniumProject.Function
 						sport = sport + ": " + player;
 						break;
 					case "NBA":
-						sport = count + " GAMES " + sport;
+						DateTime playoff = new DateTime(2020, 7, 30);
+						if (DateTime.Now > playoff) {
+							playoffs = "PLAYOFFS: ";
+						}
+						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						sport = playoffs + count + " GAMES " + sport;
 						break;
 					case "NHL":
 						sport = count + " GAMES " + sport;

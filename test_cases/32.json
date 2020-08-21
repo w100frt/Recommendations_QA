@@ -1,0 +1,14 @@
+﻿{
+	"testCase":"Stories: NBA",
+	"env":"dev",
+	"testId":"32",
+	"testRail":"7721113",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Stories"},
+		{"page":"Stories", "name":"Click NBA"},
+		{"page":"Stories", "name":"Verify Selected Nav Item", "data":"NBA"},
+		{"page":"Stories", "name":"Verify Stories Category by Sport", "data":"NBA"}
+	]
+}
