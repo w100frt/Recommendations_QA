@@ -41,18 +41,18 @@ namespace SeleniumProject.Function
 				switch(data) {
 					case "Soccer" :
 						stoppage.Add("MATCHUP");
-						stoppage.Add(DataManager.CaptureMap["AWAY_TEAM" + step.Data]);
-						stoppage.Add(DataManager.CaptureMap["HOME_TEAM" + step.Data]);
+						stoppage.Add(DataManager.CaptureMap["AWAY_TEAM"]);
+						stoppage.Add(DataManager.CaptureMap["HOME_TEAM"]);
 						break;
 					case "NBA":
 					case "NHL":
-						stoppage.Add(DataManager.CaptureMap["AWAY_TEAM" + step.Data]);
-						stoppage.Add(DataManager.CaptureMap["HOME_TEAM" + step.Data]);
+						stoppage.Add(DataManager.CaptureMap["AWAY_TEAM"]);
+						stoppage.Add(DataManager.CaptureMap["HOME_TEAM"]);
 						stoppage.Add("MATCHUP");
 						break;
 					default :
-						stoppage.Add(DataManager.CaptureMap["AWAY_TEAM" + step.Data]);
-						stoppage.Add(DataManager.CaptureMap["HOME_TEAM" + step.Data]);
+						stoppage.Add(DataManager.CaptureMap["AWAY_TEAM"]);
+						stoppage.Add(DataManager.CaptureMap["HOME_TEAM"]);
 						break;
 				}
 				
