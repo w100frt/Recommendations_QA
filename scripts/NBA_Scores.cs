@@ -19,6 +19,8 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			IWebElement chip;
+			bool in_season = false;
+			string path = "";
 			int loc;
 			int months;
 			int year;
