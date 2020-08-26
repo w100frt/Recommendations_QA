@@ -3,6 +3,6 @@
     "testId":"t35",
     "testSteps":[
 		{"page":"Navigation", "name":"Navigate to Scores"},
-		{"page":"Scores", "name":"Click Sport by Name", "#SPORT"}
+		{"page":"Scores", "name":"Click Sport by Name", "data":"#SPORT"}
     ]
 }
