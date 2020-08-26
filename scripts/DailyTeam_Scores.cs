@@ -83,6 +83,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Events in Segment")) {
+				DataManager.CaptureMap["SPORT"] = step.Data;
 				//get date for scores id
 				date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");
 				log.Info("Current segment: " + date);

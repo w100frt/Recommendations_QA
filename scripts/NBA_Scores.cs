@@ -19,6 +19,8 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			IWebElement chip;
+			bool in_season = false;
+			string path = "";
 			int loc;
 			int months;
 			int year;
@@ -75,6 +77,39 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
+			}
+			
+			else if (step.Name.Equals("Verify NBA Date")) {
+				if (String.IsNullOrEmpty(step.Data)) {
+					if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+						in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
+						if(in_season) {
+							TimeSpan time = DateTime.UtcNow.TimeOfDay;
+							int now = time.Hours;
+							int et = now - 4;
+							if (et >= 0 && et < 11){
+								log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+								step.Data = "YESTERDAY";
+							}
+							else {
+								log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+								step.Data = "TODAY";
+							}				
+						}
+						else {
+							step.Data = "WED, OCT 14";
+						}
+					}
+					else {
+						log.Warn("No IN_SEASON variable available.");
+					}
+				}
+				
+				path = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]";
+				steps.Add(new TestStep(order, "Verify Displayed Day on NBA", step.Data, "verify_value", "xpath", path, wait));
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", path).Text;
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else {

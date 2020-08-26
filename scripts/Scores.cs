@@ -184,8 +184,8 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Click NBA") || step.Name.Equals("Click NCAA BK") || step.Name.Equals("Click MLB") || step.Name.Equals("Click NASCAR") || step.Name.Equals("Click Soccer") || step.Name.Equals("Click NHL") || step.Name.Equals("Click Boxing") || step.Name.Equals("Click NCAA FB") || step.Name.Equals("Click NFL") || step.Name.Equals("Click Golf") || step.Name.Equals("Verify Selected Category")) {
-				if (step.Name.Equals("Verify Selected Category")) {
+			else if (step.Name.Equals("Click NBA") || step.Name.Equals("Click NCAA BK") || step.Name.Equals("Click MLB") || step.Name.Equals("Click NASCAR") || step.Name.Equals("Click Soccer") || step.Name.Equals("Click NHL") || step.Name.Equals("Click Boxing") || step.Name.Equals("Click NCAA FB") || step.Name.Equals("Click NFL") || step.Name.Equals("Click Golf") || step.Name.Equals("Click Sport by Name") || step.Name.Equals("Verify Selected Category")) {
+				if (step.Name.Equals("Verify Selected Category") || step.Name.Equals("Click Sport by Name")) {
 					data = step.Data;
 				}
 				else {
