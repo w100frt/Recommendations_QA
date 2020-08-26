@@ -1,0 +1,8 @@
+﻿{
+    "testCase":"Template_TeamSport_ScoresToday",
+    "testId":"t35",
+    "testSteps":[
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click Sport by Name", "#SPORT"}
+    ]
+}
