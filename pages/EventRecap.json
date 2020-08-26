@@ -7,7 +7,7 @@
 		{"name":"Verify FOX Facts Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'track')][//div[contains(@class,'fox-cards-container')]]"},
 		{"name":"Verify Key Players Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'players-data-container')]"},
 		{"name":"Verify Key Players Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'players-data-container')]//div[contains(@class,'title')]"},
-		{"name":"Verify Number of Key Players","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'player-container')]"},
+		{"name":"Verify Number of Key Players","objectType":"verify_count","by":"xpath","objectId":"//div[@class='player-container']"},
 		{"name":"Verify Odds Section is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]"},
 		{"name":"Verify Odds Title Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]//span[contains(@class,'title')]"},
 		{"name":"Verify Number of Odds Rows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'odds-row-container')]"},
