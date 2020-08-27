@@ -128,13 +128,16 @@ namespace SeleniumProject.Function
 						title = "//div[contains(@class,'homepage-module')]//a[contains(@class,'score-chip')]";
 						break;
 					case "Yesterday" : 
-						title = "(//div[@class='scores'])[1]//a[contains(@class,'score-chip')]";
+						title = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
+						title = "//div[@id='"+ title +"']//a[contains(@class,'score-chip')]";
 						break;
 					case "Today" : 
-						title = "(//div[@class='scores'])[2]//a[contains(@class,'score-chip')]";
+						title = DateTime.Today.ToString("yyyyMMdd");
+						title = "//div[@id='"+ title +"']//a[contains(@class,'score-chip')]";
 						break;
 					case "Tomorrow" : 
-						title = "(//div[@class='scores'])[3]//a[contains(@class,'score-chip')]";
+						title = DateTime.Today.AddDays(+1).ToString("yyyyMMdd");
+						title = "//div[@id='"+ title +"']//a[contains(@class,'score-chip')]";
 						break;
 					default: 
 						title = "//div[@class='scores']//a[contains(@class,'score-chip')]";

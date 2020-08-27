@@ -36,6 +36,13 @@ namespace SeleniumProject.Function
 					}
 					
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
+					
+					while (String.IsNullOrEmpty(data) && count++ < 5) {
+						log.Warn("GetDeviceID method returned null. Retrying...");
+						Thread.Sleep(0500);
+						data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
+					}
+					
 					log.Info("Device ID equals " + data);
 					
 					// if device id is not stored yet, store it
