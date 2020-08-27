@@ -37,12 +37,6 @@ namespace SeleniumProject.Function
 					
 					data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
 					
-					while (String.IsNullOrEmpty(data) && count++ < 5) {
-						log.Warn("GetDeviceID method returned null. Retrying...");
-						Thread.Sleep(0500);
-						data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
-					}
-					
 					log.Info("Device ID equals " + data);
 					
 					// if device id is not stored yet, store it
@@ -58,12 +52,24 @@ namespace SeleniumProject.Function
 					else {
 						log.Error("Comparison FAILED. Original Device ID [" + DataManager.CaptureMap["DEVICE_ID"] + "] does not match current Device ID ["+ data + "]");
 						err.CreateVerificationError(step, DataManager.CaptureMap["DEVICE_ID"], data);
-
 					}
 				}
 				catch (Exception e) {
 					log.Info("ERROR: " + e);
-					err.CreateVerificationError(step, "Error Capturing DeviceID", data);
+					
+					while (String.IsNullOrEmpty(data) && count++ < 5) {
+						log.Warn("GetDeviceID method failed. Retrying...");
+						Thread.Sleep(0500);
+						data = (string) js.ExecuteScript("return window.wisRegistration.getDeviceID();");
+					}
+
+					// if device id is not stored yet, store it
+					if (!DataManager.CaptureMap.ContainsKey("DEVICE_ID")) {
+						DataManager.CaptureMap.Add("DEVICE_ID", data);
+						log.Info("Storing " + data + " to CaptureMap as DEVICE_ID");
+					}
+					
+					//err.CreateVerificationError(step, "Error Capturing DeviceID", data);
 				}
 			}
 			
