@@ -167,7 +167,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Top Show Title")) {
 				title = step.Data;
-				if (title.Contains("...") && title.Length == 53) {
+				if (title.Contains("...") && title.Length == 54) {
 					edit = driver.FindElement("xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]").Text;
 					edit = edit.Substring(0, 50) + "...";
 					log.Info("Title was shortened at 50 characters: " + edit);
