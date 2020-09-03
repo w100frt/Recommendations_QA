@@ -169,7 +169,7 @@ namespace SeleniumProject.Function
 				title = step.Data;
 				if (title.Contains("...") && title.Length == 54) {
 					edit = driver.FindElement("xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]").Text;
-					edit = edit.Substring(0, 50) + "...";
+					edit = edit.Substring(0, 51) + "...";
 					log.Info("Title was shortened at 50 characters: " + edit);
 					if(title.Equals(edit)) {
 						log.Info("VERIFICATION PASSED. Shortened expected title [" +title + "] matches shortened actual title [" + edit + "]");
