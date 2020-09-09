@@ -14,8 +14,6 @@
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Click Main Video Play Button"},
-		{"page":"LiveTV","name":"Click Live Play Button"},
-		{"page":"LiveTV","name":"Click Overlay Play Button"},
 		{"page":"LiveTV", "name":"Verify Video is Playing"},
 		{"page":"LiveTV","name":"Verify Video"},
 		{"page":"LiveTV","name":"Verify Pause Button on Video"},
