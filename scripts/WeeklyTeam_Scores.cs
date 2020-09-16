@@ -111,14 +111,12 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Events by Day")) {
-				if (!String.IsNullOrEmpty(step.Data)) {
-					DataManager.CaptureMap["NFL_WEEK"] = DataManager.CaptureMap["NFL_WEEK"] + step.Data;
-				}
-				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] +"')]//a[contains(@class,'score-chip')]").Count;
+				DataManager.CaptureMap["NFL_DAY"] = step.Data;
+				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + step.Data +"')]//a[contains(@class,'score-chip')]").Count;
 				
 				for (int game = 1; game <= total; game++) {
 					DataManager.CaptureMap["GAME"] = game.ToString();
-					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + "')]//a[contains(@class,'score-chip')][" + game +"]");
+					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + step.Data + "')]//a[contains(@class,'score-chip')][" + game +"]");
 					games = ele.GetAttribute("className");
 					games = games.Substring(games.IndexOf(" ") + 1); 
 					log.Info("Game State: " + games);
@@ -131,7 +129,7 @@ namespace SeleniumProject.Function
 						DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 					}
 					else {
-						status = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ DataManager.CaptureMap["NFL_WEEK"] +"')]//a[contains(@class,'score-chip')][" + game +"]//div[contains(@class,'status-text')]").Text; 
+						status = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ DataManager.CaptureMap["NFL_WEEK"] + step.Data +"')]//a[contains(@class,'score-chip')][" + game +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
 							step.Data = "TeamSport_PostponedEvent";
@@ -154,14 +152,14 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Scroll to Sunday")) {
-				ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] +"')]");
+				ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + "sun" +"')]");
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
                 actions.MoveToElement(ele).Perform();				
 			}
 			
 			else if (step.Name.Equals("Click Scorechip By Number")) {
 				data = step.Data;
-				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] +"')]//a[contains(@class,'score-chip')]["+ data +"]", wait));
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + DataManager.CaptureMap["NFL_DAY"] +"')]//a[contains(@class,'score-chip')]["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();		
 			}
