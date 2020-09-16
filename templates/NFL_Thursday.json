@@ -2,7 +2,7 @@
     "testCase":"Template_TeamSport_ScoresToday",
     "testId":"t35",
     "testSteps":[
-		{"page":"Scores", "name":"Verify Events by Day", "thu"}
+		{"page":"Scores", "name":"Verify Events by Day", "data":"thu"}
 		{"page":"Scores", "name":"Scroll to Sunday"},
 		{"page":"Scores", "name":"Verify Events by Day", "data":"sun"}
     ]
