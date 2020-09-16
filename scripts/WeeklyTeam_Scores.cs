@@ -18,6 +18,7 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
+            OpenQA.Selenium.Interactions.Actions actions = new OpenQA.Selenium.Interactions.Actions(driver.GetDriver());
 			IWebElement ele;
 			int total = 0;
 			string day = "";
