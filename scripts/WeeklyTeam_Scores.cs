@@ -22,6 +22,7 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			int total = 0;
 			string day = "";
+			string data = "";
 			string games = "";
 			string status = "";
 			string date = "";
@@ -159,6 +160,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Click Scorechip By Number")) {
+				data = step.Data;
 				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')]["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();		
