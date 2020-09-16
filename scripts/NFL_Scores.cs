@@ -123,7 +123,7 @@ namespace SeleniumProject.Function
 				}
 
 				steps.Add(new TestStep(order, "Verify Displayed Week on NFL", step.Data, "verify_value", "xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]", wait));
-				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]").Text;
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").Text;
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
