@@ -63,7 +63,7 @@ namespace SeleniumProject.Function
 					else if (today >= DateTime.Parse("09/22/2020 11:00:01") && today < DateTime.Parse("09/29/2020 11:00:00")) {
 						step.Data = "WEEK 3";
 					}
-					else if (today >= DateTime.Parse("09/29/2020 11:00:01") && today < DateTime(DateTime.Parse("10/6/2020 11:00:00"))) {
+					else if (today >= DateTime.Parse("09/29/2020 11:00:01") && today < DateTime.Parse("10/6/2020 11:00:00")) {
 						step.Data = "WEEK 4";
 					}
 					else if (today >= DateTime.Parse("10/6/2020 11:00:01") && today < DateTime.Parse("10/13/2020 11:00:00")) {
