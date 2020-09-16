@@ -23,6 +23,7 @@ namespace SeleniumProject.Function
 			int total = 0;
 			string day = "";
 			string data = "";
+			string events = "";
 			string games = "";
 			string status = "";
 			string date = "";
@@ -121,27 +122,27 @@ namespace SeleniumProject.Function
 					games = games.Substring(games.IndexOf(" ") + 1); 
 					log.Info("Game State: " + games);
 					if (games.Equals("pregame")) {
-						step.Data = "Football_FutureEvent";
+						events = "Football_FutureEvent";
 						DataManager.CaptureMap["EVENT_STATUS"] = "FUTURE";
 					}
 					else if (games.Equals("live")){
-						step.Data = "TeamSport_LiveEvent";
+						events = "TeamSport_LiveEvent";
 						DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 					}
 					else {
 						status = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ DataManager.CaptureMap["NFL_WEEK"] + step.Data +"')]//a[contains(@class,'score-chip')][" + game +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
-							step.Data = "TeamSport_PostponedEvent";
+							events = "TeamSport_PostponedEvent";
 							DataManager.CaptureMap["EVENT_STATUS"] = "POSTPONED";
 						}
 						else {
-							step.Data = "TeamSport_PastEvent";
+							events = "TeamSport_PastEvent";
 							DataManager.CaptureMap["EVENT_STATUS"] = "FINAL";
 						}
 					}
 					
-					steps.Add(new TestStep(order, "Run Event Template", step.Data, "run_template", "xpath", "", wait));
+					steps.Add(new TestStep(order, "Run Event Template", events, "run_template", "xpath", "", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					
