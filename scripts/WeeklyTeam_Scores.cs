@@ -110,7 +110,7 @@ namespace SeleniumProject.Function
 					log.Info(date);
 					day = "TeamSport_ScoresToday";
 				}
-				else (date.Contains("mon")) {
+				else {
 					date = DateTime.Today.AddDays(+1).ToString("yyyyMMdd");
 					log.Info(date);
 					day = "TeamSport_ScoresTomorrow";
