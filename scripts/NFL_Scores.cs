@@ -49,6 +49,55 @@ namespace SeleniumProject.Function
 				steps.Clear();	
 			}
 			
+			else if (step.Name.Equals("Verify NFL Week")) {
+				if (String.IsNullOrEmpty(step.Data)) {
+					DateTime today = DateTime.Now;
+					
+					// determine week of season by today's date and time
+					if (today >= DateTime(2020, 9, 1) && today < DateTime(2020, 9, 15, 11, 0, 0)) {
+						step.Data = "WEEK 1";
+					}
+					else if (today >= DateTime(2020, 9, 15, 11, 0, 0) && today < DateTime(2020, 9, 22, 11, 0, 0)) {
+						step.Data = "WEEK 2";
+					}
+					else if (today >= DateTime(2020, 9, 22, 11, 0, 0) && today < DateTime(2020, 9, 29, 11, 0, 0)) {
+						step.Data = "WEEK 3";
+					}
+					else if (today >= DateTime(2020, 9, 29, 11, 0, 0) && today < DateTime(2020, 10, 6, 11, 0, 0)) {
+						step.Data = "WEEK 4";
+					}
+					else if (today >= DateTime(2020, 10, 6, 11, 0, 0) && today < DateTime(2020, 10, 13, 11, 0, 0)) {
+						step.Data = "WEEK 5";
+					}
+					else if (today >= DateTime(2020, 10, 13, 11, 0, 0) && today < DateTime(2020, 10, 20, 11, 0, 0)) {
+						step.Data = "WEEK 6";
+					}
+					else if (today >= DateTime(2020, 10, 20, 11, 0, 0) && today < DateTime(2020, 10, 27, 11, 0, 0)) {
+						step.Data = "WEEK 7";
+					}
+					
+					/*
+					int now = time.Hours;
+					int et = now - 4;
+					if (et >= 0 && et < 11){
+						log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+						step.Data = "YESTERDAY";
+					}
+					else {
+						log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+						step.Data = "TODAY";
+					}*/				
+				}
+				else {
+					step.Data = "SUPER BOWL";
+				}
+
+				steps.Add(new TestStep(order, "Verify Displayed Week on NFL", step.Data, "verify_value", "xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]", wait));
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]").Text;
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
