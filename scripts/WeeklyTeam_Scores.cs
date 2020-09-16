@@ -161,7 +161,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Click Scorechip By Number")) {
 				data = step.Data;
-				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')]["+ data +"]", wait));
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')]["+ data +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();		
 			}
