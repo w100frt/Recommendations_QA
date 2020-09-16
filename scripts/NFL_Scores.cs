@@ -54,13 +54,13 @@ namespace SeleniumProject.Function
 					DateTime today = DateTime.Now;
 					
 					// determine week of season by today's date and time
-					if (today >= DateTime(2020, 9, 1) && today < DateTime(2020, 9, 15, 11, 0, 0)) {
+					if (today >= DateTime.Parse("09/01/2020") && today < DateTime.Parse("09/15/2020 11:00:00")) {
 						step.Data = "WEEK 1";
 					}
-					else if (today >= DateTime(2020, 9, 15, 11, 0, 0) && today < DateTime(2020, 9, 22, 11, 0, 0)) {
+					else if (today >= DateTime.Parse("09/15/2020 11:00:01") && today < DateTime.Parse("09/22/2020 11:00:00")) {
 						step.Data = "WEEK 2";
 					}
-					else if (today >= DateTime(2020, 9, 22, 11, 0, 0) && today < DateTime(2020, 9, 29, 11, 0, 0)) {
+					/*else if (today >= DateTime(2020, 9, 22, 11, 0, 0) && today < DateTime(2020, 9, 29, 11, 0, 0)) {
 						step.Data = "WEEK 3";
 					}
 					else if (today >= DateTime(2020, 9, 29, 11, 0, 0) && today < DateTime(2020, 10, 6, 11, 0, 0)) {
@@ -74,7 +74,7 @@ namespace SeleniumProject.Function
 					}
 					else if (today >= DateTime(2020, 10, 20, 11, 0, 0) && today < DateTime(2020, 10, 27, 11, 0, 0)) {
 						step.Data = "WEEK 7";
-					}
+					}*/
 					
 					/*
 					int now = time.Hours;
