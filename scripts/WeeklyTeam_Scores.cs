@@ -153,7 +153,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Scroll to Sunday")) {
-				ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]");
+				ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]");
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
                 actions.MoveToElement(ele).Perform();				
 			}
