@@ -92,26 +92,16 @@ namespace SeleniumProject.Function
 				day = DateTime.Now.DayOfWeek.ToString();
 				if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
 					date = date + "thu";
-				}
-				else if (day.Equals("Friday") || day.Equals("Saturday") || day.Equals("Sunday")) {
-					date = date + "sun";
-				}
-				else {
-					date = date + "mon";
-				}
-				
-				if (date.Contains("thu")) {
-					date = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
 					log.Info(date);
 					day = "TeamSport_ScoresYesterday";
 				}
-				else if (date.Contains("sun")) {
-					date = DateTime.Today.ToString("yyyyMMdd");
+				else if (day.Equals("Friday") || day.Equals("Saturday") || day.Equals("Sunday")) {
+					date = date + "sun";
 					log.Info(date);
 					day = "TeamSport_ScoresToday";
 				}
 				else {
-					date = DateTime.Today.AddDays(+1).ToString("yyyyMMdd");
+					date = date + "mon";
 					log.Info(date);
 					day = "TeamSport_ScoresTomorrow";
 				}
