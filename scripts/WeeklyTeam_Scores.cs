@@ -110,10 +110,10 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Events by Day")) {
-				if (String.IsNullOrEmpty(step.Data)) {
+				if (!String.IsNullOrEmpty(step.Data)) {
 					date = step.Data;
 				}
-				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'w"+ date +"')]//a[contains(@class,'score-chip')]").Count;
+				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')]").Count;
 				
 				for (int game = 1; game <= total; game++) {
 					DataManager.CaptureMap["GAME"] = game.ToString();
