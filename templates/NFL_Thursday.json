@@ -3,7 +3,6 @@
     "testId":"t35",
     "testSteps":[
 		{"page":"NFL_Scores", "name":"Verify Events by Day", "data":"thu"},
-		{"page":"NFL_Scores", "name":"Scroll to Sunday"},
 		{"page":"NFL_Scores", "name":"Verify Events by Day", "data":"sun"}
     ]
 }
