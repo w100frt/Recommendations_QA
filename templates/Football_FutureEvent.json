@@ -1,0 +1,13 @@
+﻿{
+    "testCase":"Template_TeamSport_FutureEvent",
+    "testId":"t7",
+    "testSteps":[
+		{"page":"Scores", "name":"Capture Team Info from Chip", "data":"#GAME"},
+		{"page":"NFL_Scores", "name":"Click Scorechip By Number", "data":"#GAME"},		
+		{"page":"Events", "name":"Verify Away Team Value", "data":"#AWAY_TEAM"},
+		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM"},
+		{"page":"Events", "name":"Click Matchup Tab"},
+		{"page":"Events", "name":"Verify Selected Tab", "data":"MATCHUP"},
+		{"page":"Navigation","name":"Run Template", "data":"MatchupTab"}
+    ]
+}

@@ -122,7 +122,7 @@ namespace SeleniumProject.Function
 					games = games.Substring(games.IndexOf(" ") + 1); 
 					log.Info("Game State: " + games);
 					if (games.Equals("pregame")) {
-						step.Data = "TeamSport_FutureEvent";
+						step.Data = "Football_FutureEvent";
 						DataManager.CaptureMap["EVENT_STATUS"] = "FUTURE";
 					}
 					else if (games.Equals("live")){
@@ -156,6 +156,12 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]");
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
                 actions.MoveToElement(ele).Perform();				
+			}
+			
+			else if (step.Name.Equals("Click Scorechip By Number")) {
+				steps.Add(new TestStep(order, "Click Event " + data, "", "click", "xpath", xpath + "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')]["+ data +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();		
 			}
 			
 			else {

@@ -1,6 +1,7 @@
 ﻿{
 	"page":"NFL_Scores",
 	"testDefinitions":[
+		{"name":"Click Scorechip By Number","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},		
 		{"name":"Scroll Back One Day","objectType":"script","by":"xpath","objectId":"NBA_Scores"},		
 		{"name":"Scroll to Sunday","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},
 		{"name":"Verify NFL Week","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
