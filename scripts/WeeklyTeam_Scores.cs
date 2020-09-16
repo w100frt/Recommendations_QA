@@ -106,7 +106,7 @@ namespace SeleniumProject.Function
 					day = "TeamSport_ScoresTomorrow";
 				}
 				
-				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'wk"+ date +"')]//a[contains(@class,'score-chip')]").Count;
+				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'w"+ date +"')]//a[contains(@class,'score-chip')]").Count;
 				
 				for (int game = 1; game <= total; game++) {
 					DataManager.CaptureMap["GAME"] = game.ToString();
