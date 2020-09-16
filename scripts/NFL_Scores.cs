@@ -60,21 +60,51 @@ namespace SeleniumProject.Function
 					else if (today >= DateTime.Parse("09/15/2020 11:00:01") && today < DateTime.Parse("09/22/2020 11:00:00")) {
 						step.Data = "WEEK 2";
 					}
-					/*else if (today >= DateTime(2020, 9, 22, 11, 0, 0) && today < DateTime(2020, 9, 29, 11, 0, 0)) {
+					else if (today >= DateTime.Parse("09/22/2020 11:00:01") && today < DateTime.Parse("09/29/2020 11:00:00")) {
 						step.Data = "WEEK 3";
 					}
-					else if (today >= DateTime(2020, 9, 29, 11, 0, 0) && today < DateTime(2020, 10, 6, 11, 0, 0)) {
+					else if (today >= DateTime.Parse("09/29/2020 11:00:01") && today < DateTime(DateTime.Parse("10/6/2020 11:00:00"))) {
 						step.Data = "WEEK 4";
 					}
-					else if (today >= DateTime(2020, 10, 6, 11, 0, 0) && today < DateTime(2020, 10, 13, 11, 0, 0)) {
+					else if (today >= DateTime.Parse("10/6/2020 11:00:01") && today < DateTime.Parse("10/13/2020 11:00:00")) {
 						step.Data = "WEEK 5";
 					}
-					else if (today >= DateTime(2020, 10, 13, 11, 0, 0) && today < DateTime(2020, 10, 20, 11, 0, 0)) {
+					else if (today >= DateTime.Parse("10/13/2020 11:00:01") && today < DateTime.Parse("10/20/2020 11:00:00")) {
 						step.Data = "WEEK 6";
 					}
-					else if (today >= DateTime(2020, 10, 20, 11, 0, 0) && today < DateTime(2020, 10, 27, 11, 0, 0)) {
+					else if (today >= DateTime.Parse("10/20/2020 11:00:01") && today < DateTime.Parse("10/27/2020 11:00:00")) {
 						step.Data = "WEEK 7";
-					}*/
+					}
+					else if (today >= DateTime.Parse("10/27/2020 11:00:01") && today < DateTime.Parse("11/03/2020 11:00:00")) {
+						step.Data = "WEEK 8";
+					}
+					else if (today >= DateTime.Parse("11/03/2020 11:00:01") && today < DateTime.Parse("11/10/2020 11:00:00")) {
+						step.Data = "WEEK 9";
+					}
+					else if (today >= DateTime.Parse("11/10/2020 11:00:01") && today < DateTime.Parse("11/17/2020 11:00:00")) {
+						step.Data = "WEEK 10";
+					}
+					else if (today >= DateTime.Parse("11/17/2020 11:00:01") && today < DateTime.Parse("11/24/2020 11:00:00")) {
+						step.Data = "WEEK 11";
+					}
+					else if (today >= DateTime.Parse("11/24/2020 11:00:01") && today < DateTime.Parse("12/01/2020 11:00:00")) {
+						step.Data = "WEEK 12";
+					}
+					else if (today >= DateTime.Parse("12/01/2020 11:00:01") && today < DateTime.Parse("12/08/2020 11:00:00")) {
+						step.Data = "WEEK 13";
+					}
+					else if (today >= DateTime.Parse("12/08/2020 11:00:01") && today < DateTime.Parse("12/15/2020 11:00:00")) {
+						step.Data = "WEEK 14";
+					}
+					else if (today >= DateTime.Parse("12/15/2020 11:00:01") && today < DateTime.Parse("12/22/2020 11:00:00")) {
+						step.Data = "WEEK 15";
+					}
+					else if (today >= DateTime.Parse("12/22/2020 11:00:01") && today < DateTime.Parse("12/29/2020 11:00:00")) {
+						step.Data = "WEEK 16";
+					}
+					else if (today >= DateTime.Parse("12/29/2020 11:00:01") && today < DateTime.Parse("01/05/2021 11:00:00")) {
+						step.Data = "WEEK 17";
+					}
 					
 					/*
 					int now = time.Hours;
