@@ -17,12 +17,14 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
+			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			IWebElement ele;
 			int total = 0;
 			string day = "";
 			string games = "";
 			string status = "";
 			string date = "";
+			bool over = false;
 
 			if (step.Name.Equals("Verify Event")) {
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
@@ -88,29 +90,33 @@ namespace SeleniumProject.Function
 				//get date for scores id
 				date = driver.FindElement("xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]").GetAttribute("innerText").Substring(5);
 				log.Info("Current segment: " + date);
-				
+				DataManager.CaptureMap["NFL_WEEK"] = date;
 				day = DateTime.Now.DayOfWeek.ToString();
+
 				if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
-					date = date + "thu";
-					log.Info(date);
-					day = "TeamSport_ScoresYesterday";
+					day = "NFL_Thursday";
 				}
 				else if (day.Equals("Friday") || day.Equals("Saturday") || day.Equals("Sunday")) {
-					date = date + "sun";
-					log.Info(date);
-					day = "TeamSport_ScoresToday";
+					day = "NFL_Sunday";
 				}
 				else {
-					date = date + "mon";
-					log.Info(date);
-					day = "TeamSport_ScoresTomorrow";
+					day = "NFL_Monday";
+				}	
+
+				steps.Add(new TestStep(order, "Run Segment by Day", day, "run_template", "xpath", "", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify Events by Day")) {
+				if (String.IsNullOrEmpty(step.Data)) {
+					date = step.Data;
 				}
-				
 				total = driver.FindElements("xpath", "//div[@class='scores' and contains (@id,'w"+ date +"')]//a[contains(@class,'score-chip')]").Count;
 				
 				for (int game = 1; game <= total; game++) {
 					DataManager.CaptureMap["GAME"] = game.ToString();
-					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + game +"]");
+					ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'w"+ DataManager.CaptureMap["NFL_WEEK"] + date + "')]//a[contains(@class,'score-chip')][" + game +"]");
 					games = ele.GetAttribute("className");
 					games = games.Substring(games.IndexOf(" ") + 1); 
 					log.Info("Game State: " + games);
@@ -123,7 +129,7 @@ namespace SeleniumProject.Function
 						DataManager.CaptureMap["EVENT_STATUS"] = "LIVE";
 					}
 					else {
-						status = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ date +"')]//a[contains(@class,'score-chip')][" + game +"]//div[contains(@class,'status-text')]").Text; 
+						status = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')][" + game +"]//div[contains(@class,'status-text')]").Text; 
 						log.Info("Event status: " + status);
 						if (status.Equals("POSTPONED") || status.Equals("CANCELED")) {
 							step.Data = "TeamSport_PostponedEvent";
@@ -139,10 +145,16 @@ namespace SeleniumProject.Function
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					
-					steps.Add(new TestStep(order, "Return to Scores Segment", day, "run_template", "xpath", "", wait));
+					steps.Add(new TestStep(order, "Return to Scores Segment", "TeamSport_ScoresToday", "run_template", "xpath", "", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
+			}
+			
+			else if (step.Name.Equals("Scroll to Sunday")) {
+				ele = driver.FindElement("xpath", "//div[@class='scores' and contains (@id,'"+ DataManager.CaptureMap["NFL_WEEK"] + date +"')]//a[contains(@class,'score-chip')][" + step.Data +"]");
+                js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
+                actions.MoveToElement(ele).Perform();				
 			}
 			
 			else {
