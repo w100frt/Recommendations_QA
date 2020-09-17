@@ -2,7 +2,7 @@
 	"testCase":"Player Page Direct",
 	"env":"prod",
 	"testId":"1000",
-	"testRail":"7752959",
+	"testRail":"7753041",
 	"testRailProjectId": "130",
 	"testView":"desktop",
 	"testSteps":[
