@@ -1,0 +1,12 @@
+﻿{
+	"testCase":"Player Page Direct",
+	"env":"prod",
+	"testId":"1000",
+	"testRail":"7752959",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL", "data": "https://www.foxsports.com/nfl/tom-brady-player"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "TOM BRADY"}
+	]
+}

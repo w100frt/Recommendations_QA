@@ -8,19 +8,14 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click NFL"},
-		{"page":"Scores", "name":"Is Sport In-Season?", "data": "NFL"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NFL"},
-		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "SUPER BOWL - SUN, FEB 2"},
-		{"page":"Scores", "name":"Click Open Calendar"},
-		{"page":"Scores", "name":"Select Regular Season NFL Date"},
-		{"page":"Scores", "name":"Verify Selected Date", "data":"NFL"},
+		{"page":"Scores", "name":"Is Sport In-Season?", "data": "NFL"},
+		{"page":"NFL_Scores", "name":"Verify NFL Week"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"Scores", "name":"Capture Team Info from Chip", "data":"1"},
-		{"page":"Scores", "name":"Click Scorechip By Number", "data":"1"},	
-		{"page":"Events", "name":"Verify Away Team Value", "data":"#AWAY_TEAM1"},
-		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM1"},
-		{"page":"Events", "name":"Verify Away Team Score", "data":"#AWAY_TEAM_SCORE1"},
-		{"page":"Events", "name":"Verify Home Team Score", "data":"#HOME_TEAM_SCORE1"},
-		{"page":"Navigation","name":"Run Template", "data":"TeamSport_PastEvent"}
+		{"page":"NFL_Scores", "name":"Verify Events in Segment", "data":"NFL"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click NFL"},
+		{"page":"Scores", "name":"Click Open Calendar"},
+		{"page":"Scores", "name":"Verify Calendar is Displayed"}
 	]
 }

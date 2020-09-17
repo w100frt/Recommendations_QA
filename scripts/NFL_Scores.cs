@@ -49,6 +49,85 @@ namespace SeleniumProject.Function
 				steps.Clear();	
 			}
 			
+			else if (step.Name.Equals("Verify NFL Week")) {
+				if (String.IsNullOrEmpty(step.Data)) {
+					DateTime today = DateTime.Now;
+					
+					// determine week of season by today's date and time
+					if (today >= DateTime.Parse("09/01/2020") && today < DateTime.Parse("09/15/2020 11:00:00")) {
+						step.Data = "WEEK 1";
+					}
+					else if (today >= DateTime.Parse("09/15/2020 11:00:01") && today < DateTime.Parse("09/22/2020 11:00:00")) {
+						step.Data = "WEEK 2";
+					}
+					else if (today >= DateTime.Parse("09/22/2020 11:00:01") && today < DateTime.Parse("09/29/2020 11:00:00")) {
+						step.Data = "WEEK 3";
+					}
+					else if (today >= DateTime.Parse("09/29/2020 11:00:01") && today < DateTime.Parse("10/6/2020 11:00:00")) {
+						step.Data = "WEEK 4";
+					}
+					else if (today >= DateTime.Parse("10/6/2020 11:00:01") && today < DateTime.Parse("10/13/2020 11:00:00")) {
+						step.Data = "WEEK 5";
+					}
+					else if (today >= DateTime.Parse("10/13/2020 11:00:01") && today < DateTime.Parse("10/20/2020 11:00:00")) {
+						step.Data = "WEEK 6";
+					}
+					else if (today >= DateTime.Parse("10/20/2020 11:00:01") && today < DateTime.Parse("10/27/2020 11:00:00")) {
+						step.Data = "WEEK 7";
+					}
+					else if (today >= DateTime.Parse("10/27/2020 11:00:01") && today < DateTime.Parse("11/03/2020 11:00:00")) {
+						step.Data = "WEEK 8";
+					}
+					else if (today >= DateTime.Parse("11/03/2020 11:00:01") && today < DateTime.Parse("11/10/2020 11:00:00")) {
+						step.Data = "WEEK 9";
+					}
+					else if (today >= DateTime.Parse("11/10/2020 11:00:01") && today < DateTime.Parse("11/17/2020 11:00:00")) {
+						step.Data = "WEEK 10";
+					}
+					else if (today >= DateTime.Parse("11/17/2020 11:00:01") && today < DateTime.Parse("11/24/2020 11:00:00")) {
+						step.Data = "WEEK 11";
+					}
+					else if (today >= DateTime.Parse("11/24/2020 11:00:01") && today < DateTime.Parse("12/01/2020 11:00:00")) {
+						step.Data = "WEEK 12";
+					}
+					else if (today >= DateTime.Parse("12/01/2020 11:00:01") && today < DateTime.Parse("12/08/2020 11:00:00")) {
+						step.Data = "WEEK 13";
+					}
+					else if (today >= DateTime.Parse("12/08/2020 11:00:01") && today < DateTime.Parse("12/15/2020 11:00:00")) {
+						step.Data = "WEEK 14";
+					}
+					else if (today >= DateTime.Parse("12/15/2020 11:00:01") && today < DateTime.Parse("12/22/2020 11:00:00")) {
+						step.Data = "WEEK 15";
+					}
+					else if (today >= DateTime.Parse("12/22/2020 11:00:01") && today < DateTime.Parse("12/29/2020 11:00:00")) {
+						step.Data = "WEEK 16";
+					}
+					else if (today >= DateTime.Parse("12/29/2020 11:00:01") && today < DateTime.Parse("01/05/2021 11:00:00")) {
+						step.Data = "WEEK 17";
+					}
+					
+					/*
+					int now = time.Hours;
+					int et = now - 4;
+					if (et >= 0 && et < 11){
+						log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+						step.Data = "YESTERDAY";
+					}
+					else {
+						log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+						step.Data = "TODAY";
+					}*/				
+				}
+				else {
+					step.Data = "SUPER BOWL";
+				}
+
+				steps.Add(new TestStep(order, "Verify Displayed Week on NFL", step.Data, "verify_value", "xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]", wait));
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").Text;
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

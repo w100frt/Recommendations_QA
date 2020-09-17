@@ -1,0 +1,11 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"NFL Regression Test Suite",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":16}
+	]
+} 
