@@ -3,6 +3,7 @@
 	"env":"prod",
 	"testId":"1000",
 	"testRail":"7752959",
+	"testRailProjectId": "130",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
