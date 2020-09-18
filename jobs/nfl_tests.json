@@ -6,6 +6,7 @@
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
-		{"testId":16}
+		{"testId":16},
+		{"testId":42}
 	]
 } 
