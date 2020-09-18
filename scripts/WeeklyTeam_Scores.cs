@@ -168,7 +168,7 @@ namespace SeleniumProject.Function
 			
 			else if(step.Name.Equals("Capture Team Info from Chip")) {
 				data = step.Data;
-				xpath = "//div[contains(@id,'w'" + DataManager.CaptureMap["NFL_WEEK"] + DataManager.CaptureMap["NFL_DAY"] + ")]";
+				xpath = "//div[contains(@id,'w" + DataManager.CaptureMap["NFL_WEEK"] + DataManager.CaptureMap["NFL_DAY"] + "')]";
 				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
 				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
 				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));

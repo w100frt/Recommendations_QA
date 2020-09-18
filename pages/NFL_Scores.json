@@ -8,7 +8,7 @@
 		{"name":"Verify NFL Week","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
 		{"name":"Verify Event","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},
 		{"name":"Verify Events by Day","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},
-		{"name":"Verify Events in Segment","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"}
+		{"name":"Verify Events in Segment","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},
 		{"name":"Verify Start Time on Scorechip","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"}
 	]
 }
