@@ -75,16 +75,26 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Run MLB Player Stats Template")) {
+			else if (step.Name.Contains("Run Player Stats Template")) {
 				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_PlayerStats", wait));
+				if (step.Name.Contains("MLB") {
+					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_PlayerStats", wait));
+				}
+				else if (step.Name.Contains("NFL")) {
+					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_PlayerStats", wait));
+				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Run MLB Team Stats Template")) {
-				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
+			else if (step.Name.Contains("Run Team Stats Template")) {
+				DataManager.CaptureMap["STATS_NUM"] = step.Data;				
+				if (step.Name.Contains("MLB") {
+					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
+				}
+				else if (step.Name.Contains("NFL")) {
+					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_TeamStats", wait));
+				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
