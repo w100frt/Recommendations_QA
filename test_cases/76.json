@@ -2,7 +2,7 @@
 	"testCase":"Search: NFL Teams",
 	"env":"dev",
 	"testId":"76",
-	"testRail":"",
+	"testRail":"7756297",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

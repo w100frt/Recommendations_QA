@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"Stats: NFL",
+	"testCase":"Stats: NFL League",
 	"env":"dev",
 	"testId":"64",
-	"testRail":"",
+	"testRail":"7756296",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

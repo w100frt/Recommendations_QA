@@ -2,7 +2,7 @@
 	"testCase":"Stories: NFL",
 	"env":"dev",
 	"testId":"42",
-	"testRail":"",
+	"testRail":"7756299",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
