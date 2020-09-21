@@ -56,6 +56,12 @@ namespace SeleniumProject.Function
 					if (team.Equals("MLB")) {
 						steps.Add(new TestStep(order, "Verify Search Term", "Major League Baseball", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
 					}
+					else if (team.Equals("NFL")) {
+						steps.Add(new TestStep(order, "Verify Search Term", "National Football League", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					}
+					else if (team.Equals("SAN FRANCISCO 49ERS")) {
+						steps.Add(new TestStep(order, "Verify Search Term", "San Francisco 49ers", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					}
 					else {
 						steps.Add(new TestStep(order, "Verify Search Term", ti.ToTitleCase(team.ToLower()), "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
 					}
