@@ -77,7 +77,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Contains("Run Player Stats Template")) {
 				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				if (step.Name.Contains("MLB") {
+				if (step.Name.Contains("MLB")) {
 					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_PlayerStats", wait));
 				}
 				else if (step.Name.Contains("NFL")) {
@@ -89,7 +89,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Contains("Run Team Stats Template")) {
 				DataManager.CaptureMap["STATS_NUM"] = step.Data;				
-				if (step.Name.Contains("MLB") {
+				if (step.Name.Contains("MLB")) {
 					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
 				}
 				else if (step.Name.Contains("NFL")) {
