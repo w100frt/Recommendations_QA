@@ -91,15 +91,19 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
-			else if (step.Name.Equals("Capture and Click Random Player")) {
+			else if (step.Name.Contains("Capture") && step.Name.Contains("Random Player")) {
 				teamSelector = "//div[@id='exploreApp']//a[@class='entity-list-row-container']";
 				total = driver.FindElements("xpath", teamSelector).Count; 
 				total = random.Next(1, total+1);				
 				steps.Add(new TestStep(order, "Capture Randomized Player", "RANDOM_PLAYER", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
-				steps.Add(new TestStep(order, "Click Randomized Player", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				// click as well
+				if (step.Name.Contains("Click") {
+					steps.Add(new TestStep(order, "Click Randomized Player", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));					
+				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
-			}			
+				DataManager.CaptureMap["RANDOM_PLAYER_UP"] = DataManager.CaptureMap["RANDOM_PLAYER"].ToUpper();
+			}				
 			
 			else {
 				throw new Exception("Test Step not found in script");
