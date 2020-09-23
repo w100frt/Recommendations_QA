@@ -97,7 +97,7 @@ namespace SeleniumProject.Function
 				total = random.Next(1, total+1);				
 				steps.Add(new TestStep(order, "Capture Randomized Player", "RANDOM_PLAYER", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
 				// click as well
-				if (step.Name.Contains("Click") {
+				if (step.Name.Contains("Click")) {
 					steps.Add(new TestStep(order, "Click Randomized Player", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));					
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
