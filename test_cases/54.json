@@ -2,7 +2,7 @@
 	"testCase":"Explore: MLB Players",
 	"env":"dev",
 	"testId":"54",
-	"testRail":"",
+	"testRail":"7758798",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
