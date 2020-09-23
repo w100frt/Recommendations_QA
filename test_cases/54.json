@@ -29,6 +29,7 @@
 		{"page":"Explore", "name":"Capture and Click Random Team"},
 		{"page":"Explore", "name":"Capture Random Player"},
 		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click Search"},
 		{"page":"Explore", "name":"Enter Search", "data": "#RANDOM_PLAYER"},
 		{"page":"Explore", "name":"Click Top Search Result"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_PLAYER_UP"},
