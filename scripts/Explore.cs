@@ -15,10 +15,12 @@ namespace SeleniumProject.Function
 		{
 			VerifyError err = new VerifyError();
 			long order = step.Order;
+			Random random = new Random();
 			string wait = step.Wait != null ? step.Wait : "";
 			string sport = step.Data;
 			string activeTeam;
 			int total = 0;
+			string teamSelector = "";
             List<TestStep> steps = new List<TestStep>();
 			
 			if (step.Name.Equals("Verify Teams by Sport")) {
@@ -78,6 +80,26 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
+			
+			else if (step.Name.Equals("Capture and Click Random Team")) {
+				teamSelector = "//div[@id='exploreApp']//a[@class='entity-list-row-container']";
+				total = driver.FindElements("xpath", teamSelector).Count; 
+				total = random.Next(1, total+1);				
+				steps.Add(new TestStep(order, "Capture Randomized Team", "RANDOM_TEAM", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				steps.Add(new TestStep(order, "Click Randomized Team", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Capture and Click Random Player")) {
+				teamSelector = "//div[@id='exploreApp']//a[@class='entity-list-row-container']";
+				total = driver.FindElements("xpath", teamSelector).Count; 
+				total = random.Next(1, total+1);				
+				steps.Add(new TestStep(order, "Capture Randomized Player", "RANDOM_PLAYER", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				steps.Add(new TestStep(order, "Click Randomized Player", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}			
 			
 			else {
 				throw new Exception("Test Step not found in script");
