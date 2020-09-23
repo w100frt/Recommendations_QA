@@ -31,7 +31,8 @@ namespace SeleniumProject.Function
 				
 				switch(step.Data) {
 					case "NFL":
-						
+						string[] nfl = {"NFL", "ARIZONA CARDINALS", "ATLANTA FALCONS", "BALTIMORE RAVENS", "BUFFALO BILLS", "CAROLINA PANTHERS", "CHICAGO BEARS", "CINCINNATI BENGALS", "CLEVELAND BROWNS", "DALLAS COWBOYS", "DENVER BRONCOS", "DETROIT LIONS", "GREEN BAY PACKERS", "HOUSTON TEXANS", "INDIANAPOLIS COLTS", "JACKSONVILLE JAGUARS", "KANSAS CITY CHIEFS", "LAS VEGAS RAIDERS", "LOS ANGELES CHARGERS", "LOS ANGELES RAMS", "MIAMI DOLPHINS", "MINNESOTA VIKINGS", "NEW ENGLAND PATRIOTS", "NEW ORLEANS SAINTS", "NEW YORK GIANTS", "NEW YORK JETS", "PHILADELPHIA EAGLES", "PITTSBURGH STEELERS", "SAN FRANCISCO 49ERS", "SEATTLE SEAHAWKS", "TAMPA BAY BUCCANEERS", "TENNESSEE TITANS", "WASHINGTON FOOTBALL TEAM"};
+						teams.AddRange(nfl);
 						break;
 					case "NBA":
 						
@@ -54,6 +55,12 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team.ToLower()), "input_text", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
 					if (team.Equals("MLB")) {
 						steps.Add(new TestStep(order, "Verify Search Term", "Major League Baseball", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					}
+					else if (team.Equals("NFL")) {
+						steps.Add(new TestStep(order, "Verify Search Term", "National Football League", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					}
+					else if (team.Equals("SAN FRANCISCO 49ERS")) {
+						steps.Add(new TestStep(order, "Verify Search Term", "San Francisco 49ers", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
 					}
 					else {
 						steps.Add(new TestStep(order, "Verify Search Term", ti.ToTitleCase(team.ToLower()), "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));

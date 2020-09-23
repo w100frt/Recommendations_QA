@@ -20,6 +20,7 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			ReadOnlyCollection<IWebElement> elements;
 			string data;
+			string url = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
@@ -41,6 +42,18 @@ namespace SeleniumProject.Function
 							err.CreateVerificationError(step, dataSet[i], elements[i].GetAttribute("innerText").Trim());
 						}
 					}
+				}
+			}
+			
+			else if (step.Name.Equals("Verify URL Contains String")) {
+				url = driver.GetDriver().Url.ToString();
+				if (url.Contains(step.Data)) {
+					log.Info("Verification Passed. Expected [" + step.Data + "]" + " can be found in Actual URL [" + url + "]");
+				}
+				else {
+					log.Error("Verification FAILED.*** Expected: [" + step.Data + "] is not within Actual URL [" + url + "]");
+					err.CreateVerificationError(step, step.Data, url);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
 			}
 			

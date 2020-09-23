@@ -42,7 +42,7 @@ namespace SeleniumProject.Function
 					case "NFL":
 						standings.Add("DIVISION");
 						standings.Add("CONFERENCE");
-						standings.Add("PRESEASON");
+						//standings.Add("PRESEASON");
 						break;
 					case "NBA":
 						standings.Add("CONFERENCE");

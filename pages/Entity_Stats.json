@@ -12,6 +12,8 @@
 		{"name":"Hover Stats Table","objectType":"hover","by":"xpath","objectId":"//div[contains(@class,'stats-page')]//div[contains(@class,'table-wrapper-container')]"},
 		{"name":"Run MLB Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run MLB Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Run NFL Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Run NFL Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Select Stats Category from Dropdown","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Verify Bold Category","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Verify Stat Leader Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[@data-index='1']"},
