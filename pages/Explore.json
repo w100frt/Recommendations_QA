@@ -8,6 +8,7 @@
 		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NBA')]]"},
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NFL')]]"},
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS') or contains(.,'Players') or contains(.,'players')]"},
+		{"name":"Capture and Click Random Player","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Capture and Click Random Team","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SPORTS') or contains(.,'Sports') or contains(.,'sports')]"},
 		{"name":"Click Top Search Result","objectType":"click","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]"},
