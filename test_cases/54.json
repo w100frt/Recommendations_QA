@@ -13,7 +13,7 @@
 		{"page":"Explore", "name":"Capture and Click Random Team"},
 		{"page":"Explore", "name":"Capture and Click Random Player"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_PLAYER"},
-		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
+		{"page":"Entity", "name":"Verify Number of Player Stats in Header", "data": "3"},
 		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},

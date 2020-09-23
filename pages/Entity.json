@@ -15,7 +15,7 @@
 		{"name":"Verify Header Divider","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'entity-header-divider')]"},
 		{"name":"Verify Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
 		{"name":"Verify Header Subtext","objectType":"script","by":"xpath","objectId":"Entity"},
-		{"name":"Verify Number of Player Stats in Header","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'entity-header-stats')]/div"}
+		{"name":"Verify Number of Player Stats in Header","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'entity-header-stats')]/div"},
 		{"name":"Verify Selected Tab Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@class,'nav-selected')]"}
 	]
 }
