@@ -7,7 +7,6 @@
 		{"page":"Entity", "name":"Click Stats Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"STATS"},
 		{"page":"Entity", "name":"Click Highlights Tab"},
-		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"VIDEOS"},
-		{"page":"Entity_Highlights", "name":"Verify Video is Displayed"}
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"VIDEOS"}
     ]
 }
