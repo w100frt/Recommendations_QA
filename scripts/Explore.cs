@@ -92,7 +92,7 @@ namespace SeleniumProject.Function
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
-				DataManager.CaptureMap["RANDOM_TEAM_UP"] = DataManager.CaptureMap["RANDOM_PLAYER"].ToUpper();
+				DataManager.CaptureMap["RANDOM_TEAM_UP"] = DataManager.CaptureMap["RANDOM_TEAM"].ToUpper();
 			}
 			
 			else if (step.Name.Contains("Capture") && step.Name.Contains("Random Player")) {
