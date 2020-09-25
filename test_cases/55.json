@@ -1,8 +1,8 @@
 ﻿{
 	"testCase":"Explore and Search: NFL Players",
 	"env":"dev",
-	"testId":"54",
-	"testRail":"7758798",
+	"testId":"55",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
