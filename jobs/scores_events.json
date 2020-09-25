@@ -8,6 +8,7 @@
     "testIds": [
         {"testId":12},
         {"testId":13},
-        {"testId":17}
+      { "testId": 17 },
+      {"testId": 13},
     ]
 }
