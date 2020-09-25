@@ -32,7 +32,7 @@
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click Search"},
 		{"page":"Explore", "name":"Enter Search", "data": "#RANDOM_PLAYER"},
-		{"page":"Explore", "name":"Verify Top Search Result Text", "#RANDOM_PLAYER"},
+		{"page":"Explore", "name":"Verify Top Search Result Text", "data":"#RANDOM_PLAYER"},
 		{"page":"Explore", "name":"Verify Top Search Result Subtext", "data":"RANDOM_TEAM_UP"},
 		{"page":"Explore", "name":"Click Top Search Result"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_PLAYER_UP"},
