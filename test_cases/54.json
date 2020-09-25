@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Explore: MLB Players",
+	"testCase":"Explore and Search: MLB Players",
 	"env":"dev",
 	"testId":"54",
 	"testRail":"7758798",
@@ -18,6 +18,7 @@
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
+		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "1"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},
@@ -37,6 +38,7 @@
 		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
+		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "1"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},

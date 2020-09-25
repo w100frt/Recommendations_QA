@@ -17,6 +17,7 @@
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"National Football League - Added to your favorites."},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
+		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "1"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},

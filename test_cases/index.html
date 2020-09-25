@@ -10,7 +10,13 @@
 <script>
 	var sort = [];
 	(async () => {
-		const response = await fetch('https://api.github.com/repos/w100frt/FOX_Selenium_TC/contents/test_cases');
+		const response = await fetch('https://api.github.com/repos/w100frt/FOX_Selenium_TC/contents/test_cases', 
+		{
+			headers : { 
+				'Content-Type': 'application/json',
+				'Accept': 'application/json'
+			}
+		})
 		const data = await response.json();
 		let htmlString = '<h1>Selenium Test Cases</h1><ul style="list-style-type:none;">';
 		for (let file of data) {
