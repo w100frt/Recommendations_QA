@@ -1,0 +1,7 @@
+﻿{
+    "testCase":"Template_Scores_Smoke_NoCalendar",
+    "testId":"t15",
+    "testSteps":[
+		{"page":"Scores", "name":"Verify Scorechip is Displayed"}
+    ]
+}
