@@ -20,13 +20,13 @@ namespace SeleniumProject.Function
 			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
-			int number = 0;
+			int number = 1;
 			
 			if (step.Name.Equals("Verify Event Odds Details by Number")) {
-				bool numeric = int.TryParse(step.Data, out 1);
+				bool numeric = int.TryParse(step.Data, out number);
 				for (int i = 1; i <= 3; i++) {
 					if (numeric) {
-						number = step.Data;
+						number = int.TryParse(step.Data);
 						steps.Add(new TestStep(order, "Verify Number of Header Items", "3", "verify_count", "xpath", "(//div[contains(@class,'event')]//a)["+ number +"]//div[contains(@class,'event-card-header')]//div[contains(@class,'flex-col')]", wait));
 						steps.Add(new TestStep(order, "Verify First Slide Odds Header", "SPREAD", "verify_value", "xpath", "(//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'text fs')]", wait));
 						steps.Add(new TestStep(order, "Verify Sub Header Text Exists", "", "verify_displayed", "xpath", "(//div[contains(@class,'event')])[" + number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'sub-header')]", wait));
