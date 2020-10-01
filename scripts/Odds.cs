@@ -32,8 +32,7 @@ namespace SeleniumProject.Function
 						steps.Add(new TestStep(order, "Verify Sub Header Text Exists", "", "verify_displayed", "xpath", "(//div[contains(@class,'event')])[" + number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'sub-header')]", wait));
 						steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "", "verify_displayed", "xpath", "((//div[contains(@class,'event')])[" + number + "]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'number')])[1]", wait));
 						steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "", "verify_displayed", "xpath", "((//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'number')])[2]", wait));
-						steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "TEAM TO WIN", "verify_value", "xpath", "((//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//div[contains(@class,'chart-container-header')]//div[contains(@class,'text fs')])[2]", wait));
-						steps.Add(new TestStep(order, "", "", "verify_displayed", "xpath", "", wait));
+						//steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "TEAM TO WIN", "verify_value", "xpath", "((//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//div[contains(@class,'chart-container-header')]//div[contains(@class,'text fs')])[2]", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 					}
