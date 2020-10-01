@@ -1,0 +1,10 @@
+﻿{
+	"page":"Entity_Odds",
+	"testDefinitions":[
+		{"name":"Click See All Games","objectType":"click","by":"xpath","objectId":"//a[contains(.,'SEE ALL GAMES')]"},
+		{"name":"Verify Number of Events","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'event')]"},
+		{"name":"Verify Top Action Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][1]"},
+		{"name":"Verify Props Exist","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'prop-bets-comp-container')]"}
+		{"name":"Verify Props Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][2]"}
+	]
+}
