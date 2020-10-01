@@ -20,7 +20,6 @@ namespace SeleniumProject.Function
 			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
-			bool numeric = false;
 			int number = 0;
 			
 			if (step.Name.Equals("Verify Event Odds Details by Number")) {
