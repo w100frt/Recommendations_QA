@@ -2,7 +2,7 @@
 	"testCase":"Odds: NFL League",
 	"env":"dev",
 	"testId":"90",
-	"testRail":"",
+	"testRail":"7768707",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
