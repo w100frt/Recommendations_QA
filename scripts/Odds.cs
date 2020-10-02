@@ -24,26 +24,39 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Verify Event Odds Details by Number")) {
 				bool numeric = int.TryParse(step.Data, out number);
+				
+				steps.Add(new TestStep(order, "Verify Number of Header Items", "3", "verify_count", "xpath", "(//div[contains(@class,'event')]//a)["+ number +"]//div[contains(@class,'event-card-header')]//div[contains(@class,'flex-col')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+				
 				for (int i = 1; i <= 3; i++) {
+					switch(i) {
+						case 1: 
+							data = "SPREAD";
+							break;
+						case 2: 
+							data = "TEAM TO WIN";
+							break;
+						default:
+							data = "TOTAL";
+							break;
+					}
+					
 					if (numeric) {
 						number = Int32.Parse(step.Data);
-						steps.Add(new TestStep(order, "Verify Number of Header Items", "3", "verify_count", "xpath", "(//div[contains(@class,'event')]//a)["+ number +"]//div[contains(@class,'event-card-header')]//div[contains(@class,'flex-col')]", wait));
-						steps.Add(new TestStep(order, "Verify First Slide Odds Header", "SPREAD", "verify_value", "xpath", "(//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'text fs')]", wait));
+						steps.Add(new TestStep(order, "Verify First Slide Odds Header", data, "verify_value", "xpath", "(//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'text fs')]", wait));
 						steps.Add(new TestStep(order, "Verify Sub Header Text Exists", "", "verify_displayed", "xpath", "(//div[contains(@class,'event')])[" + number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'sub-header')]", wait));
 						steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "", "verify_displayed", "xpath", "((//div[contains(@class,'event')])[" + number + "]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'number')])[1]", wait));
 						steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "", "verify_displayed", "xpath", "((//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//li[" + i + "]//div[contains(@class,'chart-container-header')]//div[contains(@class,'number')])[2]", wait));
-						//steps.Add(new TestStep(order, "Verify Odds Numbers Exist", "TEAM TO WIN", "verify_value", "xpath", "((//div[contains(@class,'event')])["+ number +"]//div[contains(@class,'feed-component')]//div[contains(@class,'chart-container-header')]//div[contains(@class,'text fs')])[2]", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 					}
 					if (i != 3) {
 						steps.Add(new TestStep(order, "Click Arrow Right", "", "click", "xpath", "(//button[contains(@class,'next')])["+ number +"]", wait));
-						steps.Add(new TestStep(order, "", "", "verify_displayed", "xpath", "", wait));
 						TestRunner.RunTestSteps(driver, null, steps);
 						steps.Clear();
 					}
 				}
-			
 			}
 			
 			else {
