@@ -23,6 +23,8 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			int number = 1;
 			ReadOnlyCollection<IWebElement> elements;
+			int count = 0;
+			int bars = 0;
 			
 			if (step.Name.Equals("Verify Event Odds Details by Number")) {
 				bool numeric = int.TryParse(step.Data, out number);
