@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			int number = 1;
+			int elements = 0;
 			
 			if (step.Name.Equals("Verify Event Odds Details by Number")) {
 				bool numeric = int.TryParse(step.Data, out number);
@@ -76,6 +77,36 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Click See All " + DataManager.CaptureMap["PROP"], "", "click", "xpath", "//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//a[contains(.,'SEE ALL')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify Team Text Exists for Current Prop")) {
+				elements = driver.FindElements("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//div[contains(@class,'flex')]");
+				
+				foreach(IWebElement e in elements) {
+					if (String.IsNullOrEmpty(e.GetAttribute("innerText"))) {
+						log.Info("Verification PASSED. Element text is " + e.GetAttribute("innerText") + ".");
+					}
+					else {
+						log.Error("***Verification FAILED. Element returned no text. ***");
+						err.CreateVerificationError(step, "Team Text Expected", e.GetAttribute("innerText"));
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+			}
+			
+			else if (step.Name.Equals("Verify Odds Text Exists for Current Prop")) {
+				elements = driver.FindElements("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//span[contains(@class,'ff')]");
+				
+				foreach(IWebElement e in elements) {
+					if (String.IsNullOrEmpty(e.GetAttribute("innerText"))) {
+						log.Info("Verification PASSED. Element text is " + e.GetAttribute("innerText") + ".");
+					}
+					else {
+						log.Error("***Verification FAILED. Element returned no text. ***");
+						err.CreateVerificationError(step, "Team Text Expected", e.GetAttribute("innerText"));
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
 			}
 			
 			else {
