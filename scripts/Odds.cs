@@ -84,7 +84,7 @@ namespace SeleniumProject.Function
 				elements = driver.FindElements("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//div[contains(@class,'flex')]");
 				
 				foreach(IWebElement e in elements) {
-					if (String.IsNullOrEmpty(e.GetAttribute("innerText"))) {
+					if (!String.IsNullOrEmpty(e.GetAttribute("innerText"))) {
 						log.Info("Verification PASSED. Element text is " + e.GetAttribute("innerText") + ".");
 					}
 					else {
@@ -99,7 +99,7 @@ namespace SeleniumProject.Function
 				elements = driver.FindElements("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//span[contains(@class,'ff')]");
 				
 				foreach(IWebElement e in elements) {
-					if (String.IsNullOrEmpty(e.GetAttribute("innerText"))) {
+					if (!String.IsNullOrEmpty(e.GetAttribute("innerText"))) {
 						log.Info("Verification PASSED. Element text is " + e.GetAttribute("innerText") + ".");
 					}
 					else {
