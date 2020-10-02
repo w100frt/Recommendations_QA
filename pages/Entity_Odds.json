@@ -3,15 +3,15 @@
 	"testDefinitions":[
 		{"name":"Click Back Arrow","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'futures-header')]//a[@alt='back']"},
 		{"name":"Click See All Games","objectType":"click","by":"xpath","objectId":"//a[contains(.,'SEE ALL GAMES')]"},
-		{"name":"Click See All Futures for SB","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'prop-bets-component')][div[contains(.,'SUPER BOWL')]]//a[contains(.,'SEE ALL')]"},
-		{"name":"Click Super Bowl Header","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'prop-bets-name') and contains(.,'SUPER BOWL')]"},
+		{"name":"Click See All Futures for Current Prop","objectType":"script","by":"xpath","objectId":"Odds"},
+		{"name":"Click Prop Header By Name","objectType":"script","by":"xpath","objectId":"Odds"},
+		{"name":"Verify Dropdown Title","objectType":"verify_value","by":"xpath","objectId":"//a[contains(@class,'dropdown')]/h1"},
 		{"name":"Verify Event Odds Details by Number","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify Number of Events","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'event')]"},
-		{"name":"Verify Number of Super Bowl Teams","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'prop-bets-component')][div[contains(.,'SUPER BOWL')]]//tbody/tr"},
-		{"name":"Verify Number of Table Rows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'team-futures')]/table/tbody/tr"},
-		{"name":"Verify Top Action Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][1]"},
+		{"name":"Verify Number of Current Prop Displayed","objectType":"script","by":"xpath","objectId":"Odds"},
+		{"name":"Verify Number of Table Rows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'futures')]/table/tbody/tr"},
 		{"name":"Verify Props Exist","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'prop-bets-comp-container')]"},
 		{"name":"Verify Props Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][2]"},
-		{"name":"Verify Dropdown Title","objectType":"verify_value","by":"xpath","objectId":"//a[contains(@class,'dropdown')]/h1"}
+		{"name":"Verify Top Action Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][1]"}
 	]
 }

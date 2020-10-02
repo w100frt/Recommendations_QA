@@ -59,6 +59,25 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Click Prop Header By Name")) {
+				DataManager.CaptureMap["PROP"] = step.Data;
+				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//div[contains(@class,'prop-bets-name') and contains(.,'"+ step.Data.ToUpper()+"')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Verify Number of Current Prop Displayed")) {
+				steps.Add(new TestStep(order, "Verify Number of " + DataManager.CaptureMap["PROP"], step.Data, "verify_count", "xpath", "//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//tbody/tr", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("Click See All Futures for Current Prop")) {
+				steps.Add(new TestStep(order, "Click See All " + DataManager.CaptureMap["PROP"], "", "click", "xpath", "//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//a[contains(.,'SEE ALL')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
