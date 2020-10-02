@@ -21,7 +21,7 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			int number = 1;
-			int elements = 0;
+			ReadOnlyCollection<IWebElement> elements;
 			
 			if (step.Name.Equals("Verify Event Odds Details by Number")) {
 				bool numeric = int.TryParse(step.Data, out number);
