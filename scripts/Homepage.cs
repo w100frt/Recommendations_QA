@@ -57,6 +57,11 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Store Sport by Data")) {
+				DataManager.CaptureMap["SPORT"] = step.Data;
+				log.Info("Storing " + step.Data + "to capture map as SPORT...");
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

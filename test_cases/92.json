@@ -10,6 +10,7 @@
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "NFL"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data": "NFL"},
 		{"page":"Entity", "name":"Click Odds Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},		{"page":"Entity_Odds", "name":"Click Prop Header By Name", "data":"AFC EAST"},
 		{"page":"Entity_Odds", "name":"Verify Number of Current Prop Displayed", "data":"4"},

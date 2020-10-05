@@ -128,6 +128,65 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
+			
+			else if (step.Name.Equals("Store Team's Conference and Division")) {
+				switch(step.Data) {
+						case "Baltimore Ravens" : 
+						case "Cincinnati Bengals" : 
+						case "Cleveland Browns" : 
+						case "Pittsburgh Steelers" : 
+							DataManager.CaptureMap["TEAM_CONF"] = "AFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "AFC NORTH";
+							break;
+						case "Buffalo Bills" : 
+						case "Miami Dolphins" : 
+						case "New England Patriots" : 
+						case "New York Jets" :  
+							DataManager.CaptureMap["TEAM_CONF"] = "AFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "AFC EAST";
+							break;
+						case "Houston Texas" : 
+						case "Indianapolis Colts" : 
+						case "Jacksonville Jaguars" : 
+						case "Tennessee Titans" :  
+							DataManager.CaptureMap["TEAM_CONF"] = "AFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "AFC SOUTH";
+							break;
+						case "Denver Broncos" : 
+						case "Kansas City Chiefs" : 
+						case "Los Angeles Chargers" : 
+						case "Las Vegas Raiders" :  
+							DataManager.CaptureMap["TEAM_CONF"] = "AFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "AFC WEST";
+							break;
+						case "Chicago Bears" : 
+						case "Detroit Lions" : 
+						case "Green Bay Packers" : 
+						case "Minnesota Vikings" : 
+							DataManager.CaptureMap["TEAM_CONF"] = "NFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "NFC NORTH";
+							break;
+						case "Dallas Cowboys" : 
+						case "New York Giants" : 
+						case "Philadelphia Eagles" : 
+						case "Washington Football Team" :  
+							DataManager.CaptureMap["TEAM_CONF"] = "NFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "NFC EAST";
+							break;
+						case "Atlanta Falcons" : 
+						case "Carolina Panthers" : 
+						case "New Orleans Saints" : 
+						case "Tampa Bay Buccaneers" :  
+							DataManager.CaptureMap["TEAM_CONF"] = "NFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "NFC SOUTH";
+							break;
+						default:
+							DataManager.CaptureMap["TEAM_CONF"] = "NFC";
+							DataManager.CaptureMap["TEAM_DIV"] = "NFC WEST";
+							break;
+					}
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
