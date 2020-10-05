@@ -8,6 +8,7 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data": "NFL"},
 		{"page":"Explore", "name":"Capture and Click Random Team"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_TEAM_UP"},
 		{"page":"Entity_Odds", "name":"Store Team's Conference and Division", "data": "#RANDOM_TEAM"},

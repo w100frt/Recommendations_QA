@@ -36,7 +36,12 @@ namespace SeleniumProject.Function
 				for (int i = 1; i <= 3; i++) {
 					switch(i) {
 						case 1: 
-							data = "SPREAD";
+							if (DataManager.CaptureMap["SPORT"].Equals("MLB")) {
+								data = "RUN LINE";
+							}
+							else {
+								data = "SPREAD";	
+							}
 							break;
 						case 2: 
 							data = "TEAM TO WIN";

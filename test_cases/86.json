@@ -10,6 +10,7 @@
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "MLB"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data": "MLB"},
 		{"page":"Entity", "name":"Click Odds Tab"},
 		{"page":"Entity_Odds", "name":"Click Prop Header By Name", "data":"WORLD SERIES CHAMPION"},
 		{"page":"Entity_Odds", "name":"Verify Number of Current Prop Displayed", "data":"5"},
