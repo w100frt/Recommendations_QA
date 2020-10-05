@@ -69,9 +69,8 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				
-				ele = driver.FindElement("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//a[contains(.,'SEE ALL')]");
+				ele = driver.FindElement("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//img");
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
-				
 			}
 			
 			else if (step.Name.Equals("Verify Number of Current Prop Displayed")) {
