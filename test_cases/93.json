@@ -2,7 +2,7 @@
 	"testCase":"NFL: Team Odds",
 	"env":"dev",
 	"testId":"93",
-	"testRail":"",
+	"testRail":"7769045",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
