@@ -69,7 +69,7 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				
-				ele = driver.FindElement("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//img");
+				ele = driver.FindElement("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]");
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
 			}
 			
