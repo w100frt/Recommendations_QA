@@ -2,7 +2,7 @@
 	"testCase":"MLB: League Odds - Top Action and Props",
 	"env":"dev",
 	"testId":"85",
-	"testRail":"",
+	"testRail":"7769047",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

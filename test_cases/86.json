@@ -2,7 +2,7 @@
 	"testCase":"MLB: League Futures - World Series, NL Champ, AL Champ",
 	"env":"dev",
 	"testId":"86",
-	"testRail":"",
+	"testRail":"7769048",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
