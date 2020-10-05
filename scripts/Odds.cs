@@ -68,6 +68,10 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//div[contains(@class,'prop-bets-name') and contains(.,'"+ step.Data.ToUpper()+"')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
+				
+				ele = driver.FindElement("xpath","//div[contains(@class,'prop-bets-component')][div[contains(.,'"+ DataManager.CaptureMap["PROP"].ToUpper() +"')]]//a[contains(.,'SEE ALL')]");
+                js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
+				
 			}
 			
 			else if (step.Name.Equals("Verify Number of Current Prop Displayed")) {
