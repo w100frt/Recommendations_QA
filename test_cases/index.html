@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -17,7 +17,7 @@
 				'Accept': 'application/json'
 			}
 		})
-		const data = await response.json();
+        const data = await response.json();
 		let htmlString = '<h1>Selenium Test Cases</h1><ul style="list-style-type:none;">';
 		for (let file of data) {
 			if (!file.name.includes("index.html")) {
