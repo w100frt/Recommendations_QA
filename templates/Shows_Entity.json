@@ -4,7 +4,7 @@
 	"testSteps":[
 	{"page":"Shows_Clips","name":"Verify Number of Clips","data":"100"},
 	{"page":"Shows","name":"Click Episodes"},
-	{"page":"Shows_Episodes","name":"Verify Video Is Displayed"}
+	{"page":"Shows_Episodes","name":"Verify Video Is Displayed"},
 	{"page":"Shows","name":"Click Social"}
 	]
 }
