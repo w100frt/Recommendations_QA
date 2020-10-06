@@ -4,4 +4,4 @@
   {"name":"Click Episodes","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'episodes')]"},
   {"name":"Click Social","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'social')]"}
   ]
- }
+}
