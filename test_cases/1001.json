@@ -19,7 +19,7 @@
 	{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 	{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 	{"page":"Entity", "name":"Verify Selected Tab Text", "data":"CLIPS"},
-	{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"}
+	{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 	{"page":"Navigation","name":"Run Template","data":"Shows_Entity"}
   ]
 }
