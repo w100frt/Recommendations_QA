@@ -9,6 +9,7 @@
 <body>
 <script>
 	var sort = [];
+	var names = [];
 	(async () => {
 		const response = await fetch('https://api.github.com/repos/w100frt/FOX_Selenium_TC/contents/test_cases', 
 		{
@@ -25,6 +26,7 @@
 					const tc_file = await fetch(file.download_url);
 					const tc = await tc_file.json();
 					sort.push(tc.testId);
+					names.push(tc.testCase);
 					sort.sort(function(a, b){return a-b});
 					//console.log(sort);
 					//htmlString += `<li><a href="${file.name}">${tc.testId}</a> - ${tc.testCase}</li>`;
@@ -35,7 +37,7 @@
 		}
 		
 		for (let s of sort) {
-			htmlString += `<li><a href="${s}.json">${s}</a> - ${s}</li>`;
+			htmlString += `<li><a href="${s}.json">${s}</a> - ${names[s]}</li>`;
 		}
 
 		htmlString += '</ul><a href = "/FOX_Selenium_TC">Go back to FS Selenium Directory</a>';
