@@ -11,6 +11,6 @@
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "NFL"},
-		{"page":"Navigation", "name":"Run Template", "data": "Entity_ProLeague"},
+		{"page":"Navigation", "name":"Run Template", "data": "Entity_ProLeague"}
 	]
 }
