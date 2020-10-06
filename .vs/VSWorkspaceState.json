@@ -5,8 +5,8 @@
     "\\pages",
     "\\scripts",
     "\\templates",
-    "\\test_cases"
+    "\\test_cases\\legacy"
   ],
-  "SelectedNode": "\\scripts\\Seasons.cs",
+  "SelectedNode": "\\test_cases",
   "PreviewInSolutionExplorer": false
 }

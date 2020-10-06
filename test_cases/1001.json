@@ -12,7 +12,7 @@
 	{"page":"Explore","name":"Click The Herd"},
 	{"page":"Entity","name":"Verify Header Text","data":"THE HERD WITH COLIN COWHERD"},
 	{"page":"Entity","name":"Verify Header Divider"},
-	{"page":"Entity","name":"Verify Add or Remove Favorite Button Text", "data":"ADD TO FAVORTIRES"},
+	{"page":"Entity","name":"Verify Add or Remove Favorite Button Text", "data":"ADD TO FAVORITES"},
 	{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 	{"page":"Toasts", "name":"Verify Toast Message Text", "data":"The Herd with Colin Cowherd - Added to your favorites."},
 	{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
