@@ -8,7 +8,8 @@
 
 <body>
 <script>
-	var sort = [];
+	var sort = new Map();
+	var sorted;
 	(async () => {
 		const response = await fetch('https://api.github.com/repos/w100frt/FOX_Selenium_TC/contents/test_cases', 
 		{
@@ -24,15 +25,21 @@
 				if (!file.name.includes("legacy")) {
 					const tc_file = await fetch(file.download_url);
 					const tc = await tc_file.json();
-					sort.push(tc.testId);
-					sort.sort(function(a, b){return a-b});
-					console.log(sort);
-					htmlString += `<li><a href="${file.name}">${tc.testId}</a> - ${tc.testCase}</li>`;
-				} 
-				else 
-					htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
-			}
+					sort.set(tc.testId, tc.testCase);
+					sorted = new Map([...sort.entries()].sort());
+					//sort.sort(function(a, b){return a-b});
 
+					//htmlString += `<li><a href="${file.name}">${tc.testId}</a> - ${tc.testCase}</li>`;
+				} 
+				//else 
+				//	htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
+			}
+		}
+		
+		const iter = new Map([...sort.entries()].sort((a, b) => a[0] - b[0]));
+		
+		for (let s of iter) {
+			htmlString += `<li><a href="${s[0]}.json">${s[0]}</a> - ${s[1]}</li>`;
 		}
 
 		htmlString += '</ul><a href = "/FOX_Selenium_TC">Go back to FS Selenium Directory</a>';
