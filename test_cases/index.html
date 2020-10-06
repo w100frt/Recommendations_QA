@@ -27,15 +27,15 @@
 					sort.push(tc.testId);
 					sort.sort(function(a, b){return a-b});
 					//console.log(sort);
-					htmlString += `<li><a href="${file.name}">${tc.testId}</a> - ${tc.testCase}</li>`;
+					//htmlString += `<li><a href="${file.name}">${tc.testId}</a> - ${tc.testCase}</li>`;
 				} 
-				else 
-					htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
+				//else 
+				//	htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
 			}
 		}
 		
 		for (let s of sort) {
-			console.log(s);
+			htmlString += `<li><a href="https://codyphillips5.github.io/FOX_Selenium_TC/test_cases/${s}.json">${s}</a> - ${tc.testCase}</li>`;
 		}
 
 		htmlString += '</ul><a href = "/FOX_Selenium_TC">Go back to FS Selenium Directory</a>';
