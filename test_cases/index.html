@@ -26,13 +26,16 @@
 					const tc = await tc_file.json();
 					sort.push(tc.testId);
 					sort.sort(function(a, b){return a-b});
-					console.log(sort);
+					//console.log(sort);
 					htmlString += `<li><a href="${file.name}">${tc.testId}</a> - ${tc.testCase}</li>`;
 				} 
 				else 
 					htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
 			}
-
+		}
+		
+		for (let s of sort) {
+			console.log(s);
 		}
 
 		htmlString += '</ul><a href = "/FOX_Selenium_TC">Go back to FS Selenium Directory</a>';
