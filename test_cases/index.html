@@ -8,7 +8,7 @@
 
 <body>
 <script>
-	var sort = [];
+	var sort;
 	(async () => {
 		const response = await fetch('https://api.github.com/repos/w100frt/FOX_Selenium_TC/contents/test_cases', 
 		{
@@ -35,7 +35,7 @@
 		}
 		
 		for (let s of sort) {
-			htmlString += `<li><a href="https://codyphillips5.github.io/FOX_Selenium_TC/test_cases/${s}.json">${s}</a> - ${tc.testCase}</li>`;
+			htmlString += `<li><a href="${s}.json">${s}</a> - ${s}</li>`;
 		}
 
 		htmlString += '</ul><a href = "/FOX_Selenium_TC">Go back to FS Selenium Directory</a>';
