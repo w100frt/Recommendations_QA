@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"NFL: League Standings",
+	"testCase":"NFL: Team Standings by Division",
 	"env":"dev",
-	"testId":"95",
-	"testRail":"7769794",
+	"testId":"96",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
