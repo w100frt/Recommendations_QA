@@ -10,7 +10,7 @@
     {"page":"Explore","name":"Click Shows"},
 	{"page":"Explore","name":"Verify Count of Shows","data":"4"},
 	{"page":"Explore","name":"Click First Things First"},
-	{"page":"Entity","name":"Verify Header Text","data":"First Things First"},
+	{"page":"Entity","name":"Verify Header Text","data":"FIRST THINGS FIRST"},
 	{"page":"Entity","name":"Verify Header Divider"},
 	{"page":"Entity","name":"Verify Add or Remove Favorite Button Text", "data":"ADD TO FAVORITES"},
 	{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
