@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\jobs",
-    "\\pages",
-    "\\scripts",
-    "\\templates",
-    "\\test_cases\\legacy"
+    "\\test_cases"
   ],
-  "SelectedNode": "\\test_cases",
+  "SelectedNode": "\\test_cases\\37.json",
   "PreviewInSolutionExplorer": false
 }
