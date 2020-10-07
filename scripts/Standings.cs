@@ -28,8 +28,8 @@ namespace SeleniumProject.Function
 			StringBuilder sb = new StringBuilder();
 			
 			if (step.Name.Equals("Click and Capture Random Team By Division")) {
-				size = "//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//tbody/tr";
-				total = driver.FindElements("xpath", size).Count; 
+				name = "//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//tbody/tr";
+				total = driver.FindElements("xpath", name).Count; 
 				total = random.Next(1, total+1);
 				steps.Add(new TestStep(order, "Capture Team from " + step.Data, "DIV_TEAM", "capture", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
 				steps.Add(new TestStep(order, "Click Team from " + step.Data, "DIV_TEAM", "capture", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
