@@ -12,6 +12,7 @@
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NFL')]]"},
 		{"name":"Click The Herd","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'The Herd')]]"},
 		{"name":"Click First Things First","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'First Things First')]]"},
+		{"name":"Click Undisputed","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'Undisputed')]]"}
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS') or contains(.,'Players') or contains(.,'players')]"},
 		{"name":"Click Search","objectType":"click","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SPORTS') or contains(.,'Sports') or contains(.,'sports')]"},
