@@ -32,7 +32,7 @@ namespace SeleniumProject.Function
 				total = driver.FindElements("xpath", name).Count; 
 				total = random.Next(1, total+1);
 				steps.Add(new TestStep(order, "Capture Team from " + step.Data, "DIV_TEAM", "capture", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
-				steps.Add(new TestStep(order, "Click Team from " + step.Data, "DIV_TEAM", "capture", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
+				steps.Add(new TestStep(order, "Click Team from " + step.Data, "", "click", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
