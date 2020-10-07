@@ -2,9 +2,14 @@
 	"page":"Entity_Standings",
 	"testDefinitions":[
 		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'league standings')]//a[contains(@class,'dropdown-title')]"},
+		{"name":"Click Conference from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'conference')]"},
+		{"name":"Verify Standings Dropdown Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//a[contains(@class,'title')]"},
 		{"name":"Verify Standings Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"},
 		{"name":"Verify Standings Dropdown List By Sport","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Table Header","objectType":"verify_value","by":"xpath","objectId":"//thead[contains(@class,'data-header')]//th[@data-priority='1']"},
+		{"name":"Verify Table Header Count","objectType":"verify_count","by":"xpath","objectId":"//thead[contains(@class,'data-header')]//th[@data-priority='1']"},
 		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"}
+		{"name":"Verify Table Standings Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"}
+		{"name":"Verify Table Rows Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//tbody/tr"}
 	]
 }
