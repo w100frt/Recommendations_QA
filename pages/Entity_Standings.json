@@ -15,6 +15,6 @@
 		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"},
 		{"name":"Verify Table Standings Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"},
 		{"name":"Verify Table Rows Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//tbody/tr"},
-		{"name":"Verify Table Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//div[contains(@class,'title')]"},
+		{"name":"Verify Table Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//div[contains(@class,'title')]"}
 	]
 }
