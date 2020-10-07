@@ -8,8 +8,8 @@
 		{"name":"Verify Standings Dropdown List By Sport","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Table Header","objectType":"verify_value","by":"xpath","objectId":"//thead[contains(@class,'data-header')]//th[@data-priority='1']"},
 		{"name":"Verify Table Header Count","objectType":"verify_count","by":"xpath","objectId":"//thead[contains(@class,'data-header')]//th[@data-priority='1']"},
-		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"}
-		{"name":"Verify Table Standings Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"}
+		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"},
+		{"name":"Verify Table Standings Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"},
 		{"name":"Verify Table Rows Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//tbody/tr"}
 	]
 }
