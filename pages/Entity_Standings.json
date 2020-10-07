@@ -3,6 +3,9 @@
 	"testDefinitions":[
 		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'league standings')]//a[contains(@class,'dropdown-title')]"},
 		{"name":"Click Conference from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'conference')]"},
+		{"name":"Click Conference from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'division')]"},
+		{"name":"Click and Capture Random Team By Division","objectType":"script","by":"xpath","objectId":"Standings"},
+		{"name":"Verify Selected Row","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//tr[contains(@class,'selected')]//a[contains(@class,'entity-name')]"},
 		{"name":"Verify Standings Dropdown Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//a[contains(@class,'title')]"},
 		{"name":"Verify Standings Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"},
 		{"name":"Verify Standings Dropdown List By Sport","objectType":"script","by":"xpath","objectId":"Entity"},

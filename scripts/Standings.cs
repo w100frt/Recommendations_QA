@@ -20,14 +20,19 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			List<string> standings = new List<string>();
             List<TestStep> steps = new List<TestStep>();
+			Random random = new Random();
 			int total = 0;
 			int size;
 			string name = "";
 			IWebElement element;
 			StringBuilder sb = new StringBuilder();
 			
-			if (step.Name.Equals("Capture Stat Name by Number")) {
-				steps.Add(new TestStep(order, "Capture Name " + step.Data, "STAT_NAME", "capture", "xpath", "(//div[contains(@class,'stat-name')])["+ step.Data +"]", wait));
+			if (step.Name.Equals("Click and Capture Random Team By Division")) {
+				size = "//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//tbody/tr";
+				total = driver.FindElements("xpath", size).Count; 
+				total = random.Next(1, total+1);
+				steps.Add(new TestStep(order, "Capture Team from " + step.Data, "DIV_TEAM", "capture", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
+				steps.Add(new TestStep(order, "Click Team from " + step.Data, "DIV_TEAM", "capture", "xpath", "(//div[contains(@class,'table-standings')][table//th[contains(.,'"+ step.Data +"')]]//a[contains(@class,'entity-name')])["+ total +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
@@ -42,75 +47,6 @@ namespace SeleniumProject.Function
 				sb.AppendLine(name);
 				sb.Append(DataManager.CaptureMap["STAT_LEADER_TEAM"]);
 				DataManager.CaptureMap["STAT_LEADER"] = sb.ToString();
-			}
-			
-			else if (step.Name.Equals("Capture Team Stat Leader by Number")) {
-				steps.Add(new TestStep(order, "Capture Leader " + step.Data, "STAT_LEADER", "capture", "xpath", "(//div[contains(@class,'stat-leader-info')]/div[1])["+ step.Data +"]", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Equals("Capture Stat Value by Number")) {
-				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_VALUE", "capture", "xpath", "(//div[contains(@class,'stat-data')]/div[contains(@class,'fs')])["+ step.Data +"]", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Equals("Capture Stat Abbreviation by Number")) {
-				steps.Add(new TestStep(order, "Capture Value " + step.Data, "STAT_ABBR", "capture", "xpath", "(//div[@class='stat-abbr'])["+ step.Data +"]", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Equals("Click Stat Category by Number")) {
-				steps.Add(new TestStep(order, "Click Category " + step.Data, "", "click", "xpath", "(//a[contains(@class,'stats-overview')])["+ step.Data +"]", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Equals("Select Stats Category from Dropdown")) {
-				steps.Add(new TestStep(order, "Open Stats Dropdown", "", "click", "xpath", "//div[contains(@class,'stats-header')]//a[contains(@class,'dropdown-title')]", wait));
-				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//div[contains(@class,'stats-header')]//a[.='"+ step.Data +"']", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Contains("Player Stats Template")) {
-				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				if (step.Name.Contains("MLB")) {
-					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_PlayerStats", wait));
-				}
-				else if (step.Name.Contains("NFL")) {
-					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_PlayerStats", wait));
-				}
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Contains("Team Stats Template")) {
-				DataManager.CaptureMap["STATS_NUM"] = step.Data;				
-				if (step.Name.Contains("MLB")) {
-					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
-				}
-				else if (step.Name.Contains("NFL")) {
-					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_TeamStats", wait));
-				}
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
-			}
-			
-			else if (step.Name.Equals("Verify Bold Category")) {
-				name = driver.FindElement("xpath","//th[contains(@class,'cell-number') and contains(@class,'bold')]").GetAttribute("innerText");
-				name = name.Trim();
-				
-				if (name.Equals(step.Data)) {
-					log.Info("Verification PASSED. Expected data [" + step.Data + "] matches actual data [" + name + "]");
-				}
-				else {
-					log.Error("***Verification FAILED. Expected data [" + step.Data + "] does not match actual data [" + name + "] ***");
-					err.CreateVerificationError(step, step.Data, name);
-					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
-				}
 			}
 			
 			else {
