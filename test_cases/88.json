@@ -2,7 +2,7 @@
 	"testCase":"MLB: League Standings",
 	"env":"dev",
 	"testId":"88",
-	"testRail":"",
+	"testRail":"7769829",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
@@ -19,11 +19,12 @@
 		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"6"},
 		{"page":"Entity_Standings", "name":"Verify Table Rows Count", "data":"30"},
 		{"page":"Entity_Standings", "name":"Click Open Standings Dropdown"},
-		{"page":"Entity_Standings", "name":"Verify Standings Dropdown List By Sport", "data":"NFL"},
-		{"page":"Entity_Standings", "name":"Click Conference from Dropdown"},
-		{"page":"Entity_Standings", "name":"Verify Table Header", "data":"AMERICAN LEAGUE"},
-		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"2"},
-		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"2"},
+		{"page":"Entity_Standings", "name":"Verify Standings Dropdown List By Sport", "data":"MLB"},
+		{"page":"Entity_Standings", "name":"Click Wild Card from Dropdown"},
+		{"page":"Entity_Standings", "name":"Verify Table Title", "data":"AMERICAN LEAGUE"},
+		{"page":"Entity_Standings", "name":"Verify Table Header", "data":"DIVISION LEADERS"},
+		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"4"},
+		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"4"},
 		{"page":"Entity_Standings", "name":"Verify Table Rows Count", "data":"30"}
 	]
 }
