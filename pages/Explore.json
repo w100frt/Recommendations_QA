@@ -9,6 +9,7 @@
 		{"name":"Click Entity by Data","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Click MLB","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'MLB')]]"},
 		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NBA')]]"},
+		{"name":"Click NCAA FB","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NCAA FB')]]"},
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NFL')]]"},
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS') or contains(.,'Players') or contains(.,'players')]"},
 		{"name":"Click Search","objectType":"click","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
