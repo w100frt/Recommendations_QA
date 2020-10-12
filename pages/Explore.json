@@ -15,7 +15,7 @@
 		{"name":"Click Search","objectType":"click","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SPORTS') or contains(.,'Sports') or contains(.,'sports')]"},
 		{"name":"Click Top Search Result","objectType":"click","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]"},
-		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='Leagues, teams, players']"},
+		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@type='search']"},
 		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[@id='explore']//div[nav[@selected-tab]]//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
 		{"name":"Verify Count of Teams or Players","objectType":"verify_count","by":"xpath","objectId":"//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
 		{"name":"Verify MLB Teams","objectType":"script","by":"xpath","objectId":"Explore"},
