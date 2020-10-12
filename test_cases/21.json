@@ -28,7 +28,7 @@
 		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},
 		{"page":"Scores", "name":"Click NBA"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NBA"},
-		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke"},
+		{"page":"Navigation", "name":"Run Template", "data": "Scores_Smoke_NoCalendar"},
 		{"page":"Scores", "name":"Click NCAA BK"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA BK"},
 		{"page":"Scores", "name":"Verify CBK Groups"},
