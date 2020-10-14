@@ -31,7 +31,7 @@ namespace SeleniumProject.Function
 				if (String.IsNullOrEmpty(data)) {
 					data = "PLAYERS_LISTED";
 				}
-				DataManager.CaptureMap[data] = total;
+				DataManager.CaptureMap[data] = total.ToString();
 			}
 			
 			else {
