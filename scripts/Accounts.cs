@@ -155,6 +155,14 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Capture Current URL")) {
+				data = step.Data; 
+				if (String.IsNullOrEmpty(data)) {
+					data = "URL";
+				}
+				DataManager.CaptureMap[data] = driver.GetDriver().Url;
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

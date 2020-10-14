@@ -1,0 +1,6 @@
+﻿{
+	"page":"FOXBet",
+	"testDefinitions":[
+		{"name":"Capture Number of FB Entities","objectType":"script","by":"xpath","objectId":"FOXBet"}
+	]
+}
