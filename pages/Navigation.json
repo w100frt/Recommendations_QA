@@ -1,6 +1,7 @@
 ﻿{
 	"page":"Navigation",
 	"testDefinitions":[
+		{"name":"Capture Current URL","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in')]"},
 		{"name":"Click Explore","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'explore-link')]"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},

@@ -1,5 +1,5 @@
 ﻿{
-	"page":"Toasts",
+	"page":"EventOdds",
 	"testDefinitions":[
 		{"name":"Click Yes to Remove Favorite","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='YES, REMOVE IT']]"},
 		{"name":"Click Sign Out Button","objectType":"click","by":"xpath","objectId":"//div[@class='link-button'][span[.='sign out']]"}
