@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
-			if (step.Name.Equals("Capture Number of FB Entities") {
+			if (step.Name.Equals("Capture Number of FB Entities")) {
 				size = "//a[contains(@id,'event-selection') and not(contains(@class,'disabled'))]";
 				total = driver.FindElements("xpath", size).Count;
 				
