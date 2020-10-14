@@ -155,11 +155,12 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if ("Capture Current URL") {
-				if (String.IsNullOrEmpty(step.Data())) {
-					step.Data() = "URL";
+			else if (step.Name.Equals("Capture Current URL")) {
+				data = step.Data(); 
+				if (String.IsNullOrEmpty(data)) {
+					data = "URL";
 				}
-				DataManager.CaptureMap[step.Data()] = driver.GetDriver().Url;
+				DataManager.CaptureMap[data] = driver.GetDriver().Url;
 			}
 			
 			else {

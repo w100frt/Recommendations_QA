@@ -17,6 +17,7 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			string size = "";
+			string data = "";
 			int total = 0;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
@@ -25,10 +26,12 @@ namespace SeleniumProject.Function
 				size = "//a[contains(@id,'event-selection') and not(contains(@class,'disabled'))]";
 				total = driver.FindElements("xpath", size).Count;
 				
-				if (String.IsNullOrEmpty(step.Data())) {
-					step.Data() = "PLAYERS_LISTED";
+				data = step.Data();
+				
+				if (String.IsNullOrEmpty(data)) {
+					data = "PLAYERS_LISTED";
 				}
-				DataManager.CaptureMap[step.Data()] = total;
+				DataManager.CaptureMap[data] = total;
 			}
 			
 			else {
