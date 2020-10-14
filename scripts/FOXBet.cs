@@ -23,6 +23,15 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Capture Number of FB Entities")) {
+				size = "//button[contains(@class,'expandable') and not(contains(@class,'expanded'))]";
+				total = driver.FindElements("xpath", size).Count;
+				
+				if (total != 0) {
+					steps.Add(new TestStep(order, "Click Open Expandable", "", "click", "xpath", size, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				
 				size = "//a[contains(@id,'event-selection') and not(contains(@class,'disabled'))]";
 				total = driver.FindElements("xpath", size).Count;
 				
