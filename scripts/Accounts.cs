@@ -156,7 +156,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture Current URL")) {
-				data = step.Data(); 
+				data = step.Data; 
 				if (String.IsNullOrEmpty(data)) {
 					data = "URL";
 				}

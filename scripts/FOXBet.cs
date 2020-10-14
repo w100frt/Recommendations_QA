@@ -26,7 +26,7 @@ namespace SeleniumProject.Function
 				size = "//a[contains(@id,'event-selection') and not(contains(@class,'disabled'))]";
 				total = driver.FindElements("xpath", size).Count;
 				
-				data = step.Data();
+				data = step.Data;
 				
 				if (String.IsNullOrEmpty(data)) {
 					data = "PLAYERS_LISTED";
