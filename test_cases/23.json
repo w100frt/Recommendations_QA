@@ -2,7 +2,7 @@
 	"testCase":"Verify Reset Password Present",
 	"env":"dev",
 	"testId":"23",
-	"testRail":"",
+	"testRail":"7777659",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
@@ -10,10 +10,11 @@
 		{"page":"FSCOM_AccountInfo","name":"Verify Header Value","data":"RESET PASSWORD"},
 		{"page":"FSCOM_AccountInfo","name":"Reset - Enter New Password", "data":"test"},
 		{"page":"FSCOM_AccountInfo", "name":"Reset - Enter Re-type Password", "data":"test"},
-		{"page":"FSCOM_AccountInfo","name":"Verify Reset Password Error", "data":"Password must be at least 6 characters."},
+		{"page":"FSCOM_AccountInfo","name":"Verify Password Length Descriptor", "data":"Password must be at least 6 characters."},
 		{"page":"FSCOM_AccountInfo","name":"Verify State of Reset Password Button", "data":"Disabled"},
 		{"page":"FSCOM_AccountInfo","name":"Reset - Enter New Password", "data":"testFS"},
 		{"page":"FSCOM_AccountInfo", "name":"Reset - Enter Re-type Password", "data":"testFS"},
+		{"page":"FSCOM_AccountInfo","name":"Verify Password Length Descriptor", "data":"New Password (6-25 Characters)*"},
 		{"page":"FSCOM_AccountInfo","name":"Verify State of Reset Password Button", "data":"Enabled"},
 		{"page":"FSCOM_AccountInfo","name":"Click Reset Password Button"},
 		{"page":"FSCOM_AccountInfo","name":"Verify Reset Password Error", "data":"Unable to update password."}

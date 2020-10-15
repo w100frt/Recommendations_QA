@@ -28,11 +28,11 @@
 		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[contains(@class,'header-title')]"},
 		{"name":"Verify Email Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'email')]//span[contains(@class,'error')]"},
 		{"name":"Verify Header Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'account-header')]/p"},
-		{"name":"Verify Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'password')]//span[contains(@class,'error')]"},	
-		{"name":"Verify Reset Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'error-msg')]/span"},	
+		{"name":"Verify Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'password')]//span[contains(@class,'error')]"},
 		{"name":"Verify Password is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='text']"},
-		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"},		
-		{"name":"Verify Reset Password Error","objectType":"verify_value","by":"xpath","objectId":"//label[@for='pwInput1']"},	
+		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"},	
+		{"name":"Verify Password Length Descriptor","objectType":"verify_value","by":"xpath","objectId":"//label[@for='pwInput1']"},	
+		{"name":"Verify Reset Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'error-msg')]/span"},	
 		{"name":"Verify State of Reset Password Button","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Verify Toast Message","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'toast-msg')]"}
 	]

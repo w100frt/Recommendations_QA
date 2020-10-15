@@ -158,7 +158,7 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify State of Reset Password Button")) {
 				// verify that the button is currently enabled/disabled
 				test = driver.FindElement("xpath","//div[span[contains(@class,'link-text') and contains(.,'Reset Password')]]").GetAttribute("class");
-				test = test.Substring(0, test.IndexOf(" ") + 1);
+				test = test.Substring(test.IndexOf(" ") + 1);
 				log.Info("button state = " + test);
 				if (!String.IsNullOrEmpty(step.Data)) {
 					if (step.Data.ToLower().Equals(test)) {
