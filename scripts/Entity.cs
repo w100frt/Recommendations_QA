@@ -174,8 +174,8 @@ namespace SeleniumProject.Function
 						sport = sport + ": " + player;
 						break;
 					case "NBA":
-						DateTime playoff = new DateTime(2020, 7, 30);
-						if (DateTime.Now > playoff) {
+						DateTime NBA_playoff = new DateTime(2020, 7, 30);
+						if (DateTime.Now > NBA_playoff) {
 							playoffs = "PLAYOFFS: ";
 						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
@@ -185,8 +185,8 @@ namespace SeleniumProject.Function
 						sport = count + " GAMES " + sport;
 						break;
 					case "MLB":
-						DateTime playoff = new DateTime(2020, 9, 28);
-						if (DateTime.Now > playoff) {
+						DateTime MLB_playoff = new DateTime(2020, 9, 28);
+						if (DateTime.Now > MLB_playoff) {
 							playoffs = "PLAYOFFS: ";
 						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
