@@ -71,6 +71,9 @@ namespace SeleniumProject.Function
 				if (date.Equals(step.Data)) {
 					log.Info("Verification PASSED. Expected value [" + step.Data + "] equals  actual value [" + date + "]");
 				}
+				else if (date.Contains("MINS AGO") && step.Data.Contains("MINS AGO")) {
+					log.Info("Verification PASSED. [" + step.Data + "] refers to same value as [" + date + "]");
+				}
 				else {
 					log.Error("***Verification FAILED. Expected [" + step.Data + "] does not equal actual value [" + date +"]***");
 					err.CreateVerificationError(step, step.Data, date);
