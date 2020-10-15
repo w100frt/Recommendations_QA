@@ -162,7 +162,7 @@ namespace SeleniumProject.Function
 				log.Info("button state = " + test);
 				if (!String.IsNullOrEmpty(step.Data)) {
 					if (step.Data.ToLower().Equals(test)) {
-						log.Info("Verification PASSED. Expected [" + Step.Data.ToLower() + "] matches Actual [" + test +"]");
+						log.Info("Verification PASSED. Expected [" + step.Data.ToLower() + "] matches Actual [" + test +"]");
 					}
 					else {
 						log.Error("***Verification FAILED. Expected [" + step.Data.ToLower() + "] does not match Actual [" + test +"]");
