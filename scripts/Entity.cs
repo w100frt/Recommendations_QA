@@ -161,7 +161,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Header Subtext")) {
 				sport = step.Data;
-				count = driver.FindElements("xpath","//div[@class='scores']//a").Count;
+				count = driver.FindElements("xpath","(//div[@class='scores'])[1]//a").Count;
 				
 				switch (sport) {
 					case "NFL":
@@ -185,8 +185,12 @@ namespace SeleniumProject.Function
 						sport = count + " GAMES " + sport;
 						break;
 					case "MLB":
+						DateTime playoff = new DateTime(2020, 9, 28);
+						if (DateTime.Now > playoff) {
+							playoffs = "PLAYOFFS: ";
+						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = count + " GAMES " + sport;
+						sport = playoffs + count + " GAMES " + sport;
 						break;
 					default :
 						break;	
