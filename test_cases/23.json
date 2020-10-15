@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Reset Password",
+	"testCase":"Verify Reset Password Present",
 	"env":"dev",
 	"testId":"23",
 	"testRail":"",
