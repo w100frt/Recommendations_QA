@@ -7,6 +7,7 @@
 		{"name":"Click Close Button","objectType":"click","by":"xpath","objectId":"//img[@alt='close']"},
 		{"name":"Click Forgot Password","objectType":"click","by":"xpath","objectId":"//span[.='FORGOT YOUR PASSWORD?']"},
 		{"name":"Click Newsletter Checkbox","objectType":"click","by":"xpath","objectId":"//div[@id='account-cb']/input"},
+		{"name":"Click Reset Password Button","objectType":"click","by":"xpath","objectId":"//div[span[contains(@class,'link-text') and contains(.,'Reset Password')]]"},
 		{"name":"Click Send Email","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Send E-mail']]"},
 		{"name":"Click Show/Hide Password Button","objectType":"click","by":"xpath","objectId":"//span[contains(@class,'view-icon')]/div"},
 		{"name":"Click Sign In Button","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'button')][span[.='Sign In']]"},
@@ -22,11 +23,17 @@
 		{"name":"Enter New Password","objectType":"input_text","by":"xpath","objectId":"//input[@placeholder='New password*']"},
 		{"name":"Enter Password","objectType":"input_text","by":"xpath","objectId":"//input[contains(@placeholder,'Password')]"},
 		{"name":"Generate Email","objectType":"script","by":"xpath","objectId":"GenerateEmail"},
+		{"name":"Reset - Enter New Password","objectType":"input_text","by":"xpath","objectId":"//input[@autocomplete='current-password']"},
+		{"name":"Reset - Enter Re-type Password","objectType":"input_text","by":"xpath","objectId":"//input[@autocomplete='new-password']"},
 		{"name":"Verify Account Name","objectType":"verify_value","by":"xpath","objectId":"//p[contains(@class,'header-title')]"},
 		{"name":"Verify Email Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'email')]//span[contains(@class,'error')]"},
-		{"name":"Verify Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'password')]//span[contains(@class,'error')]"},		
+		{"name":"Verify Header Value","objectType":"verify_value","by":"xpath","objectId":""},
+		{"name":"Verify Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'password')]//span[contains(@class,'error')]"},	
+		{"name":"Verify Reset Password Error","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'error-msg')]/span"},	
 		{"name":"Verify Password is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='text']"},
-		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"},
+		{"name":"Verify Password is Hidden","objectType":"verify_displayed","by":"xpath","objectId":"//input[contains(@placeholder,'Password') and @type='password']"},		
+		{"name":"Verify Reset Password Error","objectType":"verify_value","by":"xpath","objectId":"//label[@for='pwInput1']"},	
+		{"name":"Verify State of Reset Password Button","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Verify Toast Message","objectType":"verify_value","by":"xpath","objectId":"//span[contains(@class,'toast-msg')]"}
 	]
 }
