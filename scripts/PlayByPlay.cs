@@ -129,7 +129,7 @@ namespace SeleniumProject.Function
 						log.Info("Inning: " + status);
 						
 						if (String.IsNullOrEmpty(status)) {
-							js.ExecuteScript("window.scrollBy({top: -100,left: 0,behavior: 'smooth'});");
+							js.ExecuteScript("window.scrollBy({top: 150,left: 0,behavior: 'smooth'});");
 							log.Info("Scroll down and capture inning");
 							status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text;
 							log.Info("Inning: " + status);
