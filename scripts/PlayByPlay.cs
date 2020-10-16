@@ -126,7 +126,15 @@ namespace SeleniumProject.Function
 						break;
 					case "MLB":
 						status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text;
-						log.Info(status);
+						log.Info("Inning: " + status);
+						
+						if (String.IsNullOrEmpty(status)) {
+							js.ExecuteScript("window.scrollBy({top: 150,left: 0,behavior: 'smooth'});");
+							log.Info("Scroll down and capture inning");
+							status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text;
+							log.Info("Inning: " + status);
+						}
+						
 						status = status.Substring(0, 5);
 						if (status.Equals("BOT 9")) {
 							stoppage.Add("BOTTOM 9TH");
