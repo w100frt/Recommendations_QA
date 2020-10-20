@@ -12,6 +12,7 @@
 		{"name":"Navigate to Scores","objectType":"click","by":"xpath","objectId":"//a[@href='/scores']"},
 		{"name":"Navigate to Stories","objectType":"click","by":"xpath","objectId":"//a[@href='/stories']"},
 		{"name":"Navigate to URL","objectType":"navigate_to"},
+		{"name":"Navigate to URL by ENV","objectType":"script","by":"xpath","objectId":"Homepage"},
 		{"name":"Open Browser","objectType":"new_browser"},
 		{"name":"Run Template","objectType":"run_template"},
 		{"name":"Store Sport by Data","objectType":"script","by": "xpath", "objectId":"Homepage"},

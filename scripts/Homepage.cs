@@ -62,6 +62,13 @@ namespace SeleniumProject.Function
 				log.Info("Storing " + step.Data + "to capture map as SPORT...");
 			}
 			
+			else if (step.Name.Equals("Navigate to URL by ENV")) {
+				url = TestParameters.GLOBAL_APP_URL + step.Data;
+				steps.Add(new TestStep(order, "Navigate to " + url, url, "navigate_to", "", "", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
