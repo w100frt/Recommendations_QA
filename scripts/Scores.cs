@@ -180,8 +180,8 @@ namespace SeleniumProject.Function
 				}
 				
 				if (playoff) {
-					steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM", "capture", "xpath", "(" + xpath + "(//a[contains(@class,'score-chip-playoff')]["+ data +"]//div[@class='team-texts']//span[contains(@class,'team-name-1')])[1]", wait));
-					steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM", "capture", "xpath", "(" + xpath + "(//a[contains(@class,'score-chip-playoff')]["+ data +"]//div[@class='team-texts']//span[contains(@class,'team-name-2')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip-playoff')]["+ data +"]//div[@class='team-texts']//span[contains(@class,'team-name-1')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip-playoff')]["+ data +"]//div[@class='team-texts']//span[contains(@class,'team-name-2')])[1]", wait));
 				}
 				
 				else {
