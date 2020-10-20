@@ -38,7 +38,7 @@ namespace SeleniumProject.Function
 				// state returns idle if overlay button is present
 				overlay = driver.FindElements("xpath", "//div[@class='overlays']/div").Count;
 				if(overlay > 1) {
-					steps.Add(new TestStep(order, "Click Overlay Play Button", "", "click", "xpath", "//div[@class='overlay-play-button']", wait));
+					steps.Add(new TestStep(order, "Click Overlay Play Button", "", "click", "xpath", "//a[@class='overlay-play-button']", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					ele = driver.FindElement("xpath", "//div[@aria-label='Video Player']");
