@@ -6,7 +6,7 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Navigate to URL", "data":"https://www.foxsports.com/reset-password?resetToken=testreset"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/reset-password?resetToken=testreset"},
 		{"page":"FSCOM_AccountInfo","name":"Verify Header Value","data":"RESET PASSWORD"},
 		{"page":"FSCOM_AccountInfo","name":"Reset - Enter New Password", "data":"test"},
 		{"page":"FSCOM_AccountInfo", "name":"Reset - Enter Re-type Password", "data":"test"},

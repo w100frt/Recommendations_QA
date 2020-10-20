@@ -63,6 +63,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Navigate to URL by ENV")) {
+				log.Info("Appending " + step.Data + " to ENV URL: " + TestParameters.GLOBAL_APP_URL);
 				url = TestParameters.GLOBAL_APP_URL + step.Data;
 				steps.Add(new TestStep(order, "Navigate to " + url, url, "navigate_to", "", "", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
