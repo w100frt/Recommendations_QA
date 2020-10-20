@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
 			List<string> standings = new List<string>();
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
+			string games = " GAMES ";
 			string player = "";
 			string playoffs = "";
 			int count = 0;
@@ -163,6 +164,10 @@ namespace SeleniumProject.Function
 				sport = step.Data;
 				count = driver.FindElements("xpath","(//div[@class='scores'])[1]//a").Count;
 				
+				if (count == 1) {
+					games = " GAME ";
+				}
+				
 				switch (sport) {
 					case "NFL":
 						driver.FindElement("xpath","//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//span[@class='title-text']").Click();
@@ -179,10 +184,10 @@ namespace SeleniumProject.Function
 							playoffs = "PLAYOFFS: ";
 						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = playoffs + count + " GAMES " + sport;
+						sport = playoffs + count + games + sport;
 						break;
 					case "NHL":
-						sport = count + " GAMES " + sport;
+						sport = count + games + sport;
 						break;
 					case "MLB":
 						DateTime MLB_playoff = new DateTime(2020, 9, 28);
@@ -190,7 +195,7 @@ namespace SeleniumProject.Function
 							playoffs = "PLAYOFFS: ";
 						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = playoffs + count + " GAMES " + sport;
+						sport = playoffs + count + games + sport;
 						break;
 					default :
 						break;	
