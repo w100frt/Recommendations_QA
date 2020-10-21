@@ -25,7 +25,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify Main Nav Link Values")) {
-				string[] dataSet = {"HOME", "SCORES", "LIVE TV", "STORIES", "EXPLORE", "SIGN IN", "Account"};
+				string[] dataSet = {"HOME", "SCORES", "LIVE TV", "STORIES", "SEARCH", "SIGN IN", "Account"};
 				elements = driver.FindElements("xpath", "//ul[@class='nav']//li[contains(@class,'desktop-show')]//span[contains(@class,'nav-item-text')]");
 				
 				if(dataSet.Length != elements.Count) {
@@ -55,6 +55,19 @@ namespace SeleniumProject.Function
 					err.CreateVerificationError(step, step.Data, url);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
+			}
+			
+			else if (step.Name.Equals("Store Sport by Data")) {
+				DataManager.CaptureMap["SPORT"] = step.Data;
+				log.Info("Storing " + step.Data + "to capture map as SPORT...");
+			}
+			
+			else if (step.Name.Equals("Navigate to URL by ENV")) {
+				log.Info("Appending " + step.Data + " to ENV URL: " + TestParameters.GLOBAL_APP_URL);
+				url = TestParameters.GLOBAL_APP_URL + step.Data;
+				steps.Add(new TestStep(order, "Navigate to " + url, url, "navigate_to", "", "", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else {

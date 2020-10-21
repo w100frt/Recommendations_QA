@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
 			List<string> standings = new List<string>();
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
+			string games = " GAMES ";
 			string player = "";
 			string playoffs = "";
 			int count = 0;
@@ -161,7 +162,11 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Header Subtext")) {
 				sport = step.Data;
-				count = driver.FindElements("xpath","//div[@class='scores']//a").Count;
+				count = driver.FindElements("xpath","(//div[@class='scores'])[1]//a").Count;
+				
+				if (count == 1) {
+					games = " GAME ";
+				}
 				
 				switch (sport) {
 					case "NFL":
@@ -174,19 +179,23 @@ namespace SeleniumProject.Function
 						sport = sport + ": " + player;
 						break;
 					case "NBA":
-						DateTime playoff = new DateTime(2020, 7, 30);
-						if (DateTime.Now > playoff) {
+						DateTime NBA_playoff = new DateTime(2020, 7, 30);
+						if (DateTime.Now > NBA_playoff) {
 							playoffs = "PLAYOFFS: ";
 						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = playoffs + count + " GAMES " + sport;
+						sport = playoffs + count + games + sport;
 						break;
 					case "NHL":
-						sport = count + " GAMES " + sport;
+						sport = count + games + sport;
 						break;
 					case "MLB":
+						DateTime MLB_playoff = new DateTime(2020, 9, 28);
+						if (DateTime.Now > MLB_playoff) {
+							playoffs = "PLAYOFFS: ";
+						}
 						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
-						sport = count + " GAMES " + sport;
+						sport = playoffs + count + games + sport;
 						break;
 					default :
 						break;	

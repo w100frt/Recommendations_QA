@@ -1,0 +1,28 @@
+﻿{
+	"testCase":"NFL: League Odds - Top Action and Props",
+	"env":"dev",
+	"testId":"90",
+	"testRail":"7768707",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "NFL"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data": "NFL"},
+		{"page":"Entity", "name":"Click Odds Tab"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
+		{"page":"Entity_Odds", "name":"Verify Top Action Header", "data":"THIS WEEK'S TOP ACTION"},
+		{"page":"Entity_Odds", "name":"Verify Number of Events", "data":"3"},
+		{"page":"Entity_Odds", "name":"Verify Event Odds Details by Number", "data":"1"},
+		{"page":"Entity_Odds", "name":"Verify Event Odds Details by Number", "data":"2"},
+		{"page":"Entity_Odds", "name":"Verify Event Odds Details by Number", "data":"3"},
+		{"page":"Entity_Odds", "name":"Click See All Games"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"SCORES"},
+		{"page":"Entity", "name":"Click Odds Tab"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
+		{"page":"Entity_Odds", "name":"Verify Props Header", "data":"THIS WEEK'S PROPS"},
+		{"page":"Entity_Odds", "name":"Verify Number of Event Props", "data":"3"}
+	]
+}

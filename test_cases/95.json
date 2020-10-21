@@ -1,0 +1,29 @@
+﻿{
+	"testCase":"NFL: League Standings",
+	"env":"dev",
+	"testId":"95",
+	"testRail":"7769794",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Explore", "name":"Click NFL"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "NFL"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data": "NFL"},
+		{"page":"Entity", "name":"Click Standings Tab"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"STANDINGS"},
+		{"page":"Entity_Standings", "name":"Verify Standings Dropdown Value", "data":"DIVISION"},
+		{"page":"Entity_Standings", "name":"Verify Table Header", "data":"AFC EAST"},
+		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"8"},
+		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"8"},
+		{"page":"Entity_Standings", "name":"Verify Table Rows Count", "data":"32"},
+		{"page":"Entity_Standings", "name":"Click Open Standings Dropdown"},
+		{"page":"Entity_Standings", "name":"Verify Standings Dropdown List By Sport", "data":"NFL"},
+		{"page":"Entity_Standings", "name":"Click Conference from Dropdown"},
+		{"page":"Entity_Standings", "name":"Verify Table Header", "data":"AMERICAN FOOTBALL CONFERENCE"},
+		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"2"},
+		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"2"},
+		{"page":"Entity_Standings", "name":"Verify Table Rows Count", "data":"32"}
+	]
+}

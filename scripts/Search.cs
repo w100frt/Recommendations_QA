@@ -22,6 +22,7 @@ namespace SeleniumProject.Function
 			int size = 0;
 			string date = "";
 			string cat = "";
+			string search = "";
 			List<string> teams = new List<string>();
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
@@ -51,8 +52,9 @@ namespace SeleniumProject.Function
 				
 				foreach (string team in teams) {
 					// temporary fix
-					steps.Add(new TestStep(order, "Click Search", "", "click", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
-					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team.ToLower()), "input_text", "xpath", "//input[@placeholder='Leagues, teams, players']", wait));
+					search = "//input[@type='search']";
+					steps.Add(new TestStep(order, "Click Search", "", "click", "xpath", search, wait));
+					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team.ToLower()), "input_text", "xpath", search, wait));
 					if (team.Equals("MLB")) {
 						steps.Add(new TestStep(order, "Verify Search Term", "Major League Baseball", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
 					}

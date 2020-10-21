@@ -155,6 +155,31 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Verify State of Reset Password Button")) {
+				// verify that the button is currently enabled/disabled
+				test = driver.FindElement("xpath","//div[span[contains(@class,'link-text') and contains(.,'Reset Password')]]").GetAttribute("class");
+				test = test.Substring(test.IndexOf(" ") + 1);
+				log.Info("button state = " + test);
+				if (!String.IsNullOrEmpty(step.Data)) {
+					if (step.Data.ToLower().Equals(test)) {
+						log.Info("Verification PASSED. Expected [" + step.Data.ToLower() + "] matches Actual [" + test +"]");
+					}
+					else {
+						log.Error("***Verification FAILED. Expected [" + step.Data.ToLower() + "] does not match Actual [" + test +"]");
+						err.CreateVerificationError(step, step.Data.ToLower(), test);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+			}
+			
+			else if (step.Name.Equals("Capture Current URL")) {
+				data = step.Data; 
+				if (String.IsNullOrEmpty(data)) {
+					data = "URL";
+				}
+				DataManager.CaptureMap[data] = driver.GetDriver().Url;
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

@@ -1,0 +1,23 @@
+﻿{
+	"testCase":"MLB: League Futures - World Series, NL Champ, AL Champ",
+	"env":"dev",
+	"testId":"86",
+	"testRail":"7769048",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click MLB"},
+		{"page":"Explore", "name":"Click MLB"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "MLB"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data": "MLB"},
+		{"page":"Entity", "name":"Click Odds Tab"},
+		{"page":"Entity_Odds", "name":"Click Prop Header By Name", "data":"WORLD SERIES CHAMPION"},
+		{"page":"Entity_Odds", "name":"Verify Number of Current Prop Displayed", "data":"2"},
+		{"page":"Entity_Odds", "name":"Verify Team Text Exists for Current Prop"},
+		{"page":"Entity_Odds", "name":"Verify Odds Text Exists for Current Prop"},
+		{"page":"Entity_Odds", "name":"Click See All Futures for Current Prop"},
+		{"page":"Entity_Odds", "name":"Verify Dropdown Title", "data":"WORLD SERIES CHAMPION FUTURES"},
+		{"page":"Entity_Odds", "name":"Verify Number of Table Rows", "data":"2"}
+	]
+}
