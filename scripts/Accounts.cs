@@ -83,9 +83,9 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Capture User Entitlements")) {
 				dic = (Dictionary<string, object>) js.ExecuteScript("wisRegistration.getUserEntitlements()");
 				
-				foreach( KeyValuePair<string, string> kvp in dic )
+				foreach( KeyValuePair<string, object> kvp in dic )
 				{
-					log.Info("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+					log.Info("Key = " + kvp.Key +"  Value = " + kvp.Value);
 				}
 			}					
 			
