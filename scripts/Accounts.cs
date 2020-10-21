@@ -81,8 +81,10 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture User Entitlements")) {
-				dic = (Dictionary<string, object>) js.ExecuteScript("wisRegistration.getUserEntitlements().then(x => x.channels)");
-				log.Info(test);
+				dic = (Dictionary<string, object>) js.ExecuteScript("wisRegistration.getUserEntitlements().then(x => x.channels)");foreach( KeyValuePair<string, string> kvp in dic )
+				{
+					log.Info("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+				}
 			}					
 			
 			else if (step.Name.Equals("Click Sign In With TV Provider")) {
