@@ -88,6 +88,7 @@ namespace SeleniumProject.Function
 					log.Info("Key = [" + kvp.Key + "]  Value = " + kvp.Value);
 				}*/
 				test = (string) js.ExecuteScript("wisRegistration.getUserEntitlements().then(x => x.channels[0].name)");
+				log.Info("testing here: " + test);
 			}					
 			
 			else if (step.Name.Equals("Click Sign In With TV Provider")) {
