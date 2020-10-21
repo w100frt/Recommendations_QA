@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
 			int size = 0;
 			int count = 0;
 			string data = "";
+            var dic = new Dictionary<string, object>();
 			string test = "";
 			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
@@ -80,7 +81,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture User Entitlements")) {
-				test = (string) js.ExecuteScript("wisRegistration.getUserEntitlements().then(x => x.channels)");
+				dic = (Dictionary<string, object>) js.ExecuteScript("wisRegistration.getUserEntitlements().then(x => x.channels)");
 				log.Info(test);
 			}					
 			
