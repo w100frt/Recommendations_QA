@@ -88,7 +88,7 @@ namespace SeleniumProject.Function
 				{
 					log.Info("Key = [" + kvp.Key + "]  Value = " + kvp.Value);
 				}*/
-				length = (int) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels.length)");
+				length = Convert.ToInt32(js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels.length)"));
 				test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels[0].name)");
 				log.Info("testing length here: " + length);
 				log.Info("testing channel here: " + test);
