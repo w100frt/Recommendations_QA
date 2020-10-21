@@ -86,7 +86,7 @@ namespace SeleniumProject.Function
 				for (int i = 0; i < length; i++) {
 					test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels["+i+"].name)");
 					channels.Add(test);
-					log.info("Adding channel: " + test);
+					log.Info("Adding channel: " + test);
 				}
 				log.Info("Total channel list size: " + channels.Count);
 			}					
