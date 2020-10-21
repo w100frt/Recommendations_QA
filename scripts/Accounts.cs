@@ -85,7 +85,7 @@ namespace SeleniumProject.Function
 				
 				foreach( KeyValuePair<string, object> kvp in dic )
 				{
-					log.Info("Key = " + kvp.Key +"  Value = " + kvp.Value);
+					log.Info("Key = [" + kvp.Key + "]  Value = " + kvp.Value);
 				}
 			}					
 			
