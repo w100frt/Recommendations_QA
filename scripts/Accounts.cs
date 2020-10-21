@@ -79,6 +79,11 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Capture User Entitlements")) {
+				test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements()");
+				log.Info(test);
+			}					
+			
 			else if (step.Name.Equals("Click Sign In With TV Provider")) {
 				if (!DataManager.CaptureMap.ContainsKey("CURRENT_URL")) {
 					DataManager.CaptureMap.Add("CURRENT_URL", driver.GetDriver().Url);

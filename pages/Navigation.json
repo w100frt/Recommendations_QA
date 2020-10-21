@@ -5,6 +5,7 @@
 		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in')]"},
 		{"name":"Click Explore","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'explore-link')]"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},
+		{"name":"Capture User Entitlements","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Get or Compare Device ID","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Account","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/']"},
