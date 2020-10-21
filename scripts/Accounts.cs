@@ -19,7 +19,7 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			int size = 0;
-			int length = 0;
+			var length = 0;
 			int count = 0;
 			string data = "";
             var dic = new Dictionary<string, object>();
@@ -88,7 +88,7 @@ namespace SeleniumProject.Function
 				{
 					log.Info("Key = [" + kvp.Key + "]  Value = " + kvp.Value);
 				}*/
-				length = (int) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels.length)");
+				length = js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels.length)");
 				test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels[0].name)");
 				log.Info("testing length here: " + length);
 				log.Info("testing channel here: " + test);
