@@ -80,7 +80,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture User Entitlements")) {
-				test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements()");
+				test = (string) js.ExecuteScript("wisRegistration.getUserEntitlements().then(x => x.channels.length)");
 				log.Info(test);
 			}					
 			
