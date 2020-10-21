@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			var length = 0;
 			int count = 0;
 			string data = "";
-            var dic = new Dictionary<string, object>();
+			List<string> channels = new List<string>();
 			string test = "";
 			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
@@ -82,16 +82,13 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Capture User Entitlements")) {
-				/*dic = (Dictionary<string, object>) js.ExecuteScript("wisRegistration.getUserEntitlements()");
-				
-				foreach( KeyValuePair<string, object> kvp in dic )
-				{
-					log.Info("Key = [" + kvp.Key + "]  Value = " + kvp.Value);
-				}*/
 				length = Convert.ToInt32(js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels.length)"));
-				test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels[0].name)");
-				log.Info("testing length here: " + length);
-				log.Info("testing channel here: " + test);
+				for (int i = 0; i < length; i++) {
+					test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels["+i+"].name)");
+					channels.Add(test);
+					log.info("Adding channel: " + test);
+				}
+				log.Info("Total channel list size: " + channels.Count);
 			}					
 			
 			else if (step.Name.Equals("Click Sign In With TV Provider")) {
