@@ -5,6 +5,7 @@
 		{"name":"Click Sign In","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'sign-in')]"},
 		{"name":"Click Explore","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'explore-link')]"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},
+		{"name":"Capture User Entitlements","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Get or Compare Device ID","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Account","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/']"},
@@ -20,6 +21,7 @@
 		{"name":"Switch Frame by ID","objectType":"switch_frame","by": "id"},
 		{"name":"Verify FS Logo on Desktop","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@alt='Fox Sports']"},
 		{"name":"Verify Account on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//div[contains(@class,'nav-right-col')][span[contains(.,'Account')]]"},
+		{"name":"Verify Count of User Entitlements","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Verify URL Redirect","objectType":"script","by": "xpath", "objectId":"Accounts"},
 		{"name":"Verify URL Contains String","objectType":"script","by": "xpath", "objectId":"Homepage"}
 	]

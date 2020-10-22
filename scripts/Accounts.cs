@@ -19,8 +19,10 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			int size = 0;
+			var length = 0;
 			int count = 0;
 			string data = "";
+			List<string> channels = new List<string>();
 			string test = "";
 			bool stop = false;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
@@ -76,6 +78,34 @@ namespace SeleniumProject.Function
 					}
 					
 					//err.CreateVerificationError(step, "Error Capturing DeviceID", data);
+				}
+			}
+			
+			else if (step.Name.Equals("Capture User Entitlements")) {
+				length = Convert.ToInt32(js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels.length)"));
+				for (int i = 0; i < length; i++) {
+					test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.channels["+i+"].name)");
+					channels.Add(test);
+					log.Info("Adding channel: " + test);
+				}
+				log.Info("Total channel list size: " + channels.Count);
+				DataManager.CaptureMap["ENTITLE_SIZE"] = channels.Count.ToString();
+			}
+			
+			else if (step.Name.Equals("Verify Count of User Entitlements")) {
+				if(DataManager.CaptureMap.ContainsKey("ENTITLE_SIZE")) {
+					if(step.Data.Equals(DataManager.CaptureMap["ENTITLE_SIZE"])) {
+						log.Info("Verification PASSED. Expected [" + step.Data + "] matches Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]");
+					}
+					else {
+						log.Error("***Verification FAILED. Expected [" + step.Data + "] does not match Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]");
+						err.CreateVerificationError(step, step.Data, DataManager.CaptureMap["ENTITLE_SIZE"]);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+				else {
+					log.Error("Cannot Verify Count without stored size");
+					throw new Exception("Count size not found");
 				}
 			}
 			
