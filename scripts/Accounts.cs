@@ -95,8 +95,7 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify Count of User Entitlements")) {
 				if(DataManager.CaptureMap.ContainsKey("ENTITLE_SIZE")) {
 					if(step.Data.Equals(DataManager.CaptureMap["ENTITLE_SIZE"])) {
-						log.Info("Verification PASSED. Expected [" + step.Data + "] matches Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]"");
-						
+						log.Info("Verification PASSED. Expected [" + step.Data + "] matches Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]");
 					}
 					else {
 						log.Error("***Verification FAILED. Expected [" + step.Data + "] does not match Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]");
