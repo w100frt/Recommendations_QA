@@ -18,7 +18,7 @@
 		{"page":"Entity_Odds", "name":"Verify Number of Events", "data":"1"},
 		{"page":"Entity_Odds", "name":"Verify Event Odds Details by Number", "data":"1"},
 		{"page":"Entity_Odds", "name":"Verify Props Header", "data":"PROPS"},
-		{"page":"Entity_Odds", "name":"Verify Number of Events", "data":"2"},
+		{"page":"Entity_Odds", "name":"Verify Number of Event Props", "data":"2"},
 		{"page":"Entity_Odds", "name":"Click Prop Header By Name", "data":"SUPER BOWL CHAMPION"},
 		{"page":"Entity_Odds", "name":"Verify Number of Current Prop Displayed", "data":"1"},
 		{"page":"Entity_Odds", "name":"Verify Team Text Exists for Current Prop"},
