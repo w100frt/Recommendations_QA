@@ -89,7 +89,26 @@ namespace SeleniumProject.Function
 					log.Info("Adding channel: " + test);
 				}
 				log.Info("Total channel list size: " + channels.Count);
-			}					
+				DataManager.CaptureMap["ENTITLE_SIZE"] = channels.Count.ToString();
+			}
+			
+			else if (step.Name.Equals("Verify Count of User Entitlements")) {
+				if(DataManager.CaptureMap.ContainsKey("ENTITLE_SIZE")) {
+					if(step.Data.Equals(DataManager.CaptureMap["ENTITLE_SIZE"])) {
+						log.Info("Verification PASSED. Expected [" + step.Data + "] matches Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]"");
+						
+					}
+					else {
+						log.Error("***Verification FAILED. Expected [" + step.Data + "] does not match Actual [" + DataManager.CaptureMap["ENTITLE_SIZE"] +"]");
+						err.CreateVerificationError(step, step.Data, DataManager.CaptureMap["ENTITLE_SIZE"]);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+				else {
+					log.Error("Cannot Verify Count without stored size");
+					throw new Exception("Count size not found");
+				}
+			}
 			
 			else if (step.Name.Equals("Click Sign In With TV Provider")) {
 				if (!DataManager.CaptureMap.ContainsKey("CURRENT_URL")) {

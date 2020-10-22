@@ -14,6 +14,7 @@
 		{"page":"Navigation", "name":"Click Sign In"},
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
 		{"page":"Navigation", "name":"Capture User Entitlements"},
+		{"page":"Navigation", "name":"Verify Count of User Entitlements", "data":"5"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Click Main Video Play Button"},
 		{"page":"LiveTV", "name":"Verify Video is Playing"},

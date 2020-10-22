@@ -21,6 +21,7 @@
 		{"name":"Switch Frame by ID","objectType":"switch_frame","by": "id"},
 		{"name":"Verify FS Logo on Desktop","objectType":"verify_displayed","by": "xpath", "objectId":"//a[@alt='Fox Sports']"},
 		{"name":"Verify Account on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//div[contains(@class,'nav-right-col')][span[contains(.,'Account')]]"},
+		{"name":"Verify Count of User Entitlements","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Verify URL Redirect","objectType":"script","by": "xpath", "objectId":"Accounts"},
 		{"name":"Verify URL Contains String","objectType":"script","by": "xpath", "objectId":"Homepage"}
 	]
