@@ -7,7 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Stories"},
-		{"page":"Stories", "name":"Click Click NCAA FB"},
+		{"page":"Stories", "name":"Click NCAA FB"},
 		{"page":"Stories", "name":"Verify Selected Nav Item", "data":"NCAA FB"},
 		{"page":"Stories", "name":"Verify Stories Category by Sport", "data":"NCAA FB"},
 		{"page":"AllStories", "name":"Capture Story Title", "data":"STORY_TITLE"},
