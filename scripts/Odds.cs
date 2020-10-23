@@ -123,6 +123,9 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify Number of Event Props")) {
 				count = driver.FindElements("xpath","//div[contains(@class,'prop-bets-component')]/div[contains(@class,'prop-bets-event-title') or contains(.,'PROPS')]").Count;
 				
+				ele = driver.FindElement("xpath","//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][2]");
+                js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
+				
 				if (count >= 1 && count <= 5) {
 					log.Info ("Verication PASSED. " + count + " is between 1 and 5.");
 				}
