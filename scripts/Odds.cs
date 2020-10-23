@@ -118,6 +118,22 @@ namespace SeleniumProject.Function
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}
 				}
+			}	
+			
+			else if (step.Name.Equals("Verify Number of Event Props")) {
+				count = driver.FindElements("xpath","//div[contains(@class,'prop-bets-component')]/div[contains(@class,'prop-bets-event-title') or contains(.,'PROPS')]").Count;
+				
+				ele = driver.FindElement("xpath","//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][2]");
+                js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
+				
+				if (count >= 1 && count <= 5) {
+					log.Info ("Verication PASSED. " + count + " is between 1 and 5.");
+				}
+				else {
+					log.Error("***Verification FAILED. Props expected to be between 1 and 5. Actual total is " + count +  ". ***");
+					err.CreateVerificationError(step, "Between 1 and 5", count.ToString());
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+				}
 			}
 			
 			else {

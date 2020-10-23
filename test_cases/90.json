@@ -23,6 +23,6 @@
 		{"page":"Entity", "name":"Click Odds Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
 		{"page":"Entity_Odds", "name":"Verify Props Header", "data":"THIS WEEK'S PROPS"},
-		{"page":"Entity_Odds", "name":"Verify Number of Event Props", "data":"3"}
+		{"page":"Entity_Odds", "name":"Verify Number of Event Props"}
 	]
 }

@@ -6,6 +6,7 @@
 		{"name":"Click Highlights Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'highlights')]"},
 		{"name":"Click News Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'news')]"},
 		{"name":"Click Odds Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'odds')]"},
+		{"name":"Click Polls Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'polls')]"},
 		{"name":"Click Scores Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'scores')]"},
 		{"name":"Click Standings Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'standings')]"},
 		{"name":"Click Stats Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'stats')]"},

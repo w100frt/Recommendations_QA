@@ -1,0 +1,13 @@
+﻿{
+	"page":"Entity_Polls",
+	"testDefinitions":[
+		{"name":"Click Open Polls Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'polls')]//a[contains(@class,'dropdown-title')]"},
+		{"name":"Click Wild Card from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'wild card')]"},
+		{"name":"Verify Polls Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"},
+		{"name":"Verify Polls Dropdown List By Sport","objectType":"script","by":"xpath","objectId":"Entity"},
+		{"name":"Verify Table Standings Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"},
+		{"name":"Verify Table Standings Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]"},
+		{"name":"Verify Table Rows Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//tbody/tr"},
+		{"name":"Verify Table Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-standings')]//div[contains(@class,'title')]"}
+	]
+}
