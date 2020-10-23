@@ -128,7 +128,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("***Verification FAILED. Props expected to be between 1 and 5. Actual total is " + count +  ". ***");
-					err.CreateVerificationError(step, "Between 1 and 5", count);
+					err.CreateVerificationError(step, "Between 1 and 5", count.ToString());
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
 			}
