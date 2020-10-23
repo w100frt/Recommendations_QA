@@ -183,6 +183,12 @@ namespace SeleniumProject.Function
 						}	
 						sport = sport + ": " + player;
 						break;
+					case "NCAA FOOTBALL":
+						driver.FindElement("xpath","//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//span[@class='title-text']").Click();
+						sport = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[1]").Text;
+						player = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
+						sport = sport + ": " + player;
+						break;
 					case "NBA":
 						DateTime NBA_playoff = new DateTime(2020, 7, 30);
 						if (DateTime.Now > NBA_playoff) {
