@@ -2,9 +2,11 @@
     "testCase":"Template_EntityLeaguePolls",
     "testId":"t27",
     "testSteps":[
-		{"page":"Entity_Standings", "name":"Click Open Polls Dropdown"},
-		{"page":"Entity_Standings", "name":"Verify Polls Dropdown List Displayed"},
-		{"page":"Entity_Standings", "name":"Verify Polls Dropdown List By Sport"},
-		{"page":"Entity_Standings", "name":"Verify Table Standings Displayed"}
+		{"page":"Entity_Polls", "name":"Click Open Polls Dropdown"},
+		{"page":"Entity_Polls", "name":"Verify Polls Dropdown List Displayed"},
+		{"page":"Entity_Polls", "name":"Verify Polls Dropdown List"},
+		{"page":"Entity_Polls", "name":"Verify Table Polls Displayed"},
+		{"page":"Entity_Polls", "name":"Verify Table Rows Count", "data": "25"},
+		{"page":"Entity_Polls", "name":"Verify Table Title", "data":"RANKING"}
 		]
 }
