@@ -19,6 +19,7 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<string> standings = new List<string>();
+			List<string> polls = new List<string>();
             List<TestStep> steps = new List<TestStep>();
 			string sport = "";
 			string games = " GAMES ";
@@ -128,6 +129,10 @@ namespace SeleniumProject.Function
 							player = "15";
 							sport = "14";
 							break;
+						case "NCAA FOOTBALL":
+							player = "14";
+							sport = "9";
+							break;
 						default :
 							sport = "";
 							player = "";
@@ -178,6 +183,12 @@ namespace SeleniumProject.Function
 						}	
 						sport = sport + ": " + player;
 						break;
+					case "NCAA FOOTBALL":
+						driver.FindElement("xpath","//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//span[@class='title-text']").Click();
+						sport = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[1]").Text;
+						player = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
+						sport = sport + ": " + player;
+						break;
 					case "NBA":
 						DateTime NBA_playoff = new DateTime(2020, 7, 30);
 						if (DateTime.Now > NBA_playoff) {
@@ -211,6 +222,19 @@ namespace SeleniumProject.Function
 				log.Info("Storing total as " + total.ToString());
 				DataManager.CaptureMap["PLAYER_COUNT"] = total.ToString();
 			}	
+			
+			else if (step.Name.Equals("Verify Polls Dropdown List")) {
+				polls.Add("ASSOCIATED PRESS");
+				polls.Add("USA TODAY COACHES POLL");
+				
+				size = 1;
+				foreach (string s in polls) {
+					steps.Add(new TestStep(order, "Verify Polls List " + size, polls[size-1], "verify_value", "xpath", "//div[contains(@class,'polls')]//ul//li[contains(@class,'dropdown')]["+size+"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();	
+					size++;					
+				}			
+			}
 			
 			else {
 				throw new Exception("Test Step not found in script");

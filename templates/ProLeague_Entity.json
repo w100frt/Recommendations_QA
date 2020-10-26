@@ -23,6 +23,9 @@
 		{"page":"Entity", "name":"Click Highlights Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"VIDEOS"},
 		{"page":"Entity_Highlights", "name":"Verify Video is Displayed"},
-		{"page":"Entity_Highlights", "name":"Verify Number of Videos", "data":"30"}
+		{"page":"Entity_Highlights", "name":"Verify Number of Videos", "data":"30"},
+		{"page":"Entity", "name":"Click Odds Tab"},
+		{"page":"Entity_Odds", "name":"Verify FOX Bet Logo Displayed"},
+		{"page":"Entity_Odds", "name":"Verify Odds Setion Displayed"}
     ]
 }
