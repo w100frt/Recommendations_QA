@@ -4,6 +4,7 @@
 		{"name":"Click Back Arrow","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'futures-header')]//a[@alt='back']"},
 		{"name":"Click See All Games","objectType":"click","by":"xpath","objectId":"//a[contains(.,'SEE ALL GAMES')]"},
 		{"name":"Click See All Futures for Current Prop","objectType":"script","by":"xpath","objectId":"Odds"},
+		{"name":"Click Selected Row Team","objectType":"click","by":"xpath","objectId":"//tr[@class='selected']//a[contains(@class,'name')]"},
 		{"name":"Click Prop Header By Name","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Store Team's Conference and Division","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
 		{"name":"Verify Dropdown Title","objectType":"verify_value","by":"xpath","objectId":"//a[contains(@class,'dropdown')]/h1"},
