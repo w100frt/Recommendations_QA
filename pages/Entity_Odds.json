@@ -14,7 +14,7 @@
 		{"name":"Verify Number of Current Prop Displayed","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify Number of Event Props","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify Number of Table Rows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'futures')]/table/tbody/tr"},
-		{"name":"Verify Odds Setion Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//span[@alt='fox-bet']"},
+		{"name":"Verify Odds Section Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//span[@alt='fox-bet']"},
 		{"name":"Verify Props Exist","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'prop-bets-comp-container')]"},
 		{"name":"Verify Props Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][2]"},
 		{"name":"Verify Top Action Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][1]"},
