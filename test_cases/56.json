@@ -2,7 +2,7 @@
 	"testCase":"Explore and Search: NBA Players",
 	"env":"dev",
 	"testId":"56",
-	"testRail":"7758798",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
