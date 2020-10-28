@@ -25,6 +25,7 @@ namespace SeleniumProject.Function
 			string games = " GAMES ";
 			string player = "";
 			string playoffs = "";
+			bool skip = false;
 			int count = 0;
 			int total = 0;
 			int size;
@@ -194,11 +195,17 @@ namespace SeleniumProject.Function
 						sport = sport + ": " + player;
 						break;
 					case "NBA":
-						DateTime NBA_playoff = new DateTime(2020, 7, 30);
+						DateTime NBA_season = new DateTime(2021, 01, 01);
+						DateTime NBA_playoff = new DateTime(2021, 7, 30);
+						if (DateTime.Now > NBA_season) {
+							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						}
+						else {
+							skip = true;
+						}
 						if (DateTime.Now > NBA_playoff) {
 							playoffs = "PLAYOFFS: ";
 						}
-						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
 						sport = playoffs + count + games + sport;
 						break;
 					case "NHL":
@@ -216,9 +223,14 @@ namespace SeleniumProject.Function
 						break;	
 				}
 				
-				steps.Add(new TestStep(order, "Verify Text", sport, "verify_value", "xpath", "//div[contains(@class,'entity-header')]/div/span", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
+				if (!skip) {
+					steps.Add(new TestStep(order, "Verify Text", sport, "verify_value", "xpath", "//div[contains(@class,'entity-header')]/div/span", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();					
+				}
+				else {
+					log.Info("No subtext current for Out of Season sports. Skipping...");
+				}
 			}
 			
 			else if (step.Name.Equals("Capture Number of Players")) {
