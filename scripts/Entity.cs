@@ -258,7 +258,7 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Click Open Standings Dropdown")) {
 				xpath = "//div[contains(@class,'standings')]//a[contains(@class,'dropdown-title')]";
 				ele = driver.FindElement("xpath", xpath);
-                js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
+                js.ExecuteScript("window.scrollTo(0,0);");
 				
 				steps.Add(new TestStep(order, "Click Open Standings", "", "click", "xpath", xpath, wait));
 				TestRunner.RunTestSteps(driver, null, steps);
