@@ -11,6 +11,7 @@
 		{"name":"Verify Event Exists","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'event')]"},
 		{"name":"Verify Event Odds Details by Number","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify FOX Bet Logo Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//span[@alt='fox-bet']"},
+		{"name":"Verify Futures Count","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]//div[contains(@class,'prop-bets-title')]"},
 		{"name":"Verify Number of Events","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'event')]"},
 		{"name":"Verify Number of Current Prop Displayed","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify Number of Event Props","objectType":"script","by":"xpath","objectId":"Odds"},
