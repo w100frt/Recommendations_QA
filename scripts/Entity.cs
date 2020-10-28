@@ -95,6 +95,9 @@ namespace SeleniumProject.Function
 						case "MLB":
 							sport = "30";
 							break;
+						case "BIG TEN FOOTBALL":
+							sport = "14";
+							break;
 						default :
 							sport = "32";
 							break;
@@ -130,6 +133,7 @@ namespace SeleniumProject.Function
 							sport = "14";
 							break;
 						case "NCAA FOOTBALL":
+						case "BIG TEN FOOTBALL":
 							player = "14";
 							sport = "9";
 							break;
