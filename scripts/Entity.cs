@@ -25,11 +25,13 @@ namespace SeleniumProject.Function
 			string games = " GAMES ";
 			string player = "";
 			string playoffs = "";
+			string xpath = "";
 			bool skip = false;
 			int count = 0;
 			int total = 0;
 			int size;
 			IWebElement element;
+			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			
 			if (step.Name.Equals("Click Pagination Link by Number")) {
 				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//nav[@class='pagination']//a[text()='"+ step.Data +"']", wait));
@@ -250,6 +252,16 @@ namespace SeleniumProject.Function
 					steps.Clear();	
 					size++;					
 				}			
+			}
+			
+			else if (step.Name.Equals("Click Open Standings Dropdown")) {
+				xpath = "//div[contains(@class,'standings')]//a[contains(@class,'dropdown-title')]";
+				ele = driver.FindElement("xpath", xpath);
+                js.ExecuteScript("arguments[0].scrollIntoView(true);", ele);
+				
+				steps.Add(new TestStep(order, "Click Open Standings", "", "click", "xpath", xpath, wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
 			}
 			
 			else {

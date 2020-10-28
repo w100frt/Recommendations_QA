@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Entity_Standings",
 	"testDefinitions":[
-		{"name":"Click Open Standings Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'standings')]//a[contains(@class,'dropdown-title')]"},
+		{"name":"Click Open Standings Dropdown","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Click Conference from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'conference')]"},
 		{"name":"Click Division from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'division')]"},
 		{"name":"Click Preseason from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'preseason')]"},
