@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
 			List<string> standings = new List<string>();
 			List<string> polls = new List<string>();
             List<TestStep> steps = new List<TestStep>();
+			IWebElement ele;
 			string sport = "";
 			string games = " GAMES ";
 			string player = "";
