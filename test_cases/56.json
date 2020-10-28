@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"Explore and Search: NBA Players",
+	"testCase":"Explore/Search/Entity: NBA Players",
 	"env":"dev",
 	"testId":"56",
-	"testRail":"",
+	"testRail":"7782795",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

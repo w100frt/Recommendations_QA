@@ -2,7 +2,7 @@
 	"testCase":"NBA: League Standings",
 	"env":"dev",
 	"testId":"101",
-	"testRail":"",
+	"testRail":"7782797",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

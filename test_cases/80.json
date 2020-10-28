@@ -2,7 +2,7 @@
 	"testCase":"NBA: League Futures - Champions",
 	"env":"dev",
 	"testId":"80",
-	"testRail":"",
+	"testRail":"7782796",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
