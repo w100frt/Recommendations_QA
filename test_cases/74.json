@@ -1,12 +1,12 @@
 ﻿{
-	"testCase":"Search: MLB Teams",
+	"testCase":"Explore/Search: NBA Teams",
 	"env":"dev",
-	"testId":"75",
-	"testRail":"7721060",
+	"testId":"74",
+	"testRail":"7782793",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
-		{"page":"Explore", "name":"Verify Team Search by Sport", "data": "MLB"}
+		{"page":"Explore", "name":"Verify Team Search by Sport", "data": "NBA"}
 	]
 }

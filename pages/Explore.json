@@ -18,6 +18,7 @@
 		{"name":"Enter Search","objectType":"input_text","by":"xpath","objectId":"//input[@type='search']"},
 		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[@id='explore']//div[nav[@selected-tab]]//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
 		{"name":"Verify Count of Teams or Players","objectType":"verify_count","by":"xpath","objectId":"//div[@id='exploreApp']//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
+		{"name":"Verify Explore Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[@id='exploreApp']//span[contains(@class,'explore-header-text')]"},
 		{"name":"Verify MLB Teams","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify NBA Teams","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify Selected Explore Pane","objectType":"verify_value","by":"xpath","objectId":"//div[@id='explore']//a[contains(@class,'selected')]"},

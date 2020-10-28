@@ -70,7 +70,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Click Prop Header By Name")) {
 				DataManager.CaptureMap["PROP"] = step.Data;
-				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//div[contains(@class,'prop-bets-name') and contains(.,'"+ step.Data.ToUpper()+"')]", wait));
+				//steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//div[contains(@class,'prop-bets-name') and contains(.,'"+ step.Data.ToUpper()+"')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				
