@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: MLB Team",
 	"env":"dev",
 	"testId":"59",
-	"testRail":"",
+	"testRail":"7787113",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
