@@ -41,7 +41,12 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Standings Dropdown List By Sport")) {
-				sport = driver.FindElement("xpath","//div[contains(@class,'entity-title')]").Text;
+				if (DataManager.CaptureMap.ContainsKey("SPORT")) {
+					sport = DataManager.CaptureMap["SPORT"];
+				}
+				else {
+					sport = driver.FindElement("xpath","//div[contains(@class,'entity-title')]").Text;
+				}
 				
 				size = 1;
 				switch(sport) {
