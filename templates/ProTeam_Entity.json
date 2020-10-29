@@ -5,7 +5,7 @@
 		{"page":"Navigation","name":"Run Template", "data":"Entity_LeagueNews"},
 		{"page":"Entity", "name":"Click Scores Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"SCORES"},
-		{"page":"Navigation","name":"Run Template", "data":"Entity_LeagueScores"},
+		{"page":"Navigation","name":"Run Template", "data":"Entity_TeamScores"},
 		{"page":"Entity", "name":"Click Standings Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"STANDINGS"},
 		{"page":"Navigation","name":"Run Template", "data":"Entity_LeagueStandings"},

@@ -6,6 +6,7 @@
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data":"MLB"},
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"30"},
