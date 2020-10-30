@@ -2,7 +2,7 @@
 	"testCase":"Explore/Search: NHL Teams",
 	"env":"dev",
 	"testId":"73",
-	"testRail":"",
+	"testRail":"7787966",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

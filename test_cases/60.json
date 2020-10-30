@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: NHL Team",
 	"env":"dev",
 	"testId":"60",
-	"testRail":"",
+	"testRail":"7787964",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
