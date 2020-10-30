@@ -1,8 +1,8 @@
 ﻿{
 	"testCase":"NHL: League Futures - Stanley Cup, Eastern Champ, Western Champ",
 	"env":"dev",
-	"testId":"91",
-	"testRail":"7768708",
+	"testId":"110",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

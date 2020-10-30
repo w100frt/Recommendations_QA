@@ -1,8 +1,8 @@
 ﻿{
 	"testCase":"NHL: League Standings",
 	"env":"dev", 
-	"testId":"101",
-	"testRail":"7782797",
+	"testId":"111",
+	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
