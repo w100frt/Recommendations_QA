@@ -99,7 +99,7 @@ namespace SeleniumProject.Function
 							sport = "30";
 							break;
 						case "NHL":
-							sport = "";
+							sport = "31";
 							break;
 						case "MLB":
 							sport = "30";
@@ -134,8 +134,8 @@ namespace SeleniumProject.Function
 							player = "8";
 							break;
 						case "NHL":
-							sport = "";
-							player = "";
+							sport = "10";
+							player = "7";
 							break;
 						case "MLB":
 							player = "15";
