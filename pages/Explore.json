@@ -11,6 +11,7 @@
 		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NBA')]]"},
 		{"name":"Click NCAA FB","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NCAA FB')]]"},
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NFL')]]"},
+		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'NHL')]]"},
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS') or contains(.,'Players') or contains(.,'players')]"},
 		{"name":"Click Search","objectType":"click","by":"xpath","objectId":"//input[@type='search']"},
 		{"name":"Click Sports","objectType":"click","by":"xpath","objectId":"//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SPORTS') or contains(.,'Sports') or contains(.,'sports')]"},
