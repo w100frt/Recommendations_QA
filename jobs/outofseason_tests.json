@@ -6,19 +6,19 @@
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
-		{"testId":32},
 		{"testId":53},
 		{"testId":56},
 		{"testId":58},
 		{"testId":74},
 		{"testId":80},
 		{"testId":101},
-		{"testId":33},
 		{"testId":52},
 		{"testId":54},
 		{"testId":59},
 		{"testId":75},
 		{"testId":86},
-		{"testId":88}
+		{"testId":60},
+		{"testId":61},
+		{"testId":}
 	]
 } 
