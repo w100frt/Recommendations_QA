@@ -41,7 +41,12 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Standings Dropdown List By Sport")) {
-				sport = driver.FindElement("xpath","//div[contains(@class,'entity-title')]").Text;
+				if (DataManager.CaptureMap.ContainsKey("SPORT")) {
+					sport = DataManager.CaptureMap["SPORT"];
+				}
+				else {
+					sport = driver.FindElement("xpath","//div[contains(@class,'entity-title')]").Text;
+				}
 				
 				size = 1;
 				switch(sport) {
@@ -94,7 +99,7 @@ namespace SeleniumProject.Function
 							sport = "30";
 							break;
 						case "NHL":
-							sport = "";
+							sport = "31";
 							break;
 						case "MLB":
 							sport = "30";
@@ -125,12 +130,12 @@ namespace SeleniumProject.Function
 							sport = "11";
 							break;
 						case "NBA":
-							sport = "8";
 							player = "8";
+							sport = "8";
 							break;
 						case "NHL":
-							sport = "";
-							player = "";
+							player = "10";
+							sport = "7";
 							break;
 						case "MLB":
 							player = "15";
@@ -142,8 +147,8 @@ namespace SeleniumProject.Function
 							sport = "9";
 							break;
 						default :
-							sport = "";
 							player = "";
+							sport = "";
 							break;
 					}	
 				}
@@ -198,7 +203,7 @@ namespace SeleniumProject.Function
 						sport = sport + ": " + player;
 						break;
 					case "NBA":
-						DateTime NBA_season = new DateTime(2021, 01, 01);
+						DateTime NBA_season = new DateTime(2021, 1, 01);
 						DateTime NBA_playoff = new DateTime(2021, 7, 30);
 						if (DateTime.Now > NBA_season) {
 							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
@@ -212,10 +217,21 @@ namespace SeleniumProject.Function
 						sport = playoffs + count + games + sport;
 						break;
 					case "NHL":
+						DateTime NHL_season = new DateTime(2021, 1, 01);
+						DateTime NHL_playoff = new DateTime(2021, 5, 30);
+						if (DateTime.Now > NHL_season) {
+							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						}
+						else {
+							skip = true;
+						}
+						if (DateTime.Now > NHL_playoff) {
+							playoffs = "PLAYOFFS: ";
+						}
 						sport = count + games + sport;
 						break;
 					case "MLB":
-						DateTime MLB_season = new DateTime(2021, 04, 01);
+						DateTime MLB_season = new DateTime(2021, 4, 01);
 						DateTime MLB_playoff = new DateTime(2021, 10, 04);
 						if (DateTime.Now > MLB_season) {
 							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;

@@ -1,27 +1,25 @@
 ﻿{
-	"testCase":"Explore/Entity: MLB Team",
+	"testCase":"Explore/Entity: NHL League",
 	"env":"dev",
-	"testId":"59",
-	"testRail":"7787113",
+	"testId":"61",
+	"testRail":"7787963",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Store Sport by Data", "data":"MLB"},
 		{"page":"Navigation", "name":"Click Explore"},
-		{"page":"Explore", "name":"Click MLB"},
-		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"30"},
-		{"page":"Explore", "name":"Capture and Click Random Team"},
-		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_TEAM_UP"},
-		{"page":"Entity_Odds", "name":"Store Team's Conference and Division", "data": "#RANDOM_TEAM"},
-		{"page":"Entity", "name":"Verify Header Divider"},
+		{"page":"Explore", "name":"Click NHL"},
+		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"31"},
+		{"page":"Explore", "name":"Click NHL"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "NHL"},
+		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
-		{"page":"Favorites", "name":"Verify Number of Favorites", "data":"1"},
+		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"National Hockey League - Added to your favorites."},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
-		{"page":"Navigation","name":"Run Template", "data":"ProTeam_Entity"}
+		{"page":"Navigation","name":"Run Template", "data":"ProLeague_Entity"}
 	]
 }

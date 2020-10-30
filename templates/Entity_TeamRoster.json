@@ -1,0 +1,8 @@
+﻿{
+    "testCase":"Template_EntityTeamRoster",
+    "testId":"t26",
+    "testSteps":[
+		{"page":"Entity_Roster", "name":"Capture Number of Players"},
+		{"page":"Entity_Roster", "name":"Verify Player Count","data":"#PLAYER_COUNT"}
+		]
+}

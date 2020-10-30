@@ -1,0 +1,12 @@
+﻿{
+	"testCase":"Explore/Search: NHL Teams",
+	"env":"dev",
+	"testId":"73",
+	"testRail":"7787966",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Verify Team Search by Sport", "data": "NHL"}
+	]
+}
