@@ -31,8 +31,8 @@
 		{"page":"Entity_Standings", "name":"Click Wild Card from Dropdown"},
 		{"page":"Entity_Standings", "name":"Verify Table Title", "data":"EASTERN CONFERENCE"},
 		{"page":"Entity_Standings", "name":"Verify Table Header", "data":"ATLANTIC"},
-		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"4"},
-		{"page":"Entity_Standings", "name":"Verify Table Column Count", "data":"13"},
+		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"6"},
+		{"page":"Entity_Standings", "name":"Verify Table Column Count", "data":"14"},
 		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"6"},
 		{"page":"Entity_Standings", "name":"Verify Table Rows Count", "data":"31"},
 		{"page":"Entity_Standings", "name":"Verify Table Legend is Displayed"},
@@ -40,7 +40,7 @@
 		{"page":"Entity_Standings", "name":"Click Preseason from Dropdown"},
 		{"page":"Entity_Standings", "name":"Verify Table Header", "data":"EASTERN CONFERENCE"},
 		{"page":"Entity_Standings", "name":"Verify Table Header Count", "data":"2"},
-		{"page":"Entity_Standings", "name":"Verify Table Column Count", "data":"13"},
+		{"page":"Entity_Standings", "name":"Verify Table Column Count", "data":"14"},
 		{"page":"Entity_Standings", "name":"Verify Table Standings Count", "data":"2"},
 		{"page":"Entity_Standings", "name":"Verify Table Rows Count", "data":"31"}
 	]
