@@ -58,7 +58,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click Search", "", "click", "xpath", search, wait));
 					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team.ToLower()), "input_text", "xpath", search, wait));
 					
-					if (team.Equals("MLB") || team.Equals("NBA") || team.Equals("NFL") || team.Equals("NBA") || team.Equals("SAN FRANCISCO 49ERS") || team.Equals("PHILADELPHIA 76ERS")) {
+					if (team.Equals("MLB") || team.Equals("NBA") || team.Equals("NFL") || team.Equals("NHL") || team.Equals("SAN FRANCISCO 49ERS") || team.Equals("PHILADELPHIA 76ERS")) {
 						switch(team) {
 							case "MLB":
 								cat = "Major League Baseball";
