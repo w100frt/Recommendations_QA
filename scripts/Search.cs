@@ -40,7 +40,7 @@ namespace SeleniumProject.Function
 						teams.AddRange(nba);
 						break;
 					case "NHL":
-						string[] nhl = {"NHL", "ANAHEIM DUCKS", "ARIZONA COYETES", "BOSTON BRUINS", "BUFFALO SABRES", "CALGARY FLAMES", "CAROLINA HURRICANES", "CHICAGO BLACKHAWKS", "COLORADO AVALANCHE", "DALLAS STARS", "DETROIT RED WINGS", "EDMONTON OILERS", "FLORIDA PANTHERS", "LOS ANGELES KINGS", "MINNESOTA WILD", "MONTREAL CANADIENS", "NASHVILLE PREDATORS", "NEW JERSEY DEVILS", "NEW YORK ISLANDERS", "NEW YORK RANGERS", "OTTAWA SENATORS", "PHILADELPHIA FLYERS", "PITTSBURGH PENGUINS", "SAN JOSE SHARKS", "ST. LOUIS BLUES", "TAMPA BAY LIGHTNING", "TORONTO MAPLE LEAFS", "VANCOUVER CANUCKS", "VEGAS GOLDEN KNIGHTS","WASHINGTON CAPITALS", "WINNIPEG JETS"};
+						string[] nhl = {"NHL", "ANAHEIM DUCKS", "ARIZONA COYOTES", "BOSTON BRUINS", "BUFFALO SABRES", "CALGARY FLAMES", "CAROLINA HURRICANES", "CHICAGO BLACKHAWKS", "COLORADO AVALANCHE", "DALLAS STARS", "DETROIT RED WINGS", "EDMONTON OILERS", "FLORIDA PANTHERS", "LOS ANGELES KINGS", "MINNESOTA WILD", "MONTREAL CANADIENS", "NASHVILLE PREDATORS", "NEW JERSEY DEVILS", "NEW YORK ISLANDERS", "NEW YORK RANGERS", "OTTAWA SENATORS", "PHILADELPHIA FLYERS", "PITTSBURGH PENGUINS", "SAN JOSE SHARKS", "ST. LOUIS BLUES", "TAMPA BAY LIGHTNING", "TORONTO MAPLE LEAFS", "VANCOUVER CANUCKS", "VEGAS GOLDEN KNIGHTS","WASHINGTON CAPITALS", "WINNIPEG JETS"};
 						teams.AddRange(nhl);
 						break;
 					case "MLB":
@@ -58,7 +58,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Click Search", "", "click", "xpath", search, wait));
 					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team.ToLower()), "input_text", "xpath", search, wait));
 					
-					if (team.Equals("MLB") || team.Equals("NBA") || team.Equals("NFL") || team.Equals("SAN FRANCISCO 49ERS") || team.Equals("PHILADELPHIA 76ERS")) {
+					if (team.Equals("MLB") || team.Equals("NBA") || team.Equals("NFL") || team.Equals("NHL") || team.Equals("SAN FRANCISCO 49ERS") || team.Equals("PHILADELPHIA 76ERS")) {
 						switch(team) {
 							case "MLB":
 								cat = "Major League Baseball";
@@ -68,6 +68,8 @@ namespace SeleniumProject.Function
 								break;
 							case "NFL":
 								cat = "National Football League";
+							case "NHL":
+								cat = "National Hockey League";
 								break;
 							case "SAN FRANCISCO 49ERS":
 								cat = "San Francisco 49ers";
