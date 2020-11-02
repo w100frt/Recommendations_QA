@@ -27,6 +27,6 @@
 		{"page":"Entity", "name":"Click Odds Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
 		{"page":"Entity_Odds", "name":"Verify FOX Bet Logo Displayed"},
-		{"page":"Entity_Odds", "name":"Verify Odds Setion Displayed"}
+		{"page":"Entity_Odds", "name":"Verify Odds Section Displayed"}
     ]
 }
