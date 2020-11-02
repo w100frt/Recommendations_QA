@@ -68,6 +68,7 @@ namespace SeleniumProject.Function
 								break;
 							case "NFL":
 								cat = "National Football League";
+								break;
 							case "NHL":
 								cat = "National Hockey League";
 								break;
