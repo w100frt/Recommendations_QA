@@ -71,6 +71,9 @@ namespace SeleniumProject.Function
 						standings.Add("WILD CARD");
 						standings.Add("SPRING TRAINING");
 						break;
+					case "BIG TEN FOOTBALL":
+						standings.Add("CONFERENCE");
+						break;
 					default :
 						standings.Add("");
 						standings.Add("");
