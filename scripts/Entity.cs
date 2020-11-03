@@ -71,7 +71,11 @@ namespace SeleniumProject.Function
 						standings.Add("WILD CARD");
 						standings.Add("SPRING TRAINING");
 						break;
+					case "ACC FOOTBALL":
+					case "BIG 12 FOOTBALL":
 					case "BIG TEN FOOTBALL":
+					case "PAC-12 FOOTBALL":
+					case "SEC FOOTBALL":
 						standings.Add("CONFERENCE");
 						break;
 					default :
@@ -145,7 +149,11 @@ namespace SeleniumProject.Function
 							sport = "14";
 							break;
 						case "NCAA FOOTBALL":
+						case "ACC FOOTBALL":
+						case "BIG 12 FOOTBALL":
 						case "BIG TEN FOOTBALL":
+						case "PAC-12 FOOTBALL":
+						case "SEC FOOTBALL":
 							player = "14";
 							sport = "9";
 							break;
