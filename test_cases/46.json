@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: CFB - ACC",
 	"env":"dev",
 	"testId":"46",
-	"testRail":"",
+	"testRail":"7788691",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

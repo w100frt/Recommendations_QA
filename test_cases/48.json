@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: CFB - SEC",
 	"env":"dev",
 	"testId":"48",
-	"testRail":"",
+	"testRail":"7788693",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

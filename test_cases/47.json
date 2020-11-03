@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: CFB - PAC 12",
 	"env":"dev",
 	"testId":"47",
-	"testRail":"",
+	"testRail":"7788692",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

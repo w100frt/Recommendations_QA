@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: CFB - NCAA FB",
 	"env":"dev",
 	"testId":"50",
-	"testRail":"",
+	"testRail":"7788689",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
