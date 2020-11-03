@@ -1,26 +1,28 @@
 ﻿{
-	"testCase":"Explore/Entity: CFB - NCAA FB",
+	"testCase":"Explore/Entity: CFB - ACC",
 	"env":"dev",
-	"testId":"50",
-	"testRail":"7788689",
+	"testId":"46",
+	"testRail":"7788691",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NCAA FB"},
-		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"25"},
-		{"page":"Explore", "name":"Click NCAA FB"},
-		{"page":"Entity", "name":"Verify Header Text", "data": "NCAA FOOTBALL"},
+		{"page":"Explore", "name":"Click Entity by Data", "data": "ACC"},
+		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"15"},
+		{"page":"Explore", "name":"Verify Explore Header Text", "data": "ACC"},
+		{"page":"Explore", "name":"Click Entity by Data", "data": "ACC"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "ACC FOOTBALL"},
 		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
 		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
-		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"NCAA Football - Added to your favorites."},
+		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"ACC Football - Added to your favorites."},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
-		{"page":"Navigation","name":"Run Template", "data":"CollegeLeague_Entity"}
+		{"page":"Navigation","name":"Run Template", "data":"CollegeConference_Entity"}
 	]
 }

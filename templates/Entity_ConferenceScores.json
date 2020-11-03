@@ -1,0 +1,9 @@
+﻿{
+    "testCase":"Template_EntityConferenceScores",
+    "testId":"t26",
+    "testSteps":[
+		{"page":"Entity", "name":"Verify Header Divider"},
+		{"page":"Entity", "name":"Verify Header Subtext Exists"},
+		{"page":"Entity_Scores", "name":"Verify Scorechip is Displayed"}
+		]
+}

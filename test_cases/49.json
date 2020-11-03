@@ -2,7 +2,7 @@
 	"testCase":"Explore/Entity: CFB - Big 10",
 	"env":"dev",
 	"testId":"49",
-	"testRail":"",
+	"testRail":"7788690",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

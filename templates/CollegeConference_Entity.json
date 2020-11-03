@@ -5,7 +5,7 @@
 		{"page":"Navigation","name":"Run Template", "data":"Entity_LeagueNews"},
 		{"page":"Entity", "name":"Click Scores Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"SCORES"},
-		{"page":"Navigation","name":"Run Template", "data":"Entity_LeagueScores"},
+		{"page":"Navigation","name":"Run Template", "data":"Entity_ConferenceScores"},
 		{"page":"Entity", "name":"Click Standings Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"STANDINGS"},
 		{"page":"Navigation","name":"Run Template", "data":"Entity_LeagueStandings"},
@@ -27,6 +27,6 @@
 		{"page":"Entity", "name":"Click Odds Tab"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
 		{"page":"Entity_Odds", "name":"Verify FOX Bet Logo Displayed"},
-		{"page":"Entity_Odds", "name":"Verify Odds Setion Displayed"}
+		{"page":"Entity_Odds", "name":"Verify Odds Section Displayed"}
     ]
 }
