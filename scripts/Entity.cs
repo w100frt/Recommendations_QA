@@ -112,7 +112,17 @@ namespace SeleniumProject.Function
 							sport = "30";
 							break;
 						case "BIG TEN FOOTBALL":
+						case "SEC FOOTBALL":
 							sport = "14";
+							break;
+						case "ACC FOOTBALL":
+							sport = "15";
+							break;
+						case "PAC-12 FOOTBALL":
+							sport = "12";
+							break;
+						case "BIG 12 FOOTBALL":
+							sport = "10";
 							break;
 						default :
 							sport = "32";
