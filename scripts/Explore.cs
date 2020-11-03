@@ -81,6 +81,20 @@ namespace SeleniumProject.Function
 				steps.Clear();
 			}
 			
+			else if (step.Name.Contains("Capture") && step.Name.Contains("Random Conference")) {
+				teamSelector = "//div[@id='exploreApp']//a[@class='entity-list-row-container']";
+				total = driver.FindElements("xpath", teamSelector).Count; 
+				total = random.Next(1, total+1);				
+				steps.Add(new TestStep(order, "Capture Randomized Team", "RANDOM_CONF", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				// click as well
+				if (step.Name.Contains("Click")) {
+					steps.Add(new TestStep(order, "Click Randomized Team", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));					
+				}
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+				DataManager.CaptureMap["RANDOM_CONF_UP"] = DataManager.CaptureMap["RANDOM_CONF"].ToUpper();
+			}
+			
 			else if (step.Name.Contains("Capture") && step.Name.Contains("Random Team")) {
 				teamSelector = "//div[@id='exploreApp']//a[@class='entity-list-row-container']";
 				total = driver.FindElements("xpath", teamSelector).Count; 

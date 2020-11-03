@@ -1,8 +1,10 @@
 ﻿{
 	"page":"Explore",
 	"testDefinitions":[
+		{"name":"Capture and Click Random Conference","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Capture and Click Random Player","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Capture and Click Random Team","objectType":"script","by":"xpath","objectId":"Explore"},
+		{"name":"Capture Random Conference","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Capture Random Player","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Click Back Arrow","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'arrow-back')]"},
 		{"name":"Click Cancel Button","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'explore')]//button[contains(.,'Cancel')]"},
