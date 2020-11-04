@@ -110,7 +110,7 @@ namespace SeleniumProject.Function
 				if (step.Name.Contains("Football")) {
 					step.Data = step.Data + " FOOTBALL";					
 				}
-				else if (step.Name.Contains()) {
+				else if (step.Name.Contains("Basketball")) {
 					step.Data = step.Data + " BASKETBALL";
 				}
 
