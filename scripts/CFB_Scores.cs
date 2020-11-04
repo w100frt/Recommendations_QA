@@ -61,8 +61,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Check Conference Name")) {
-				if (DataManager.CaptureMap.ContainsKey("RANDOM_CONF")) {
-					switch (DataManager.CaptureMap["RANDOM_CONF"]) {
+					switch (step.Data) {
 						case "AAC":
 							conf = "American Athletic";
 							break;
