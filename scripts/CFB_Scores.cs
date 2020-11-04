@@ -102,8 +102,7 @@ namespace SeleniumProject.Function
 							conf = "";
 							break;
 					}
-					DataManager.CaptureMap["RANDOM_CONF"] = conf;
-				}
+				DataManager.CaptureMap["RANDOM_CONF"] = conf;
 			}
 			
 			else {
