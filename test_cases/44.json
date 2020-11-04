@@ -12,7 +12,7 @@
 		{"page":"Explore", "name":"Verify Explore Header Text", "data": "#RANDOM_CONF_UP"},
 		{"page":"Explore", "name":"Check Conference Name", "data": "#RANDOM_CONF"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "#RANDOM_CONF"},
-		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_CONF_UP FOOTBALL"},
+		{"page":"Entity", "name":"Verify College Football Header Text", "data": "#RANDOM_CONF_UP"},
 		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
 		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},

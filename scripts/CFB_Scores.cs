@@ -105,6 +105,21 @@ namespace SeleniumProject.Function
 				DataManager.CaptureMap["RANDOM_CONF"] = conf;
 			}
 			
+			
+			else if (step.Name.Contains("Verify College") && step.Name.Contains("Header Text")) {
+				if (step.Name.Contains("Football") {
+					step.Data = step.Data + " FOOTBALL";					
+				}
+				else if (step.Name.Contains()) {
+					step.Data = step.Data + " BASKETBALL";
+				}
+
+				steps.Add(new TestStep(order, "Verify Header Text", step.Data, "verify_value", "xpath", "//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
+			}
+			
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

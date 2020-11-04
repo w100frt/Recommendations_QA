@@ -17,6 +17,7 @@
 		{"name":"Verify Add or Remove Favorite Button Text","objectType":"verify_value","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Verify Header Divider","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'entity-header-divider')]"},
 		{"name":"Verify Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
+		{"name":"Verify College Football Header Text","objectType":"verify_value","by":"xpath","objectId":"CFB_Scores"},
 		{"name":"Verify Header Subtext","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Header Subtext Exists","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'entity-header')]/div/span"},
 		{"name":"Verify Number of Player Stats in Header","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'entity-header-stats')]/div"},
