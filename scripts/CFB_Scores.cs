@@ -107,7 +107,7 @@ namespace SeleniumProject.Function
 			
 			
 			else if (step.Name.Contains("Verify College") && step.Name.Contains("Header Text")) {
-				if (step.Name.Contains("Football") {
+				if (step.Name.Contains("Football")) {
 					step.Data = step.Data + " FOOTBALL";					
 				}
 				else if (step.Name.Contains()) {
