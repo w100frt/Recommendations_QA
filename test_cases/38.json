@@ -48,7 +48,7 @@
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "8"},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
-		{"page":"Favorites", "name":"Randomize Favorite NCAA Player"},
+		{"page":"Favorites", "name":"Randomize Favorite Show"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "9"}
 	]
 }
