@@ -21,19 +21,26 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
             List<TestStep> steps = new List<TestStep>();
 			
-			if(step.Name.Contains("Randomize Favorite")) {
+			if (step.Name.Contains("Randomize Favorite")) {
 				string fullName = "";
 				string sport = "";
 				favorites = "//div[contains(@id,'App') and not(contains(@style,'display: none'))]//a[contains(@class,'entity-list-row-container')]";
 				// Flip to Players pane if necessary. Otherwise, stay on Sports pane.
-				if(step.Name.Contains("Player")) {
+				if (step.Name.Contains("Player")) {
 					steps.Add(new TestStep(order, "Click Players Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
 				
+				// Flip to Shows pane if necessary. Otherwise, stay on Sports pane.
+				if (step.Name.Contains("Shows")) {
+					steps.Add(new TestStep(order, "Click Shows Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SHOWS')]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+				}
+				
 				// Allows for favoriting by NCAA entity or Professional entity
-				if(step.Name.Contains("NCAA")) {
+				if (step.Name.Contains("NCAA")) {
 					sports = driver.FindElements("xpath", favorites + "[div[div[div[(contains(.,'NCAA'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Click Randomized NCAA Sport", "", "click", "xpath", "(" + favorites + "[div[div[div[(contains(.,'NCAA'))]]]])["+ sports +"]", wait));
@@ -56,7 +63,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Allows for favoriting Leagues
-				if(step.Name.Contains("League") || step.Name.Contains("NCAA")) {
+				if (step.Name.Contains("League") || step.Name.Contains("NCAA")) {
 					// set proper league names
 					if (DataManager.CaptureMap.ContainsKey("LEAGUE")) {
 						log.Info("LEAGUE key found, setting full name");
@@ -103,7 +110,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Select a Team for Team/Player Favorites
-				if(step.Name.Contains("Team") || step.Name.Contains("Player")) {
+				if (step.Name.Contains("Team") || step.Name.Contains("Player")) {
 					sports = driver.FindElements("xpath", favorites).Count; 
 					sports = random.Next(2, sports+1);
 					steps.Add(new TestStep(order, "Capture Team Name", "TEAM", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
@@ -114,7 +121,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Allow for Favoriting Players
-				if(step.Name.Contains("Player")) {
+				if (step.Name.Contains("Player")) {
 					sports = driver.FindElements("xpath", favorites).Count;  
 					sports = random.Next(1, sports+1);
 					steps.Add(new TestStep(order, "Capture Player Name", "PLAYER", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
@@ -122,7 +129,18 @@ namespace SeleniumProject.Function
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					fullName = DataManager.CaptureMap["PLAYER"];
-				}				
+				}	
+
+				// Allow for Favoriting Shows
+				if (step.Name.Contains("Show")) {
+					sports = driver.FindElements("xpath", favorites).Count;  
+					sports = random.Next(1, sports+1);
+					steps.Add(new TestStep(order, "Capture Show Name", "SHOW", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Select Show", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					fullName = DataManager.CaptureMap["SHOW"];
+				}					
 				
 				// Verify the Toast Message, Close it, and clean up variables
 				steps.Add(new TestStep(order, "Verify Toast", fullName + " - Added to your favorites.", "verify_value", "xpath", "//div[contains(@class,'toast-msg')]/div[contains(@class,'toast-msg')]", wait));
@@ -132,6 +150,7 @@ namespace SeleniumProject.Function
 				DataManager.CaptureMap.Remove("CONF");
 				DataManager.CaptureMap.Remove("TEAM");
 				DataManager.CaptureMap.Remove("PLAYER");
+				DataManager.CaptureMap.Remove("SHOW");
 				steps.Clear();
 			}
 		}
