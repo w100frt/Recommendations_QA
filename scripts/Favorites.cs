@@ -20,6 +20,7 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
             List<TestStep> steps = new List<TestStep>();
+			bool show = false;
 			
 			if (step.Name.Contains("Randomize Favorite")) {
 				string fullName = "";
@@ -34,6 +35,7 @@ namespace SeleniumProject.Function
 				
 				// Flip to Shows pane if necessary. Otherwise, stay on Sports pane.
 				if (step.Name.Contains("Show")) {
+					show = true;
 					steps.Add(new TestStep(order, "Click Shows Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SHOWS')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -47,6 +49,15 @@ namespace SeleniumProject.Function
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
+				else if (show) {
+					sports = driver.FindElements("xpath", favorites).Count;  
+					sports = random.Next(1, sports+1);
+					steps.Add(new TestStep(order, "Capture Show Name", "SHOW", "capture", "xpath", "(" + favorites + ")["+ sports +"]//div[contains(@class,'-title')]", wait));
+					steps.Add(new TestStep(order, "Select Show", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					fullName = DataManager.CaptureMap["SHOW"];
+				}
 				else {
 					sports = driver.FindElements("xpath", favorites + "[div[div[div[(contains(.,'NFL') or contains(.,'MLB') or contains(.,'NBA') or contains(.,'NHL'))]]]]").Count; 
 					sports = random.Next(1, sports+1);
@@ -56,7 +67,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Capture League for Teams
-				if (!step.Name.Contains("Player")) {
+				if (!step.Name.Contains("Player") && show == false) {
 					steps.Add(new TestStep(order, "Capture League Entity", "LEAGUE", "capture", "xpath", "//a[contains(@class,'explore-league-header')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
@@ -131,17 +142,6 @@ namespace SeleniumProject.Function
 					fullName = DataManager.CaptureMap["PLAYER"];
 				}	
 
-				// Allow for Favoriting Shows
-				if (step.Name.Contains("Show")) {
-					sports = driver.FindElements("xpath", favorites).Count;  
-					sports = random.Next(1, sports+1);
-					steps.Add(new TestStep(order, "Capture Show Name", "SHOW", "capture", "xpath", "(" + favorites + ")["+ sports +"]//div[contains(@class,'-title')]", wait));
-					steps.Add(new TestStep(order, "Select Show", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();
-					fullName = DataManager.CaptureMap["SHOW"];
-				}					
-				
 				// Verify the Toast Message, Close it, and clean up variables
 				steps.Add(new TestStep(order, "Verify Toast", fullName + " - Added to your favorites.", "verify_value", "xpath", "//div[contains(@class,'toast-msg')]/div[contains(@class,'toast-msg')]", wait));
 				steps.Add(new TestStep(order, "Close Toast", "", "click", "xpath", "//div[contains(@class,'toast')]//div[contains(@class,'close-icon')]", wait));
