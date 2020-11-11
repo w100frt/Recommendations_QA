@@ -33,7 +33,7 @@ namespace SeleniumProject.Function
 				}
 				
 				// Flip to Shows pane if necessary. Otherwise, stay on Sports pane.
-				if (step.Name.Contains("Shows")) {
+				if (step.Name.Contains("Show")) {
 					steps.Add(new TestStep(order, "Click Shows Pane", "", "click", "xpath", "//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'SHOWS')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
