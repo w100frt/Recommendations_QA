@@ -14,6 +14,7 @@
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
 		{"page":"LiveTV","name":"Verify Selected Link on Nav"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
 		{"page":"LiveTV","name":"Click Main Video Play Button"},
