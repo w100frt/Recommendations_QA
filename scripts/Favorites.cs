@@ -135,7 +135,7 @@ namespace SeleniumProject.Function
 				if (step.Name.Contains("Show")) {
 					sports = driver.FindElements("xpath", favorites).Count;  
 					sports = random.Next(1, sports+1);
-					steps.Add(new TestStep(order, "Capture Show Name", "SHOW", "capture", "xpath", "(" + favorites + ")["+ sports +"]", wait));
+					steps.Add(new TestStep(order, "Capture Show Name", "SHOW", "capture", "xpath", "(" + favorites + ")["+ sports +"]//div[contains(@class,'-title')]", wait));
 					steps.Add(new TestStep(order, "Select Show", "", "click", "xpath", "(" + favorites + ")["+ sports +"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
