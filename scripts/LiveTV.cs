@@ -170,12 +170,11 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify Top Show Title")) {
 				title = step.Data;
 				top = "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]";
-				size = driver.FindElements("xpath", top).Count;
-				if (size == 0) {
+				if (driver.FindElements("xpath", top).Count == 0) {
 					topTitle = false;
 				}
 				
-				if (topTitle) {
+				if (!topTitle) {
 					log.Info("Top Title not found. Checking for Promo...");
 					size = driver.FindElements("xpath","//div[@class='promo-overlay']").Count;
 					if (size > 0) {
