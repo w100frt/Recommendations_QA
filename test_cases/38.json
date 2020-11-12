@@ -44,6 +44,7 @@
 		{"page":"Explore", "name":"Enter Search", "data":"LeBron James"},
 		{"page":"Explore", "name":"Click Top Search Result"},
 		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"LeBron James - Added to your favorites."},
+		{"page":"Toasts", "name":"Click Close Toast"},
 		{"page":"Explore", "name":"Click Cancel Button"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data" : "8"},
 		{"page":"Favorites", "name":"Click Add New Favorites Button"},
