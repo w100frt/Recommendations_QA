@@ -13,7 +13,7 @@
 		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
-		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"}
+		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"},
 		{"page":"LiveTV","name":"Verify Selected Link on Nav"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
