@@ -13,6 +13,7 @@
 		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
 		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
+		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"}
 		{"page":"LiveTV","name":"Verify Selected Link on Nav"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
 		{"page":"LiveTV","name":"Verify Live TV Header Displayed"},
@@ -27,9 +28,6 @@
 		{"page":"Homepage", "name":"Click Watch Live Button"},
 		{"page":"LiveTV","name":"Verify Current Video Title", "data":"#LIVE_SHOW"},
 		{"page":"LiveTV","name":"Verify Video is Playing"},
-		{"page":"LiveTV","name":"Verify Pause Button on Video"},
-		{"page":"Navigation", "name":"Navigate to Live TV"},
-		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
-		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"}
+		{"page":"LiveTV","name":"Verify Pause Button on Video"}
 	]
 }
