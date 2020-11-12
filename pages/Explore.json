@@ -24,7 +24,7 @@
 		{"name":"Verify Count of Nav Headers","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//nav/div/a"},
 		{"name":"Verify Count of Shows","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'show')]"},
 		{"name":"Verify Count of Sports","objectType":"verify_count","by":"xpath","objectId":"//div[@id='explore']//div[contains(@id,'App') and not(contains(@style,'none'))]//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
-		{"name":"Verify Count of Teams or Players","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//div[contains(@class,'explore-basic-rows')]//a[not(contains(@class,'header'))]"},
+		{"name":"Verify Count of Teams or Players","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//div[contains(@class,'explore-basic-rows')][2]//a[not(contains(@class,'header'))]"},
 		{"name":"Verify Explore Header Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//span[contains(@class,'explore-header-text')]"},
 		{"name":"Verify MLB Teams","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify NBA Teams","objectType":"script","by":"xpath","objectId":"Explore"},
