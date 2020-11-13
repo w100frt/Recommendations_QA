@@ -57,12 +57,11 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify PPV Entitlement Count")) {
+				// temporary wait
+				Thread.Sleep(4000);	
+
 				test = (string) js.ExecuteScript("return document.readyState;");
-				
 				while (!test.Equals("complete") && size++ < 5) {
-					// temporary wait
-					Thread.Sleep(4000);
-					
 					log.Info("Waiting for readyState=complete");
 					Thread.Sleep(0500);
 					test = (string) js.ExecuteScript("return document.readyState;");
