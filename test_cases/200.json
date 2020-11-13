@@ -1,0 +1,12 @@
+﻿{
+	"testCase":"MLP: Sign In",
+	"env":"dev",
+	"testId":"200",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Click Sign In on MLP"}
+	]
+}

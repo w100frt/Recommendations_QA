@@ -1,0 +1,6 @@
+﻿{
+	"page":"PPV",
+	"testDefinitions":[
+		{"name":"Click Sign In on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroSignIn')]"}
+	]
+}
