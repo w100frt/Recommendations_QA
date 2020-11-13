@@ -11,6 +11,7 @@
 		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"testingfoxsports@gmail.com"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"Testing"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
 		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}
 	]
 }
