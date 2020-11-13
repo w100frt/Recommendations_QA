@@ -28,6 +28,14 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Verify PPV Entitlement")) {
+				test = (string) js.ExecuteScript("return document.readyState;");
+				
+				while (!test.Equals("complete") && size++ < 5) {
+					log.Info("Waiting for readyState=complete");
+					Thread.Sleep(0500);
+					test = (string) js.ExecuteScript("return document.readyState;");
+				}
+				
 				length = Convert.ToInt32(js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.ppvEvents.length)"));
 				if (length > 0) {
 					log.Info("PPV Entitlement Count: " + length);
