@@ -5,6 +5,6 @@
 		{"name":"Click Previous","objectType":"click","by":"xpath","objectId":"//nav[@class='pagination']//a[@class='prev']"},
 		{"name":"Click Pagination Link by Number","objectType":"script","by":"xpath","objectId":"Entity"},
 		{"name":"Verify Active Pagination Number","objectType":"verify_value","by":"xpath","objectId":"//nav[@class='pagination']//a[@class='active']"},
-		{"name":"Verify Number of Stories & Videos","objectType":"verify_count","by":"xpath","objectId":"//*[@class='news' or contains(@class,'video-container')]"}
+		{"name":"Verify Number of Stories & Videos","objectType":"verify_count","by":"xpath","objectId":"//*[@class='news' or @class='news pointer-default' or contains(@class,'video-container')]"}
 	]
 }
