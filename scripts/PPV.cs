@@ -33,7 +33,7 @@ namespace SeleniumProject.Function
 					log.Info("PPV Entitlement Count: " + length);
 					for (int i = 0; i < length; i++) {
 						test = (string) js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.ppvEvents["+i+"].name)");
-						if (step.Data.Equals(test) {
+						if (step.Data.Equals(test)) {
 							log.Info("Verification PASSED Expected Entitlement [" + step.Data + "] matches Actual Entitlement [" + test + "]");
 						}
 						else {
