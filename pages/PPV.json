@@ -1,6 +1,9 @@
 ﻿{
 	"page":"PPV",
 	"testDefinitions":[
-		{"name":"Click Sign In on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroSignIn')]"}
+		{"name":"Click Sign In on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroSignIn')]"},
+		{"name":"Click Sign In Button on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='password']"}
+		{"name":"Enter Email on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='email']"},
+		{"name":"Enter Password on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='password']"}
 	]
 }
