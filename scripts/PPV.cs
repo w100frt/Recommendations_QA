@@ -56,6 +56,27 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Verify PPV Entitlement Count")) {
+				test = (string) js.ExecuteScript("return document.readyState;");
+				
+				while (!test.Equals("complete") && size++ < 5) {
+					log.Info("Waiting for readyState=complete");
+					Thread.Sleep(0500);
+					test = (string) js.ExecuteScript("return document.readyState;");
+				}
+				
+				length = Convert.ToInt32(js.ExecuteScript("return wisRegistration.getUserEntitlements().then(x => x.ppvEvents.length)"));
+				count = Convert.ToInt32(step.Data);
+				
+				if (count == length) {
+					log.Info("Verification PASSED. Expected entitlement count [" + count + "] matches Actual entitlement count: [" + length + "]");
+				}
+				else {
+					log.Error("***Verification FAILED. Expected entitlement count [" + count + "] does not match Actual entitlement count: [" + length + "]***");
+					err.CreateVerificationError(step, count.ToString(), length.ToString());	
+				}
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}

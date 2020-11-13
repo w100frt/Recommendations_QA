@@ -12,6 +12,7 @@
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
 		{"page":"Navigation", "name":"Verify FS Logo on Desktop"},
+		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"1"},
 		{"page":"PPV", "name":"Verify PPV Entitlement", "data":"ppv-fs-pbc-192"}
 	]
 }
