@@ -10,6 +10,7 @@
 		{"page":"PPV", "name":"Click Sign In on MLP"},
 		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"ppvfoxsports@gmail.com"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
-		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"}
+		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"PPV", "name":"Verify PPV Entitlement", "data":"ppv-fs-pbc-192"}
 	]
 }
