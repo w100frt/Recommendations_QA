@@ -27,7 +27,13 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
-			if (step.Name.Equals("Verify PPV Entitlement")) {
+			
+			if (step.Name.Equals("Verify Buy Now Button Disabled")) {
+				test = driver.FindElement("xpath","//button[contains(@class,'formSubmit submitButton')]").getAttribute("disabled");
+				log.Info(test);
+			}
+			
+			else if (step.Name.Equals("Verify PPV Entitlement")) {
 				test = (string) js.ExecuteScript("return document.readyState;");
 				
 				while (!test.Equals("complete") && size++ < 5) {

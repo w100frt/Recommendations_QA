@@ -10,6 +10,8 @@
 		{"name":"Enter Credit Card Number","objectType":"input_text","by":"xpath","objectId":"//input[@id='cardNumber']"},
 		{"name":"Enter Credit Card Zip Code","objectType":"input_text","by":"xpath","objectId":"//input[@id='zipCode']"},
 		{"name":"Enter Password on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='password']"},
+		{"name":"Verify Buy Now Button Enabled","objectType":"script","by":"xpath","objectId":"PPV"},
+		{"name":"Verify Buy Now Button Disabled","objectType":"script","by":"xpath","objectId":"PPV"},
 		{"name":"Verify PPV Entitlement","objectType":"script","by":"xpath","objectId":"PPV"},
 		{"name":"Verify PPV Entitlement Count","objectType":"script","by":"xpath","objectId":"PPV"}
 	]

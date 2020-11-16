@@ -10,6 +10,7 @@
 		{"page":"PPV", "name":"Click Sign In on MLP"},
 		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"1605259420@WRIGHT.EDU"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"testuserpassword"},
+		{"page":"PPV", "name":"Verify Buy Now Button Disabled"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
 		{"page":"Navigation", "name":"Switch Frame by Class", "data":"EvPaymentFrame"},
 		{"page":"PPV", "name":"Enter Credit Card Name", "data":"Test Account"},
@@ -17,6 +18,7 @@
 		{"page":"PPV", "name":"Enter Credit Card Exp", "data":"1122"},
 		{"page":"PPV", "name":"Enter Credit Card CVV", "data":"111"},
 		{"page":"PPV", "name":"Enter Credit Card Zip Code", "data":"12345"},
+		{"page":"PPV", "name":"Verify Buy Now Button Enabled"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
 		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}
 	]
