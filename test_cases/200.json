@@ -2,7 +2,7 @@
 	"testCase":"MLP: Sign In - Purchased",
 	"env":"dev",
 	"testId":"200",
-	"testRail":"",
+	"testRail":"7795235",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
