@@ -29,7 +29,7 @@ namespace SeleniumProject.Function
 			
 			
 			if (step.Name.Equals("Verify Buy Now Button Disabled")) {
-				test = driver.FindElement("xpath","//button[contains(@class,'formSubmit submitButton')]").getAttribute("disabled");
+				test = driver.FindElement("xpath","//button[contains(@class,'formSubmit submitButton')]").GetAttribute("disabled");
 				log.Info(test);
 			}
 			
