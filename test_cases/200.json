@@ -1,0 +1,18 @@
+﻿{
+	"testCase":"MLP: Sign In - Purchased",
+	"env":"dev",
+	"testId":"200",
+	"testRail":"7795235",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Click Sign In on MLP"},
+		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"ppvfoxsports@gmail.com"},
+		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
+		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
+		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"1"},
+		{"page":"PPV", "name":"Verify PPV Entitlement", "data":"ppv-fs-pbc-192"}
+	]
+}

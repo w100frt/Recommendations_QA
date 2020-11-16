@@ -1,0 +1,18 @@
+﻿{
+	"page":"PPV",
+	"testDefinitions":[
+		{"name":"Click Sign In on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroSignIn')]"},
+		{"name":"Click Sign In Button on Accounts Page","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'Submit')]"},
+		{"name":"Enter Email on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='email']"},
+		{"name":"Enter Credit Card CVV","objectType":"input_text","by":"xpath","objectId":"//input[@id='securityCode']"},
+		{"name":"Enter Credit Card Exp","objectType":"input_text","by":"xpath","objectId":"//input[@id='expiryDate']"},
+		{"name":"Enter Credit Card Name","objectType":"input_text","by":"xpath","objectId":"//input[@id='nameOnCard']"},
+		{"name":"Enter Credit Card Number","objectType":"input_text","by":"xpath","objectId":"//input[@id='cardNumber']"},
+		{"name":"Enter Credit Card Zip Code","objectType":"input_text","by":"xpath","objectId":"//input[@id='zipCode']"},
+		{"name":"Enter Password on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='password']"},
+		{"name":"Verify Buy Now Button Enabled","objectType":"script","by":"xpath","objectId":"PPV"},
+		{"name":"Verify Buy Now Button Disabled","objectType":"script","by":"xpath","objectId":"PPV"},
+		{"name":"Verify PPV Entitlement","objectType":"script","by":"xpath","objectId":"PPV"},
+		{"name":"Verify PPV Entitlement Count","objectType":"script","by":"xpath","objectId":"PPV"}
+	]
+}
