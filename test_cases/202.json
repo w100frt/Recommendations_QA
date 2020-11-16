@@ -2,7 +2,7 @@
 	"testCase":"MLP: Buy Now CTA (Sign Up)",
 	"env":"dev",
 	"testId":"202",
-	"testRail":"",
+	"testRail":"7795237",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
@@ -21,6 +21,10 @@
 		{"page":"Navigation", "name":"Switch To Default Content"},
 		{"page":"PPV", "name":"Verify Buy Now Button Enabled"},
 		{"page":"PPV", "name":"Click Fox Sports Logo"},
-		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}
+		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"},
+		{"page":"Navigation","name":"Verify Account on Nav"},
+		{"page":"Navigation","name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"#EmailAddress"}
 	]
 }
