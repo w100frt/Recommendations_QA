@@ -18,6 +18,7 @@
 		{"page":"PPV", "name":"Enter Credit Card Exp", "data":"1122"},
 		{"page":"PPV", "name":"Enter Credit Card CVV", "data":"111"},
 		{"page":"PPV", "name":"Enter Credit Card Zip Code", "data":"12345"},
+		{"page":"Navigation", "name":"Switch To Default Content"},
 		{"page":"PPV", "name":"Verify Buy Now Button Enabled"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
 		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}

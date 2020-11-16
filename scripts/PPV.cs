@@ -107,6 +107,10 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Switch To Default Content") {
+				driver.SwitchTo().DefaultContent();
+			}
+			
 			else {
 				throw new Exception("Test Step not found in script");
 			}
