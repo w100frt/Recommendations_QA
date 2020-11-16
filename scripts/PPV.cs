@@ -28,9 +28,33 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			
-			if (step.Name.Equals("Verify Buy Now Button Disabled")) {
+			if (step.Name.Contains("Verify Buy Now Button")) {
 				test = driver.FindElement("xpath","//button[contains(@class,'formSubmit submitButton')]").GetAttribute("disabled");
-				log.Info(test);
+				stop = bool.Parse(test);
+				
+				// verify button's disabled attribute is set to true
+				if(step.Name.Contains("Disabled")) {
+					if (stop == true) {
+						log.Info("Verification PASSED. Disabled equals " + stop);
+					}
+					else {
+						log.Error("***Verification FAILED. Expected disabled to equal true but Actual disabled field equals " + stop);
+						err.CreateVerificationError(step, "true", stop);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
+				
+				// verify button's disabled attribute is set to false
+				else if (step.Name.Contains("Enabled")) {
+					if (stop == false) {
+						log.Info("Verification PASSED. Disabled equals " + stop + ". Button is enabled.");
+					}
+					else {
+						log.Error("***Verification FAILED. Expected disabled to equal false but Actual disabled field equals " + stop);
+						err.CreateVerificationError(step, "false", stop);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}
+				}
 			}
 			
 			else if (step.Name.Equals("Verify PPV Entitlement")) {
@@ -58,7 +82,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("***Verification FAILED. Expected more than 1 PPV entitlement. Current entitlement count: [" + length + "]***");
-					err.CreateVerificationError(step, "1 or More PPV", length.ToString());					
+					err.CreateVerificationError(step, "1 or More PPV", length.ToString());
 				}
 			}
 			
