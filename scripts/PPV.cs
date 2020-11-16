@@ -39,7 +39,7 @@ namespace SeleniumProject.Function
 					}
 					else {
 						log.Error("***Verification FAILED. Expected disabled to equal true but Actual disabled field equals " + stop);
-						err.CreateVerificationError(step, "true", stop);
+						err.CreateVerificationError(step, "true", stop.ToString());
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}
 				}
@@ -51,7 +51,7 @@ namespace SeleniumProject.Function
 					}
 					else {
 						log.Error("***Verification FAILED. Expected disabled to equal false but Actual disabled field equals " + stop);
-						err.CreateVerificationError(step, "false", stop);
+						err.CreateVerificationError(step, "false", stop.ToString());
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}
 				}
