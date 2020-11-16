@@ -107,7 +107,7 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			else if (step.Name.Equals("Switch To Default Content") {
+			else if (step.Name.Equals("Switch To Default Content")) {
 				driver.GetDriver().SwitchTo().DefaultContent();
 			}
 			
