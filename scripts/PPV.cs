@@ -30,7 +30,9 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Contains("Verify Buy Now Button")) {
 				test = driver.FindElement("xpath","//button[contains(@class,'formSubmit submitButton')]").GetAttribute("disabled");
-				stop = bool.Parse(test);
+				if (!String.IsNullOrEmpty(test)) {
+					stop = bool.Parse(test);
+				}
 				
 				// verify button's disabled attribute is set to true
 				if(step.Name.Contains("Disabled")) {
