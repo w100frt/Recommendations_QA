@@ -1,6 +1,8 @@
 ﻿{
 	"page":"PPV",
 	"testDefinitions":[
+		{"name":"Click Buy Now CTA on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroOrderButton')]"},
+		{"name":"Click Fox Sports Logo","objectType":"click","by":"xpath","objectId":"//a/img[@title='FOXSPORTS']"},
 		{"name":"Click Sign In on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroSignIn')]"},
 		{"name":"Click Sign In Button on Accounts Page","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'Submit')]"},
 		{"name":"Enter Email on Accounts Page","objectType":"input_text","by":"xpath","objectId":"//input[@name='email']"},
