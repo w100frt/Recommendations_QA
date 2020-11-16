@@ -11,6 +11,7 @@
 		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"1605259420@WRIGHT.EDU"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"testuserpassword"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"Navigation", "name":"Switch Frame by Class", "data":"EvPaymentFrame"},
 		{"page":"PPV", "name":"Enter Credit Card Name", "data":"Test Account"},
 		{"page":"PPV", "name":"Enter Credit Card Number", "data":"1111111111111111"},
 		{"page":"PPV", "name":"Enter Credit Card Exp", "data":"1122"},
