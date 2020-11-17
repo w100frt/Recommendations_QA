@@ -16,7 +16,7 @@
 		{"page":"Scores", "name":"Click Boxing"},
 		{"page":"Scores", "name":"Verify Selected Category", "data":"BOXING"},
 		{"page":"PPV", "name":"Verify Event Scorechip Title", "data":"SPENCE JR VS GARCIA"},
-		{"page":"PPV", "name":"Verify Event Scorechip Title", "data":"WELTERWEIGHT - MAIN EVENT"},
+		{"page":"PPV", "name":"Verify Event Scorechip Matchup Title", "data":"WELTERWEIGHT - MAIN EVENT"},
 		{"page":"PPV", "name":"Verify Event Scorechip Button Count", "data":"2"},
 		{"page":"PPV", "name":"Click Event Scorechip View Fight Card Button"},
 		{"page":"PPV", "name":"Verify Event Header Title","data":"SPENCE JR VS GARCIA"},
