@@ -20,7 +20,7 @@
 		{"name":"Verify Invoice Amount","objectType":"verify_value","by":"xpath","objectId":"//dl[contains(@class,'amount')]/dd"},
 		{"name":"Verify Invoice Description","objectType":"verify_value","by":"xpath","objectId":"//dl[contains(@class,'desc')]/dd"},
 		{"name":"Verify Invoice Service Period","objectType":"verify_value","by":"xpath","objectId":"//dl[contains(@class,'period')]/dd"},
-		{"name":"Verify Invoice Total Paid","objectType":"verify_value","by":"xpath","objectId":"//dl[contains(@class,'period')]/dd"},
+		{"name":"Verify Invoice Total Paid","objectType":"verify_value","by":"xpath","objectId":"//dl[contains(@class,'total')]/dd"},
 		{"name":"Verify Order History Row 1 Amount","objectType":"verify_value","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//div/span[@class='fourCol']"},
 		{"name":"Verify Order History Row 1 Description","objectType":"verify_value","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//div/span[@class='secondCol']"},
 		{"name":"Verify Order History Row 1 Service Period","objectType":"verify_value","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//div/span[@class='thirdCol']"},
