@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"FSCOM Sign In + MLP Verify",
+	"testCase":"FSCOM + MVPD Sign In + MLP Verify: Purchased",
 	"env":"dev",
 	"testId":"205",
-	"testRail":"",
+	"testRail":"7796618",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
