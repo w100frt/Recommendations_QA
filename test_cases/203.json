@@ -1,0 +1,27 @@
+﻿{
+	"testCase":"Billing History",
+	"env":"dev",
+	"testId":"203",
+	"testRail":"7796616",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Click Sign In on MLP"},
+		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"ppvfoxsports@gmail.com"},
+		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
+		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Verify Headline Text", "data":"THANK YOU FOR PURCHASING"},
+		{"page":"PPV", "name":"Click Event Details CTA on MLP"},
+		{"page":"PPV", "name":"Verify Order History Title", "data":"ORDER HISTORY"},
+		{"page":"PPV", "name":"Verify Order History Row 1 Description", "data":"Spence Jr. vs Garcia"},
+		{"page":"PPV", "name":"Verify Order History Row 1 Service Period", "data":"11/9/20-12/11/20"},
+		{"page":"PPV", "name":"Verify Order History Row 1 Amount", "data":"-$80.84"},
+		{"page":"PPV", "name":"Click View Order History Button Row 1"},
+		{"page":"PPV", "name":"Verify Invoice Description", "data":"Spence Jr. vs Garcia"},
+		{"page":"PPV", "name":"Verify Invoice Service Period", "data":"11/9/20-12/11/20"},
+		{"page":"PPV", "name":"Verify Invoice Amount", "data":"$74.99"},
+		{"page":"PPV", "name":"Verify Invoice Total Paid", "data":"-$80.84"}
+	]
+}

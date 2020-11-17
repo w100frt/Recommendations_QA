@@ -1,0 +1,21 @@
+﻿{
+    "project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"PPV Testing",
+    "env":"prod",
+    "browser":"chrome",
+    "testView":"desktop",
+    "testIds": [
+        {"testId":200},
+        {"testId":201},
+        {"testId":202},
+        {"testId":203},
+        {"testId":204},
+        {"testId":205},
+        {"testId":206},
+        {"testId":207},
+        {"testId":208},
+        {"testId":209},
+        {"testId":210}
+    ]
+}

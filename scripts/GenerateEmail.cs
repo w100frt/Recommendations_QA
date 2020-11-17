@@ -18,7 +18,7 @@ namespace SeleniumProject.Function
             DataManager.CaptureMap.Add("EmailAddress", email);
 
             List<TestStep> steps = new List<TestStep>();
-            steps.Add(new TestStep(order, "Input Generated Email", DataManager.CaptureMap["EmailAddress"], "input_text", step.By, "//input[@type='email' and @placeholder='E-mail*']", wait));
+            steps.Add(new TestStep(order, "Input Generated Email", DataManager.CaptureMap["EmailAddress"], "input_text", step.By, "//input[@type='email']", wait));
             TestRunner.RunTestSteps(driver, null, steps);
 		}
 	}

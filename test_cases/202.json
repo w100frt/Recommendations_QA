@@ -1,14 +1,14 @@
 ﻿{
-	"testCase":"MLP: Sign In - No Purchase",
+	"testCase":"MLP: Buy Now CTA (Sign Up)",
 	"env":"dev",
-	"testId":"201",
-	"testRail":"7795236",
+	"testId":"202",
+	"testRail":"7795237",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
-		{"page":"PPV", "name":"Click Sign In on MLP"},
-		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"1605259420@WRIGHT.EDU"},
+		{"page":"PPV", "name":"Click Buy Now CTA on MLP"},
+		{"page": "FSCOM_AccountInfo", "name": "Generate Email"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"testuserpassword"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
 		{"page":"PPV", "name":"Verify Buy Now Button Disabled"},
@@ -20,11 +20,11 @@
 		{"page":"PPV", "name":"Enter Credit Card Zip Code", "data":"12345"},
 		{"page":"Navigation", "name":"Switch To Default Content"},
 		{"page":"PPV", "name":"Verify Buy Now Button Enabled"},
-		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
+		{"page":"PPV", "name":"Click Fox Sports Logo"},
+		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"},
 		{"page":"Navigation","name":"Verify Account on Nav"},
 		{"page":"Navigation","name":"Navigate to Account"},
 		{"page":"Navigation", "name":"Get or Compare Device ID"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"1605259420@WRIGHT.EDU"},
-		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"#EmailAddress"}
 	]
 }
