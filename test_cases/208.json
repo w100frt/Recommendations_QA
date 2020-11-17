@@ -13,7 +13,7 @@
 		{"page":"PPV", "name":"Verify Countdown Header Text", "data":"COUNTDOWN TO FIGHT NIGHT"},
 		{"page":"PPV", "name":"Verify Tale of the Tape Displayed"},
 		{"page":"PPV", "name":"Verify Tale of the Tape Title", "data":"WORLD WELTERWEIGHT CHAMPIONSHIP"},
-		{"page":"PPV", "name":"Verify Undercard Displayed"}
+		{"page":"PPV", "name":"Verify Undercard Displayed"},
 		{"page":"PPV", "name":"Verify Undercard Title", "data":"FEATURED BOUTS"},
 		{"page":"PPV", "name":"Verify Where to Watch Title", "data":"WATCH ON ANY SCREEN"},
 		{"page":"PPV", "name":"Verify Where to Watch Displayed"}
