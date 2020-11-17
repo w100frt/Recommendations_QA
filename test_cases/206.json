@@ -11,7 +11,7 @@
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Navigation", "name":"Navigate to Account"},
 		{"page":"Navigation", "name":"Get or Compare Device ID"},
-		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"PPVFOXSPORTS@GMAIL.COM"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
 		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices.*"}
 	]
