@@ -1,0 +1,21 @@
+﻿{
+	"testCase":"Verify MLP Elements",
+	"env":"dev",
+	"testId":"208",
+	"testRail":"7796621",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Verify Key Art Image"},
+		{"page":"PPV", "name":"Verify Key Art Description", "data":"ERROL SPENCE JR. VS DANNY GARCIA"},
+		{"page":"PPV", "name":"Verify Countdown Displayed"},
+		{"page":"PPV", "name":"Verify Countdown Header Text", "data":"COUNTDOWN TO FIGHT NIGHT"},
+		{"page":"PPV", "name":"Verify Tale of the Tape Displayed"},
+		{"page":"PPV", "name":"Verify Tale of the Tape Title", "data":"WORLD WELTERWEIGHT CHAMPIONSHIP"},
+		{"page":"PPV", "name":"Verify Undercard Displayed"}
+		{"page":"PPV", "name":"Verify Undercard Title", "data":"FEATURED BOUTS"},
+		{"page":"PPV", "name":"Verify Where to Watch Title", "data":"WATCH ON ANY SCREEN"},
+		{"page":"PPV", "name":"Verify Where to Watch Displayed"}
+	]
+}
