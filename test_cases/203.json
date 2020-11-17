@@ -17,7 +17,7 @@
 		{"page":"PPV", "name":"Verify Order History Title", "data":"ORDER HISTORY"},
 		{"page":"PPV", "name":"Verify Order History Row 1 Description", "data":"Spence Jr. vs Garcia"},
 		{"page":"PPV", "name":"Verify Order History Row 1 Service Period", "data":"11/9/20-12/11/20"},
-		{"page":"PPV", "name":"Verify Order History Row 1 Amount", "data":"-$80.84"}
+		{"page":"PPV", "name":"Verify Order History Row 1 Amount", "data":"-$80.84"},
 		{"page":"PPV", "name":"Click View Order History Button Row 1"},
 		{"page":"PPV", "name":"Verify Invoice Description", "data":"Spence Jr. vs Garcia"},
 		{"page":"PPV", "name":"Verify Invoice Service Period", "data":"11/9/20-12/11/20"},
