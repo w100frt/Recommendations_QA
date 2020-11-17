@@ -14,7 +14,7 @@
 		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"PPVFOXSPORTS@GMAIL.COM"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click Boxing"},
-		{"page":"Scores", "name":"Click Selected Category", "data":"BOXING"},
+		{"page":"Scores", "name":"Verify Selected Category", "data":"BOXING"},
 		{"page":"PPV", "name":"Verify Event Scorechip Title", "data":"SPENCE JR VS GARCIA"},
 		{"page":"PPV", "name":"Verify Event Scorechip Title", "data":"WELTERWEIGHT - MAIN EVENT"},
 		{"page":"PPV", "name":"Verify Event Scorechip Button Count", "data":"1"},
