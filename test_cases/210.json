@@ -2,7 +2,7 @@
 	"testCase":"FSCOM Event: No Purchase",
 	"env":"dev",
 	"testId":"210",
-	"testRail":"",
+	"testRail":"7796623",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
