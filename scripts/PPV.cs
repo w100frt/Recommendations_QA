@@ -89,7 +89,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify PPV Entitlement Count")) {
-				Thread.Sleep(3000);
+				Thread.Sleep(4000);
 				log.Info("Waiting for wisRegistration...");
 				test = (string) js.ExecuteScript("return document.readyState;");
 				log.Info("wisRegistration: " + test);
