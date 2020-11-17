@@ -12,6 +12,10 @@
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
+		{"page":"Navigation","name":"Verify Account on Nav"},
+		{"page":"Navigation","name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"PPVFOXSPORTS@GMAIL.COM"},
 		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"1"},
 		{"page":"PPV", "name":"Verify PPV Entitlement", "data":"ppv-fs-pbc-192"}
 	]

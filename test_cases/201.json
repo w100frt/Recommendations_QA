@@ -21,6 +21,10 @@
 		{"page":"Navigation", "name":"Switch To Default Content"},
 		{"page":"PPV", "name":"Verify Buy Now Button Enabled"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/"},
+		{"page":"Navigation","name":"Verify Account on Nav"},
+		{"page":"Navigation","name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"1605259420@WRIGHT.EDU"},
 		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}
 	]
 }
