@@ -128,16 +128,15 @@ namespace SeleniumProject.Function
 			}		
 
 			else if (step.Name.Equals("Click Explore")) {
-				explore = "//a[contains(@class,'explore-link')]";
-				
 				while (!shown && size++ < 3) {
+				explore = "//a[contains(@class,'explore-link')]";
 					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", explore, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					Thread.Sleep(0500);
 					log.Info("Style: " + driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style"));
-					shown = driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style");
-					if (shown.Equals("display: none;"))
+					explore = driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style");
+					if (explore.Equals("display: none;"))
 						shown = false;
 					else 
 						shown = true;
