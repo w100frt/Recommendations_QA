@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click Search"},
 		{"page":"Explore", "name":"Enter Search", "data":"Boxing"},
 		{"page":"Explore", "name":"Click Top Search Result"},
 		{"page":"Entity", "name":"Click Events Tab"},
