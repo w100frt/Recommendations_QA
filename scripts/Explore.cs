@@ -129,7 +129,7 @@ namespace SeleniumProject.Function
 
 			else if (step.Name.Equals("Click Explore")) {
 				while (!shown && size++ < 3) {
-				explore = "//a[contains(@class,'explore-link')]";
+					explore = "//a[contains(@class,'explore-link')]";
 					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", explore, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
