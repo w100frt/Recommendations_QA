@@ -135,7 +135,7 @@ namespace SeleniumProject.Function
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					Thread.Sleep(0500);
-					log.Info("Style: " + driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style.display"));
+					log.Info("Style: " + driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style"));
 					//shown = driver.FindElement().
 				//}
 				
