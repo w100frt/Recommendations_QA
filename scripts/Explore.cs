@@ -4,6 +4,7 @@ using SeleniumProject.Utilities;
 using SeleniumProject;
 using OpenQA.Selenium;
 using log4net;
+using System.Threading;
 
 namespace SeleniumProject.Function
 {
@@ -20,6 +21,9 @@ namespace SeleniumProject.Function
 			string sport = step.Data;
 			string activeTeam;
 			int total = 0;
+			int size = 0;
+			string explore = "";
+			bool shown = false;
 			string teamSelector = "";
             List<TestStep> steps = new List<TestStep>();
 			
@@ -121,7 +125,23 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				DataManager.CaptureMap["RANDOM_PLAYER_UP"] = DataManager.CaptureMap["RANDOM_PLAYER"].ToUpper();
-			}				
+			}		
+
+			else if (step.Name.Equals("Click Explore")) {
+				while (!shown && size++ < 3) {
+					explore = "//a[contains(@class,'explore-link')]";
+					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", explore, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					explore = driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style");
+					log.Info("Style: " + explore);
+					if (explore.Equals("display: none;"))
+						shown = false;
+					else 
+						shown = true;
+					Thread.Sleep(0500);
+				}				
+			}			
 			
 			else {
 				throw new Exception("Test Step not found in script");
