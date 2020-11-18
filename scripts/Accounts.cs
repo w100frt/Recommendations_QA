@@ -214,8 +214,8 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Click Sign In")) {
 				while (!shown && size++ < 3) {
-					explore = "/a[contains(@class,'sign-in')]";
-					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", explore, wait));
+					explore = "//a[contains(@class,'sign-in')]";
+					steps.Add(new TestStep(order, "Click Sign In", "", "click", "xpath", explore, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					explore = driver.FindElement("xpath","//div[@id='account']").GetAttribute("class");
