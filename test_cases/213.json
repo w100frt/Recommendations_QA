@@ -2,7 +2,7 @@
 	"testCase":"FSCOM Entity: No Purchase",
 	"env":"dev",
 	"testId":"213",
-	"testRail":"",
+	"testRail":"7798102",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

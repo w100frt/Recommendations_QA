@@ -2,7 +2,7 @@
 	"testCase":"FSCOM Entity: Search + No Account",
 	"env":"dev",
 	"testId":"214",
-	"testRail":"",
+	"testRail":"7798102",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
