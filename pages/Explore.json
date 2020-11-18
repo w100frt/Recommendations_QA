@@ -14,6 +14,7 @@
 		{"name":"Click NBA","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'entity-list-row-container')][div[contains(.,'NBA')]]"},
 		{"name":"Click NCAA FB","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'entity-list-row-container')][div[contains(.,'NCAA FB')]]"},
 		{"name":"Click NFL","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'entity-list-row-container')][div[contains(.,'NFL')]]"},
+		{"name":"Click PBC","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'entity-list-row-container')][div[contains(.,'Premier Boxing Champions')]]"},
 		{"name":"Click NHL","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'entity-list-row-container')][div[contains(.,'NHL')]]"},
 		{"name":"Click Players","objectType":"click","by":"xpath","objectId":"//div[contains(@id,'App') and not(contains(@style,'none'))]//nav[contains(@class,'explore-subnav')]//div//a[contains(.,'PLAYERS') or contains(.,'Players') or contains(.,'players')]"},
 		{"name":"Click Search","objectType":"click","by":"xpath","objectId":"//input[@type='search']"},
