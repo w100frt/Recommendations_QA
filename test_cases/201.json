@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Verify Main CTA Button Text", "data":"BUY NOW"},
 		{"page":"PPV", "name":"Click Sign In on MLP"},
 		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"1605259420@WRIGHT.EDU"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"testuserpassword"},

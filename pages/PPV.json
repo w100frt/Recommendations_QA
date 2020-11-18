@@ -33,6 +33,7 @@
 		{"name":"Verify Invoice Total Paid","objectType":"verify_value","by":"xpath","objectId":"//dl[contains(@class,'total')]/dd"},
 		{"name":"Verify Key Art Description","objectType":"verify_value","by":"xpath","objectId":"//h1[@class='description']"},
 		{"name":"Verify Key Art Image","objectType":"verify_displayed","by":"xpath","objectId":"//img[@class='heroKeyArt']"},
+		{"name":"Verify Main CTA Button Text","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'smartHeroCta')]/a"},
 		{"name":"Verify Order History Row 1 Amount","objectType":"verify_value","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//div/span[@class='fourCol']"},
 		{"name":"Verify Order History Row 1 Description","objectType":"verify_value","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//div/span[@class='secondCol']"},
 		{"name":"Verify Order History Row 1 Service Period","objectType":"verify_value","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//div/span[@class='thirdCol']"},
