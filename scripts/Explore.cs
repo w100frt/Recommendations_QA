@@ -20,6 +20,9 @@ namespace SeleniumProject.Function
 			string sport = step.Data;
 			string activeTeam;
 			int total = 0;
+			int size = 0;
+			string explore = "";
+			bool shown = false;
 			string teamSelector = "";
             List<TestStep> steps = new List<TestStep>();
 			
@@ -121,7 +124,22 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 				DataManager.CaptureMap["RANDOM_PLAYER_UP"] = DataManager.CaptureMap["RANDOM_PLAYER"].ToUpper();
-			}				
+			}		
+
+			else if (step.Name.Equals("Click Explore")) {
+				explore = "//a[contains(@class,'explore-link')]";
+				
+				//while (! && size++ < 3) {
+					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", explore, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					Thread.Sleep(0500);
+					log.Info("Style: " + driver.FindElement("xpath","//div[@id='ssrExploreApp']").GetAttribute("style.display"));
+					//shown = driver.FindElement().
+				//}
+				
+				
+			}			
 			
 			else {
 				throw new Exception("Test Step not found in script");
