@@ -21,6 +21,8 @@ namespace SeleniumProject.Function
 			int size = 0;
 			var length = 0;
 			int count = 0;
+			string explore = "";
+			bool shown = false;
 			string data = "";
 			List<string> channels = new List<string>();
 			string test = "";
@@ -209,6 +211,22 @@ namespace SeleniumProject.Function
 				}
 				DataManager.CaptureMap[data] = driver.GetDriver().Url;
 			}
+			
+			else if (step.Name.Equals("Click Sign In")) {
+				while (!shown && size++ < 3) {
+					explore = "/a[contains(@class,'sign-in')]";
+					steps.Add(new TestStep(order, "Click Explore", "", "click", "xpath", explore, wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();
+					explore = driver.FindElement("xpath","//div[@id='account']").GetAttribute("class");
+					log.Info("Account Container: " + explore);
+					if (explore.Contains("open"))
+						shown = true;
+					else 
+						shown = false;
+					Thread.Sleep(0500);
+				}				
+			}	
 			
 			else {
 				throw new Exception("Test Step not found in script");
