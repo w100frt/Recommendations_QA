@@ -1,6 +1,7 @@
 ﻿{
 	"project":"fs",
 	"testRailProjectId": 130,
+	"testRailMilestone": 300,
 	"jobName":"NFL Regression Test Suite",
 	"env":"prod",
 	"browser":"chrome",
