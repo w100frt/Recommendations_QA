@@ -30,7 +30,7 @@ namespace SeleniumProject.Function
 			Random random = new Random();
 
 			string[] regularSeason = {"November", "December", "January", "February", "March"};
-			string[] cbkGroups = {"TOP 25",  "A-SUN", "AAC", "ACC", "AM. EAST", "ATLANTIC 10", "BIG 12", "BIG EAST", "BIG SKY", "BIG SOUTH", "BIG TEN", "BIG WEST", "C-USA", "CAA", "DI-IND", "HORIZON", "IVY", "MAA", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "SEC", "SOUTHERN", "SOUTHLAND", "SUMMIT", "SUN BELT", "SWAC", "WAC", "WCC"};
+			string[] cbkGroups = {"TOP 25",  "A-SUN", "AAC", "ACC", "AM. EAST", "ATLANTIC 10", "BIG 12", "BIG EAST", "BIG SKY", "BIG TEN", "BIG WEST", "BIG SOUTH", "C-USA", "CAA", "DI-IND", "HORIZON", "IVY", "MAA", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "SEC", "SOUTHERN", "SOUTHLAND", "SUMMIT", "SUN BELT", "SWAC", "WAC", "WCC"};
 			
 			if (step.Name.Equals("Select Regular Season CBK Date")) {
 
