@@ -1,0 +1,11 @@
+﻿{
+	"page":"CBK_Scores",
+	"testDefinitions":[
+		{"name":"Scroll Back One Day","objectType":"script","by":"xpath","objectId":"CBK_Scores"},		
+		{"name":"Scroll Forward One Day","objectType":"script","by":"xpath","objectId":"CBK_Scores"},		
+		{"name":"Select Regular Season NCAA BK Date","objectType":"script","by":"xpath","objectId":"CBK_Scores"},
+		{"name":"Verify NCAA BK Date","objectType":"script","by":"xpath","objectId":"CBK_Scores"},
+		{"name":"Verify Event","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"},
+		{"name":"Verify Events in Segment","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"}
+	]
+}
