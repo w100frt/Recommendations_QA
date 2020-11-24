@@ -31,8 +31,8 @@ namespace SeleniumProject.Function
 				now = DateTime.Today;
 				switch(step.Data) {
 					case "CBK" : 
-						start = new DateTime(2019, 11, 05);
-						end = new DateTime(2019, 11, 05);
+						start = new DateTime(2020, 11, 24);
+						end = new DateTime(2020, 04, 05);
 						break;
 					case "CFB" : 
 						start = new DateTime(2019, 08, 19);
