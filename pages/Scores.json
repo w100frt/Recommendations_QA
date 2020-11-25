@@ -36,6 +36,7 @@
 		{"name":"Verify Date on Date Picker","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]"},
 		{"name":"Verify Displayed Day on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},
 		{"name":"Verify Displayed Group Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'group-selector')]//a[contains(@class,'dropdown-menu')]"},
+		{"name":"Verify Events in Segment","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"},
 		{"name":"Verify FOX Bet Logo on Nav","objectType":"verify_displayed","by": "xpath", "objectId":"//span[@alt='fox-bet']"},
 		{"name":"Verify Golf Groups","objectType":"script","by":"xpath","objectId":"Golf_Scores"},
 		{"name":"Verify League Title on Top Scores","objectType":"script","by":"xpath","objectId":"Scores"},

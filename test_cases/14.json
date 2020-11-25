@@ -9,20 +9,14 @@
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Click NCAA BK"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "NCAA BK"},
-		{"page":"Scores", "name":"Verify Date on Date Picker", "data": "FRI, MAR 13"},
-		{"page":"Scores", "name":"Verify Displayed Group Name", "data": "TOP 25"},
-		{"page":"Scores", "name":"Click Open Groups Dropdown"},
-		{"page":"Scores", "name":"Verify CBK Groups"},
-		{"page":"Scores", "name":"Click Open Calendar"},
-		{"page":"Scores", "name":"Select Regular Season CBK Date"},
-		{"page":"Scores", "name":"Verify Selected Date", "data":"CBK"},
+		{"page":"Scores", "name":"Is Sport In-Season?", "data": "CBK"},
+		{"page":"CBK_Scores", "name":"Verify NCAA BK Date"},
 		{"page":"Scores", "name":"Verify Scorechip is Displayed"},
-		{"page":"Scores", "name":"Capture Team Info from Chip", "data":"1"},
-		{"page":"Scores", "name":"Click Scorechip By Number", "data":"1"},
-		{"page":"Events", "name":"Verify Away Team Value", "data":"#AWAY_TEAM1"},
-		{"page":"Events", "name":"Verify Home Team Value", "data":"#HOME_TEAM1"},
-		{"page":"Events", "name":"Verify Away Team Score", "data":"#AWAY_TEAM_SCORE1"},
-		{"page":"Events", "name":"Verify Home Team Score", "data":"#HOME_TEAM_SCORE1"},
-		{"page":"Navigation","name":"Run Template", "data":"TeamSport_PastEvent"}
+		{"page":"Scores", "name":"Verify Displayed Group Name", "data":"TOP 25"},
+		{"page":"CBK_Scores", "name":"Verify Events in Segment", "data":"CBK"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click NCAA BK"},
+		{"page":"Scores", "name":"Click Open Calendar"},
+		{"page":"Scores", "name":"Verify Calendar is Displayed"}
 	]
 }

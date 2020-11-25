@@ -87,6 +87,39 @@ namespace SeleniumProject.Function
 				steps.Clear();	
 			}
 			
+			else if (step.Name.Equals("Verify NCAA BK Date")) {
+				if (String.IsNullOrEmpty(step.Data)) {
+					if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+						in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
+						if(in_season) {
+							TimeSpan time = DateTime.UtcNow.TimeOfDay;
+							int now = time.Hours;
+							int et = now - 4;
+							if (et >= 0 && et < 11){
+								log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+								step.Data = "YESTERDAY";
+							}
+							else {
+								log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+								step.Data = "TODAY";
+							}				
+						}
+						else {
+							step.Data = "MON, APR 5";
+						}
+					}
+					else {
+						log.Warn("No IN_SEASON variable available.");
+					}
+				}
+				
+				path = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]";
+				steps.Add(new TestStep(order, "Verify Displayed Day on NCAA BK", step.Data, "verify_value", "xpath", path, wait));
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", path).Text;
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
 			else if (step.Name.Equals("Verify CBK Groups")) {
 				data = "//div[contains(@class,'scores-home-container')]//div[contains(@class,'active')]//ul";
 				steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
