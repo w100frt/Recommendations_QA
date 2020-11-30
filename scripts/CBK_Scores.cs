@@ -19,11 +19,13 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			IWebElement chip;
+			bool in_season = false;
 			int loc;
 			int months;
 			int year;
 			string title;
 			string date;
+			string path = "";
 			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
