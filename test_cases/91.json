@@ -43,12 +43,7 @@
 		{"page":"Navigation", "name":"Capture Current URL", "data":"AFC_CHAMPION"},
 		{"page":"Navigation", "name":"Navigate to URL", "data":"https://nj.foxbet.com/#/american_football/outrights/8398358"},
 		{"page":"FOXBet", "name":"Capture Number of FB Entities", "data":"AFC_CHAMPION_FUTURES"},
-		{"page":"Navigation", "name":"Navigate to URL", "data":"#
-		{"page":"Navigation", "name":"Capture Current URL", "data":"AFC_CHAMPION"},
-		{"page":"Navigation", "name":"Navigate to URL", "data":"https://nj.foxbet.com/#/american_football/outrights/8398358"},
-		{"page":"FOXBet", "name":"Capture Number of FB Entities", "data":"AFC_CHAMPION_FUTURES"},
-		{"page":"Navigation", "name":"Navigate to URL", "data":"#MVP_FUTURES"},
-		{"page":"Entity_Odds", "name":"Verify Number of Table Rows", "data":"#AFC_CHAMPION"},
+		{"page":"Navigation", "name":"Navigate to URL", "data":"#AFC_CHAMPION"},
 		{"page":"Entity_Odds", "name":"Verify Number of Table Rows", "data":"#AFC_CHAMPION_FUTURES"},
 		{"page":"Entity_Odds", "name":"Click Back Arrow"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
