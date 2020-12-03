@@ -8,7 +8,6 @@ using log4net;
 using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using SeleniumProject.Utilities;
 
 namespace SeleniumProject.Function
 {
@@ -26,16 +25,17 @@ namespace SeleniumProject.Function
             log.Info("Current Directory: " + path);
 
             var list = JObject.Parse(Path.Combine(path, "report.json"));
-            foreach (JToken x in list["list"])
-            {
-                if (x["league"].ToString() == DataManager.CaptureMap["SPORT"])
-                {
-                    foreach (String id in x["ids"])
-                    {
-                        log.Info(DataManager.CaptureMap["SPORT"] + " game id:" + id);
-                    }
-                }
-            }
+            log.info(list);
+            //foreach (JToken x in list["list"])
+            //{
+            //    if (x["league"].ToString() == DataManager.CaptureMap["SPORT"])
+            //    {
+            //        foreach (String id in x["ids"])
+            //        {
+            //            log.Info(DataManager.CaptureMap["SPORT"] + " game id:" + id);
+            //        }
+            //    }
+            //}
 
         }
     }
