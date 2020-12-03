@@ -11,5 +11,7 @@
 		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"ppvfoxsports@gmail.com"},
 		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"}
 	]
 }
