@@ -9,7 +9,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft;
 using Newtonsoft.Json.Linq;
-using System.Dynamic;
 
 namespace SeleniumProject.Function
 {
