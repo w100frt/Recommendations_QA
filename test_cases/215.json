@@ -2,7 +2,7 @@
 	"testCase":"MLP: Verify Playback",
 	"env":"dev",
 	"testId":"215",
-	"testRail":"",
+	"testRail":"7810257",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

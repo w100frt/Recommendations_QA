@@ -2,7 +2,7 @@
 	"testCase":"FSCOM Event: Verify Playback",
 	"env":"dev",
 	"testId":"216",
-	"testRail":"",
+	"testRail":"7810258",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
