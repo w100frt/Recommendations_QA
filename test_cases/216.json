@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"FSCOM Event: Playback",
+	"testCase":"FSCOM Event: Verify Playback",
 	"env":"dev",
 	"testId":"216",
 	"testRail":"",
@@ -7,7 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Get or Compare Device ID"},
-		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
+		{"page":"Navigation","name":"Run Template", "data":"FSCOM_PPVSignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Navigation", "name":"Navigate to Account"},
 		{"page":"Navigation", "name":"Get or Compare Device ID"},
