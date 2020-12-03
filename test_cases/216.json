@@ -1,0 +1,25 @@
+﻿{
+	"testCase":"FSCOM Event: Playback",
+	"env":"dev",
+	"testId":"216",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"Navigation","name":"Run Template", "data":"FSCOM_PPVSignIn"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"PPVFOXSPORTS@GMAIL.COM"},
+		{"page":"Navigation", "name":"Navigate to Scores"},
+		{"page":"Scores", "name":"Click Boxing"},
+		{"page":"Scores", "name":"Verify Selected Category", "data":"BOXING"},
+		{"page":"PPV", "name":"Verify Event Scorechip Title", "data":"SPENCE JR VS GARCIA"},
+		{"page":"PPV", "name":"Verify Event Scorechip Matchup Title", "data":"WELTERWEIGHT - MAIN EVENT"},
+		{"page":"PPV", "name":"Verify Event Scorechip Button Count", "data":"1"},
+		{"page":"PPV", "name":"Click Event Scorechip View Fight Card Button"},
+		{"page":"PPV", "name":"Verify Event Header Title","data":"SPENCE JR VS GARCIA"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"}
+	]
+}
