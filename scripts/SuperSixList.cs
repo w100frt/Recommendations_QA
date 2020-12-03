@@ -28,7 +28,7 @@ namespace SeleniumProject.Function
             var list = JObject.Parse(Path.Combine(path, "report.json"));
             foreach (JToken x in list["list"])
             {
-                if (x["league"] == DataManager.CaptureMap["SPORT"])
+                if (x["league"].ToString() == DataManager.CaptureMap["SPORT"])
                 {
                     foreach (String id in x["ids"])
                     {
