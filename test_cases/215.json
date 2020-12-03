@@ -8,8 +8,8 @@
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to URL", "data":"https://delta:awesome@account-qa.foxsports.com/boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
 		{"page":"PPV", "name":"Click Sign In on MLP"},
-		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"ppvfoxsports@gmail.com"},
-		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"ppvtesting"},
+		{"page":"PPV", "name":"Enter Email on Accounts Page", "data":"testingfoxsports@gmail.com"},
+		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"Testing"},
 		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
 		{"page":"LiveTV","name":"Click Main Video Play Button"},
 		{"page":"LiveTV", "name":"Verify Video is Playing"}
