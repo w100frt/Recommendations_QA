@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft;
 using Newtonsoft.Json.Linq;
+using System.Dynamic;
 
 namespace SeleniumProject.Function
 {
@@ -22,10 +23,10 @@ namespace SeleniumProject.Function
             string wait = step.Wait != null ? step.Wait : "";
             IWebElement ele;
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
-            var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection");
+            var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\report.json");
             log.Info("Current Directory: " + path);
 
-            var list = JObject.Parse(File.ReadAllText(Path.Combine(path, "report.json")));
+            var list = JObject.Parse(File.ReadAllText(path));
             log.info(list);
             //foreach (JToken x in list["list"])
             //{
