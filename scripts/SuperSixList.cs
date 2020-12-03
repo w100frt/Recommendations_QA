@@ -20,11 +20,7 @@ namespace SeleniumProject.Function
             string wait = step.Wait != null ? step.Wait : "";
             IWebElement ele;
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
-            var path = Path.Combine(Directory.GetCurrentDirectory());
-            path = Path.Combine(path, "..");
-            path = Path.Combine(path, "..");
-            path = Path.Combine(path, "..");
-            path = Path.Combine(path, "Postman_Collection");
+            var path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "../Postman_Collection"));
             log.Info("Current Directory: " + path);
         }
     }
