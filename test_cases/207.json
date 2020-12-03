@@ -18,6 +18,6 @@
 		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
 		{"page":"Navigation", "name":"Get or Compare Device ID"},
 		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
-		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices.*"}
+		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch the biggest fight of the Year LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices*"}
 	]
 }
