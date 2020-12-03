@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
             var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\");
             log.Info("Current Directory: " + path);
 
-            var list = JObject.Parse(Path.Combine(path, "report.json"));
+            var list = JObject.Parse(File.ReadAllText(Path.Combine(path, "report.json")));
             log.info(list);
             //foreach (JToken x in list["list"])
             //{
