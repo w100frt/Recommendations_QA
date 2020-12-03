@@ -6,6 +6,7 @@ using SeleniumProject;
 using OpenQA.Selenium;
 using log4net;
 using System.Collections.ObjectModel;
+using System.IO;
 
 namespace SeleniumProject.Function
 {
