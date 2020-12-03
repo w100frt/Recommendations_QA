@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using log4net;
 using System.Collections.ObjectModel;
 using System.IO;
+using Newtonsoft;
 using Newtonsoft.Json.Linq;
 
 namespace SeleniumProject.Function
@@ -21,7 +22,7 @@ namespace SeleniumProject.Function
             string wait = step.Wait != null ? step.Wait : "";
             IWebElement ele;
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
-            var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\");
+            var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection");
             log.Info("Current Directory: " + path);
 
             var list = JObject.Parse(File.ReadAllText(Path.Combine(path, "report.json")));
