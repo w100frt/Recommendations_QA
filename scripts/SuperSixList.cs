@@ -22,8 +22,8 @@ namespace SeleniumProject.Function
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
             var path = Path.Combine(Directory.GetCurrentDirectory());
             path = Path.Combine(path, "..");
-            //path = Path.Combine(path, "..");
-            //path = Path.Combine(path, "..");
+            path = Path.Combine(path, "..");
+            path = Path.Combine(path, "..");
             path = Path.Combine(path, "Postman_Collection");
             log.Info("Current Directory: " + path);
         }
