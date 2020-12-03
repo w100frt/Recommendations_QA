@@ -10,6 +10,7 @@
     {"page":"Explore","name":"Click Shows"},
 	{"page":"Explore","name":"Verify Count of Shows","data":"4"},
 	{"page":"Explore","name":"Click The Herd"},
+	{"page":"Entity","name":"Capture Super6 List"},
 	{"page":"Entity","name":"Verify Header Text","data":"THE HERD WITH COLIN COWHERD"},
 	{"page":"Entity","name":"Verify Header Divider"},
 	{"page":"Entity","name":"Verify Add or Remove Favorite Button Text", "data":"ADD TO FAVORITES"},
