@@ -7,6 +7,8 @@ using OpenQA.Selenium;
 using log4net;
 using System.Collections.ObjectModel;
 using System.IO;
+using Newtonsoft.Json.Linq;
+using SeleniumProject.Utilities;
 
 namespace SeleniumProject.Function
 {
@@ -22,6 +24,19 @@ namespace SeleniumProject.Function
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
             var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\");
             log.Info("Current Directory: " + path);
+
+            var list = JObject.Parse(Path.Combine(path, "report.json"));
+            foreach (JToken x in list["list"])
+            {
+                if (x["league"] == DataManager.CaptureMap["SPORT"])
+                {
+                    foreach (String id in x["ids"])
+                    {
+                        log.Info(DataManager.CaptureMap["SPORT"] + " game id:" + id);
+                    }
+                }
+            }
+
         }
     }
 }

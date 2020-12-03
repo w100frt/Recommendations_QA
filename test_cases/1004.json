@@ -10,6 +10,7 @@
     {"page":"Explore","name":"Click Shows"},
 	{"page":"Explore","name":"Verify Count of Shows","data":"4"},
 	{"page":"Explore","name":"Click The Herd"},
+	{"page":"Navigation","name":"Store Sport by Data", "data":"NFL"},
 	{"page":"Entity","name":"Capture Super6 List"},
 	{"page":"Entity","name":"Verify Header Text","data":"THE HERD WITH COLIN COWHERD"},
 	{"page":"Entity","name":"Verify Header Divider"},
