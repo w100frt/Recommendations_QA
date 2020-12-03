@@ -19,15 +19,20 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<string> standings = new List<string>();
+			List<string> polls = new List<string>();
             List<TestStep> steps = new List<TestStep>();
+			IWebElement ele;
 			string sport = "";
 			string games = " GAMES ";
 			string player = "";
 			string playoffs = "";
+			string xpath = "";
+			bool skip = false;
 			int count = 0;
 			int total = 0;
 			int size;
 			IWebElement element;
+			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			
 			if (step.Name.Equals("Click Pagination Link by Number")) {
 				steps.Add(new TestStep(order, "Click " + step.Data, "", "click", "xpath", "//nav[@class='pagination']//a[text()='"+ step.Data +"']", wait));
@@ -36,7 +41,12 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Standings Dropdown List By Sport")) {
-				sport = driver.FindElement("xpath","//div[contains(@class,'entity-title')]").Text;
+				if (DataManager.CaptureMap.ContainsKey("SPORT")) {
+					sport = DataManager.CaptureMap["SPORT"];
+				}
+				else {
+					sport = driver.FindElement("xpath","//div[contains(@class,'entity-title')]").Text;
+				}
 				
 				size = 1;
 				switch(sport) {
@@ -60,6 +70,13 @@ namespace SeleniumProject.Function
 						standings.Add("DIVISION");
 						standings.Add("WILD CARD");
 						standings.Add("SPRING TRAINING");
+						break;
+					case "ACC FOOTBALL":
+					case "BIG 12 FOOTBALL":
+					case "BIG TEN FOOTBALL":
+					case "PAC-12 FOOTBALL":
+					case "SEC FOOTBALL":
+						standings.Add("CONFERENCE");
 						break;
 					default :
 						standings.Add("");
@@ -89,10 +106,23 @@ namespace SeleniumProject.Function
 							sport = "30";
 							break;
 						case "NHL":
-							sport = "";
+							sport = "31";
 							break;
 						case "MLB":
 							sport = "30";
+							break;
+						case "BIG TEN FOOTBALL":
+						case "SEC FOOTBALL":
+							sport = "14";
+							break;
+						case "ACC FOOTBALL":
+							sport = "15";
+							break;
+						case "PAC-12 FOOTBALL":
+							sport = "12";
+							break;
+						case "BIG 12 FOOTBALL":
+							sport = "10";
 							break;
 						default :
 							sport = "32";
@@ -117,20 +147,29 @@ namespace SeleniumProject.Function
 							sport = "11";
 							break;
 						case "NBA":
-							sport = "8";
 							player = "8";
+							sport = "8";
 							break;
 						case "NHL":
-							sport = "";
-							player = "";
+							player = "10";
+							sport = "7";
 							break;
 						case "MLB":
 							player = "15";
 							sport = "14";
 							break;
+						case "NCAA FOOTBALL":
+						case "ACC FOOTBALL":
+						case "BIG 12 FOOTBALL":
+						case "BIG TEN FOOTBALL":
+						case "PAC-12 FOOTBALL":
+						case "SEC FOOTBALL":
+							player = "14";
+							sport = "9";
+							break;
 						default :
-							sport = "";
 							player = "";
+							sport = "";
 							break;
 					}	
 				}
@@ -178,32 +217,66 @@ namespace SeleniumProject.Function
 						}	
 						sport = sport + ": " + player;
 						break;
+					case "NCAA FOOTBALL":
+						driver.FindElement("xpath","//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//span[@class='title-text']").Click();
+						sport = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[1]").Text;
+						player = driver.FindElement("xpath","//div[contains(@class,'week-selector') and contains(@class,'active')]//li[contains(@class,'selected')]//div[contains(@class,'week')]//div[2]").Text;
+						sport = sport + ": " + player;
+						break;
 					case "NBA":
-						DateTime NBA_playoff = new DateTime(2020, 7, 30);
+						DateTime NBA_season = new DateTime(2021, 1, 01);
+						DateTime NBA_playoff = new DateTime(2021, 7, 30);
+						if (DateTime.Now > NBA_season) {
+							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						}
+						else {
+							skip = true;
+						}
 						if (DateTime.Now > NBA_playoff) {
 							playoffs = "PLAYOFFS: ";
 						}
-						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
 						sport = playoffs + count + games + sport;
 						break;
 					case "NHL":
+						DateTime NHL_season = new DateTime(2021, 1, 01);
+						DateTime NHL_playoff = new DateTime(2021, 5, 30);
+						if (DateTime.Now > NHL_season) {
+							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						}
+						else {
+							skip = true;
+						}
+						if (DateTime.Now > NHL_playoff) {
+							playoffs = "PLAYOFFS: ";
+						}
 						sport = count + games + sport;
 						break;
 					case "MLB":
-						DateTime MLB_playoff = new DateTime(2020, 9, 28);
+						DateTime MLB_season = new DateTime(2021, 4, 01);
+						DateTime MLB_playoff = new DateTime(2021, 10, 04);
+						if (DateTime.Now > MLB_season) {
+							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
+						}
+						else {
+							skip = true;
+						}
 						if (DateTime.Now > MLB_playoff) {
 							playoffs = "PLAYOFFS: ";
 						}
-						sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
 						sport = playoffs + count + games + sport;
 						break;
 					default :
 						break;	
 				}
 				
-				steps.Add(new TestStep(order, "Verify Text", sport, "verify_value", "xpath", "//div[contains(@class,'entity-header')]/div/span", wait));
-				TestRunner.RunTestSteps(driver, null, steps);
-				steps.Clear();
+				if (!skip) {
+					steps.Add(new TestStep(order, "Verify Text", sport, "verify_value", "xpath", "//div[contains(@class,'entity-header')]/div/span", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();					
+				}
+				else {
+					log.Info("No subtext current for Out of Season sports. Skipping...");
+				}
 			}
 			
 			else if (step.Name.Equals("Capture Number of Players")) {
@@ -211,6 +284,29 @@ namespace SeleniumProject.Function
 				log.Info("Storing total as " + total.ToString());
 				DataManager.CaptureMap["PLAYER_COUNT"] = total.ToString();
 			}	
+			
+			else if (step.Name.Equals("Verify Polls Dropdown List")) {
+				polls.Add("ASSOCIATED PRESS");
+				polls.Add("USA TODAY COACHES POLL");
+				
+				size = 1;
+				foreach (string s in polls) {
+					steps.Add(new TestStep(order, "Verify Polls List " + size, polls[size-1], "verify_value", "xpath", "//div[contains(@class,'polls')]//ul//li[contains(@class,'dropdown')]["+size+"]", wait));
+					TestRunner.RunTestSteps(driver, null, steps);
+					steps.Clear();	
+					size++;					
+				}			
+			}
+			
+			else if (step.Name.Equals("Click Open Standings Dropdown")) {
+				xpath = "//div[contains(@class,'standings')]//a[contains(@class,'dropdown-title')]";
+				ele = driver.FindElement("xpath", xpath);
+                js.ExecuteScript("window.scrollTo(0,0);");
+				
+				steps.Add(new TestStep(order, "Click Open Standings", "", "click", "xpath", xpath, wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
+			}
 			
 			else {
 				throw new Exception("Test Step not found in script");

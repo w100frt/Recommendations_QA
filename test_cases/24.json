@@ -1,0 +1,29 @@
+﻿{
+	"testCase":"Verify 404 Page Elements",
+	"env":"dev",
+	"testId":"24",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"/404"},
+		{"page":"Navigation","name":"Verify Error Page Title","data":"PAGE NOT FOUND"},
+		{"page":"Navigation", "name":"Verify FS Logo on Desktop"},
+		{"page":"Homepage", "name":"Verify Main Nav is Displayed"},
+		{"page":"Homepage", "name":"Verify Main Nav Link Values"},
+		{"page":"Navigation", "name":"Run Template", "data":"VerifyFooter"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Verify Count of Nav Headers", "data":"3"},
+		{"page":"Explore", "name":"Verify Selected Explore Pane", "data":"SPORTS & TEAMS"},
+		{"page":"Explore", "name":"Verify Count of Sports", "data":"11"},
+		{"page":"Explore", "name":"Click Players"},
+		{"page":"Explore", "name":"Verify Selected Explore Pane", "data":"PLAYERS"},
+		{"page":"Explore", "name":"Verify Count of Sports", "data":"11"},
+		{"page":"Explore", "name":"Click Shows"},
+		{"page":"Explore", "name":"Verify Selected Explore Pane", "data":"SHOWS"},
+		{"page":"Explore", "name":"Verify Count of Shows", "data":"5"},
+		{"page":"Navigation", "name":"Click Check Out Stories Link"},
+		{"page":"AllStories", "name":"Verify Selected Link on Nav"},
+		{"page":"AllStories", "name":"Verify Stories Content"}
+	]
+}

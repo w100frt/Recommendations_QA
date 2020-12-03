@@ -25,6 +25,8 @@ namespace SeleniumProject.Function
 			string classList = "";
 			string title = "";
 			string edit = "";
+			string top = "";
+			bool topTitle = true;
 			bool live = false;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
@@ -167,23 +169,42 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Equals("Verify Top Show Title")) {
 				title = step.Data;
-				if (title.Contains("...") && title.Length == 54) {
-					edit = driver.FindElement("xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]").Text;
-					edit = edit.Substring(0, 51) + "...";
-					log.Info("Title was shortened at 50 characters: " + edit);
-					if(title.Equals(edit)) {
-						log.Info("VERIFICATION PASSED. Shortened expected title [" +title + "] matches shortened actual title [" + edit + "]");
+				top = "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]";
+				if (driver.FindElements("xpath", top).Count == 0) {
+					topTitle = false;
+				}
+				
+				if (!topTitle) {
+					log.Info("Top Title not found. Checking for Promo...");
+					size = driver.FindElements("xpath","//div[@class='promo-overlay']").Count;
+					if (size > 0) {
+						log.Info("Promo Found. No Top Title Expected.");
 					}
 					else {
-						log.Error("***VERIFICATION FAILED. Shortened expected title [" +title + "] DOES NOT match shortened actual title [" + edit + "]***");
-						err.CreateVerificationError(step, title, edit);
+						log.Error("***VERIFICATION FAILED. No Title or Promo Found ***");
+						err.CreateVerificationError(step, "Title or Promo", "NEITHER FOUND");
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}
 				}
 				else {
-					steps.Add(new TestStep(order, "Verify Top Show Title", title, "verify_value", "xpath", "//div[contains(@class,'live-tv-main')]//div[contains(@class,'video-container')]//div[contains(@class,'video-title')]", wait));
-					TestRunner.RunTestSteps(driver, null, steps);
-					steps.Clear();					
+					if (title.Contains("...") && title.Length == 54) {
+						edit = driver.FindElement("xpath", top).Text;
+						edit = edit.Substring(0, 51) + "...";
+						log.Info("Title was shortened at 50 characters: " + edit);
+						if(title.Equals(edit)) {
+							log.Info("VERIFICATION PASSED. Shortened expected title [" +title + "] matches shortened actual title [" + edit + "]");
+						}
+						else {
+							log.Error("***VERIFICATION FAILED. Shortened expected title [" +title + "] DOES NOT match shortened actual title [" + edit + "]***");
+							err.CreateVerificationError(step, title, edit);
+							driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+						}
+					}
+					else {
+						steps.Add(new TestStep(order, "Verify Top Show Title", title, "verify_value", "xpath", top, wait));
+						TestRunner.RunTestSteps(driver, null, steps);
+						steps.Clear();					
+					}
 				}
 			}
 			

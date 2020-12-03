@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Explore/Entity: MLB",
+	"testCase":"Explore/Entity: MLB League",
 	"env":"dev",
 	"testId":"52",
 	"testRail":"7720272",
@@ -12,7 +12,6 @@
 		{"page":"Explore", "name":"Click MLB"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "MLB"},
 		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
-		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"Major League Baseball - Added to your favorites."},

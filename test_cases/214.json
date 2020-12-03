@@ -1,0 +1,23 @@
+﻿{
+	"testCase":"FSCOM Entity: Search + No Account",
+	"env":"dev",
+	"testId":"214",
+	"testRail":"7798101",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click Search"},
+		{"page":"Explore", "name":"Enter Search", "data":"Boxing"},
+		{"page":"Explore", "name":"Click Top Search Result"},
+		{"page":"Entity", "name":"Click Events Tab"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"EVENTS"},
+		{"page":"PPV", "name":"Verify Event Scorechip Title", "data":"SPENCE JR VS GARCIA"},
+		{"page":"PPV", "name":"Verify Event Scorechip Matchup Title", "data":"WELTERWEIGHT - MAIN EVENT"},
+		{"page":"PPV", "name":"Verify Event Scorechip Button Count", "data":"2"},
+		{"page":"PPV", "name":"Click Event Scorechip Order Now Button"},
+		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices.*"},
+		{"page":"PPV", "name":"Verify Main CTA Button Text", "data":"BUY NOW"},
+		{"page":"PPV", "name":"Click Sign In on MLP"}
+	]
+}

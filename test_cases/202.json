@@ -1,0 +1,30 @@
+﻿{
+	"testCase":"MLP: Buy Now CTA (Sign Up)",
+	"env":"dev",
+	"testId":"202",
+	"testRail":"7795237",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Click Buy Now CTA on MLP"},
+		{"page": "FSCOM_AccountInfo", "name": "Generate Email"},
+		{"page":"PPV", "name":"Enter Password on Accounts Page", "data":"testuserpassword"},
+		{"page":"PPV", "name":"Click Sign In Button on Accounts Page"},
+		{"page":"PPV", "name":"Verify Buy Now Button Disabled"},
+		{"page":"Navigation", "name":"Switch Frame by Class", "data":"EvPaymentFrame"},
+		{"page":"PPV", "name":"Enter Credit Card Name", "data":"Test Account"},
+		{"page":"PPV", "name":"Enter Credit Card Number", "data":"1111111111111111"},
+		{"page":"PPV", "name":"Enter Credit Card Exp", "data":"1122"},
+		{"page":"PPV", "name":"Enter Credit Card CVV", "data":"111"},
+		{"page":"PPV", "name":"Enter Credit Card Zip Code", "data":"12345"},
+		{"page":"Navigation", "name":"Switch To Default Content"},
+		{"page":"PPV", "name":"Verify Buy Now Button Enabled"},
+		{"page":"PPV", "name":"Click Fox Sports Logo"},
+		{"page":"Navigation","name":"Verify Account on Nav"},
+		{"page":"Navigation","name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"#EmailAddress"},
+		{"page":"PPV", "name":"Verify PPV Entitlement Count", "data":"0"}
+	]
+}

@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Explore/Entity: NBA",
+	"testCase":"Explore/Entity: NBA League",
 	"env":"dev",
 	"testId":"53",
 	"testRail":"7721292",
@@ -12,7 +12,6 @@
 		{"page":"Explore", "name":"Click NBA"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "NBA"},
 		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
-		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Toasts", "name":"Verify Toast Message Text", "data":"National Basketball Association - Added to your favorites."},

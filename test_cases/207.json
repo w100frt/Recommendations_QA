@@ -1,0 +1,23 @@
+﻿{
+	"testCase":"FSCOM + MVPD Sign In + MLP Verify: No Purchase",
+	"env":"dev",
+	"testId":"207",
+	"testRail":"7796620",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"Navigation","name":"Run Template", "data":"FSCOM_SignIn"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"TESTINGFOXSPORTS@GMAIL.COM"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"Navigation", "name":"Navigate to URL by ENV", "data":"boxing/pbc/pay-per-view-spence-jr-vs-garcia-192"},
+		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices.*"}
+	]
+}

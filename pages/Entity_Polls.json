@@ -1,0 +1,12 @@
+﻿{
+	"page":"Entity_Polls",
+	"testDefinitions":[
+		{"name":"Click Open Polls Dropdown","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'polls')]//a[contains(@class,'dropdown-title')]"},
+		{"name":"Click Wild Card from Dropdown","objectType":"click","by":"xpath","objectId":"//li//a[contains(@href,'wild card')]"},
+		{"name":"Verify Polls Dropdown List Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'dropdown')]//ul"},
+		{"name":"Verify Polls Dropdown List","objectType":"script","by":"xpath","objectId":"Entity"},
+		{"name":"Verify Table Polls Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-polls')]"},
+		{"name":"Verify Table Rows Count","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'table-polls')]//tbody/tr"},
+		{"name":"Verify Table Title","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-polls')]//th[@data-index='0']"}
+	]
+}

@@ -36,10 +36,12 @@ namespace SeleniumProject.Function
 						teams.AddRange(nfl);
 						break;
 					case "NBA":
-						
+						string[] nba = {"NBA", "ATLANTA HAWKS", "BOSTON CELTICS", "BROOKLYN NETS", "CHARLOTTE HORNETS", "CHICAGO BULLS", "CLEVELAND CAVALIERS", "DALLAS MAVERICKS", "DENVER NUGGETS", "DETROIT PISTONS", "GOLDEN STATE WARRIORS", "HOUSTON ROCKETS", "INDIANA PACERS", "LOS ANGELES CLIPPERS", "LOS ANGELES LAKERS", "MEMPHIS GRIZZLIES", "MIAMI HEAT", "MILWAUKEE BUCKS", "MINNESOTA TIMBERWOLVES", "NEW ORLEANS PELICANS", "NEW YORK KNICKS", "OKLAHOMA CITY THUNDER", "ORLANDO MAGIC", "PHILADELPHIA 76ERS", "PHOENIX SUNS", "PORTLAND TRAIL BLAZERS", "SACRAMENTO KINGS", "SAN ANTONIO SPURS", "TORONTO RAPTORS", "UTAH JAZZ", "WASHINGTON WIZARDS"};
+						teams.AddRange(nba);
 						break;
 					case "NHL":
-						
+						string[] nhl = {"NHL", "ANAHEIM DUCKS", "ARIZONA COYOTES", "BOSTON BRUINS", "BUFFALO SABRES", "CALGARY FLAMES", "CAROLINA HURRICANES", "CHICAGO BLACKHAWKS", "COLORADO AVALANCHE", "DALLAS STARS", "DETROIT RED WINGS", "EDMONTON OILERS", "FLORIDA PANTHERS", "LOS ANGELES KINGS", "MINNESOTA WILD", "MONTREAL CANADIENS", "NASHVILLE PREDATORS", "NEW JERSEY DEVILS", "NEW YORK ISLANDERS", "NEW YORK RANGERS", "OTTAWA SENATORS", "PHILADELPHIA FLYERS", "PITTSBURGH PENGUINS", "SAN JOSE SHARKS", "ST. LOUIS BLUES", "TAMPA BAY LIGHTNING", "TORONTO MAPLE LEAFS", "VANCOUVER CANUCKS", "VEGAS GOLDEN KNIGHTS","WASHINGTON CAPITALS", "WINNIPEG JETS"};
+						teams.AddRange(nhl);
 						break;
 					case "MLB":
 						string[] mlb = {"MLB", "ARIZONA DIAMONDBACKS", "ATLANTA BRAVES", "BALTIMORE ORIOLES", "BOSTON RED SOX", "CHICAGO CUBS", "CHICAGO WHITE SOX", "CINCINNATI REDS", "CLEVELAND INDIANS", "COLORADO ROCKIES", "DETROIT TIGERS", "HOUSTON ASTROS", "KANSAS CITY ROYALS", "LOS ANGELES ANGELS", "LOS ANGELES DODGERS", "MIAMI MARLINS", "MILWAUKEE BREWERS", "MINNESOTA TWINS", "NEW YORK METS", "NEW YORK YANKEES", "OAKLAND ATHLETICS", "PHILADELPHIA PHILLIES", "PITTSBURGH PIRATES", "SAN DIEGO PADRES", "SAN FRANCISCO GIANTS", "SEATTLE MARINERS", "ST. LOUIS CARDINALS", "TAMPA BAY RAYS", "TEXAS RANGERS", "TORONTO BLUE JAYS", "WASHINGTON NATIONALS"};
@@ -55,14 +57,33 @@ namespace SeleniumProject.Function
 					search = "//input[@type='search']";
 					steps.Add(new TestStep(order, "Click Search", "", "click", "xpath", search, wait));
 					steps.Add(new TestStep(order, "Enter Search", ti.ToTitleCase(team.ToLower()), "input_text", "xpath", search, wait));
-					if (team.Equals("MLB")) {
-						steps.Add(new TestStep(order, "Verify Search Term", "Major League Baseball", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
-					}
-					else if (team.Equals("NFL")) {
-						steps.Add(new TestStep(order, "Verify Search Term", "National Football League", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
-					}
-					else if (team.Equals("SAN FRANCISCO 49ERS")) {
-						steps.Add(new TestStep(order, "Verify Search Term", "San Francisco 49ers", "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
+					
+					if (team.Equals("MLB") || team.Equals("NBA") || team.Equals("NFL") || team.Equals("NHL") || team.Equals("SAN FRANCISCO 49ERS") || team.Equals("PHILADELPHIA 76ERS")) {
+						switch(team) {
+							case "MLB":
+								cat = "Major League Baseball";
+								break;
+							case "NBA":
+								cat = "National Basketball Association";
+								break;
+							case "NFL":
+								cat = "National Football League";
+								break;
+							case "NHL":
+								cat = "National Hockey League";
+								break;
+							case "SAN FRANCISCO 49ERS":
+								cat = "San Francisco 49ers";
+								break;
+							case "PHILADELPHIA 76ERS":
+								cat = "Philadelphia 76ers";
+								break;
+							default :
+								cat = "";
+								break;
+						}
+						
+						steps.Add(new TestStep(order, "Verify Search Term", cat, "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));
 					}
 					else {
 						steps.Add(new TestStep(order, "Verify Search Term", ti.ToTitleCase(team.ToLower()), "verify_value", "xpath", "(//div[contains(@class,'explore-search')]//div[contains(@class,'row-title')])[1]", wait));

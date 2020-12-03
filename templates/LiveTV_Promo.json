@@ -1,0 +1,21 @@
+﻿{
+    "testCase":"Template_LiveTV_NoPromo",
+    "testId":"t40",
+    "testSteps":[
+		{"page":"LiveTV","name":"Verify Top Show Title", "data":"#LIVE_SHOW"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"Navigation","name":"Run Template", "data":"Optimum_FullProvider_SignIn"},
+		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"Navigation", "name":"Click Sign In"},
+		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"Navigation", "name":"Navigate to Home"},
+		{"page":"Homepage", "name":"Click Watch Live Button"},
+		{"page":"LiveTV","name":"Verify Current Video Title", "data":"#LIVE_SHOW"},
+		{"page":"LiveTV","name":"Verify Video is Playing"},
+		{"page":"LiveTV","name":"Verify Pause Button on Video"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV", "name":"Click See Full Schedule Link"},
+		{"page":"LiveTV", "name":"Verify Full Event Schedule Dropdown", "data":"FULL EVENT SCHEDULE"}
+    ]
+}

@@ -16,6 +16,7 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			string title;
+			string conf = "";
 			int week;
 			int total;
 			Random random = new Random();
@@ -58,6 +59,66 @@ namespace SeleniumProject.Function
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
 			}
+			
+			else if (step.Name.Equals("Check Conference Name")) {
+					switch (step.Data) {
+						case "AAC":
+							conf = "American Athletic";
+							break;
+						case "C-USA":
+							conf = "Conference USA";
+							break;
+						case "CAA":
+							conf = "Colonial Athletic";
+							break;
+						case "IND-FCS":
+							conf = "Independents (FCS)";
+							break;
+						case "Independents":
+							conf = "Independents (FBS)";
+							break;
+						case "MAC":
+							conf = "Mid-American";
+							break;
+						case "MEAC":
+							conf = "Mid-Eastern Athletic";
+							break;
+						case "MVC":
+							conf = "Missouri Valley";
+							break;
+						case "MW":
+							conf = "Mountain West";
+							break;
+						case "NEC":
+							conf = "Northeast";
+							break;
+						case "OVC":
+							conf = "Ohio Valley";
+							break;
+						case "SWAC":
+							conf = "Southerwestern Athletic";
+							break;
+						default :
+							conf = "";
+							break;
+					}
+				DataManager.CaptureMap["RANDOM_CONF"] = conf;
+			}
+			
+			
+			else if (step.Name.Contains("Verify College") && step.Name.Contains("Header Text")) {
+				if (step.Name.Contains("Football")) {
+					step.Data = step.Data + " FOOTBALL";					
+				}
+				else if (step.Name.Contains("Basketball")) {
+					step.Data = step.Data + " BASKETBALL";
+				}
+
+				steps.Add(new TestStep(order, "Verify Header Text", step.Data, "verify_value", "xpath", "//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]", wait));
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();	
+			}
+			
 			
 			else {
 				throw new Exception("Test Step not found in script");

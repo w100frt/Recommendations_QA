@@ -1,12 +1,12 @@
 ﻿{
 	"project":"fs",
 	"testRailProjectId": 130,
+	"testRailMilestone": 300,
 	"jobName":"NFL Regression Test Suite",
 	"env":"prod",
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
-		{"testId":16},
 		{"testId":42},
 		{"testId":55},
 		{"testId":64},
@@ -15,6 +15,7 @@
 		{"testId":90},
 		{"testId":91},
 		{"testId":92},
+		{"testId":93},
 		{"testId":95},
 		{"testId":96}
 	]

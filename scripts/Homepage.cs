@@ -19,7 +19,8 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			ReadOnlyCollection<IWebElement> elements;
-			string data;
+			string data = "";
+			string xpath = "";
 			string url = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();

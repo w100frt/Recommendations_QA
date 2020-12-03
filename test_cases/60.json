@@ -1,0 +1,27 @@
+﻿{
+	"testCase":"Explore/Entity: NHL Team",
+	"env":"dev",
+	"testId":"60",
+	"testRail":"7787964",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Store Sport by Data", "data":"NHL"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NHL"},
+		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"31"},
+		{"page":"Explore", "name":"Capture and Click Random Team"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_TEAM_UP"},
+		{"page":"Entity_Odds", "name":"Store Team's Conference and Division", "data": "#RANDOM_TEAM"},
+		{"page":"Entity", "name":"Verify Header Divider"},
+		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
+		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
+		{"page":"Favorites", "name":"Verify Number of Favorites", "data":"1"},
+		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADDED TO FAVORITES"},
+		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
+		{"page":"Toasts", "name":"Click Yes to Remove Favorite"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"NEWS"},
+		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
+		{"page":"Navigation","name":"Run Template", "data":"ProTeam_Entity"}
+	]
+}

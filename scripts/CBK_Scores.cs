@@ -19,18 +19,20 @@ namespace SeleniumProject.Function
 			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			IWebElement chip;
+			bool in_season = false;
 			int loc;
 			int months;
 			int year;
 			string title;
 			string date;
+			string path = "";
 			string data = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
 
 			string[] regularSeason = {"November", "December", "January", "February", "March"};
-			string[] cbkGroups = {"TOP 25", "A 10", "A-SUN", "AAC", "ACC", "AM. EAST", "BIG 12", "BIG EAST", "BIG SKY", "BIG SOUTH", "BIG TEN", "BIG WEST", "C-USA", "CAA", "DI-IND", "HORIZON", "IVY", "MAA", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "SEC", "SOUTHERN", "SOUTHLAND", "SUMMIT", "SUN BELT", "SWAC", "WAC", "WCC"};
+			string[] cbkGroups = {"TOP 25",  "AAC", "ACC", "AMERICA EAST", "ATLANTIC 10", "ATLANTIC SUN", "BIG 12", "BIG EAST", "BIG SKY", "BIG SOUTH", "BIG TEN", "BIG WEST", "C-USA", "CAA", "DI-IND", "HORIZON", "IVY", "MAA", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "SEC", "SOUTHERN", "SOUTHLAND", "SUMMIT", "SUN BELT", "SWAC", "WAC", "WCC"};
 			
 			if (step.Name.Equals("Select Regular Season CBK Date")) {
 
@@ -85,6 +87,39 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Select Date", "", "click", "xpath", "(//div[contains(@class,'qs-num')])["+ months +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
+			}
+			
+			else if (step.Name.Equals("Verify NCAA BK Date")) {
+				if (String.IsNullOrEmpty(step.Data)) {
+					if(DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
+						in_season = bool.Parse(DataManager.CaptureMap["IN_SEASON"]);
+						if(in_season) {
+							TimeSpan time = DateTime.UtcNow.TimeOfDay;
+							int now = time.Hours;
+							int et = now - 4;
+							if (et >= 0 && et < 11){
+								log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
+								step.Data = "YESTERDAY";
+							}
+							else {
+								log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
+								step.Data = "TODAY";
+							}				
+						}
+						else {
+							step.Data = "MON, APR 5";
+						}
+					}
+					else {
+						log.Warn("No IN_SEASON variable available.");
+					}
+				}
+				
+				path = "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]";
+				steps.Add(new TestStep(order, "Verify Displayed Day on NCAA BK", step.Data, "verify_value", "xpath", path, wait));
+				DataManager.CaptureMap["CURRENT"] = driver.FindElement("xpath", path).Text;
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
 			}
 			
 			else if (step.Name.Equals("Verify CBK Groups")) {
