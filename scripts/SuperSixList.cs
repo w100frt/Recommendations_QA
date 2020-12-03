@@ -21,6 +21,7 @@ namespace SeleniumProject.Function
             IWebElement ele;
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
             var path = Path.Combine(Directory.GetCurrentDirectory());
+            path = Path.Combine(path, '..')
             log.Info("Current Directory: " + path);
         }
     }
