@@ -22,6 +22,6 @@
 		{"page":"PPV", "name":"Verify Event Header Title","data":"SPENCE JR VS GARCIA"},
 		{"page":"PPV", "name":"Click Event Scorechip Order Now Button"},
 		{"page":"PPV", "name":"Verify Main CTA Button Text", "data":"BUY NOW"},
-		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices.*"}
+		{"page":"PPV", "name":"Verify Headline Text", "data":"Watch the biggest fight of the Year LIVE on Saturday, December 5th, 9PM ET/6PM PT. Buy online & stream on all supported devices*"}
 	]
 }
