@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
             path = Path.Combine(path, "..");
             //path = Path.Combine(path, "..");
             //path = Path.Combine(path, "..");
-            path = Path.Combine(path, "/Postman_Collection");
+            path = Path.Combine(path, "Postman_Collection");
             log.Info("Current Directory: " + path);
         }
     }
