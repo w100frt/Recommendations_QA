@@ -4,6 +4,7 @@
 		{"name":"Capture Current URL","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Click Sign In","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Click Explore","objectType":"script","by":"xpath","objectId":"Explore"},
+		{"name":"Click Outside Explore Area","objectType":"click","by":"xpath","objectId":"//div[@id='account-overlay']"},
 		{"name":"Click Check Out Stories Link","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'check-out')]/a"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},
 		{"name":"Capture User Entitlements","objectType":"script","by":"xpath","objectId":"Accounts"},
