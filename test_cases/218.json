@@ -1,0 +1,19 @@
+﻿{
+	"testCase":"FSCOM Sign In on Event: Verify Playback",
+	"env":"dev",
+	"testId":"218",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"LiveTV","name":"Click Main Video Play Button"},
+		{"page":"Navigation","name":"Run Template", "data":"FSCOM_PPVSignIn"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"PPVFOXSPORTS@GMAIL.COM"},
+		{"page":"Navigation", "name":"Click Outside Explore Area"},
+		{"page":"PPV", "name":"Verify Event Header Title","data":"SPENCE JR VS GARCIA"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"}
+	]
+}
