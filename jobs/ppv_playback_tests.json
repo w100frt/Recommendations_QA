@@ -1,0 +1,14 @@
+﻿{
+    "project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"PPV Playback Testing",
+    "env":"prod",
+    "browser":"chrome",
+    "testView":"desktop",
+    "testIds": [
+        {"testId":215},
+        {"testId":216},
+        {"testId":217},
+        {"testId":218}
+    ]
+}
