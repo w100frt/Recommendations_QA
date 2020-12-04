@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"FSCOM Live TV: Verify Playback",
+	"testCase":"Verify Playback on Event (from Live TV)",
 	"env":"dev",
 	"testId":"217",
-	"testRail":"",
+	"testRail":"7810580",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

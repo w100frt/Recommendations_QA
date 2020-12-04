@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"MLP: Verify Playback",
+	"testCase":"Verify Playback on MLP",
 	"env":"dev",
 	"testId":"215",
 	"testRail":"7810257",
