@@ -7,7 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Navigate to Live TV"},
-		{"page":"LiveTV","name":"Click PPV Chip on Live TV"},
+		{"page":"PPV","name":"Click PPV Chip on Live TV"},
 		{"page":"Navigation","name":"Run Template", "data":"FSCOM_PPVSignIn"},
 		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
 		{"page":"Navigation", "name":"Navigate to Account"},
