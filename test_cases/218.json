@@ -1,8 +1,8 @@
 ﻿{
-	"testCase":"FSCOM Sign In on Event: Verify Playback",
+	"testCase":"Verify Playback from Sign In on Event",
 	"env":"dev",
 	"testId":"218",
-	"testRail":"",
+	"testRail":"7810579",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

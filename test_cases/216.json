@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"FSCOM Event: Verify Playback",
+	"testCase":"Verify Playback on Event (from Scores)",
 	"env":"dev",
 	"testId":"216",
 	"testRail":"7810258",
