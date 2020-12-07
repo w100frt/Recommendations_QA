@@ -8,6 +8,7 @@
 		{"name":"Click Prop Header By Name","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Store Team's Conference and Division","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
 		{"name":"Verify Dropdown Title","objectType":"verify_value","by":"xpath","objectId":"//a[contains(@class,'dropdown')]/h1"},
+		{"name":"Verify Entity Name on Futures Page","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-name')]"},
 		{"name":"Verify Event Exists","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'event')]"},
 		{"name":"Verify Event Odds Details by Number","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify FOX Bet Logo Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//span[@alt='fox-bet']"},
