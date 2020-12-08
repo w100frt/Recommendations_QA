@@ -35,42 +35,42 @@ namespace SeleniumProject.Function
 						end = new DateTime(2021, 04, 05);
 						break;
 					case "CFB" : 
-						start = new DateTime(2019, 08, 19);
-						end = new DateTime(2020, 01, 13);
+						start = new DateTime(2020, 08, 19);
+						end = new DateTime(2021, 01, 11);
 						break;
 					case "Golf" :
 					case "GOLF" :
-						start = new DateTime(2019, 09, 12);
-						end = new DateTime(2020, 11, 15);
+						start = new DateTime(2021, 01, 07);
+						end = new DateTime(2021, 09, 05);
 						break;
 					case "MLB" : 
-						start = new DateTime(2020, 07, 23);
-						end = new DateTime(2020, 10, 28);
+						start = new DateTime(2021, 04, 01);
+						end = new DateTime(2021, 10, 28);
 						break;
 					case "NASCAR" :
-						start = new DateTime(2020, 02, 09);
-						end = new DateTime(2020, 11, 08);
+						start = new DateTime(2021, 02, 09);
+						end = new DateTime(2021, 11, 07);
 						break;
 					case "NBA" : 
-						start = new DateTime(2019, 09, 30);
-						end = new DateTime(2020, 10, 13);
+						start = new DateTime(2020, 12, 11);
+						end = new DateTime(2021, 08, 01);
 						break;
 					case "NHL" : 
 						start = new DateTime(2019, 09, 15);
 						end = new DateTime(2020, 09, 28);
 						break;
 					case "NFL" :
-						start = new DateTime(2019, 08, 01);
-						end = new DateTime(2020, 02, 02);
+						start = new DateTime(2020, 08, 01);
+						end = new DateTime(2021, 02, 02);
 						break;
 					case "Soccer" :
 					case "SOCCER" : 
-						start = new DateTime(2019, 11, 05);
-						end = new DateTime(2020, 11, 05);
+						start = new DateTime(2020, 11, 05);
+						end = new DateTime(2021, 11, 05);
 						break;
 					default: 
-						start = new DateTime(2019, 11, 05);
-						end = new DateTime(2020, 11, 05);
+						start = new DateTime(2020, 11, 05);
+						end = new DateTime(2021, 11, 05);
 						break;
 				}
 				log.Info("Current date: " + now);
