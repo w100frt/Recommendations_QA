@@ -96,7 +96,7 @@ namespace SeleniumProject.Function
 							conf = "Ohio Valley";
 							break;
 						case "SWAC":
-							conf = "Southerwestern Athletic";
+							conf = "Southwestern Athletic";
 							break;
 						default :
 							conf = "";
