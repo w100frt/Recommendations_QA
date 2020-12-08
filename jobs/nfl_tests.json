@@ -7,7 +7,9 @@
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
+		{"testId":37},
 		{"testId":42},
+		{"testId":51},
 		{"testId":55},
 		{"testId":76},
 		{"testId":77},
