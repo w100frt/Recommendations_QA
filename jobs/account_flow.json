@@ -2,14 +2,18 @@
     "project":"fs",
 	"testRailProjectId": 130,
 	"jobName":"FSCOM/MVPD Account Flow Testing",
-    "env":"prep",
+    "env":"stg",
     "browser":"chrome",
     "testView":"desktop",
     "testIds": [
+        {"testId":1},
+        {"testId":2},
         {"testId":3},
+        {"testId":4},
+        {"testId":5},
+        {"testId":7},
         {"testId":9},
         {"testId":10},
-        {"testId":11},
-        {"testId":50}
+        {"testId":11}
     ]
 }

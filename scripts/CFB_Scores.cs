@@ -96,10 +96,10 @@ namespace SeleniumProject.Function
 							conf = "Ohio Valley";
 							break;
 						case "SWAC":
-							conf = "Southerwestern Athletic";
+							conf = "Southwestern Athletic";
 							break;
 						default :
-							conf = "";
+							conf = DataManager.CaptureMap["RANDOM_CONF"];
 							break;
 					}
 				DataManager.CaptureMap["RANDOM_CONF"] = conf;
