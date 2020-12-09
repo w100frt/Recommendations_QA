@@ -99,7 +99,7 @@ namespace SeleniumProject.Function
 							conf = "Southwestern Athletic";
 							break;
 						default :
-							conf = "";
+							conf = DataManager.CaptureMap["RANDOM_CONF"];
 							break;
 					}
 				DataManager.CaptureMap["RANDOM_CONF"] = conf;
