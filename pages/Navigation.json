@@ -18,6 +18,7 @@
 		{"name":"Navigate to URL by ENV","objectType":"script","by":"xpath","objectId":"Homepage"},
 		{"name":"Open Browser","objectType":"new_browser"},
 		{"name":"Run Template","objectType":"run_template"},
+		{"name":"Store Conference by Data","objectType":"script","by": "xpath", "objectId":"Homepage"},
 		{"name":"Store Sport by Data","objectType":"script","by": "xpath", "objectId":"Homepage"},
 		{"name":"Switch Frame by Class","objectType":"switch_frame","by": "class"},
 		{"name":"Switch To Default Content","objectType":"script","by": "xpath","objectId":"PPV"},
