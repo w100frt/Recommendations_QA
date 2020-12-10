@@ -2,7 +2,6 @@
 	"page":"Entity",
 	"testDefinitions":[
 		{"name":"Capture Header Text","objectType":"capture","by":"xpath","objectId":"//div[contains(@class,'entity-header')]//div[contains(@class,'entity-title')]"},
-		{"name":"Capture Super6 List", "objectType":"script", "by":"xpath","objectId":"SuperSixList"},
 		{"name":"Click Add or Remove Favorite Button","objectType":"click","by":"xpath","objectId":"//button[@data-favorite-text]"},
 		{"name":"Click Conferences Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'conferences')]"},
 		{"name":"Click Events Tab","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'desktop')]//a[contains(@href,'events')]"},

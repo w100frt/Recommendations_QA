@@ -1,0 +1,14 @@
+{
+	"testCase": "Dummy Testing",
+	"env": "stg",
+	"testId": "1005",
+	"testView": "desktop",
+	"testSteps": [
+	{"page":"Navigation","name":"Open Browser"},
+	{"page":"Navigation","name":"Navigate to Scores"},
+	{"page":"Scores","name":"Click NFL"},
+	{"page":"Navigation","name":"Store Sport by Data","data":"NFL"},
+	{"page":"Scores","name":"Verify Super6 Scorechips"},
+	{"page":"Scores","name":"Verify Super6 on Event Page"}
+	]
+}
