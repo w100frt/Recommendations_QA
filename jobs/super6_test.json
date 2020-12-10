@@ -1,6 +1,6 @@
 {
   "project": "fs",
-  "testRailProjectId": 130
+  "testRailProjectId": 130,
   "jobName": "NFL & CFB Super6 Events",
   "env": "prod",
   "browser": "chrome",
