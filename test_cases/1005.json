@@ -1,7 +1,9 @@
 {
 	"testCase": "Dummy Testing",
-	"env": "stg",
-	"testId": "1005",
+	"env": "prod",
+  "testId": "1005",
+  "testRail":"7816909",
+  "testRailProjectId": 130,
 	"testView": "desktop",
 	"testSteps": [
 	{"page":"Navigation","name":"Open Browser"},
