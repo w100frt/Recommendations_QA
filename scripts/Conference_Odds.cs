@@ -66,10 +66,10 @@ namespace SeleniumProject.Function
 						team1 = driver.FindElement("xpath","((//div[contains(@class,'event-card')])["+i+"]//div[contains(@class,'fs-14')])[1]").Text;
 						team2 = driver.FindElement("xpath","((//div[contains(@class,'event-card')])["+i+"]//div[contains(@class,'fs-14')])[2]").Text;
 						if (confTeams.Contains(team1) || confTeams.Contains(team2)) {
-							log.Info("VERIFICATION PASSED. " + team1 + " or " team2 + " is in " + step.Data + " conference.");
+							log.Info("VERIFICATION PASSED. " + team1 + " or " + team2 + " is in " + step.Data + " conference.");
 						}
 						else {
-							log.Error("***VERIFICATION FAILED. " + team1 + " or " team2 + " is NOT in " + step.Data + " conference.");
+							log.Error("***VERIFICATION FAILED. " + team1 + " or " + team2 + " is NOT in " + step.Data + " conference.");
 							err.CreateVerificationError(step, step.Data + " Team", team1 + " & " + team2);
 							driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 						}
@@ -77,11 +77,10 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Warn("No Games Found under " + step.Data + " Odds");
-					steps.Add(new TestStep(order, "Verify Number of Header Items", "- No Data Available -", "verify_value", "xpath", "//div[contains(@class,'no-data')]", wait);
+					steps.Add(new TestStep(order, "Verify Number of Header Items", "- No Data Available -", "verify_value", "xpath", "//div[contains(@class,'no-data')]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 				}
-
 			}
 			
 			else {
