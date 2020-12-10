@@ -60,9 +60,9 @@ namespace SeleniumProject.Function
 						
 						break;
 				}
-				size = driver.FindElements("xpath", "//a[contains(@class,'event-card')]").Count;
-				if (size > 0) {
-					for (int i = 1; i <= size; i++) {
+				count = driver.FindElements("xpath", "//a[contains(@class,'event-card')]").Count;
+				if (count > 0) {
+					for (int i = 1; i <= count; i++) {
 						team1 = driver.FindElement("xpath","((//div[contains(@class,'event-card')])["+i+"]//div[contains(@class,'fs-14')])[1]").Text;
 						team2 = driver.FindElement("xpath","((//div[contains(@class,'event-card')])["+i+"]//div[contains(@class,'fs-14')])[2]").Text;
 						if (confTeams.Contains(team1) || confTeams.Contains(team2)) {
