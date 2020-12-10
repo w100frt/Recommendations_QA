@@ -40,7 +40,7 @@ namespace SeleniumProject.Function
 						break;
 					case "Big East":
 						string[] bigEast = {"BUTLER", "CONNECTICUT", "CREIGHTON", "DEPAUL", "GEORGETOWN", "MARQUETTE", "PROVIDENCE", "SETON HALL", "ST. JOHN'S", "VILLANOVA", "XAVIER"};
-						confTeams.AddRange(bigTwelve);
+						confTeams.AddRange(bigEast);
 						break;
 					case "Big Ten":
 					case "Big 10":
