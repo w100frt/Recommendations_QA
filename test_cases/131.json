@@ -1,0 +1,24 @@
+﻿{
+	"testCase":"Explore/Entity: CFB - B1G Odds",
+	"env":"dev",
+	"testId":"131",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NCAA FB"},
+		{"page":"Explore", "name":"Click Entity by Data", "data": "Big Ten"},
+		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"14"},
+		{"page":"Explore", "name":"Verify Explore Header Text", "data": "BIG TEN"},
+		{"page":"Explore", "name":"Click Entity by Data", "data": "Big Ten"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "BIG TEN FOOTBALL"},
+		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
+		{"page":"Navigation", "name":"Store Conference by Data", "data":"Big Ten"},
+		{"page":"Entity", "name":"Click Odds Tab"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
+		{"page":"Entity_Odds", "name":"Verify FOX Bet Logo Displayed"},
+		{"page":"Entity_Odds", "name":"Verify Odds Section Displayed"},
+		{"page":"Entity_Odds", "name":"Verify Top Action by Conference", "data":"#CONF"}
+	]
+}
