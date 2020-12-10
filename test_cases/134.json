@@ -9,7 +9,6 @@
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NCAA FB"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "Pac-12"},
-		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"14"},
 		{"page":"Explore", "name":"Verify Explore Header Text", "data": "PAC-12"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "Pac-12"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "PAC-12 FOOTBALL"},

@@ -9,7 +9,6 @@
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NCAA FB"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "Big 12"},
-		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"10"},
 		{"page":"Explore", "name":"Verify Explore Header Text", "data": "Big 12"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "SEC"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "BIG 12 FOOTBALL"},

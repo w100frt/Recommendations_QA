@@ -9,7 +9,6 @@
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NCAA FB"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "ACC"},
-		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"15"},
 		{"page":"Explore", "name":"Verify Explore Header Text", "data": "ACC"},
 		{"page":"Explore", "name":"Click Entity by Data", "data": "ACC"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "ACC FOOTBALL"},
