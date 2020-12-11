@@ -17,18 +17,12 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
-			IWebElement ele;
-			string data = "";
-			string path = "";
 			List<string> confTeams = new List<string>();
-			string team1 = "";
-			string team2 = "";
 			Random random = new Random();
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
-			ReadOnlyCollection<IWebElement> elements;
 			int count = 0;
-			string[,] topPlayers;
+			string[,] topPlayers = new string[10, 2]{};
 			
 			if (step.Name.Contains("Choose Top Player by Sport")) {
 				// set teams for each conference
