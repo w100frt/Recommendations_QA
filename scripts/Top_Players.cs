@@ -36,6 +36,9 @@ namespace SeleniumProject.Function
 					case "NFL":
 						topPlayers = new string[10, 2] { { "Patrick Mahomes II", "Kansas City Chiefs"}, { "Russell Wilson", "Seattle Seahawks"}, { "Dalvin Cook", "Minnesota Vikings"}, { "Derrick Henry", "Tennessee Titans"}, { "DK Metcalf", "Seattle Seahawks"}, { "Travis Kelce", "Kansas City Chiefs"}, { "Aaron Donald", "Los Angeles Rams"}, { "Tyrann Mathieu", "Kansas City Chiefs"}, { "Justin Tucker", "Baltimore Ravens"}, { "Joe Burrow", "Cincinnati Bengals"} };
 						break;
+					case "NHL":
+						topPlayers = new string[10, 2] { { "Alex Ovechkin", "Washington Capitals"}, { "David Pastrnak", "Boston Bruins"}, { "Patrick Kane", "Chicago Blackhawks"}, { "Nikita Kucherov", "Tampa Bay Lightning"}, { "Artemi Panarin", "New York Rangers"}, { "Tuukka Rask", "Boston Bruins"}, { "Marc-Andre Fleury", "Vegas Golden Knights"}, { "Leon Draisaitl", "Edmonton Oilers"}, { "Andrei Vasilevskiy", "Tampa Bay Lightning"}, { "Carey Price", "Montreal Canadiens"} };
+						break;
 					default :
 						
 						break;
