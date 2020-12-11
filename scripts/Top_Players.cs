@@ -40,7 +40,6 @@ namespace SeleniumProject.Function
 						
 						break;
 				} 
-				count = random.Next(0, 10);
 				
 				// if ran once before, choose a different number
 				if(DataManager.CaptureMap.ContainsKey("COUNT")) {
@@ -48,6 +47,9 @@ namespace SeleniumProject.Function
 					   count = random.Next(0, 10);
 					   log.Info("Random number [" + count + "] equals count [" + DataManager.CaptureMap["COUNT"] + "]. Retrying.");
 					} while (count == Int32.Parse(DataManager.CaptureMap["COUNT"]));	
+				}
+				else {
+					count = random.Next(0, 10);					
 				}
 
 				DataManager.CaptureMap["COUNT"] = count.ToString();
