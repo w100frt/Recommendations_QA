@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			int count = 0;
-			string[,] topPlayers = new string[10, 2]{ "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""};
+		string[,] topPlayers = new string[10, 2]{ {"", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""}, { "", ""} };
 			
 			if (step.Name.Contains("Choose Top Player by Sport")) {
 				// set teams for each conference
