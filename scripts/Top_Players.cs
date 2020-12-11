@@ -45,7 +45,7 @@ namespace SeleniumProject.Function
 				if(DataManager.CaptureMap.ContainsKey("COUNT")) {
 					do {
 					   count = random.Next(0, 10);
-					   log.Info("Random number [" + count + "] equals count [" + DataManager.CaptureMap["COUNT"] + "]. Retrying.");
+					   log.Info("Random number [" + count + "] vs Stored Number [" + DataManager.CaptureMap["COUNT"] + "]");
 					} while (count == Int32.Parse(DataManager.CaptureMap["COUNT"]));	
 				}
 				else {
