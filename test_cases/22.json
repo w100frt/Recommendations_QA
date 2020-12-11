@@ -2,7 +2,7 @@
 	"testCase":"Explore/Search/Entity: NHL Top Players",
 	"env":"dev",
 	"testId":"22",
-	"testRail":"",
+	"testRail":"7817501",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
