@@ -2,7 +2,7 @@
 	"testCase":"NBA: Team Standings by Division",
 	"env":"dev",
 	"testId":"97",
-	"testRail":"",
+	"testRail":"7817137",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
