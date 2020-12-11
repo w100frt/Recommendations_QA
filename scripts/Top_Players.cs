@@ -34,7 +34,7 @@ namespace SeleniumProject.Function
 						topPlayers = new string[10, 2] { { "James Harden", "Houston Rockets"}, { "Giannis Antetokounmpo", "Milwaukee Bucks"}, { "LeBron James", "Los Angeles Lakers"}, { "Luka Doncic", "Dallas Mavericks"}, { "Kawhi Leonard", "LA Clippers"}, { "Trae Young", "Atlanta Hawks"}, { "Anthony Davis", "Los Angeles Lakers"}, { "Anthony Edwards", "Minnesota Timberwolves"}, { "LaMelo Ball", "Charlotte Hornets"}, { "James Wiseman", "Golden State Warriors"} };
 						break;
 					case "NFL":
-						topPlayers = new string[10, 2] { { "Patrick Mahomes II", "Kansas City Chiefs"}, { "Russell Wilson", "Seattle Seahawks"}, { "Aaron Rodgers", "Green Bay Packers"}, { "Dalvin Cook", "Minnesota Vikings"}, { "Derrick Henry", "Tennessee Titans"}, { "DK Metcalf", "Seattle Seahawks"}, { "Travis Kelce", "Kansas City Chiefs"}, { "Aaron Donald", "Los Angeles Rams"}, { "Tyrann Mathieu", "Kansas City Chiefs"}, { "Justin Tucker", "Baltimore Ravens"} };
+						topPlayers = new string[10, 2] { { "Patrick Mahomes II", "Kansas City Chiefs"}, { "Russell Wilson", "Seattle Seahawks"}, { "Dalvin Cook", "Minnesota Vikings"}, { "Derrick Henry", "Tennessee Titans"}, { "DK Metcalf", "Seattle Seahawks"}, { "Travis Kelce", "Kansas City Chiefs"}, { "Aaron Donald", "Los Angeles Rams"}, { "Tyrann Mathieu", "Kansas City Chiefs"}, { "Justin Tucker", "Baltimore Ravens"}, { "Joe Burrow", "Cincinnati Bengals"} };
 						break;
 					default :
 						
