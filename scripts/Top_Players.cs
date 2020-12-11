@@ -50,7 +50,7 @@ namespace SeleniumProject.Function
 					} while (count == Int32.Parse(DataManager.CaptureMap["COUNT"]));	
 				}
 
-				DataManager.CaptureMap["COUNT"] = count;
+				DataManager.CaptureMap["COUNT"] = count.ToString();
 				DataManager.CaptureMap["TOP_PLAYER"] = topPlayers[count, 0];
 				DataManager.CaptureMap["TOP_PLAYER_UP"] = DataManager.CaptureMap["TOP_PLAYER"].ToUpper();;
 				DataManager.CaptureMap["TOP_PLAYER_TEAM"] = topPlayers[count, 1];
