@@ -8,6 +8,7 @@
 		{"name":"Click Check Out Stories Link","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'check-out')]/a"},
 		{"name":"Delete Text from Input","objectType":"script","by":"xpath","objectId":"Backspace"},
 		{"name":"Capture User Entitlements","objectType":"script","by":"xpath","objectId":"Accounts"},
+		{"name":"Choose Top Player by Sport","objectType":"script","by":"xpath","objectId":"Top_Players"},
 		{"name":"Get or Compare Device ID","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Account","objectType":"script","by":"xpath","objectId":"Accounts"},
 		{"name":"Navigate to Home","objectType":"click","by":"xpath","objectId":"//a[@href='/']"},
