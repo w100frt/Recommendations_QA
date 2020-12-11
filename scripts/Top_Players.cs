@@ -41,6 +41,16 @@ namespace SeleniumProject.Function
 						break;
 				} 
 				count = random.Next(0, 10);
+				
+				// if ran once before, choose a different number
+				if(DataManager.CaptureMap.ContainsKey("COUNT")) {
+					do {
+					   count = random.Next(0, 10);
+					   log.Info("Random number [" + count + "] equals count [" + DataManager.CaptureMap["COUNT"] + "]. Retrying.");
+					} while (count == Int32.Parse(DataManager.CaptureMap["COUNT"]));	
+				}
+
+				DataManager.CaptureMap["COUNT"] = count;
 				DataManager.CaptureMap["TOP_PLAYER"] = topPlayers[count, 0];
 				DataManager.CaptureMap["TOP_PLAYER_UP"] = DataManager.CaptureMap["TOP_PLAYER"].ToUpper();;
 				DataManager.CaptureMap["TOP_PLAYER_TEAM"] = topPlayers[count, 1];
