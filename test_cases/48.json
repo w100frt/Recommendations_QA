@@ -14,6 +14,7 @@
 		{"page":"Explore", "name":"Click Entity by Data", "data": "SEC"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "SEC FOOTBALL"},
 		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
+		{"page":"Navigation", "name":"Store Conference by Data", "data":"SEC"},
 		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},

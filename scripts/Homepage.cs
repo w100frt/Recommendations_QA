@@ -63,6 +63,11 @@ namespace SeleniumProject.Function
 				log.Info("Storing " + step.Data + "to capture map as SPORT...");
 			}
 			
+			else if (step.Name.Equals("Store Conference by Data")) {
+				DataManager.CaptureMap["CONF"] = step.Data;
+				log.Info("Storing " + step.Data + "to capture map as CONF...");
+			}
+			
 			else if (step.Name.Equals("Navigate to URL by ENV")) {
 				log.Info("Appending " + step.Data + " to ENV URL: " + TestParameters.GLOBAL_APP_URL);
 				url = TestParameters.GLOBAL_APP_URL + step.Data;
