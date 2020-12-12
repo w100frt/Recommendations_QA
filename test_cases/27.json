@@ -9,7 +9,7 @@
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click Players"},
 		{"page":"Explore", "name":"Click MLB"},
-		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"32"},
+		{"page":"Explore", "name":"Verify Count of Teams or Players", "data":"30"},
 		{"page":"Navigation", "name":"Choose Top Player by Sport", "data":"MLB"},
 		{"page":"Explore", "name":"Click Entity by Data", "data":"#TOP_PLAYER_TEAM"},
 		{"page":"Explore", "name":"Click Entity by Data", "data":"#TOP_PLAYER"},
