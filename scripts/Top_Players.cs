@@ -28,7 +28,7 @@ namespace SeleniumProject.Function
 				// set teams for each conference
 				switch(step.Data) {
 					case "MLB":
-						topPlayers = new string[10, 2] { { "Mike Trout", "Los Angeles Angels"}, { "Fernando Tatis Jr.", "San Diego Padres"}, { "Mookie Betts", "Los Angeles Dodgers"}, { "Eugenio Suarez", "Cincinnati Reds"}, { "Aaron Judge ", "New York Yankees"}, { "Ronald Acuña Jr.", "Atlanta Braves"}, { "Shane Bieber", "Cleveland Indians"}, { "Clayton Kershaw", "Los Angeles Dodgers"}, { "Trevor Bauer", "Cincinnati Reds"}, { "Gerrit Cole", "New York Yankees"} };
+						topPlayers = new string[10, 2] { { "Mike Trout", "Los Angeles Angels"}, { "Fernando Tatis Jr.", "San Diego Padres"}, { "Mookie Betts", "Los Angeles Dodgers"}, { "Eugenio Suarez", "Cincinnati Reds"}, { "Aaron Judge ", "New York Yankees"}, { "Freddie Freeman", "Atlanta Braves"}, { "Shane Bieber", "Cleveland Indians"}, { "Clayton Kershaw", "Los Angeles Dodgers"}, { "Trevor Bauer", "Cincinnati Reds"}, { "Gerrit Cole", "New York Yankees"} };
 						break;
 					case "NBA":
 						topPlayers = new string[10, 2] { { "James Harden", "Houston Rockets"}, { "Giannis Antetokounmpo", "Milwaukee Bucks"}, { "LeBron James", "Los Angeles Lakers"}, { "Luka Doncic", "Dallas Mavericks"}, { "Kawhi Leonard", "LA Clippers"}, { "Trae Young", "Atlanta Hawks"}, { "Anthony Davis", "Los Angeles Lakers"}, { "Anthony Edwards", "Minnesota Timberwolves"}, { "LaMelo Ball", "Charlotte Hornets"}, { "James Wiseman", "Golden State Warriors"} };
