@@ -23,7 +23,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
             List<TestStep> steps = new List<TestStep>();
 			//"BOWLS", "TOP 25", 
-			string[] expectedConf = {"TOP 25", "FBS (I-A)", "AAC", "ACC", "BIG 12", "BIG SKY", "BIG SOUTH", "BIG TEN", "C-USA", "CAA", "IND-FCS", "INDEPENDENTS", "IVY", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "PIONEER", "SEC", "SOUTHERN", "SOUTHLAND", "SUN BELT", "SWAC"};
+			string[] expectedConf = {"BOWLS", "TOP 25", "FBS (I-A)", "AAC", "ACC", "BIG 12", "BIG SKY", "BIG SOUTH", "BIG TEN", "C-USA", "CAA", "IND-FCS", "INDEPENDENTS", "IVY", "MAC", "MEAC", "MVC", "MW", "NEC", "OVC", "PAC-12", "PATRIOT LEAGUE", "PIONEER", "SEC", "SOUTHERN", "SOUTHLAND", "SUN BELT", "SWAC"};
 			
 			string[] regSeason = {"August", "September", "October", "November", "December"};
 			string[] regSeasonWeek = {"WEEK 1", "WEEK 2", "WEEK 3", "WEEK 4", "WEEK 5", "WEEK 6", "WEEK 7", "WEEK 8", "WEEK 9", "WEEK 10", "WEEK 11", "WEEK 12", "WEEK 13", "WEEK 14", "WEEK 15", "WEEK 16"};
