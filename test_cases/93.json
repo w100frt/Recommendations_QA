@@ -25,7 +25,7 @@
 		{"page":"Entity_Odds", "name":"Verify Odds Text Exists for Current Prop"},
 		{"page":"Entity_Odds", "name":"Click See All Futures for Current Prop"},
 		{"page":"Entity_Odds", "name":"Verify Dropdown Title", "data":"SUPER BOWL CHAMPION FUTURES"},
-		{"page":"Entity_Odds", "name":"Verify Number of Table Rows", "data":"28"},
+		{"page":"Entity_Odds", "name":"Verify Number of Table Rows", "data":"24"},
 		{"page":"Entity_Odds", "name":"Click Selected Row Team"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_TEAM_UP"},
 		{"page":"Entity", "name":"Click Odds Tab"},
