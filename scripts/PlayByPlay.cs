@@ -80,7 +80,7 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string stop in stoppage) {
-					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "((//div[contains(@class,'section-header')]//span[contains(@class,'pbp-header')]))["+size+"]", wait));
+					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "((//div[contains(@class,'header')]//span[contains(@class,'pbp-header')]))["+size+"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size++;
