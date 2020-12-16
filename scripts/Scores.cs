@@ -129,24 +129,29 @@ namespace SeleniumProject.Function
 				for (int odds = 1; odds <= 2; odds++) {
 					switch(odds) {
 						case 1 : 
-							title = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text status')]";
+							date = "//a[contains(@class,'score-chip')]["+ data +"]";
+							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text status')]";
 							status = "Spread";
 							break;
 						case 2 : 
-							title = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text ffn')]";
+							date = "//a[contains(@class,'score-chip')]["+ data +"]";
+							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text ffn')]";
 							status = "Total";
 							break;
 						default: 
 							break;
 					}	
-					ele = driver.FindElement("xpath", title);
+					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("innerText");
+					title = driver.FindElement("xpath", date).GetAttribute("href");
 					
 					if(!String.IsNullOrEmpty(data)) {
 						log.Info("Score Chip " + i + " " + status + " equals " + data);
 					}
 					else {
-						err.CreateVerificationError(step, "Odds: Spread", data);
+						title = title.Substring(title.IndexOf("?") + 1);
+						err.CreateVerificationError(step, "Chip: " + title + " Missing Spread", data);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}				
 				}
 			}
