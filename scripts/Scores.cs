@@ -23,10 +23,11 @@ namespace SeleniumProject.Function
 			int scrolls = 20;
 			int months = 0;
 			int year = 0;
-			string title;
-			string status = "";
 			string date = "";
 			string data = "";
+			string odd = "";
+			string status = "";
+			string title;
 			string xpath = "";
 			bool stop = false;
 			bool playoff = false;
@@ -126,6 +127,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Verify Odds Info on Chip")) {
+				data = step.Data;
 				for (int odds = 1; odds <= 2; odds++) {
 					switch(odds) {
 						case 1 : 
@@ -142,15 +144,15 @@ namespace SeleniumProject.Function
 							break;
 					}	
 					ele = driver.FindElement("xpath", xpath);
-					data = ele.GetAttribute("innerText");
+					odd = ele.GetAttribute("innerText");
 					title = driver.FindElement("xpath", date).GetAttribute("href");
+					title = title.Substring(title.IndexOf("?") + 1);
 					
-					if(!String.IsNullOrEmpty(data)) {
-						log.Info("Score Chip " + i + " " + status + " equals " + data);
+					if(!String.IsNullOrEmpty(odd)) {
+						log.Info("Score Chip " + data + " (" + title + ") " + status + " equals " + odd);
 					}
 					else {
-						title = title.Substring(title.IndexOf("?") + 1);
-						err.CreateVerificationError(step, "Chip: " + title + " Missing Spread", data);
+						err.CreateVerificationError(step, "Chip: " + title + " Missing Spread", odd);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}				
 				}
