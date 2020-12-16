@@ -125,6 +125,32 @@ namespace SeleniumProject.Function
 				}
 			}
 			
+			else if (step.Name.Equals("Verify Odds Info on Chip")) {
+				for (int odds = 1; odds <= 2; odds++) {
+					switch(odds) {
+						case 1 : 
+							title = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text status')]";
+							status = "Spread";
+							break;
+						case 2 : 
+							title = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text ffn')]";
+							status = "Total";
+							break;
+						default: 
+							break;
+					}	
+					ele = driver.FindElement("xpath", title);
+					data = ele.GetAttribute("innerText");
+					
+					if(!String.IsNullOrEmpty(data)) {
+						log.Info("Score Chip " + i + " " + status + " equals " + data);
+					}
+					else {
+						err.CreateVerificationError(step, "Odds: Spread", data);
+					}				
+				}
+			}
+			
 			else if (step.Name.Equals("Verify League Title on Top Scores")) {
 				switch(step.Data) {
 					case "Scorestrip" : 
