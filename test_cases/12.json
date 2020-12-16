@@ -15,6 +15,7 @@
 		{"page":"Scores", "name":"Click Top"},
 		{"page":"Scores", "name":"Verify Selected Category", "data": "TOP"},
 		{"page":"Scores", "name":"Verify Displayed Day on Top Scores"},
+		{"page":"Scores", "name":"Verify League Title on Top Scores", "data":"#TOP_DATE"},
 		{"page":"Top_Scores", "name":"Verify Events in Segment", "data":"TOP"},
 		{"page":"Navigation", "name":"Navigate to Scores"},
 		{"page":"Scores", "name":"Scroll Top Scores Page to Yesterday"},

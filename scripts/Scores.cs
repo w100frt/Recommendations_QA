@@ -44,7 +44,9 @@ namespace SeleniumProject.Function
 				else {
 					log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 					step.Data = "TODAY";
-				} 					
+				} 	
+				
+				DataManager.CaptureMap["TOP_DATE"] = step.Data.ToTitleCase;		
 
 				steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
