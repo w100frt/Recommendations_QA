@@ -1,0 +1,12 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"In Season Sports - Scores and Events",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":12},
+		{"testId":16}
+	]
+} 
