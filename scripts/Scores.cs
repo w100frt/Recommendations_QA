@@ -103,7 +103,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Scroll Top Scores Page to Tomorrow")) {
-				title = "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]";
+				title = "//div[contains(@class,'scores-date') or contains(@class,'week-selector')]//*[contains(@class,'sm-14')]";
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
 				
