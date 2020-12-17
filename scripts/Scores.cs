@@ -132,12 +132,12 @@ namespace SeleniumProject.Function
 					switch(odds) {
 						case 1 : 
 							date = "//a[contains(@class,'score-chip')]["+ data +"]";
-							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text status')]";
+							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[contains(@class,'odds')]//span[contains(@class,'secondary-text status')]";
 							status = "Spread";
 							break;
 						case 2 : 
 							date = "//a[contains(@class,'score-chip')]["+ data +"]";
-							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//span[contains(@class,'secondary-text ffn')]";
+							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[contains(@class,'odds')]//span[contains(@class,'secondary-text ffn')]";
 							status = "Total";
 							break;
 						default: 
