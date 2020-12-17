@@ -1,12 +1,11 @@
 ﻿{
 	"project":"fs",
 	"testRailProjectId": 130,
-	"jobName":"NFL Scores/Events and Stats",
+	"jobName":"In Season Sports - Stats",
 	"env":"prod",
 	"browser":"chrome",
 	"testView":"desktop",
 	"testIds": [
-		{"testId":16},
 		{"testId":64}
 	]
 } 
