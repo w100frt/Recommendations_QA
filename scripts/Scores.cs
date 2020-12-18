@@ -71,7 +71,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to YESTERDAY");
@@ -95,7 +95,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -119,7 +119,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
