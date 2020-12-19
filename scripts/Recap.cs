@@ -46,6 +46,8 @@ namespace SeleniumProject.Function
 						break;
 					case "NBA":
 					case "NFL":
+					case "NCAABasketball":
+					case "NCAAFootball":
 						stoppage.Add("SPREAD");
 						stoppage.Add("TOTAL");
 						stoppage.Add("TEAM TO WIN");

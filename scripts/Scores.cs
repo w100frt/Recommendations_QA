@@ -71,7 +71,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to YESTERDAY");
@@ -95,7 +95,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -119,7 +119,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
@@ -152,7 +152,8 @@ namespace SeleniumProject.Function
 						log.Info("Score Chip " + data + " (" + title + ") " + status + " equals " + odd);
 					}
 					else {
-						err.CreateVerificationError(step, "Chip: " + title + " Missing Spread", odd);
+						log.Error("VERIFICATION FAILED: Score Chip " + data + " (" + title + ") " + status + " is blank ");
+						err.CreateVerificationError(step, "Event " + title + " Missing " + status, odd);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}				
 				}

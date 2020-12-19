@@ -106,7 +106,6 @@ namespace SeleniumProject.Function
 						break;
 					case "Soccer" :
 					case "NCAABasketball" :
-
 					status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text.Substring(0,2);
 					try {
 						game = Int32.Parse(status);
@@ -216,7 +215,7 @@ namespace SeleniumProject.Function
 				}
 				
 				foreach (string stop in stoppage) {
-					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "(//span[contains(@class,'pbp-header')])["+size+"]", wait));
+					steps.Add(new TestStep(order, "Verify PBP Header for " + data, stop, "verify_value", "xpath", "((//div[contains(@class,'header')]//span[contains(@class,'pbp-header') and contains(@class,'fs-23')]))["+size+"]", wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
 					size++;
