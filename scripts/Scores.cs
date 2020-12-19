@@ -152,7 +152,8 @@ namespace SeleniumProject.Function
 						log.Info("Score Chip " + data + " (" + title + ") " + status + " equals " + odd);
 					}
 					else {
-						err.CreateVerificationError(step, "Chip: " + title + " Missing Spread", odd);
+						log.Error("VERIFICATION FAILED: Score Chip " + data + " (" + title + ") " + status + " is blank ");
+						err.CreateVerificationError(step, "Event " + title + " Missing " + status, odd);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 					}				
 				}
