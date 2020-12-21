@@ -207,10 +207,26 @@ namespace SeleniumProject.Function
 						}						
 						break;
 					default :
-						stoppage.Add("1ST QUARTER");
-						stoppage.Add("2ND QUARTER");
-						stoppage.Add("3RD QUARTER");
-						stoppage.Add("4TH QUARTER");
+						status = driver.FindElement("xpath","//div[contains(@class,'status-line')]").Text.Substring(0,4);
+						
+						if (status.Contains("4TH") || include) {
+							stoppage.Add("4TH QUARTER");
+							include = true;
+						}
+						if (status.Contains("3RD") || include) {
+							stoppage.Add("3RD QUARTER");
+							include = true;
+						}
+						if (status.Contains("HALF")) {
+							include = true;
+						}
+						if (status.Contains("2ND") || include) {
+							stoppage.Add("2ND QUARTER");
+							include = true;
+						}
+						if (status.Contains("1ST") || include) {
+							stoppage.Add("1ST QUARTER");
+						}
 						break;
 				}
 				
