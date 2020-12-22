@@ -10,6 +10,7 @@
 		{"name":"Click Video Pause Button","objectType":"click","by":"xpath","objectId":"//button[@aria-label='Pause']"},
 		{"name":"Click Video Play Button","objectType":"click","by":"xpath","objectId":"//button[@aria-label='Play']"},
 		{"name":"Click See Full Schedule Link","objectType":"click","by":"xpath","objectId":"//a[contains(@href,'full-schedule')]"},
+		{"name":"Click Sign In With TV Provider","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'mvpd-link')]"},
 		{"name":"Select Additional Channel","objectType":"script","by":"xpath","objectId":"LiveTV"},
 		{"name":"Select Additional Channels","objectType":"script","by":"xpath","objectId":"LiveTV"},
 		{"name":"Verify Top Show Title","objectType":"script","by":"xpath","objectId":"LiveTV"},
