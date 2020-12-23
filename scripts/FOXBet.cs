@@ -18,7 +18,9 @@ namespace SeleniumProject.Function
 			string wait = step.Wait != null ? step.Wait : "";
 			string size = "";
 			string data = "";
+			string win = "";
 			int total = 0;
+			int winner = 0;
 			List<TestStep> steps = new List<TestStep>();
 			VerifyError err = new VerifyError();
 			
@@ -32,7 +34,12 @@ namespace SeleniumProject.Function
 					steps.Clear();
 				}
 				
-				size = "//a[contains(@id,'event-selection') and not(contains(@class,'disabled'))]";
+				winner = driver.FindElements("xpath", "//li[@class='sportOutrightView']").Count;
+				if (winner > 1) {
+					win = "//li[@class='sportOutrightView']["+ winner +"]";
+				}
+				
+				size = win + "//a[contains(@id,'event-selection') and not(contains(@class,'disabled'))]";
 				total = driver.FindElements("xpath", size).Count;
 				
 				data = step.Data;
