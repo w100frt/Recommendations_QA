@@ -35,6 +35,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					err.CreateVerificationError(step, "Number Between 1 and " + upper.ToString(), size.ToString());
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
 			}
 			
