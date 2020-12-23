@@ -12,7 +12,6 @@
 		{"page":"Entity", "name":"Verify Header Text", "data": "NBA"},
 		{"page":"Navigation", "name":"Store Sport by Data", "data": "NBA"},
 		{"page":"Entity", "name":"Click Odds Tab"},
-		{"page":"Entity_Odds", "name":"Verify Top Action Header", "data":"FUTURES"},
 		{"page":"Entity_Odds", "name":"Verify Futures Count", "data":"3"},
 		{"page":"Entity_Odds", "name":"Click Prop Header By Name", "data":"CHAMPION"},
 		{"page":"Entity_Odds", "name":"Verify Number of Current Prop Displayed", "data":"15"},
