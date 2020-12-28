@@ -20,6 +20,7 @@
 		{"name":"Run NFL Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Select Stats Category from Dropdown","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Verify Bold Category","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Verify Stats Table is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'table-stats')]"},
 		{"name":"Verify Stat Leader Name","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[@data-index='1']"},
 		{"name":"Verify Stat Leader Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'table-stats')]//tr[1]/td[contains(@class,'bold')]"},
 		{"name":"Verify Stats Dropdown Value","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'stats-header')]//a[contains(@class,'dropdown-title')]"},
