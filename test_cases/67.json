@@ -1,8 +1,8 @@
 ﻿{
 	"testCase":"Stats: NBA League",
 	"env":"dev",
-	"testId":"66",
-	"testRail":"",
+	"testId":"67",
+	"testRail":"7856931",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

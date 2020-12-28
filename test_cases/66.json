@@ -2,7 +2,7 @@
 	"testCase":"Stats: CBK (D-I) League",
 	"env":"dev",
 	"testId":"66",
-	"testRail":"",
+	"testRail":"7856932",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
