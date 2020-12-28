@@ -320,7 +320,7 @@ namespace SeleniumProject.Function
 					upper = 0;
 				}
 				size = driver.FindElements("xpath", "//*[@class='news' or @class='news pointer-default' or contains(@class,'video-container')]").Count;
-				if (size > lower && size <= upper) {
+				if (size >= lower && size <= upper) {
 					log.Info("Verification Passed. " + size + " is between " + lower + " and " + upper); 
 				}
 				else {
