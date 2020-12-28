@@ -1,0 +1,18 @@
+﻿{
+    "testCase":"Template_NBAPlayerStats",
+    "testId":"t31",
+    "testSteps":[
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NBA"},
+		{"page":"Explore", "name":"Click NBA"},
+		{"page":"Entity", "name":"Click Stats Tab"},
+		{"page":"Entity_Stats", "name":"Capture Stat Name by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Capture Player Stat Leader by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Capture Stat Value by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Capture Stat Abbreviation by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Click Stat Category by Number", "data":"#STATS_NUM"},
+		{"page":"Entity_Stats", "name":"Verify Bold Category", "data":"#STAT_ABBR"},
+		{"page":"Entity_Stats", "name":"Verify Stat Leader Name", "data":"#STAT_LEADER"},
+		{"page":"Entity_Stats", "name":"Verify Stat Leader Value", "data":"#STAT_VALUE"}
+		]
+}

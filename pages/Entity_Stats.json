@@ -16,6 +16,8 @@
 		{"name":"Run CFB Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run MLB Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run MLB Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Run NBA Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
+		{"name":"Run NBA Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run NFL Player Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Run NFL Team Stats Template","objectType":"script","by":"xpath","objectId":"Stats"},
 		{"name":"Select Stats Category from Dropdown","objectType":"script","by":"xpath","objectId":"Stats"},

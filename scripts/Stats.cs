@@ -86,6 +86,9 @@ namespace SeleniumProject.Function
 				else if (step.Name.Contains("NFL")) {
 					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_PlayerStats", wait));
 				}
+				else if (step.Name.Contains("NBA")) {
+					steps.Add(new TestStep(order, "NBA Stats " + step.Data, "", "run_template", "xpath", "NBA_PlayerStats", wait));
+				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
@@ -97,6 +100,9 @@ namespace SeleniumProject.Function
 				}				
 				if (step.Name.Contains("MLB")) {
 					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
+				}
+				else if (step.Name.Contains("NBA")) {
+					steps.Add(new TestStep(order, "NBA Stats " + step.Data, "", "run_template", "xpath", "NBA_TeamStats", wait));
 				}
 				else if (step.Name.Contains("NFL")) {
 					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_TeamStats", wait));
