@@ -1,0 +1,16 @@
+{
+	"testCase": "CFB Super6",
+	"env": "stg",
+  "testId": "1006",
+  "testRail":"7816927",
+  "testRailProjectId": 130,
+	"testView": "desktop",
+	"testSteps": [
+	{"page":"Navigation","name":"Open Browser"},
+	{"page":"Navigation","name":"Navigate to Scores"},
+	{"page":"Scores","name":"Click NCAA FB"},
+	{"page":"Navigation","name":"Store Sport by Data","data":"CFB"},
+	{"page":"Scores","name":"Verify Super6 Scorechips"},
+	{"page":"Scores","name":"Verify Super6 on Event Page"}
+	]
+}

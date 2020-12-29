@@ -38,6 +38,9 @@
 		{"name":"Verify Teams by Sport","objectType":"script","by":"xpath","objectId":"Explore"},
 		{"name":"Verify Team Search by Sport","objectType":"script","by":"xpath","objectId":"Search"},
 		{"name":"Verify Top Search Result Text","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'title fs')]"},
-		{"name":"Verify Top Search Result Subtext","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'subtitle')]"}
+		{"name":"Verify Top Search Result Subtext","objectType":"verify_value","by":"xpath","objectId":"(//div[contains(@class,'entity-list-row-content')])[1]//div//div[contains(@class,'subtitle')]"},
+		{"name":"Click The Herd","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'The Herd')]]"},
+		{"name":"Click First Things First","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'First Things First')]]"},
+		{"name":"Click Undisputed","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'entity-list-row-container')][div[contains(.,'Undisputed')]]"}
 	]
 }
