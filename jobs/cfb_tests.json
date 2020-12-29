@@ -1,0 +1,18 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"CFB Regression Test Suite",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":43},
+		{"testId":44},
+		{"testId":45},
+		{"testId":46},
+		{"testId":47},
+		{"testId":48},
+		{"testId":49},
+		{"testId":50}
+	]
+} 

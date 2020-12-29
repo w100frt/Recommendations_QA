@@ -86,13 +86,13 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Contains("Capture") && step.Name.Contains("Random Conference")) {
-				teamSelector = "//div[contains(@id,'App') and not(contains(@style,'none'))]//a[@class='entity-list-row-container']";
+				teamSelector = "//div[contains(@id,'App') and not(contains(@style,'none'))]//a[contains(@class,'entity-list-row-container') and not(contains(@class,'header'))]";
 				total = driver.FindElements("xpath", teamSelector).Count; 
 				total = random.Next(1, total+1);				
-				steps.Add(new TestStep(order, "Capture Randomized Team", "RANDOM_CONF", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
+				steps.Add(new TestStep(order, "Capture Randomized Conference", "RANDOM_CONF", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
 				// click as well
 				if (step.Name.Contains("Click")) {
-					steps.Add(new TestStep(order, "Click Randomized Team", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));					
+					steps.Add(new TestStep(order, "Click Randomized Conference", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
@@ -106,7 +106,7 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Capture Randomized Team", "RANDOM_TEAM", "capture", "xpath", "(" + teamSelector + ")["+ total +"]", wait));
 				// click as well
 				if (step.Name.Contains("Click")) {
-					steps.Add(new TestStep(order, "Click Randomized Team", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));					
+					steps.Add(new TestStep(order, "Click Randomized Team", "", "click", "xpath", "(" + teamSelector + ")["+ total +"]", wait));	
 				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();

@@ -29,7 +29,12 @@ namespace SeleniumProject.Function
 					DataManager.CaptureMap["GAME"] = step.Data;
 					
 					//get date for scores id
-					date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");
+					if(DataManager.CaptureMap["SPORT"].Equals("TOP")) {
+						date = driver.FindElement("xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]").GetAttribute("innerText");
+					}
+					else {
+						date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");
+					}
 					log.Info("Current segment: " + date);
 					if (date.Equals("YESTERDAY")) {
 						date = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
@@ -85,7 +90,12 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Verify Events in Segment")) {
 				DataManager.CaptureMap["SPORT"] = step.Data;
 				//get date for scores id
-				date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");
+				if(DataManager.CaptureMap["SPORT"].Equals("TOP")) {
+					date = driver.FindElement("xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]").GetAttribute("innerText");
+				}
+				else {
+					date = driver.FindElement("xpath", "//div[contains(@class,'scores-app-root')]/div[not(@style='display: none;')]//div[contains(@class,'week-selector')]//button/span[contains(@class,'title')]").GetAttribute("innerText");					
+				}
 				log.Info("Current segment: " + date);
 				if (date.Equals("YESTERDAY")) {
 					date = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");

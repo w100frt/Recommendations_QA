@@ -6,6 +6,7 @@
 		{"name":"Click Event Scorechip Order Now Button","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'link-button')][span[.='ORDER NOW']]"},
 		{"name":"Click Event Scorechip View Fight Card Button","objectType":"click","by":"xpath","objectId":"//div[@id='192-202012']//a[contains(@class,'link-button')][span[.='view fight card']]"},
 		{"name":"Click Fox Sports Logo","objectType":"click","by":"xpath","objectId":"//a/img[@title='FOXSPORTS']"},
+		{"name":"Click PPV Chip on Live TV","objectType":"click","by":"xpath","objectId":"//a[@href='/live/ppv-digital']"},
 		{"name":"Click Sign In on MLP","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'smartHeroSignIn')]"},
 		{"name":"Click Sign In Button on Accounts Page","objectType":"click","by":"xpath","objectId":"//button[contains(@class,'Submit')]"},
 		{"name":"Click View Order History Button Row 1","objectType":"click","by":"xpath","objectId":"//li[contains(@class,'billingListItem') and not(contains(@class,'Header'))][1]//a/button"},

@@ -77,7 +77,7 @@ namespace SeleniumProject.Function
 			
 			else if (step.Name.Contains("Player Stats Template")) {
 				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				if (step.Name.Contains("CFB")) {
+				if (step.Name.Contains("CFB") || step.Name.Contains("CBK")) {
 					steps.Add(new TestStep(order, "CFB Stats " + step.Data, "", "run_template", "xpath", "CFB_PlayerStats", wait));
 				}
 				if (step.Name.Contains("MLB")) {
@@ -86,17 +86,23 @@ namespace SeleniumProject.Function
 				else if (step.Name.Contains("NFL")) {
 					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_PlayerStats", wait));
 				}
+				else if (step.Name.Contains("NBA")) {
+					steps.Add(new TestStep(order, "NBA Stats " + step.Data, "", "run_template", "xpath", "NBA_PlayerStats", wait));
+				}
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();
 			}
 			
 			else if (step.Name.Contains("Team Stats Template")) {
 				DataManager.CaptureMap["STATS_NUM"] = step.Data;
-				if (step.Name.Contains("CFB")) {
+				if (step.Name.Contains("CFB") || step.Name.Contains("CBK")) {
 					steps.Add(new TestStep(order, "CFB Stats " + step.Data, "", "run_template", "xpath", "CFB_TeamStats", wait));
 				}				
 				if (step.Name.Contains("MLB")) {
 					steps.Add(new TestStep(order, "MLB Stats " + step.Data, "", "run_template", "xpath", "MLB_TeamStats", wait));
+				}
+				else if (step.Name.Contains("NBA")) {
+					steps.Add(new TestStep(order, "NBA Stats " + step.Data, "", "run_template", "xpath", "NBA_TeamStats", wait));
 				}
 				else if (step.Name.Contains("NFL")) {
 					steps.Add(new TestStep(order, "NFL Stats " + step.Data, "", "run_template", "xpath", "NFL_TeamStats", wait));

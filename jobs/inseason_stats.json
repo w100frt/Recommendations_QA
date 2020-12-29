@@ -1,0 +1,13 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"In Season Sports - Stats",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":64},
+		{"testId":66},
+		{"testId":67}
+	]
+} 

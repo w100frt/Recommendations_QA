@@ -1,0 +1,23 @@
+﻿{
+	"testCase":"CBK: Big 12 Odds",
+	"env":"dev",
+	"testId":"137",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Explore"},
+		{"page":"Explore", "name":"Click NCAA BK"},
+		{"page":"Explore", "name":"Click Entity by Data", "data": "Big 12"},
+		{"page":"Explore", "name":"Verify Explore Header Text", "data": "BIG 12"},
+		{"page":"Explore", "name":"Click Entity by Data", "data": "Big 12"},
+		{"page":"Entity", "name":"Verify Header Text", "data": "BIG 12 BASKETBALL"},
+		{"page":"Entity", "name":"Capture Header Text", "data": "SPORT"},
+		{"page":"Navigation", "name":"Store Conference by Data", "data":"Big 12"},
+		{"page":"Entity", "name":"Click Odds Tab"},
+		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
+		{"page":"Entity_Odds", "name":"Verify FOX Bet Logo Displayed"},
+		{"page":"Entity_Odds", "name":"Verify Odds Section Displayed"},
+		{"page":"Entity_Odds", "name":"Verify Top Action by Conference", "data":"#CONF"}
+	]
+}

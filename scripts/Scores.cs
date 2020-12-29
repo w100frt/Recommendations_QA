@@ -23,10 +23,11 @@ namespace SeleniumProject.Function
 			int scrolls = 20;
 			int months = 0;
 			int year = 0;
-			string title;
-			string status = "";
 			string date = "";
 			string data = "";
+			string odd = "";
+			string status = "";
+			string title;
 			string xpath = "";
 			bool stop = false;
 			bool playoff = false;
@@ -40,11 +41,13 @@ namespace SeleniumProject.Function
 				if (et >= 0 && et < 11){
 					log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
 					step.Data = "YESTERDAY";
+					DataManager.CaptureMap["TOP_DATE"] = "Yesterday";
 				}
 				else {
 					log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
 					step.Data = "TODAY";
-				} 					
+					DataManager.CaptureMap["TOP_DATE"] = "Today";
+				} 	
 
 				steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", step.Data, "verify_value", "xpath", "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
@@ -52,7 +55,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Scroll Top Scores Page to Yesterday")) {
-				title = "//div[contains(@class,'scores-header')]//span";
+				title = "//div[contains(@class,'section-subtitle')]";
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
 				
@@ -68,7 +71,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "YESTERDAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to YESTERDAY");
@@ -92,7 +95,7 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TODAY", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to TODAY");
@@ -100,7 +103,7 @@ namespace SeleniumProject.Function
 			}
 			
 			else if (step.Name.Equals("Scroll Top Scores Page to Tomorrow")) {
-				title = "//div[contains(@class,'scores-date')]//div[contains(@class,'sm')]";
+				title = "//div[contains(@class,'scores-date') or contains(@class,'week-selector')]//*[contains(@class,'sm-14')]";
 				ele = driver.FindElement("xpath", title);
 				date = ele.GetAttribute("innerText");
 				
@@ -116,10 +119,43 @@ namespace SeleniumProject.Function
 					steps.Add(new TestStep(order, "Verify Displayed Day on Top Scores", "TOMORROW", "verify_value", "xpath", title, wait));
 					TestRunner.RunTestSteps(driver, null, steps);
 					steps.Clear();
-					DataManager.CaptureMap.Add("SCROLLED","YES");
+					DataManager.CaptureMap["SCROLLED"] = "YES";
 				}
 				else {
 					log.Info("Page defaulted to TOMORROW");
+				}
+			}
+			
+			else if (step.Name.Equals("Verify Odds Info on Chip")) {
+				data = step.Data;
+				for (int odds = 1; odds <= 2; odds++) {
+					switch(odds) {
+						case 1 : 
+							date = "//a[contains(@class,'score-chip')]["+ data +"]";
+							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[contains(@class,'odds')]//span[contains(@class,'secondary-text status')]";
+							status = "Spread";
+							break;
+						case 2 : 
+							date = "//a[contains(@class,'score-chip')]["+ data +"]";
+							xpath = "//a[contains(@class,'score-chip')]["+ data +"]//div[contains(@class,'odds')]//span[contains(@class,'secondary-text ffn')]";
+							status = "Total";
+							break;
+						default: 
+							break;
+					}	
+					ele = driver.FindElement("xpath", xpath);
+					odd = ele.GetAttribute("innerText");
+					title = driver.FindElement("xpath", date).GetAttribute("href");
+					title = title.Substring(title.IndexOf("?") + 1);
+					
+					if(!String.IsNullOrEmpty(odd)) {
+						log.Info("Score Chip " + data + " (" + title + ") " + status + " equals " + odd);
+					}
+					else {
+						log.Error("VERIFICATION FAILED: Score Chip " + data + " (" + title + ") " + status + " is blank ");
+						err.CreateVerificationError(step, "Event " + title + " Missing " + status, odd);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					}				
 				}
 			}
 			

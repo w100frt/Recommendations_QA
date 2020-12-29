@@ -8,6 +8,7 @@
 		{"name":"Click Prop Header By Name","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Store Team's Conference and Division","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
 		{"name":"Verify Dropdown Title","objectType":"verify_value","by":"xpath","objectId":"//a[contains(@class,'dropdown')]/h1"},
+		{"name":"Verify Entity Name on Futures Page","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'entity-name')]"},
 		{"name":"Verify Event Exists","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'event')]"},
 		{"name":"Verify Event Odds Details by Number","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify FOX Bet Logo Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//span[@alt='fox-bet']"},
@@ -19,6 +20,7 @@
 		{"name":"Verify Odds Section Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//span[@alt='fox-bet']"},
 		{"name":"Verify Props Exist","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains(@class,'prop-bets-comp-container')]"},
 		{"name":"Verify Props Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][2]"},
+		{"name":"Verify Top Action by Conference","objectType":"script","by":"xpath","objectId":"Conference_Odds"},
 		{"name":"Verify Top Action Header","objectType":"verify_value","by":"xpath","objectId":"//div[contains(@class,'odds-container')]/div[contains(@class,'btm')][1]"},
 		{"name":"Verify Team Text Exists for Current Prop","objectType":"script","by":"xpath","objectId":"Odds"},
 		{"name":"Verify Odds Text Exists for Current Prop","objectType":"script","by":"xpath","objectId":"Odds"}

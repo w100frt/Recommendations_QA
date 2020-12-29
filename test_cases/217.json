@@ -1,0 +1,20 @@
+﻿{
+	"testCase":"Verify Playback on Event (from Live TV)",
+	"env":"dev",
+	"testId":"217",
+	"testRail":"7810580",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"Navigation","name":"Run Template", "data":"FSCOM_PPVSignIn"},
+		{"page":"FSCOM_AccountInfo", "name":"Click Sign In Button"},
+		{"page":"Navigation", "name":"Navigate to Account"},
+		{"page":"Navigation", "name":"Get or Compare Device ID"},
+		{"page":"FSCOM_AccountInfo", "name":"Verify Account Name", "data":"PPVFOXSPORTS@GMAIL.COM"},
+		{"page":"Navigation", "name":"Navigate to Live TV"},
+		{"page":"PPV","name":"Click PPV Chip on Live TV"},
+		{"page":"PPV", "name":"Verify Event Header Title","data":"SPENCE JR VS GARCIA"},
+		{"page":"LiveTV", "name":"Verify Video is Playing"}
+	]
+}

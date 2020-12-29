@@ -1,0 +1,16 @@
+﻿{
+	"project":"fs",
+	"testRailProjectId": 130,
+	"jobName":"CBK Regression Test Suite",
+	"env":"prod",
+	"browser":"chrome",
+	"testView":"desktop",
+	"testIds": [
+		{"testId":120},
+		{"testId":135},
+		{"testId":136},
+		{"testId":137},
+		{"testId":138},
+		{"testId":139}
+	]
+} 

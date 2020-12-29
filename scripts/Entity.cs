@@ -31,6 +31,8 @@ namespace SeleniumProject.Function
 			int count = 0;
 			int total = 0;
 			int size;
+			int upper = 0;
+			int lower = 0;
 			IWebElement element;
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			
@@ -306,6 +308,26 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Click Open Standings", "", "click", "xpath", xpath, wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
+			}
+			
+			else if (step.Name.Equals("Verify Number of Stories & Videos")) {
+				try {
+					upper = Int32.Parse(step.Data);
+					lower = upper - 2;
+				}
+				catch (Exception e){
+					log.Error("Expected data to be a numeral. Setting data to 0.");
+					upper = 0;
+				}
+				size = driver.FindElements("xpath", "//*[@class='news' or @class='news pointer-default' or contains(@class,'video-container')]").Count;
+				if (size >= lower && size <= upper) {
+					log.Info("Verification Passed. " + size + " is between " + lower + " and " + upper); 
+				}
+				else {
+					log.Info("Verification FAILED. " + size + " is not between " + lower + " and " + upper); 
+					err.CreateVerificationError(step, "Number Between " + lower + " and " + upper.ToString(), size.ToString());
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+				}	
 			}
 			
 			else {
