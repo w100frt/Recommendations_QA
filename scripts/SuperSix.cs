@@ -28,9 +28,9 @@ namespace SeleniumProject.Function
             List<TestStep> steps = new List<TestStep>();
             VerifyError err = new VerifyError();
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
-            var path = Path.Combine(Directory.GetCurrentDirectory());
-            path = Path.Combine(path, "SeleniumProject/Postman_Collection/report.json");
-            //var path = path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\report.json")
+            //var path = Path.Combine(Directory.GetCurrentDirectory());
+            //path = Path.Combine(path, "SeleniumProject/Postman_Collection/report.json");
+            var path = path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\report.json");
             log.Info("Current Directory: " + path);
             var list = JObject.Parse(File.ReadAllText(path));
             DateTime dt = new DateTime();
@@ -98,6 +98,11 @@ namespace SeleniumProject.Function
                                 steps.Add(new TestStep(order, "Open Conference Dropdown", "", "click", "xpath", "//a[@class='dropdown-menu-title']", wait));
                                 steps.Add(new TestStep(order, "Verify Dropdown is Displayed", "", "verify_displayed", "xpath", "//div[contains(@class,'scores-home-container')]//div[contains(@class,'dropdown-root active')]//ul", wait));
                                 steps.Add(new TestStep(order, "Click on FBS (I - A)", "", "click", "xpath", "//div[@class='sub-container dropdown-items-container']//a[contains(text(), 'FBS (I-A)')]", wait));
+                            }
+                            else if (DataManager.CaptureMap["SPORT"] == "NBA")
+                            {
+                                steps.Add(new TestStep(order, "Click Scores", "", "click", "xpath", "//a[@href='/scores']", wait));
+                                steps.Add(new TestStep(order, "Click NFL", "", "click", "xpath", "//div[contains(@class,'desktop')]//a[not(contains(@class,'more-button')) and contains(.,'NBA')]", wait));
                             }
                             TestRunner.RunTestSteps(driver, null, steps);
                             steps.Clear();
