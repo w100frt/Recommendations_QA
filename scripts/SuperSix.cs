@@ -205,23 +205,25 @@ namespace SeleniumProject.Function
                     }
                 }
             }
-            if (idInList == super6Count)
+            if (step.Name.Equals("Verify Super6 Scorechips"))
             {
-                if (super6Count == 0)
+                if (idInList == super6Count)
                 {
-                    log.Info("No super6 id coming from SD");
+                    if (super6Count == 0)
+                    {
+                        log.Info("No super6 id coming from SD");
+                    }
+                    else
+                    {
+                        log.Info("Found all super6 events for this week");
+                    }
+
                 }
                 else
                 {
-                    log.Info("Found all super6 events for this week");
+                    log.Error("Missing super6 logo on " + (idInList - super6Count).ToString() + " event(s)");
                 }
-               
             }
-            else
-            {
-                log.Error("Missing super6 logo on " + (idInList - super6Count).ToString() + " event(s)");
-            }
-
         }
     }
 }
