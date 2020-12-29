@@ -61,6 +61,7 @@ namespace SeleniumProject.Function
                             elements = driver.FindElements("xpath", "//a[contains(@href,'id=" + id + "')]//div[@class='super-six-logo']");
                             if (elements.Count > 0)
                             {
+                                js.ExecuteScript("arguments[0].scrollIntoView(false)", driver.FindElement("xpath", "//a[contains(@href,'id=" + id + "')]"));
                                 log.Info("Found scorechip with super6 logo");
                                 super6Count++;
                             }
