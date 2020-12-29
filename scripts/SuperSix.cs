@@ -28,9 +28,9 @@ namespace SeleniumProject.Function
             List<TestStep> steps = new List<TestStep>();
             VerifyError err = new VerifyError();
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
-            //var path = Path.Combine(Directory.GetCurrentDirectory());
-            //path = Path.Combine(path, "SeleniumProject/Postman_Collection/report.json");
-            var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\report.json");
+            var path = Path.Combine(Directory.GetCurrentDirectory());
+            path = Path.Combine(path, "SeleniumProject/Postman_Collection/report.json");
+            //var path = Path.Combine(@"C:\Users\truon\source\repos\New_Selenium.hao\SeleniumProject\Postman_Collection\report.json");
             log.Info("Current Directory: " + path);
             var list = JObject.Parse(File.ReadAllText(path));
             DateTime dt = new DateTime();
