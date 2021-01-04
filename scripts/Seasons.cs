@@ -56,8 +56,8 @@ namespace SeleniumProject.Function
 						end = new DateTime(2021, 08, 01);
 						break;
 					case "NHL" : 
-						start = new DateTime(2019, 09, 15);
-						end = new DateTime(2020, 09, 28);
+						start = new DateTime(2021, 01, 12);
+						end = new DateTime(2021, 05, 30);
 						break;
 					case "NFL" :
 						start = new DateTime(2020, 08, 01);

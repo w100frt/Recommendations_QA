@@ -240,8 +240,8 @@ namespace SeleniumProject.Function
 						sport = playoffs + count + games + sport;
 						break;
 					case "NHL":
-						DateTime NHL_season = new DateTime(2021, 1, 01);
-						DateTime NHL_playoff = new DateTime(2021, 5, 30);
+						DateTime NHL_season = new DateTime(2021, 01, 12);
+						DateTime NHL_playoff = new DateTime(2021, 05, 30);
 						if (DateTime.Now > NHL_season) {
 							sport = driver.FindElement("xpath","//div[contains(@class,'date-picker-container') and @style]//span[@class='title-text']").Text;
 						}
