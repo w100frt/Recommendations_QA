@@ -101,7 +101,7 @@ namespace SeleniumProject.Function
 					day = "NFL_Playoffs";
 					DataManager.CaptureMap["NFL_WEEK"] = "c";
 				}
-				if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
+				else if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
 					day = "NFL_Thursday";
 				}
 				else if (day.Equals("Friday") || day.Equals("Saturday") || day.Equals("Sunday")) {
