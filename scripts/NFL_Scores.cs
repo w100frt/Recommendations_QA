@@ -105,21 +105,24 @@ namespace SeleniumProject.Function
 					else if (today >= DateTime.Parse("12/29/2020 11:00:01") && today < DateTime.Parse("01/05/2021 11:00:00")) {
 						step.Data = "WEEK 17";
 					}
-					
-					/*
-					int now = time.Hours;
-					int et = now - 4;
-					if (et >= 0 && et < 11){
-						log.Info("Current Eastern Time hour is " + et + ". Default to Yesterday.");
-						step.Data = "YESTERDAY";
+					else if (today >= DateTime.Parse("01/05/2021 11:00:01") && today < DateTime.Parse("01/11/2021 11:00:00")) {
+						step.Data = "WILD CARD";
+					}
+					else if (today >= DateTime.Parse("01/11/2021 11:00:01") && today < DateTime.Parse("01/18/2021 11:00:00")) {
+						step.Data = "DIVISIONAL CHAMPIONSHIP";
+					}
+					else if (today >= DateTime.Parse("01/18/2021 11:00:01") && today < DateTime.Parse("01/25/2021 11:00:00")) {
+						step.Data = "CONFERENCE CHAMPIONSHIP";
+					}
+					else if (today >= DateTime.Parse("01/25/2021 11:00:01") && today < DateTime.Parse("02/01/2021 11:00:00")) {
+						step.Data = "PRO BOWL";
+					}
+					else if (today >= DateTime.Parse("01/25/2021 11:00:01") && today < DateTime.Parse("02/01/2021 11:00:00")) {
+						step.Data = "PRO BOWL";
 					}
 					else {
-						log.Info("Current Eastern Time hour is " + et + ". Default to Today.");
-						step.Data = "TODAY";
-					}*/				
-				}
-				else {
-					step.Data = "SUPER BOWL";
+						step.Data = "SUPER BOWL";
+					}		
 				}
 
 				steps.Add(new TestStep(order, "Verify Displayed Week on NFL", step.Data, "verify_value", "xpath", "//h2[contains(@class,'section-title fs-30 desktop-show') and not(@style='display: none;')]", wait));
