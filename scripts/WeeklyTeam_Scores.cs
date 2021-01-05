@@ -97,6 +97,10 @@ namespace SeleniumProject.Function
 				DataManager.CaptureMap["NFL_WEEK"] = date;
 				day = DateTime.Now.DayOfWeek.ToString();
 
+				if (date.Equals("CARD")) {
+					day = "NFL_Playoffs";
+					DataManager.CaptureMap["NFL_WEEK"] = "c";
+				}
 				if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
 					day = "NFL_Thursday";
 				}
