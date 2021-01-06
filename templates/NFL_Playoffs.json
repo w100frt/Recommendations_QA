@@ -1,0 +1,8 @@
+﻿{
+    "testCase":"Template_TeamSport_PlayoffScores",
+    "testId":"t35",
+    "testSteps":[
+		{"page":"NFL_Scores", "name":"Verify Events by Day", "data":"sat"},
+		{"page":"NFL_Scores", "name":"Verify Events by Day", "data":"sun"}
+    ]
+}

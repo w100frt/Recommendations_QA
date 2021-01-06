@@ -29,6 +29,7 @@ namespace SeleniumProject.Function
 			string date = "";
 			string xpath = "";
 			bool over = false;
+			bool playoff = false;
 
 			if (step.Name.Equals("Verify Event")) {
 				if (DataManager.CaptureMap.ContainsKey("IN_SEASON")) {
@@ -97,7 +98,11 @@ namespace SeleniumProject.Function
 				DataManager.CaptureMap["NFL_WEEK"] = date;
 				day = DateTime.Now.DayOfWeek.ToString();
 
-				if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
+				if (date.Equals("CARD")) {
+					day = "NFL_Playoffs";
+					DataManager.CaptureMap["NFL_WEEK"] = "c";
+				}
+				else if (day.Equals("Tuesday") || day.Equals("Wednesday") || day.Equals("Thursday")) {
 					day = "NFL_Thursday";
 				}
 				else if (day.Equals("Friday") || day.Equals("Saturday") || day.Equals("Sunday")) {
@@ -169,10 +174,21 @@ namespace SeleniumProject.Function
 			else if(step.Name.Equals("Capture Team Info from Chip")) {
 				data = step.Data;
 				xpath = "//div[contains(@id,'w" + DataManager.CaptureMap["NFL_WEEK"] + DataManager.CaptureMap["NFL_DAY"] + "')]";
-				steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
-				steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));
+				
+				if (driver.FindElements("xpath","//a[contains(@class,'score-chip-playoff')]").Count > 0) {
+					playoff = true;
+				}
+				
+				if (playoff) {
+					steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip-playoff')]["+ data +"]//div[@class='team-texts']//span[contains(@class,'team-name-1')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip-playoff')]["+ data +"]//div[@class='team-texts']//span[contains(@class,'team-name-2')])[1]", wait));
+				}
+				else {
+					steps.Add(new TestStep(order, "Capture Away Team Abbreviation", "AWAY_TEAM_ABB", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Away Team", "AWAY_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[1]", wait));
+					steps.Add(new TestStep(order, "Capture Home Team Abbreviation", "HOME_TEAM_ABB", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,'abbreviation')]//span[contains(@class,'text')])[2]", wait));
+					steps.Add(new TestStep(order, "Capture Home Team", "HOME_TEAM", "capture", "xpath", "(" + xpath + "//a[contains(@class,'score-chip')]["+ data +"]//div[@class='teams']//div[contains(@class,' team')]//span[contains(@class,'text')])[2]", wait));					
+				}
 				
 				// capture scores for event
 				if(DataManager.CaptureMap["EVENT_STATUS"].Equals("LIVE") || DataManager.CaptureMap["EVENT_STATUS"].Equals("FINAL")) {
