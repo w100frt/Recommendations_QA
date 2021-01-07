@@ -13,7 +13,6 @@
 		{"page":"Explore", "name":"Capture and Click Random Team"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_TEAM_UP"},
 		{"page":"Entity_Odds", "name":"Store Team's Conference and Division", "data": "#RANDOM_TEAM"},
-		{"page":"Entity", "name":"Verify Header Divider"},
 		{"page":"Entity", "name":"Verify Add or Remove Favorite Button Text", "data": "ADD TO FAVORITES"},
 		{"page":"Entity", "name":"Click Add or Remove Favorite Button"},
 		{"page":"Favorites", "name":"Verify Number of Favorites", "data":"1"},
