@@ -9,7 +9,7 @@
 		{"page":"Navigation", "name":"Click Explore"},
 		{"page":"Explore", "name":"Click NFL"},
 		{"page":"Navigation", "name":"Store Sport by Data", "data": "NFL"},
-		{"page":"Explore", "name":"Capture and Click Random Team"},
+		{"page":"NFL_Scores", "name":"Capture and Click Playoff Team"},
 		{"page":"Entity", "name":"Verify Header Text", "data": "#RANDOM_TEAM_UP"},
 		{"page":"Entity_Odds", "name":"Store Team's Conference and Division", "data": "#RANDOM_TEAM"},
 		{"page":"Entity", "name":"Click Odds Tab"},
@@ -34,14 +34,6 @@
 		{"page":"Entity_Odds", "name":"Verify Team Text Exists for Current Prop"},
 		{"page":"Entity_Odds", "name":"Verify Odds Text Exists for Current Prop"},
 		{"page":"Entity_Odds", "name":"Click See All Futures for Current Prop"},
-		{"page":"Entity_Odds", "name":"Click Back Arrow"},
-		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"},
-		{"page":"Entity_Odds", "name":"Click Prop Header By Name", "data":"#TEAM_DIV"},
-		{"page":"Entity_Odds", "name":"Verify Number of Current Prop Displayed", "data":"1"},
-		{"page":"Entity_Odds", "name":"Verify Team Text Exists for Current Prop"},
-		{"page":"Entity_Odds", "name":"Verify Odds Text Exists for Current Prop"},
-		{"page":"Entity_Odds", "name":"Click See All Futures for Current Prop"},
-		{"page":"Entity_Odds", "name":"Verify Entity Name on Futures Page", "data":"#RANDOM_TEAM_UP"},
 		{"page":"Entity_Odds", "name":"Click Back Arrow"},
 		{"page":"Entity", "name":"Verify Selected Tab Text", "data":"ODDS"}
 	]

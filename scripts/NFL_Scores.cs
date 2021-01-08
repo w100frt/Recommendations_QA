@@ -26,9 +26,12 @@ namespace SeleniumProject.Function
 			string title;
 			string date;
 			string data = "";
+			string teamSelector = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
+			
+			string[] playoffTeams = {"Kansas City Chiefs", "Buffalo Bills", "Pittsburgh Steelers", "Tennessee Titans", "Baltimore Ravens", "Cleveland Browns", "Indianapolis Colts", "Green Bay Packers", "New Orleans Saints", "Seattle Seahawks", "Washington Football Team", "Tampa Bay Buccaneers", "Los Angeles Rams", "Chicago Bears"};
 
 			string[] preSeason = {"August"};
 			string[] preSeasonWeeks = {"HALL OF FAME GAME", "PRE WEEK 1", "PRE WEEK 2", "PRE WEEK 3", "PRE WEEK 4"};
@@ -47,6 +50,20 @@ namespace SeleniumProject.Function
 				steps.Add(new TestStep(order, "Select Week", "", "click", "xpath", "(" + title + ")["+ week +"]", wait));
 				TestRunner.RunTestSteps(driver, null, steps);
 				steps.Clear();	
+			}
+
+			else if (step.Name.Contains("Capture") && step.Name.Contains("Playoff Team")) {
+				teamSelector = "//div[contains(@id,'App') and not(contains(@style,'none'))]//a[@class='entity-list-row-container']";
+				total = playoffTeams.Length; 
+				total = random.Next(1, total);				
+				steps.Add(new TestStep(order, "Capture Randomized Team", "RANDOM_TEAM", "capture", "xpath", teamSelector + "[div[contains(.,'" + playoffTeams[total - 1] + "')]]", wait));
+				// click as well
+				if (step.Name.Contains("Click")) {
+					steps.Add(new TestStep(order, "Click Randomized Team", "", "click", "xpath", teamSelector + "[div[contains(.,'" + playoffTeams[total - 1] + "')]]", wait));	
+				}
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+				DataManager.CaptureMap["RANDOM_TEAM_UP"] = DataManager.CaptureMap["RANDOM_TEAM"].ToUpper();
 			}
 			
 			else if (step.Name.Equals("Verify NFL Week")) {

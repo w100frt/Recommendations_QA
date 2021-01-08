@@ -1,6 +1,7 @@
 ﻿{
 	"page":"NFL_Scores",
 	"testDefinitions":[
+		{"name":"Capture and Click Playoff Team","objectType":"script","by":"xpath","objectId":"NFL_Scores"},
 		{"name":"Capture Team Info from Chip","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},		
 		{"name":"Click Scorechip By Number","objectType":"script","by":"xpath","objectId":"WeeklyTeam_Scores"},		
 		{"name":"Scroll Back One Day","objectType":"script","by":"xpath","objectId":"NBA_Scores"},		
