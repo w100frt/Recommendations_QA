@@ -26,6 +26,7 @@ namespace SeleniumProject.Function
 			string title;
 			string date;
 			string data = "";
+			string teamSelector = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			Random random = new Random();
