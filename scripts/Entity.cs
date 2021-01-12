@@ -219,7 +219,7 @@ namespace SeleniumProject.Function
 							sport = sport.Replace("PRE", "PRESEASON");
 						}	
 						if (DateTime.Now > NFL_playoff) {
-							playoffs = " PLAYOFFS";
+							playoffs = "S";
 						}
 						sport = sport + playoffs + ": " + player;
 						break;
