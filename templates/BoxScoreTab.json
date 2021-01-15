@@ -1,7 +1,0 @@
-﻿{
-    "testCase":"Template_BoxScoreTab",
-    "testId":"t17",
-    "testSteps":[
-		{"page":"EventBoxScore", "name":"Verify Box Score Tabs By Sport", "data":"1"}
-    ]
-}

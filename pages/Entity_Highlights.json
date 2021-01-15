@@ -1,7 +1,0 @@
-﻿{
-	"page":"Entity_Highlights",
-	"testDefinitions":[
-		{"name":"Verify Number of Videos","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'highlight-feed-container')]/div"},
-		{"name":"Verify Video is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='video-player-container' or @class='yt-container']"}
-	]
-}

@@ -1,9 +1,0 @@
-﻿{
-	"page":"Stories_Carousel",
-	"testDefinitions":[
-		{"name":"Click Arrow Forward","objectType":"click","by":"xpath","objectId":"//button[@class='carousel-button-next image-button']"},
-		{"name":"Click Arrow Forward to End of Carousel","objectType":"script","by":"xpath","objectId":"Stories"},
-		{"name":"Click Arrow Backward","objectType":"click","by":"xpath","objectId":"//button[@class='carousel-button-previous image-button']"},
-		{"name":"Click View All Stories","objectType":"click","by":"xpath","objectId":"//a[span[.='View All Stories']]"}
-	]
-}

@@ -1,22 +1,12 @@
 ﻿{
-	"testCase":"MVPD: Optimum Sign In",
+	"testCase":"Create Model",
 	"env":"dev",
 	"testId":"1",
-	"testRail":"6174098",
+	//"testRail":"6174098",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Click Sign In"},
-		{"page":"Navigation", "name":"Get or Compare Device ID"},
-		{"page":"FSCOM_AccountInfo", "name":"Click Sign In With TV Provider"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Logos Count", "data":"8"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Count", "data":"575"},
-		{"page":"MVPD_AccountInfo", "name":"Enter Provider in Search", "data":"Optimum"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Name", "data":"Optimum"},
-		{"page":"MVPD_AccountInfo", "name":"Click Cancel Button"},
-		{"page":"Navigation","name":"Run Template", "data":"Optimum_Provider_SignIn"},
-		{"page":"Navigation", "name":"Click Sign In"},
-		{"page":"MVPD_AccountInfo", "name":"Verify Provider Signed In"},
-		{"page":"Navigation", "name":"Get or Compare Device ID"}
+		{"page":"Navigation", "name":"Click Model"},
+		{"page":"Navigation","name":"Run Template", "data":"Create Model"}
 	]
 }

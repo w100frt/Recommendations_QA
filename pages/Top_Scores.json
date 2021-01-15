@@ -1,9 +1,0 @@
-﻿{
-	"page":"Top_Scores",
-	"testDefinitions":[
-		{"name":"Scroll Back One Day","objectType":"script","by":"xpath","objectId":"NBA_Scores"},		
-		{"name":"Scroll Forward One Day","objectType":"script","by":"xpath","objectId":"NBA_Scores"},
-		{"name":"Verify Event","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"},
-		{"name":"Verify Events in Segment","objectType":"script","by":"xpath","objectId":"DailyTeam_Scores"}
-	]
-}

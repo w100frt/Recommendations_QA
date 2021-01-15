@@ -1,7 +1,0 @@
-﻿{
-    "testCase":"Template_EntityTeamScores",
-    "testId":"t26",
-    "testSteps":[
-		{"page":"Entity_Scores", "name":"Verify Scorechip is Displayed"}
-		]
-}
