@@ -9,7 +9,7 @@
 		{"name":"Training Key","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[3]/div[1]/span"},
 		{"name":"Training Key Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[3]/div[2]/select"},
 		{"name":"Create","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[1]"}, 
-		{"name":"Validate","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[2]"}, 
+		{"name":"Validate","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[2]"}
 		
 	]
 }
