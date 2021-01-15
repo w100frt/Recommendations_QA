@@ -1,6 +1,0 @@
-﻿{
-"page":"nfl_schedule",
-"testDefinitions":[
-    {"name":"Verify Conference Value","objectType":"verify_value","by":"xpath","objectId":"(//th[@class='wisbb_header wisbb_tableTitle'])[{$value}]"}
-    ]
-}
