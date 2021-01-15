@@ -1,9 +1,0 @@
-﻿{
-	"page":"Scorestrip",
-	"testDefinitions":[
-		{"name":"Capture Team Info from Scorestrip","objectType":"script","by":"xpath","objectId":"Scorestrip"},
-		{"name":"Click All Scores Button","objectType":"click","by":"xpath","objectId":"//a[contains(@class,'button') and .='ALL SCORES']"},
-		{"name":"Verify Scorestrip is Displayed","objectType":"verify_displayed","by":"xpath","objectId":"//div[@class='scores homepage-module carousel-content']"},
-		{"name":"Verify Scorechip Count","objectType":"script","by":"xpath","objectId":"Scorestrip"}
-	]
-}

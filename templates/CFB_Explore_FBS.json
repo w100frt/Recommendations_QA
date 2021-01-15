@@ -1,9 +1,0 @@
-﻿{
-    "testCase":"Template_CFB_Explore_League",
-    "testId":"t31",
-    "testSteps":[
-		{"page":"Navigation", "name":"Click Explore"},
-		{"page":"Explore", "name":"Click NCAA FB"},
-		{"page":"Explore", "name":"Click NCAA FB"}
-		]
-}

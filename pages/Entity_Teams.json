@@ -1,6 +1,0 @@
-﻿{
-	"page":"Entity_Teams",
-	"testDefinitions":[
-		{"name":"Verify Count of Teams","objectType":"script","by":"xpath","objectId":"Entity"}
-	]
-}

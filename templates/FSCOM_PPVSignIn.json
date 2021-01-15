@@ -1,9 +1,0 @@
-﻿{
-    "testCase":"Template_FSCOM_PPVSignIn",
-    "testId":"t2",
-    "testSteps":[
-		{"page":"Navigation", "name":"Click Sign In"},
-		{"page":"FSCOM_AccountInfo", "name":"Enter Email", "data":"ppvfoxsports@gmail.com"},
-        {"page":"FSCOM_AccountInfo", "name":"Enter Password", "data":"ppvtesting"}
-    ]
-}

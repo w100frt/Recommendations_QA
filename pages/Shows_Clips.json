@@ -1,6 +1,0 @@
-{
-	"page":"Shows_Clips",
-	"testDefinitions":[
-	{"name":"Verify Number of Clips","objectType":"verify_count","by":"xpath","objectId":"//div[contains(@class,'feed-video-container')]"}
-	]
-}

@@ -1,0 +1,15 @@
+﻿{
+	"page":"Create_Model_Config",
+	"testDefinitions":[
+		{"name":"Create Model Configuration","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h2"},
+		{"name":"Model Configuration Name","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[1]/span"},
+		{"name":"Model Configuration Name Input","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[2]/input"},
+		{"name":"Algorithm Specification","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[1]/span"},
+		{"name":"Algorithm Specification Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[2]/select"},
+		{"name":"Training Key","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[3]/div[1]/span"},
+		{"name":"Training Key Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[3]/div[2]/select"},
+		{"name":"Create","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[1]"}, 
+		{"name":"Validate","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[2]"}, 
+		
+	]
+}
