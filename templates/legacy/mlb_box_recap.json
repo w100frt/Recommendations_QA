@@ -1,9 +1,0 @@
-﻿{
-    "testCase":"template_mlb_box_recap",
-    "testId":"template7",
-    "testSteps":[
-        {"page":"mlb_box", "name":"Verify Title"},
-        {"page":"mlb_box", "name":"Verify Source"},
-        {"page":"mlb_box", "name":"Verify Date"}
-    ]
-}
