@@ -1,5 +1,5 @@
 ﻿{
-	"page":"Models_Config",
+	"page":"Model_Config",
 	"testDefinitions":[
 		{"name":"Model Configurations","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h1"},
 		{"name":"Create","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[2]/a[1]"},
