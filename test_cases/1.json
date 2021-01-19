@@ -7,6 +7,7 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Model"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
 		{"page":"Navigation","name":"Run Template", "data":"Create_Model"}
 	]
 }

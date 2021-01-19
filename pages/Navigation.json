@@ -2,7 +2,6 @@
 	"page":"Navigation",
 	"testDefinitions":[
 		{"name":"Capture Current URL","objectType":"script","by":"xpath","objectId":"Accounts"},
-		{"name":"Click Model","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[2]/a"},
 		{"name":"Navigate to URL","objectType":"navigate_to"},
 		{"name":"Navigate to URL by ENV","objectType":"script","by":"xpath","objectId":"Homepage"},
 		{"name":"Open Browser","objectType":"new_browser"},
@@ -11,6 +10,23 @@
 		{"name":"Switch To Default Content","objectType":"script","by": "xpath","objectId":"PPV"},
 		{"name":"Switch Frame by ID","objectType":"switch_frame","by": "id"},
 		{"name":"Verify URL Redirect","objectType":"script","by": "xpath", "objectId":"Accounts"},
-		{"name":"Verify URL Contains String","objectType":"script","by": "xpath", "objectId":"Homepage"}
+		{"name":"Verify URL Contains String","objectType":"script","by": "xpath", "objectId":"Homepage"},
+		{"name":"Verify Home Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[1]/a"},
+		{"name":"Click Home Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[1]/a"},
+		{"name":"Verify Model Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[2]/a"},
+		{"name":"Click Model Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[2]/a"},
+		{"name":"Verify Training Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[3]/a"},
+		{"name":"Click Training Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[3]/a"},
+		{"name":"Verify Prediction Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[4]/a"},
+		{"name":"Click Prediction Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[4]/a"},
+		{"name":"Verify Specifications Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[5]/a"},
+		{"name":"Click Specifications Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[5]/a"},
+		{"name":"Verify Mock Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[6]/a"},
+		{"name":"Click Mock Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[6]/a"},
+		{"name":"Verify Privacy Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[7]/a"},
+		{"name":"Click Privacy Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[7]/a"},
+		{"name":"Verify Privacy Footer Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/footer/div/text()"},
+		{"name":"Click Privacy Footer","objectType":"click","by":"xpath","objectId":"/html/body/footer/div/a"}
+		
 	]
 }
