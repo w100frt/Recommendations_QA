@@ -3,12 +3,12 @@
     "testId":"t3",
     "testSteps":[
 		{"page":"Training_Config", "name":"Create"},
-        {"page":"Create_Model_Config", "name":"Create Training Job Configuration"},
-        {"page":"Create_Model_Config", "name":"Model Configuration"},
-        {"page":"Create_Model_Config", "name":"Model Configuration Dropdown"},
-        {"page":"Create_Model_Config", "name":"Training Job Configuration Types"},
-        {"page":"Create_Model_Config", "name":"Training Job Configuration Types Dropdown"},
-        {"page":"Create_Model_Config", "name":"Create"},
-        {"page":"Create_Model_Config", "name":"Validate"}
+        {"page":"Create_Training_Job", "name":"Create Training Job Configuration"},
+        {"page":"Create_Training_Job", "name":"Model Configuration"},
+        {"page":"Create_Training_Job", "name":"Model Configuration Dropdown"},
+        {"page":"Create_Training_Job", "name":"Training Job Configuration Types"},
+        {"page":"Create_Training_Job", "name":"Training Job Configuration Types Dropdown"},
+        {"page":"Create_Training_Job", "name":"Create"},
+        {"page":"Create_Training_Job", "name":"Validate"}
     ]
 }
