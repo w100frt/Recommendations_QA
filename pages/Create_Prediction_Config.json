@@ -1,0 +1,17 @@
+﻿{
+	"page":"Create_Prediction_Config",
+	"testDefinitions":[
+		{"name":"Create Prediction Configuration","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h2"},
+		{"name":"Prediction Configuration Name","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[1]/span"},
+		{"name":"Prediction Configuration Name Input","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[2]/input"},
+		{"name":"Model Configuration","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[1]/span"},
+		{"name":"Model Configuration Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[2]/select"},
+		{"name":"Prediction Key","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[3]/div[1]/span"},
+		{"name":"Prediction Key Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[3]/div[2]/select"},
+		{"name":"Prediction Entity Mapping","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[4]/div[1]/span"},
+		{"name":"Prediction Entity Mapping Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[4]/div[2]/select"},
+		{"name":"Create","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[1]"},
+		{"name":"Validate","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[2]"}
+		
+	]
+}

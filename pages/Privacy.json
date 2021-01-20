@@ -1,0 +1,8 @@
+﻿{
+	"page":"Privacy",
+	"testDefinitions":[
+		{"name":"Privacy Policy","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/h1"},
+		{"name":"Privacy Text","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/p"}
+		
+	]
+}

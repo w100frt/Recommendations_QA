@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_HeaderFooter",
+    "testId":"t2",
+    "testSteps":[
+        {"page":"Navigation", "name":"Verify Model Header Displayed"},
+        {"page":"Navigation", "name":"Verify Model Header Displayed"},
+        {"page":"Navigation", "name":"Verify Training Header Displayed"},
+        {"page":"Navigation", "name":"Verify Prediction Header Displayed"},
+        {"page":"Navigation", "name":"Verify Specifications Header Displayed"},
+        {"page":"Navigation", "name":"Verify Mock Header Displayed"},
+        {"page":"Navigation", "name":"Verify Privacy Header Displayed"},
+        {"page":"Navigation", "name":"Verify Privacy Footer Displayed"}
+    ]
+}
