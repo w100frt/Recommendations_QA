@@ -1,0 +1,20 @@
+﻿{
+	"testCase":"Deployment Specifications",
+	"env":"dev",
+	"testId":"8",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Specifications Header"},
+		{"page":"Navigation", "name":"Click Deployment Specifications Header"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Deployment_Specifications","name":"Deployment Specifications"},
+		{"page":"Deployment_Specifications","name":"ID"},
+		{"page":"Deployment_Specifications","name":"Prediction Engine Factory Class"},
+		{"page":"Deployment_Specifications","name":"Name"},
+		{"page":"Deployment_Specifications","name":"Description"},
+		{"page":"Deployment_Specifications","name":"Status"}
+
+	]
+}
