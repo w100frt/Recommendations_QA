@@ -1,0 +1,17 @@
+﻿{
+	"testCase":"Privacy Page",
+	"env":"dev",
+	"testId":"10",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Privacy Header"},
+		{"page":"Privacy","name":"Privacy Policy"},
+		{"page":"Privacy","name":"Privacy Text"},
+		{"page":"Privacy","name":"Click Privacy Footer"},
+		{"page":"Privacy","name":"Privacy Policy"},
+		{"page":"Privacy","name":"Privacy Text"}
+		
+	]
+}
