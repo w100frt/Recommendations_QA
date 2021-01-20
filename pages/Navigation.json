@@ -25,7 +25,7 @@
 		{"name":"Click Mock Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[6]/a"},
 		{"name":"Verify Privacy Header Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[7]/a"},
 		{"name":"Click Privacy Header","objectType":"click","by":"xpath","objectId":"/html/body/header/nav/div/div/ul/li[7]/a"},
-		{"name":"Verify Privacy Footer Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/footer/div/text()"},
+		{"name":"Verify Privacy Footer Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/footer/div"},
 		{"name":"Click Privacy Footer","objectType":"click","by":"xpath","objectId":"/html/body/footer/div/a"},
 		{"name":"Click Algorithm Specifications Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[1]"},
 		{"name":"Click Training Keys Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[2]"},
