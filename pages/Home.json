@@ -1,0 +1,7 @@
+﻿{
+	"page":"Home",
+	"testDefinitions":[
+		{"name":"Model Management Console","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h1"}
+		
+	]
+}

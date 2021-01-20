@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_CreateTraining",
+    "testId":"t3",
+    "testSteps":[
+		{"page":"Training_Config", "name":"Create"},
+        {"page":"Create_Model_Config", "name":"Create Training Job Configuration"},
+        {"page":"Create_Model_Config", "name":"Model Configuration"},
+        {"page":"Create_Model_Config", "name":"Model Configuration Dropdown"},
+        {"page":"Create_Model_Config", "name":"Training Job Configuration Types"},
+        {"page":"Create_Model_Config", "name":"Training Job Configuration Types Dropdown"},
+        {"page":"Create_Model_Config", "name":"Create"},
+        {"page":"Create_Model_Config", "name":"Validate"}
+    ]
+}

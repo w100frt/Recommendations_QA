@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_HeaderFooter",
-    "testId":"t1",
+    "testId":"t2",
     "testSteps":[
         {"page":"Navigation", "name":"Verify Model Header Displayed"},
         {"page":"Navigation", "name":"Verify Model Header Displayed"},

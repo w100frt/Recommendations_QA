@@ -1,13 +1,13 @@
 ﻿{
-	"testCase":"Create Model",
+	"testCase":"Create Training",
 	"env":"dev",
-	"testId":"1",
+	"testId":"2",
 	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Click Model Header"},
+		{"page":"Navigation", "name":"Click Training Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Navigation","name":"Run Template", "data":"Create_Model"}
+		{"page":"Navigation","name":"Run Template", "data":"Create_Training"}
 	]
 }
