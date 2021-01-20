@@ -1,0 +1,18 @@
+﻿{
+    "testCase":"Template_CreatePrediction",
+    "testId":"t4",
+    "testSteps":[
+		{"page":"Prediction_Config", "name":"Create"},
+        {"page":"Create_Prediction_Config", "name":"Create Prediction Configuration"},
+        {"page":"Create_Prediction_Config", "name":"Prediction Configuration Name"},
+        {"page":"Create_Prediction_Config", "name":"Prediction Configuration Name Input"},
+        {"page":"Create_Prediction_Config", "name":"Model Configuration"},
+        {"page":"Create_Prediction_Config", "name":"Model Configuration Dropdown"},
+        {"page":"Create_Prediction_Config", "name":"Prediction Key"},
+        {"page":"Create_Prediction_Config", "name":"Prediction Key Dropdown"},
+        {"page":"Create_Prediction_Config", "name":"Prediction Entity Mapping"},
+        {"page":"Create_Prediction_Config", "name":"Prediction Entity Mapping Dropdown"},
+        {"page":"Create_Prediction_Config", "name":"Create"},
+        {"page":"Create_Prediction_Config", "name":"Validate"}
+    ]
+}
