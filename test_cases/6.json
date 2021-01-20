@@ -1,0 +1,19 @@
+﻿{
+	"testCase":"Prediction Keys",
+	"env":"dev",
+	"testId":"6",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Specifications Header"},
+		{"page":"Navigation", "name":"Click Prediction Keys Header"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Prediction_Keys","name":"Prediction Keys"},
+		{"page":"Prediction_Keys","name":"ID"},
+		{"page":"Prediction_Keys","name":"Prediction Key Class"},
+		{"page":"Prediction_Keys","name":"Name"},
+		{"page":"Prediction_Keys","name":"Description"},
+		{"page":"Prediction_Keys","name":"Status"}
+	]
+}
