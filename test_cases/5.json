@@ -1,0 +1,19 @@
+﻿{
+	"testCase":"Training Keys",
+	"env":"dev",
+	"testId":"5",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Specifications Header"},
+		{"page":"Navigation", "name":"Click Training Keys Header"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Training_Keys","name":"Training Keys"},
+		{"page":"Training_Keys","name":"ID"},
+		{"page":"Training_Keys","name":"Training Key Class"},
+		{"page":"Training_Keys","name":"Name"},
+		{"page":"Training_Keys","name":"Description"},
+		{"page":"Training_Keys","name":"Status"}
+	]
+}
