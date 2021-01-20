@@ -1,0 +1,18 @@
+﻿{
+	"testCase":"Algorithm Specification",
+	"env":"dev",
+	"testId":"4",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Specifications Header"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Algorithm Specifications","name":"Algorithm Specifications"},
+		{"page":"Algorithm Specifications","name":"ID"},
+		{"page":"Algorithm Specifications","name":"Training Engine Factory Type"},
+		{"page":"Algorithm Specifications","name":"Name"},
+		{"page":"Algorithm Specifications","name":"Description"},
+		{"page":"Algorithm Specifications","name":"Status"}
+	]
+}
