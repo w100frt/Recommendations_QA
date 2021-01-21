@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Deployment Specifications",
+	"testCase":"Prediction Entity Mappings",
 	"env":"dev",
 	"testId":"8",
 	"testRail":"",
@@ -7,14 +7,15 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Specifications Header"},
-		{"page":"Navigation", "name":"Click Deployment Specifications Header"},
+		{"page":"Navigation", "name":"Click Prediction Entity Mappings Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Deployment_Specifications","name":"Deployment Specifications"},
-		{"page":"Deployment_Specifications","name":"ID"},
-		{"page":"Deployment_Specifications","name":"Prediction Engine Factory Class"},
-		{"page":"Deployment_Specifications","name":"Name"},
-		{"page":"Deployment_Specifications","name":"Description"},
-		{"page":"Deployment_Specifications","name":"Status"}
+		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Mappings"},
+		{"page":"Prediction_Entity_Mappings","name":"Name"},
+		{"page":"Prediction_Entity_Mappings","name":"DeploymentSpecificationId"},
+		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Type"},
+		{"page":"Prediction_Entity_Mappings","name":"Sample Controller"},
+		{"page":"Prediction_Entity_Mappings","name":"Target Prediction Entity Type"},
+		{"page":"Prediction_Entity_Mappings","name":"Status"}
 
 	]
 }

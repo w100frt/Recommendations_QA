@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_CreatePredictionJob",
+    "testId":"t5",
+    "testSteps":[
+		{"page":"Prediction_Job_Config", "name":"Create"},
+        {"page":"Create_Prediction_Job_Config", "name":"Create Prediction Job Configuration"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Configuration"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Configuration Dropdown"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Jon COnfiguration Types"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Jon COnfiguration Types Dropdown"},
+        {"page":"Create_Prediction_Job_Config", "name":"Create"},
+        {"page":"Create_Prediction_Job_Config", "name":"Validate"}
+    ]
+}
