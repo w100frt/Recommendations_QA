@@ -4,8 +4,8 @@
 		{"name":"Create Prediction Job Configuration","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h2"},
 		{"name":"Prediction Configuration","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[1]/span"},
 		{"name":"Prediction Configuration Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[2]/select"},
-		{"name":"Prediction Job COnfiguration Types","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[1]/span"},
-		{"name":"Prediction Job COnfiguration Types Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[2]/select"},
+		{"name":"Prediction Job Configuration Types","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[1]/span"},
+		{"name":"Prediction Job Configuration Types Dropdown","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[2]/select"},
 		{"name":"Create","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[1]"},
 		{"name":"Validate","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/input[2]"}
 		
