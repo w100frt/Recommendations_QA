@@ -1,18 +1,14 @@
 ﻿{
-	"testCase":"Algorithm Specification",
+	"testCase":"Create Prediction Job",
 	"env":"dev",
 	"testId":"4",
 	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Click Specifications Header"},
+		{"page":"Navigation", "name":"Click Prediction Header"},
+		{"page":"Navigation", "name":"Click Prediction Job Configurations Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Algorithm_Specifications","name":"Algorithm Specifications"},
-		{"page":"Algorithm_Specifications","name":"ID"},
-		{"page":"Algorithm_Specifications","name":"Training Engine Factory Type"},
-		{"page":"Algorithm_Specifications","name":"Name"},
-		{"page":"Algorithm_Specifications","name":"Description"},
-		{"page":"Algorithm_Specifications","name":"Status"}
+		{"page":"Navigation","name":"Run Template", "data":"Create_Prediction_Job"}
 	]
 }

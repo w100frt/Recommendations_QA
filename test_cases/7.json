@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Prediction Entity Mappings",
+	"testCase":"Prediction Keys",
 	"env":"dev",
 	"testId":"7",
 	"testRail":"",
@@ -7,15 +7,13 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Specifications Header"},
-		{"page":"Navigation", "name":"Click Prediction Entity Mappings Header"},
+		{"page":"Navigation", "name":"Click Prediction Keys Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Mappings"},
-		{"page":"Prediction_Entity_Mappings","name":"Name"},
-		{"page":"Prediction_Entity_Mappings","name":"DeploymentSpecificationId"},
-		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Type"},
-		{"page":"Prediction_Entity_Mappings","name":"Sample Controller"},
-		{"page":"Prediction_Entity_Mappings","name":"Target Prediction Entity Type"},
-		{"page":"Prediction_Entity_Mappings","name":"Status"}
-
+		{"page":"Prediction_Keys","name":"Prediction Keys"},
+		{"page":"Prediction_Keys","name":"ID"},
+		{"page":"Prediction_Keys","name":"Prediction Key Class"},
+		{"page":"Prediction_Keys","name":"Name"},
+		{"page":"Prediction_Keys","name":"Description"},
+		{"page":"Prediction_Keys","name":"Status"}
 	]
 }

@@ -1,5 +1,5 @@
 ﻿{
-	"testCase":"Training Keys",
+	"testCase":"Algorithm Specification",
 	"env":"dev",
 	"testId":"5",
 	"testRail":"",
@@ -7,13 +7,12 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Specifications Header"},
-		{"page":"Navigation", "name":"Click Training Keys Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Training_Keys","name":"Training Keys"},
-		{"page":"Training_Keys","name":"ID"},
-		{"page":"Training_Keys","name":"Training Key Class"},
-		{"page":"Training_Keys","name":"Name"},
-		{"page":"Training_Keys","name":"Description"},
-		{"page":"Training_Keys","name":"Status"}
+		{"page":"Algorithm_Specifications","name":"Algorithm Specifications"},
+		{"page":"Algorithm_Specifications","name":"ID"},
+		{"page":"Algorithm_Specifications","name":"Training Engine Factory Type"},
+		{"page":"Algorithm_Specifications","name":"Name"},
+		{"page":"Algorithm_Specifications","name":"Description"},
+		{"page":"Algorithm_Specifications","name":"Status"}
 	]
 }

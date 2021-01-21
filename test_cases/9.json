@@ -1,21 +1,20 @@
 ﻿{
-	"testCase":"Mock Timestamp",
+	"testCase":"Deployment Specifications",
 	"env":"dev",
 	"testId":"9",
 	"testRail":"",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
-		{"page":"Navigation", "name":"Click Mock Header"},
+		{"page":"Navigation", "name":"Click Specifications Header"},
+		{"page":"Navigation", "name":"Click Deployment Specifications Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Mock","name":"Mock Data Timestamps"},
-		{"page":"Mock","name":"Mock Training Data Timestamp"},
-		{"page":"Mock","name":"Mock Training Data Timestamp Input"},
-		{"page":"Mock","name":"Training Set to Now"},
-		{"page":"Mock","name":"Mock Prediction Data Timestamp"},
-		{"page":"Mock","name":"Mock Prediction Data Timestamp Input"},
-		{"page":"Mock","name":"Prediction Set to Now"},
-		{"page":"Mock","name":"Save"}
+		{"page":"Deployment_Specifications","name":"Deployment Specifications"},
+		{"page":"Deployment_Specifications","name":"ID"},
+		{"page":"Deployment_Specifications","name":"Prediction Engine Factory Class"},
+		{"page":"Deployment_Specifications","name":"Name"},
+		{"page":"Deployment_Specifications","name":"Description"},
+		{"page":"Deployment_Specifications","name":"Status"}
 
 	]
 }
