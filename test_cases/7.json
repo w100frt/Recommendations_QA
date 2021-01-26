@@ -2,7 +2,7 @@
 	"testCase":"Prediction Keys",
 	"env":"dev",
 	"testId":"7",
-	"testRail":"",
+	"testRail":"7870901",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

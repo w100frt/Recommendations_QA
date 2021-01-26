@@ -2,7 +2,7 @@
 	"testCase":"Algorithm Specification",
 	"env":"dev",
 	"testId":"5",
-	"testRail":"",
+	"testRail":"7870899",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
