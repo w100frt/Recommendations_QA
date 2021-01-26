@@ -2,7 +2,7 @@
 	"testCase":"Prediction Entity Mappings",
 	"env":"dev",
 	"testId":"8",
-	"testRail":"",
+	"testRail":"7870902",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

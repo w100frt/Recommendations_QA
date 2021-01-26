@@ -2,7 +2,7 @@
 	"testCase":"Create Prediction",
 	"env":"dev",
 	"testId":"3",
-	"testRail":"",
+	"testRail":"7870897",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

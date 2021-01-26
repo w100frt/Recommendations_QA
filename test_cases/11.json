@@ -2,7 +2,7 @@
 	"testCase":"Privacy Page",
 	"env":"dev",
 	"testId":"11",
-	"testRail":"",
+	"testRail":"7870905",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
