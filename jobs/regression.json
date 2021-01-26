@@ -1,6 +1,6 @@
 ﻿{
     "project":"rec",
-	"testRailProjectId": "",
+	"testRailProjectId": "148",
 	"jobName":"Model Flow",
     "env":"stg",
     "browser":"chrome",
