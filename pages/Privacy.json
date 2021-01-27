@@ -10,4 +10,4 @@
 		},
 		{"name":"Click Privacy Footer","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'border-top footer text-muted')]//a"}
 	]
-}
+} //comment
