@@ -1,9 +1,13 @@
 ﻿{
 	"page":"Privacy",
 	"testDefinitions":[
-		{"name":"Privacy Policy","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/h1"},
-		{"name":"Privacy Text","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/p"},
-		{"name":"Click Privacy Footer","objectType":"click","by":"xpath","objectId":"/html/body/footer/div/a"}
-		
+		{"name":"Privacy Policy","objectType":"verify_displayed","by":"xpath","objectId":"//div[contains (@class, 'pb-3')]//h1"},
+		{
+			"name": "Privacy Text",
+			"objectType": "verify_displayed",
+			"by": "xpath",
+			"objectId": "//div[contains (@class, 'pb-3')]//p"
+		},
+		{"name":"Click Privacy Footer","objectType":"click","by":"xpath","objectId":"//div[contains(@class,'border-top footer text-muted')]//a"}
 	]
 }
