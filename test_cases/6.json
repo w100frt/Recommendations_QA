@@ -2,7 +2,7 @@
 	"testCase":"Training Keys",
 	"env":"dev",
 	"testId":"6",
-	"testRail":"",
+	"testRail":"7870900",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

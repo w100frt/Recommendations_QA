@@ -2,7 +2,7 @@
 	"testCase":"Deployment Specifications",
 	"env":"dev",
 	"testId":"9",
-	"testRail":"",
+	"testRail":"7870903",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
