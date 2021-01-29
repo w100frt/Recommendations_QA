@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Algorithm_Specifications",
 	"testDefinitions":[
-		{"name":"Algorithm Specifications","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/h1", "data": "Algorith Specifications"},
+		{"name":"Verify Page Header Title","objectType":"verify_value","by":"xpath","objectId":"//main//h1[contains(@class,'display')]"},
 		{"name":"ID","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
 		{"name":"Training Engine Factory Type","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
 		{"name":"Name","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
