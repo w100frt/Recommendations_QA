@@ -28,10 +28,15 @@
 		{"name":"Verify Privacy Footer Displayed","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/footer/div"},
 		{"name":"Click Privacy Footer","objectType":"click","by":"xpath","objectId":"/html/body/footer/div/a"},
 		{"name":"Click Algorithm Specifications Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[1]"},
+		{"name":"Verify Algorithm Specifications Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[1]"},
 		{"name":"Click Training Keys Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[2]"},
+		{"name":"Verify Training Keys Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[2]"},
 		{"name":"Click Prediction Keys Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[3]"},
-		{"name":"Click Prediction Entity Mappings Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[4]"}, 
+		{"name":"Verify Prediction Keys Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[3]"},
+		{"name":"Click Prediction Entity Mappings Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[4]"},
+		{"name":"Verify Prediction Entity Mappings Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[4]"},  
 		{"name":"Click Deployment Specifications Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[5]"},
+		{"name":"Verify Deployment Specifications Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/div/a[5]"},
 		{"name":"Click Prediction Configurations Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/a[1]"},
 		{"name":"Click Prediction Job Configurations Header","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/div/a[2]"}
 
