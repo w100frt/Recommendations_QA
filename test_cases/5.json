@@ -9,10 +9,10 @@
 		{"page":"Navigation", "name":"Click Specifications Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
 		{"page":"Algorithm_Specifications", "name":"Verify Page Header Title", "data":"Algorithm Specifications"},
-		{"page":"Algorithm_Specifications","name":"ID"},
-		{"page":"Algorithm_Specifications","name":"Training Engine Factory Type"},
-		{"page":"Algorithm_Specifications","name":"Name"},
-		{"page":"Algorithm_Specifications","name":"Description"},
-		{"page":"Algorithm_Specifications","name":"Status"}
+		{"page":"Algorithm_Specifications","name":"ID","data":"ID"},
+		{"page":"Algorithm_Specifications","name":"Training Engine Factory Type","data":"Training Engine Factory Type"},
+		{"page":"Algorithm_Specifications","name":"Name","data":"Name"},
+		{"page":"Algorithm_Specifications","name":"Description","data":"Description"},
+		{"page":"Algorithm_Specifications","name":"Status","data":"Status"}
 	]
 }
