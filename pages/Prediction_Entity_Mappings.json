@@ -1,14 +1,14 @@
 ﻿{
 	"page":"Prediction_Entity_Mappings",
 	"testDefinitions":[
-		{"name":"Prediction Entity Mappings","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h1"},
-		{"name":"ID","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
-		{"name":"Name","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
-		{"name":"DeploymentSpecificationId","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
-		{"name":"Prediction Entity Type","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
-		{"name":"Sample Controller","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"},
-		{"name":"Target Prediction Entity Type","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[6]"},
-		{"name":"Status","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[7]"}
+		{"name":"Prediction Entity Mappings","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/h1"},
+		{"name":"ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
+		{"name":"Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
+		{"name":"DeploymentSpecificationId","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
+		{"name":"Prediction Entity Type","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
+		{"name":"Sample Controller","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"},
+		{"name":"Target Prediction Entity Type","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[6]"},
+		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[7]"}
 		
 	]
 }
