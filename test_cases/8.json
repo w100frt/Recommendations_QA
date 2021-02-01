@@ -15,6 +15,7 @@
 		{"page":"Navigation","name":"Verify Prediction Entity Mappings Header", "data":"Prediction Entity Mappings"},
 		{"page":"Navigation","name":"Verify Deployment Specifications Header", "data":"Deployment Specifications"},
 		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Mappings","data":"Prediction Entity Mappings"},
+		{"page":"Prediction_Entity_Mappings","name":"ID","data":"ID"},
 		{"page":"Prediction_Entity_Mappings","name":"Name","data":"Name"},
 		{"page":"Prediction_Entity_Mappings","name":"DeploymentSpecificationID","data":"DeploymentSpecificationID"},
 		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Type","data":"Prediction Entity Type"},
