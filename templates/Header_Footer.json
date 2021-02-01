@@ -2,13 +2,12 @@
     "testCase":"Template_HeaderFooter",
     "testId":"t2",
     "testSteps":[
-        {"page":"Navigation", "name":"Verify Model Header Displayed"},
-        {"page":"Navigation", "name":"Verify Model Header Displayed"},
-        {"page":"Navigation", "name":"Verify Training Header Displayed"},
-        {"page":"Navigation", "name":"Verify Prediction Header Displayed"},
-        {"page":"Navigation", "name":"Verify Specifications Header Displayed"},
-        {"page":"Navigation", "name":"Verify Mock Header Displayed"},
-        {"page":"Navigation", "name":"Verify Privacy Header Displayed"},
+        {"page":"Navigation", "name":"Verify Model Header Displayed","data":"Model"},
+        {"page":"Navigation", "name":"Verify Training Header Displayed","data":"Training"},
+        {"page":"Navigation", "name":"Verify Prediction Header Displayed","data":"Prediction"},
+        {"page":"Navigation", "name":"Verify Specifications Header Displayed","data":"Specifications"},
+        {"page":"Navigation", "name":"Verify Mock Header Displayed","data":"Mock"},
+        {"page":"Navigation", "name":"Verify Privacy Header Displayed","data":"Privacy"},
         {"page":"Navigation", "name":"Verify Privacy Footer Displayed"}
     ]
 }
