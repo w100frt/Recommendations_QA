@@ -16,7 +16,7 @@
 		{"page":"Navigation","name":"Verify Deployment Specifications Header", "data":"Deployment Specifications"},
 		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Mappings","data":"Prediction Entity Mappings"},
 		{"page":"Prediction_Entity_Mappings","name":"Name","data":"Name"},
-		{"page":"Prediction_Entity_Mappings","name":"DeploymentSpecificationId","data":"DeploymentSpecificationId"},
+		{"page":"Prediction_Entity_Mappings","name":"DeploymentSpecificationID","data":"DeploymentSpecificationID"},
 		{"page":"Prediction_Entity_Mappings","name":"Prediction Entity Type","data":"Prediction Entity Type"},
 		{"page":"Prediction_Entity_Mappings","name":"Sample Controller","data":"Sample Controller"},
 		{"page":"Prediction_Entity_Mappings","name":"Target Prediction Entity Type","data":"Target Prediction Entity Type"},
