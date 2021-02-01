@@ -9,11 +9,16 @@
 		{"page":"Navigation", "name":"Click Specifications Header"},
 		{"page":"Navigation", "name":"Click Training Keys Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Training_Keys","name":"Training Keys"},
-		{"page":"Training_Keys","name":"ID"},
-		{"page":"Training_Keys","name":"Training Key Class"},
-		{"page":"Training_Keys","name":"Name"},
-		{"page":"Training_Keys","name":"Description"},
-		{"page":"Training_Keys","name":"Status"}
+		{"page":"Navigation","name":"Verify Algorithm Specifications Header", "data":"Algorithm Specifications"},
+		{"page":"Navigation","name":"Verify Training Keys Header", "data":"Training Keys"},
+		{"page":"Navigation","name":"Verify Prediction Keys Header", "data":"Prediction Keys"},
+		{"page":"Navigation","name":"Verify Prediction Entity Mappings Header", "data":"Prediction Entity Mappings"},
+		{"page":"Navigation","name":"Verify Deployment Specifications Header", "data":"Deployment Specifications"},
+		{"page":"Training_Keys","name":"Training Keys","data":"Training Keys"},
+		{"page":"Training_Keys","name":"ID","data":"ID"},
+		{"page":"Training_Keys","name":"Training Key Class","data":"Training Key Class"},
+		{"page":"Training_Keys","name":"Name","data":"Name"},
+		{"page":"Training_Keys","name":"Description","data":"Description"},
+		{"page":"Training_Keys","name":"Status","data":"Status"}
 	]
 }
