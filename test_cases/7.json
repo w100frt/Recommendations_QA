@@ -9,11 +9,16 @@
 		{"page":"Navigation", "name":"Click Specifications Header"},
 		{"page":"Navigation", "name":"Click Prediction Keys Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Prediction_Keys","name":"Prediction Keys"},
-		{"page":"Prediction_Keys","name":"ID"},
-		{"page":"Prediction_Keys","name":"Prediction Key Class"},
-		{"page":"Prediction_Keys","name":"Name"},
-		{"page":"Prediction_Keys","name":"Description"},
-		{"page":"Prediction_Keys","name":"Status"}
+		{"page":"Navigation","name":"Verify Algorithm Specifications Header", "data":"Algorithm Specifications"},
+		{"page":"Navigation","name":"Verify Training Keys Header", "data":"Training Keys"},
+		{"page":"Navigation","name":"Verify Prediction Keys Header", "data":"Prediction Keys"},
+		{"page":"Navigation","name":"Verify Prediction Entity Mappings Header", "data":"Prediction Entity Mappings"},
+		{"page":"Navigation","name":"Verify Deployment Specifications Header", "data":"Deployment Specifications"},
+		{"page":"Prediction_Keys","name":"Prediction Keys","data":"Prediction Keys"},
+		{"page":"Prediction_Keys","name":"ID","data":"ID"},
+		{"page":"Prediction_Keys","name":"Prediction Key Class","data":"Prediction Key Class"},
+		{"page":"Prediction_Keys","name":"Name","data":"Name"},
+		{"page":"Prediction_Keys","name":"Description","data":"Description"},
+		{"page":"Prediction_Keys","name":"Status","data":"Status"}
 	]
 }

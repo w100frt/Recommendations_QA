@@ -1,12 +1,12 @@
 ﻿{
 	"page":"Prediction_Keys",
 	"testDefinitions":[
-		{"name":"Prediction Keys","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h1"},
-		{"name":"ID","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
+		{"name":"Prediction Keys","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/h1"},
+		{"name":"ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
 		{"name":"Prediction Key Class","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
-		{"name":"Name","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
-		{"name":"Description","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
-		{"name":"Status","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"}
+		{"name":"Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
+		{"name":"Description","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
+		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"}
 		
 	]
 }
