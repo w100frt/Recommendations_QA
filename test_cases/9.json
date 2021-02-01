@@ -9,12 +9,17 @@
 		{"page":"Navigation", "name":"Click Specifications Header"},
 		{"page":"Navigation", "name":"Click Deployment Specifications Header"},
 		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
-		{"page":"Deployment_Specifications","name":"Deployment Specifications"},
-		{"page":"Deployment_Specifications","name":"ID"},
-		{"page":"Deployment_Specifications","name":"Prediction Engine Factory Class"},
-		{"page":"Deployment_Specifications","name":"Name"},
-		{"page":"Deployment_Specifications","name":"Description"},
-		{"page":"Deployment_Specifications","name":"Status"}
+		{"page":"Navigation","name":"Verify Algorithm Specifications Header", "data":"Algorithm Specifications"},
+		{"page":"Navigation","name":"Verify Training Keys Header", "data":"Training Keys"},
+		{"page":"Navigation","name":"Verify Prediction Keys Header", "data":"Prediction Keys"},
+		{"page":"Navigation","name":"Verify Prediction Entity Mappings Header", "data":"Prediction Entity Mappings"},
+		{"page":"Navigation","name":"Verify Deployment Specifications Header", "data":"Deployment Specifications"},
+		{"page":"Deployment_Specifications","name":"Deployment Specifications","data":"Deployment Specifications"},
+		{"page":"Deployment_Specifications","name":"ID","data":"ID"},
+		{"page":"Deployment_Specifications","name":"Prediction Engine Factory Class","data":"Prediction Engine Factory Class"},
+		{"page":"Deployment_Specifications","name":"Name","data":"Name"},
+		{"page":"Deployment_Specifications","name":"Description","data":"Description"},
+		{"page":"Deployment_Specifications","name":"Status","data":"Status"}
 
 	]
 }
