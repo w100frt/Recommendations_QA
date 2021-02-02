@@ -22,12 +22,13 @@ namespace SeleniumProject.Function
 			string data = "";
 			string xpath = "";
 			string url = "";
+			string MockTimestampA = "";
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input")) {
 				
-				string[] MockTimestampA = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
+				MockTimestampA = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
 			
 				if (MockTimestampA = "MM-DD-YYYY hh:mm:ss+ss:ss"){
 					log.Info("Verification Passed. Date Format Correct");
