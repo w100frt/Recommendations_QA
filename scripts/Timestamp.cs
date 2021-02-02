@@ -35,14 +35,20 @@ namespace SeleniumProject.Function
 
 				if (DateTime.TryParse(data, out dDate))
 				{
-					String.Format("MM-YYYY mm:hh:ss+ss:ss", dDate);
-					log.Info("Verification Passed." + dDate + "is in the correct format"); 
+					String.Format("MM-DD-YYYY hh:mm:ss+ss:ss", dDate);
+					if(data == dDate){
+						log.Info("Verification Passed." + data + "is in the correct format");
+					} 
+					else{
+						log.Error("***Verification Failed." + data + "is NOT in the correct format");
+						err.CreateVerificationError(step, "Error Capturing DeviceID", data);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+
+					}
 				}
 				else
 				{
-					log.Error("***Verification Failed." + data + "is NOT in the correct format");
-					err.CreateVerificationError(step, "Error Capturing DeviceID", data);
-					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					
 				}
 			
 				
