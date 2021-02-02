@@ -30,7 +30,7 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement("xpath", "/html/body/div/main/form/div/div[1]/div[2]");
 				data = ele.GetAttribute("value");
-				log.info("Time:", data)
+				log.info("Time:", data);
 			
 				if (data == "MM-DD-YYYY hh:mm:ss+ss:ss"){
 					log.Info("Verification Passed. Date Format Correct");
