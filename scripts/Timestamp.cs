@@ -26,20 +26,20 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input")) {
-				var DateTime Parse(string s)
-				{
-					// you may want to add a few more formats here
-					var formats = new[] { "MM-DD-YYYY hh:mm:ss+ss:ss"};
-					DateTime dt;
-					if (DateTime.TryParseExact(s, formats,
-											CultureInfo.InvariantCulture, // ISO is invariant
-											DateTimeStyles.RoundtripKind, // this is important
-											out dt))
-						return dt;
+				
+				string[] formats = { "MM-DD-YYYY hh:mm:ss+ss:ss" };
+				DateTime parsedDate;
+				var isValidFormat= DateTime.TryParseExact(inputString, formats, new CultureInfo("en-US"), DateTimeStyles.None, out parsedDate);
 
-					return null;
-				}
-				string[] timeStamp = {dt};
+				// if(isValidFormat)
+				// {
+				// 	string.Format("{0:d/MM/yyyy}", parsedDate);
+				// }
+				// else
+				// {
+				// 	// maybe throw an Exception
+				// }
+				string[] timeStamp = {parsedDate};
 				elements = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
 				
 				if(timeStamp.Length != elements.Count) {
