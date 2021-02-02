@@ -26,7 +26,7 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input")) {
-				var DateTime? Parse(string s)
+				var DateTime Parse(string s)
 				{
 					// you may want to add a few more formats here
 					var formats = new[] { "MM-DD-YYYY hh:mm:ss+ss:ss"};
