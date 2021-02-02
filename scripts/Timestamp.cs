@@ -52,13 +52,8 @@ namespace SeleniumProject.Function
 
 					}
 				}
-				else
-				{
-					
-				}
-			
 				
-			}
+			
 		}
 	}
 }
