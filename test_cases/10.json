@@ -7,9 +7,9 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Mock Header"},
-		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Navigation","name":"Run Template","data":"Header_Footer"},
 		{"page":"Mock","name":"Mock Data Timestamps","data":"Mock Data Timestamps"},
-		{"page":"Mock","name":"Mock Training Data Timestamp","data": "Mock Training Data Timestamp:"},
+		{"page":"Mock","name":"Mock Training Data Timestamp","data":"Mock Training Data Timestamp:"},
 		{"page":"Mock","name":"Mock Training Data Timestamp Input"},
 		{"page":"Mock","name":"Training Set to Now"},
 		{"page":"Mock","name":"Mock Prediction Data Timestamp","data":"Mock Prediction Data Timestamp:"},
