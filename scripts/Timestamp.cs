@@ -27,7 +27,7 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input")) {
 				
-				ele = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]");
+				ele = driver.FindElement("xpath", "/html/body/div/main/form/div/div[1]/div[2]");
 				data = ele.GetAttribute("value");
 			
 				if (data == "MM-DD-YYYY hh:mm:ss+ss:ss"){
