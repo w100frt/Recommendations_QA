@@ -41,7 +41,7 @@ namespace SeleniumProject.Function
 						log.Info("Verification Passed." + data + "is in the correct format");
 					} 
 					else{
-						log.Error("***Verification Failed." + data + "is NOT in the correct format");
+						log.Error("***Verification Failed." + data + "does not equal" + eDate);
 						err.CreateVerificationError(step, "Error Capturing DeviceID", data);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
