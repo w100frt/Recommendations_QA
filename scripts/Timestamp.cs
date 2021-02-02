@@ -29,7 +29,7 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement(By.Xpath("/html/body/div/main/form/div/div[1]/div[2]/input")).Text;
 			
-				if (data == "MM-DD-YYYY hh:mm:ss+ss:ss"){
+				if (ele == "MM-DD-YYYY hh:mm:ss+ss:ss"){
 					log.Info("Verification Passed. Date Format Correct");
 				}
 				else {
