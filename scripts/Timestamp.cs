@@ -29,8 +29,9 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]");
 				data = ele.GetAttribute("value");
+				timeStamp = log.Info(data)
 			
-				if (data == "MM-DD-YYYY hh:mm:ss+ss:ss"){
+				if (timeStamp == "MM-DD-YYYY hh:mm:ss+ss:ss"){
 					log.Info("Verification Passed. Date Format Correct");
 				}
 				else {
