@@ -36,13 +36,7 @@ namespace SeleniumProject.Function
 					log.Error("Date format incorrect");
 					err.CreateVerificationError(step, "date format incorrect");
 					}
-			
-				
 			}
-			else {
-					throw new Exception("Test Step not found in script");
-				}
-
 		}
 	}
 }
