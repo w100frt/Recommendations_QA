@@ -1,5 +1,4 @@
 using System;
-using System.Console;
 using System.Collections.Generic;
 using SeleniumProject.Utilities;
 using OpenQA.Selenium;
@@ -31,14 +30,20 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement("xpath", "/html/body/div/main/form/div/div[1]/div[2]");
 				data = ele.GetAttribute("value");
-				Console.Writeline(data);
-			
-				if (data == "MM-DD-YYYY hh:mm:ss+ss:ss"){
-					log.Info("Verification Passed. Date Format Correct");
+
+				DateTime dDate;
+
+				if (DateTime.TryParse(data, out dDate))
+				{
+					String.Format("MM-DD-YYYY hh:mm:ss+ss:ss", dDate);
+					log.Info("Verification Passed." + dDate + "is in the correct format"); 
 				}
-				else {
-					log.Error("Date format incorrect");
-					}
+				else
+				{
+					log.Error("***Verification Failed." + dDate + "is NOT in the correct format");
+					err.CreateVerificationError(step, step.Data);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+				
 			}
 		}
 	}
