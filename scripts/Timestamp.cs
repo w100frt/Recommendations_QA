@@ -17,9 +17,8 @@ namespace SeleniumProject.Function
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
 			List<TestStep> steps = new List<TestStep>();
-			//IWebElement ele;
+			IWebElement ele;
 			ReadOnlyCollection<IWebElement> elements;
-			string ele = "";
 			string data = "";
 			string xpath = "";
 			string url = "";
@@ -31,7 +30,7 @@ namespace SeleniumProject.Function
 				ele = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]");
 				data = ele.GetAttribute("value");
 			
-				if (timeStamp == "MM-DD-YYYY hh:mm:ss+ss:ss"){
+				if (data == "MM-DD-YYYY hh:mm:ss+ss:ss"){
 					log.Info("Verification Passed. Date Format Correct");
 				}
 				else {
