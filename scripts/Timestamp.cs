@@ -42,7 +42,7 @@ namespace SeleniumProject.Function
 					} 
 					else{
 						log.Error("***Verification Failed." + data + "does not equal" + eDate);
-						err.CreateVerificationError(step, "Error Capturing DeviceID", data);
+						err.CreateVerificationError(step, eDate, data);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
 					}
