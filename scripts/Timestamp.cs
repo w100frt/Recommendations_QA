@@ -27,34 +27,14 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input")) {
 				
-				string[] formats = { "MM-DD-YYYY hh:mm:ss+ss:ss" };
-				DateTime parsedDate;
-				var isValidFormat= DateTime.TryParseExact(inputString, formats, new CultureInfo("en-US"), DateTimeStyles.None, out parsedDate);
-
-				// if(isValidFormat)
-				// {
-				// 	string.Format("{0:d/MM/yyyy}", parsedDate);
-				// }
-				// else
-				// {
-				// 	// maybe throw an Exception
-				// }
-				string[] timeStamp = {parsedDate};
-				elements = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
+				DateTime = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
 				
-				if(timeStamp.Length != elements.Count) {
-					log.Error("Unexpected element count. Expected: [" + timeStamp.Length + "] does not match Actual: [" + elements.Count + "]");
-					err.CreateVerificationError(step, timeStamp.Length.ToString(), elements.Count.ToString());
+				if (DateTime.TryParseExact(dateString, "MM-DD-YYYY hh:mm:ss+ss:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateValue)){
+					log.Info("Verification Passed. Date Format Correct";
 				}
 				else {
-					for (int i=0; i < elements.Count; i++) {
-						if(dataSet[i].Equals(elements[i].GetAttribute("innerText").Trim())) {
-							log.Info("Verification Passed. Expected [" + timeStamp[i] + "] matches Actual [" + elements[i].GetAttribute("innerText").Trim() +"]");
-						}
-						else {
-							log.Error("Verification FAILED. Expected: [" + timeStamp[i] + "] does not match Actual: [" + elements[i].GetAttribute("innerText").Trim() + "]");
-							err.CreateVerificationError(step, timeStamp[i], elements[i].GetAttribute("innerText").Trim());
-						}
+					log.Error("Date format incorrect");
+					err.CreateVerificationError(step, "date format incorrect");
 					}
 				}
 			}
