@@ -35,8 +35,9 @@ namespace SeleniumProject.Function
 
 				if (DateTime.TryParse(data, out dDate))
 				{
-					String.Format("MM-DD-YYYY hh:mm:ss+ss:ss", dDate);
-					if(data == dDate){
+					dDate = eDate
+					String.Format("MM-DD-YYYY hh:mm:ss+ss:ss", eDate);
+					if(data == eDate){
 						log.Info("Verification Passed." + data + "is in the correct format");
 					} 
 					else{
