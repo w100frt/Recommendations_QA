@@ -30,7 +30,7 @@ namespace SeleniumProject.Function
 				DateTime = driver.FindElements("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
 			
 				if (DateTime.TryParseExact(dateString, "MM-DD-YYYY hh:mm:ss+ss:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateValue)){
-					log.Info("Verification Passed. Date Format Correct";
+					log.Info("Verification Passed. Date Format Correct");
 				}
 				else {
 					log.Error("Date format incorrect");
