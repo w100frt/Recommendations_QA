@@ -39,9 +39,9 @@ namespace SeleniumProject.Function
 				}
 			}
 			
-			//else {
-			//	throw new Exception("Test Step not found in script");
-			//}
+			else {
+				throw new Exception("Test Step not found in script");
+			}
 
 		}
 	}
