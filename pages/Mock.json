@@ -3,7 +3,7 @@
 	"testDefinitions":[
 		{"name":"Mock Data Timestamps","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h2"},
 		{"name":"Mock Training Data Timestamp","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[1]/span"},
-		{"name":"Mock Training Data Timestamp Input","objectType":"script","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[2]/input"},
+		{"name":"Mock Training Data Timestamp Input","objectType":"script","by":"xpath","objectId":"Timestamp"},
 		{"name":"Training Set to Now","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[1]/div[3]/button"},
 		{"name":"Mock Prediction Data Timestamp","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[1]/span"},
 		{"name":"Mock Prediction Data Timestamp Input","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/form/div/div[2]/div[2]/input"},
