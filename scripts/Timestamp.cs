@@ -27,8 +27,13 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input")) {
-				
-				ele = driver.FindElement("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
+				xpath = "//input[@id='TrainingDataTimestamp']";
+			}
+			else if (step.Name.Equals("Mock Prediction Data Timestamp Input")) {
+				xpath = "//input[@id='PredictionDataTimestamp']";
+			}
+				ele = driver.FindElement("xpath", xpath);
+				//ele = driver.FindElement("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
 				data = ele.GetAttribute("value");
 
 				DateTime dDate;
