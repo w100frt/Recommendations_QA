@@ -73,11 +73,11 @@ namespace SeleniumProject.Function
 					string dataSplit = data.Substring(0,8);
 					string toDateSplit = toDate.Substring(0,8);        
 					if(dataSplit == toDateSplit) {
-						log.Info("Verification Passed." + data + "is in the correct format");
+						log.Info("Verification Passed." + dataSplit + "matches" + toDateSplit);
 					} 
 					else {
-						log.Error("***Verification Failed." + data + "does not equal" + toDate);
-						err.CreateVerificationError(step, toDate, data);
+						log.Error("***Verification Failed." + dataSplit + "does not equal" + toDateSplit);
+						err.CreateVerificationError(step, toDateSplit, dataSplit);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
 					}
