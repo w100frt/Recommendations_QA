@@ -64,7 +64,7 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("value");
-				DateTime tDate;
+				DateTime tDate = DateTime.Now;
 				//String.Format("mm/dd/yyyy", tDate);
 				string toDate = tDate.ToString();
 				string dataSplit = data.Substring(0,8);
