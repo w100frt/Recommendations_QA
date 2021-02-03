@@ -66,12 +66,12 @@ namespace SeleniumProject.Function
 				{
 					String.Format("MM/dd/yyyy", tDate);
 					string toDate = tDate.ToString();
-					if(data == eDate){
+					if(data == toDate){
 						log.Info("Verification Passed." + data + "is in the correct format");
 					} 
 					else{
-						log.Error("***Verification Failed." + data + "does not equal" + eDate);
-						err.CreateVerificationError(step, eDate, data);
+						log.Error("***Verification Failed." + data + "does not equal" + toDate);
+						err.CreateVerificationError(step, toDate, data);
 						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
 					}
