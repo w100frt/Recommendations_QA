@@ -70,7 +70,8 @@ namespace SeleniumProject.Function
 				{
 					String.Format("mm/dd/yyyy", tDate);
 					string toDate = tDate.ToString();
-					if(data == DateTime.Now.Date) {
+					var parsedData = DateTime.Parse(data);
+					if(parsedData.Date == DateTime.Now.Date) {
 						log.Info("Verification Passed." + data + "is in the correct format");
 					} 
 					else {
