@@ -68,7 +68,7 @@ namespace SeleniumProject.Function
 
 				if (DateTime.TryParse(data, out tDate))
 				{
-					String.Format("MM/dd/yyyy", tDate);
+					String.Format("mm/dd/yyyy", tDate);
 					string toDate = tDate.ToString();
 					if(data == toDate) {
 						log.Info("Verification Passed." + data + "is in the correct format");
