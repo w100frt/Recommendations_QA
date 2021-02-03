@@ -33,7 +33,6 @@ namespace SeleniumProject.Function
 				xpath = "//input[@id='PredictionDataTimestamp']";
 			}
 				ele = driver.FindElement("xpath", xpath);
-				//ele = driver.FindElement("xpath", "/html/body/div/main/form/div/div[1]/div[2]/input");
 				data = ele.GetAttribute("value");
 
 				DateTime dDate;
@@ -52,7 +51,31 @@ namespace SeleniumProject.Function
 
 					}
 				}
-				
+			if (step.Name.Equals("Verify Training Set To Now")) {
+				xpath = "//input[@id='TrainingDataTimestamp']";
+			}
+			else if (step.Name.Equals("Verify Prediction Set To Now")) {
+				xpath = "//input[@id='PredictionDataTimestamp']";
+			}
+				ele = driver.FindElement("xpath", xpath);
+				data = ele.GetAttribute("value");
+
+				DateTime tDate;
+
+				if (DateTime.TryParse(data, out tDate))
+				{
+					String.Format("MM/dd/yyyy", tDate);
+					string toDate = tDate.ToString();
+					if(data == eDate){
+						log.Info("Verification Passed." + data + "is in the correct format");
+					} 
+					else{
+						log.Error("***Verification Failed." + data + "does not equal" + eDate);
+						err.CreateVerificationError(step, eDate, data);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+
+					}
+				}	
 			
 		}
 	}
