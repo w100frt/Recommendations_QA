@@ -65,23 +65,24 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("value");
 				DateTime tDate;
+				String.Format("mm/dd/yyyy", tDate);
+				string toDate = tDate.ToString();
+				string dataSplit = data.Substring(0,8);
+				string toDateSplit = toDate.Substring(0,8);        
+				if(dataSplit == toDateSplit) {
+					log.Info("Verification Passed." + dataSplit + "matches" + toDateSplit);
+				} 
+				else {
+					log.Error("***Verification Failed." + dataSplit + "does not equal" + toDateSplit);
+					err.CreateVerificationError(step, toDateSplit, dataSplit);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
-				if (DateTime.TryParse(data, out tDate))
-				{
-					String.Format("mm/dd/yyyy", tDate);
-					string toDate = tDate.ToString();
-					string dataSplit = data.Substring(0,8);
-					string toDateSplit = toDate.Substring(0,8);        
-					if(dataSplit == toDateSplit) {
-						log.Info("Verification Passed." + dataSplit + "matches" + toDateSplit);
-					} 
-					else {
-						log.Error("***Verification Failed." + dataSplit + "does not equal" + toDateSplit);
-						err.CreateVerificationError(step, toDateSplit, dataSplit);
-						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
-
-					}
 				}
+
+				// if (DateTime.TryParse(data, out tDate))
+				// {
+					
+				// }
 			}
 
 			else {
