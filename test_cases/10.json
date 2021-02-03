@@ -12,11 +12,11 @@
 		{"page":"Mock","name":"Mock Training Data Timestamp","data":"Mock Training Data Timestamp:"},
 		{"page":"Mock","name":"Mock Training Data Timestamp Input"},
 		{"page":"Mock","name":"Training Set to Now"},
-		{"page":"Mock","name":"Verify Training Set to Now"},
+		{"page":"Mock","name":"Verify Training Set To Now"},
 		{"page":"Mock","name":"Mock Prediction Data Timestamp","data":"Mock Prediction Data Timestamp:"},
 		{"page":"Mock","name":"Mock Prediction Data Timestamp Input"},
 		{"page":"Mock","name":"Prediction Set to Now"},
-		{"page":"Mock","name":"Verify Prediction Set to Now"},
+		{"page":"Mock","name":"Verify Prediction Set To Now"},
 		{"page":"Mock","name":"Save"}
 
 	]
