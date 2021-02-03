@@ -51,7 +51,7 @@ namespace SeleniumProject.Function
 
 					}
 				}
-			if (step.Name.Equals("Verify Training Set To Now")) {
+			else if (step.Name.Equals("Verify Training Set To Now")) {
 				xpath = "//input[@id='TrainingDataTimestamp']";
 			}
 			else if (step.Name.Equals("Verify Prediction Set To Now")) {
