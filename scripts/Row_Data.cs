@@ -76,19 +76,15 @@ namespace SeleniumProject.Function
 				}
 				
 				
-				ele = driver.FindElement("xpath", xpath);
-				string  idUrl = ele.ToString();
-				log.Info(idUrl);
-
-
-				if(idUrl.Contains("href")) {
-					log.Info("Verification Passed." + idUrl + "is a link");
-				} 
-				else {
-					log.Error("***Verification Failed." + idUrl + "is NOT a link");
-					err.CreateVerificationError(step, xpath, data);
+				try {
+					ele = driver.FindElement("xpath", "//table[@class='entity-table']/tbody/tr[1]/td[1]/a");
+					ref = ele.GetAttribute("href");
+					log.Info("Verification PASSED. HREF found: " + ref);
+				}
+				catch (Exception e) {
+					log.Error("***Verification Failed. No HREF tag found. Exception: " + e);
+					err.CreateVerificationError(step, "HREF", ref);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
-
 				}
 			}
 
