@@ -1,14 +1,14 @@
 ﻿{
-    "testCase":"Template_CreateModel",
+    "testCase":"Template_CreateModel_Config",
     "testId":"t1",
     "testSteps":[
-        {"page":"Model", "name":"Model Configurations", "data":"Model Configurations"},
-        {"page":"Model", "name":"Show Inactive", "data":"Show Inactive"},
-        {"page":"Model", "name":"ID", "data":"ID"},
-        {"page":"Model", "name":"Name", "data":"Name"},
-        {"page":"Model", "name":"Algorithm Specification", "data":"Algorithm Specification"},
-        {"page":"Model", "name":"Training Key", "data":"Training Key"},
-        {"page":"Model", "name":"Hyperparameter Key", "data":"Hyperparameter Key"},
-        {"page":"Model", "name":"Status", "data":"Status"}
+        {"page":"Model_Config", "name":"Model_Config Configurations", "data":"Model_Config Configurations"},
+        {"page":"Model_Config", "name":"Show Inactive", "data":"Show Inactive"},
+        {"page":"Model_Config", "name":"ID", "data":"ID"},
+        {"page":"Model_Config", "name":"Name", "data":"Name"},
+        {"page":"Model_Config", "name":"Algorithm Specification", "data":"Algorithm Specification"},
+        {"page":"Model_Config", "name":"Training Key", "data":"Training Key"},
+        {"page":"Model_Config", "name":"Hyperparameter Key", "data":"Hyperparameter Key"},
+        {"page":"Model_Config", "name":"Status", "data":"Status"}
     ]
 }
