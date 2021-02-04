@@ -18,6 +18,7 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			string data = "";
 			string xpath = "";
+			string ref = "";
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Algorithm Specification Row") || step.Name.Equals("Training Key Row")) {
