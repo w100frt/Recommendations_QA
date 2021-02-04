@@ -5,11 +5,18 @@
 		{"name":"Create","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[2]/a[1]"},
 		{"name":"Show Inactive","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/a[2]"},
 		{"name":"ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[1]"},
+		{"name":"ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[2]"},
+		{"name":"Name Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Algorithm Specification","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[3]"},
+		{"name":"Algorithm Specification Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Training Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[4]"},
+		{"name":"Training Key Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Hyperparameter Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[5]"},
-		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[6]"}
+		{"name":"Hyperparameter Key Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[6]"},
+		{"name":"Status Row","objectType":"script","by":"xpath","objectId":"Row_Data"}
+
 		
 	]
 }
