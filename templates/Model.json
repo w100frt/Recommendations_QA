@@ -9,6 +9,13 @@
         {"page":"Model_Config", "name":"Algorithm Specification", "data":"Algorithm Specification"},
         {"page":"Model_Config", "name":"Training Key", "data":"Training Key"},
         {"page":"Model_Config", "name":"Hyperparameter Key", "data":"Hyperparameter Key"},
-        {"page":"Model_Config", "name":"Status", "data":"Status"}
+        {"page":"Model_Config", "name":"Status", "data":"Status"},
+        {"page":"Model_Config","name":"ID Row"},
+        {"page":"Model_Config","name":"Name Row"},
+        {"page":"Model_Config","name":"Algorithm Specification Row"},
+        {"page":"Model_Config","name":"Training Row"},
+        {"page":"Model_Config","name":"Hyperparameter Key Row"},
+        {"page":"Model_Config","name":"Status Row"}
+
     ]
 }
