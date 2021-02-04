@@ -15,15 +15,9 @@ namespace SeleniumProject.Function
 		public void Execute(DriverManager driver, TestStep step)
 		{
 			long order = step.Order;
-			string wait = step.Wait != null ? step.Wait : "";
-			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
-			ReadOnlyCollection<IWebElement> elements;
 			string data = "";
 			string xpath = "";
-			string url = "";
-			string utcDate = "";
-			IJavaScriptExecutor js = (IJavaScriptExecutor)driver.GetDriver();
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Mock Training Data Timestamp Input") || step.Name.Equals("Mock Prediction Data Timestamp Input")) {
@@ -65,7 +59,6 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("value");
 				DateTime tDate = DateTime.Now;
-				//String.Format("mm/dd/yyyy", tDate);
 				string toDate = tDate.ToString();
 				string dataSplit = data.Substring(0,8);
 				string toDateSplit = toDate.Substring(0,8);        
@@ -78,11 +71,6 @@ namespace SeleniumProject.Function
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
 				}
-
-				// if (DateTime.TryParse(data, out tDate))
-				// {
-					
-				// }
 			}
 
 			else {
