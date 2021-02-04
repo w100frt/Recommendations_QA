@@ -1,5 +1,5 @@
 ﻿{
-    "testCase":"Template_CreateModel_Config",
+    "testCase":"Template_Model",
     "testId":"t7",
     "testSteps":[
         {"page":"Model_Config", "name":"Model_Config Configurations", "data":"Model_Config Configurations"},
