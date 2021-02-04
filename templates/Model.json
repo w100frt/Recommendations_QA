@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_CreateModel_Config",
-    "testId":"t1",
+    "testId":"t7",
     "testSteps":[
         {"page":"Model_Config", "name":"Model_Config Configurations", "data":"Model_Config Configurations"},
         {"page":"Model_Config", "name":"Show Inactive", "data":"Show Inactive"},
