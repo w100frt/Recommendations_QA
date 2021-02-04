@@ -44,7 +44,7 @@ namespace SeleniumProject.Function
 			}
 			
 
-			else if (step.Name.Equals("Name Row") || step.Name.Equals("Hyperparameter Key Row")) || step.Name.Equals("Status Row")) {
+			else if (step.Name.Equals("Name Row") || step.Name.Equals("Hyperparameter Key Row") || step.Name.Equals("Status Row")) {
 				if (step.Name.Equals("Name Row")) {
 					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[2]";
 				}
