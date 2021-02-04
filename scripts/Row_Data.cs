@@ -60,10 +60,10 @@ namespace SeleniumProject.Function
 				log.Info(text);
 				
 				if(data is string) {
-					log.Info("Verification Passed." + data + "is text");
+					log.Info("Verification Passed." + text + "is text");
 				} 
 				else {
-					log.Error("***Verification Failed." + data + "is NOT text");
+					log.Error("***Verification Failed." + text + "is NOT text");
 					err.CreateVerificationError(step, xpath, data);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
@@ -82,10 +82,10 @@ namespace SeleniumProject.Function
 
 
 				if(idUrl.Contains("href")) {
-					log.Info("Verification Passed." + data + "is a link");
+					log.Info("Verification Passed." + idUrl + "is a link");
 				} 
 				else {
-					log.Error("***Verification Failed." + data + "is NOT a link");
+					log.Error("***Verification Failed." + idUrl + "is NOT a link");
 					err.CreateVerificationError(step, xpath, data);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
