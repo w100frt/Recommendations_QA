@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_CreateModel",
+    "testId":"t1",
+    "testSteps":[
+        {"page":"Model", "name":"Model Configurations", "data":"Model Configurations"},
+        {"page":"Model", "name":"Show Inactive", "data":"Show Inactive"},
+        {"page":"Model", "name":"ID", "data":"ID"},
+        {"page":"Model", "name":"Name", "data":"Name"},
+        {"page":"Model", "name":"Algorithm Specification", "data":"Algorithm Specification"},
+        {"page":"Model", "name":"Training Key", "data":"Training Key"},
+        {"page":"Model", "name":"Hyperparameter Key", "data":"Hyperparameter Key"},
+        {"page":"Model", "name":"Status", "data":"Status"}
+    ]
+}
