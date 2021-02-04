@@ -57,7 +57,7 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement("xpath", xpath);
 				string  text = ele.ToString();
-
+				log.Info(text)
 				
 				if(data is string) {
 					log.Info("Verification Passed." + data + "is text");
@@ -78,6 +78,8 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement("xpath", xpath);
 				string  idUrl = ele.ToString();
+				log.Info(idUrl)
+
 
 				if(idUrl.Contains("href")) {
 					log.Info("Verification Passed." + data + "is a link");
