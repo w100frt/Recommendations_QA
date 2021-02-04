@@ -78,7 +78,7 @@ namespace SeleniumProject.Function
 				
 				
 				try {
-					ele = driver.FindElement("xpath", "//table[@class='entity-table']/tbody/tr[1]/td[1]/a[1]");
+					ele = driver.FindElement("xpath", "//table[@class='entity-table']/tbody/tr[1]/td[1]/a");
 					ref = ele.GetAttribute("href");
 					log.Info("Verification PASSED. HREF found: " + ref);
 				}
