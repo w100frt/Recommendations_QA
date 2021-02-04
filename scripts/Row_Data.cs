@@ -72,7 +72,7 @@ namespace SeleniumProject.Function
 
 			else if (step.Name.Equals("ID Row") || step.Name.Equals("ID Row 2")) {
 				if (step.Name.Equals("ID Row")) {
-					xpath = "//*[@class=“entity-table”]/tbody/tr[1]/td[1]/a[1]/@href";
+					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[1]/a[1]";
 				}
 				
 				
