@@ -19,8 +19,12 @@
 		{"name":"Hyperparameter Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[5]"},
 		{"name":"Hyperparameter Key Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[6]"},
-		{"name":"Status Row","objectType":"script","by":"xpath","objectId":"Row_Data"}
-
+		{"name":"Status Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Test ID","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Test Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Test Description","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Test Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Test Training Engine Factory Type","objectType":"script","by":"xpath","objectId":"Row_Data"}
 		
 	]
 }
