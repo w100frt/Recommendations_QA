@@ -130,7 +130,7 @@ namespace SeleniumProject.Function
 				data = ele.GetAttribute("textContent");
 				string  text = data.ToString();
 				
-				if(string.IsNullorEmpty(text)) {
+				if(text == null) {
 					log.Error("***Verification Failed." + text + "is NOT text");
 					err.CreateVerificationError(step, xpath, text);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
