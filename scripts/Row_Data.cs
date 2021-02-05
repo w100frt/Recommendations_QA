@@ -131,10 +131,10 @@ namespace SeleniumProject.Function
 				string  textValue = data.ToString();
 				
 				if(String.IsNullOrEmpty(textValue) == false ) {
-					log.Info("Verification Passed." + text + "is text");
+					log.Info("Verification Passed." + textValue + "is text");
 				} 
 				else {
-					log.Error("***Verification Failed." + text + "is NOT text");
+					log.Error("***Verification Failed." + textValue + "is NOT text");
 					err.CreateVerificationError(step, xpath, text);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
