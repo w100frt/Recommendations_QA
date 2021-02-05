@@ -129,8 +129,10 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("textContent");
 				string  text = data.ToString();
-				
-				if(text.IsEmpty()) {
+				int textLength = text.Length;
+				log.Info(textLength)
+
+				if(textLength == 0) {
 					log.Error("***Verification Failed." + text + "is NOT text");
 					err.CreateVerificationError(step, xpath, text);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
