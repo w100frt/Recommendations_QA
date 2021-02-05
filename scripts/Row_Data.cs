@@ -93,7 +93,7 @@ namespace SeleniumProject.Function
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("href");
 				if(data is string) {
-					log.Info("Verification Passed." + data + "is a url";
+					log.Info("Verification Passed." + data + "is a url");
 				} 
 				else {
 					log.Error("***Verification Failed." + data + "is not a url");
