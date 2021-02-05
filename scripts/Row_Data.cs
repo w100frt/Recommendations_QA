@@ -90,6 +90,39 @@ namespace SeleniumProject.Function
 				}
 			}
 
+			else if (step.Name.Equals("Test ID") || step.Name.Equals("Test Name") || step.Name.Equals("Test Description") || 
+				step.Name.Equals("Test Status") || step.Name.Equals("Test Training Engine Factory Type")) {
+				if (step.Name.Equals("Test ID")) {
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]";
+				}
+				else if (step.Name.Equals("Test Name")) {
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[2]";
+				}
+				else if (step.Name.Equals("Test Description")) {
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[3]";
+				}
+				else if (step.Name.Equals("Test Status")) {
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[4]";
+				}
+				else if (step.Name.Equals("Test Training Engine Factory Type")) {
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[5]";
+				}
+				
+				ele = driver.FindElement("xpath", xpath);
+				data = ele.GetAttribute("outerText");
+				string  text = data.ToString();
+				
+				if(data is string) {
+					log.Info("Verification Passed." + text + "is text");
+				} 
+				else {
+					log.Error("***Verification Failed." + text + "is NOT text");
+					err.CreateVerificationError(step, xpath, text);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+
+				}
+			}
+
 			else {
 				throw new Exception("Test Step not found in script");
 			}
