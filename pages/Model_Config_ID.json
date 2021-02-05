@@ -1,0 +1,34 @@
+﻿{
+	"page":"Model_Config_ID",
+	"testDefinitions":[
+		{"name":"View Model Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[1]/h2"},
+		{"name":"Model Configuration ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[2]/div[1]/span"},
+		{"name":"Model Configuration ID Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Model Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[3]/div[1]/span"},
+		{"name":"Model Configuration Name Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Algorithm Specification","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[4]/div[1]/span"},
+		{"name":"Click Algorithm Specification","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[4]/div[2]/span/button"},
+		{"name":"Close Algorithm Specification Menu","objectType":"click","by":"xpath","objectId":"/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[1]/button"},
+		{"name":"Training Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[5]/div[1]/span"},
+		{"name":"Click Training Key","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[5]/div[2]/span/button"},
+		{"name":"Close Training Key Menu","objectType":"click","by":"xpath","objectId":"/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[1]/button"},
+		{"name":"Published","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[6]/div[1]/span"},
+		{"name":"Published Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Published Date","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[7]/div[1]/span"},
+		{"name":"Published Date Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Hyperparameter Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[8]/div[1]/span"},
+		{"name":"Hyperparameter Key Data","objectType":"script","by":"xpath","objectId":"Row_Data"},		
+		{"name":"Model Instances Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[1]/h2"},
+		{"name":"ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[1]"},
+		{"name":"ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Training Job ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[2]"},
+		{"name":"Training Job ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[3]"},
+		{"name":"Status Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Training Data Timestamp","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[4]"},
+		{"name":"Training Data Timestamp Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Edit","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[10]/div/a[1]"},
+		{"name":"View All Model Instances","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[10]/div/a[2]"}
+		
+	]
+}
