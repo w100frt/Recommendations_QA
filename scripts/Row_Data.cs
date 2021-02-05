@@ -57,7 +57,7 @@ namespace SeleniumProject.Function
 				
 				ele = driver.FindElement("xpath", xpath);
 				string  text = ele.ToString();
-				log.Info(text);
+				data = ele.GetAttribute("outerText");
 				
 				if(data is string) {
 					log.Info("Verification Passed." + text + "is text");
