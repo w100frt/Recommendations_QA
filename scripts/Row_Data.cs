@@ -84,11 +84,30 @@ namespace SeleniumProject.Function
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
 			}
+			else if (step.Name.Equals("ID Row") || step.Name.Equals("ID Row 2")) {
+				if (step.Name.Equals("ID Row")) {
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[1]/a";
+				}
+				
+				
+				ele = driver.FindElement("xpath", xpath);
+				data = ele.GetAttribute("href");
+				if(data is string) {
+					log.Info("Verification Passed." + data + "is a url";
+				} 
+				else {
+					log.Error("***Verification Failed." + data + "is not a url");
+					err.CreateVerificationError(step, data, xpath);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 
+				}
+			}
 
 			else {
 				throw new Exception("Test Step not found in script");
 			}
+
+			
 		}
 	}
 }
