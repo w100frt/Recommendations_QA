@@ -128,16 +128,16 @@ namespace SeleniumProject.Function
 
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("textContent");
-				string  textValue = data.ToString();
+				string  text = data.ToString();
 				
-				if(String.IsNullOrEmpty(textValue)) {
-					log.Error("***Verification Failed." + textValue + "is NOT text");
-					err.CreateVerificationError(step, xpath, text);
-					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
-					
+				if(data is string) {
+					log.Info("Verification Passed." + text + "is text");
 				} 
 				else {
-					log.Info("Verification Passed." + textValue + "is text");					
+					log.Error("***Verification Failed." + text + "is NOT text");
+					err.CreateVerificationError(step, xpath, text);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+
 				}
 			}
 
