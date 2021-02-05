@@ -22,10 +22,10 @@ namespace SeleniumProject.Function
 			
 			if (step.Name.Equals("Algorithm Specification Row") || step.Name.Equals("Training Key Row")) {
 				if (step.Name.Equals("Algorithm Specification Row")) {
-					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[3]/div/button";
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[3]/div/button";
 				}
 				else if (step.Name.Equals("Training Key Row")) {
-					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[4]/div/button";
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[4]/div/button";
 				}
 				
 				ele = driver.FindElement("xpath", xpath);
@@ -46,13 +46,13 @@ namespace SeleniumProject.Function
 
 			else if (step.Name.Equals("Name Row") || step.Name.Equals("Hyperparameter Key Row") || step.Name.Equals("Status Row")) {
 				if (step.Name.Equals("Name Row")) {
-					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[2]";
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[2]";
 				}
 				else if (step.Name.Equals("Hyperparameter Key Row")) {
-					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[5]";
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[5]";
 				}
 				else if (step.Name.Equals("Status Row")) {
-					xpath = "/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[6]";
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[6]";
 				}
 				
 				ele = driver.FindElement("xpath", xpath);
