@@ -128,9 +128,9 @@ namespace SeleniumProject.Function
 
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("textContent");
-				string  text = data.ToString();
+				string  textValue = data.ToString();
 				
-				if(data is string) {
+				if(String.IsNullOrEmpty(textValue)) == false {
 					log.Info("Verification Passed." + text + "is text");
 				} 
 				else {
