@@ -2,7 +2,7 @@
 	"testCase":"Model Configuration",
 	"env":"dev",
 	"testId":"12",
-	"testRail":"",
+	"testRail":"7885346",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

@@ -1,7 +1,7 @@
 ﻿{
     "project":"rec",
 	"testRailProjectId": "148",
-	"jobName":"Model Flow",
+	"jobName":"Regression",
     "env":"stg",
     "browser":"chrome",
     "testView":"desktop",
@@ -16,6 +16,8 @@
         {"testId":8},
         {"testId":9},
         {"testId":10},
-        {"testId":11}
+        {"testId":11},
+        {"testId":12}
+
     ]
 }
