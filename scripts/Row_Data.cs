@@ -18,7 +18,6 @@ namespace SeleniumProject.Function
 			IWebElement ele;
 			string data = "";
 			string xpath = "";
-			string ref = "";
 			VerifyError err = new VerifyError();
 			
 			if (step.Name.Equals("Algorithm Specification Row") || step.Name.Equals("Training Key Row")) {
@@ -76,12 +75,12 @@ namespace SeleniumProject.Function
 				
 				try {
 					ele = driver.FindElement("xpath", "//table[@class='entity-table']/tbody/tr[1]/td[1]/a");
-					ref = ele.GetAttribute("href");
-					log.Info("Verification PASSED. HREF found: " + ref);
+					string url1 = ele.GetAttribute("href");
+					log.Info("Verification PASSED. HREF found: " + url1);
 				}
 				catch (Exception e) {
 					log.Error("***Verification Failed. No HREF tag found. Exception: " + e);
-					err.CreateVerificationError(step, "HREF", ref);
+					err.CreateVerificationError(step, "HREF", url1);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				}
 			}
