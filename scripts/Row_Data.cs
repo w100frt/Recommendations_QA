@@ -130,7 +130,7 @@ namespace SeleniumProject.Function
 				data = ele.GetAttribute("textContent");
 				string  text = data.ToString();
 				int textLength = text.Length;
-				log.Info(textLength)
+				log.Info(textLength);
 
 				if(textLength == 0) {
 					log.Error("***Verification Failed." + text + "is NOT text");
