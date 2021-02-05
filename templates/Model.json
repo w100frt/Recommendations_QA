@@ -15,7 +15,11 @@
         {"page":"Model_Config","name":"Algorithm Specification Row"},
         {"page":"Model_Config","name":"Training Key Row"},
         {"page":"Model_Config","name":"Hyperparameter Key Row"},
-        {"page":"Model_Config","name":"Status Row"}
+        {"page":"Model_Config","name":"Status Row"},
+        {"page":"Model_Config","name":"Click Algorithm Specification Row"},
+        {"page":"Model_Config","name":"Close Algorithm Specification Row Menu"},
+        {"page":"Model_Config","name":"Click Training Key Row"},
+        {"page":"Model_Config","name":"Close Training Key Row Menu"}
 
     ]
 }
