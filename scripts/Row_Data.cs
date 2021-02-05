@@ -95,38 +95,39 @@ namespace SeleniumProject.Function
 				|| step.Name.Equals("Training Key ID") || step.Name.Equals("Training Key Name") || step.Name.Equals("Training Key Description") ||
 				step.Name.Equals("Training Key Status") || step.Name.Equals("Training Key Class Name")) {
 				if (step.Name.Equals("Test ID")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
+					//*[@id="mcmodal-bc8e4227-3b40-48fc-9566-9cd67699005b"]/div/div/div[2]/form/div[1]/span
 				}
 				else if (step.Name.Equals("Test Name")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[2]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[2]/span";
 				}
 				else if (step.Name.Equals("Test Description")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[3]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[3]/span";
 				}
 				else if (step.Name.Equals("Test Status")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[4]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[4]/span";
 				}
 				else if (step.Name.Equals("Test Training Engine Factory Type")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[5]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[5]/span";
 				}
 				else if (step.Name.Equals("Training Key ID")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[1]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[1]/span";
 				}
 				else if (step.Name.Equals("Training Key Name")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[2]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[2]/span";
 				}
 				else if (step.Name.Equals("Training Key Description")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[3]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[3]/span";
 				}
 				else if (step.Name.Equals("Training Key Status")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[4]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[4]/span";
 				}
 				else if (step.Name.Equals("Training Key Class Name")) {
-					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[5]";
+					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[5]/span";
 				}
 
 				ele = driver.FindElement("xpath", xpath);
-				data = ele.GetAttribute("outerText");
+				data = ele.GetAttribute("textContent");
 				string  text = data.ToString();
 				
 				if(data is string) {
