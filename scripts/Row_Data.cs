@@ -130,7 +130,7 @@ namespace SeleniumProject.Function
 				data = ele.GetAttribute("textContent");
 				string  textValue = data.ToString();
 				
-				if(String.IsNullOrEmpty(textValue)) == false {
+				if(String.IsNullOrEmpty(textValue) == false ) {
 					log.Info("Verification Passed." + text + "is text");
 				} 
 				else {
