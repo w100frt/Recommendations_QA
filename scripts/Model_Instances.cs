@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using log4net;
 using System.Threading;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace SeleniumProject.Function
 {
@@ -23,14 +24,14 @@ namespace SeleniumProject.Function
 			bool modelInstancesTable = false;
 			
 			ele = driver.FindElement("xpath", "/html/body/div").GetAttribute("main");
-			if (ele.Contains("div[10]/table"))
+			if (ele.Contains("div[10]/table")){
 				modelInstancesTable = true;
-			else 
+			}
+			else{ 
 				modelInstancesTable = false;
-			
+			}
 			log.Info(modelInstancesTable);
 
-			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
 			|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
 				|| step.Name.Equals("Training Data Timestamp Row")) {
