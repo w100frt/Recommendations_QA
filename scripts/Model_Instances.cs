@@ -20,7 +20,7 @@ namespace SeleniumProject.Function
 			string xpath = "";
 			VerifyError err = new VerifyError();
 			string noInstancesTable = "";
-			bool modelInstancesTable = "";
+			bool modelInstancesTable = false;
 			
 			string instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]");
 			if (instancesTable.Contains("table")){
