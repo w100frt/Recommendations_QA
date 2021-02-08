@@ -25,9 +25,10 @@ namespace SeleniumProject.Function
 			
 			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/table");
 			string instancesTable = ele.ToString();
+			int instancesCount = instancesTable.Length;
 
-			if (instancesTable) {
-				modelInstancesTable = true;
+			if (instancesCount == 0) {
+				modelInstancesTable = false;
 			}
 			else{ 
 				modelInstancesTable = false;
