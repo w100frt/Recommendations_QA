@@ -1,0 +1,14 @@
+﻿{
+	"testCase":"Model Configuration",
+	"env":"dev",
+	"testId":"12",
+	"testRail":"7885346",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Model Header"},
+		{"page":"Model_Config", "name":"Click ID Row"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Navigation","name":"Run Template", "data":"Model_ID"}
+	]
+}

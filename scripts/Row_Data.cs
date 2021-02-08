@@ -93,10 +93,12 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Test ID") || step.Name.Equals("Test Name") || step.Name.Equals("Test Description") || 
 				step.Name.Equals("Test Status") || step.Name.Equals("Test Training Engine Factory Type") 
 				|| step.Name.Equals("Training Key ID") || step.Name.Equals("Training Key Name") || step.Name.Equals("Training Key Description") ||
-				step.Name.Equals("Training Key Status") || step.Name.Equals("Training Key Class Name")) {
+				step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
+				|| step.Name.Equals("Published Data")  || step.Name.Equals("Published Date Data") || step.Name.Equals("Hyperparameter Key Data") 
+				|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
+				|| step.Name.Equals("Training Data Timestamp Row")) {
 				if (step.Name.Equals("Test ID")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
-					//*[@id="mcmodal-bc8e4227-3b40-48fc-9566-9cd67699005b"]/div/div/div[2]/form/div[1]/span
 				}
 				else if (step.Name.Equals("Test Name")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[2]/span";
@@ -124,6 +126,33 @@ namespace SeleniumProject.Function
 				}
 				else if (step.Name.Equals("Training Key Class Name")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("Model Configuration ID Data")) {
+					xpath = "/html/body/div/main/div[2]/div[2]/span";
+				}
+				else if (step.Name.Equals("Model Configuration Name Data")) {
+					xpath = "/html/body/div/main/div[3]/div[2]/span";
+				}
+				else if (step.Name.Equals("Published Data")) {
+					xpath = "/html/body/div/main/div[6]/div[2]/span";
+				}
+				else if (step.Name.Equals("Published Date Data")) {
+					xpath = "/html/body/div/main/div[7]/div[2]/span";
+				}
+				else if (step.Name.Equals("Hyperparameter Key Data")) {
+					xpath = "/html/body/div/main/div[8]/div[2]/span";
+				}
+				else if (step.Name.Equals("ID Row Data")) {
+					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[1]";
+				}
+				else if (step.Name.Equals("Training Job ID Row")) {
+					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[2]";
+				}
+				else if (step.Name.Equals("Status Row")) {
+					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[3]";
+				}
+				else if (step.Name.Equals("Training Data Timestamp Row")) {
+					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
 				}
 
 				ele = driver.FindElement("xpath", xpath);

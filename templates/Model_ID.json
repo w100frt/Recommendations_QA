@@ -1,0 +1,33 @@
+﻿{
+    "testCase":"Template_Model_ID",
+    "testId":"t8",
+    "testSteps":[
+        {"page":"Model_Config_ID", "name":"View Model Header", "data":"View Model Configuration - Model configuration name"},
+        {"page":"Model_Config_ID", "name":"Model Configuration ID", "data":"Model Configuration ID:"},
+        {"page":"Model_Config_ID", "name":"Model Configuration ID Data"},
+        {"page":"Model_Config_ID", "name":"Model Configuration Name", "data":"Model Configuration Name:"},
+        {"page":"Model_Config_ID", "name":"Model Configuration Name Data"},
+        {"page":"Model_Config_ID", "name":"Algorithm Specification", "data":"Algorithm Specification:"},
+        {"page":"Model_Config_ID","name":"Click Algorithm Specification Row"},
+        {"page":"Model_Config_ID","name":"Close Algorithm Specification Menu"},
+        {"page":"Model_Config_ID", "name":"Training Key:", "data":"Algorithm Specification"},
+        {"page":"Model_Config_ID","name":"Click Training Key"},
+        {"page":"Model_Config_ID","name":"Close Training Key Menu"},
+        {"page":"Model_Config_ID", "name":"Published", "data":"Published:"},
+        {"page":"Model_Config_ID", "name":"Published Data"},
+        {"page":"Model_Config_ID", "name":"Published Date", "data":"Published Date:"},
+        {"page":"Model_Config_ID", "name":"Published Date Data"},
+        {"page":"Model_Config_ID", "name":"Hyperparameter Key", "data":"Hyperparameter Key:"},
+        {"page":"Model_Config_ID", "name":"Hyperparameter Key Data"},
+        {"page":"Model_Config_ID", "name":"Model Instances Header", "data":"Model Instances"},
+        {"page":"Model_Config_ID", "name":"ID", "data":"ID"},
+        {"page":"Model_Config_ID", "name":"ID Row"},
+        {"page":"Model_Config_ID", "name":"Training Job ID", "data":"Published:"},
+        {"page":"Model_Config_ID", "name":"Training Job ID Row"},
+        {"page":"Model_Config_ID", "name":"Status", "data":"Published:"},
+        {"page":"Model_Config_ID", "name":"Status Row"},
+        {"page":"Model_Config_ID", "name":"Training Data Timestamp", "data":"Published:"},
+        {"page":"Model_Config_ID", "name":"Training Data Timestamp Row"}
+
+    ]
+}
