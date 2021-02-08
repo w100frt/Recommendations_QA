@@ -23,7 +23,7 @@ namespace SeleniumProject.Function
 			string noInstancesTable = "";
 			bool modelInstancesTable = false;
 			
-			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/table");
+			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/table").Count();
 			string instancesTable = ele.ToString();
 			int instancesCount = instancesTable.Length;
 
