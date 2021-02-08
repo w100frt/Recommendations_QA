@@ -80,10 +80,11 @@ namespace SeleniumProject.Function
 					}
 				}
 				else {
-					noInstancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]/span");
-					data = instancesTable.GetAttribute("textContent");
+					ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/span");
+					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
 					log.Info(text);
+
 					if(text != "No Model instances are available for this configuration") {
 						log.Error("***Verification Failed. Table not present and incorrect message text.");
 						err.CreateVerificationError(step, xpath, text);
