@@ -54,7 +54,7 @@ namespace SeleniumProject.Function
 					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
 				}
 				
-				if(textChars) > 0){
+				if(textChars > 0){
 					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
