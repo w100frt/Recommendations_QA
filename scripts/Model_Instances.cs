@@ -23,8 +23,6 @@ namespace SeleniumProject.Function
 			string noInstancesTable = "";
 			
 			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count;
-			log.Info(instancesTable);
-
 			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
 			|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
@@ -72,7 +70,6 @@ namespace SeleniumProject.Function
 				}
 				else {
 					noInstancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]/span");
-					log.Info(noInstancesTable);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
 					log.Info(text);
