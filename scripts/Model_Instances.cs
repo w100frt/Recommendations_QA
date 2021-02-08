@@ -23,7 +23,6 @@ namespace SeleniumProject.Function
 			string noInstancesTable = "";
 			
 			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count;
-			int textChars = instancesTable.Length;
 
 			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
@@ -54,7 +53,7 @@ namespace SeleniumProject.Function
 					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
 				}
 				
-				if(textChars > 0){
+				if(instancesTable > 0){
 					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
