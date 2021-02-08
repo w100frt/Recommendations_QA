@@ -21,7 +21,13 @@ namespace SeleniumProject.Function
 			VerifyError err = new VerifyError();
 			string noInstancesTable = "";
 			
-			bool instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]/table").isDisplayed();
+			bool instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]");
+			if (instancesTable.Contains("table")){
+			}
+				modelInstancesTable = true;
+			else{
+				modelInstancesTable = false;
+			}
 			log.Info(instancesTable);
 
 			
@@ -53,7 +59,7 @@ namespace SeleniumProject.Function
 					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
 				}
 				
-				if(instancesTable == true){
+				if(modelInstancesTable == true){
 					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
