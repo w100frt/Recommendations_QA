@@ -20,8 +20,9 @@ namespace SeleniumProject.Function
 			string xpath = "";
 			VerifyError err = new VerifyError();
 			string noInstancesTable = "";
+			bool modelInstancesTable = "";
 			
-			bool instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]");
+			string instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]");
 			if (instancesTable.Contains("table")){
 			
 				modelInstancesTable = true;
@@ -29,7 +30,7 @@ namespace SeleniumProject.Function
 			else {
 				modelInstancesTable = false;
 			}
-			log.Info(instancesTable);
+			log.Info(modelInstancesTable);
 
 			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
