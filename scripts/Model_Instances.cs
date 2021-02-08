@@ -81,7 +81,7 @@ namespace SeleniumProject.Function
 				}
 				else {
 					noInstancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]/span");
-					data = ele.GetAttribute("textContent");
+					data = instancesTable.GetAttribute("textContent");
 					string  text = data.ToString();
 					log.Info(text);
 					if(text != "No Model instances are available for this configuration") {
