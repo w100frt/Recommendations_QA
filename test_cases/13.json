@@ -1,7 +1,7 @@
 ﻿{
-	"testCase":"Model Configuration",
+	"testCase":"Model Configuration ID",
 	"env":"dev",
-	"testId":"12",
+	"testId":"13",
 	"testRail":"7885346",
 	"testView":"desktop",
 	"testSteps":[
