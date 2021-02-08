@@ -19,7 +19,7 @@ namespace SeleniumProject.Function
 			string data = "";
 			string xpath = "";
 			VerifyError err = new VerifyError();
-			string instancesTable = "";
+			int instancesTable = "";
 			string noInstancesTable = "";
 			
 			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count;
