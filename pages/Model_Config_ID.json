@@ -18,7 +18,7 @@
 		{"name":"Published Date Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Hyperparameter Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[8]/div[1]/span"},
 		{"name":"Hyperparameter Key Data","objectType":"script","by":"xpath","objectId":"Row_Data"},		
-		{"name":"Model Instances Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[1]/h2"},
+		{"name":"Model Instances Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[9]/h2"},
 		{"name":"ID","objectType":"script","by":"xpath","objectId":"Model_Instances"},
 		{"name":"ID Row","objectType":"script","by":"xpath","objectId":"Model_Instances"},
 		{"name":"Training Job ID","objectType":"script","by":"xpath","objectId":"Model_Instances"},
