@@ -53,13 +53,13 @@ namespace SeleniumProject.Function
 				else if (step.Name.Equals("Training Data Timestamp Row")) {
 					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
 				}
-
-				ele = driver.FindElement("xpath", xpath);
-				data = ele.GetAttribute("textContent");
-				string  text = data.ToString();
-				int textLength = text.Length;
-				log.Info(textLength);
+				
 				if(instancesTable > 0){
+					ele = driver.FindElement("xpath", xpath);
+					data = ele.GetAttribute("textContent");
+					string  text = data.ToString();
+					int textLength = text.Length;
+					log.Info(textLength);
 					if(textLength == 0) {
 						log.Error("***Verification Failed." + text + "is NOT text");
 						err.CreateVerificationError(step, xpath, text);
