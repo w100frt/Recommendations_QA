@@ -80,17 +80,11 @@ namespace SeleniumProject.Function
 					}
 				}
 				else {
-					xpath = "/html/body/div/main/div[10]/span"
+					xpath = "/html/body/div/main/div[10]/span";
 					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
 					log.Info(text);
-
-					ele = driver.FindElement("xpath", xpath);
-					data = ele.GetAttribute("textContent");
-					string  text = data.ToString();
-					int textLength = text.Length;
-					log.Info(textLength);
 
 
 					if(text != "No Model instances are available for this configuration") {
