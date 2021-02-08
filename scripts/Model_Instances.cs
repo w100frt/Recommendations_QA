@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			string instancesTable = "";
 			string noInstancesTable = "";
 			
-			instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]/table");
+			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/table");
 			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
 			|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
@@ -52,7 +52,7 @@ namespace SeleniumProject.Function
 					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
 				}
 				
-				if(instancesTable){
+				if(ele){
 					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
