@@ -29,8 +29,8 @@ namespace SeleniumProject.Function
 			string text1 = data.ToString();
 			int textLength = text1.Length;
 
-			if (textLength > 1100) {
-				modelInstancesTable = false;
+			if (textLength > 1500) {
+				modelInstancesTable = true;
 			}
 			else{ 
 				modelInstancesTable = false;

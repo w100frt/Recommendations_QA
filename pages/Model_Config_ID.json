@@ -1,7 +1,7 @@
 ﻿{
 	"page":"Model_Config_ID",
 	"testDefinitions":[
-		{"name":"View Model Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[1]/h2"},
+		{"name":"View Model Header","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div[1]/h2"},
 		{"name":"Model Configuration ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[2]/div[1]/span"},
 		{"name":"Model Configuration ID Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Model Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[3]/div[1]/span"},

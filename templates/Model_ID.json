@@ -2,7 +2,7 @@
     "testCase":"Template_Model_ID",
     "testId":"t8",
     "testSteps":[
-        {"page":"Model_Config_ID", "name":"View Model Header", "data":"View Model Configuration - Model configuration name"},
+        {"page":"Model_Config_ID", "name":"View Model Header"},
         {"page":"Model_Config_ID", "name":"Model Configuration ID", "data":"Model Configuration ID:"},
         {"page":"Model_Config_ID", "name":"Model Configuration ID Data"},
         {"page":"Model_Config_ID", "name":"Model Configuration Name", "data":"Model Configuration Name:"},
