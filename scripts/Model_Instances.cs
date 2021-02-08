@@ -36,11 +36,13 @@ namespace SeleniumProject.Function
 				modelInstancesTable = false;
 			}
 			log.Info(modelInstancesTable);
+							
+							
+			if(modelInstancesTable == true){
 
-			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
-			|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
+				if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
+				|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
 				|| step.Name.Equals("Training Data Timestamp Row")) {
-				if(modelInstancesTable == true){
 
 					if (step.Name.Equals("ID")) {
 						xpath = "/html/body/div/main/div[10]/table/thead/tr/th[1]";
