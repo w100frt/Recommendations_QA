@@ -22,7 +22,7 @@ namespace SeleniumProject.Function
 			string instancesTable = "";
 			string noInstancesTable = "";
 			
-			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count
+			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count;
 			log.Info(instancesTable);
 
 			
