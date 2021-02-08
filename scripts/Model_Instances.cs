@@ -19,6 +19,10 @@ namespace SeleniumProject.Function
 			string data = "";
 			string xpath = "";
 			VerifyError err = new VerifyError();
+			string instancesTable = "";
+			string noInstancesTable = "";
+			
+			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count 
 			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
 			|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
@@ -53,14 +57,32 @@ namespace SeleniumProject.Function
 				string  text = data.ToString();
 				int textLength = text.Length;
 				log.Info(textLength);
+				if(instancesTable > 0){
+					if(textLength == 0) {
+						log.Error("***Verification Failed." + text + "is NOT text");
+						err.CreateVerificationError(step, xpath, text);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					} 
+					else {
+						log.Info("Verification Passed." + text + "is text");
 
-				if(textLength == 0) {
-					log.Error("***Verification Failed." + text + "is NOT text");
-					err.CreateVerificationError(step, xpath, text);
-					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
-				} 
+					}
+				}
 				else {
-					log.Info("Verification Passed." + text + "is text");
+					noInstancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]/span");
+					data = ele.GetAttribute("textContent");
+					string  text = data.ToString();
+					log.Info(text);
+					if(text != "No Model instances are available for this configuration") {
+						log.Error("***Verification Failed. Table not present and incorrect message text.");
+						err.CreateVerificationError(step, xpath, text);
+						driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+					} 
+					else {
+						log.Info("Verification Passed. Table is not present but text is present: No Model instances are available for this configuration");
+
+					}
+
 
 				}
 			}
