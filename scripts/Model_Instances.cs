@@ -22,8 +22,8 @@ namespace SeleniumProject.Function
 			string noInstancesTable = "";
 			bool modelInstancesTable = false;
 			
-			string instancesTable = driver.FindElement("xpath", "/html/body/div/main/div[10]");
-			if (instancesTable.Contains("table")){
+			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]");
+			if (ele.Contains("table")){
 			
 				modelInstancesTable = true;
 			}
