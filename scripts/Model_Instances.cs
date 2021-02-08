@@ -22,8 +22,8 @@ namespace SeleniumProject.Function
 			string instancesTable = "";
 			string noInstancesTable = "";
 			
-			ele = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count;
-			int textChars = ele.Length;
+			instancesTable = driver.FindElements("xpath", "/html/body/div/main/div[10]/table").Count;
+			int textChars = instancesTable.Length;
 
 			
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
