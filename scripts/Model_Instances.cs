@@ -26,8 +26,8 @@ namespace SeleniumProject.Function
 			xpath = "/html/body/div/main/div[10]";
 			ele = driver.FindElement("xpath", xpath);
 			data = ele.GetAttribute("outerHTML");
-			string text = data.ToString();
-			int textLength = text.Length;
+			string text1 = data.ToString();
+			int textLength = text1.Length;
 
 			if (textLength > 1100) {
 				modelInstancesTable = false;
