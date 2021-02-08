@@ -40,32 +40,33 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("ID") || step.Name.Equals("Training Job ID") || step.Name.Equals("Status") || step.Name.Equals("Training Data Timestamp") 
 			|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
 				|| step.Name.Equals("Training Data Timestamp Row")) {
-				if (step.Name.Equals("ID")) {
-					xpath = "/html/body/div/main/div[10]/table/thead/tr/th[1]";
-				}
-				else if (step.Name.Equals("Training Job ID")) {
-					xpath = "/html/body/div/main/div[10]/table/thead/tr/th[2]";
-				}
-				else if (step.Name.Equals("Status")) {
-					xpath = "/html/body/div/main/div[10]/table/thead/tr/th[3]";
-				}
-				else if (step.Name.Equals("Training Data Timestamp")) {
-					xpath = "/html/body/div/main/div[10]/table/thead/tr/th[4]";
-				}
-				else if (step.Name.Equals("ID Row Data")) {
-					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[1]";
-				}
-				else if (step.Name.Equals("Training Job ID Row")) {
-					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[2]";
-				}
-				else if (step.Name.Equals("Status Row")) {
-					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[3]";
-				}
-				else if (step.Name.Equals("Training Data Timestamp Row")) {
-					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
-				}
-				
 				if(modelInstancesTable == true){
+
+					if (step.Name.Equals("ID")) {
+						xpath = "/html/body/div/main/div[10]/table/thead/tr/th[1]";
+					}
+					else if (step.Name.Equals("Training Job ID")) {
+						xpath = "/html/body/div/main/div[10]/table/thead/tr/th[2]";
+					}
+					else if (step.Name.Equals("Status")) {
+						xpath = "/html/body/div/main/div[10]/table/thead/tr/th[3]";
+					}
+					else if (step.Name.Equals("Training Data Timestamp")) {
+						xpath = "/html/body/div/main/div[10]/table/thead/tr/th[4]";
+					}
+					else if (step.Name.Equals("ID Row Data")) {
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[1]";
+					}
+					else if (step.Name.Equals("Training Job ID Row")) {
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[2]";
+					}
+					else if (step.Name.Equals("Status Row")) {
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[3]";
+					}
+					else if (step.Name.Equals("Training Data Timestamp Row")) {
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
+					}
+					
 					ele = driver.FindElement("xpath", xpath);
 					data = ele.GetAttribute("textContent");
 					string  text = data.ToString();
