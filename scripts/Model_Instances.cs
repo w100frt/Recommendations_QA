@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using log4net;
 using System.Threading;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace SeleniumProject.Function
 {
@@ -22,11 +23,13 @@ namespace SeleniumProject.Function
 			string noInstancesTable = "";
 			bool modelInstancesTable = false;
 			
-			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/table").Count();
-			string instancesTable = ele.ToString();
-			int instancesCount = instancesTable.Length;
+			xpath = "/html/body/div/main/div[10]";
+			ele = driver.FindElement("xpath", xpath);
+			data = ele.GetAttribute("outerHTML");
+			string text = data.ToString();
+			int textLength = text.Length;
 
-			if (instancesCount == 0) {
+			if (textLength > 1100) {
 				modelInstancesTable = false;
 			}
 			else{ 
