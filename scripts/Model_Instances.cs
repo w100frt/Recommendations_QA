@@ -24,7 +24,7 @@ namespace SeleniumProject.Function
 			bool modelInstancesTable = false;
 			
 			ele = driver.FindElement("xpath", "/html/body/div/main/div[10]/table");
-			if (ele)){
+			if (ele){
 				modelInstancesTable = true;
 			}
 			else{ 
