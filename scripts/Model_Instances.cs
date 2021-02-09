@@ -27,7 +27,7 @@ namespace SeleniumProject.Function
 			bool modelInstancesTable = false;
 			
 			if (step.Name.Equals("Check for Model Instances Table")) {
-				count = driver.FindElements("xpath","/html/body/div/main/div[10]").Count;
+				count = driver.FindElements("xpath","//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]/table").Count;
 				
 				if (count > 0){
 					log.Info("Model Instances Table EXISTS. Running Table Verification Template.");
