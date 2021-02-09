@@ -7,6 +7,7 @@
 		{"name":"Model Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[3]/div[1]/span"},
 		{"name":"Model Configuration Name Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Algorithm Specification","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[4]/div[1]/span"},
+		{"name":"Check for Model Instances Table","objectType":"script","by":"xpath","objectId":"Model_Instances"},
 		{"name":"Click Algorithm Specification","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[4]/div[2]/span/button"},
 		{"name":"Close Algorithm Specification Menu","objectType":"click","by":"xpath","objectId":"/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[1]/button"},
 		{"name":"Training Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[5]/div[1]/span"},
@@ -28,7 +29,11 @@
 		{"name":"Training Data Timestamp","objectType":"script","by":"xpath","objectId":"Model_Instances"},
 		{"name":"Training Data Timestamp Row","objectType":"script","by":"xpath","objectId":"Model_Instances"},
 		{"name":"Edit","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[10]/div/a[1]"},
-		{"name":"View All Model Instances","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[10]/div/a[2]"}
+		{"name":"View All Model Instances","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[10]/div/a[2]"},
+		{"name":"Verify Column 1 Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[1]"},
+		{"name":"Verify Column 2 Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[2]"},
+		{"name":"Verify Column 3 Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[3]"},
+		{"name":"Verify Column 4 Header","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[10]/table/thead/tr/th[4]"}
 		
 	]
 }

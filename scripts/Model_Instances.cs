@@ -16,13 +16,64 @@ namespace SeleniumProject.Function
 		public void Execute(DriverManager driver, TestStep step)
 		{
 			long order = step.Order;
+			string wait = step.Wait != null ? step.Wait : "";
 			IWebElement ele;
 			string data = "";
 			string xpath = "";
+			int count = 0;
 			VerifyError err = new VerifyError();
 			string noInstancesTable = "";
 			bool modelInstancesTable = false;
 			
+			if (step.Name.Equals("Check for Model Instances Table")) {
+				count = driver.FindElements("xpath","/html/body/div/main/div[10]").Count;
+				
+				if (count > 0){
+					log.Info("Model Instances Table EXISTS. Running Table Verification Template.");
+					steps.Add(new TestStep(order, "Run Template for Table Verification", "ModelInstancesTable", "run_template", "xpath", "", wait));
+				}
+				else {
+					log.Info("Model Instances Table DOES NOT EXIST. Verifying No Model Instances message.");
+					steps.Add(new TestStep(order, "Verify No Table Text", "No Model instances are available for this configuration", "verify_value", "xpath", "//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]/span", wait));
+				}
+				TestRunner.RunTestSteps(driver, null, steps);
+				steps.Clear();
+			}
+			
+			else if (step.Name.Equals("ID Row") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") || step.Name.Equals("Training Data Timestamp Row")) {
+				switch (step.Name) {
+					case "ID Row": 
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[1]";
+						break;
+					case "Training Job ID Row":
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[2]";
+						break;
+					case "Status Row": 
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[3]";
+						break;
+					case "Training Data Timestamp Row":
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
+						break;
+					default: 
+						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
+						break;
+				}
+				
+				ele = driver.FindElement("xpath", xpath);
+				data = ele.GetAttribute("textContent");
+				int textLength1 = data.Length;
+				log.Info(textLength1);
+				if(textLength1 == 0) {
+					log.Error("***Verification Failed. " + text + " is NOT text");
+					err.CreateVerificationError(step, step.Name, text);
+					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
+				} 
+				else {
+					log.Info("Verification Passed. " + text + " is text");
+				}
+			}
+			
+			/*
 			xpath = "/html/body/div/main/div[10]";
 			ele = driver.FindElement("xpath", xpath);
 			data = ele.GetAttribute("outerHTML");
@@ -104,7 +155,7 @@ namespace SeleniumProject.Function
 
 
 				}
-			}
+			}*/
 
 			else {
 				throw new Exception("Test Step not found in script");

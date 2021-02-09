@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_ModelInstancesTable",
+    "testId":"t8",
+    "testSteps":[
+        {"page":"Model_Config_ID", "name":"Verify Column 1 Header", "data": "ID"},
+        {"page":"Model_Config_ID", "name":"ID Row"},
+        {"page":"Model_Config_ID", "name":"Verify Column 2 Header", "data": "TrainingJobID"},
+        {"page":"Model_Config_ID", "name":"Training Job ID Row"},
+        {"page":"Model_Config_ID", "name":"Verify Column 3 Header", "data": "Status"},
+        {"page":"Model_Config_ID", "name":"Status Row"},
+        {"page":"Model_Config_ID", "name":"Verify Column 4 Header", "data": "Training Data Timestamp"},
+        {"page":"Model_Config_ID", "name":"Training Data Timestamp Row"}
+    ]
+}
