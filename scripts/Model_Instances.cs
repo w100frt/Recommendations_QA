@@ -17,6 +17,7 @@ namespace SeleniumProject.Function
 		{
 			long order = step.Order;
 			string wait = step.Wait != null ? step.Wait : "";
+			List<TestStep> steps = new List<TestStep>();
 			IWebElement ele;
 			string data = "";
 			string xpath = "";
@@ -64,12 +65,12 @@ namespace SeleniumProject.Function
 				int textLength1 = data.Length;
 				log.Info(textLength1);
 				if(textLength1 == 0) {
-					log.Error("***Verification Failed. " + text + " is NOT text");
-					err.CreateVerificationError(step, step.Name, text);
+					log.Error("***Verification Failed. " + data + " is NOT text");
+					err.CreateVerificationError(step, step.Name, data);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
 				} 
 				else {
-					log.Info("Verification Passed. " + text + " is text");
+					log.Info("Verification Passed. " + data + " is text");
 				}
 			}
 			
