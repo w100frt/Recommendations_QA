@@ -44,19 +44,19 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("ID Row") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") || step.Name.Equals("Training Data Timestamp Row")) {
 				switch (step.Name) {
 					case "ID Row": 
-						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[1]";
+						xpath = "//main[div[h2[.='Model Instances']]]//table//tr[1]//td[1]";
 						break;
 					case "Training Job ID Row":
-						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[2]";
+						xpath = "//main[div[h2[.='Model Instances']]]//table//tr[1]//td[2]";
 						break;
 					case "Status Row": 
-						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[3]";
+						xpath = "//main[div[h2[.='Model Instances']]]//table//tr[1]//td[3]";
 						break;
 					case "Training Data Timestamp Row":
-						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
+						xpath = "//main[div[h2[.='Model Instances']]]//table//tr[1]//td[4]";
 						break;
 					default: 
-						xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
+						xpath = "//main[div[h2[.='Model Instances']]]//table//tr[1]//td";
 						break;
 				}
 				
