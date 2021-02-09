@@ -68,7 +68,7 @@ namespace SeleniumProject.Function
 					log.Error("***Verification Failed. " + data + " is NOT text");
 					err.CreateVerificationError(step, step.Name, data);
 					driver.TakeScreenshot(DataManager.CaptureMap["TEST_ID"] + "_verification_failure_" + DataManager.VerifyErrors.Count);
-				} 
+				}
 				else {
 					log.Info("Verification Passed. " + data + " is text");
 				}
