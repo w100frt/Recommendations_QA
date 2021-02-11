@@ -6,10 +6,6 @@
     "browser":"chrome",
     "testView":"desktop",
     "testIds": [
-        {"testId":1},
-        {"testId":2},
-        {"testId":3},
-        {"testId":4},
         {"testId":5},
         {"testId":6},
         {"testId":7},
@@ -17,7 +13,8 @@
         {"testId":9},
         {"testId":10},
         {"testId":11},
-        {"testId":12}
+        {"testId":12},
+        {"testId":13}
 
     ]
 }
