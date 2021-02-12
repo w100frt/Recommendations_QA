@@ -85,10 +85,14 @@ namespace SeleniumProject.Function
 			}
 
 			
-			else if (step.Name.Equals("ID Row") || step.Name.Equals("ID Row 2")) {
+			else if (step.Name.Equals("ID Row") || step.Name.Equals("Pred ID Row")) {
 				if (step.Name.Equals("ID Row")) {
 					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[1]/a";
 				}
+				if (step.Name.Equals("Pred ID Row")) {
+					xpath = "/html/body/div/main/div/div[2]/table/tbody/tr[1]/td[1]/a";
+				}
+
 				
 				
 				ele = driver.FindElement("xpath", xpath);
