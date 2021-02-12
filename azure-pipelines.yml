@@ -1,0 +1,54 @@
+pool:
+  name: QA-PC
+  demands: msbuild
+
+
+#Your build pipeline references the ‘test.project’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+#Your build pipeline references the ‘test.id’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+#Your build pipeline references the ‘test.env’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+#Your build pipeline references the ‘test.browser’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+
+schedules:
+- cron: "30 17 * * *"
+  displayName: daily
+  branches:
+    include:
+    - master
+  always: true
+
+steps:
+- task: NuGetToolInstaller@1
+  displayName: 'Use NuGet '
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: '**\SeleniumProject.sln'
+
+- task: MSBuild@1
+  displayName: 'Build solution **/SeleniumProject.sln'
+  inputs:
+    solution: '**/SeleniumProject.sln'
+
+- script: '$(Agent.BuildDirectory)\s\SeleniumProject\bin\Debug\SeleniumProject.exe "$(test.project)" "$(test.id)" "$(test.env)" "$(test.browser)"'
+  displayName: CMD
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/TestResult.xml'
+  inputs:
+    testResultsFormat: NUnit
+    testResultsFiles: '**/TestResult.xml'
+  condition: succeededOrFailed()
+
+- task: DeleteFiles@1
+  displayName: 'Delete Selenium directory build after this run'
+  inputs:
+    SourceFolder: '$(Agent.BuildDirectory)'
+    Contents: |
+      **/!(s)
+
+- task: DeleteFiles@1
+  displayName: 'Delete log files from this run'
+  inputs:
+    SourceFolder: SeleniumProject/bin/Debug
+    Contents: '*_log.log'
