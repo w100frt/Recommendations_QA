@@ -3,7 +3,7 @@
 	"testDefinitions":[
 		{"name":"Prediction Configurations","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/h1"},
 		{"name":"Create","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[2]/a[1]"},
-		{"name":"Show Inactive","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/a[2]"},
+		{"name":"Show Inactive","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[3]/a[2]"},
 		{"name":"ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
 		{"name":"ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Click ID Row","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[1]/a"},
