@@ -8,7 +8,7 @@
 		{"name":"Pred ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Click ID Row","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[1]/a"},
 		{"name":"Model Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
-		{"name":"Model Configuration Name Row","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/tbody/tr[1]/td[2]/a"},
+		{"name":"Model Configuration Name Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Prediction Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
 		{"name":"Prediction Key Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Click Prediction Key Row","objectType":"click","by":"xpath","objectId":"//table[@class='entity-table']/tbody/tr[1]/td[3]/div/button"},
