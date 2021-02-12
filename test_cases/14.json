@@ -1,0 +1,13 @@
+﻿{
+	"testCase":"Prediction Configuration",
+	"env":"dev",
+	"testId":"14",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Prediction Header"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Navigation","name":"Run Template", "data":"Prediction"}
+	]
+}

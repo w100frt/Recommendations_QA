@@ -1,0 +1,34 @@
+﻿{
+    "testCase":"Template_Prediction",
+    "testId":"t10",
+    "testSteps":[
+        {"page":"Model_Config", "name":"Prediction Configurations", "data":"Model Configurations"},
+        {"page":"Model_Config", "name":"Show Inactive", "data":"Show Inactive"},
+        {"page":"Model_Config", "name":"ID", "data":"ID"},
+        {"page":"Model_Config", "name":"Model Configuration Name", "data":"Model Configuration Name"},
+        {"page":"Model_Config", "name":"Prediction Key", "data":"Prediction Key"},
+        {"page":"Model_Config", "name":"Prediction Entity Mapping", "data":"Prediction Entity Mapping"},
+        {"page":"Model_Config", "name":"Pred Status", "data":"Status"},
+        {"page":"Model_Config","name":"ID Row"},
+        {"page":"Model_Config","name":"Model Configuration Name Row"},
+        {"page":"Model_Config","name":"Prediction Key Row"},
+        {"page":"Model_Config","name":"Prediction Entity Mapping Row"},
+        {"page":"Model_Config","name":"Pred Status Row"},
+        {"page":"Model_Config","name":"Click Prediction Key Row"},
+        {"page":"Model_Config","name":"Key ID"},
+        {"page":"Model_Config","name":"Key Name"},
+        {"page":"Model_Config","name":"Key Class Name"},
+        {"page":"Model_Config","name":"Key Description"},
+        {"page":"Model_Config","name":"Key Status"},
+        {"page":"Model_Config","name":"Close Prediction Key Row Menu"},
+        {"page":"Model_Config","name":"Click Prediction Entity Mapping Row"},
+        {"page":"Model_Config","name":"Entity ID"},
+        {"page":"Model_Config","name":"Entity Name"},
+        {"page":"Model_Config","name":"Entity Deployment Specification"},
+        {"page":"Model_Config","name":"Prediction Entity Type"},
+        {"page":"Model_Config","name":"Target Prediction Entity Type"},
+        {"page":"Model_Config","name":"Sample Controller Factory Type"},
+        {"page":"Model_Config","name":"Close Prediction Entity Mapping Row Menu"}
+
+    ]
+}

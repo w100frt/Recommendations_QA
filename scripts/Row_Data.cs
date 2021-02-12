@@ -20,11 +20,20 @@ namespace SeleniumProject.Function
 			string xpath = "";
 			VerifyError err = new VerifyError();
 			
-			if (step.Name.Equals("Algorithm Specification Row") || step.Name.Equals("Training Key Row")) {
+			if (step.Name.Equals("Algorithm Specification Row") || step.Name.Equals("Prediction Key Row") || 
+			step.Name.Equals("Prediction Entity Mapping Row") || step.Name.Equals("Training Key Row")) {
+
+				Prediction Entity Mapping Row
 				if (step.Name.Equals("Algorithm Specification Row")) {
 					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[3]/div/button";
 				}
 				else if (step.Name.Equals("Training Key Row")) {
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[4]/div/button";
+				}
+				else if (step.Name.Equals("Prediction Key Row")) {
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[3]/div/button";
+				}
+				else if (step.Name.Equals("Prediction Entity Mapping Row")) {
 					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[4]/div/button";
 				}
 				
@@ -44,7 +53,8 @@ namespace SeleniumProject.Function
 			}
 			
 
-			else if (step.Name.Equals("Name Row") || step.Name.Equals("Hyperparameter Key Row") || step.Name.Equals("Status Row")) {
+			else if (step.Name.Equals("Name Row") || step.Name.Equals("Hyperparameter Key Row") || step.Name.Equals("Status Row") || 
+			step.Name.Equals("Pred Status Row")) {
 				if (step.Name.Equals("Name Row")) {
 					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[2]";
 				}
@@ -54,6 +64,10 @@ namespace SeleniumProject.Function
 				else if (step.Name.Equals("Status Row")) {
 					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[6]";
 				}
+				else if (step.Name.Equals("Pred Status Row")) {
+					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[5]";
+				}
+				
 				
 				ele = driver.FindElement("xpath", xpath);
 				data = ele.GetAttribute("outerText");
@@ -92,11 +106,14 @@ namespace SeleniumProject.Function
 
 			else if (step.Name.Equals("Test ID") || step.Name.Equals("Test Name") || step.Name.Equals("Test Description") || 
 				step.Name.Equals("Test Status") || step.Name.Equals("Test Training Engine Factory Type") 
-				|| step.Name.Equals("Training Key ID") || step.Name.Equals("Training Key Name") || step.Name.Equals("Training Key Description") ||
-				step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
+				|| step.Name.Equals("Training Key ID") || step.Name.Equals("Training Key Name") || step.Name.Equals("Training Key Description") 
+				|| step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
 				|| step.Name.Equals("Published Data")  || step.Name.Equals("Published Date Data") || step.Name.Equals("Hyperparameter Key Data") 
-				|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") 
-				|| step.Name.Equals("Training Data Timestamp Row")) {
+				|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") || step.Name.Equals("Key ID") 
+				|| step.Name.Equals("Key Class Name") || step.Name.Equals("Key Name") || step.Name.Equals("Key Description") || step.Name.Equals("Key Status") 
+				|| step.Name.Equals("Entity ID") || step.Name.Equals("Entity Name") || step.Name.Equals("Entity Deployment Specification") 
+				|| step.Name.Equals("Prediction Entity Type") || step.Name.Equals("Target Prediction Entity Type") || step.Name.Equals("Sample Controller Factory Type") 
+				|| step.Name.Equals("Entity Status") ||step.Name.Equals("Training Data Timestamp Row")) {
 				if (step.Name.Equals("Test ID")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
 				}
@@ -153,6 +170,42 @@ namespace SeleniumProject.Function
 				}
 				else if (step.Name.Equals("Training Data Timestamp Row")) {
 					xpath = "/html/body/div/main/div[10]/table/tbody/tr/td[4]";
+				}
+				else if (step.Name.Equals("Key ID")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
+				}
+				else if (step.Name.Equals("Key Name")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[2]/span";
+				}
+				else if (step.Name.Equals("Key Class Name")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[3]/span";
+				}
+				else if (step.Name.Equals("Key Description")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[4]/span";
+				}
+				else if (step.Name.Equals("Key Status")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("Entity ID")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[1]/span";
+				}
+				else if (step.Name.Equals("Entity Name")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[2]/span";
+				}
+				else if (step.Name.Equals("Entity Deployment Specification")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[3]/span";
+				}
+				else if (step.Name.Equals("Prediction Entity Type")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[4]/span";
+				}
+				else if (step.Name.Equals("Target Prediction Entity Type")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("Sample Controller Factory Type")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[6]/span";
+				}
+				else if (step.Name.Equals("Entity Status")) {
+					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[7]/span";
 				}
 
 				ele = driver.FindElement("xpath", xpath);
