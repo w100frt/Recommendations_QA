@@ -23,7 +23,6 @@ namespace SeleniumProject.Function
 			if (step.Name.Equals("Algorithm Specification Row") || step.Name.Equals("Prediction Key Row") || 
 			step.Name.Equals("Prediction Entity Mapping Row") || step.Name.Equals("Training Key Row")) {
 
-				Prediction Entity Mapping Row
 				if (step.Name.Equals("Algorithm Specification Row")) {
 					xpath = "//table[@class='entity-table']/tbody/tr[1]/td[3]/div/button";
 				}
