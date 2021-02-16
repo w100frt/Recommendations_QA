@@ -1,0 +1,32 @@
+﻿{
+	"page":"Prediction_Config_ID",
+	"testDefinitions":[
+		{"name":"View Prediction Header","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div[2]/h2"},
+		{"name":"Prediction Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[3]/div[1]/span"},
+		{"name":"Prediction Configuration Name Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Configuration ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[4]/div[1]/span"},
+		{"name":"Prediction Configuration ID Data","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[6]/div[1]/span"},
+		{"name":"Click Prediction Key","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[6]/div[2]/span/button"},
+		{"name":"Prediction Key ID","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Key Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Key Class Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Key Description","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Key Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Close Prediction Key Menu","objectType":"click","by":"xpath","objectId":"/html/body/div[1]/main/div[6]/div[2]/span/div/div/div/div[1]/button"},
+		{"name":"Prediction Entity Mapping","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[7]/div[1]/span"},
+		{"name":"Click Prediction Entity Mapping","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[7]/div[2]/span/button"},
+		{"name":"Prediction Entity Mapping ID","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Entity Mapping Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Entity Mapping Deployment Specification","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"PEM Prediction Entity Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"PEM Target Prediction Entity Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"PEM Sample Controller Factory Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Entity Mapping Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Close Prediction Entity Mapping Menu","objectType":"click","by":"xpath","objectId":"/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[1]/button"},
+		{"name":"Edit","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div[8]/div/a"},
+		{"name":"Model Configuration","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[5]/div[1]/span"},
+		{"name":"Click Model Configuration","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[3]/div[1]/span"}
+		
+	]
+}

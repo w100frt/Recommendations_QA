@@ -118,7 +118,11 @@ namespace SeleniumProject.Function
 				|| step.Name.Equals("Key Class Name") || step.Name.Equals("Key Name") || step.Name.Equals("Key Description") || step.Name.Equals("Key Status") 
 				|| step.Name.Equals("Entity ID") || step.Name.Equals("Entity Name") || step.Name.Equals("Entity Deployment Specification") 
 				|| step.Name.Equals("Prediction Entity Type") || step.Name.Equals("Target Prediction Entity Type") || step.Name.Equals("Sample Controller Factory Type") 
-				|| step.Name.Equals("Entity Status") ||step.Name.Equals("Training Data Timestamp Row")) {
+				|| step.Name.Equals("Entity Status") || step.Name.Equals("Prediction Key ID") || step.Name.Equals("Prediction Key Name") 
+				|| step.Name.Equals("Prediction Key Class Name") || step.Name.Equals("Prediction Key Description") || step.Name.Equals("Prediction Key Status")
+				|| step.Name.Equals("Prediction Entity Mapping ID") || step.Name.Equals("Prediction Entity Mapping Name") || step.Name.Equals("Prediction Entity Mapping Class Name") 
+				|| step.Name.Equals("Prediction Entity Mapping Deployment Specification") || step.Name.Equals("PEM Prediction Entity Type") || step.Name.Equals("PEM Target Prediction Entity Type") 
+				|| step.Name.Equals("PEM Sample Controller Factory Type") || step.Name.Equals("Prediction Entity Mapping Status")) {
 				if (step.Name.Equals("Test ID")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
 				}
@@ -211,6 +215,42 @@ namespace SeleniumProject.Function
 				}
 				else if (step.Name.Equals("Entity Status")) {
 					xpath = "/html/body/div[1]/main/div/div[2]/table/tbody/tr[1]/td[4]/div/div/div/div/div[2]/form/div[7]/span";
+				}
+				else if (step.Name.Equals("Prediction Key ID")) {
+					xpath = "/html/body/div[1]/main/div[6]/div[2]/span/div/div/div/div[2]/form/div[1]/span";
+				}
+				else if (step.Name.Equals("Prediction Key Name")) {
+					xpath = "/html/body/div[1]/main/div[6]/div[2]/span/div/div/div/div[2]/form/div[2]/span";
+				}
+				else if (step.Name.Equals("Prediction Key Class Name")) {
+					xpath = "/html/body/div[1]/main/div[6]/div[2]/span/div/div/div/div[2]/form/div[3]/span";
+				}
+				else if (step.Name.Equals("Prediction Key Description")) {
+					xpath = "/html/body/div[1]/main/div[6]/div[2]/span/div/div/div/div[2]/form/div[4]/span";
+				}
+				else if (step.Name.Equals("Prediction Key Status")) {
+					xpath = "/html/body/div[1]/main/div[6]/div[2]/span/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("Prediction Entity Mapping ID")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[1]/span";
+				}
+				else if (step.Name.Equals("Prediction Entity Mapping Name")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[2]/span";
+				}
+				else if (step.Name.Equals("Prediction Entity Mapping Deployment Specification")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[3]/span";
+				}
+				else if (step.Name.Equals("PEM Prediction Entity Type")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[4]/span";
+				}
+				else if (step.Name.Equals("PEM Target Prediction Entity Type")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("PEM Sample Controller Factory Type")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[6]/span";
+				}
+				else if (step.Name.Equals("Prediction Entity Mapping Status")) {
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[7]/span";
 				}
 
 				ele = driver.FindElement("xpath", xpath);
