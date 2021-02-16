@@ -14,7 +14,7 @@
 		{"page":"Prediction_Config_ID", "name":"Prediction Key Class Name"},
 		{"page":"Prediction_Config_ID", "name":"Prediction Key Description"},
 		{"page":"Prediction_Config_ID", "name":"Prediction Key Status"},
-        {"page":"Prediction_Config_ID", "name":"Close Prediction Key"},
+        {"page":"Prediction_Config_ID", "name":"Close Prediction Key Menu"},
         {"page":"Prediction_Config_ID", "name":"Prediction Entity Mapping", "data":"Prediction Entity Mapping:"},
         {"page":"Prediction_Config_ID", "name":"Click Prediction Entity Mapping"},
         {"page":"Prediction_Config_ID", "name":"Prediction Entity Mapping ID"},
@@ -24,7 +24,7 @@
 		{"page":"Prediction_Config_ID", "name":"PEM Target Prediction Entity Type"},
 		{"page":"Prediction_Config_ID", "name":"PEM Sample Controller Factory Type"},
 		{"page":"Prediction_Config_ID", "name":"Prediction Entity Mapping Status"},
-        {"page":"Prediction_Config_ID", "name":"Close Prediction Entity Mapping"},
+        {"page":"Prediction_Config_ID", "name":"Close Prediction Entity Mapping Menu"},
         {"page":"Prediction_Config_ID", "name":"Edit"},
         {"page":"Prediction_Config_ID", "name":"Model Configuration", "data":"Model Configuration:"},
         {"page":"Prediction_Config_ID", "name":"Click Model Configuration"}
