@@ -24,7 +24,7 @@
 		{"name":"PEM Sample Controller Factory Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Prediction Entity Mapping Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Close Prediction Entity Mapping Menu","objectType":"click","by":"xpath","objectId":"/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[1]/button"},
-		{"name":"Edit","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div[8]/div/a[1]"},
+		{"name":"Edit","objectType":"verify_displayed", "by":"xpath","objectId":"/html/body/div/main/div[8]/div/a[1]"},
 		{"name":"Model Configuration","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[5]/div[1]/span"},
 		{"name":"Click Model Configuration","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[3]/div[1]/span"}
 		
