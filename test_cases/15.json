@@ -1,0 +1,14 @@
+﻿{
+	"testCase":"Prediction Configuration ID",
+	"env":"dev",
+	"testId":"15",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Prediction Header"},
+		{"page":"Prediction_Config", "name":"Click ID Row"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Navigation","name":"Run Template", "data":"Prediction_ID"}
+	]
+}
