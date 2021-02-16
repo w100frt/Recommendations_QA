@@ -25,7 +25,6 @@
 		{"page":"Prediction_Config_ID", "name":"PEM Sample Controller Factory Type"},
 		{"page":"Prediction_Config_ID", "name":"Prediction Entity Mapping Status"},
         {"page":"Prediction_Config_ID", "name":"Close Prediction Entity Mapping Menu"},
-        {"page":"Prediction_Config_ID", "name":"Edit"},
         {"page":"Prediction_Config_ID", "name":"Model Configuration", "data":"Model Configuration:"},
         {"page":"Prediction_Config_ID", "name":"Click Model Configuration"}
     ]
