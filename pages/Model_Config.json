@@ -30,7 +30,7 @@
 		{"name":"Training Key Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Training Key Description","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Training Key Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
-		{"name":"Training Key Class Name","objectType":"script","by":"xpath","objectId":"Row_Data"}
-		
+		{"name":"Training Key Class Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Check Model ID","objectType":"script","by":"xpath","objectId":"Model_Values"}
 	]
 }

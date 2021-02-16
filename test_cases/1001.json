@@ -1,0 +1,12 @@
+{
+	"testCase":"Dummy Model",
+	"env":"dev",
+	"testId":"1001",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Model Header"},
+        {"page":"Model_Config", "name":"Check Model ID"}
+	]
+}
