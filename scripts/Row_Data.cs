@@ -251,7 +251,7 @@ namespace SeleniumProject.Function
 					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[6]/span";
 				}
 				else if (step.Name.Equals("Prediction Entity Mapping Status")) {
-					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[]/span";
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[7]/span";
 				}
 				else if (step.Name.Equals("Prediction Configuration Name Data")) {
 					xpath = "/html/body/div/main/div[3]/div[2]/span";
