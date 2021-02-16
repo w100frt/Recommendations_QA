@@ -253,10 +253,10 @@ namespace SeleniumProject.Function
 				else if (step.Name.Equals("Prediction Entity Mapping Status")) {
 					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[]/span";
 				}
-				else if (step.Name.Equals("Prediction Confuguration Name Data")) {
+				else if (step.Name.Equals("Prediction Configuration Name Data")) {
 					xpath = "/html/body/div/main/div[3]/div[2]/span";
 				}
-				else if (step.Name.Equals("Prediction Confuguration ID Data")) {
+				else if (step.Name.Equals("Prediction Configuration ID Data")) {
 					xpath = "/html/body/div/main/div[4]/div[2]/span";
 				}
 
