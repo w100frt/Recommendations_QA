@@ -122,7 +122,8 @@ namespace SeleniumProject.Function
 				|| step.Name.Equals("Prediction Key Class Name") || step.Name.Equals("Prediction Key Description") || step.Name.Equals("Prediction Key Status")
 				|| step.Name.Equals("Prediction Entity Mapping ID") || step.Name.Equals("Prediction Entity Mapping Name") || step.Name.Equals("Prediction Entity Mapping Class Name") 
 				|| step.Name.Equals("Prediction Entity Mapping Deployment Specification") || step.Name.Equals("PEM Prediction Entity Type") || step.Name.Equals("PEM Target Prediction Entity Type") 
-				|| step.Name.Equals("PEM Sample Controller Factory Type") || step.Name.Equals("Prediction Entity Mapping Status")) {
+				|| step.Name.Equals("PEM Sample Controller Factory Type") || step.Name.Equals("Prediction Configuration Name Data") || step.Name.Equals("Prediction Configuration ID Data") 
+				|| step.Name.Equals("Prediction Entity Mapping Status")) {
 				if (step.Name.Equals("Test ID")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
 				}
@@ -250,7 +251,13 @@ namespace SeleniumProject.Function
 					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[6]/span";
 				}
 				else if (step.Name.Equals("Prediction Entity Mapping Status")) {
-					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[7]/span";
+					xpath = "/html/body/div[1]/main/div[7]/div[2]/span/div/div/div/div[2]/form/div[]/span";
+				}
+				else if (step.Name.Equals("Prediction Confuguration Name Data")) {
+					xpath = "/html/body/div/main/div[3]/div[2]/span";
+				}
+				else if (step.Name.Equals("Prediction Confuguration ID Data")) {
+					xpath = "/html/body/div/main/div[4]/div[2]/span";
 				}
 
 				ele = driver.FindElement("xpath", xpath);
