@@ -1,6 +1,6 @@
 ﻿{
-    "testCase":"Template_Model_ID",
-    "testId":"t8",
+    "testCase":"Template_Prediction_ID",
+    "testId":"t11",
     "testSteps":[
         {"page":"Prediction_Config_ID", "name":"View Prediction Header"},
         {"page":"Prediction_Config_ID", "name":"Prediction Configuration Name", "data":"Prediction Configuration Name:"},
