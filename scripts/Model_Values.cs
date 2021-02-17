@@ -28,7 +28,7 @@ namespace SeleniumProject.Function
 			string xpath = "";
 			int count = 0;
 			//Need to change base on local or remote machine
-            var path = Path.Combine(@"C:\Users\truon\source\repos\Recommendations\report_key.json");
+            var path = Path.Combine(@"‎⁨/Users/fthompson/desktop/report_key.json");
             var result = JObject.Parse(File.ReadAllText(path));
 			VerifyError err = new VerifyError();
 			ReadOnlyCollection<IWebElement> elements;
