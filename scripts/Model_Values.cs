@@ -38,23 +38,23 @@ namespace SeleniumProject.Function
 				dataDictionary.Add(x["key"].ToString(), x["value"].ToString().Trim('[', ']').Split(',').Select(s => s.Trim('"')).ToArray());
 				log.Info(dataDictionary.Count());
             }
-            if (step.Name.Equals("Check Model ID")) {
+			if (step.Name.Equals("Check Model ID")) {
 				string[] id = dataDictionary["activeModelConfigToCollect"];
-                elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[1]");
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[1]");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
 						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
 							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
 						}
 						else {
-							err.CreateVerificationError(step, "Expected ID: " + id[i]], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
 						}
 					}
 				}
 				else {
 					log.Error("Can't find ID values");
 				}
-            }
+			}
         }
     }
 }
