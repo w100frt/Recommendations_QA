@@ -9,7 +9,7 @@
 		{"name":"Algorithm Specification","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div[4]/div[1]/span"},
 		{"name":"Check for Model Instances Table","objectType":"script","by":"xpath","objectId":"Model_Instances"},
 		{"name":"Click Algorithm Specification","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div[4]/div[2]/span/button"},
-		{"name":"Alg Spec ID","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Alg Spec ID","objectType":"script","by":"xpath","objectId":"Row_Data"}, 
 		{"name":"Alg Spec Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Alg Spec Description","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Alg Spec Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
