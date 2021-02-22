@@ -28,7 +28,7 @@ namespace SeleniumProject.Function
 			string xpath = "";
 			int count = 0;
 			//Need to change base on local or remote machine
-            var path = Path.Combine(@"‎⁨https://api.getpostman.com/collections/5575080-e70b2cd0-dfdd-4271-958f-b3e35f52f31b?apikey=PMAK-6033bed1cf4d87004e6f991d-130a848a2266fa5f04478f0fc80b91c6ce");
+            var path = Path.Combine(@"‎⁨/Users/fthompson/Development/New_Selenium/SeleniumProject/Postman_Collection/report_key.json");
             var result = JObject.Parse(File.ReadAllText(path));
 			VerifyError err = new VerifyError();
 			ReadOnlyCollection<IWebElement> elements;
