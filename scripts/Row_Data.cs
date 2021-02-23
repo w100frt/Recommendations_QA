@@ -112,7 +112,7 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Test ID") || step.Name.Equals("Test Name") || step.Name.Equals("Test Description") || 
 				step.Name.Equals("Test Status") || step.Name.Equals("Test Training Engine Factory Type") 
 				|| step.Name.Equals("Training Key ID") || step.Name.Equals("Training Key Name") || step.Name.Equals("Training Key Description") 
-				|| step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
+				|| step.Name.Equals("Training Key Class Name") || step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
 				|| step.Name.Equals("Published Data")  || step.Name.Equals("Published Date Data") || step.Name.Equals("Hyperparameter Key Data") 
 				|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") || step.Name.Equals("Key ID") 
 				|| step.Name.Equals("Key Class Name") || step.Name.Equals("Key Name") || step.Name.Equals("Key Description") || step.Name.Equals("Key Status") 
