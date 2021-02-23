@@ -64,7 +64,7 @@ namespace SeleniumProject.Function
 							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
 						}
 						else {
-							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+							err.CreateVerificationError(step, "Expected Name: " + id[i], "Actual Name: "+elements.ElementAt(i).GetAttribute("innerText"));
 						}
 					}
 				}
@@ -74,14 +74,14 @@ namespace SeleniumProject.Function
 			}
 			else if (step.Name.Equals("Check Model Alg Spec")) {
 				string[] id = dataDictionary["activeAlgoSpecToCollect"];
-				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]");
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]/nextElementSibling");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
 						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
 							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
 						}
 						else {
-							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+							err.CreateVerificationError(step, "Expected Alg Spec: " + id[i], "Actual Alg Spec: "+elements.ElementAt(i).GetAttribute("innerText"));
 						}
 					}
 				}
@@ -91,14 +91,14 @@ namespace SeleniumProject.Function
 			}
 			else if (step.Name.Equals("Check Model Training Key")) {
 				string[] id = dataDictionary["activeTrainingKeyToCollect"];
-				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]");
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]/nextElementSibling");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
 						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
 							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
 						}
 						else {
-							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+							err.CreateVerificationError(step, "Expected Training Key: " + id[i], "Actual Training Key: "+elements.ElementAt(i).GetAttribute("innerText"));
 						}
 					}
 				}
@@ -115,7 +115,7 @@ namespace SeleniumProject.Function
 							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
 						}
 						else {
-							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+							err.CreateVerificationError(step, "Expected Hyperparam Key: " + id[i], "Actual Hyperparam Ket: "+elements.ElementAt(i).GetAttribute("innerText"));
 						}
 					}
 				}
