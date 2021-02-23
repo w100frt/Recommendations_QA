@@ -108,14 +108,14 @@ namespace SeleniumProject.Function
 			}
 			else if (step.Name.Equals("Check Model Hyperparameter Key")) {
 				string[] id = dataDictionary["activeHyperParamIDToCollect"];
-				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[4]");
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[5]");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
 						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
 							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
 						}
 						else {
-							err.CreateVerificationError(step, "Expected Hyperparam Key: " + id[i], "Actual Hyperparam Ket: "+elements.ElementAt(i).GetAttribute("innerText"));
+							err.CreateVerificationError(step, "Expected Hyperparam Key: " + id[i], "Actual Hyperparam Key: "+elements.ElementAt(i).GetAttribute("innerText"));
 						}
 					}
 				}
