@@ -74,7 +74,7 @@ namespace SeleniumProject.Function
 			}
 			else if (step.Name.Equals("Check Model Alg Spec")) {
 				string[] id = dataDictionary["activeAlgoSpecToCollect"];
-				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]/nextElementSibling");
+				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[1]/table/tbody/tr/td[3]/div/div/div/div/div[2]/form/div[1]/span");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
 						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
@@ -91,7 +91,7 @@ namespace SeleniumProject.Function
 			}
 			else if (step.Name.Equals("Check Model Training Key")) {
 				string[] id = dataDictionary["activeTrainingKeyToCollect"];
-				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]/nextElementSibling");
+				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[1]/table/tbody/tr/td[4]/div/div/div/div/div[2]/form/div[1]/span");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
 						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
