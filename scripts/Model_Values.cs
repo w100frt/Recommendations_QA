@@ -55,6 +55,74 @@ namespace SeleniumProject.Function
 					log.Error("Can't find ID values");
 				}
 			}
+			else if (step.Name.Equals("Check Model Name")) {
+				string[] id = dataDictionary["activeModelConfigNameToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[2]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Name values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Alg Spec")) {
+				string[] id = dataDictionary["activeAlgoSpecToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Alg Spec values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Training Key")) {
+				string[] id = dataDictionary["activeTrainingKeyToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[3]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Training Key values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Hyperparameter Key")) {
+				string[] id = dataDictionary["activeHyperParamIDToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[4]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Hyperparameter Key values");
+				}
+			}
         }
     }
 }

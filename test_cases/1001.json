@@ -7,6 +7,10 @@
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
 		{"page":"Navigation", "name":"Click Model Header"},
-        {"page":"Model_Config", "name":"Check Model ID"}
+		{"page":"Model_Config", "name":"Check Model ID"},
+		{"page":"Model_Config", "name":"Check Model Name"},
+		{"page":"Model_Config", "name":"Check Model Alg Spec"},
+		{"page":"Model_Config", "name":"Check Model Training Key"},
+		{"page":"Model_Config", "name":"Check Model Hyperparameter Key"}
 	]
 }
