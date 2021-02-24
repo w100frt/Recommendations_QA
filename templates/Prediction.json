@@ -33,7 +33,8 @@
         {"page":"Prediction_Config","name":"Sample Controller Factory Type"},
         {"page":"Prediction_Config","name":"Close Prediction Entity Mapping Row Menu"},
         {"page":"Prediction_Config","name":"Click Model Configuration"},
-        {"page":"Prediction_Config","name":"Check Prediction Model Name"}
+        {"page":"Prediction_Config","name":"Check Prediction Model Name"},
+        {"page":"Model_Config_ID","name":"Check Prediction Model Name"}
 
     ]
 }

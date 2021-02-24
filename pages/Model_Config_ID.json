@@ -43,7 +43,8 @@
 		{"name":"Verify Column 1 Header","objectType":"verify_value","by":"xpath","objectId":"//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]//table//th[1]"},
 		{"name":"Verify Column 2 Header","objectType":"verify_value","by":"xpath","objectId":"//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]//table//th[2]"},
 		{"name":"Verify Column 3 Header","objectType":"verify_value","by":"xpath","objectId":"//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]//table//th[3]"},
-		{"name":"Verify Column 4 Header","objectType":"verify_value","by":"xpath","objectId":"//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]//table//th[4]"}
+		{"name":"Verify Column 4 Header","objectType":"verify_value","by":"xpath","objectId":"//main[div[h2[.='Model Instances']]]//div[contains(@class,'text-center')]//table//th[4]"},
+		{"name":"Check Prediction Model Name","objectType":"script","by":"xpath","objectId":"Model_Values"}
 		
 	]
 }
