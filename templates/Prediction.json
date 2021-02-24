@@ -5,6 +5,7 @@
         {"page":"Prediction_Config", "name":"Prediction Configurations", "data":"Prediction Configurations"},
         {"page":"Prediction_Config", "name":"Show Inactive", "data":"Show Inactive"},
         {"page":"Prediction_Config", "name":"Pred ID", "data":"ID"},
+        {"page":"Prediction_Config","name":"Check Prediction ID"},
         {"page":"Prediction_Config", "name":"Model Configuration Name", "data":"Model Configuration Name"},
         {"page":"Prediction_Config", "name":"Prediction Key", "data":"Prediction Key"},
         {"page":"Prediction_Config", "name":"Prediction Entity Mapping", "data":"Prediction Entity Mapping"},
@@ -16,6 +17,7 @@
         {"page":"Prediction_Config","name":"Pred Status Row"},
         {"page":"Prediction_Config","name":"Click Prediction Key Row"},
         {"page":"Prediction_Config","name":"Key ID"},
+        {"page":"Prediction_Config","name":"Check Prediction Key"},
         {"page":"Prediction_Config","name":"Key Name"},
         {"page":"Prediction_Config","name":"Key Class Name"},
         {"page":"Prediction_Config","name":"Key Description"},
@@ -23,12 +25,15 @@
         {"page":"Prediction_Config","name":"Close Prediction Key Row Menu"},
         {"page":"Prediction_Config","name":"Click Prediction Entity Mapping Row"},
         {"page":"Prediction_Config","name":"Entity ID"},
+        {"page":"Prediction_Config","name":"Check Prediction Entity Mapping"},
         {"page":"Prediction_Config","name":"Entity Name"},
         {"page":"Prediction_Config","name":"Entity Deployment Specification"},
         {"page":"Prediction_Config","name":"Prediction Entity Type"},
         {"page":"Prediction_Config","name":"Target Prediction Entity Type"},
         {"page":"Prediction_Config","name":"Sample Controller Factory Type"},
-        {"page":"Prediction_Config","name":"Close Prediction Entity Mapping Row Menu"}
+        {"page":"Prediction_Config","name":"Close Prediction Entity Mapping Row Menu"},
+        {"page":"Prediction_Config","name":"Click Model Configuration"},
+        {"page":"Prediction_Config","name":"Check Prediction Model Name"}
 
     ]
 }

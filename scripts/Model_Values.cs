@@ -124,6 +124,75 @@ namespace SeleniumProject.Function
 					log.Error("Can't find Hyperparameter Key values");
 				}
 			}
+			else if (step.Name.Equals("Check Prediction ID")) {
+				string[] id = dataDictionary["activePredictionJobConfigIDToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[1]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected ID: " + id[i], "Actual ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Hyperparameter Key values");
+				}
+			}
+			//Going to need to hit Model ID page to verify this. Should be last in Pred Config test.
+			else if (step.Name.Equals("Check Prediction Model Name")) {
+				string[] id = dataDictionary["activeModelConfigIDToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div[2]/div[2]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected Model ID: "+id[i] + "  Actual Model ID: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Model ID: " + id[i], "Actual Model ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Hyperparameter Key values");
+				}
+			}
+			else if (step.Name.Equals("Check Prediction Key")) {
+				string[] id = dataDictionary["activePredKeyIDToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[2]/table/tbody/tr/td[3]/div/div/div/div/div[2]/form/div[1]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Pred Key: " + id[i], "Actual Pred Key: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Hyperparameter Key values");
+				}
+			}
+			else if (step.Name.Equals("Check Prediction Entity Mapping")) {
+				string[] id = dataDictionary["activePredictionEntityMapsToCollect"];
+				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[2]/table/tbody/tr/td[4]/div/div/div/div/div[2]/form/div[1]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Pred Ent Map: " + id[i], "Actual Pred Ent Map: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Hyperparameter Key values");
+				}
+			}
         }
     }
 }
