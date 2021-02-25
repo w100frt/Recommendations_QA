@@ -1,0 +1,12 @@
+﻿{
+    "project":"rec",
+	"testRailProjectId": "148",
+	"jobName":"Regression",
+    "env":"stg",
+    "browser":"chrome",
+    "testView":"desktop",
+    "testIds": [
+        {"testId":1001}
+
+    ]
+}
