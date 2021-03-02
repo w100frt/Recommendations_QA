@@ -27,19 +27,83 @@ namespace SeleniumProject.Function
 			string data = "";
 			string xpath = "";
 			int count = 0;
-			//Need to change base on local or remote machine
-            var path = Path.Combine(@"‎⁨/Users/fthompson/desktop/report_key.json");
-            var result = JObject.Parse(File.ReadAllText(path));
+			//List of necessary data
+			List<string> activeModelConfigIDArray = new List<string>();
+			List<string> inactiveModelConfigIDArray = new List<string>();
+			List<string> activeAlgoSpecIDArray = new List<string>();
+			List<string> inactiveAlgoSpecIDArray = new List<string>();
+			List<string> activeTrainKeyIDArray = new List<string>();
+			List<string> inactiveTrainKeyIDArray = new List<string>();
+			List<string> activeHyperParamIDArray = new List<string>();
+			List<string> inactiveHyperParamIDArray = new List<string>();
+			List<string> activeHyperParamsArray = new List<string>();
+			List<string> inactiveHyperParamsArray = new List<string>();
+			List<string> activeModelConfigNameArray = new List<string>();
+			List<string> inactiveModelConfigNameArray = new List<string>();
+			//Fetching json file
+			JObject json = new JObject();
+			using (var webClient = new System.Net.WebClient()) {
+				var jsonString = webClient.DownloadString("http://recspublicdev-1454793804.us-east-2.elb.amazonaws.com/v2/model/configuration");
+				json = JObject.Parse(jsonString);
+			}
+			//Getting data
+			foreach (JToken x in json["result"]) {
+				if (x["Status"].ToString().Equals("active")){
+					//Active ModelConfigurationID
+					if (x["ModelConfigurationID"] != null) {
+						activeModelConfigIDArray.Add(x["ModelConfigurationID"].ToString());
+					}
+					else {
+						activeModelConfigIDArray.Add("");
+					}
+					//Active AlgoSpecID
+					if (x["AlgoSpecificationID"].ToString() != null) {
+						activeAlgoSpecIDArray.Add(x["AlgoSpecificationID"].ToString());
+					}
+					else {
+						activeAlgoSpecIDArray.Add("");
+					}
+					//Active TrainingKeyID
+					if (x["TrainingKeyID"].ToString() != null) {
+						activeTrainKeyIDArray.Add(x["TrainingKeyID"].ToString());
+					}
+					else {
+						activeTrainKeyIDArray.Add("");
+					}
+					//Ative HyperparameterID
+					if (x["HyperparameterID"].ToString() != null) {
+						activeHyperParamIDArray.Add(x["HyperparameterID"].ToString());
+					}
+					else {
+						activeHyperParamIDArray.Add("");
+					}
+					//Active Hyperparameters
+					if (x["Hyperparameters"].ToString() != null) {
+						activeHyperParamsArray.Add(x["Hyperparameters"].ToString());
+					}
+					else {
+						activeHyperParamsArray.Add("");
+					}
+					//Active ModelConfigurationName
+					if (x["ModelConfigurationName"].ToString() != null) {
+						activeModelConfigNameArray.Add(x["ModelConfigurationName"].ToString());
+					}
+					else {
+						activeModelConfigNameArray.Add("");
+					}
+				}
+			}
+			Dictionary<string, string[]> dataDictionary = new Dictionary<string, string[]>();
+			dataDictionary.Add("activeModelConfigID", activeModelConfigIDArray.ToArray());
+			dataDictionary.Add("activeAlgoSpecID", activeAlgoSpecIDArray.ToArray());
+			dataDictionary.Add("activeTrainingKeyID", activeTrainKeyIDArray.ToArray());
+			dataDictionary.Add("activeHyperparameterID", activeHyperParamIDArray.ToArray());
+			dataDictionary.Add("activeHyperparameters", activeHyperParamsArray.ToArray());
+			dataDictionary.Add("activeModelConfigName", activeModelConfigNameArray.ToArray());
 			VerifyError err = new VerifyError();
 			ReadOnlyCollection<IWebElement> elements;
-
-			Dictionary<string, string[]> dataDictionary = new Dictionary<string, string[]>();
-			foreach (JToken x in result["list"]) {
-				dataDictionary.Add(x["key"].ToString(), x["value"].ToString().Trim('[', ']').Split(',').Select(s => s.Trim('"')).ToArray());
-				log.Info(dataDictionary.Count());
-            }
 			if (step.Name.Equals("Check Model ID")) {
-				string[] id = dataDictionary["activeModelConfigToCollect"];
+				string[] id = dataDictionary["activeModelConfigID"];
 				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[1]");
 				if (elements.Count > 0) {
 					for (int i=0; i< elements.Count; i++) {
@@ -53,6 +117,74 @@ namespace SeleniumProject.Function
 				}
 				else {
 					log.Error("Can't find ID values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Name")) {
+				string[] id = dataDictionary["activeModelConfigName"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[2]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Name: " + id[i], "Actual Name: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Name values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Alg Spec")) {
+				string[] id = dataDictionary["activeAlgoSpecID"];
+				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[1]/table/tbody/tr/td[3]/div/div/div/div/div[2]/form/div[1]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Alg Spec: " + id[i], "Actual Alg Spec: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Alg Spec values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Training Key")) {
+				string[] id = dataDictionary["activeTrainingKeyID"];
+				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[1]/table/tbody/tr/td[4]/div/div/div/div/div[2]/form/div[1]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Training Key: " + id[i], "Actual Training Key: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Training Key values");
+				}
+			}
+			else if (step.Name.Equals("Check Model Hyperparameter Key")) {
+				string[] id = dataDictionary["activeHyperparameterID"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div/div[1]/table/tbody/tr/td[5]");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Hyperparam Key: " + id[i], "Actual Hyperparam Key: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Hyperparameter Key values");
 				}
 			}
         }
