@@ -9,6 +9,7 @@
 		{"name":"Click ID Row","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/tbody/tr[1]/td[1]/a"},
 		{"name":"Model Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
 		{"name":"Model Configuration Name Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Click Model Configuration","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/tbody/tr/td[2]/a"},
 		{"name":"Prediction Key","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
 		{"name":"Prediction Key Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Click Prediction Key Row","objectType":"click","by":"xpath","objectId":"//table[@class='entity-table']/tbody/tr[1]/td[3]/div/button"},
@@ -30,7 +31,10 @@
 		{"name":"Prediction Entity Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Target Prediction Entity Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Sample Controller Factory Type","objectType":"script","by":"xpath","objectId":"Row_Data"},
-		{"name":"Entity Status","objectType":"script","by":"xpath","objectId":"Row_Data"}
+		{"name":"Entity Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Check Prediction ID","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Prediction Key","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Prediction Entity Mapping","objectType":"script","by":"xpath","objectId":"Model_Values"}
 		
 	]
 }

@@ -6,6 +6,7 @@
 		{"name":"Show Inactive","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/a[2]"},
 		{"name":"ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[1]"},
 		{"name":"ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Capture ID","objectType":"capture","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[1]/a/innerText"},
 		{"name":"Click ID Row","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/tbody/tr[1]/td[1]/a"},
 		{"name":"Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[1]/table/thead/tr/th[2]"},
 		{"name":"Name Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
@@ -31,6 +32,10 @@
 		{"name":"Training Key Description","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Training Key Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Training Key Class Name","objectType":"script","by":"xpath","objectId":"Row_Data"},
-		{"name":"Check Model ID","objectType":"script","by":"xpath","objectId":"Model_Values"}
+		{"name":"Check Model ID","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Model Name","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Model Alg Spec","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Model Training Key","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Model Hyperparameter Key","objectType":"script","by":"xpath","objectId":"Model_Values"}
 	]
 }

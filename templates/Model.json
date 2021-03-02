@@ -5,7 +5,9 @@
         {"page":"Model_Config", "name":"Model Configurations", "data":"Model Configurations"},
         {"page":"Model_Config", "name":"Show Inactive", "data":"Show Inactive"},
         {"page":"Model_Config", "name":"ID", "data":"ID"},
+        {"page":"Model_Config", "name":"Check Model ID"},
         {"page":"Model_Config", "name":"Name", "data":"Name"},
+        {"page":"Model_Config", "name":"Check Model Name"},
         {"page":"Model_Config", "name":"Algorithm Specification", "data":"Algorithm Specification"},
         {"page":"Model_Config", "name":"Training Key", "data":"Training Key"},
         {"page":"Model_Config", "name":"Hyperparameter Key", "data":"Hyperparameter Key"},
@@ -15,9 +17,11 @@
         {"page":"Model_Config","name":"Algorithm Specification Row"},
         {"page":"Model_Config","name":"Training Key Row"},
         {"page":"Model_Config","name":"Hyperparameter Key Row"},
+        {"page":"Model_Config", "name":"Check Model Hyperparameter Key"},
         {"page":"Model_Config","name":"Status Row"},
         {"page":"Model_Config","name":"Click Algorithm Specification Row"},
         {"page":"Model_Config","name":"Test ID"},
+        {"page":"Model_Config", "name":"Check Model Alg Spec"},
         {"page":"Model_Config","name":"Test Name"},
         {"page":"Model_Config","name":"Test Description"},
         {"page":"Model_Config","name":"Test Status"},
@@ -25,11 +29,12 @@
         {"page":"Model_Config","name":"Close Algorithm Specification Row Menu"},
         {"page":"Model_Config","name":"Click Training Key Row"},
         {"page":"Model_Config","name":"Training Key ID"},
+        {"page":"Model_Config", "name":"Check Model Training Key"},
         {"page":"Model_Config","name":"Training Key Name"},
         {"page":"Model_Config","name":"Training Key Description"},
         {"page":"Model_Config","name":"Training Key Status"},
         {"page":"Model_Config","name":"Training Key Class Name"},
-        {"page":"Model_Config","name":"Close Training Key Row Menu"}
-
+        {"page":"Model_Config","name":"Close Training Key Row Menu"},
+        {"page":"Model_Config","name":"Capture ID","data":"MODEL_ID"}
     ]
 }

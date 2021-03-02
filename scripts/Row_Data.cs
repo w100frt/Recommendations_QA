@@ -112,7 +112,7 @@ namespace SeleniumProject.Function
 			else if (step.Name.Equals("Test ID") || step.Name.Equals("Test Name") || step.Name.Equals("Test Description") || 
 				step.Name.Equals("Test Status") || step.Name.Equals("Test Training Engine Factory Type") 
 				|| step.Name.Equals("Training Key ID") || step.Name.Equals("Training Key Name") || step.Name.Equals("Training Key Description") 
-				|| step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
+				|| step.Name.Equals("Training Key Class Name") || step.Name.Equals("Training Key Status") || step.Name.Equals("Model Configuration ID Data") || step.Name.Equals("Model Configuration Name Data") 
 				|| step.Name.Equals("Published Data")  || step.Name.Equals("Published Date Data") || step.Name.Equals("Hyperparameter Key Data") 
 				|| step.Name.Equals("ID Row Data") || step.Name.Equals("Training Job ID Row") || step.Name.Equals("Status Row") || step.Name.Equals("Key ID") 
 				|| step.Name.Equals("Key Class Name") || step.Name.Equals("Key Name") || step.Name.Equals("Key Description") || step.Name.Equals("Key Status") 
@@ -123,7 +123,9 @@ namespace SeleniumProject.Function
 				|| step.Name.Equals("Prediction Entity Mapping ID") || step.Name.Equals("Prediction Entity Mapping Name") || step.Name.Equals("Prediction Entity Mapping Class Name") 
 				|| step.Name.Equals("Prediction Entity Mapping Deployment Specification") || step.Name.Equals("PEM Prediction Entity Type") || step.Name.Equals("PEM Target Prediction Entity Type") 
 				|| step.Name.Equals("PEM Sample Controller Factory Type") || step.Name.Equals("Prediction Configuration Name Data") || step.Name.Equals("Prediction Configuration ID Data") 
-				|| step.Name.Equals("Prediction Entity Mapping Status")) {
+				|| step.Name.Equals("Alg Spec ID") || step.Name.Equals("Alg Spec Name") || step.Name.Equals("Alg Spec Description") || step.Name.Equals("Alg Spec Status") 
+				|| step.Name.Equals("Alg Spec Training Engine Factory Type") || step.Name.Equals("TK ID") || step.Name.Equals("TK Name") || step.Name.Equals("TK Description") || step.Name.Equals("TK Status") 
+				|| step.Name.Equals("TK Class Name") || step.Name.Equals("Prediction Entity Mapping Status")) {
 				if (step.Name.Equals("Test ID")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
 				}
@@ -258,6 +260,36 @@ namespace SeleniumProject.Function
 				}
 				else if (step.Name.Equals("Prediction Configuration ID Data")) {
 					xpath = "/html/body/div/main/div[4]/div[2]/span";
+				}
+				else if (step.Name.Equals("Alg Spec ID")) {
+					xpath = "/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[2]/form/div[1]/span";
+				}
+				else if (step.Name.Equals("Alg Spec Name")) {
+					xpath = "/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[2]/form/div[2]/span";
+				}
+				else if (step.Name.Equals("Alg Spec Description")) {
+					xpath = "/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[2]/form/div[3]/span";
+				}
+				else if (step.Name.Equals("Alg Spec Status")) {
+					xpath = "/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[2]/form/div[4]/span";
+				}
+				else if (step.Name.Equals("Alg Spec Training Engine Factory Type")) {
+					xpath = "/html/body/div[1]/main/div[4]/div[2]/span/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("TK ID")) {
+					xpath = "/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[2]/form/div[1]/span";
+				}
+				else if (step.Name.Equals("TK Name")) {
+					xpath = "/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[2]/form/div[2]/span";
+				}
+				else if (step.Name.Equals("TK Description")) {
+					xpath = "/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[2]/form/div[3]/span";
+				}
+				else if (step.Name.Equals("TK Status")) {
+					xpath = "/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[2]/form/div[4]/span";
+				}
+				else if (step.Name.Equals("TK Class Name")) {
+					xpath = "/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[2]/form/div[5]/span";
 				}
 
 				ele = driver.FindElement("xpath", xpath);
