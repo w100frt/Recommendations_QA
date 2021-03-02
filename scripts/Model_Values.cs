@@ -57,35 +57,35 @@ namespace SeleniumProject.Function
 						activeModelConfigIDArray.Add("");
 					}
 					//Active AlgoSpecID
-					if (x["AlgoSpecificationID"].ToString() != null) {
+					if (x["AlgoSpecificationID"] != null) {
 						activeAlgoSpecIDArray.Add(x["AlgoSpecificationID"].ToString());
 					}
 					else {
 						activeAlgoSpecIDArray.Add("");
 					}
 					//Active TrainingKeyID
-					if (x["TrainingKeyID"].ToString() != null) {
+					if (x["TrainingKeyID"] != null) {
 						activeTrainKeyIDArray.Add(x["TrainingKeyID"].ToString());
 					}
 					else {
 						activeTrainKeyIDArray.Add("");
 					}
 					//Ative HyperparameterID
-					if (x["HyperparameterID"].ToString() != null) {
+					if (x["HyperparameterID"] != null) {
 						activeHyperParamIDArray.Add(x["HyperparameterID"].ToString());
 					}
 					else {
 						activeHyperParamIDArray.Add("");
 					}
 					//Active Hyperparameters
-					if (x["Hyperparameters"].ToString() != null) {
+					if (x["Hyperparameters"] != null) {
 						activeHyperParamsArray.Add(x["Hyperparameters"].ToString());
 					}
 					else {
 						activeHyperParamsArray.Add("");
 					}
 					//Active ModelConfigurationName
-					if (x["ModelConfigurationName"].ToString() != null) {
+					if (x["ModelConfigurationName"] != null) {
 						activeModelConfigNameArray.Add(x["ModelConfigurationName"].ToString());
 					}
 					else {

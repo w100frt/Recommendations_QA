@@ -11,6 +11,18 @@
 		{"page":"Model_Config", "name":"Check Model Name"},
 		{"page":"Model_Config", "name":"Check Model Alg Spec"},
 		{"page":"Model_Config", "name":"Check Model Training Key"},
-		{"page":"Model_Config", "name":"Check Model Hyperparameter Key"}
+		{"page":"Model_Config", "name":"Check Model Hyperparameter Key"},
+		{"page":"Navigation", "name": "Click Training Header"},
+		{"page":"Training_Config", "name": "Check Training Job ID"},
+		{"page":"Training_Config", "name": "Check Training Name"},
+		{"page":"Navigation", "name": "Click Prediction Header"},
+		{"page":"Prediction_Config", "name":"Check Prediction ID"},
+		{"page":"Prediction_Config", "name":"Check Prediction Key"},
+		{"page":"Prediction_Config", "name":"Check Prediction Entity Mapping ID"},
+		{"page":"Navigation", "name": "Click Prediction Job Configurations Header"},
+		{"page":"Prediction_Job_Config", "name":"Check Prediction Job ID"},
+		{"page":"Prediction_Job_Config", "name":"Check Prediction Name"},
+		{"page":"Prediction_Job_Config", "name":"Check Trigger Training Job Config ID"}
+
 	]
 }

@@ -9,7 +9,9 @@
 		{"name":"Job Schedule","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
 		{"name":"Trigger ID","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
 		{"name":"Prediction Job Type","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"},
-		{"name":"Status","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[6]"}
-		
+		{"name":"Status","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[6]"},
+		{"name":"Check Prediction Job ID","objectType":"script","by":"xpath","objectId":"Prediction_Job"},
+		{"name":"Check Prediction Name","objectType":"script","by":"xpath","objectId":"Prediction_Job"},
+		{"name":"Check Trigger Training Job Config ID","objectType":"script","by":"xpath","objectId":"Prediction_Job"}
 	]
 }

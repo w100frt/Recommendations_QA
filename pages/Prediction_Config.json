@@ -34,7 +34,10 @@
 		{"name":"Entity Status","objectType":"script","by":"xpath","objectId":"Row_Data"},
 		{"name":"Check Prediction ID","objectType":"script","by":"xpath","objectId":"Model_Values"},
 		{"name":"Check Prediction Key","objectType":"script","by":"xpath","objectId":"Model_Values"},
-		{"name":"Check Prediction Entity Mapping","objectType":"script","by":"xpath","objectId":"Model_Values"}
+		{"name":"Check Prediction Entity Mapping","objectType":"script","by":"xpath","objectId":"Model_Values"},
+		{"name":"Check Prediction ID","objectType":"script","by":"xpath","objectId":"Prediction"},
+		{"name":"Check Prediction Key","objectType":"script","by":"xpath","objectId":"Prediction"},
+		{"name":"Check Prediction Entity Mapping ID","objectType":"script","by":"xpath","objectId":"Prediction"}
 		
 	]
 }
