@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_Model_ID",
-    "testId":"t8",
+    "testId":"t7",
     "testSteps":[
         {"page":"Model_Config_ID", "name":"View Model Header"},
         {"page":"Model_Config_ID", "name":"Model Configuration ID", "data":"Model Configuration ID:"},

@@ -1,6 +1,6 @@
 ﻿{
-    "testCase":"Template_Prediction",
-    "testId":"t10",
+    "testCase":"Template_Prediction_Job",
+    "testId":"t12",
     "testSteps":[
         {"page":"Prediction_Job_Config", "name":"Prediction Job Configurations", "data":"Prediction Job Configurations"},
         {"page":"Prediction_Job_Config", "name":"Show Inactive", "data":"Show Inactive"},

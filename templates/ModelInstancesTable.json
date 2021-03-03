@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_ModelInstancesTable",
-    "testId":"t8",
+    "testId":"t10",
     "testSteps":[
         {"page":"Model_Config_ID", "name":"Verify Column 1 Header", "data": "ID"},
         {"page":"Model_Config_ID", "name":"ID Row"},

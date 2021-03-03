@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_Model",
-    "testId":"t7",
+    "testId":"t8",
     "testSteps":[
         {"page":"Model_Config", "name":"Model Configurations", "data":"Model Configurations"},
         {"page":"Model_Config", "name":"Show Inactive", "data":"Show Inactive"},

@@ -1,6 +1,6 @@
 ﻿{
     "testCase":"Template_Prediction",
-    "testId":"t10",
+    "testId":"t9",
     "testSteps":[
         {"page":"Prediction_Config", "name":"Prediction Configurations", "data":"Prediction Configurations"},
         {"page":"Prediction_Config", "name":"Show Inactive", "data":"Show Inactive"},
