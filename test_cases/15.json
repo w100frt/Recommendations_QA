@@ -2,7 +2,7 @@
 	"testCase":"Prediction Configuration ID",
 	"env":"dev",
 	"testId":"15",
-	"testRail":"",
+	"testRail":"7914652",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},

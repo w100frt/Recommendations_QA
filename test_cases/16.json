@@ -2,7 +2,7 @@
 	"testCase":"Prediction Job Configuration",
 	"env":"dev",
 	"testId":"16",
-	"testRail":"",
+	"testRail":"7914653",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
