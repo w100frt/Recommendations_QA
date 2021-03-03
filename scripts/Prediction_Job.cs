@@ -136,6 +136,23 @@ namespace SeleniumProject.Function
 					log.Error("Can't find Prediction Job Name values");
 				}
 			}
+			else if (step.Name.Equals("Check Prediction Configuration ID")) {
+				string[] id = dataDictionary["activePredConfigIDArray"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div[4]/div[2]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Prediction Config ID: " + id[i], "Actual Prediction Config ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Prediction Job Name values");
+				}
+			}
 			else if (step.Name.Equals("Check Trigger Training Job Config ID")) {
 				string[] id = dataDictionary["activeTriggerTrainArray"];
 				for (int i=0; i< id.Length; i++) {

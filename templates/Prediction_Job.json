@@ -16,8 +16,8 @@
         {"page":"Prediction_Job_Config", "name":"Prediction Job Type", "data":"Prediction Job Type"},
         {"page":"Prediction_Job_Config","name":"Prediction Job Type Row"},
         {"page":"Prediction_Job_Config", "name":"Status", "data":"Status"},
-        {"page":"Prediction_Job_Config", "name":"Click Prediction Configuration"},
-        {"page":"Model_Config_ID", "name":"Check Prediction Model Name"}
+        {"page":"Prediction_Job_Config", "name":"Click Prediction Configuration Name"},
+        {"page":"Prediction_Job_Config", "name":"Check Prediction Configuration ID"}
 
     ]
 }
