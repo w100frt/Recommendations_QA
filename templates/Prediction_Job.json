@@ -14,7 +14,7 @@
         {"page":"Prediction_Job_Config", "name":"Trigger ID", "data":"Trigger ID"},
         {"page":"Prediction_Job_Config","name":"Trigger ID Row"},
         {"page":"Prediction_Job_Config", "name":"Prediction Job Type", "data":"Prediction Job Type"},
-        {"page":"Prediction_Job_Config","name":"Prediction Type Job Row"},
+        {"page":"Prediction_Job_Config","name":"Prediction Job Type Row"},
         {"page":"Prediction_Job_Config", "name":"Status", "data":"Status"},
         {"page":"Prediction_Job_Config", "name":"Click Prediction Configuration"},
         {"page":"Model_Config_ID", "name":"Check Prediction Model Name"}
