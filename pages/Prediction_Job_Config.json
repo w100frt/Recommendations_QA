@@ -1,17 +1,21 @@
 ﻿{
 	"page":"Prediction_Job_Config",
 	"testDefinitions":[
-		{"name":"Prediction Job Configurations","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/h1"},
+		{"name":"Prediction Job Configurations","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/h1"},
 		{"name":"Create","objectType":"click","by":"xpath","objectId":"/html/body/div/main/div/div[3]/a[1]"},
-		{"name":"Show Inactive","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[3]/a[2]"},
-		{"name":"ID","objectType":"capture","by":"verify_displayed","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
-		{"name":"Prediction Configuration Name","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
-		{"name":"Job Schedule","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
-		{"name":"Trigger ID","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
-		{"name":"Prediction Job Type","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"},
-		{"name":"Status","objectType":"verify_displayed","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[6]"},
+		{"name":"Show Inactive","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[3]/a[2]"},
+		{"name":"ID","objectType":"capture","by":"verify_value","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[1]"},
+		{"name":"Prediction Job Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[2]"},
+		{"name":"Prediction Configuration Name","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[3]"},
+		{"name":"Job Schedule","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[4]"},
+		{"name":"Trigger ID","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[5]"},
+		{"name":"Prediction Job Type","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[6]"},
+		{"name":"Status","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/div/div[2]/table/thead/tr/th[7]"},
 		{"name":"Check Prediction Job ID","objectType":"script","by":"xpath","objectId":"Prediction_Job"},
 		{"name":"Check Prediction Name","objectType":"script","by":"xpath","objectId":"Prediction_Job"},
-		{"name":"Check Trigger Training Job Config ID","objectType":"script","by":"xpath","objectId":"Prediction_Job"}
+		{"name":"Check Trigger Training Job Config ID","objectType":"script","by":"xpath","objectId":"Prediction_Job"},
+		{"name":"Job Schedule Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Trigger ID Row","objectType":"script","by":"xpath","objectId":"Row_Data"},
+		{"name":"Prediction Job Type Row","objectType":"script","by":"xpath","objectId":"Row_Data"}
 	]
 }

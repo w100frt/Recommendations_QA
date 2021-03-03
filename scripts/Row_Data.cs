@@ -124,8 +124,9 @@ namespace SeleniumProject.Function
 				|| step.Name.Equals("Prediction Entity Mapping Deployment Specification") || step.Name.Equals("PEM Prediction Entity Type") || step.Name.Equals("PEM Target Prediction Entity Type") 
 				|| step.Name.Equals("PEM Sample Controller Factory Type") || step.Name.Equals("Prediction Configuration Name Data") || step.Name.Equals("Prediction Configuration ID Data") 
 				|| step.Name.Equals("Alg Spec ID") || step.Name.Equals("Alg Spec Name") || step.Name.Equals("Alg Spec Description") || step.Name.Equals("Alg Spec Status") 
-				|| step.Name.Equals("Alg Spec Training Engine Factory Type") || step.Name.Equals("TK ID") || step.Name.Equals("TK Name") || step.Name.Equals("TK Description") || step.Name.Equals("TK Status") 
-				|| step.Name.Equals("TK Class Name") || step.Name.Equals("Prediction Entity Mapping Status")) {
+				|| step.Name.Equals("Alg Spec Training Engine Factory Type") || step.Name.Equals("TK ID") || step.Name.Equals("TK Name") || step.Name.Equals("TK Description") 
+				|| step.Name.Equals("TK Status") || step.Name.Equals("TK Class Name") || step.Name.Equals("Job Schedule Row") || step.Name.Equals("Trigger ID Row") || step.Name.Equals("Prediction Job Type")
+				|| step.Name.Equals("Prediction Entity Mapping Status")) {
 				if (step.Name.Equals("Test ID")) {
 					xpath = "/html/body/div[1]/main/div/div[1]/table/tbody/tr[1]/td[3]/div/div/div/div/div[2]/form/div[1]/span";
 				}
@@ -290,6 +291,15 @@ namespace SeleniumProject.Function
 				}
 				else if (step.Name.Equals("TK Class Name")) {
 					xpath = "/html/body/div[1]/main/div[5]/div[2]/span/div/div/div/div[2]/form/div[5]/span";
+				}
+				else if (step.Name.Equals("Job Schedule Row")) {
+					xpath = "/html/body/div/main/div/div[2]/table/tbody/tr/td[4]";
+				}
+				else if (step.Name.Equals("Trigger ID Row")) {
+					xpath = "/html/body/div/main/div/div[2]/table/tbody/tr/td[5]";
+				}
+				else if (step.Name.Equals("Prediction Job Type Row")) {
+					xpath = "/html/body/div/main/div/div[2]/table/tbody/tr/td[6]";
 				}
 
 				ele = driver.FindElement("xpath", xpath);

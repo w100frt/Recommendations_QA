@@ -109,6 +109,23 @@ namespace SeleniumProject.Function
 					log.Error("Can't find Prediction ID values");
 				}
 			}
+			if (step.Name.Equals("Check Prediction Configuration ID")) {
+				string[] id = dataDictionary["activePredConfigIDArray"];
+				elements = driver.FindElements("xpath", "/html/body/div/main/div[4]/div[2]/span");
+				if (elements.Count > 0) {
+					for (int i=0; i< elements.Count; i++) {
+						if (elements.ElementAt(i).GetAttribute("innerText").Equals(id[i])) {
+							log.Info("Match! " + "Expected: "+id[i] + "  Actual: "+ elements.ElementAt(i).GetAttribute("innerText"));
+						}
+						else {
+							err.CreateVerificationError(step, "Expected Prediction ID: " + id[i], "Actual Prediction ID: "+elements.ElementAt(i).GetAttribute("innerText"));
+						}
+					}
+				}
+				else {
+					log.Error("Can't find Prediction Configuration ID values");
+				}
+			}
 			else if (step.Name.Equals("Check Prediction Key")) {
 				string[] id = dataDictionary["activePredictionKeyIDArray"];
 				elements = driver.FindElements("xpath", "/html/body/div[1]/main/div/div[2]/table/tbody/tr/td[3]/div/div/div/div/div[2]/form/div[1]/span");
