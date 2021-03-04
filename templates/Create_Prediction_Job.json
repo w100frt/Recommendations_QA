@@ -3,12 +3,12 @@
     "testId":"t5",
     "testSteps":[
 		{"page":"Prediction_Job_Config", "name":"Create"},
-        {"page":"Create_Prediction_Job_Config", "name":"Create Prediction Job Configuration"},
-        {"page":"Create_Prediction_Job_Config", "name":"Prediction Configuration"},
+        {"page":"Create_Prediction_Job_Config", "name":"Create Prediction Job Configuration", "data":"Create Prediction Job Configuration"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Configuration", "data":"Prediction Configuration"},
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Configuration Dropdown"},
-        {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types", "data":"Prediction Configuration"},
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types Dropdown"},
-        {"page":"Create_Prediction_Job_Config", "name":"Create"},
-        {"page":"Create_Prediction_Job_Config", "name":"Validate"}
+        {"page":"Create_Prediction_Job_Config", "name":"Create", "data":"Create"},
+        {"page":"Create_Prediction_Job_Config", "name":"Validate", "data":"Validate"}
     ]
 }
