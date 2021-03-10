@@ -9,7 +9,7 @@
         {"page":"Create_Prediction_Job_Config", "name":"Select Prediction Configuration"},
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types", "data":"Prediction Job Configuration Types:"},
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types Dropdown"},
-        {"page":"Create_Prediction_Job_Config", "name":"Select Prediction Job Configuration Type"},
+        {"page":"Create_Prediction_Job_Config", "name":"Select Prediction Job Configuration Type Recurring"},
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Settings", "data":"Prediction Job Settings"},
         {"page":"Create_Prediction_Job_Config", "name":"Instance Configuration", "data":"instanceConfigurations"},
         {"page":"Create_Prediction_Job_Config", "name":"Add Instance Configuration"},
