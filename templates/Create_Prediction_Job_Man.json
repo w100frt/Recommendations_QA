@@ -1,0 +1,14 @@
+﻿{
+    "testCase":"Template_CreatePredictionJobMan",
+    "testId":"t14",
+    "testSteps":[
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types", "data":"Prediction Job Configuration Types:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types Dropdown"},
+        {"page":"Create_Prediction_Job_Config", "name":"Select Prediction Job Configuration Type Manual"},
+        {"page":"Create_Prediction_Job_Config", "name":"Run Immediately", "data":"Run Immediately:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Run Immediately Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Run Time", "data":"Run Time:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Run Time Input"}
+
+    ]
+}

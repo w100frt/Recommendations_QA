@@ -1,6 +1,6 @@
 ﻿{
-    "testCase":"Template_CreatePredictionJob",
-    "testId":"t5",
+    "testCase":"Template_CreatePredictionJobRec",
+    "testId":"t13",
     "testSteps":[
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types", "data":"Prediction Job Configuration Types:"},
         {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types Dropdown"},
