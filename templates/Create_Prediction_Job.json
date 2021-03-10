@@ -38,7 +38,7 @@
         {"page":"Create_Prediction_Job_Config", "name":"Core Spot Capacity", "data":"coreSpotCapacity"},
         {"page":"Create_Prediction_Job_Config", "name":"Core Spot Capacity Input"},
         {"page":"Create_Prediction_Job_Config", "name":"Environment", "data":"environment"},
-        {"page":"Create_Prediction_Job_Config", "name":"Environment Dropdown", "data":"environment"},
+        {"page":"Create_Prediction_Job_Config", "name":"Environment Dropdown"},
         {"page":"Create_Prediction_Job_Config", "name":"Dev Environment", "data":"dev"},
         {"page":"Create_Prediction_Job_Config", "name":"Stage Environment", "data":"stage"},
         {"page":"Create_Prediction_Job_Config", "name":"Prod Environment", "data":"production"},
