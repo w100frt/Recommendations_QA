@@ -1,0 +1,28 @@
+﻿{
+    "testCase":"Template_CreatePredictionJob",
+    "testId":"t5",
+    "testSteps":[
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types", "data":"Prediction Job Configuration Types:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Prediction Job Configuration Types Dropdown"},
+        {"page":"Create_Prediction_Job_Config", "name":"Select Prediction Job Configuration Type Recurring"},
+        {"page":"Create_Prediction_Job_Config", "name":"Recurring Job Options", "data":"Recurring Job Options"},
+        {"page":"Create_Prediction_Job_Config", "name":"Recurring Job Type", "data":"Recurring Job Type:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Recurring Job Type Dropdown"},
+        {"page":"Create_Prediction_Job_Config", "name":"Select Cron Schedule"},
+        {"page":"Create_Prediction_Job_Config", "name":"Cron Job Options", "data":"Cron Job Options"},
+        {"page":"Create_Prediction_Job_Config", "name":"Sunday", "data":"Sunday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Sunday Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Monday", "data":"Monday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Monday Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Tuesday", "data":"Tuesday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Tuesday Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Wednesday", "data":"Wednesday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Wednesday Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Thursday", "data":"Thursday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Thursday Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Friday", "data":"Friday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Friday Checkbox"},
+        {"page":"Create_Prediction_Job_Config", "name":"Saturday", "data":"Saturday:"},
+        {"page":"Create_Prediction_Job_Config", "name":"Saturday Checkbox"}
+    ]
+}
