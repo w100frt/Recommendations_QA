@@ -1,0 +1,16 @@
+﻿{
+	"testCase":"Create Prediction Job Manual",
+	"env":"dev",
+	"testId":"17",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Prediction Header"},
+		{"page":"Navigation", "name":"Click Prediction Job Configurations Header"},
+		{"page":"Prediction_Job_Config", "name":"Create"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Navigation","name":"Run Template", "data":"Create_Prediction_Job"},
+		{"page":"Navigation","name":"Run Template", "data":"Create_Prediction_Job_Man"}
+	]
+}
