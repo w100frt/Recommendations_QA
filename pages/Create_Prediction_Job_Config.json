@@ -49,7 +49,7 @@
 		{"name":"Terminate Cluster On Completion True","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/form/div/div[4]/div/div[2]/div[12]/div/div[2]/div/select/option[1]"},
 		{"name":"Terminate Cluster On Completion False","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/form/div/div[4]/div/div[2]/div[12]/div/div[2]/div/select/option[2]"},
 		{"name":"Recurring Job Options","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/div[1]/div[1]/span"},
-		{"name":"Recurring Job Type","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/div[1]/div[1]/span"},
+		{"name":"Recurring Job Type","objectType":"verify_value","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/div[1]/div[2]/div[1]/span"},
 		{"name":"Recurring Job Type Dropdown","objectType":"click","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/div[1]/div[2]/div[2]/select"},
 		{"name":"Select Cron Schedule","objectType":"click","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/div[1]/div[2]/div[2]/select/option[2]"},
 		{"name":"Select On Completion","objectType":"click","by":"xpath","objectId":"/html/body/div/main/form/div/div[5]/div[1]/div[2]/div[2]/select/option[3]"},
