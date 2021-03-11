@@ -1,0 +1,16 @@
+{
+	"testCase":"Create Training Job",
+	"env":"dev",
+	"testId":"18",
+	"testRail":"",
+	"testView":"desktop",
+	"testSteps":[
+		{"page":"Navigation", "name":"Open Browser"},
+		{"page":"Navigation", "name":"Click Training Header"},
+		{"page":"Navigation", "name":"Click Training Job Configurations Header"},
+		{"page":"Training_Job_Config", "name":"Create"},
+		{"page":"Navigation","name":"Run Template", "data":"Header_Footer"},
+		{"page":"Navigation","name":"Run Template", "data":"Create_Training_Job"},
+		{"page":"Navigation","name":"Run Template", "data":"Create_Training_Job_Rec"}
+	]
+}

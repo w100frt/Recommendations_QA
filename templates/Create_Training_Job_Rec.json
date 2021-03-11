@@ -1,0 +1,28 @@
+{
+    "testCase":"Template_CreateTrainingJobRec",
+    "testId":"",
+    "testSteps":[
+        {"page":"Create_Training_Job_Config", "name":"Training Job Configuration Types", "data":"Training Job Configuration Types:"},
+        {"page":"Create_Training_Job_Config", "name":"Training Job Configuration Types Dropdown"},
+        {"page":"Create_Training_Job_Config", "name":"Select Training Job Configuration Type Recurring"},
+        {"page":"Create_Training_Job_Config", "name":"Recurring Job Options", "data":"Recurring Job Options"},
+        {"page":"Create_Training_Job_Config", "name":"Recurring Job Type", "data":"Recurring Job Type:"},
+        {"page":"Create_Training_Job_Config", "name":"Recurring Job Type Dropdown"},
+        {"page":"Create_Training_Job_Config", "name":"Select Cron Schedule"},
+        {"page":"Create_Training_Job_Config", "name":"Cron Job Options", "data":"Cron Job Options"},
+        {"page":"Create_Training_Job_Config", "name":"Sunday", "data":"Sunday:"},
+        {"page":"Create_Training_Job_Config", "name":"Sunday Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Monday", "data":"Monday:"},
+        {"page":"Create_Training_Job_Config", "name":"Monday Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Tuesday", "data":"Tuesday:"},
+        {"page":"Create_Training_Job_Config", "name":"Tuesday Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Wednesday", "data":"Wednesday:"},
+        {"page":"Create_Training_Job_Config", "name":"Wednesday Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Thursday", "data":"Thursday:"},
+        {"page":"Create_Training_Job_Config", "name":"Thursday Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Friday", "data":"Friday:"},
+        {"page":"Create_Training_Job_Config", "name":"Friday Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Saturday", "data":"Saturday:"},
+        {"page":"Create_Training_Job_Config", "name":"Saturday Checkbox"}
+    ]
+}
