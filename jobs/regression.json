@@ -6,6 +6,7 @@
     "browser":"chrome",
     "testView":"desktop",
     "testIds": [
+        {"testId":4},
         {"testId":5},
         {"testId":6},
         {"testId":7},
@@ -15,7 +16,7 @@
         {"testId":11},
         {"testId":12},
         {"testId":13},
-        {"testId":14}
-
+        {"testId":14},
+        {"testId":17}
     ]
 }
