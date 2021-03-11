@@ -2,7 +2,7 @@
 	"testCase":"Create Prediction Job Manual",
 	"env":"dev",
 	"testId":"17",
-	"testRail":"",
+	"testRail":"7929786",
 	"testView":"desktop",
 	"testSteps":[
 		{"page":"Navigation", "name":"Open Browser"},
