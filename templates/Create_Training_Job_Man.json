@@ -1,0 +1,14 @@
+{
+    "testCase":"Template_CreateTrainingJobMan",
+    "testId":"",
+    "testSteps":[
+        {"page":"Create_Training_Job_Config", "name":"Training Job Configuration Types", "data":"Training Job Configuration Types:"},
+        {"page":"Create_Training_Job_Config", "name":"Training Job Configuration Types Dropdown"},
+        {"page":"Create_Training_Job_Config", "name":"Select Training Job Configuration Type Manual"},
+        {"page":"Create_Training_Job_Config", "name":"Run Immediately", "data":"Run Immediately:"},
+        {"page":"Create_Training_Job_Config", "name":"Run Immediately Checkbox"},
+        {"page":"Create_Training_Job_Config", "name":"Run Time", "data":"Run Time:"},
+        {"page":"Create_Training_Job_Config", "name":"Run Time Input"}
+
+    ]
+}
